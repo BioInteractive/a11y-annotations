@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+
+    <!-- Link to Bootstrap CSS (Use the path to your locally installed Bootstrap CSS file) -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles/custom.css">
+</head>
+<body>
+    <header class="d-block px-3 py-2">
+        <img src="assets/images/hhmi-biointeractive-logo.svg">
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Includes the Sidebar Navigation using jQuery -->
+            <div id="sidebar-container" class="col-md-2 col-lg-2"></div>
+
+            <!-- Main Content -->
+            <main class="col-md-10">
+                <h1>Welcome to Your Website</h1>
+                <p>This is a basic structure for your website with a sidebar navigation using Bootstrap classes.</p>
+                <!-- Add your content here -->
+            </main>
+        </div>
+    </div>
+
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="assets/js/global.js"></script> <!-- Corrected the closing script tag -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
