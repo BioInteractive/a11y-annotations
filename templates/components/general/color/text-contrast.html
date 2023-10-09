@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Color Contrast</title>
+
+    <!-- Link to Bootstrap CSS (Use the path to your locally installed Bootstrap CSS file) -->
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../assets/styles/custom.css">
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <header class="d-block px-3 py-2 shadow">
+        <img src="../../../../assets/images/hhmi-biointeractive-logo.svg">
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Includes the Sidebar Navigation using jQuery -->
+            <div id="sidebar-container" class="col-md-2 border-end"></div>
+
+            <!-- Main Content -->
+            <main class="col-md-10">
+                <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
+                <div class="container-xxl bd-gutter mt-3">
+                    <h1>Text Color Contrast</h1>
+                    <h2>Standards</h2>
+                    <p>Regular sized text and images of text (text that is less than 18pt or 24px) must have a contrast ratio of at least 4.5:1 against the background.
+                    </p>
+                    <p>Large sized text and images of text (text that is more than 18pt or 24px or text that is bold and at least 14pt or 18.5px) must have a contrast 
+                        ratio of at least 3:1 against the background.
+                    </p>
+                    <h2>How to Test</h2>
+                    <p><a href="https://www.tpgi.com/color-contrast-checker/" target="_blank">Download and use TPGi's free colour contrast checker</a> to measure the 
+                        color contrast ratio of the text and the adjacent background colors.</p>
+
+                    <h2>Regular Sized Text Color Failure</h2>
+                    <div class="d-inline-block border p-2 rounded">
+                        <div class="d-flex flex-row">
+                            <div class="text-to-copy">
+                                <ul role="list">
+                                    <li>Regular sized text must have a 4.5:1 minimum contrast ratio with the background color in all states.</li>
+                                    <li><i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i> Warning: the contrast ratio fails the requirement</li>
+                                    <li>Color: #______ Background Color: #______ Ratio: _____ State: __________</li>
+                                    <li>Recommendation: Adjust color combination to meet the minimum of 4.5:1 contrast ratio requirements.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <button class="ml-1r btn copy-btn">
+                                    <i class="bi bi-clipboard-heart-fill" aria-hidden="true"></i> Copy
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>Large Sized Text Color Failure</h2>
+                    <div class="d-inline-block border p-2 rounded">
+                        <div class="d-flex flex-row">
+                            <div class="text-to-copy">
+                                <ul role="list">
+                                    <li>Large sized text must have a 3:1 minimum contrast ratio with the background color in all states.</li>
+                                    <li><i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i> Warning: the contrast ratio fails the requirement</li>
+                                    <li>Color: #______ Background Color: #______ Ratio: _____ State: __________</li>
+                                    <li>Recommendation: Adjust color combination to meet the minimum of 3:1 contrast ratio requirements.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <button class="ml-1r btn copy-btn">
+                                    <i class="bi bi-clipboard-heart-fill" aria-hidden="true"></i> Copy
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>WCAG Guideline References</h2>
+                    <ul>
+                        <li><a href="https://www.w3.org/TR/WCAG21/#contrast-minimum" target="_blank">WCAG 2.1 Recommendation 1.4.3 Contrast (Minimum)</a></li>
+                        <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" target="_blank">WCAG 2.1 Understanding 1.4.3 Contrast (Minimum) (Level AA)</a></li>
+                    </ul>
+                </div>
+            </main>
+        </div>
+    </div>
+
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="../../../../assets/js/global.js"></script> <!-- Corrected the closing script tag -->
+    <script src="../../../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
