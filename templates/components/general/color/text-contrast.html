@@ -22,70 +22,148 @@
 
             <!-- Main Content -->
             <main class="col-md-10">
+                <!-- A11y Live Region -->
                 <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
                 <div class="container-xxl bd-gutter mt-3">
                     <h1>Text Color Contrast</h1>
-                    <h2>Standards</h2>
-                    <p>Regular sized text and images of text (text that is less than 18pt or 24px) must have a contrast ratio of at least 4.5:1 against the background.
-                    </p>
-                    <p>Large sized text and images of text (text that is more than 18pt or 24px or text that is bold and at least 14pt or 18.5px) must have a contrast 
-                        ratio of at least 3:1 against the background.
-                    </p>
-                    <h2>How to Test</h2>
-                    <p><a href="https://www.tpgi.com/color-contrast-checker/" target="_blank">Download and use TPGi's free colour contrast checker</a> to measure the 
-                        color contrast ratio of the text and the adjacent background colors.</p>
-
-                    <h2>Regular Sized Text Color Failure</h2>
-                    <div class="d-inline-block border p-2 rounded">
-                        <div class="d-flex flex-row">
-                            <div class="text-to-copy">
-                                <ul role="list">
-                                    <li>Regular sized text must have a 4.5:1 minimum contrast ratio with the background color in all states.</li>
-                                    <li><i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i> Warning: the contrast ratio fails the requirement</li>
-                                    <li>Color: #______ Background Color: #______ Ratio: _____ State: __________</li>
-                                    <li>Recommendation: Adjust color combination to meet the minimum of 4.5:1 contrast ratio requirements.</li>
-                                </ul>
+                    <!-- Begin Accordion -->
+                    <div class="accordion" id="accordionOpen">
+                        <!-- Accordion Item One -->
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              Standards SC 1.4.3 Level AA
+                            </button>
+                          </h2>
+                          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
+                            <div class="accordion-body">
+                            <p>Regular sized text and images of text (text that is less than 18pt or 24px) must have a contrast ratio of at least 4.5:1 against the background.
+                            </p>
+                            <p>Large sized text and images of text (text that is more than 18pt or 24px or text that is bold and at least 14pt or 18.5px) must have a contrast ratio of at least 3:1 against the background.
+                            </p>
                             </div>
-                            <div>
-                                <button class="ml-1r btn copy-btn">
-                                    <i class="bi bi-clipboard-heart-fill" aria-hidden="true"></i> Copy
-                                </button>
-                            </div>
+                          </div>
                         </div>
-                    </div>
-                    <h2>Large Sized Text Color Failure</h2>
-                    <div class="d-inline-block border p-2 rounded">
-                        <div class="d-flex flex-row">
-                            <div class="text-to-copy">
-                                <ul role="list">
-                                    <li>Large sized text must have a 3:1 minimum contrast ratio with the background color in all states.</li>
-                                    <li><i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i> Warning: the contrast ratio fails the requirement</li>
-                                    <li>Color: #______ Background Color: #______ Ratio: _____ State: __________</li>
-                                    <li>Recommendation: Adjust color combination to meet the minimum of 3:1 contrast ratio requirements.</li>
-                                </ul>
+                        <!-- Accordion Item Two -->
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              How to Test
+                            </button>
+                          </h2>
+                          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" style="">
+                            <div class="accordion-body">
+                              <ol role="list">
+                                <li>Choose a color contrast measuring tool that allows you to sample colors from your webpage. See Resources below for a recommended list of tools.</li>
+                                <li>Determine if the text is regular sized or large size depeneding on the text size and boldness.</li>
+                                <li>In the color contrast tool, you'll typically find color droppers or eyedropper tools. These tools allow you to select specific colors from the design.</li>
+                                <li>Use color dropper tool to select foreground element (e.g., text) and then select background element (e.g., the background behind the text)</li>
+                                <li>Once you've sampled both foreground and background colors, the color contrast tool should display the contrast ratio between the two colors. This contrast ratio is typically calculated as the ratio between the luminance (brightness) of the foreground and background colors.</li>
+                                <li>Compare the contrast ratio against the WCAG requirements to determine a pass or fail.</li>
+                              </ol>
                             </div>
-                            <div>
-                                <button class="ml-1r btn copy-btn">
-                                    <i class="bi bi-clipboard-heart-fill" aria-hidden="true"></i> Copy
-                                </button>
-                            </div>
+                          </div>
                         </div>
-                    </div>
-                    <h2>WCAG Guideline References</h2>
-                    <ul>
-                        <li><a href="https://www.w3.org/TR/WCAG21/#contrast-minimum" target="_blank">WCAG 2.1 Recommendation 1.4.3 Contrast (Minimum)</a></li>
-                        <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" target="_blank">WCAG 2.1 Understanding 1.4.3 Contrast (Minimum) (Level AA)</a></li>
-                    </ul>
-                </div>
+                        <!-- Accordion Item Three -->
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Regular Sized Text Color Failure
+                            </button>
+                          </h2>
+                          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" style="">
+                            <div class="accordion-body">
+                              <div class="d-inline-block border border-dark p-2 rounded">
+                                <div class="d-flex flex-row">
+                                  <div class="text-to-copy">
+                                    <ul role="list">
+                                      <li>Regular sized text must have a 4.5:1 minimum contrast ratio with the background color in all states.</li>
+                                      <li><i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i> Warning: the contrast ratio fails the requirement</li>
+                                      <li>Color: #______ Background Color: #______ Ratio: _____ State: __________</li>
+                                      <li>Recommendation: Adjust color combination to meet the minimum of 4.5:1 contrast ratio requirements.</li>
+                                    </ul>
+                                  </div>
+                                  <div>
+                                      <button class="ml-1r btn copy-btn">
+                                        <i class="bi bi-clipboard-heart-fill" aria-hidden="true"></i> Copy
+                                      </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Accordion Item Four -->
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                              Large Sized Text Color Failure
+                            </button>
+                          </h2>
+                          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
+                            <div class="accordion-body">
+                              <div class="d-inline-block border border-dark p-2 rounded">
+                                <div class="d-flex flex-row">
+                                  <div class="text-to-copy">
+                                    <ul role="list">
+                                      <li>Large sized text must have a 3:1 minimum contrast ratio with the background color in all states.</li>
+                                      <li><i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i> Warning: the contrast ratio fails the requirement</li>
+                                      <li>Color: #______ Background Color: #______ Ratio: _____ State: __________</li>
+                                      <li>Recommendation: Adjust color combination to meet the minimum of 3:1 contrast ratio requirements.</li>
+                                    </ul>
+                                  </div>
+                                  <div>
+                                     <button class="ml-1r btn copy-btn">
+                                       <i class="bi bi-clipboard-heart-fill" aria-hidden="true"></i> Copy
+                                      </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Accordion Item Five -->
+                        <div class="accordion-item">
+                          <h2 class="accordion-item" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                            Resources
+                            </button>
+                          </h2>
+                          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" style="">
+                            <div class="accordion-body">
+                              <ul>
+                                <li><a href="https://www.tpgi.com/color-contrast-checker/" target="_blank">Downloadable App - TPGi's Color Contrast Analyzer</a></li>
+                                <li><a href="https://webaim.org/resources/contrastchecker/" target="_blank">WebAIM Contrast Checker Webpage</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Accordion Item Six -->
+                        <div class="accordion-item">
+                          <h2 class="accordion-item" id="headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                            WCAG Guideline References
+                            </button>
+                          </h2>
+                          <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" style="">
+                            <div class="accordion-body">
+                              <ul>
+                                <li><a href="https://www.w3.org/TR/WCAG21/#contrast-minimum" target="_blank">WCAG 2.1 Recommendation 1.4.3 Contrast (Minimum)</a></li>
+                                <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" target="_blank">WCAG 2.1 Understanding 1.4.3 Contrast (Minimum) (Level AA)</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End Accordion -->
             </main>
         </div>
     </div>
 
 
-    <!-- Include jQuery -->
+    <!-- Script links and jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
-    <script src="../../../../assets/js/global.js"></script> <!-- Corrected the closing script tag -->
+    <script src="../../../../assets/js/global.js"></script>
     <script src="../../../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
