@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non-text Color Contrast</title>
+
+    <!-- Link to Bootstrap CSS (Use the path to your locally installed Bootstrap CSS file) -->
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../assets/styles/custom.css">
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+  <header class="d-block px-3 py-2 shadow">
+      <img src="../../../../assets/images/hhmi-biointeractive-logo.svg">
+  </header>
+  <div class="container-fluid">
+      <div class="row">
+          <!-- Includes the Sidebar Navigation using jQuery -->
+          <div id="sidebar-container" class="col-md-2 border-end"></div>
+
+          <!-- Main Content -->
+          <main class="col-md-10">
+            <!-- A11y Live Region -->
+            <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
+            <div class="container-xxl bd-gutter mt-3">
+                <h1>Non-text Color Contrast</h1>
+                <!-- Begin Accordion -->
+                <div class="accordion" id="accordionOpen">
+                    <!-- Accordion Item One -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Standards SC 1.4.11 Level AA
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
+                        <div class="accordion-body">
+                        <p>The visual presentation of the following have a contrast ratio of at least 3:1 against adjacent color(s):</p>
+                        <ul>
+                          <li><span class="fw-bold">User Interface Components</span><br>
+                            Visual information required to identify user interface components and states, except for inactive components or where the appearance of the component is determined by the user agent and not modified by the author;
+                          </li>
+                          <li><span class="fw-bold">Graphical Objects</span><br>
+                            Parts of graphics required to understand the content, except when a particular presentation of graphics is essential to the information being conveyed.
+                          </li>
+                        </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Two -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          How to Test
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" style="">
+                        <div class="accordion-body">
+                          <ol role="list">
+                            <li>Choose a color contrast measuring tool that allows you to sample colors from your webpage. See Resources below for a recommended list of tools.</li>
+                            <li>Determine if the UI component or Graphical Object is meaningful and required to identify information or states.</li>
+                            <li>In the color contrast tool, you'll typically find color droppers or eyedropper tools. These tools allow you to select specific colors from the design.</li>
+                            <li>Use color dropper tool to select foreground element (e.g., object) and then select background element (e.g., the background behind the object)</li>
+                            <li>Once you've sampled both foreground and background colors, the color contrast tool should display the contrast ratio between the two colors. This contrast ratio is typically calculated as the ratio between the luminance (brightness) of the foreground and background colors.</li>
+                            <li>Compare the contrast ratio against the WCAG requirements of a 3:1 minimum ratio to determine a pass or fail.</li>
+                          </ol>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Three -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Non-text Contrast Failure
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" style="">
+                        <div class="accordion-body">
+                          <div class="d-inline-block border border-dark p-2 rounded">
+                            <div class="d-flex flex-row">
+                              <div class="text-to-copy">
+                                <ul role="list">
+                                  <li>Border of the interactive element or graphical object must have 3:1 contrast with the background.</li>
+                                  <li><i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i> Warning: the contrast ratio fails the requirement with a current ratio of ____.</li>                                  </li>
+                                  <li>Recommendation: Adjust color combination to meet the minimum of 3:1 contrast ratio requirements.</li>
+                                </ul>
+                              </div>
+                              <div>
+                                  <button class="ml-1r btn copy-btn">
+                                    <i class="bi bi-clipboard-heart-fill" aria-hidden="true"></i> Copy
+                                  </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Four -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-item" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                        Resources
+                        </button>
+                      </h2>
+                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
+                        <div class="accordion-body">
+                          <ul>
+                            <li><a href="https://www.tpgi.com/color-contrast-checker/" target="_blank">Downloadable App - TPGi's Color Contrast Analyzer</a></li>
+                            <li><a href="https://webaim.org/resources/contrastchecker/" target="_blank">WebAIM Contrast Checker Webpage</a></li>
+                          </ul>                           
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Five -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-item" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                        WCAG Guideline References
+                        </button>
+                      </h2>
+                      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" style="">
+                        <div class="accordion-body">
+                          <ul>
+                            <li><a href="https://www.w3.org/TR/WCAG21/#non-text-contrast" target="_blank">WCAG 2.1 Recommendation 1.4.11 Non-text Contrast</a></li>
+                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast" target="_blank">WCAG 2.1 Understanding 1.4.11 Non-text Contrast (Level AA)</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Accordion -->
+                </main>
+              </div>
+            </div>
+
+    <!-- Script links and jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../../../../assets/js/global.js"></script>
+    <script src="../../../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
