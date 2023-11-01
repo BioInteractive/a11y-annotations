@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non-text Content</title>
+
+    <!-- Link to Bootstrap CSS (Use the path to your locally installed Bootstrap CSS file) -->
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../assets/styles/custom.css">
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+  <header class="d-block px-3 py-2 shadow">
+      <img src="../../../../assets/images/hhmi-biointeractive-logo.svg">
+  </header>
+  <div class="container-fluid">
+      <div class="row">
+          <!-- Includes the Sidebar Navigation using jQuery -->
+          <div id="sidebar-container" class="col-md-2 border-end"></div>
+
+          <!-- Main Content -->
+          <main class="col-md-10">
+            <!-- A11y Live Region -->
+            <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
+            <div class="container-xxl bd-gutter mt-3">
+                <h1>Non-text Content</h1>
+                <!-- Begin Accordion -->
+                <div class="accordion" id="accordionOpen">
+                    <!-- Accordion Item One -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Standards SC 1.1.1 Level A
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
+                        <div class="accordion-body">
+                        <p>All meaningful non-text content (images, video, audio, SVGs, icons and other content that isn't conveyed by text) 
+                          needs to have alt text that provides the same information found in the content.</p>
+                          <p>Purely decorative content (for example, a dividing line between a navigation bar and content) does not need alt text.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Two -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          How to Test
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" style="">
+                        <div class="accordion-body">
+                          <ol role="list">
+                            <li>Identify the non-text content (images, video, audio, SVGs, icons and other content that isn't conveyed by text)</li>
+                            <li>Decide if the content is meaningful or decorative.</li>
+                            <li>If meaningful see the following sections for instructions on how to provide alternative text.</li>
+                            <li>If decorative see the following sections for instructions on how to ensure they are ignored by assistive technologies.</li>
+                          </ol>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Four -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-item" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                        Resources
+                        </button>
+                      </h2>
+                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
+                        <div class="accordion-body">
+                          <ul>
+                            <li><a href="https://www.w3.org/WAI/tutorials/images/decision-tree/" target="_blank">W3C Alt Decision Tree</a></li>
+                            <li><a href="https://wcag.com/blog/good-alt-text-bad-alt-text-making-your-content-perceivable/" target="_blank">Good Alt Text, Bad Alt Text — Making Your Content Perceivable</a></li>
+                            <li><a href="https://dequeuniversity.com/checklists/web/audiovideo" target="_blank">Audio and Videa Accessibility Checklist</a></li>
+                            <li><a href="https://www.wuhcag.com/non-text-content/" target="_blank">WUHCAG Web Accessibility for Developers</a></li>
+                          </ul>                           
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Five -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-item" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                        WCAG Guideline References
+                        </button>
+                      </h2>
+                      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" style="">
+                        <div class="accordion-body">
+                          <ul>
+                            <li><a href="https://www.w3.org/TR/WCAG21/#non-text-contrast" target="_blank">WCAG 2.1 Recommendation 1.1.1 Non-text Content</a></li>
+                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html" target="_blank">WCAG 2.1 Understanding 1.1.1 Non-text Content (Level A)</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Accordion -->
+                </main>
+              </div>
+            </div>
+
+    <!-- Script links and jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../../../../assets/js/global.js"></script>
+    <script src="../../../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
