@@ -76,7 +76,6 @@ a {
   }
 
   
-
   /*** Layout Spacing ***/
   h1, h2, h3, h4, h5 {
     margin-top: 1rem;
@@ -84,4 +83,12 @@ a {
   }
   .ml-1r {
     margin-left: 1rem;
+  }
+
+  /* Accordion Overrides */
+  .accordion-item {
+    border: none !important;
+  }
+  .accordion-button {
+    border: #3779b5 solid !important;
   }

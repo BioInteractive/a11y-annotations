@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How ro Annotate</title>
+
+    <!-- Link to Bootstrap CSS (Use the path to your locally installed Bootstrap CSS file) -->
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../assets/styles/custom.css">
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+  <header class="d-block px-3 py-2 shadow">
+      <img src="../../../../assets/images/hhmi-biointeractive-logo.svg">
+  </header>
+  <div class="container-fluid">
+      <div class="row">
+          <!-- Includes the Sidebar Navigation using jQuery -->
+          <div id="sidebar-container" class="col-md-2 border-end"></div>
+
+          <!-- Main Content -->
+          <main class="col-md-10">
+            <!-- A11y Live Region -->
+            <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
+            <div class="container-xxl bd-gutter mt-3">
+                <!-- Instructions for Annotating Figma Design for Accessibility -->
+                  <div class="instructions">
+                    <h1>How to Annotate Figma Designs for Accessibility</h1>
+                    <p>Follow these steps to create design annotations for accessibility in Figma:</p>
+
+                    <!-- Phase One: Annotating Figma Boards for design changes -->
+                    <h2>Phase One: Annotating Figma Boards for Design Changes</h2>
+                    <p>Figma boards should be analyzed using a combination of automated testing tools and manual testing tools to clearly identify WCAG defects that must be fixed by the designer.</p>
+                    <ul>
+                        <li>Large and Regular sized text color contrast issues</li>
+                        <li>Non-text color contrast issues</li>
+                        <li>Touch target size issues</li>
+                        <li>Missing elements such as: headings, buttons, necessary controls</li>
+                        <li>Form labeling, status, and error messaging</li>
+                        <li>Resize/Reflow issues</li>
+                    </ul>
+
+                    <!-- Phase Two: Annotating Figma Boards for developer hand-off -->
+                    <h2>Phase Two: Annotating Figma Boards for Developer Hand-off</h2>
+                    <p>Final design boards should have an accessibility layer added with your plugin of choice, such as the Include plugin by eBay. Follow these steps:</p>
+                    <ol>
+                        <li>Outline Landmarks (naming duplicates and regions appropriately) and heading levels elements with the plugin.</li>
+                        <li>Using an accessibility annotation kit, add sticky notes to all: meaningful and decorative images and graphics, links and buttons.</li>
+                        <li>Add number badges to all first instance elements and create a side panel for written annotations using those numbers.</li>
+                    </ol>
+
+                    <!-- Ensuring Accessibility in Written Design Annotations -->
+                    <h2>Ensuring Accessibility in Written Design Annotations</h2>
+                    <p>In the written annotation side panel, name the component and add a list of information using this as your base:</p>
+                    <ul>
+                        <li>Name:</li>
+                        <li>Role:</li>
+                        <li>State: (Static, Focusable, Focused, Hover, Expanded, Collapsed, Current, Selected, Pressed, Disabled, Enabled, Error, Success, Active, Activated, Dragged, On, Off)</li>
+                        <li>ARIA:</li>
+                        <li>Color Hex Codes for Foreground and Background combinations with contrast ratios</li>
+                    </ul>
+
+                    <!-- End of Instructions -->
+                    <p>Once you've completed these steps, your Figma design will be well-annotated for accessibility, ensuring an inclusive web development process.</p>
+                  </div>
+
+                
+                </main>
+              </div>
+            </div>
+
+    <!-- Script links and jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../../../../assets/js/global.js"></script>
+    <script src="../../../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
