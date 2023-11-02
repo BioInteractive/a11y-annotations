@@ -92,3 +92,6 @@ a {
   .accordion-button {
     border: #3779b5 solid !important;
   }
+  .accordion-button:not(.collapsed) {
+    color: #3779b5 !important;
+  }
