@@ -1,12 +1,3 @@
-//Add sidebar navigation to page
-$(document).ready(function () {
-    // Determine the path relative to the root directory
-    var rootRelativePath = "../../../../templates/components/sidebar-navigation.html";
-
-    // Use jQuery to load the sidebar-navigation.html file
-    $("#sidebar-container").load(rootRelativePath);
-});
-
 // Copy Text - Copy Buttons
 // Function to copy text and formatting to the clipboard
 function copyTextWithFormattingToClipboard(element) {

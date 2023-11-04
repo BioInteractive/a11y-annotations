@@ -84,6 +84,10 @@ a {
   .ml-1r {
     margin-left: 1rem;
   }
+  .space-large{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
 
   /* Accordion Overrides */
   .accordion-item {
@@ -94,4 +98,15 @@ a {
   }
   .accordion-button:not(.collapsed) {
     color: #3779b5 !important;
+  }
+
+  /* Code */
+  .code-tag {
+    font-weight: 600;
+    color: #8B307F;
+  }
+
+  /* Tables */
+  .table {
+    border-color: dimgrey;
   }
