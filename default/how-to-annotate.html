@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How ro Annotate</title>
+    <title>How to Annotate</title>
 
-    <!-- Link to Bootstrap CSS (Use the path to your locally installed Bootstrap CSS file) -->
-    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../../../assets/styles/custom.css">
+    <!-- Link to Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <!-- Link to Custom Stylesheet -->
+    <link rel="stylesheet" href="../assets/styles/custom.css">
     <!-- Include Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
 </head>
@@ -25,10 +26,9 @@
             <!-- A11y Live Region -->
             <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
             <div class="container-xxl bd-gutter mt-3">
-                <!-- Instructions for Annotating Figma Design for Accessibility -->
                   <div class="instructions">
                     <h1>How to Annotate Figma Designs for Accessibility</h1>
-                    <p>Follow these steps to create design annotations for accessibility in Figma:</p>
+                    <p>Follow these steps to create design annotations for accessibility in Figma.</p>
 
                     <!-- Phase One: Annotating Figma Boards for design changes -->
                     <h2>Phase One: Annotating Figma Boards for Design Changes</h2>
@@ -62,8 +62,10 @@
                         <li>Color Hex Codes for Foreground and Background combinations with contrast ratios</li>
                     </ul>
 
-                    <!-- End of Instructions -->
-                    <p>Once you've completed these steps, your Figma design will be well-annotated for accessibility, ensuring an inclusive web development process.</p>
+                    <p>Use the <a href="https://www.figma.com/file/txsKugjRb6ALXDK4uKGcp1/A11y-Annotation-Kit---HHMI?type=design&node-id=0%3A1&mode=design&t=Ht71svZKEKGMUAyL-1">
+                     A11y Annotation Kit</a> to mark up designs for elements that do not have number and sidebar written annotations. Such as images, links, buttons, list etc.</p>
+                    <p>Once you've completed these steps, and gone through a few rounds with the designer your Figma design will be well-annotated for accessibility, ensuring 
+                    an inclusive hand-off to developers for a seamless web development process.</p>
                   </div>
 
                 
@@ -73,7 +75,19 @@
 
     <!-- Script links and jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="../../../../assets/js/global.js"></script>
-    <script src="../../../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../assets/js/global.js"></script>
+    <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- Add sidebar navigation to page -->
+    <script>
+      $(document).ready(function () {
+          // Determine the path relative to the root directory
+          var rootRelativePath = "../templates/sidebar-navigation.html";
+  
+          // Use jQuery to load the sidebar-navigation.html file
+          $("#sidebar-container").load(rootRelativePath);
+      });
+    </script>
 </body>
 </html>

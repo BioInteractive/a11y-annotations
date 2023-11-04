@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Non-text Color Contrast</title>
+    <title>Images</title>
 
     <!-- Link to Bootstrap CSS from CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
@@ -26,27 +26,37 @@
             <!-- A11y Live Region -->
             <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
             <div class="container-xxl bd-gutter mt-3">
-                <h1>Non-text Color Contrast</h1>
+                <h1>Images <code class="code-tag">&lt;img&gt;</code></h1>
                 <!-- Begin Accordion -->
                 <div class="accordion" id="accordionOpen">
                     <!-- Accordion Item One -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          Standards SC 1.4.11 Level AA
+                          Standards SC 1.1.1 Level A
                         </button>
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                         <div class="accordion-body">
-                        <p>The visual presentation of the following have a contrast ratio of at least 3:1 against adjacent color(s):</p>
-                        <ul>
-                          <li><span class="fw-bold">User Interface Components</span><br>
-                            Visual information required to identify user interface components and states, except for inactive components or where the appearance of the component is determined by the user agent and not modified by the author;
-                          </li>
-                          <li><span class="fw-bold">Graphical Objects</span><br>
-                            Parts of graphics required to understand the content, except when a particular presentation of graphics is essential to the information being conveyed.
-                          </li>
-                        </ul>
+                          <h3>Meaningful Images</h3>
+                          <p>Meaningful images are those that convey important information or functionality to users. These images play a significant role in providing context, enhancing understanding, 
+                            or facilitating user interactions on a web page. Examples of meaningful images include:</p>
+                          <ul>
+                            <li>Graphs and charts that illustrate data and statistics.</li>
+                            <li>Icons representing actionable elements like buttons, links, or controls.</li>
+                            <li>Images depicting products, people, or objects relevant to the content.</li>
+                            <li>Illustrations supporting the textual content to explain concepts or processes.</li>
+                          </ul>
+                          <h3>Decorative Images</h3>
+                          <p>Decorative images are images that are used purely for aesthetic or decorative purposes and does not convey meaningful content or information. 
+                          Decorative images are typically added to enhance the visual design of a web page but do not serve a functional role in conveying information to users.
+                        A few examples include:</p>
+                          <ul>
+                            <li>Ornamental borders used to create decorative borders around content or sections of a webpage.</li>
+                            <li>Background images used in the background of a webpage to create a specific ambiance or atmosphere.</li>
+                            <li>Background textures to enhance the visual appearance of a webpage.</li>
+                            <li>Icons or graphics used purely for visual embellishment and not representing actionable elements.</li>
+                          </ul>
                         </div>
                       </div>
                     </div>
@@ -60,12 +70,10 @@
                       <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" style="">
                         <div class="accordion-body">
                           <ol role="list">
-                            <li>Choose a color contrast measuring tool that allows you to sample colors from your webpage. See Resources below for a recommended list of tools.</li>
-                            <li>Determine if the UI component or Graphical Object is meaningful and required to identify information or states.</li>
-                            <li>In the color contrast tool, you'll typically find color droppers or eyedropper tools. These tools allow you to select specific colors from the design.</li>
-                            <li>Use color dropper tool to select foreground element (e.g., object) and then select background element (e.g., the background behind the object)</li>
-                            <li>Once you've sampled both foreground and background colors, the color contrast tool should display the contrast ratio between the two colors. This contrast ratio is typically calculated as the ratio between the luminance (brightness) of the foreground and background colors.</li>
-                            <li>Compare the contrast ratio against the WCAG requirements of a 3:1 minimum ratio to determine a pass or fail.</li>
+                            <li>Identify all the images.</li>
+                            <li>Inquire if the images are going to be presented as <code class="code-tag">&lt;img&gt;</code>s, SVGs or icons.</li>
+                            <li>Decide which images are meaningful and decorative.</li>
+                            <li>Add a sticky note annotation to define the image as decorative with alt="" or meaningful alt="foo".</li>
                           </ol>
                         </div>
                       </div>
@@ -74,7 +82,7 @@
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingThree">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Non-text Contrast Failure
+                          Additional Notes for SVGs and Icons
                         </button>
                       </h2>
                       <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" style="">
@@ -82,10 +90,28 @@
                           <div class="d-inline-block border border-dark p-2 rounded">
                             <div class="d-flex flex-row">
                               <div class="text-to-copy">
+                                <h3>SVGs</h3>
                                 <ul role="list">
-                                  <li>Border of the interactive element or graphical object must have 3:1 contrast with the background.</li>
-                                  <li><i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i> Warning: the contrast ratio fails the requirement with a current ratio of ____.</li>                                  </li>
-                                  <li>Recommendation: Adjust color combination to meet the minimum of 3:1 contrast ratio requirements.</li>
+                                  <li><strong>Meaningful SVG</strong> must have a <code class="code-tag">&lt;title&gt;</code> as the first child with a unique IDREF.</li>
+                                  <li>The <code class="code-tag">&lt;svg&gt;</code> must then have an aria-labelledby="IDREF"</li>
+                                  <li><strong>Decorative SVG</strong> must have aria-hidden="true" so it will be ignored by assistive technologies.</li>                                  </li>
+                                </ul>
+                              </div>
+                              <div>
+                                  <button class="ml-1r btn copy-btn">
+                                    <i class="bi bi-clipboard-heart-fill" aria-hidden="true"></i> Copy
+                                  </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="space-large"></div>
+                          <div class="d-inline-block border border-dark p-2 rounded"> 
+                            <div class="d-flex flex-row">
+                              <div class="text-to-copy">
+                                <h3>Icons</h3>
+                                <ul role="list">
+                                  <li><strong>Meaningful Icon</strong> must have an accessible name from an aria-label, aria-labelledby or sr-only text.</li>
+                                  <li><strong>Decorative Icon</strong> must have aria-hidden="true" so it will be ignored by assistive technologies.</li>                                  </li>
                                 </ul>
                               </div>
                               <div>
@@ -98,6 +124,7 @@
                         </div>
                       </div>
                     </div>
+                  </div>
                     <!-- Accordion Item Four -->
                     <div class="accordion-item">
                       <h2 class="accordion-item" id="headingFour">
@@ -108,8 +135,9 @@
                       <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
                         <div class="accordion-body">
                           <ul>
-                            <li><a href="https://www.tpgi.com/color-contrast-checker/" target="_blank">Downloadable App - TPGi's Color Contrast Analyzer</a></li>
-                            <li><a href="https://webaim.org/resources/contrastchecker/" target="_blank">WebAIM Contrast Checker Webpage</a></li>
+                            <li><a href="https://dequeuniversity.com/checklists/web/images" target="_blank">
+                              Deque University - Web Accessibility Checklist Images</a></li>
+                            <li><a href="https://webaim.org/techniques/images/" target="_blank">WebAIM - Images Concepts</a></li>
                           </ul>                           
                         </div>
                       </div>
@@ -124,8 +152,8 @@
                       <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" style="">
                         <div class="accordion-body">
                           <ul>
-                            <li><a href="https://www.w3.org/TR/WCAG21/#non-text-contrast" target="_blank">WCAG 2.1 Recommendation 1.4.11 Non-text Contrast</a></li>
-                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast" target="_blank">WCAG 2.1 Understanding 1.4.11 Non-text Contrast (Level AA)</a></li>
+                            <li><a href="https://www.w3.org/TR/WCAG21/#non-text-contrast" target="_blank">WCAG 2.1 Recommendation 1.1.1 Non-text Content</a></li>
+                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html" target="_blank">WCAG 2.1 Understanding 1.1.1 Non-text Content (Level A)</a></li>
                           </ul>
                         </div>
                       </div>
@@ -136,10 +164,21 @@
               </div>
             </div>
 
-    <!-- Script links and jQuery CDN -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="../../../../assets/js/global.js"></script>
-    <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+      <!-- Script links and jQuery CDN -->
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+      <script src="../../../assets/js/global.js"></script>
+      <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+  
+      <!-- Add sidebar navigation to page -->
+      <script>
+        $(document).ready(function () {
+            // Determine the path relative to the root directory
+            var rootRelativePath = "../../sidebar-navigation.html";
+    
+            // Use jQuery to load the sidebar-navigation.html file
+            $("#sidebar-container").load(rootRelativePath);
+        });
+      </script>
 </body>
 </html>

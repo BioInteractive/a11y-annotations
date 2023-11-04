@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time-based Media</title>
+
+    <!-- Link to Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <!-- Link to Custom Stylesheet -->
+    <link rel="stylesheet" href="../../../../assets/styles/custom.css">
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+  <header class="d-block px-3 py-2 shadow">
+      <img src="../../../../assets/images/hhmi-biointeractive-logo.svg">
+  </header>
+  <div class="container-fluid">
+      <div class="row">
+          <!-- Includes the Sidebar Navigation using jQuery -->
+          <div id="sidebar-container" class="col-md-2 border-end"></div>
+
+          <!-- Main Content -->
+          <main class="col-md-10">
+            <!-- A11y Live Region -->
+            <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
+            <div class="container-xxl bd-gutter mt-3">
+                <h1>Time-based Media</h1>
+                <!-- Begin Accordion -->
+                <div class="accordion" id="accordionOpen">
+                    <!-- Accordion Item One -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Standards SC 1.2
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
+                        <div class="accordion-body">
+                          <h3>WCAG Standards for Pre-Recorded Media Content</h3>
+                          <table class="table table-bordered table-responsive">
+                            <tbody>
+                              <tr>
+                                <th scope="col">&nbsp;</th>
+                                <th scope="col">Transcript <span class="normal-weight">(including auditory and visual content)</span></th>
+                                <th scope="col">Captions</th>
+                                <th scope="col">Audio Description <span class="normal-weight">(if visual content not in audio)</span></th>
+                                <th scope="col">Sign Language</th>
+                              </tr>
+                              <tr>
+                                <th scope="row">Audio-only</th>
+                                <td><strong><a href="https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded">A 1.2.1</a></strong></td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Video-only</th>
+                                <td><strong><a href="https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded">A 1.2.1</a></strong> (transcript <em><strong>or</strong></em> audio track)<br>
+                                <a href="https://www.w3.org/WAI/WCAG21/Understanding/media-alternative-prerecorded">AAA 1.2.8</a></td>
+                                <td>&nbsp;</td>
+                                <td><strong><a href="https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded">A 1.2.1</a></strong> (audio track <em><strong>or</strong></em> transcript)</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Video with Audio</th>
+                                <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/media-alternative-prerecorded">AAA 1.2.8</a></td>
+                                <td><strong><a href="https://www.w3.org/WAI/WCAG21/Understanding/captions-prerecorded">A 1.2.2</a></strong></td>
+                                <td><strong><a href="https://www.w3.org/WAI/WCAG21/Understanding/audio-description-or-media-alternative-prerecorded">A 1.2.3</a></strong>&nbsp;(audio description <em><strong>or</strong></em> transcript)<br>
+                                  <strong><a href="https://www.w3.org/WAI/WCAG21/Understanding/audio-description-prerecorded">AA 1.2.5</a></strong><br>
+                                  <a href="https://www.w3.org/WAI/WCAG21/Understanding/extended-audio-description-prerecorded">AAA 1.2.7</a></td>
+                                <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/sign-language-prerecorded">AAA 1.2.6</a></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                
+                          <h3>WCAG Standards for Live Media Content</h3>
+                
+                          <table class="table table-bordered table-responsive">
+                            <tbody>
+                              <tr>
+                                <th scope="col">&nbsp;</th>
+                                <th scope="col">Transcript</th>
+                                <th scope="col">Captions</th>
+                                <th scope="col">Audio Description</th>
+                                <th scope="col">Sign Language</th>
+                              </tr>
+                              <tr>
+                                <th scope="row">Audio-only</th>
+                                <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/audio-only-live">AAA 1.2.9</a> (live stream <em><strong>or</strong></em> accurate transcript when live)</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Video-only</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Video with Audio</th>
+                                <td>&nbsp;</td>
+                                <td><strong><a href="https://www.w3.org/WAI/WCAG21/Understanding/captions-live">AA 1.2.4</a></strong></td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Two -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          How to Test
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" style="">
+                        <div class="accordion-body">
+                          <ol role="list">
+                            <li>Identify all the media content such as videos and audio.</li>
+                            <li>Inquire if the content will be meaningful or decorative.</li>
+                            <li>Determine if content will be pre-recorded or live and if it is Audio-only, Video only or Video with Audio.</li>
+                          </ol>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Three -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Requirements for Captions, Transcripts and Audio Descriptions
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" style="">
+                        <div class="accordion-body">
+                          <div class="d-inline-block border border-dark p-2 rounded">
+                            <div class="d-flex flex-row">
+                              <div class="text-to-copy">
+                                <h3>Media Content</h3>
+                                <ul role="list">
+                                  <li>Captions must be provided for media content.</li>
+                                  <li>Descriptive transcripts must be provided for media content.</li> 
+                                  <li>Audio Descriptions must be provided.</li>
+                                </ul>
+                              </div>
+                              <div>
+                                  <button class="ml-1r btn copy-btn">
+                                    <i class="bi bi-clipboard-heart-fill" aria-hidden="true"></i> Copy
+                                  </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    <!-- Accordion Item Four -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-item" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                        Resources
+                        </button>
+                      </h2>
+                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
+                        <div class="accordion-body">
+                          <h3 id="main-caption-heading">Captions</h3>
+                          <ul role="list" aria-labelledby="main-caption-heading">
+                            <li>
+                              <h4 id="caption-heading-one">What are captions?</h4>
+                              <ul role="list" aria-labelledby="caption-heading-one" class="nested">
+                                <li>
+                                  Captions are a text version of the speech and non-speech audio information needed to understand the content. They are displayed within the media player and are synchronized with the audio.
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <h4 id="caption-heading-two">Are captions the same as subtitles?</h4>
+                              <ul role="list" aria-labelledby="caption-heading-two" class="nested">
+                                <li>
+                                  Captions are the same language as the spoken audio.
+                                </li>
+                                <li>
+                                  Subtitles are spoken audio translated into another language.
+                                  <ul role="list" aria-labelledby="caption-heading-two" class="nested-nested">
+                                    <li>
+                                      Subtitles are implemented the same way as captions. Subtitles/interlingual subtitles are usually only the spoken audio, intended for people who can hear the audio but do not know the spoken language.
+                                    </li>
+                                    <li>
+                                      Captions are needed for accessibility. Subtitles in other languages are not directly an accessibility accommodation.
+                                    </li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <h4 id="caption-heading-three">What is the difference between open and closed captions?</h4>
+                              <ul role="list" aria-labelledby="caption-heading-three" class="nested">
+                                <li>
+                                  Open captions always are in view and cannot be turned off. Closed captions can be turned on and off by the viewer.
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <h4 id="caption-heading-four">Why should I have captions?</h4>
+                              <ul role="list" aria-labelledby="caption-heading-four" class="nested">
+                                <li>
+                                  Captions are useful for people who are hard of hearing to get the richness of listening to the audio and fill in what they don’t hear well by reading the captions.
+                                </li>
+                                <li>
+                                  Without captions, users who are deaf or hard of hearing may not be able to consume and/or understand the audio content.
+                                </li>
+                                <li>
+                                  69% of consumers view video with sound off in public places, such as restaurants, libraries, and public transportation, and 25% watch video with sound off in private places. 80% of consumers are more likely to watch an entire video when captions are available.
+                                  <a href="https://www.google.com/url?q=https://www.forbes.com/sites/tjmccue/2019/07/31/verizon-media-says-69-percent-of-consumers-watching-video-with-sound-off/?sh%3D27caa22a35d8&amp;sa=D&amp;source=docs&amp;ust=1657235119417643&amp;usg=AOvVaw2c_YQitu0Ud72aLjEvj88S">
+                                    Statistics cited from forbes.com</a>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                          <h3 id="main-transcripts-heading">Transcripts</h3>
+                          <ul role="list" aria-labelledby="main-transcripts-heading">
+                            <li>
+                              <h4 id="transcript-heading-one">What are transcripts?</h4>
+                              <ul role="list" aria-labelledby="transcript-heading-one" class="nested">
+                                <li>Basic transcripts are a text version of the speech and non-speech audio information needed to understand the content.</li>
+                                <li>Descriptive transcripts also include text description of the visual information needed to understand the content, such as when people enter the room.</li>
+                                <li>Descriptive transcripts are required to provide video content to people who are both deaf and blind.</li>
+                                <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines</a> (WCAG) requires descriptive transcripts.</li>
+                              </ul>
+                            </li>
+                            <li>
+                              <h4 id="transcript-heading-two">Why should we have transcripts for media content?</h4>
+                              <ul role="list" aria-labelledby="transcript-heading-two" class="nested">
+                                <li>Basic transcripts are used by people who are deaf, are hard of hearing, have difficulty processing auditory information, and others.</li>
+                                <li>Transcripts are necessary to convey all of the information being communicated by audio, including dialogue (and identifying speakers), narration, musical cues, and sound effects.</li>
+                                <li>Descriptive transcripts are also the only way that a person who is both deaf and blind can access video or audio content at all. Only digital text is accessible, because it can be converted into braille by a screen reader.</li>
+                              </ul>
+                            </li>
+                            <li>
+                              <h4 id="transcript-heading-three">How are transcripts different from captions?</h4>
+                              <ul role="list" aria-labelledby="transcript-heading-three" class="nested">
+                                <li>Transcripts are usually a document and can be downloaded apart from the video. Captions are embedded within the video.</li>
+                              </ul>
+                            </li>
+                          </ul>
+                          <h3 id="main-audio-heading">Audio Descriptions</h3>
+                          <ul role="list" aria-labelledby="main-audio-heading">
+                            <li>
+                              <h4 id="audio-description-heading-one">What are audio descriptions?</h4>
+                              <ul role="list" aria-labelledby="audio-description-heading-one" class="nested">
+                                <li>Audio description, also referred to as a video description, described video, or more precisely called a visual description, is a form of narration used to provide information surrounding key visual elements in a media work for the benefit of blind and visually impaired consumers. It describes the scene, action, and other important information that can’t be conveyed through sound or dialog.</li>
+                                <li>Description often happens during pauses in dialog or other quiet moments.</li>
+                              </ul>
+                            </li>
+                            <li>
+                              <h4 id="audio-description-heading-two">Why should we have audio descriptions?</h4>
+                              <ul role="list" aria-labelledby="audio-description-heading-two" class="nested">
+                                <li>Description provides content to people who are blind and others who cannot see the video adequately. It describes visual information needed to understand the content, including text displayed in the video.</li>
+                                <li>Description provides visual content to people who are using their devices in bright light or with poor resolution.</li>
+                              </ul>
+                            </li>
+                            <li>
+                              <h4 id="audio-description-heading-three">What if there are not ample pauses in the audio of our video content, and we are unable to add a second audio track with descriptions?</h4>
+                              <ul role="list" aria-labelledby="audio-description-heading-three" class="nested">
+                                <li>In this case, it is acceptable to provide an accompanying descriptive transcript including all visual information, instead of providing a synchronized audio description.</li>
+                              </ul>
+                            </li>
+                          </ul>                   
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Five -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-item" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                        WCAG Guideline References
+                        </button>
+                      </h2>
+                      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" style="">
+                        <div class="accordion-body">
+                          <ul>
+                            <li><a href="https://www.w3.org/TR/WCAG21/#non-text-contrast" target="_blank">WCAG 2.1 Recommendation 1.1.1 Non-text Content</a></li>
+                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html" target="_blank">WCAG 2.1 Understanding 1.1.1 Non-text Content (Level A)</a></li>
+                            <li><a href="https://www.w3.org/TR/WCAG20/#media-equiv" target="_blank">WCAG 2.0 Recommendation 1.2.1 Audio-only and Video-only (Prerecorded) (WCAG 2.0 A)</a></li>
+                            <li><a href="https://www.w3.org/WAI/WCAG20/Understanding/media-equiv.html" target="_blank">WCAG 2.0 Understanding 1.2.1 Audio-only and Video-only (Prerecorded) (WCAG 2.0 A)</a></li>
+                            <li><a href="https://www.w3.org/TR/WCAG20/#captions" target="_blank">WCAG 2.0 Recommendation 1.2.2 Captions (Prerecorded) (WCAG 2.0 A)</a></li>
+                            <li><a href="https://www.w3.org/WAI/WCAG20/Understanding/captions-prerecorded.html" target="_blank">WCAG 2.0 Understanding 1.2.2 Captions (Prerecorded) (WCAG 2.0 A)</a></li>
+                            <li><a href="https://www.w3.org/TR/WCAG20/#audio-description" target="_blank">WCAG 2.0 Recommendation 1.2.3 Audio Description or Media Alternative (Prerecorded) (WCAG 2.0 A)</a></li>
+                            <li><a href="https://www.w3.org/WAI/WCAG20/Understanding/audio-desc-prerecorded.html" target="_blank">WCAG 2.0 Understanding 1.2.3 Audio Description or Media Alternative (Prerecorded) (WCAG 2.0 A)</a></li>
+                            <li><a href="https://www.w3.org/TR/WCAG20/#captions-live" target="_blank">WCAG 2.0 Recommendation 1.2.4 Captions (Live) (WCAG 2.0 AA)</a></li>
+                            <li><a href="https://www.w3.org/WAI/WCAG20/Understanding/captions-live.html" target="_blank">WCAG 2.0 Understanding 1.2.4 Captions (Live) (WCAG 2.0 AA)</a></li>
+                            <li><a href="https://www.w3.org/TR/WCAG20/#audio-desc-prerecorded" target="_blank">WCAG 2.0 Recommendation 1.2.5 Audio Description (Prerecorded) (WCAG 2.0 AA)</a></li>
+                            <li><a href="https://www.w3.org/WAI/WCAG20/Understanding/audio-desc-prerecorded.html" target="_blank">WCAG 2.0 Understanding 1.2.5 Audio Description (Prerecorded) (WCAG 2.0 AA)</a></li>
+                          </ul> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Accordion -->
+                </main>
+              </div>
+            </div>
+
+      <!-- Script links and jQuery CDN -->
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+      <script src="../../../assets/js/global.js"></script>
+      <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+  
+      <!-- Add sidebar navigation to page -->
+      <script>
+        $(document).ready(function () {
+            // Determine the path relative to the root directory
+            var rootRelativePath = "../../sidebar-navigation.html";
+    
+            // Use jQuery to load the sidebar-navigation.html file
+            $("#sidebar-container").load(rootRelativePath);
+        });
+      </script>
+</body>
+</html>
