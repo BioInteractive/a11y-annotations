@@ -120,3 +120,21 @@
         </li>
     </ul>
 </nav>
+
+<!-- Comment out for local development and enable for production -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Select all links in the sidebar navigation except for index.html
+        $("#sidebar-nav a:not([href*='index.html'])").each(function() {
+            // Get the current href attribute
+            var currentHref = $(this).attr("href");
+            
+            // Add "/a11y-annotations" to the beginning of the href attribute
+            var newHref = "/a11y-annotations" + currentHref;
+            
+            // Update the href attribute with the new value
+            $(this).attr("href", newHref);
+        });
+    });
+</script>
