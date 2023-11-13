@@ -53,8 +53,8 @@
                         </button>
                         <div class="collapse show" id="interactives-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="#" class="link-dark rounded">Focus Visible (2.4.7)</a></li>
-                                <li><a href="#" class="link-dark rounded">Focus Order (2.4.3)</a></li>
+                                <li><a href="/templates/general/interactives/focus-visible.html" class="link-dark rounded">Focus Visible (2.4.7)</a></li>
+                                <li><a href="/templates/general/interactives/focus-order.html" class="link-dark rounded">Focus Order (2.4.3)</a></li>
                                 <li><a href="#" class="link-dark rounded">Touch Target (2.5.8)</a></li>
                             </ul>
                         </div>
@@ -122,12 +122,12 @@
     </ul>
 </nav>
 
-<!-- Comment out for local development and enable for production -->
+<!-- Comment out for local development and enable for production 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function() {
         // Select all links in the sidebar navigation except for index.html
-        $("#sidebar-nav a:not([href*='index.html'])").each(function() {
+        $("#sidebar-nav a").each(function() {
             // Get the current href attribute
             var currentHref = $(this).attr("href");
             
@@ -139,4 +139,4 @@
         });
     });
 </script>
-
+-->
