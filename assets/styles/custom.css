@@ -2,6 +2,12 @@
 body {
   font-family: Arial, Helvetica, sans-serif
 }
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid black !important;
+  outline-offset: 2px !important;
+  box-shadow: none !important;
+}
 
 /* Color Variables */
 :root {
