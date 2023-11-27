@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headings</title>
+
+    <!-- Link to Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <!-- Link to Custom Stylesheet -->
+    <link rel="stylesheet" href="../../../../assets/styles/custom.css">
+    <!-- Link to Custom Stylesheet Production -->
+    <link rel="stylesheet" href="../../../../../assets/styles/custom.css">
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+  <header class="d-block px-3 py-2 shadow">
+    <img src="https://www.biointeractive.org/themes/gesso/images/hhmi-logo.svg" alt="hhmi Biointeractive logo" style="max-width: 320px;">
+  </header>
+  <div class="container-fluid">
+      <div class="row">
+          <!-- Includes the Sidebar Navigation using jQuery -->
+          <div id="sidebar-container" class="col-md-2 border-end"></div>
+
+          <!-- Main Content -->
+          <main class="col-md-10">
+            <!-- A11y Live Region -->
+            <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
+            <div class="container-xxl bd-gutter mt-3">
+                <h1>Headings</h1>
+                <!-- Begin Accordion -->
+                <div class="accordion" id="accordionOpen">
+                    <!-- Accordion Item One -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Standards SC 1.3.1 Level A
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
+                        <div class="accordion-body">
+                        <p>
+                          <strong>1.3.1 Info and Relationships:</strong> Information, structure, and relationships conveyed through presentation can be programmatically determined 
+                          or are available in text.
+                        </p>
+                        <p>
+                          Properly structured headings are essential for web accessibility. They provide a hierarchical structure to your content, making it easier for all users, 
+                          including those who rely on screen readers, to navigate and understand your web page.</p>
+                        <p>
+                          Heading levels should be used sequentially, starting with <code>&lt;h1&gt;</code> for the main page title and following with <code>&lt;h2&gt;</code>, 
+                          <code>&lt;h3&gt;</code>, and so on, to represent subheadings. Avoid skipping levels in the hierarchy, as this can lead to confusion for screen reader users.
+                        </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Two -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Headings
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" style="">
+                        <div class="accordion-body">
+                          <p>Nesting headings correctly is crucial for maintaining a logical and meaningful structure on your web page. Incorrect nesting can result in WCAG 1.3.1 failures. Follow these guidelines:</p>
+                          <ol>
+                            <li><strong>Use <code>&lt;h1&gt;</code> for the Main Heading:</strong> The main heading of your page should always be <code>&lt;h1&gt;</code>. It represents the primary topic or title of the page.</li>
+                            <li><strong>Nest Subheadings Sequentially:</strong> When adding subheadings, use <code>&lt;h2&gt;</code> for the first-level subheading, <code>&lt;h3&gt;</code> for second-level, and so on. Each subheading should be nested under the previous heading to create a logical hierarchy.</li>
+                            <li><strong>Avoid Skipping Heading Levels:</strong> Do not skip heading levels. For example, do not jump from <code>&lt;h2&gt;</code> to <code>&lt;h4&gt;</code> without using <code>&lt;h3&gt;</code> in between. Skipping levels can cause confusion and accessibility issues.</li>
+                            <li><strong>Use Semantic HTML:</strong> Whenever possible use semantic HTML elements but if not possible you may use <code>role="heading"</code> and the appropriate number level indicated with <code>aria-level="_"</code>.</li>
+                          </ol>                         
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Three -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          How to Annotate Headings
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" style="">
+                        <div class="accordion-body">
+                          <ol role="list">
+                            <li>Use this <a target="_blank" href="https://www.figma.com/file/txsKugjRb6ALXDK4uKGcp1/A11y-Annotation-Kit---HHMI?type=design&node-id=0-1&mode=design&t=c6seYgq1nqTYby7h-0">A11y Annotation Kit</a>.</li>
+                            <li>Identify all text styled as headings.</li>
+                            <li>Decide which heading level is logical based on hierachy and surrounding text content.</li>
+                            <li>Add a sticky note annotation by copying and pasting to define text as a heading and indicate the correct heading level.</li>
+                          </ol>
+                          <ul class="list-unstyled inline-flex-images" role="list">
+                            <li><img src="/assets/images/h1.png" alt="heading level 1 annotation tag"></li>
+                            <li><img src="/assets/images/h2.png" alt="heading level 2 annotation tag"></li>
+                            <li><img src="/assets/images/h3.png" alt="heading level 3 annotation tag"></li>
+                            <li><img src="/assets/images/h4.png" alt="heading level 4 annotation tag"></li>
+                            <li><img src="/assets/images/h5.png" alt="heading level 5 annotation tag"></li>
+                            <li><img src="/assets/images/h6.png" alt="heading level 6 annotation tag"></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Four -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-item" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                        Resources
+                        </button>
+                      </h2>
+                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
+                        <div class="accordion-body">
+                          <ul>
+                            <li>
+                              <a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=141" target="_blank" rel="noopener noreferrer">Web Content Accessibility Guidelines (WCAG) 2.1 Techniques for Headings</a>
+                            </li>
+                            <li>
+                              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements" target="_blank" rel="noopener noreferrer">MDN Web Docs: HTML Heading Elements</a>
+                            </li>
+                            <li>
+                              <a href="https://www.a11yproject.com/posts/2021-01-06-what-are-html-headings-for/" target="_blank" rel="noopener noreferrer">The A11Y Project: What Are HTML Headings For?</a>
+                            </li>
+                            <li>
+                              <a href="https://webaim.org/techniques/screenreader/#headings" target="_blank" rel="noopener noreferrer">WebAIM: Using Headings to Structure Content</a>
+                            </li>
+                            <li>
+                              <a href="https://developer.paciellogroup.com/blog/2013/01/html5-accessibility-chops-headings/" target="_blank" rel="noopener noreferrer">The Paciello Group: HTML5 Accessibility Chops: Headings</a>
+                            </li>
+                          </ul>                                                                           
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Five -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-item" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                        WCAG Guideline References
+                        </button>
+                      </h2>
+                      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" style="">
+                        <div class="accordion-body">
+                          <ul>
+                            <li><a href="https://www.w3.org/TR/WCAG21/#info-and-relationships" target="_blank" rel="noopener noreferrer">WCAG 2.1 Success Criterion 1.3.1 - Info and Relationships</a></li>
+                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html" target="_blank" rel="noopener noreferrer">WCAG 2.1 Understanding - 1.3.1 Info and Relationships</a></li>
+                          </ul>                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Accordion -->
+                </main>
+              </div>
+            </div>
+
+    <!-- Script links and jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../../../assets/js/global.js"></script>
+    <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- Add sidebar navigation to page -->
+    <script>
+      $(document).ready(function () {
+          // Determine the path relative to the root directory
+          var rootRelativePath = "../../sidebar-navigation.html";
+  
+          // Use jQuery to load the sidebar-navigation.html file
+          $("#sidebar-container").load(rootRelativePath);
+      });
+    </script>
+</body>
+</html>

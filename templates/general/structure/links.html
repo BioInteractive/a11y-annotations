@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+
+    <!-- Link to Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <!-- Link to Custom Stylesheet -->
+    <link rel="stylesheet" href="../../../../assets/styles/custom.css">
+    <!-- Link to Custom Stylesheet Production -->
+    <link rel="stylesheet" href="../../../../../assets/styles/custom.css">
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+  <header class="d-block px-3 py-2 shadow">
+    <img src="https://www.biointeractive.org/themes/gesso/images/hhmi-logo.svg" alt="hhmi Biointeractive logo" style="max-width: 320px;">
+  </header>
+  <div class="container-fluid">
+      <div class="row">
+          <!-- Includes the Sidebar Navigation using jQuery -->
+          <div id="sidebar-container" class="col-md-2 border-end"></div>
+
+          <!-- Main Content -->
+          <main class="col-md-10">
+            <!-- A11y Live Region -->
+            <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
+            <div class="container-xxl bd-gutter mt-3">
+                <h1>Links</h1>
+                <!-- Begin Accordion -->
+                <div class="accordion" id="accordionOpen">
+                    <!-- Accordion Item One -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Standards SC 1.3.1 Level A and SC 2.4.4 Level A
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
+                        <div class="accordion-body">
+                        <p>
+                          <strong>1.3.1 Info and Relationships:</strong> Information, structure, and relationships conveyed through presentation can be programmatically determined 
+                          or are available in text.
+                        </p>
+                        <p>
+                          A link is an interactive user interface element, typically created using the HTML <code>&lt;a&gt;</code>. An (anchor) link is a clickable element that allows
+                           users to navigate to another webpage, resource, or location by specifying a URL, enhancing the interconnectedness of web content.
+                        </p>
+                        <p>
+                          <strong>2.4.4 Link Purpose:</strong> The purpose of each link can be determined from the link text alone or from the link text together with its programmatically 
+                          determined link context, except where the purpose of the link would be ambiguous to users in general.
+                        </p>
+                        <p>
+                          Links must be preceivable as links, must have an accessible name for link purpose understand where links lead without relying solely on additional context or non-descriptive text.
+                         Links must also be in focus order and must function equally for all users.
+                        </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Two -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Links
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" style="">
+                        <div class="accordion-body">
+                          <h3>Examples of Common Links</h3>
+                          <ul class="list-unstyled">
+                            <li><a href="#" aria-disabled="true" class="example-list-link">Home</a> - Navigates to the homepage of a website.</li>
+                            <li><a href="#" aria-disabled="true" class="example-list-link">About Us</a> - Takes users to the "About Us" page for information about the organization.</li>
+                            <li><a href="#" aria-disabled="true" class="example-list-link">Contact</a> - Leads to the contact page to get in touch with the website or business.</li>
+                            <li><a href="#" aria-disabled="true" class="example-list-link">Products</a> - Links to a page showcasing products or services offered.</li>
+                            <li><a href="#" aria-disabled="true" class="example-list-link">Services</a> - Directs users to a page describing available services.</li>
+                            <li><a href="#" aria-disabled="true" class="example-list-link">Blog</a> - Opens a blog section with articles and posts.</li>
+                            <li><a href="#" aria-disabled="true" class="example-list-link">Login</a> - Accesses the login page for user authentication.</li>
+                            <li><a href="#" aria-disabled="true" class="example-list-link">Register</a> - Leads to the registration or sign-up page for new users.</li>
+                            <li><a href="#" aria-disabled="true" class="example-list-link">Search</a> - Takes users to a search page or initiates a search query.</li>
+                            <li><a href="#" aria-disabled="true" class="example-list-link">Terms of Service</a> - Provides access to the terms and conditions.</li>
+                          </ul>                                             
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Three -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          How to Annotate Links
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" style="">
+                        <div class="accordion-body">
+                          <ol role="list">
+                            <li>Use this <a target="_blank" href="https://www.figma.com/file/txsKugjRb6ALXDK4uKGcp1/A11y-Annotation-Kit---HHMI?type=design&node-id=0-1&mode=design&t=c6seYgq1nqTYby7h-0">A11y Annotation Kit</a>.</li>
+                            <li>Identify all UI elements that navigate users.</li>
+                            <li>During phase one, ask questions if neccesary to understand navigation.</li>
+                            <li>During phase two in preparation for developer hand-off, add a sticky note annotation to define each link element as a link.</li>
+                            <li>Most links will require only minimal annotating for the developer hand-off phase. Please see interactives and the How to Annotate for more detailed
+                              instructions on how to number the elements and write annotations specific for more complex instances of link components.
+                            </li>
+                            <li>If the link does not have a visible text label it is recommended to use the link annotation tag with the additional label to ensure the link 
+                              name will be communicated to the developer for programming.
+                            </li>
+                          </ol>
+                          <ul class="list-unstyled inline-flex-images" role="list">
+                            <li><img src="/assets/images/link-tag.png" alt="link annotation tag"></li>
+                            <li><img src="/assets/images/link-with-label.png" alt="link annotation tag with label equals sign and the word foo in quotes"></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Four -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-item" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                        Resources
+                        </button>
+                      </h2>
+                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
+                        <div class="accordion-body">
+                          <ul>
+                            <li>
+                              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" target="_blank" rel="noopener noreferrer">MDN Web Docs: <code>&lt;a&gt;</code> Element</a> - Comprehensive documentation on the HTML <code>&lt;a&gt;</code> (anchor) element, including semantics and usage.
+                            </li>
+                            <li>
+                              <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/link_role" target="_blank" rel="noopener noreferrer">MDN Web Docs: <code>role="link"</code></a> - Guidance on using <code>role="link"</code> for creating custom links for accessibility.
+                            </li>
+                            <li>
+                              <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank" rel="noopener noreferrer">MDN Web Docs: DOM Events</a> - Information on JavaScript event listeners for enhancing link interactivity.
+                            </li>
+                            <li>
+                              <a href="https://www.smashingmagazine.com/2018/05/links-ux-design/" target="_blank" rel="noopener noreferrer">Smashing Magazine: Designing Effective Links</a> - Insights into designing links for a better user experience.
+                            </li>
+                            <li>
+                              <a href="https://uxdesign.cc/whats-the-difference-between-a-link-and-a-button-c20f46485b72" target="_blank" rel="noopener noreferrer">UX Collective: What's the Difference Between a Link and a Button?</a> - Explains the differences in semantics and usage between links and buttons.
+                            </li>
+                            <li>
+                              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#keyboard_navigation" target="_blank" rel="noopener noreferrer">MDN Web Docs: Keyboard navigation with <code>&lt;a&gt;</code> elements</a> - Guidance on making in-page navigation links keyboard accessible.
+                            </li>
+                            <li>
+                              <a href="https://webaim.org/techniques/skipnav/" target="_blank" rel="noopener noreferrer">WebAIM: Skip Navigation Links</a> - Explanation and implementation guidance for skip navigation links, which aid in focus management for screen reader users.
+                            </li>
+                          </ul>                                    
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Five -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-item" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                        WCAG Guideline References
+                        </button>
+                      </h2>
+                      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" style="">
+                        <div class="accordion-body">
+                          <ul>
+                            <li><a href="https://www.w3.org/TR/WCAG21/#info-and-relationships" target="_blank" rel="noopener noreferrer">WCAG 2.1 Success Criterion 1.3.1 - Info and Relationships</a></li>
+                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html" target="_blank" rel="noopener noreferrer">WCAG 2.1 Understanding - 1.3.1 Info and Relationships</a></li>
+                            <li><a href="https://www.w3.org/TR/WCAG22/#link-purpose-in-context" target="_blank" rel="noopener noreferrer">WCAG 2.2 Success Criterion 2.4.4: Link Purpose (In Context)</a> - Information on ensuring link purpose can be determined from the link text and context.</li>
+                            <li><a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener noreferrer">Web Content Accessibility Guidelines (WCAG) 2.2</a> - The latest version of the WCAG, with updates and additions to accessibility requirements.</li>
+                          </ul>                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Accordion -->
+                </main>
+              </div>
+            </div>
+
+    <!-- Script links and jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../../../assets/js/global.js"></script>
+    <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- Add sidebar navigation to page -->
+    <script>
+      $(document).ready(function () {
+          // Determine the path relative to the root directory
+          var rootRelativePath = "../../sidebar-navigation.html";
+  
+          // Use jQuery to load the sidebar-navigation.html file
+          $("#sidebar-container").load(rootRelativePath);
+      });
+    </script>
+</body>
+</html>

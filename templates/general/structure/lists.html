@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists</title>
+
+    <!-- Link to Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <!-- Link to Custom Stylesheet -->
+    <link rel="stylesheet" href="../../../../assets/styles/custom.css">
+    <!-- Link to Custom Stylesheet Production -->
+    <link rel="stylesheet" href="../../../../../assets/styles/custom.css">
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+  <header class="d-block px-3 py-2 shadow">
+    <img src="https://www.biointeractive.org/themes/gesso/images/hhmi-logo.svg" alt="hhmi Biointeractive logo" style="max-width: 320px;">
+  </header>
+  <div class="container-fluid">
+      <div class="row">
+          <!-- Includes the Sidebar Navigation using jQuery -->
+          <div id="sidebar-container" class="col-md-2 border-end"></div>
+
+          <!-- Main Content -->
+          <main class="col-md-10">
+            <!-- A11y Live Region -->
+            <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
+            <div class="container-xxl bd-gutter mt-3">
+                <h1>Lists</h1>
+                <!-- Begin Accordion -->
+                <div class="accordion" id="accordionOpen">
+                    <!-- Accordion Item One -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Standards SC 1.3.1 Level A
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
+                        <div class="accordion-body">
+                        <p>
+                          <strong>1.3.1 Info and Relationships:</strong> Information, structure, and relationships conveyed through presentation can be programmatically determined 
+                          or are available in text.
+                        </p>
+                        <p>
+                          Semantically marking up lists helps assistive technologies (such as screen readers) understand the structure and purpose of the content. For users who rely on 
+                          these technologies, a list marked up as a list provides context and conveys that the items are related.</p>
+                        <p>
+                          Visually presented lists must be in semantic list markup to ensure the information and relationships are programmatically determinable. 
+                        </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Two -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Lists
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" style="">
+                        <div class="accordion-body">
+                          <ul>
+                            <li>
+                              <strong>Unordered List:</strong> 
+                              A list of items that are listed in no particular order. 
+                              Use <code>&lt;ul&gt;</code> to create an unordered list. 
+                              List items are typically preceded by bullet points, though the visual representation may vary.
+                            </li>
+                            <li>
+                              <strong>Ordered List:</strong> 
+                              A list of items that are listed in a specific order, typically indicated by numbers, letters, or other markers. 
+                              Use <code>&lt;ol&gt;</code> to create an ordered list. 
+                              List items are automatically numbered or lettered.
+                            </li>
+                            <li>
+                              <strong>Definition List:</strong> 
+                              A list of terms and their corresponding definitions. 
+                              Each term is represented using <code>&lt;dt&gt;</code> (definition term), and its definition is represented using <code>&lt;dd&gt;</code> (definition description). 
+                              Use <code>&lt;dl&gt;</code> to create a definition list.
+                            </li>
+                            <li>
+                              <strong>Nested Lists:</strong> 
+                              Lists can be nested within other lists, allowing you to create hierarchical structures. 
+                              Use <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code> within another list item to create nested lists.
+                            </li>
+                          </ul>
+                          <h3>Examples</h3>
+                          <h4>Unordered List Type</h4>
+                          <ul>
+                            <li>Apples</li>
+                            <li>Bananas</li>
+                            <li>Oranges</li>
+                          </ul>
+                          <h4>Ordered List Type</h4>
+                          <ol>
+                            <li>Start with the basic stance.</li>
+                            <li>Step forward with your right foot.</li>
+                            <li>Twist to the left and raise your left hand.</li>
+                            <li>Complete the routine with a spin.</li>
+                          </ol>
+                          <h4>Definition List Type</h4>
+                          <dl>
+                            <dt>Programming Languages:</dt>
+                            <dd>Java - An object-oriented programming language.</dd>
+                            <dd>Python - Known for its simplicity and readability.</dd>
+                            <dt>Planets in the Solar System:</dt>
+                            <dd>Earth - The third planet from the Sun.</dd>
+                            <dd>Mars - Known as the "Red Planet."</dd>
+                          </dl>
+                          <h4>Nested Lists Type</h4>
+                          <ul>
+                            <li>
+                              Travel Destinations:
+                              <ul>
+                                <li>Europe
+                                  <ul>
+                                    <li>France</li>
+                                    <li>Italy</li>
+                                    <li>Spain</li>
+                                  </ul>
+                                </li>
+                                <li>Asia
+                                  <ul>
+                                    <li>Japan</li>
+                                    <li>Thailand</li>
+                                    <li>India</li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>                                                  
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Three -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          How to Annotate Landmarks
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" style="">
+                        <div class="accordion-body">
+                          <ol role="list">
+                            <li>Use this <a target="_blank" href="https://www.figma.com/file/txsKugjRb6ALXDK4uKGcp1/A11y-Annotation-Kit---HHMI?type=design&node-id=0-1&mode=design&t=c6seYgq1nqTYby7h-0">A11y Annotation Kit</a>.</li>
+                            <li>Identify all text the is grouped and styled as lists.</li>
+                            <li>Decide which list type would be most appropriate by the text content.</li>
+                            <li>Add a sticky note annotation by copying and pasting to define text as a list and indicate the correct list type.</li>
+                            <li>For nested lists use additional tags to tag each nested list with the correct list type individually.</li>
+                          </ol>
+                          <ul class="list-unstyled inline-flex-images" role="list">
+                            <li><img src="/assets/images/ul-list.png" alt="unordered list annotation tag"></li>
+                            <li><img src="/assets/images/ol.png" alt="ordered list annotation tag"></li>
+                            <li><img src="/assets/images/dl.png" alt="definition list annotation tag"></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Four -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-item" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                        Resources
+                        </button>
+                      </h2>
+                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
+                        <div class="accordion-body">
+                          <ul>
+                            <li>
+                              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul" target="_blank" rel="noopener noreferrer">MDN Web Docs: Unordered List</a> - Comprehensive documentation on using unordered lists in HTML.
+                            </li>
+                            <li>
+                              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol" target="_blank" rel="noopener noreferrer">MDN Web Docs: Ordered List</a> - Detailed information on ordered lists and their usage.
+                            </li>
+                            <li>
+                              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl" target="_blank" rel="noopener noreferrer">MDN Web Docs: Definition List</a> - Documentation on creating definition lists in HTML.
+                            </li>
+                            <li>
+                              <a href="https://www.w3schools.com/html/html_lists.asp" target="_blank" rel="noopener noreferrer">W3 Schools</a> - HTML lists allow web developers to group a set of related items in lists.
+                            </li>
+                            <li>
+                              <a href="https://webaim.org/techniques/lists/" target="_blank" rel="noopener noreferrer">WebAIM: Lists and Accessibility</a> - Guidance on creating accessible lists and best practices for list semantics.
+                            </li>
+                            <li>
+                              <a href="https://www.w3.org/TR/wai-aria-1.2/#list" target="_blank" rel="noopener noreferrer">WAI-ARIA 1.2 Specification: Lists</a> - Specifics on ARIA roles and attributes related to lists.
+                            </li>
+                            <li>
+                              <a href="https://www.w3.org/TR/wai-aria-practices-1.2/#list" target="_blank" rel="noopener noreferrer">WAI-ARIA Authoring Practices 1.2: List Widgets</a> - Practical examples and guidance for implementing accessible list widgets.
+                            </li>
+                          </ul>                                                   
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Five -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-item" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                        WCAG Guideline References
+                        </button>
+                      </h2>
+                      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" style="">
+                        <div class="accordion-body">
+                          <ul>
+                            <li><a href="https://www.w3.org/TR/WCAG21/#info-and-relationships" target="_blank" rel="noopener noreferrer">WCAG 2.1 Success Criterion 1.3.1 - Info and Relationships</a></li>
+                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html" target="_blank" rel="noopener noreferrer">WCAG 2.1 Understanding - 1.3.1 Info and Relationships</a></li>
+                            <li><a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener noreferrer">Web Content Accessibility Guidelines (WCAG) 2.2</a> - The latest version of the WCAG, with updates and additions to accessibility requirements.</li>
+                          </ul>                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Accordion -->
+                </main>
+              </div>
+            </div>
+
+    <!-- Script links and jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../../../assets/js/global.js"></script>
+    <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- Add sidebar navigation to page -->
+    <script>
+      $(document).ready(function () {
+          // Determine the path relative to the root directory
+          var rootRelativePath = "../../sidebar-navigation.html";
+  
+          // Use jQuery to load the sidebar-navigation.html file
+          $("#sidebar-container").load(rootRelativePath);
+      });
+    </script>
+</body>
+</html>

@@ -116,3 +116,39 @@ a {
   .table {
     border-color: dimgrey;
   }
+
+  /* Lists */
+  .list-unstyled {
+    list-style-type: none;
+  }
+
+  /* Custom CSS for evenly spaced images */
+  .inline-flex-images {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .inline-flex-images li {
+    padding: 8px;
+  }
+
+  /* Example buttons */
+  .example-list-button {
+    background-color: #178387;
+    border: 0;
+    border-radius: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.875rem;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 700;
+    line-height: 1.25;
+    padding: .75rem 1.25rem;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: .25rem;
+  }
