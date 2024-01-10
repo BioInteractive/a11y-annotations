@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+
+    <!-- Link to Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <!-- Link to Custom Stylesheet -->
+    <link rel="stylesheet" href="../../../../assets/styles/custom.css">
+    <!-- Link to Custom Stylesheet Production -->
+    <link rel="stylesheet" href="../../../../../assets/styles/custom.css">
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+  <header class="d-block px-3 py-2 shadow">
+    <img src="https://www.biointeractive.org/themes/gesso/images/hhmi-logo.svg" alt="hhmi Biointeractive logo" style="max-width: 320px;">
+  </header>
+  <div class="container-fluid">
+      <div class="row">
+          <!-- Includes the Sidebar Navigation using jQuery -->
+          <div id="sidebar-container" class="col-md-2 border-end"></div>
+
+          <!-- Main Content -->
+          <main class="col-md-10">
+            <!-- A11y Live Region -->
+            <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
+            <div class="container-xxl bd-gutter mt-3">
+                <h1>Forms</h1>
+                <!-- Begin Accordion -->
+                <div class="accordion" id="accordionOpen">
+                    <!-- Accordion Item One -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Labeling Controls
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
+                        <div class="accordion-body">
+                          <p>
+                            Persistently visible labels must be provided to identify all form controls, including text fields, checkboxes, 
+                            radio buttons, and drop-down menus. Placeholder text is not a sufficient label becuase it disappears as soon as the 
+                            user begins to type in the input field.
+                          </p>
+                          <p>
+                            Visible labels must be close in proximity and must identify the field Labels by describing the purpose of the form control.
+                            If the field is a required field the label must identify it by either an asterisk (*) or the word (required) in the label.
+                          </p>
+                          <p>
+                            In some instances an aria-label or aria-labelledby can also be used to identify form controls. This approach should only be 
+                            used when the label of the control is clear from the surrounding content. For example if the search button has a well known 
+                            magnifying glass icon or the search form button is labelled "search" then an additional visible label is not a hard requirment.
+                          </p>
+                          <p>It is mandatory to provide <code>autocomplete</code> attributes to the fields on the form requesting information about the user. 
+                            When autocomplete is assigned for input fields, suggestions are provided for the user. For some users when that does not happen it is difficult to complete the form.</p>
+                          <div class="d-inline-block border border-dark p-2 rounded">
+                            <div class="d-flex flex-row">
+                              <div class="text-to-copy">
+                                <h3>Form Labels</h3>
+                                <ul role="list">
+                                  <li><strong>Form Controls</strong> must have a persistantly visible <code class="code-tag">&lt;label&gt;</code> with a for/id association.</li>
+                                  <li>The <code class="code-tag">&lt;label&gt;</code> must identify if it is required with an (*) or the word (required).</li>
+                                  <li>Add appropriate <code>autocomplete</code> attributes to all fields requiring user specific information.</li>
+                                </ul>
+                              </div>
+                              <div>
+                                  <button class="ml-1r btn copy-btn">
+                                    <i class="bi bi-clipboard-heart-fill" aria-hidden="true"></i> Copy
+                                  </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Two -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Grouping Controls
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" style="">
+                        <div class="accordion-body">
+                          <p>Similar form fields must be grouped together to improve form comprehension for all users. 
+                            This grouping makes it easier for users to identify related controls and allows them to concentrate on smaller, 
+                            more manageable sections of the form, rather than attempting to understand the entire form at once.
+                          </p>
+                          <p>Controls that must be grouped with a <code>&lt;fieldset&gt;</code> and a <code>&lt;legend&gt;</code> include:</p>
+                          <ul>
+                            <li>Radio buttons</li>
+                            <li>Checkboxes</li>
+                            <li>Input fields for related information (e.g., first name, last name)</li>
+                            <li>Select dropdowns</li>
+                            <li>Date pickers</li>
+                          </ul>
+                          <p>Grouping these controls with a <code>&lt;fieldset&gt;</code> and a descriptive <code>&lt;legend&gt;</code> provides 
+                            clarity and structure for users.
+                          </p>
+                          <p>Related controls may also be associated with ARIA. ARIA provides a grouping role that functions similarly to the fieldset and 
+                            legend. <code>role="group"</code> with an aria-labelledby pointing to a visible text node is a sufficient technique as well.
+                          </p>
+                          <div class="d-inline-block border border-dark p-2 rounded">
+                            <div class="d-flex flex-row">
+                              <div class="text-to-copy">
+                                <h3>Form Control Group</h3>
+                                <ul role="list">
+                                  <li><strong>Form Control Group</strong> must be grouped in a <code class="code-tag">&lt;fieldset&gt;</code> with a <code class="code-tag">&lt;legend&gt;</code>.</li>
+                                  <li>If a fieldset and legend are not possible then use a <code>role="group"</code> with an aria-labelledby pointing to a visible text node.</li>
+                                </ul>
+                              </div>
+                              <div>
+                                  <button class="ml-1r btn copy-btn">
+                                    <i class="bi bi-clipboard-heart-fill" aria-hidden="true"></i> Copy
+                                  </button>
+                              </div>
+                            </div>
+                          </div>              
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Three -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Form Instructions
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" style="">
+                        <div class="accordion-body">
+                          <p>
+                            If the field is a required field the label must identify it by either an asterisk (*) or the word (required) in the label.
+                            If an asterisk (*) is used their must also be intructions before the form explaining to users what the asterisk means. 
+                            "<em>Fields with an asterisk (*) are required.</em>"
+                          </p>
+                          <div class="d-inline-block border border-dark p-2 rounded">
+                            <div class="d-flex flex-row">
+                              <div class="text-to-copy">
+                                <h3>Form Instructions</h3>
+                                <ul role="list">
+                                  <li><strong>Form Instructions</strong> must be provided if the <code class="code-tag">&lt;label&gt;</code> identifies that it is
+                                    a required field with an asterisk (*).
+                                  </li>
+                                  <li>Provide instructions for context before the <code class="code-tag">&lt;form&gt;</code> 
+                                    "<em>Fields with an asterisk (*) are required.</em>" or 
+                                    inside the <code class="code-tag">&lt;form&gt;</code> with an aria-labelledby association.
+                                  </li>                       
+                                </ul>
+                              </div>
+                              <div>
+                                  <button class="ml-1r btn copy-btn">
+                                    <i class="bi bi-clipboard-heart-fill" aria-hidden="true"></i> Copy
+                                  </button>
+                              </div>
+                            </div>
+                          </div>       
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Four -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                          Form Validation
+                        </button>
+                      </h2>
+                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
+                        <div class="accordion-body">
+                          <p>If there are forms present that contain required input fields or input fields requiring specific data validation please ask the designer to provide you 
+                            with examples of the form while in error state. The form error messages should be reviewed for color contrast, identify the field in error using the field name,
+                             and providing any required format information.</p>
+                          <p>While HTML5 form validation offers a quick way to check for basic input errors, it falls short in several key areas of accessibility. 
+                            Specifically, it does not identify the field in error using the field name, the error messages do not stay persistently visible, and it does not 
+                            provide feedback about required formats for most field types. Additionally, the error messages are not programmatically associated with the field 
+                            in error and often visually obscure other content, especially on smaller screen sizes. Client side error messaging is always preferred.</p>
+
+                          <p>To address these issues, the following steps are recommended:</p>
+                          
+                          <ol role="list">
+                            <li>Make Errors Prominent: Upon form submission or when focus is on the incorrectly filled-in field, errors should be made highly visible to the user.</li>
+                            <li>Associate Error Messages: Utilize the <code>aria-describedby</code> attribute to programmatically associate each error message with the field in error. (The <code>aria-describedby</code> attribute should only be present when the error message is visible.)</li>
+                            <li>Explicit Field Identification: Error messages should explicitly identify the field that is in error to remove any ambiguity. Best practice is to start with the field name, for example "First Name is required".</li>
+                            <li>Format Suggestions: If the error is related to incorrect formatting, the error message should provide a suggestion on how to correct it.</li>
+                            <li>Disable HTML5 Validation: Use the <code>novalidate</code> attribute on the <code>form</code> tag to disable HTML5's built-in validation, allowing for a more accessible custom validation process.</li>
+                            <li>Use aria-invalid: Implement the <code>aria-invalid="true"</code> attribute on fields that have failed validation to inform assistive technologies that the field contains an error.
+                            (This attribute should be removed when the form field is not invalid.)</li>
+                          </ol>                         
+                          <p>By implementing these recommendations, you'll be taking a significant step toward making your forms more accessible and user-friendly.</p>                 
+                          <div class="d-inline-block border border-dark p-2 rounded">
+                            <div class="d-flex flex-row">
+                              <div class="text-to-copy">
+                                <h3>Form Instructions</h3>
+                                <ul role="list">
+                                  <li><strong>Form Validation</strong> must be provided for all required form fields. Do not rely on HTML default error messaging.</li>
+                                  <li>Make Errors Prominent: Upon form submission or when focus is on the incorrectly filled-in field, errors should be made highly visible to the user.</li>
+                                  <li>Associate Error Messages: Utilize the <code>aria-describedby</code> attribute to programmatically associate each error message with the field in error. (The <code>aria-describedby</code> attribute should only be present when the error message is visible.)</li>
+                                  <li>Explicit Field Identification: Error messages should explicitly identify the field that is in error to remove any ambiguity. Best practice is to start with the field name, for example "First Name is required".</li>
+                                  <li>Format Suggestions: If the error is related to incorrect formatting, the error message should provide a suggestion on how to correct it.</li>
+                                  <li>Disable HTML5 Validation: Use the <code>novalidate</code> attribute on the <code>form</code> tag to disable HTML5's built-in validation, allowing for a more accessible custom validation process.</li>
+                                  <li>Use aria-invalid: Implement the <code>aria-invalid="true"</code> attribute on fields that have failed validation to inform assistive technologies that the field contains an error.
+                                  (This attribute should be removed when the form field is not invalid.)</li>                     
+                                </ul>
+                              </div>
+                              <div>
+                                  <button class="ml-1r btn copy-btn">
+                                    <i class="bi bi-clipboard-heart-fill" aria-hidden="true"></i> Copy
+                                  </button>
+                              </div>
+                            </div>
+                          </div>       
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Five -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                          User Notifcation
+                        </button>
+                      </h2>
+                      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" style="">
+                        <div class="accordion-body">
+                          <p>Users must be notified after submitting a form. please ask the designer to provide you with examples of the form while in error state and success states. 
+                            The user notifications should be reviewed for color contrast, identifying the status of the form submission and if the user is provioded with details about the submission.</p>
+                          <p>After users submit a form, it's essential to provide clear and accessible feedback about the results of their submission. This feedback can be categorized into 
+                            two main types: in-line feedback and overall feedback.</p>                                              
+                          <p>In-line feedback is real-time feedback provided as users interact with the form controls. It helps users correct errors and understand the status of their 
+                            input as they go along. Key considerations for in-line feedback include:</p>                         
+                          <ul>
+                            <li><strong>Error Indication:</strong> When users enter incorrect or incomplete information, errors should be visually and programmatically indicated near 
+                              the associated form controls. You can use techniques like color changes, icons, or error messages next to the affected fields. Ensure these indications are 
+                              perceivable and provide textual descriptions for screen reader users that are announced with <code>role="alert"</code>, <code>aria-live</code> regions or 
+                              <code>role="status"</code> On the container where the text notification is displayed. Please ensure these rules and live regions are in the DOM on page load.</li>
+                            <li><strong>Validation Messages:</strong> Use descriptive and concise validation messages to inform users about specific errors or formatting requirements. 
+                              These messages should appear promptly when errors occur and disappear when the user corrects them. Utilize the <code>aria-live</code> attribute to make dynamic 
+                              updates accessible to screen reader users.</li>
+                          </ul>                         
+                          <p>Overall feedback is typically provided after the user submits the form and it has been processed. This feedback informs users about the success or 
+                            failure of their submission and any further actions they may need to take. Key considerations for overall feedback include:</p>
+                          <ul>
+                            <li><strong>Success Message:</strong> If the form submission is successful, display a clear and positive message indicating success. Mention any 
+                              next steps or actions if applicable, such as "Your information has been successfully submitted."</li>
+                            <li><strong>Error Message:</strong> If the form submission encounters errors, provide a detailed error message that explains what went wrong and 
+                              how to correct it. Ensure that error messages are prominent, clear, and accessible to all users, including those using screen readers.</li>
+                            <li><strong>Dynamic Announcements:</strong> Make sure that both in-line and overall feedback is accessible to users with disabilities. Use appropriate 
+                              ARIA attributes like <code>aria-live</code> and <code>aria-atomic</code> to ensure screen readers announce updates correctly.</li>
+                          </ul>                         
+                          <p>By implementing effective user notification techniques, you create a more user-friendly and accessible form submission experience, helping users understand the outcome of their actions and take appropriate steps.</p>
+                          <div class="d-inline-block border border-dark p-2 rounded">
+                            <div class="d-flex flex-row">
+                              <div class="text-to-copy">
+                                <h3>User Notifcation</h3>
+                                <ul>
+                                  <li>Use in-line error indication with clear descriptions for screen readers. Consider <code>role="alert"</code> for errors.</li>
+                                  <li>Show descriptive validation messages with <code>aria-live</code>, ensuring it's in the DOM on page load.</li>
+                                  <li>Provide prominent success messages. Consider <code>role="status"</code> on the container and ensure it's in the DOM on page load.</li>
+                                </ul>                                                             
+                              </div>
+                              <div>
+                                  <button class="ml-1r btn copy-btn">
+                                    <i class="bi bi-clipboard-heart-fill" aria-hidden="true"></i> Copy
+                                  </button>
+                              </div>
+                            </div>
+                          </div>                  
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Six -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                          Custom Controls
+                        </button>
+                      </h2>
+                      <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" style="">
+                        <div class="accordion-body">
+                          <section>
+                            <p>If you are unclear about a custom control element on a design ask the designer or stakeholder to provide you with detailed information 
+                              about the function of the control. Knowing the intended function of the control should give you a better idea of how to recommend making it accessible in the development phase.</p>
+                            <p>Custom controls in web forms offer a powerful way to improve accessibility and user experience. They allow you to design and implement form elements that meet the specific 
+                              needs of your users while ensuring compliance with accessibility standards.</p>                         
+                            <p>Key considerations to recommend to developers when creating custom controls include:</p>                         
+                            <ul>
+                              <li><strong>Semantic Markup:</strong> Use semantic HTML elements as a foundation for custom controls. This provides a clear structure and ensures compatibility with assistive technologies.</li>
+                              <li><strong>Keyboard Accessibility:</strong> Ensure that custom controls are fully operable using a keyboard. Implement keyboard event handlers to enable keyboard interaction.</li>
+                              <li><strong>Focus Management:</strong> Manage focus states carefully to provide visual and programmatic feedback to users. This includes focus styles and ARIA attributes.</li>
+                              <li><strong>ARIA Roles and States:</strong> Utilize ARIA roles and states to convey the purpose and state of custom controls to assistive technologies.</li>
+                              <li><strong>Testing and Feedback:</strong> Thoroughly test custom controls with various assistive technologies and gather user feedback to refine their design and functionality.</li>
+                            </ul>
+                            <p>By creating custom controls with accessibility in mind, you can enhance the usability and inclusivity of your web forms, ensuring that all users can interact with them effectively.</p>                                                   </section>                          
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Seven -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingSeven">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                          How to Annotate Forms
+                        </button>
+                      </h2>
+                      <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" style="">
+                        <div class="accordion-body">
+                          <ol role="list">
+                            <li>Use this <a target="_blank" href="https://www.figma.com/file/txsKugjRb6ALXDK4uKGcp1/A11y-Annotation-Kit---HHMI?type=design&node-id=0-1&mode=design&t=c6seYgq1nqTYby7h-0">A11y Annotation Kit</a>.</li>
+                            <li>Identify all UI elements within forms.</li>
+                            <li>During phase one, ask questions if neccesary to understand functionality. ask for forms in error state and success states.</li>
+                            <li>During phase two in preparation for developer hand-off, add a sticky note annotation to define each label element and autocomplete attributes.</li>
+                            <li>Most forms will require further annotating for the developer hand-off phase. Please see interactives and the How to Annotate for more detailed
+                              instructions on how to number the elements and write annotations specific for more complex components.
+                            </li>
+                          </ol>
+                          <ul class="list-unstyled inline-flex-images" role="list">
+                            <li><img src="/assets/images/label.png" alt="label annotation tag"></li>
+                            <li><img src="/assets/images/autocomplete-name.png" alt="autocomplete annotation tag with equals sign and the word name in quotes"></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Eight -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-item" id="headingEight">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+                        Resources
+                        </button>
+                      </h2>
+                      <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" style="">
+                        <div class="accordion-body">
+                          <ul>
+                            <li>
+                              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button" target="_blank" rel="noopener noreferrer">MDN Web Docs: <code>&lt;button&gt;</code> Element</a> - Comprehensive documentation on the HTML <code>&lt;button&gt;</code> element, including semantics and usage.
+                            </li>
+                            <li>
+                              <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role" target="_blank" rel="noopener noreferrer">MDN Web Docs: Using the button role</a> - Guidance on using <code>role="button"</code> to make non-button elements behave like buttons for accessibility.
+                            </li>
+                            <li>
+                              <a href="https://www.w3.org/TR/wai-aria-1.2/#button" target="_blank" rel="noopener noreferrer">WAI-ARIA 1.2 Specification: Button</a> - Details on the ARIA `button` role and how to use it to enhance button accessibility.
+                            </li>
+                            <li>
+                              <a href="https://www.w3.org/TR/wai-aria-practices-1.2/#button" target="_blank" rel="noopener noreferrer">WAI-ARIA Authoring Practices 1.2: Button Widgets</a> - Practical examples and guidance for implementing accessible button widgets.
+                            </li>
+                            <li>
+                              <a href="https://www.a11yproject.com/posts/2013-01-11-when-is-a-button-not-a-button/" target="_blank" rel="noopener noreferrer">The A11Y Project: When is a Button Not a Button?</a> - A discussion on the semantic meaning of buttons and when to use the <code>&lt;button&gt;</code> element.
+                            </li>
+                            <li>
+                              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button" target="_blank" rel="noopener noreferrer">MDN Web Docs: <code>&lt;button&gt;</code> Element</a> - Detailed information on the HTML <code>&lt;button&gt;</code> element and its usage as a clickable control.
+                            </li>
+                            <li>
+                              <a href="https://www.w3.org/WAI/tutorials/forms/buttons/" target="_blank" rel="noopener noreferrer">W3C WAI: Creating Accessible Buttons</a> - A tutorial on creating buttons that are accessible to all users.
+                            </li>
+                            <li>
+                              <a href="https://webaim.org/techniques/buttons/" target="_blank" rel="noopener noreferrer">WebAIM: Buttons</a> - Guidance on creating accessible buttons, including JavaScript event listeners for keyboard and screen reader users.
+                            </li>
+                            <li>
+                              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label" target="_blank" rel="noopener noreferrer">MDN Web Docs: <code>&lt;label&gt;</code> Element</a> - Documentation on the HTML <code>&lt;label&gt;</code> element and its role in associating labels with form controls.
+                            </li>
+                            <li>
+                              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete" target="_blank" rel="noopener noreferrer">MDN Web Docs: autocomplete attribute</a> - Information on using the `autocomplete` attribute to improve form autofill behavior.
+                            </li>
+                            <li>
+                              <a href="https://www.w3.org/TR/WCAG21/#input-purposes" target="_blank" rel="noopener noreferrer">WCAG 2.1: Input Purposes</a> - Guidelines on input purposes, including recommendations for using autocomplete attributes for accessibility.
+                            </li>
+                            <li>
+                              <a href="https://www.w3.org/TR/WCAG21/" target="_blank" rel="noopener noreferrer">WCAG 2.1 - Web Content Accessibility Guidelines</a> - The official guidelines for making web content, including forms, accessible to people with disabilities.
+                            </li>
+                            <li>
+                              <a href="https://www.w3.org/TR/html-aapi/" target="_blank" rel="noopener noreferrer">HTML Accessibility API Mappings</a> - Details on how HTML features, including form elements, should be exposed to accessibility APIs.
+                            </li>
+                            <li>
+                              <a href="https://www.w3.org/TR/wai-aria-practices-1.2/#aria_ex" target="_blank" rel="noopener noreferrer">WAI-ARIA Authoring Practices 1.2: Accessible Forms</a> - Guidance on creating accessible forms using ARIA roles and attributes.
+                            </li>
+                            <li>
+                              <a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility" target="_blank" rel="noopener noreferrer">MDN Web Docs: Web Accessibility</a> - A comprehensive resource on web accessibility, including forms and their accessibility considerations.
+                            </li>
+                          </ul>                                                             
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Nine -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-item" id="headingNine">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
+                        WCAG Guideline References
+                        </button>
+                      </h2>
+                      <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" style="">
+                        <div class="accordion-body">
+                          <ul>
+                            <li><a href="https://www.w3.org/TR/WCAG21/#name-role-value" target="_blank" rel="noopener noreferrer">WCAG 2.1 Success Criterion 4.1.2 - Name, Role, Value</a></li>
+                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" target="_blank" rel="noopener noreferrer">WCAG 2.1 Understanding - 4.1.2 Name, Role, Value</a></li>
+                            <li><a href="https://www.w3.org/TR/WCAG21/#input-purposes" target="_blank" rel="noopener noreferrer">WCAG 2.1 Success Criterion 1.3.5 - Identify Input Purpose</a></li>
+                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/input-purposes.html" target="_blank" rel="noopener noreferrer">WCAG 2.1 Understanding - 1.3.5 Identify Input Purpose</a></li>
+                            <li><a href="https://www.w3.org/TR/WCAG21/#minimize-error" target="_blank" rel="noopener noreferrer">WCAG 2.1 Success Criterion 3.3.1 - Error Identification</a></li>
+                            <li><a href="https://www.w3.org/TR/WCAG21/#labels-or-instructions" target="_blank" rel="noopener noreferrer">WCAG 2.1 Success Criterion 3.3.2 - Labels or Instructions</a></li>
+                            <li><a href="https://www.w3.org/TR/WCAG21/#error-suggestion" target="_blank" rel="noopener noreferrer">WCAG 2.1 Success Criterion 3.3.3 - Error Suggestion</a></li>
+                            <li><a href="https://www.w3.org/TR/WCAG21/#error-prevention-legal-financial-data" target="_blank" rel="noopener noreferrer">WCAG 2.1 Success Criterion 3.3.4 - Error Prevention (Legal, Financial, Data)</a></li>
+                            <li><a href="https://www.w3.org/TR/WCAG21/#status-messages" target="_blank" rel="noopener noreferrer">WCAG 2.1 Success Criterion 4.1.3 - Status Messages</a></li>
+                            <li><a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener noreferrer">Web Content Accessibility Guidelines (WCAG) 2.2</a> - The latest version of the WCAG, with updates and additions to accessibility requirements.</li>
+                          </ul>                                                  
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Accordion -->
+                </main>
+              </div>
+            </div>
+
+    <!-- Script links and jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../../../assets/js/global.js"></script>
+    <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- Add sidebar navigation to page -->
+    <script>
+      $(document).ready(function () {
+          // Determine the path relative to the root directory
+          var rootRelativePath = "../../sidebar-navigation.html";
+  
+          // Use jQuery to load the sidebar-navigation.html file
+          $("#sidebar-container").load(rootRelativePath);
+      });
+    </script>
+</body>
+</html>
