@@ -172,5 +172,18 @@
             $(this).attr("href", newHref);
         });
     });
+    $(document).ready(function() {
+        // Select all <img> tags on the page
+        $('img').each(function() {
+            // Get the current src attribute
+            var currentSrc = $(this).attr('src');
+            
+            // Check if the src attribute starts with '/'
+            if (currentSrc && currentSrc.charAt(0) === '/') {
+            // Add '/a11y-annotations' to the beginning of the src attribute
+            $(this).attr('src', '/a11y-annotations' + currentSrc);
+            }
+        });
+    });
 </script>
 
