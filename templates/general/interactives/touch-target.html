@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Non-text Color Contrast</title>
+    <title>Touch Target</title>
 
     <!-- Link to Bootstrap CSS from CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
@@ -16,7 +16,7 @@
 </head>
 <body>
   <header class="d-block px-3 py-2 shadow">
-      <img src="https://www.biointeractive.org/themes/gesso/images/hhmi-logo.svg" alt="hhmi Biointeractive logo" style="max-width: 320px;">
+    <img src="https://www.biointeractive.org/themes/gesso/images/hhmi-logo.svg" alt="hhmi Biointeractive logo" style="max-width: 320px;">
   </header>
   <div class="container-fluid">
       <div class="row">
@@ -28,27 +28,32 @@
             <!-- A11y Live Region -->
             <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
             <div class="container-xxl bd-gutter mt-3">
-                <h1>Non-text Color Contrast</h1>
+                <h1>Touch Target</h1>
                 <!-- Begin Accordion -->
                 <div class="accordion" id="accordionOpen">
                     <!-- Accordion Item One -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          Standards SC 1.4.11 Level AA
+                          Standards SC 2.5.8 2.2 Level A
                         </button>
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                         <div class="accordion-body">
-                        <p>The visual presentation of the following have a contrast ratio of at least 3:1 against adjacent color(s):</p>
-                        <ul>
-                          <li><span class="fw-bold">User Interface Components</span><br>
-                            Visual information required to identify user interface components and states, except for inactive components or where the appearance of the component is determined by the user agent and not modified by the author;
-                          </li>
-                          <li><span class="fw-bold">Graphical Objects</span><br>
-                            Parts of graphics required to understand the content, except when a particular presentation of graphics is essential to the information being conveyed.
-                          </li>
-                        </ul>
+                          <ul role="list">
+                            <li>The size of the target for pointer inputs must be at least 24 by 24 CSS pixels.</li>
+                            <li>
+                              Except where:
+                              <ul role="list">
+                                <li><strong>Spacing:</strong> Small touch targets must not overlap with each other or larger targets to avoid accidental taps.</li>
+                                <li><strong>Equivalent Controls:</strong> If there's another way to do the same action with larger touch targets on the same page, it should be provided.</li>
+                                <li><strong>Inline Targets:</strong> Even if a touch target is within a sentence or constrained by nearby text, it should still be comfortably sized for tapping.</li>
+                                <li><strong>User Agent Control:</strong> The device (e.g., phone or tablet) should determine touch target size, not the website or app.</li>
+                                <li><strong>Essential Presentation:</strong> If a specific touch target presentation is necessary for clarity or legal reasons, it should meet the minimum size requirement.</li>
+                              </ul>
+                              
+                            </li>
+                          </ul>                          
                         </div>
                       </div>
                     </div>
@@ -56,25 +61,16 @@
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingTwo">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          How to Test 
-                          <!-- Designer Tag -->
-                          <span class="dev-tag ms-3">
-                            Designer 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                              <path d="M12 2H8.5C7.57174 2 6.6815 2.36875 6.02513 3.02513C5.36875 3.6815 5 4.57174 5 5.5C5 6.42826 5.36875 7.3185 6.02513 7.97487C6.6815 8.63125 7.57174 9 8.5 9M12 2V9M12 2H15.5C15.9596 2 16.4148 2.09053 16.8394 2.26642C17.264 2.44231 17.6499 2.70012 17.9749 3.02513C18.2999 3.35013 18.5577 3.73597 18.7336 4.16061C18.9095 4.58525 19 5.04037 19 5.5C19 5.95963 18.9095 6.41475 18.7336 6.83939C18.5577 7.26403 18.2999 7.64987 17.9749 7.97487C17.6499 8.29988 17.264 8.55769 16.8394 8.73358C16.4148 8.90947 15.9596 9 15.5 9M12 9H8.5M12 9H15.5M12 9V16M8.5 9C7.57174 9 6.6815 9.36875 6.02513 10.0251C5.36875 10.6815 5 11.5717 5 12.5C5 13.4283 5.36875 14.3185 6.02513 14.9749C6.6815 15.6313 7.57174 16 8.5 16M15.5 9C15.0404 9 14.5852 9.09053 14.1606 9.26642C13.736 9.44231 13.3501 9.70012 13.0251 10.0251C12.7001 10.3501 12.4423 10.736 12.2664 11.1606C12.0905 11.5852 12 12.0404 12 12.5C12 12.9596 12.0905 13.4148 12.2664 13.8394C12.4423 14.264 12.7001 14.6499 13.0251 14.9749C13.3501 15.2999 13.736 15.5577 14.1606 15.7336C14.5852 15.9095 15.0404 16 15.5 16C15.9596 16 16.4148 15.9095 16.8394 15.7336C17.264 15.5577 17.6499 15.2999 17.9749 14.9749C18.2999 14.6499 18.5577 14.264 18.7336 13.8394C18.9095 13.4148 19 12.9596 19 12.5C19 12.0404 18.9095 11.5852 18.7336 11.1606C18.5577 10.736 18.2999 10.3501 17.9749 10.0251C17.6499 9.70012 17.264 9.44231 16.8394 9.26642C16.4148 9.09053 15.9596 9 15.5 9ZM8.5 16C7.57174 16 6.6815 16.3687 6.02513 17.0251C5.36875 17.6815 5 18.5717 5 19.5C5 20.4283 5.36875 21.3185 6.02513 21.9749C6.6815 22.6313 7.57174 23 8.5 23C9.42826 23 10.3185 22.6313 10.9749 21.9749C11.6313 21.3185 12 20.4283 12 19.5V16M8.5 16H12" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                          </span>
+                          How to Test
                         </button>
                       </h2>
                       <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" style="">
                         <div class="accordion-body">
                           <ol role="list">
-                            <li>Choose a color contrast measuring tool that allows you to sample colors from your webpage. See Resources below for a recommended list of tools.</li>
-                            <li>Determine if the UI component or Graphical Object is meaningful and required to identify information or states.</li>
-                            <li>In the color contrast tool, you'll typically find color droppers or eyedropper tools. These tools allow you to select specific colors from the design.</li>
-                            <li>Use color dropper tool to select foreground element (e.g., object) and then select background element (e.g., the background behind the object)</li>
-                            <li>Once you've sampled both foreground and background colors, the color contrast tool should display the contrast ratio between the two colors. This contrast ratio is typically calculated as the ratio between the luminance (brightness) of the foreground and background colors.</li>
-                            <li>Compare the contrast ratio against the WCAG requirements of a 3:1 minimum ratio to determine a pass or fail.</li>
+                            <li>Visual Inspection: Examine your Figma design annotations carefully, look at the interactive elements (like links, buttons and icon buttons).</li>
+                            <li>Is their visual footprint meeting the minimum size requirements? Select the element on the Figma Board and check the design panel width and height measurements.</li>
+                            <li>For the interactive elements that are too small visually, draw a touch target area and include notes for the designer to adjust the sizes before dev hand-off.</li>                          
+                            <li>Number and add additional notes for developers with touch target requirements for any elements that were originally flagged for potential issues.</li>
                           </ol>
                         </div>
                       </div>
@@ -83,7 +79,7 @@
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingThree">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Non-text Contrast Failure
+                          Touch Target Failure
                         </button>
                       </h2>
                       <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" style="">
@@ -92,9 +88,9 @@
                             <div class="d-flex flex-row">
                               <div class="text-to-copy">
                                 <ul role="list">
-                                  <li>Border of the interactive element or graphical object must have 3:1 contrast with the background.</li>
-                                  <li><i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i> Warning: the contrast ratio fails the requirement with a current ratio of ____.</li>                                  </li>
-                                  <li>Recommendation: Adjust color combination to meet the minimum of 3:1 contrast ratio requirements.</li>
+                                  <li>Small interactive element below 24x24 CSS pixels and insufficiently spaced from other controls.</li>
+                                  <li>Text links below 24x24 CSS pixels and and insufficiently spaced from other controls.</li>
+                                  <li>Small form input fields below 24x24 CSS pixels and insufficiently spaced from other controls.</li>
                                 </ul>
                               </div>
                               <div>
@@ -117,9 +113,14 @@
                       <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
                         <div class="accordion-body">
                           <ul>
-                            <li><a href="https://www.tpgi.com/color-contrast-checker/" target="_blank">Downloadable App - TPGi's Color Contrast Analyzer</a></li>
-                            <li><a href="https://webaim.org/resources/contrastchecker/" target="_blank">WebAIM Contrast Checker Webpage</a></li>
-                          </ul>                           
+                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/target-size.html" target="_blank">Understanding SC 2.5.8 - Target Size (Minimum)</a></li>
+                            <li><a href="https://dequeuniversity.com/rules/axe/4.3/targets?application=lighthouse" target="_blank">Deque University - Touch Target Accessibility Checker</a></li>
+                            <li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/controls/buttons/" target="_blank">Apple Human Interface Guidelines - Buttons</a></li>
+                            <li><a href="https://developer.android.com/guide/topics/ui/controls/buttons" target="_blank">Android Developers - Buttons</a></li>
+                            <li><a href="https://web.dev/tap-targets/" target="_blank">Web.dev - Tap Targets and Size Guidelines</a></li>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets" target="_blank">MDN Web Docs - Keyboard-navigable JavaScript widgets</a></li>
+                            <li><a href="https://www.smashingmagazine.com/2021/04/touch-targets-mobile-web-design/" target="_blank">Smashing Magazine - Designing Touch Targets in Mobile Web Design</a></li>
+                          </ul>                                                                           
                         </div>
                       </div>
                     </div>
@@ -133,8 +134,8 @@
                       <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" style="">
                         <div class="accordion-body">
                           <ul>
-                            <li><a href="https://www.w3.org/TR/WCAG21/#non-text-contrast" target="_blank">WCAG 2.1 Recommendation 1.4.11 Non-text Contrast</a></li>
-                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast" target="_blank">WCAG 2.1 Understanding 1.4.11 Non-text Contrast (Level AA)</a></li>
+                            <li><a href="https://www.w3.org/TR/WCAG21/#focus-order" target="_blank">WCAG 2.1 Recommendation 2.4.3 Focus Order (Level A)</a></li>
+                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-order" target="_blank">WCAG 2.1 Understanding 2.4.3 Focus Order (Level A)</a></li>
                           </ul>
                         </div>
                       </div>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Spacing</title>
+
+    <!-- Link to Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <!-- Link to Custom Stylesheet -->
+    <link rel="stylesheet" href="../../../../assets/styles/custom.css">
+    <!-- Link to Custom Stylesheet Production -->
+    <link rel="stylesheet" href="../../../../../assets/styles/custom.css">
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+  <header class="d-block px-3 py-2 shadow">
+    <img src="https://www.biointeractive.org/themes/gesso/images/hhmi-logo.svg" alt="hhmi Biointeractive logo" style="max-width: 320px;">
+  </header>
+  <div class="container-fluid">
+      <div class="row">
+          <!-- Includes the Sidebar Navigation using jQuery -->
+          <div id="sidebar-container" class="col-md-2 border-end"></div>
+            <!-- Main Content -->
+            <main class="col-md-10">
+              <!-- A11y Live Region -->
+              <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
+              <div class="container-xxl bd-gutter mt-3">
+                  <h1>Text Spacing</h1>
+                  <!-- Begin Accordion -->
+                  <div class="accordion" id="accordionOpen">
+                      <!-- Accordion Item One -->
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Standards SC 1.4.12 Level AA
+                          </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
+                          <div class="accordion-body">
+                            <p>No loss of content or functionality occurs by setting all of the following and by changing no other style property:</p>
+                            <ul role="list">
+                              <li>Line height (line spacing) to at least 1.5 times the font size;</li>
+                              <li>Spacing following paragraphs to at least 2 times the font size;</li>
+                              <li>Letter spacing (tracking) to at least 0.12 times the font size;</li>
+                              <li>Word spacing to at least 0.16 times the font size.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Accordion Item Two -->
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            How to Test
+                          </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" style="">
+                          <div class="accordion-body">
+                            <ol role="list">
+                              <li>Adjust text spacing according to the specified criteria and ensure there is no loss of content or functionality.</li>
+                              <li>Inspect elements with text to verify that the increased spacing does not cause content to overlap or become unreadable.</li>
+                              <li>Ensure that all interactive elements are still functional and accessible with increased text spacing.</li>
+                            </ol>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Accordion Item Three -->
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Text Spacing Failure
+                          </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" style="">
+                          <div class="accordion-body">
+                            <div class="d-inline-block border border-dark p-2 rounded">
+                              <div class="d-flex flex-row">
+                                <div class="text-to-copy">
+                                  <ul role="list">
+                                    <li>Text spacing adjustments cause content to overlap or become unreadable.</li>
+                                    <li><i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i> Warning: Ensure that text spacing can be adjusted without causing content loss or functionality issues.</li>
+                                    <li>Recommendation: Use CSS techniques to manage text spacing while maintaining readability and functionality.</li>
+                                  </ul>
+                                </div>
+                                <div>
+                                    <button class="ml-1r btn copy-btn">
+                                      <i class="bi bi-clipboard-heart-fill" aria-hidden="true"></i> Copy
+                                    </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                      <!-- Accordion Item Four -->
+                      <div class="accordion-item">
+                        <h2 class="accordion-item" id="headingFour">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                          Resources
+                          </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
+                          <div class="accordion-body">
+                            <ul>
+                              <li><a href="https://webaim.org/techniques/css/" target="_blank">WebAIM: CSS Techniques and Concepts</a></li>
+                              <li><a href="https://www.smashingmagazine.com/2016/05/fluid-typography/" target="_blank">Smashing Magazine: Fluid Typography</a></li>
+                              <li><a href="https://css-tricks.com/almanac/properties/l/line-height/" target="_blank">CSS-Tricks: Line Height</a></li>
+                              <li><a href="https://www.sitepoint.com/css-typographic-spacing/" target="_blank">SitePoint: CSS Typographic Spacing</a></li>
+                              <li><a href="https://inclusive-components.design/typography/" target="_blank">Inclusive Components: Designing Typography</a></li>
+                            </ul>                                           
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Accordion Item Five -->
+                      <div class="accordion-item">
+                        <h2 class="accordion-item" id="headingFive">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                          WCAG Guideline References
+                          </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" style="">
+                          <div class="accordion-body">
+                            <ul>
+                              <li><a href="https://www.w3.org/TR/WCAG21/#text-spacing" target="_blank">WCAG 2.1 Success Criterion 1.4.12 Text Spacing</a></li>
+                              <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html" target="_blank">Understanding Success Criterion 1.4.12: Text Spacing</a></li>
+                            </ul>                        
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  <!-- End Accordion -->
+                </main>          
+          </div>
+      </div>
+
+      <!-- Script links and jQuery CDN -->
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+      <script src="../../../assets/js/global.js"></script>
+      <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+  
+      <!-- Add sidebar navigation to page -->
+      <script>
+        $(document).ready(function () {
+            // Determine the path relative to the root directory
+            var rootRelativePath = "../../sidebar-navigation.html";
+    
+            // Use jQuery to load the sidebar-navigation.html file
+            $("#sidebar-container").load(rootRelativePath);
+        });
+      </script>
+</body>
+</html>
