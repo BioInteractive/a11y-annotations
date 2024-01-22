@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Images</title>
+    <title>Resize Text</title>
 
     <!-- Link to Bootstrap CSS from CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
@@ -28,40 +28,25 @@
             <!-- A11y Live Region -->
             <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
             <div class="container-xxl bd-gutter mt-3">
-                <h1>Images</h1>
+                <h1>Resize Text</h1>
                 <!-- Begin Accordion -->
                 <div class="accordion" id="accordionOpen">
                     <!-- Accordion Item One -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          Standards SC 1.1.1 Level A
+                          Standards SC 1.4.4 Level AA
                         </button>
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                         <div class="accordion-body">
-                          <p>All meaningful non-text content (images, video, audio, SVGs, icons and other content that isn't conveyed by text) 
-                            needs to have alt text that provides the same information found in the content.</p>
-                          <p>Purely decorative content (for example, a dividing line between a navigation bar and content) does not need alt text.</p>
-                          <h3>Meaningful Images <img src="../../../assets/images/alt-meaningful.png" alt="annotation tag with alt equals sign foo between quotes"></h3>
-                          <p>Meaningful images are those that convey important information or functionality to users. These images play a significant role in providing context, enhancing understanding, 
-                            or facilitating user interactions on a web page. Examples of meaningful images include:</p>
-                          <ul>
-                            <li>Graphs and charts that illustrate data and statistics.</li>
-                            <li>Icons representing actionable elements like buttons, links, or controls.</li>
-                            <li>Images depicting products, people, or objects relevant to the content.</li>
-                            <li>Illustrations supporting the textual content to explain concepts or processes.</li>
-                          </ul>
-                          <h3>Decorative Images <img src="../../../assets/images/alt-decorative.png" alt="annotation tag with alt equals sign and empty quotes"></h3>
-                          <p>Decorative images are images that are used purely for aesthetic or decorative purposes and does not convey meaningful content or information. 
-                          Decorative images are typically added to enhance the visual design of a web page but do not serve a functional role in conveying information to users.
-                        A few examples include:</p>
-                          <ul>
-                            <li>Ornamental borders used to create decorative borders around content or sections of a webpage.</li>
-                            <li>Background images used in the background of a webpage to create a specific ambiance or atmosphere.</li>
-                            <li>Background textures to enhance the visual appearance of a webpage.</li>
-                            <li>Icons or graphics used purely for visual embellishment and not representing actionable elements.</li>
-                          </ul>
+                          <p>Except for captions and images of text, text can be resized without assistive technology up to 200 percent without loss of content or functionality.</p>
+                          <ul role="list">
+                            <li><strong>Text Resize:</strong> Users must be able to resize text up to 200 percent.</li>
+                            <li><strong>Content Availability:</strong> All meaningful content must remain available and not be obscured or cut off due to resizing.</li>
+                            <li><strong>Functionality:</strong> The functionality of the website should not be compromised by the resizing of text.</li>
+                            <li><strong>Responsive Design:</strong> Web design should be responsive to accommodate text scaling while preserving content and functionality.</li>
+                        </ul>
                         </div>
                       </div>
                     </div>
@@ -75,10 +60,13 @@
                       <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" style="">
                         <div class="accordion-body">
                           <ol role="list">
-                            <li>Identify all the images.</li>
-                            <li>Inquire if the images are going to be presented as <code class="code-tag">&lt;img&gt;</code>s, SVGs or icons.</li>
-                            <li>Decide which images are meaningful and decorative.</li>
-                            <li>Add a sticky note annotation to define the image as decorative with alt="" or meaningful alt="foo".</li>
+                            <li>Inspect Text Elements: Review all text elements on the Figma board to ensure they are not rasterized images of text but editable text elements. 
+                              Images of text won't resize in the same way as text elements.</li>
+                            <li>Responsive Design Check: Verify that the design layouts are responsive. This means that they should be able to adjust to different screen sizes 
+                              and text sizes without losing content visibility or functionality. Ask for additional boards to demonstrate different screen sizes or text sizes, if applicable.</li>
+                            <li>If elements transform on smaller screen sizes verify that there is no loss of meaningful content and pay attention to new content that may require
+                               additional annotations. Examples: lists of footer links that transform into an accordion, info cards that tranform into a carousel, etc.
+                            </li>
                           </ol>
                         </div>
                       </div>
@@ -87,7 +75,7 @@
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingThree">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Additional Notes for SVGs and Icons
+                          Resize Text Failure
                         </button>
                       </h2>
                       <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" style="">
@@ -95,28 +83,10 @@
                           <div class="d-inline-block border border-dark p-2 rounded">
                             <div class="d-flex flex-row">
                               <div class="text-to-copy">
-                                <h3>SVGs</h3>
                                 <ul role="list">
-                                  <li><strong>Meaningful SVG</strong> must have a <code class="code-tag">&lt;title&gt;</code> as the first child with a unique IDREF.</li>
-                                  <li>The <code class="code-tag">&lt;svg&gt;</code> must then have an aria-labelledby="IDREF"</li>
-                                  <li><strong>Decorative SVG</strong> must have aria-hidden="true" so it will be ignored by assistive technologies.</li>                                  </li>
-                                </ul>
-                              </div>
-                              <div>
-                                  <button class="ml-1r btn copy-btn">
-                                    <i class="bi bi-clipboard-heart-fill" aria-hidden="true"></i> Copy
-                                  </button>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="space-large"></div>
-                          <div class="d-inline-block border border-dark p-2 rounded"> 
-                            <div class="d-flex flex-row">
-                              <div class="text-to-copy">
-                                <h3>Icons</h3>
-                                <ul role="list">
-                                  <li><strong>Meaningful Icon</strong> must have an accessible name from an aria-label, aria-labelledby or sr-only text.</li>
-                                  <li><strong>Decorative Icon</strong> must have aria-hidden="true" so it will be ignored by assistive technologies.</li>                                  </li>
+                                  <li>Text is rezied and there is a loss of meaningful content</li>
+                                  <li><i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i> Warning: all meaningful content must be available on all screen sizes.</li>
+                                  <li>Recommendation: Use responsive design to ensure all meaningful content resizes without loss of content or functionality on all screen sizes.</li>
                                 </ul>
                               </div>
                               <div>
@@ -140,12 +110,12 @@
                       <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
                         <div class="accordion-body">
                           <ul>
-                            <li><a href="https://dequeuniversity.com/checklists/web/images" target="_blank">Deque University - Web Accessibility Checklist Images</a></li>
-                            <li><a href="https://webaim.org/techniques/images/" target="_blank">WebAIM - Images Concepts</a></li>
-                            <li><a href="https://www.w3.org/WAI/tutorials/images/decision-tree/" target="_blank">W3C Alt Decision Tree</a></li>
-                            <li><a href="https://wcag.com/blog/good-alt-text-bad-alt-text-making-your-content-perceivable/" target="_blank">Good Alt Text, Bad Alt Text — Making Your Content Perceivable</a></li>
-                            <li><a href="https://www.wuhcag.com/non-text-content/" target="_blank">WUHCAG Web Accessibility for Developers</a></li>
-                          </ul>                         
+                            <li><a href="https://www.a11yproject.com/checklist/" target="_blank">The A11Y Project Checklist</a></li>
+                            <li><a href="https://webaim.org/articles/zoom/" target="_blank">WebAIM: Zoom and Magnification</a></li>
+                            <li><a href="https://www.sitepoint.com/responsive-typography-made-easy/" target="_blank">SitePoint: Responsive Typography Made Easy</a></li>
+                            <li><a href="https://css-tricks.com/accessible-font-sizing-explained/" target="_blank">CSS-Tricks: Accessible Font Sizing Explained</a></li>
+                            <li><a href="https://accessibility.18f.gov/scaling/ " target="_blank">18F Accessibility Guide: Scaling</a></li>
+                        </ul>                                           
                         </div>
                       </div>
                     </div>
@@ -159,9 +129,9 @@
                       <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" style="">
                         <div class="accordion-body">
                           <ul>
-                            <li><a href="https://www.w3.org/TR/WCAG21/#non-text-contrast" target="_blank">WCAG 2.1 Recommendation 1.1.1 Non-text Content</a></li>
-                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html" target="_blank">WCAG 2.1 Understanding 1.1.1 Non-text Content (Level A)</a></li>
-                          </ul>
+                            <li><a href="https://www.w3.org/TR/WCAG21/#resize-text" target="_blank">WCAG 2.1 Success Criterion 1.4.4 Resize Text</a></li>
+                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html" target="_blank">Understanding Success Criterion 1.4.4: Resize Text</a></li>
+                          </ul>                        
                         </div>
                       </div>
                     </div>
