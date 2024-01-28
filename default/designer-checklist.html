@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designer Checklist</title>
+
+    <!-- Link to Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <!-- Link to Custom Stylesheet -->
+    <link rel="stylesheet" href="../assets/styles/custom.css">
+    <!-- Link to Custom Stylesheet Production -->
+    <link rel="stylesheet" href="../../assets/styles/custom.css">
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+  <header class="d-block px-3 py-2 shadow">
+    <img src="https://www.biointeractive.org/themes/gesso/images/hhmi-logo.svg" alt="hhmi Biointeractive logo" style="max-width: 320px;">
+  </header>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Includes the Sidebar Navigation using jQuery -->
+      <div id="sidebar-container" class="col-md-2 border-end"></div>
+
+      <!-- Main Content -->
+      <main class="col-md-10">
+        <!-- A11y Live Region -->
+        <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
+        <div class="container-xxl bd-gutter mt-3">
+          <div class="container mt-4">
+            <h1 id="table-label">Designer Checklist</h1>
+            <table class="table" aria-labelledby="table-label">
+                <thead>
+                    <tr>
+                        <th scope="col">No.</th>
+                        <th scope="col">Heuristic</th>
+                        <th scope="col">Statement</th>
+                        <th scope="col">Checkpoints</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <!-- Row 1 -->
+                  <tr>
+                    <th scope="row" rowspan="3">1</th>
+                    <td rowspan="3">Interaction Methods and Modalities</td>
+                    <td rowspan="3">Users can efficiently interact with the system using the input method of their choosing (i.e., mouse, keyboard, touch, etc.).</td>
+                
+                    <td>Are any of the interactions designed to be mouse specific?</td>
+                    <td><input type="checkbox" id="chk1-1" name="chk1-1" aria-label="Mouse specific interactions"></td>
+                  </tr>
+                  <tr>
+                      <td>Is every functionality designed to be fully keyboard accessible?</td>
+                      <td><input type="checkbox" id="chk1-2" name="chk1-2" aria-label="Keyboard accessible functionality"></td>
+                  </tr>
+                  <tr>
+                      <td>Are features designed to be fully functional using touch screens?</td>
+                      <td><input type="checkbox" id="chk1-3" name="chk1-3" aria-label="Touch screen functionality"></td>
+                  </tr>
+                
+                  
+              </tbody>
+            </table>
+        </div>  
+            
+      </main>
+    </div>
+  </div>
+
+    <!-- Script links and jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../assets/js/global.js"></script>
+    <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- Add sidebar navigation to page -->
+    <script>
+      $(document).ready(function () {
+          // Determine the path relative to the root directory
+          var rootRelativePath = "../templates/sidebar-navigation.html";
+  
+          // Use jQuery to load the sidebar-navigation.html file
+          $("#sidebar-container").load(rootRelativePath);
+      });
+    </script>
+</body>
+</html>
