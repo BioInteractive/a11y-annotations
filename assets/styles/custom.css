@@ -160,3 +160,76 @@ a {
     color: rgba(0, 0, 0, .85);
     font-weight: 600;
 }
+
+/* Custom Checkboxes */
+
+.custom-checkbox {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  position: relative;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+
+.custom-checkbox span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #000; /* Border color */
+}
+
+.custom-checkbox input[type="checkbox"]:checked + span {
+  background-color: transparent;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + span:after {
+  content: '\2713';
+  position: absolute;
+  color: green; /* Check mark color */
+  font-size: 32px;
+  left: 0px;
+  top: -18px;
+}
+
+/* Centering Checkboxes in Table Cells */
+  .checkbox-td {
+    text-align: center; /* Centers content horizontally */
+    vertical-align: middle; /* Centers content vertically */
+  }
+
+/* Tables */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.styled-table th,
+.styled-table td {
+  border: 1px solid #ddd; /* Adds border to each cell */
+  padding: 8px; /* Adds padding inside each cell */
+  text-align: left;
+}
+
+.styled-table thead {
+  background-color: #f2f2f2; /* Adds a background color to the table header */
+}
+
+.styled-table th {
+  font-weight: bold;
+}
+
+/* Zebra Stripes for Table Rows */
+.styled-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
