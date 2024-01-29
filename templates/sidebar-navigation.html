@@ -113,27 +113,13 @@
                 </ul>
             </div>
         </li>
-    
+        <li class="border-top my-3"></li>
         <li class="mb-1">
             <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
                 data-bs-target="#dashboard-collapse" aria-expanded="false" aria-controls="dashboard-collapse">
                 Components
             </button>
             <div class="collapse" id="dashboard-collapse">
-                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                    <li><a href="#" class="link-dark rounded">Placeholder</a></li>
-                    <li><a href="#" class="link-dark rounded">Placeholder</a></li>
-                    <li><a href="#" class="link-dark rounded">Placeholder</a></li>
-                    <li><a href="#" class="link-dark rounded">Placeholder</a></li>
-                </ul>
-            </div>
-        </li>
-        <li class="mb-1">
-            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-                data-bs-target="#orders-collapse" aria-expanded="false" aria-controls="orders-collapse">
-                Interactives
-            </button>
-            <div class="collapse" id="orders-collapse">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                     <li><a href="#" class="link-dark rounded">Placeholder</a></li>
                     <li><a href="#" class="link-dark rounded">Placeholder</a></li>
@@ -150,17 +136,19 @@
             </button>
             <div class="collapse" id="resources-collapse">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                    <li><a href="#" class="link-dark rounded">New...</a></li>
-                    <li><a href="#" class="link-dark rounded">Profile</a></li>
-                    <li><a href="#" class="link-dark rounded">Settings</a></li>
-                    <li><a href="#" class="link-dark rounded">Sign out</a></li>
+                    <li><a href="/templates/resources/general-resources.html" class="link-dark rounded">General Accessibility</a></li>
+                    <li><a href="/templates/resources/design-resources.html" class="link-dark rounded">Design</a></li>
+                    <li><a href="/templates/resources/development-resources.html" class="link-dark rounded">Development and Testing</a></li>
+                    <li><a href="#" class="link-dark rounded">Courses and Educational</a></li>
+                    <li><a href="#" class="link-dark rounded">Government</a></li>
+                    <li><a href="#" class="link-dark rounded">Misc</a></li>
                 </ul>
             </div>
         </li>
     </ul>
 </nav>
 
-<!-- Comment out for local development and enable for production  -->
+<!-- Comment out for local development and enable for production --> 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function() {
