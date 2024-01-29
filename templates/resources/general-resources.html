@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Resources</title>
+
+    <!-- Link to Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <!-- Link to Custom Stylesheet -->
+    <link rel="stylesheet" href="../../../assets/styles/custom.css">
+    <!-- Link to Custom Stylesheet Production -->
+    <link rel="stylesheet" href="../../../../assets/styles/custom.css">
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+  <header class="d-block px-3 py-2 shadow">
+    <img src="https://www.biointeractive.org/themes/gesso/images/hhmi-logo.svg" alt="hhmi Biointeractive logo" style="max-width: 320px;">
+  </header>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Includes the Sidebar Navigation using jQuery -->
+      <div id="sidebar-container" class="col-md-2 border-end"></div>
+
+      <!-- Main Content -->
+      <main class="col-md-10">
+        <!-- A11y Live Region -->
+        <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
+        <div class="container-xxl bd-gutter mt-3">
+          <div class="instructions mb-5">
+            <h1>General Resources</h1>
+          </div> 
+          <div>
+            <h2>Guidelines and Standards</h2>
+            <ul>
+              <li><a href="https://www.w3.org/WAI/" target="_blank">W3C Web Accessibility Initiative (WAI)</a></li>
+              <li><a href="https://www.accessibilityassociation.org/" target="_blank">International Association of Accessibility Professionals (IAAP)</a></li>
+              <li><a href="https://a11yproject.com/resources" target="_blank">A11Y Project Resources</a></li>
+              <li><a href="https://www.reddit.com/r/accessibility/wiki/meta/accessibility_resources" target="_blank">reddit Accessibility Resources</a></li>
+              <li><a href="https://webaim.org/resources/" target="_blank">WebAIM (Web Accessibility In Mind) Resources</a></li>
+              <li><a href="https://cstrobbe.gitlab.io/AccessibilityResources/" target="_blank">Christophe Strobbe's Accessibility Resources</a></li>
+            </ul>
+            <h2>Tools and Resources</h2> 
+            <ul>
+              <li><a href="http://a11y-style-guide.com/style-guide/section-resources.html" target="_blank">A11Y Style Guide Resources</a></li>
+              <li><a href="https://www.deque.com/tools/" target="_blank">Deque Systems: Accessibility Tools</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility" target="_blank">MDN Web Docs: Accessibility</a></li>
+            </ul>
+            <h2>Company-Specific Resources</h2> 
+            <ul>
+              <li><a href="https://www.adobe.com/accessibility/resources.html" target="_blank">Adobe Accessibility Resources</a></li>
+              <li><a href="https://accessibility.google/" target="_blank">Google Accessibility Resources</a></li>
+              <li><a href="https://www.microsoft.com/en-us/accessibility/resources" target="_blank">Microsoft Accessibility Resources</a></li>
+              <li><a href="https://www.apple.com/accessibility/" target="_blank">Apple Accessibility Resources</a></li>
+            </ul>
+            <h2>Additional General Accessibility Guidance Links</h2>  
+            <ul>
+              <li><a href="https://www.section508.gov/" target="_blank">Section 508</a> - U.S. Federal Government's IT accessibility standards.</li>
+              <li><a href="https://accessibility.18f.gov/" target="_blank">18F Accessibility Guide</a> - Practical tips for building accessible digital services.</li>
+              <li><a href="https://www.smashingmagazine.com/category/accessibility/" target="_blank">Smashing Magazine Accessibility Articles</a> - A collection of articles on accessibility in web design and development.</li>
+            </ul>                                         
+          </div> 
+        </div>  
+      </main>
+    </div>
+  </div>
+
+   <!-- Script links and jQuery CDN -->
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+   <script src="../../assets/js/global.js"></script>
+   <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+   <!-- Add sidebar navigation to page -->
+   <script>
+     $(document).ready(function () {
+         // Determine the path relative to the root directory
+         var rootRelativePath = "../sidebar-navigation.html";
+ 
+         // Use jQuery to load the sidebar-navigation.html file
+         $("#sidebar-container").load(rootRelativePath);
+     });
+   </script>
+</body>
+</html>
