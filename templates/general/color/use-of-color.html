@@ -61,16 +61,14 @@
                       </h2>
                       <div id="collapseNew" class="accordion-collapse collapse" aria-labelledby="headingNew" style="">
                         <div class="accordion-body">
-                          <ol>
-                            <li><strong>Understand Color Accessibility:</strong> Familiarize yourself with WCAG 2.1 Guidelines, specifically Criterion 1.4.1: Use of Color. Understand that color should not be the only means of conveying information.</li>
+                          <ul>
+                            <li><strong>Understand Color Accessibility:</strong> Familiarize yourself with WCAG 2.1 Guidelines to help understand that color should not be the only means of conveying information.</li>
                             <li><strong>Provide Alternative Indicators:</strong> When using color to convey information (like errors, success, links), always include an alternative indicator. This could be a text label, an icon, underlining, or patterns.</li>
-                            <li><strong>Check Color Contrast:</strong> Ensure sufficient contrast between text (or icons) and their background. Use tools like Stark or the Color Contrast Checker in Figma to verify.</li>
-                            <li><strong>Design for Color Blindness:</strong> Test your designs for color blindness compatibility. Tools like the Color Blindness Simulator in Figma can help you see your design through various types of color vision deficiencies.</li>
                             <li><strong>Use Descriptive Labels and Icons:</strong> Accompany color cues with clear text labels or descriptive icons, especially for important actions like error messages, success notifications, or call-to-action buttons.</li>
                             <li><strong>Annotate Color Usage:</strong> When annotating your designs, explicitly mention how color is used and what additional indicators are provided for accessibility.</li>
-                            <li><strong>Interactive Elements:</strong> For interactive elements like links or buttons, use more than color to indicate interactivity. Include underlines, different font styles, or hover states.</li>
-                            <li><strong>Feedback and Error States:</strong> Clearly indicate error states or feedback messages with text descriptions alongside color changes.</li>
-                          </ol>                          
+                            <li><strong>Interactive Elements:</strong> For interactive elements like links or buttons, use more than color to indicate interactivity. Include underlines, different font styles or borders, hover states and/or focus states.</li>
+                            <li><strong>Feedback and Error States:</strong> Clearly indicate error states or feedback messages with text descriptions and/or icons alongside color changes.</li>
+                          </ul>                          
                         </div>
                       </div>
                     </div>
@@ -96,18 +94,18 @@
                       </h2>
                       <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" style="">
                         <div class="accordion-body">
-                          <ol role="list">
+                          <ul role="list">
                             <li>Identify Color-Reliant Information:
                               Examine the design and identify any instances where color is used to convey information or distinguish visual elements. This may include things like:
                               <ul>
-                                <li>Using red text to indicate errors.</li>
-                                <li>Using green text to indicate success.</li>
+                                <li>Using red text and/or borders to indicate errors.</li>
+                                <li>Using green text and/or borders to indicate success.</li>
                                 <li>Using color-coded icons or labels to represent different categories or statuses.</li>
                                 <li>Using color alone to indicate a link in a block of text.</li>
                               </ul>
                             </li>
                             <li>Check for Redundant Cues: Ensure that information or distinctions made through color are also conveyed using additional visual cues, such as text labels, icons, patterns, or shapes. This provides redundancy and ensures that people who cannot perceive color can still understand the content.</li>
-                          </ol>
+                          </ul>
                           <div class="d-inline-block border border-dark p-2 rounded">
                             <div class="d-flex flex-row">
                               <div class="text-to-copy">
@@ -128,14 +126,46 @@
                         </div>
                       </div>
                     </div>
-                    <!-- Accordion Item Four -->
+                    <!-- Accordion Item Four - Accessibility Considerations Developer -->
                     <div class="accordion-item">
-                      <h2 class="accordion-item" id="headingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                        Resources
+                      <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                          Accessibility Considerations 
+                          <!-- Developer Tag -->
+                          <span class="dev-tag ms-3">
+                            Developer 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                          </span> 
                         </button>
                       </h2>
-                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
+                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
+                        <div class="accordion-body">
+                          <!-- Your content here for Developer Instructions: Ensuring Information Is Not Conveyed By Color Alone -->
+                          <p>Implement content without relying solely on color to convey information. Non-color indicators may include:</p>
+                          <ul>
+                            <li><strong>Text Labels:</strong> Use clear and descriptive text labels alongside color indicators.</li>
+                            <li><strong>Icons and Symbols:</strong> Incorporate universally recognized icons or symbols to convey information.</li>
+                            <li><strong>Texture or Patterns:</strong> Apply different textures or patterns to elements that need to be distinguished from one another.</li>
+                            <li><strong>Shape:</strong> Use distinct shapes to signify different statuses or categories.</li>
+                            <li><strong>Size:</strong> Alter the size of elements to indicate their importance or to differentiate between items.</li>
+                            <li><strong>Positioning:</strong> Place elements strategically to suggest a relationship or to differentiate them.</li>
+                            <li><strong>Typography:</strong> Employ bold text, different font styles, or underlining to highlight information.</li>
+                            <li><strong>Contrast:</strong> Increase contrast with background elements, not just with color, but also with lightness or darkness with a minimum of a 3:1 contrast ratio.</li>
+                          </ul>                              
+                          <p>These practices ensure content is accessible to everyone, including users with color vision deficiencies.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Five - Resources -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                          Resources
+                        </button>
+                      </h2>
+                      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive">
                         <div class="accordion-body">
                           <ul>
                             <li><a href="https://www.vischeck.com/" target="_blank">Vischeck</a></li>
@@ -145,18 +175,18 @@
                             <li><a href="http://www.webexhibits.org/causesofcolor/2C.html" target="_blank">Causes of Color: How do people inherit colorblindness? How often?: Genetics</a></li>
                             <li><a href="https://jfly.uni-koeln.de/color/" target="_blank">How to make figures and presentations that are friendly to Colorblind people</a></li>
                             <li><a href="https://colortutorial.design/tutor.html" target="_blank">The Color Tutor application</a></li>
-                          </ul>                              
+                          </ul>
                         </div>
                       </div>
                     </div>
-                    <!-- Accordion Item Five -->
+                    <!-- Accordion Item Six - WCAG Guideline References -->
                     <div class="accordion-item">
-                      <h2 class="accordion-item" id="headingFive">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-                        WCAG Guideline References
+                      <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                          WCAG Guideline References
                         </button>
                       </h2>
-                      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" style="">
+                      <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix">
                         <div class="accordion-body">
                           <ul>
                             <li><a href="https://www.w3.org/TR/WCAG21/#use-of-color" target="_blank">WCAG 2.1 Recommendation 1.4.1 Use of Color</a></li>

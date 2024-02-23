@@ -29,13 +29,21 @@
             <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
             <div class="container-xxl bd-gutter mt-3">
                 <h1>Page</h1>
-                <!-- Developer Tag -->
-                  <span class="dev-tag">
-                    Developer 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                      <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                  </span> 
+                <p>While this page primarily targets developers, it's crucial for designers to proactively incorporate these success criteria into their designs to facilitate accessible development. Designers can contribute by:</p>
+                <!-- Designer Tag -->
+                <p class="dev-tag ms-3">
+                  Designer 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 2H8.5C7.57174 2 6.6815 2.36875 6.02513 3.02513C5.36875 3.6815 5 4.57174 5 5.5C5 6.42826 5.36875 7.3185 6.02513 7.97487C6.6815 8.63125 7.57174 9 8.5 9M12 2V9M12 2H15.5C15.9596 2 16.4148 2.09053 16.8394 2.26642C17.264 2.44231 17.6499 2.70012 17.9749 3.02513C18.2999 3.35013 18.5577 3.73597 18.7336 4.16061C18.9095 4.58525 19 5.04037 19 5.5C19 5.95963 18.9095 6.41475 18.7336 6.83939C18.5577 7.26403 18.2999 7.64987 17.9749 7.97487C17.6499 8.29988 17.264 8.55769 16.8394 8.73358C16.4148 8.90947 15.9596 9 15.5 9M12 9H8.5M12 9H15.5M12 9V16M8.5 9C7.57174 9 6.6815 9.36875 6.02513 10.0251C5.36875 10.6815 5 11.5717 5 12.5C5 13.4283 5.36875 14.3185 6.02513 14.9749C6.6815 15.6313 7.57174 16 8.5 16M15.5 9C15.0404 9 14.5852 9.09053 14.1606 9.26642C13.736 9.44231 13.3501 9.70012 13.0251 10.0251C12.7001 10.3501 12.4423 10.736 12.2664 11.1606C12.0905 11.5852 12 12.0404 12 12.5C12 12.9596 12.0905 13.4148 12.2664 13.8394C12.4423 14.264 12.7001 14.6499 13.0251 14.9749C13.3501 15.2999 13.736 15.5577 14.1606 15.7336C14.5852 15.9095 15.0404 16 15.5 16C15.9596 16 16.4148 15.9095 16.8394 15.7336C17.264 15.5577 17.6499 15.2999 17.9749 14.9749C18.2999 14.6499 18.5577 14.264 18.7336 13.8394C18.9095 13.4148 19 12.9596 19 12.5C19 12.0404 18.9095 11.5852 18.7336 11.1606C18.5577 10.736 18.2999 10.3501 17.9749 10.0251C17.6499 9.70012 17.264 9.44231 16.8394 9.26642C16.4148 9.09053 15.9596 9 15.5 9ZM8.5 16C7.57174 16 6.6815 16.3687 6.02513 17.0251C5.36875 17.6815 5 18.5717 5 19.5C5 20.4283 5.36875 21.3185 6.02513 21.9749C6.6815 22.6313 7.57174 23 8.5 23C9.42826 23 10.3185 22.6313 10.9749 21.9749C11.6313 21.3185 12 20.4283 12 19.5V16M8.5 16H12" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </p>
+                <ul>
+                  <li><strong>Naming Figma Boards:</strong> Use names that indicate the intended page titles, which should correspond with the primary H1 tags for each page, enhancing navigability and SEO.</li>
+                  <li><strong>Integrating Skip Links:</strong> Include visual representations of skip links in your Figma designs. This not only aids in early planning for keyboard navigation but also highlights the importance of accessibility in the design phase.</li>
+                  <li><strong>Designing for Multiple Access Paths:</strong> Address the "Multiple Ways" criterion by incorporating design elements like search functionality and sitemaps, in addition to traditional navigation menus. This ensures users have multiple methods to find content.</li>
+                  <li><strong>Specifying Language Use:</strong> Clearly annotate the primary language used in designs and identify any sections where alternate languages are utilized. This information is vital for developers to implement proper language tags, ensuring content is accessible to screen readers and aids in global accessibility.</li>
+                </ul>
+
                 <!-- Begin Accordion -->
                 <div class="accordion" id="accordionOpen">
                     <!-- Accordion Item One -->
@@ -47,32 +55,16 @@
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                         <div class="accordion-body">
-                          <p>
-                            <strong>1.3.2 Meaningful Sequence (WCAG 2.0 A)</strong> When the sequence in which content is presented affects its meaning, a correct reading sequence can be 
-                            programmatically determined.
-                          </p>
-                          <p>
-                            <strong>1.3.4 Orientation (WCAG 2.1 AA)</strong> Content does not restrict its view and operation to a single display orientation, such as portrait or landscape, unless a 
-                            specific display orientation is essential.
-                          </p>
-                          <p>
-                            <strong>2.4.1 Bypass Blocks (WCAG 2.0 A)</strong> A mechanism is available to bypass blocks of content that are repeated on multiple Web pages.
-                          </p>
-                          <p>
-                            <strong>2.4.2 Page Titled (WCAG 2.0 A)</strong> Web pages have titles that describe topic or purpose.
-                          </p>
-                          <p>
-                            <strong>2.4.5 Multiple Ways (WCAG 2.0 AA)</strong> More than one way is available to locate a Web page within a set of Web pages except where the 
-                            Web Page is the result of, or a step in, a process.
-                          </p>
-                          <p>
-                            <strong>3.1.1 Language of Page (WCAG 2.0 A)</strong> The default human language of each Web page can be programmatically determined.
-                          </p>
-                          <p>
-                            <strong>3.1.2 Language of Parts (WCAG 2.0 AA)</strong> The human language of each passage or phrase in the content can be programmatically determined except for proper names, 
-                            technical terms, words of indeterminate language, and words or phrases that have become part of the vernacular of the immediately surrounding text.
-                          </p>
-                        </div>
+                          <ul>
+                            <li><strong>1.3.2 Meaningful Sequence (WCAG 2.0 A):</strong> When the sequence in which content is presented affects its meaning, a correct reading sequence can be programmatically determined.</li>
+                            <li><strong>1.3.4 Orientation (WCAG 2.1 AA):</strong> Content does not restrict its view and operation to a single display orientation, such as portrait or landscape, unless a specific display orientation is essential.</li>
+                            <li><strong>2.4.1 Bypass Blocks (WCAG 2.0 A):</strong> A mechanism is available to bypass blocks of content that are repeated on multiple Web pages.</li>
+                            <li><strong>2.4.2 Page Titled (WCAG 2.0 A):</strong> Web pages have titles that describe topic or purpose.</li>
+                            <li><strong>2.4.5 Multiple Ways (WCAG 2.0 AA):</strong> More than one way is available to locate a Web page within a set of Web pages except where the Web Page is the result of, or a step in, a process.</li>
+                            <li><strong>3.1.1 Language of Page (WCAG 2.0 A):</strong> The default human language of each Web page can be programmatically determined.</li>
+                            <li><strong>3.1.2 Language of Parts (WCAG 2.0 AA):</strong> The human language of each passage or phrase in the content can be programmatically determined except for proper names, technical terms, words of indeterminate language, and words or phrases that have become part of the vernacular of the immediately surrounding text.</li>
+                          </ul>
+                        </div>                        
                       </div>
                     </div>
                     <!-- Accordion Item Two -->
@@ -80,6 +72,13 @@
                       <h2 class="accordion-header" id="headingTwo">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                           1.3.2 Meaningful Sequence (WCAG 2.0 A)
+                          <!-- Developer Tag -->
+                          <span class="dev-tag ms-3">
+                            Developer 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                          </span> 
                         </button>
                       </h2>
                       <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
@@ -110,6 +109,13 @@
                       <h2 class="accordion-header" id="headingThree">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                           1.3.4 Orientation (WCAG 2.1 AA)
+                          <!-- Developer Tag -->
+                          <span class="dev-tag ms-3">
+                            Developer 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                          </span>                           
                         </button>
                       </h2>
                       <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
@@ -136,6 +142,13 @@
                       <h2 class="accordion-header" id="headingFour">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                           2.4.1 Bypass Blocks (WCAG 2.0 A)
+                          <!-- Developer Tag -->
+                          <span class="dev-tag ms-3">
+                            Developer 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                          </span> 
                         </button>
                       </h2>
                       <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
@@ -152,11 +165,11 @@
                               <li><strong>ARIA Landmarks:</strong> Use ARIA landmarks to mark regions like <code>navigation</code>, <code>main</code>, <code>aside</code> (for sidebars), and <code>footer</code>. This helps in providing a roadmap of the page for screen reader users.</li>
                               <li><strong>Logical HTML Structure:</strong> Organize your HTML structure logically. Where feasible, place the main content first in the HTML source, especially if the navigation menu is extensive.</li>
                               <li><strong>Identifying Common Bypass Blocks:</strong> Recognize common areas where skip links are beneficial. This includes:
-                                  <ul>
-                                      <li>Repetitive navigational elements like top bars or sidebar menus.</li>
-                                      <li>Recurring elements like carousels, especially when they contain multiple items or links.</li>
-                                      <li>Long lists of links or lengthy introductory content before the main information.</li>
-                                  </ul>
+                                <ul>
+                                  <li>Repetitive navigational elements like top bars or sidebar menus.</li>
+                                  <li>Recurring elements like carousels, especially when they contain multiple items or links.</li>
+                                  <li>Long lists of links or lengthy introductory content before the main information.</li>
+                                </ul>
                               </li>
                               <li><strong>Testing for Effectiveness:</strong> Regularly test your website with screen readers and keyboard navigation to ensure the skip links and other bypass mechanisms are functioning correctly and are effectively aiding navigation.</li>
                           </ul>
@@ -200,6 +213,13 @@
                       <h2 class="accordion-header" id="headingFive">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                           2.4.2 Page Titled (WCAG 2.0 A)
+                          <!-- Developer Tag -->
+                          <span class="dev-tag ms-3">
+                            Developer 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                              <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                          </span> 
                         </button>
                       </h2>
                       <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive">
@@ -229,6 +249,13 @@
                       <h2 class="accordion-header" id="headingSix">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
                           2.4.5 Multiple Ways (WCAG 2.0 AA)
+                          <!-- Developer Tag -->
+                          <span class="dev-tag ms-3">
+                            Developer 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                          </span>                           
                         </button>
                       </h2>
                       <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix">
@@ -255,6 +282,13 @@
                       <h2 class="accordion-header" id="headingSeven">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
                           3.1.1 Language of Page (WCAG 2.0 A)
+                          <!-- Developer Tag -->
+                          <span class="dev-tag ms-3">
+                            Developer 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                          </span> 
                         </button>
                       </h2>
                       <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven">
@@ -280,6 +314,13 @@
                       <h2 class="accordion-header" id="headingEight">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
                           3.1.2 Language of Parts (WCAG 2.0 AA)
+                          <!-- Developer Tag -->
+                          <span class="dev-tag ms-3">
+                            Developer 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                          </span> 
                         </button>
                       </h2>
                       <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight">
