@@ -47,38 +47,74 @@
                             </div>
                           </div>
                         </div>
-                        <!-- Accordion Item Two -->
+                        <!-- Accordion Item Two Designer -->
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="headingTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                              How to Test
+                              Accessibility Considerations
+                              <!-- Designer Tag -->
+                              <span class="dev-tag ms-3">
+                                Designer 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M12 2H8.5C7.57174 2 6.6815 2.36875 6.02513 3.02513C5.36875 3.6815 5 4.57174 5 5.5C5 6.42826 5.36875 7.3185 6.02513 7.97487C6.6815 8.63125 7.57174 9 8.5 9M12 2V9M12 2H15.5C15.9596 2 16.4148 2.09053 16.8394 2.26642C17.264 2.44231 17.6499 2.70012 17.9749 3.02513C18.2999 3.35013 18.5577 3.73597 18.7336 4.16061C18.9095 4.58525 19 5.04037 19 5.5C19 5.95963 18.9095 6.41475 18.7336 6.83939C18.5577 7.26403 18.2999 7.64987 17.9749 7.97487C17.6499 8.29988 17.264 8.55769 16.8394 8.73358C16.4148 8.90947 15.9596 9 15.5 9M12 9H8.5M12 9H15.5M12 9V16M8.5 9C7.57174 9 6.6815 9.36875 6.02513 10.0251C5.36875 10.6815 5 11.5717 5 12.5C5 13.4283 5.36875 14.3185 6.02513 14.9749C6.6815 15.6313 7.57174 16 8.5 16M15.5 9C15.0404 9 14.5852 9.09053 14.1606 9.26642C13.736 9.44231 13.3501 9.70012 13.0251 10.0251C12.7001 10.3501 12.4423 10.736 12.2664 11.1606C12.0905 11.5852 12 12.0404 12 12.5C12 12.9596 12.0905 13.4148 12.2664 13.8394C12.4423 14.264 12.7001 14.6499 13.0251 14.9749C13.3501 15.2999 13.736 15.5577 14.1606 15.7336C14.5852 15.9095 15.0404 16 15.5 16C15.9596 16 16.4148 15.9095 16.8394 15.7336C17.264 15.5577 17.6499 15.2999 17.9749 14.9749C18.2999 14.6499 18.5577 14.264 18.7336 13.8394C18.9095 13.4148 19 12.9596 19 12.5C19 12.0404 18.9095 11.5852 18.7336 11.1606C18.5577 10.736 18.2999 10.3501 17.9749 10.0251C17.6499 9.70012 17.264 9.44231 16.8394 9.26642C16.4148 9.09053 15.9596 9 15.5 9ZM8.5 16C7.57174 16 6.6815 16.3687 6.02513 17.0251C5.36875 17.6815 5 18.5717 5 19.5C5 20.4283 5.36875 21.3185 6.02513 21.9749C6.6815 22.6313 7.57174 23 8.5 23C9.42826 23 10.3185 22.6313 10.9749 21.9749C11.6313 21.3185 12 20.4283 12 19.5V16M8.5 16H12" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                              </span>
                             </button>
                           </h2>
                           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" style="">
                             <div class="accordion-body">
-                              <ol role="list">
-                                <li>Choose a color contrast measuring tool that allows you to sample colors from your webpage. See Resources below for a recommended list of tools.</li>
-                                <li>Determine if the text is regular sized or large size depeneding on the text size and boldness.</li>
-                                <li>In the color contrast tool, you'll typically find color droppers or eyedropper tools. These tools allow you to select specific colors from the design.</li>
-                                <li>Use color dropper tool to select foreground element (e.g., text) and then select background element (e.g., the background behind the text)</li>
-                                <li>Once you've sampled both foreground and background colors, the color contrast tool should display the contrast ratio between the two colors. This contrast ratio is typically calculated as the ratio between the luminance (brightness) of the foreground and background colors.</li>
-                                <li>Compare the contrast ratio against the WCAG requirements to determine a pass or fail.</li>
+                              <h3>Ensuring Text Color Contrast:</h3>
+                              <p>Begin by establishing an accessible color palette that adheres to contrast requirements for all text colors and background color combinations.</p>
+                              <p>To meet <strong>WCAG 2.1 Level AA</strong> requirements, use the <a href="https://www.tpgi.com/color-contrast-checker/" target="_blank">Color Contrast Analyzer tool by TPGI</a> to assess and adjust the contrast of text against their background colors:</p>
+                              <ol>
+                                <li><strong>Download the Tool:</strong> Obtain the Color Contrast Analyzer from TPGI's official website to help identify contrast ratios in your designs.</li>
+                                <li><strong>Measure Foreground vs. Background:</strong> Use the tool's eyedropper feature to select the foreground (text) and background colors directly from your design.</li>
+                                <li><strong>Analyze Contrast Ratios:</strong> The tool will automatically calculate the contrast ratio, allowing you to quickly assess conformance with WCAG standards.</li>
+                                <li><strong>Adjust as Needed:</strong> For text under 18pt or 24px, aim for a minimum contrast ratio of 4.5:1. For large text (over 18pt or 24px, or bold and at least 14pt or 18.5px), ensure a ratio of at least 3:1.</li>
                               </ol>
+                              <p>Include contrast checks as a standard part of your design workflow to ensure accessibility for users with visual impairments.</p>
+                              <p>See Resources below for a recommended list of other contrast tool options.</p>
                             </div>
                           </div>
-                        </div>
-                        <!-- Accordion Item Three -->
+                        </div>         
+                        <!-- Accordion Item Three Auditor -->
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="headingThree">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                              Regular Sized Text Color Failure
+                              How to Test
+                              <!-- Auditor Tag -->
+                              <span class="dev-tag ms-3">
+                                Auditor 
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M14 7H19.6404C20.0877 7 20.3113 7 20.4421 7.09404C20.5562 7.17609 20.6306 7.30239 20.6469 7.442C20.6656 7.602 20.5569 7.79751 20.3397 
+                                    8.18851L18.9936 10.6115C18.9148 10.7533 18.8755 10.8242 18.86 10.8993C18.8463 10.9657 18.8463 11.0343 18.86 11.1007C18.8755 11.1758 18.9148 
+                                    11.2467 18.9936 11.3885L20.3397 13.8115C20.5569 14.2025 20.6656 14.398 20.6469 14.558C20.6306 14.6976 20.5562 14.8239 20.4421 14.906C20.3113 
+                                    15 20.0877 15 19.6404 15H12.6C12.0399 15 11.7599 15 11.546 14.891C11.3578 14.7951 11.2049 14.6422 11.109 14.454C11 14.2401 11 13.9601 11 
+                                    13.4V11M4 21L4 4M4 11H12.4C12.9601 11 13.2401 11 13.454 10.891C13.6422 10.7951 13.7951 10.6422 13.891 10.454C14 10.2401 14 9.96005 14 9.4V4.6C14 
+                                    4.03995 14 3.75992 13.891 3.54601C13.7951 3.35785 13.6422 3.20487 13.454 3.10899C13.2401 3 12.9601 3 12.4 3H5.6C5.03995 3 4.75992 3 4.54601 
+                                    3.10899C4.35785 3.20487 4.20487 3.35785 4.10899 3.54601C4 3.75992 4 4.03995 4 4.6V11Z" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span> 
                             </button>
                           </h2>
                           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" style="">
                             <div class="accordion-body">
+                              <h3>Conducting Color Contrast Audits:</h3>
+                              <p>To ensure compliance with <strong>WCAG 2.1 Level AA</strong> color contrast requirements, auditors should use the <a href="https://www.tpgi.com/color-contrast-checker/" target="_blank">Color Contrast Analyzer tool by TPGI</a> during their review process:</p>
+                              <ol>
+                                <li><strong>Access the Tool:</strong> Navigate to TPGI's official website and use the Color Contrast Analyzer to evaluate contrast ratios within Figma designs or web pages.</li>
+                                <li><strong>Identify Text Size and Style:</strong> Determine if the text is regular or large sized based on its size and boldness to apply the correct contrast ratio requirement (4.5:1 for regular text, 3:1 for large text).</li>
+                                <li><strong>Select Colors:</strong> Utilize the tool's eyedropper feature to pick the foreground (text) and background colors directly from the design or webpage.</li>
+                                <li><strong>Calculate Contrast Ratio:</strong> The tool will automatically compute the contrast ratio between the selected foreground and background colors.</li>
+                                <li><strong>Evaluate Compliance:</strong> Compare the calculated contrast ratio with WCAG 2.1 Level AA standards to assess whether the design meets or fails the requirements.</li>
+                                <li><strong>Recommend Adjustments:</strong> If the contrast ratio does not meet the minimum requirements, suggest specific color adjustments to the design team.</li>
+                                <li><strong>Annotate Designs:</strong> Use the copy and paste annotations below to add notes to Figma boards to communicate requirements, failures and recommendations.</li>
+                              </ol>
+                              <p>See Resources below for a recommended list of other contrast tool options.</p>
                               <div class="d-inline-block border border-dark p-2 rounded">
                                 <div class="d-flex flex-row">
                                   <div class="text-to-copy">
+                                    <h3>Regular Sized Text</h3>
                                     <ul role="list">
                                       <li>Regular sized text must have a 4.5:1 minimum contrast ratio with the background color in all states.</li>
                                       <li><i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i> Warning: the contrast ratio fails the requirement</li>
@@ -93,21 +129,11 @@
                                   </div>
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- Accordion Item Four -->
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="headingFour">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                              Large Sized Text Color Failure
-                            </button>
-                          </h2>
-                          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
-                            <div class="accordion-body">
+                              <div class="space-large"></div>
                               <div class="d-inline-block border border-dark p-2 rounded">
                                 <div class="d-flex flex-row">
                                   <div class="text-to-copy">
+                                    <h3>Large Sized Text</h3>
                                     <ul role="list">
                                       <li>Large sized text must have a 3:1 minimum contrast ratio with the background color in all states.</li>
                                       <li><i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i> Warning: the contrast ratio fails the requirement</li>
@@ -125,6 +151,36 @@
                             </div>
                           </div>
                         </div>
+                        <!-- Accordion Item Four -->
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                              Accessibility Considerations
+                              <!-- Developer Tag -->
+                              <span class="dev-tag ms-3">
+                                Developer 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                              </span> 
+                            </button>
+                          </h2>
+                          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
+                            <div class="accordion-body">
+                              <h3>Implementing Color Contrast for Accessibility</h3>
+                              <p>When developing web content, ensuring sufficient color contrast is critical to comply with <strong>WCAG 2.1 Level AA</strong> standards:</p>
+                              <ul>
+                                <li><strong>Text and Images of Text:</strong> Ensure regular-sized text and images of text have a contrast ratio of at least <strong>4.5:1</strong> against their background. For large-sized text, a minimum ratio of <strong>3:1</strong> is required.</li>
+                                <li><strong>Color Contrast Tools:</strong> Utilize color contrast tools to verify the contrast ratio of text against the background colors during development.</li>
+                                <li><strong>Dynamic Content:</strong> For dynamic content that changes state (e.g., hover, focus), ensure contrast requirements are met in all states.</li>
+                                <li><strong>CSS Techniques:</strong> Apply CSS techniques to adjust text color, background color, and border styles to meet contrast ratios.</li>
+                                <li><strong>Automated Testing:</strong> Incorporate automated testing tools into your development workflow to identify and correct contrast issues.</li>
+                                <li><strong>Documentation:</strong> Document color usage and contrast ratios in your project's style guide to maintain consistency and compliance.</li>
+                              </ul>
+                              <p>Adhering to these guidelines not only meets legal and regulatory requirements but also ensures your web content is accessible to users with visual impairments, including those with color vision deficiencies.</p>
+                            </div>
+                          </div>
+                        </div>
                         <!-- Accordion Item Five -->
                         <div class="accordion-item">
                           <h2 class="accordion-item" id="headingFive">
@@ -137,7 +193,18 @@
                               <ul>
                                 <li><a href="https://www.tpgi.com/color-contrast-checker/" target="_blank">Downloadable App - TPGi's Color Contrast Analyzer</a></li>
                                 <li><a href="https://webaim.org/resources/contrastchecker/" target="_blank">WebAIM Contrast Checker Webpage</a></li>
-                              </ul>
+                                <li><a href="https://www.figma.com/community/plugin/734693888346260052/able-friction-free-accessibility" target="_blank">Able - Friction free accessibility, Figma Plugin</a></li>
+                                <li><a href="https://usecontrast.com/" target="_blank">Use Contrast - Figma Plugin & macOS App</a></li>
+                                <li><a href="https://chrome.google.com/webstore/detail/color-contrast-analyzer/aagjbjabglllchfnjcnlneoifnkdikgl" target="_blank">Color Contrast Analyzer - Chrome Extension</a></li>
+                                <li><a href="https://colororacle.org/" target="_blank">Color Oracle - Color Blindness Simulator for Windows, Mac, and Linux</a></li>
+                                <li><a href="https://www.adobe.com/accessibility/color-contrast.html" target="_blank">Adobe Color Contrast Analyzer</a></li>
+                                <li><a href="https://contrastchecker.com/" target="_blank">Contrast Checker - Easily check and adjust contrast ratios</a></li>
+                                <li><a href="https://color.a11y.com/" target="_blank">Accessibility Color Wheel - Check color combinations for accessibility</a></li>
+                                <li><a href="https://axesslab.com/tools/color-contrast/" target="_blank">Axess Lab's Color Contrast Tools</a></li>
+                                <li><a href="https://www.microsoft.com/design/fluent/#/web" target="_blank">Microsoft Fluent Design System - Accessibility Insights</a></li>
+                                <li><a href="https://material.io/resources/color/#!/?view.left=0&view.right=0" target="_blank">Material Design Color Tool - Interactive color palette tool</a></li>
+                                <li><a href="https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23FFFFFF%2C%20White%0D%0A%23F2F2F2%0D%0A%23DDDDDD%0D%0A%23CCCCCC%0D%0A%23888888%0D%0A%23404040%2C%20Charcoal%0D%0A%23000000%2C%20Black%0D%0A%232F78C5%2C%20Effective%20on%20Extremes%0D%0A%230F60B6%2C%20Effective%20on%20Lights%0D%0A%23398EEA%2C%20Ineffective%0D%0A&es-color-form__tile-size=compact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18&es-color-form__show-contrast=dnp" target="_blank">Contrast Grid by EightShapes</a></li>
+                              </ul>                              
                             </div>
                           </div>
                         </div>
