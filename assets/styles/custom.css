@@ -237,3 +237,27 @@ p.dev-tag {
 .styled-table tr:nth-child(even) {
   background-color: #f9f9f9;
 }
+
+/* Link vs Button Call out styles */
+.btn-vs-link-parent {
+  display: flex;
+  flex-direction: column;
+  
+}
+.btn-vs-link-child {
+  margin-left: auto;
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+  border: 2px solid var(--accent-green);
+  padding: 15px;
+  background-color: #8ac24138;
+}
+.btn-vs-link-child h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+.btn-vs-link-child small {
+  font-size: .75em;
+  font-family: system-ui;
+}
