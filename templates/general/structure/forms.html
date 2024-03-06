@@ -26,40 +26,120 @@
           <!-- Main Content -->
           <main class="col-md-10">
             <!-- A11y Live Region -->
-            <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
+            <div aria-live="polite" id="page-live-region" class="visually-hidden"></div> 
             <div class="container-xxl bd-gutter mt-3">
                 <h1>Forms</h1>
                 <!-- Begin Accordion -->
                 <div class="accordion" id="accordionOpen">
-                    <!-- Accordion Item One -->
+                    <!-- Accordion Item Zero SC -->
                     <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          Labeling Controls
+                      <h2 class="accordion-header" id="headingZero">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseZero" aria-expanded="true" aria-controls="collapseZero">
+                          Success Criteria                        
                         </button>
                       </h2>
-                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
+                      <div id="collapseZero" class="accordion-collapse collapse show" aria-labelledby="headingZero" style=""> 
                         <div class="accordion-body">
-                          <p>
-                            Persistently visible labels must be provided to identify all form controls, including text fields, checkboxes, 
-                            radio buttons, and drop-down menus. Placeholder text is not a sufficient label becuase it disappears as soon as the 
-                            user begins to type in the input field.
-                          </p>
-                          <p>
-                            Visible labels must be close in proximity and must identify the field Labels by describing the purpose of the form control.
-                            If the field is a required field the label must identify it by either an asterisk (*) or the word (required) in the label.
-                          </p>
-                          <p>
-                            In some instances an aria-label or aria-labelledby can also be used to identify form controls. This approach should only be 
-                            used when the label of the control is clear from the surrounding content. For example if the search button has a well known 
-                            magnifying glass icon or the search form button is labelled "search" then an additional visible label is not a hard requirment.
-                          </p>
-                          <p>It is mandatory to provide <code>autocomplete</code> attributes to the fields on the form requesting information about the user. 
-                            When autocomplete is assigned for input fields, suggestions are provided for the user. For some users when that does not happen it is difficult to complete the form.</p>
+                          <ul>
+                            <li><strong>1.3.1 Info and Relationships:</strong> Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text, ensuring that form fields and their labels are properly associated.</li>
+                            <li><strong>1.3.5 Identify Input Purpose:</strong> The purpose of each input field collecting information about the user can be programmatically determined when the field serves a common purpose.</li>
+                            <li><strong>2.4.6 Headings and Labels:</strong> Headings and labels describe the topic or purpose, making it easier for users to find content and complete forms.</li>
+                            <li><strong>3.2.2 On Input:</strong> Changing the setting of any user interface component does not automatically cause a change of context unless the user has been advised of the behavior before using the component.</li>
+                            <li><strong>3.3.1 Error Identification:</strong> If an input error is automatically detected, the item that is in error is identified and the error is described to the user in text.</li>
+                            <li><strong>3.3.2 Labels or Instructions:</strong> Labels or instructions are provided when content requires user input.</li>
+                            <li><strong>3.3.3 Error Suggestion:</strong> If an input error is automatically detected and suggestions for correction are known, then the suggestions are provided to the user, unless it would jeopardize the security or purpose of the content.</li>
+                            <li><strong>3.3.4 Error Prevention (Legal, Financial, Data):</strong> For Web pages that cause legal commitments or financial transactions for the user to occur, that modify or delete user-controllable data in data storage systems, or that submit user test responses, the user is able to reverse, correct, or confirm the action.</li>
+                            <li><strong>4.1.2 Name, Role, Value:</strong> For all user interface components (including but not limited to: form elements, links, and components generated by scripts), the name and role can be programmatically determined; states, properties, and values that can be set by the user can be programmatically set; and notification of changes to these items is available to user agents, including assistive technologies.</li>
+                            <li><strong>4.1.3 Status Messages:</strong> Status messages can be programmatically determined through role or properties such that they can be presented to the user by assistive technologies without receiving focus, especially important for conveying success or error messages after form submission.</li>
+                          </ul>                          
+                        </div>                        
+                      </div>
+                    </div>
+                    <!-- Accordion with Example of Accessible Form  -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                          Example of Accessible Form
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" style="">
+                        <div class="accordion-body">
+                          ...
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Accordion Item Two Designer-->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Accessibility Considerations
+                          <!-- Designer Tag -->
+                          <span class="dev-tag ms-3">
+                            Designer 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M12 2H8.5C7.57174 2 6.6815 2.36875 6.02513 3.02513C5.36875 3.6815 5 4.57174 5 5.5C5 6.42826 5.36875 7.3185 6.02513 7.97487C6.6815 8.63125 7.57174 9 8.5 9M12 2V9M12 2H15.5C15.9596 2 16.4148 2.09053 16.8394 2.26642C17.264 2.44231 17.6499 2.70012 17.9749 3.02513C18.2999 3.35013 18.5577 3.73597 18.7336 4.16061C18.9095 4.58525 19 5.04037 19 5.5C19 5.95963 18.9095 6.41475 18.7336 6.83939C18.5577 7.26403 18.2999 7.64987 17.9749 7.97487C17.6499 8.29988 17.264 8.55769 16.8394 8.73358C16.4148 8.90947 15.9596 9 15.5 9M12 9H8.5M12 9H15.5M12 9V16M8.5 9C7.57174 9 6.6815 9.36875 6.02513 10.0251C5.36875 10.6815 5 11.5717 5 12.5C5 13.4283 5.36875 14.3185 6.02513 14.9749C6.6815 15.6313 7.57174 16 8.5 16M15.5 9C15.0404 9 14.5852 9.09053 14.1606 9.26642C13.736 9.44231 13.3501 9.70012 13.0251 10.0251C12.7001 10.3501 12.4423 10.736 12.2664 11.1606C12.0905 11.5852 12 12.0404 12 12.5C12 12.9596 12.0905 13.4148 12.2664 13.8394C12.4423 14.264 12.7001 14.6499 13.0251 14.9749C13.3501 15.2999 13.736 15.5577 14.1606 15.7336C14.5852 15.9095 15.0404 16 15.5 16C15.9596 16 16.4148 15.9095 16.8394 15.7336C17.264 15.5577 17.6499 15.2999 17.9749 14.9749C18.2999 14.6499 18.5577 14.264 18.7336 13.8394C18.9095 13.4148 19 12.9596 19 12.5C19 12.0404 18.9095 11.5852 18.7336 11.1606C18.5577 10.736 18.2999 10.3501 17.9749 10.0251C17.6499 9.70012 17.264 9.44231 16.8394 9.26642C16.4148 9.09053 15.9596 9 15.5 9ZM8.5 16C7.57174 16 6.6815 16.3687 6.02513 17.0251C5.36875 17.6815 5 18.5717 5 19.5C5 20.4283 5.36875 21.3185 6.02513 21.9749C6.6815 22.6313 7.57174 23 8.5 23C9.42826 23 10.3185 22.6313 10.9749 21.9749C11.6313 21.3185 12 20.4283 12 19.5V16M8.5 16H12" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </span>
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" style="">
+                        <div class="accordion-body">
+                          <p>Designing accessible forms is crucial for ensuring all users can interact with content effectively. Follow these guidelines to create forms in Figma that meet accessibility standards:</p>
+                          <ol>
+                            <li><strong>Label All Form Elements Clearly:</strong> Ensure every form field has a label that describes its purpose. Use text labels that are visually connected to their corresponding form controls to make it clear what each input is for.</li>
+                            <li><strong>Use Placeholder Text Appropriately:</strong> While placeholder text can provide hints or examples, it should not be used as the only method of providing instructions. Placeholder text disappears when a user starts typing, which may confuse users who need more context.</li>
+                            <li><strong>Design Visual Cues for Required Fields:</strong> Clearly indicate which fields are required using visual cues, such as asterisks (*) next to the labels of required fields. Include instructions at the beginning of the form explaining what the cues mean.</li>
+                            <li><strong>Ensure Sufficient Color Contrast:</strong> Design form elements with sufficient contrast between text labels, input text, and background colors to meet or exceed the minimum contrast ratios defined by WCAG guidelines.</li>
+                            <li><strong>Create Descriptive Error Messages:</strong> Design error messages that name the field in error, give an explanation of error, and provide any required format information. Position error messages where they are easily noticed, such as next to the form field in question.</li>
+                            <li><strong>Design for Different States:</strong> Include designs for various form states, such as hover, focus, error and success states, to provide feedback to users as they interact with the form.</li>
+                            <li><strong>Provide Instructions for Complex Inputs:</strong> When designing forms that require data in a specific format (e.g., date fields), include instructions or examples to clarify the expected input format.</li>
+                            <li><strong>Consider the Order of Form Elements:</strong> Organize form elements in a logical order that follows natural reading patterns, typically top to bottom and left to right, to ensure a smooth flow for users filling out the form.</li>
+                          </ol>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Three Auditor -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          How to Test and Annotate Forms
+                          <!-- Auditor Tag -->
+                          <span class="dev-tag ms-3">
+                            Auditor 
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M14 7H19.6404C20.0877 7 20.3113 7 20.4421 7.09404C20.5562 7.17609 20.6306 7.30239 20.6469 7.442C20.6656 7.602 20.5569 7.79751 20.3397 
+                                8.18851L18.9936 10.6115C18.9148 10.7533 18.8755 10.8242 18.86 10.8993C18.8463 10.9657 18.8463 11.0343 18.86 11.1007C18.8755 11.1758 18.9148 
+                                11.2467 18.9936 11.3885L20.3397 13.8115C20.5569 14.2025 20.6656 14.398 20.6469 14.558C20.6306 14.6976 20.5562 14.8239 20.4421 14.906C20.3113 
+                                15 20.0877 15 19.6404 15H12.6C12.0399 15 11.7599 15 11.546 14.891C11.3578 14.7951 11.2049 14.6422 11.109 14.454C11 14.2401 11 13.9601 11 
+                                13.4V11M4 21L4 4M4 11H12.4C12.9601 11 13.2401 11 13.454 10.891C13.6422 10.7951 13.7951 10.6422 13.891 10.454C14 10.2401 14 9.96005 14 9.4V4.6C14 
+                                4.03995 14 3.75992 13.891 3.54601C13.7951 3.35785 13.6422 3.20487 13.454 3.10899C13.2401 3 12.9601 3 12.4 3H5.6C5.03995 3 4.75992 3 4.54601 
+                                3.10899C4.35785 3.20487 4.20487 3.35785 4.10899 3.54601C4 3.75992 4 4.03995 4 4.6V11Z" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                          </span>
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" style="">
+                        <div class="accordion-body">
+                          <ol role="list">
+                            <li>Use this <a target="_blank" href="https://www.figma.com/file/txsKugjRb6ALXDK4uKGcp1/A11y-Annotation-Kit---HHMI?type=design&node-id=0-1&mode=design&t=c6seYgq1nqTYby7h-0">A11y Annotation Kit</a>.</li>
+                            <li>Identify all UI elements within forms.</li>
+                            <li>During phase one, ask questions if neccesary to understand functionality. ask for forms in error state and success states.</li>
+                            <li>During phase two in preparation for developer hand-off, add a sticky note annotation to define each label element and autocomplete attributes.</li>
+                            <li>Most forms will require further annotating for the developer hand-off phase. Please see interactives and the How to Annotate for more detailed
+                              instructions on how to number the elements and write annotations specific for more complex components.
+                            </li>
+                          </ol>
+                          <ul class="list-unstyled inline-flex-images" role="list">
+                            <li><img src="/assets/images/label.png" alt="label annotation tag"></li>
+                            <li><img src="/assets/images/autocomplete-name.png" alt="autocomplete annotation tag with equals sign and the word name in quotes"></li>
+                          </ul>
+                          <div class="space-large"></div>
+                          <!-- Forms Labels and Autocomplete Annotation Block -->
                           <div class="d-inline-block border border-dark p-2 rounded">
                             <div class="d-flex flex-row">
                               <div class="text-to-copy">
-                                <h3>Form Labels</h3>
+                                <h3>Form Labels and Autocomplete</h3>
                                 <ul role="list">
                                   <li><strong>Form Controls</strong> must have a persistantly visible <code class="code-tag">&lt;label&gt;</code> with a for/id association.</li>
                                   <li>The <code class="code-tag">&lt;label&gt;</code> must identify if it is required with an (*) or the word (required).</li>
@@ -73,36 +153,8 @@
                               </div>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Accordion Item Two -->
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          Grouping Controls
-                        </button>
-                      </h2>
-                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" style="">
-                        <div class="accordion-body">
-                          <p>Similar form fields must be grouped together to improve form comprehension for all users. 
-                            This grouping makes it easier for users to identify related controls and allows them to concentrate on smaller, 
-                            more manageable sections of the form, rather than attempting to understand the entire form at once.
-                          </p>
-                          <p>Controls that must be grouped with a <code>&lt;fieldset&gt;</code> and a <code>&lt;legend&gt;</code> include:</p>
-                          <ul>
-                            <li>Radio buttons</li>
-                            <li>Checkboxes</li>
-                            <li>Input fields for related information (e.g., first name, last name)</li>
-                            <li>Select dropdowns</li>
-                            <li>Date pickers</li>
-                          </ul>
-                          <p>Grouping these controls with a <code>&lt;fieldset&gt;</code> and a descriptive <code>&lt;legend&gt;</code> provides 
-                            clarity and structure for users.
-                          </p>
-                          <p>Related controls may also be associated with ARIA. ARIA provides a grouping role that functions similarly to the fieldset and 
-                            legend. <code>role="group"</code> with an aria-labelledby pointing to a visible text node is a sufficient technique as well.
-                          </p>
+                          <div class="space-large"></div>
+                          <!-- Form Control Group Annotation Block -->
                           <div class="d-inline-block border border-dark p-2 rounded">
                             <div class="d-flex flex-row">
                               <div class="text-to-copy">
@@ -118,24 +170,9 @@
                                   </button>
                               </div>
                             </div>
-                          </div>              
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Accordion Item Three -->
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Form Instructions
-                        </button>
-                      </h2>
-                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" style="">
-                        <div class="accordion-body">
-                          <p>
-                            If the field is a required field the label must identify it by either an asterisk (*) or the word (required) in the label.
-                            If an asterisk (*) is used their must also be intructions before the form explaining to users what the asterisk means. 
-                            "<em>Fields with an asterisk (*) are required.</em>"
-                          </p>
+                          </div>
+                          <div class="space-large"></div>
+                          <!-- Form Instructions Annotation Block -->
                           <div class="d-inline-block border border-dark p-2 rounded">
                             <div class="d-flex flex-row">
                               <div class="text-to-copy">
@@ -156,39 +193,9 @@
                                   </button>
                               </div>
                             </div>
-                          </div>       
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Accordion Item Four -->
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                          Form Validation
-                        </button>
-                      </h2>
-                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
-                        <div class="accordion-body">
-                          <p>If there are forms present that contain required input fields or input fields requiring specific data validation please ask the designer to provide you 
-                            with examples of the form while in error state. The form error messages should be reviewed for color contrast, identify the field in error using the field name,
-                             and providing any required format information.</p>
-                          <p>While HTML5 form validation offers a quick way to check for basic input errors, it falls short in several key areas of accessibility. 
-                            Specifically, it does not identify the field in error using the field name, the error messages do not stay persistently visible, and it does not 
-                            provide feedback about required formats for most field types. Additionally, the error messages are not programmatically associated with the field 
-                            in error and often visually obscure other content, especially on smaller screen sizes. Client side error messaging is always preferred.</p>
-
-                          <p>To address these issues, the following steps are recommended:</p>
-                          
-                          <ol role="list">
-                            <li>Make Errors Prominent: Upon form submission or when focus is on the incorrectly filled-in field, errors should be made highly visible to the user.</li>
-                            <li>Associate Error Messages: Utilize the <code>aria-describedby</code> attribute to programmatically associate each error message with the field in error. (The <code>aria-describedby</code> attribute should only be present when the error message is visible.)</li>
-                            <li>Explicit Field Identification: Error messages should explicitly identify the field that is in error to remove any ambiguity. Best practice is to start with the field name, for example "First Name is required".</li>
-                            <li>Format Suggestions: If the error is related to incorrect formatting, the error message should provide a suggestion on how to correct it.</li>
-                            <li>Disable HTML5 Validation: Use the <code>novalidate</code> attribute on the <code>form</code> tag to disable HTML5's built-in validation, allowing for a more accessible custom validation process.</li>
-                            <li>Use aria-invalid: Implement the <code>aria-invalid="true"</code> attribute on fields that have failed validation to inform assistive technologies that the field contains an error.
-                            (This attribute should be removed when the form field is not invalid.)</li>
-                          </ol>                         
-                          <p>By implementing these recommendations, you'll be taking a significant step toward making your forms more accessible and user-friendly.</p>                 
+                          </div>
+                          <div class="space-large"></div>
+                          <!-- Form Validation Annotation Block -->
                           <div class="d-inline-block border border-dark p-2 rounded">
                             <div class="d-flex flex-row">
                               <div class="text-to-copy">
@@ -210,19 +217,132 @@
                                   </button>
                               </div>
                             </div>
-                          </div>       
+                          </div>
+                          <div class="space-large"></div>
+                          <!-- User Notification Annotation Block -->
+                          <div class="d-inline-block border border-dark p-2 rounded">
+                            <div class="d-flex flex-row">
+                              <div class="text-to-copy">
+                                <h3>User Notifcation</h3>
+                                <ul>
+                                  <li>Use in-line error indication with clear descriptions for screen readers. Consider <code>role="alert"</code> for errors.</li>
+                                  <li>Show descriptive validation messages with <code>aria-live</code>, ensuring it's in the DOM on page load.</li>
+                                  <li>Provide prominent success messages. Consider <code>role="status"</code> on the container and ensure it's in the DOM on page load.</li>
+                                </ul>                                                             
+                              </div>
+                              <div>
+                                  <button class="ml-1r btn copy-btn">
+                                    <i class="bi bi-clipboard-heart-fill" aria-hidden="true"></i> Copy
+                                  </button>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <!-- Accordion Item Five -->
+                    <!-- Accordion Item Four Developer-->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                          Accessibility Considerations
+                          <!-- Developer Tag -->
+                          <span class="dev-tag ms-3">
+                            Developer 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                          </span> 
+                        </button>
+                      </h2>
+                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
+                        <div class="accordion-body">
+                          <p>Developing accessible forms is essential for compliance with WCAG standards and ensuring usability for all users. Utilize the design and audit annotations to guide your development:</p>
+                          <ol>
+                            <li><strong>Associate Labels with Form Controls:</strong> Use the <code>&lt;label&gt;</code> element for each form control. For better accessibility, ensure labels are programmatically associated with their corresponding input fields using the <code>for</code> attribute on the label that matches the <code>id</code> attribute on the input.</li>
+                            <li><strong>Implement Fieldset for Grouping:</strong> For related form elements, such as radio buttons or checkboxes, group these elements together using the <code>&lt;fieldset&gt;</code> tag, and use the <code>&lt;legend&gt;</code> tag to provide a group label.</li>
+                            <li><strong>Ensure Interactive Elements are Keyboard Accessible:</strong> Make sure all form elements can be accessed and used with a keyboard alone. This includes being able to navigate to and from each field, as well as submitting the form.</li>
+                            <li><strong>Use Semantic HTML Where Possible:</strong> Use appropriate HTML5 input types (e.g., email, tel, date) to provide built-in validation and improve the user experience on various devices.</li>
+                            <li><strong>Provide Clear Error Identification:</strong> Implement client-side validation that provides specific, actionable error messages. Errors should be programmatically associated with their fields using the <code>aria-describedby</code> attribute on the field that matches the <code>id</code> attribute on the error message.</li>
+                            <li><strong>While in Error State:</strong> Fileds in error must have the <code>aria-invalid="true"</code> attribute and users focus should be directed to the first error if the form fails to submit.</li>
+                            <li><strong>Ensure Forms Have Accessible Names:</strong> Use the <code>&lt;legend&gt;</code> element within <code>&lt;fieldset&gt;</code> or <code>aria-labelledby</code> to provide an accessible name for forms, especially if the form serves a specific purpose or is one of multiple forms on a page.</li>
+                            <li><strong>Handle State Changes Accessibly:</strong> For dynamic forms that change state based on user input, ensure that these changes are announced to screen reader users via ARIA roles and properties, such as <code>aria-live</code> for status messages.</li>
+                            <li><strong>Include ARIA Descriptions for Complex Inputs:</strong> For inputs that require specific formats or have complex validation rules, use ARIA attributes such as <code>aria-describedby</code> to reference additional descriptive text or error messages.</li>
+                            <li><strong>Provide Clear Success Messages:</strong> Ensure success messages are immediately visible and clearly state the action was successful, using ARIA roles to make them accessible to screen reader users.</li>
+                          </ol>
+                        </div>                        
+                      </div>
+                    </div>
+
+
+                    <!-- End New -->
+                    <!-- Accordion Item Five Additional Info -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingFive">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                          User Notifcation
+                          Additional Information on Form Accessibility
                         </button>
                       </h2>
                       <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" style="">
                         <div class="accordion-body">
+                          <h3>Labeling Controls</h3>
+                          <p>
+                            Persistently visible labels must be provided to identify all form controls, including text fields, checkboxes, 
+                            radio buttons, and drop-down menus. Placeholder text is not a sufficient label becuase it disappears as soon as the 
+                            user begins to type in the input field.
+                          </p>
+                          <p>
+                            Visible labels must be close in proximity and must identify the field Labels by describing the purpose of the form control.
+                            If the field is a required field the label must identify it by either an asterisk (*) or the word (required) in the label.
+                          </p>
+                          <p>
+                            In some instances an aria-label or aria-labelledby can also be used to identify form controls. This approach should only be 
+                            used when the label of the control is clear from the surrounding content. For example if the search button has a well known 
+                            magnifying glass icon or the search form button is labelled "search" then an additional visible label is not a hard requirment.
+                          </p>
+                          <p>It is mandatory to provide <code>autocomplete</code> attributes to the fields on the form requesting information about the user. 
+                            When autocomplete is assigned for input fields, suggestions are provided for the user. For some users when that does not happen it is difficult to complete the form.</p>
+                          
+                          <h3>Grouping Controls</h3>
+                          <p>Similar form fields must be grouped together to improve form comprehension for all users. 
+                            This grouping makes it easier for users to identify related controls and allows them to concentrate on smaller, 
+                            more manageable sections of the form, rather than attempting to understand the entire form at once.
+                          </p>
+                          <p>Controls that must be grouped with a <code>&lt;fieldset&gt;</code> and a <code>&lt;legend&gt;</code> include:</p>
+                          <ul>
+                            <li>Radio buttons</li>
+                            <li>Checkboxes</li>
+                            <li>Input fields for related information (e.g., first name, last name)</li>
+                            <li>Select dropdowns</li>
+                            <li>Date pickers</li>
+                          </ul>
+                          <p>Grouping these controls with a <code>&lt;fieldset&gt;</code> and a descriptive <code>&lt;legend&gt;</code> provides 
+                            clarity and structure for users.
+                          </p>
+                          <p>Related controls may also be associated with ARIA. ARIA provides a grouping role that functions similarly to the fieldset and 
+                            legend. <code>role="group"</code> with an aria-labelledby pointing to a visible text node is a sufficient technique as well.
+                          </p>
+
+                          <h3>Form Validation</h3>
+                          <p>If there are forms present that contain required input fields or input fields requiring specific data validation please ask the designer to provide you 
+                            with examples of the form while in error state. The form error messages should be reviewed for color contrast, identify the field in error using the field name,
+                             and providing any required format information.</p>
+                          <p>While HTML5 form validation offers a quick way to check for basic input errors, it falls short in several key areas of accessibility. 
+                            Specifically, it does not identify the field in error using the field name, the error messages do not stay persistently visible, and it does not 
+                            provide feedback about required formats for most field types. Additionally, the error messages are not programmatically associated with the field 
+                            in error and often visually obscure other content, especially on smaller screen sizes. Client side error messaging is always preferred.</p>
+                          <p>To address these issues, the following steps are recommended:</p>
+                          <ol role="list">
+                            <li>Make Errors Prominent: Upon form submission or when focus is on the incorrectly filled-in field, errors should be made highly visible to the user.</li>
+                            <li>Associate Error Messages: Utilize the <code>aria-describedby</code> attribute to programmatically associate each error message with the field in error. (The <code>aria-describedby</code> attribute should only be present when the error message is visible.)</li>
+                            <li>Explicit Field Identification: Error messages should explicitly identify the field that is in error to remove any ambiguity. Best practice is to start with the field name, for example "First Name is required".</li>
+                            <li>Format Suggestions: If the error is related to incorrect formatting, the error message should provide a suggestion on how to correct it.</li>
+                            <li>Disable HTML5 Validation: Use the <code>novalidate</code> attribute on the <code>form</code> tag to disable HTML5's built-in validation, allowing for a more accessible custom validation process.</li>
+                            <li>Use aria-invalid: Implement the <code>aria-invalid="true"</code> attribute on fields that have failed validation to inform assistive technologies that the field contains an error.
+                            (This attribute should be removed when the form field is not invalid.)</li>
+                          </ol>                         
+                          <p>By implementing these recommendations, you'll be taking a significant step toward making your forms more accessible and user-friendly.</p>   
+
+                          <h3>User Notification</h3>
                           <p>Users must be notified after submitting a form. please ask the designer to provide you with examples of the form while in error state and success states. 
                             The user notifications should be reviewed for color contrast, identifying the status of the form submission and if the user is provioded with details about the submission.</p>
                           <p>After users submit a form, it's essential to provide clear and accessible feedback about the results of their submission. This feedback can be categorized into 
@@ -247,39 +367,10 @@
                               how to correct it. Ensure that error messages are prominent, clear, and accessible to all users, including those using screen readers.</li>
                             <li><strong>Dynamic Announcements:</strong> Make sure that both in-line and overall feedback is accessible to users with disabilities. Use appropriate 
                               ARIA attributes like <code>aria-live</code> and <code>aria-atomic</code> to ensure screen readers announce updates correctly.</li>
-                          </ul>                         
-                          <p>By implementing effective user notification techniques, you create a more user-friendly and accessible form submission experience, helping users understand the outcome of their actions and take appropriate steps.</p>
-                          <div class="d-inline-block border border-dark p-2 rounded">
-                            <div class="d-flex flex-row">
-                              <div class="text-to-copy">
-                                <h3>User Notifcation</h3>
-                                <ul>
-                                  <li>Use in-line error indication with clear descriptions for screen readers. Consider <code>role="alert"</code> for errors.</li>
-                                  <li>Show descriptive validation messages with <code>aria-live</code>, ensuring it's in the DOM on page load.</li>
-                                  <li>Provide prominent success messages. Consider <code>role="status"</code> on the container and ensure it's in the DOM on page load.</li>
-                                </ul>                                                             
-                              </div>
-                              <div>
-                                  <button class="ml-1r btn copy-btn">
-                                    <i class="bi bi-clipboard-heart-fill" aria-hidden="true"></i> Copy
-                                  </button>
-                              </div>
-                            </div>
-                          </div>                  
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Accordion Item Six -->
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingSix">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                          Custom Controls
-                        </button>
-                      </h2>
-                      <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" style="">
-                        <div class="accordion-body">
-                          <section>
-                            <p>If you are unclear about a custom control element on a design ask the designer or stakeholder to provide you with detailed information 
+                          </ul> 
+
+                          <h3>Custom Controls</h3>
+                          <p>If you are unclear about a custom control element on a design ask the designer or stakeholder to provide you with detailed information 
                               about the function of the control. Knowing the intended function of the control should give you a better idea of how to recommend making it accessible in the development phase.</p>
                             <p>Custom controls in web forms offer a powerful way to improve accessibility and user experience. They allow you to design and implement form elements that meet the specific 
                               needs of your users while ensuring compliance with accessibility standards.</p>                         
@@ -291,35 +382,11 @@
                               <li><strong>ARIA Roles and States:</strong> Utilize ARIA roles and states to convey the purpose and state of custom controls to assistive technologies.</li>
                               <li><strong>Testing and Feedback:</strong> Thoroughly test custom controls with various assistive technologies and gather user feedback to refine their design and functionality.</li>
                             </ul>
-                            <p>By creating custom controls with accessibility in mind, you can enhance the usability and inclusivity of your web forms, ensuring that all users can interact with them effectively.</p>                                                   </section>                          
+                            <p>By creating custom controls with accessibility in mind, you can enhance the usability and inclusivity of your web forms, ensuring that all users can interact with them effectively.</p>                       
                         </div>
                       </div>
-                    </div>
-                    <!-- Accordion Item Seven -->
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingSeven">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                          How to Annotate Forms
-                        </button>
-                      </h2>
-                      <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" style="">
-                        <div class="accordion-body">
-                          <ol role="list">
-                            <li>Use this <a target="_blank" href="https://www.figma.com/file/txsKugjRb6ALXDK4uKGcp1/A11y-Annotation-Kit---HHMI?type=design&node-id=0-1&mode=design&t=c6seYgq1nqTYby7h-0">A11y Annotation Kit</a>.</li>
-                            <li>Identify all UI elements within forms.</li>
-                            <li>During phase one, ask questions if neccesary to understand functionality. ask for forms in error state and success states.</li>
-                            <li>During phase two in preparation for developer hand-off, add a sticky note annotation to define each label element and autocomplete attributes.</li>
-                            <li>Most forms will require further annotating for the developer hand-off phase. Please see interactives and the How to Annotate for more detailed
-                              instructions on how to number the elements and write annotations specific for more complex components.
-                            </li>
-                          </ol>
-                          <ul class="list-unstyled inline-flex-images" role="list">
-                            <li><img src="/assets/images/label.png" alt="label annotation tag"></li>
-                            <li><img src="/assets/images/autocomplete-name.png" alt="autocomplete annotation tag with equals sign and the word name in quotes"></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
+                    </div>                     
+                      
                     <!-- Accordion Item Eight -->
                     <div class="accordion-item">
                       <h2 class="accordion-item" id="headingEight">
