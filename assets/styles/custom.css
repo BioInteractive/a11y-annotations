@@ -239,10 +239,15 @@ p.dev-tag {
 }
 
 /* Link vs Button Call out styles */
+.heading-callout-container {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 .btn-vs-link-parent {
   display: flex;
-  flex-direction: column;
-  
+  flex-direction: column; 
 }
 .btn-vs-link-child {
   margin-left: auto;
