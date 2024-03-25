@@ -107,7 +107,7 @@ a {
   }
 
   /* Code */
-  .code-tag {
+  .code-tag, code {
     font-weight: 600;
     color: #8B307F;
   }

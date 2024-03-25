@@ -15,7 +15,9 @@ HTML5 Best Practices: The project will follow HTML5 best practices, emphasizing 
 
 Bootstrap Framework: Leveraging the Bootstrap front-end development framework to create responsive, accessible, and consistent user interfaces that work seamlessly across various devices and browsers.
 
-Figma Annotation Repository: The website will serve as an annotation repository for designs in Figma, simplifying the annotation process and ensuring that design teams can easily add accessibility annotations to their work.
+Designer Guidance: The project will include designer guidance to assist in the creation of born-accessible components and web pages.
+
+Auditor Guidance and Annotation Repository: The website will serve as an annotation repository for designs in Figma, simplifying the annotation process and ensuring that design teams can easily add accessibility annotations to their work.
 
 Developer Guidance: The project will include developer guidance to assist in the creation of born-accessible components and web pages.
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reflow</title>
+    <title>Timing Adjustable</title>
 
     <!-- Link to Bootstrap CSS from CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
@@ -37,7 +37,7 @@
             <!-- A11y Live Region -->
             <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
             <div class="container-xxl bd-gutter mt-3">
-                <h1>Reflow</h1>
+                <h1>Timing Adjustable</h1>
                 <!-- Begin Accordion -->
                 <div class="accordion" id="accordionOpen">
                     <!-- Accordion Item One -->
@@ -49,12 +49,15 @@
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                         <div class="accordion-body">
-                          <p><strong>1.4.10 Reflow</strong> Content can be presented without loss of information or functionality, and without requiring scrolling in two dimensions for:</p>
+                          <p><strong>2.2.1 Timing Adjustable:</strong> For time limits set by the content, users must have options to manage these limits effectively, ensuring accessibility and user control.</p>
                           <ul role="list">
-                            <li>Vertical scrolling content at a width equivalent to 320 CSS pixels;</li>
-                            <li>Horizontal scrolling content at a height equivalent to 256 CSS pixels;</li>
-                            <li>Except for parts of the content which require two-dimensional layout for usage or meaning</li>
-                        </ul>
+                            <li><strong>Turn Off:</strong> Users can disable the time limit before encountering it.</li>
+                            <li><strong>Adjust:</strong> Users can adjust time limits before they start, up to at least ten times the default duration.</li>
+                            <li><strong>Extend:</strong> Users receive a warning before a time limit expires and can easily extend it at least ten times by performing a simple action.</li>
+                            <li><strong>Real-time Exception:</strong> Time limits integral to real-time events (e.g., auctions) where no alternative exists.</li>
+                            <li><strong>Essential Exception:</strong> Time limits that are crucial and where extension would invalidate the activity.</li>
+                            <li><strong>20 Hour Exception:</strong> Time limits exceeding 20 hours.</li>
+                          </ul>
                         </div>
                       </div>
                     </div>
@@ -74,15 +77,15 @@
                       </h2>
                       <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" style="">
                         <div class="accordion-body">
-                          <h3>Designing for Reflow Accessibility</h3>
+                          <h3>Designing for Timing Adjustable Accessibility</h3>
                           <ul>
-                            <li><strong>Responsive Layouts:</strong> Employ responsive design strategies that allow content to adjust dynamically for a variety of screen sizes, ensuring no two-dimensional scrolling is required for viewing content.</li>
-                            <li><strong>Test on Small Screens:</strong> Specifically test your designs at a width equivalent to 320 CSS pixels and a height of 256 CSS pixels to ensure content does not require two-dimensional scrolling.</li>
-                            <li><strong>Consider All Devices:</strong> Design with consideration for both vertical and horizontal orientations to accommodate different devices and user preferences.</li>
-                            <li><strong>Flexible Content and Images:</strong> Use scalable units for content and images to ensure they can reflow and are fully accessible within the constraints of smaller screens.</li>
+                            <li><strong>Visual Timers and Warnings:</strong> Design visual cues such as timers or warning messages to alert users before a time limit expires, ensuring they are aware of the need to extend the time if possible.</li>
+                            <li><strong>Adjustment Controls:</strong> Incorporate design elements that allow users to adjust or turn off time limits. Consider sliders, toggles, or settings menus for user-controlled time adjustments.</li>
+                            <li><strong>Extension Options:</strong> Clearly indicate options for extending time limits within the interface, making it easy for users to find and use these options to prevent stress or confusion.</li>
+                            <li><strong>Documentation and Guidelines:</strong> Provide detailed documentation and guidelines within your design annotations for developers, ensuring they understand how to implement the adjustable timing features correctly.</li>
                           </ul>
-                          <p>Integrating these practices into your design process supports accessibility and usability, aligning with WCAG 2.1.4 Reflow criteria, and ensures your content is accessible on a wide range of devices without loss of information or functionality.</p>
-                        </div>                                                                                
+                          <p>By integrating these considerations into your Figma designs, you contribute to a more accessible digital environment, ensuring content adheres to WCAG 2.2.1 Timing Adjustable criteria, allowing users to interact with content at their own pace.</p>
+                        </div>                                                                             
                       </div>
                     </div>
                     <!-- Accordion Item Three Auditor -->
@@ -108,25 +111,20 @@
                       <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" style="">
                         <div class="accordion-body">
                           <ol role="list">
-                            <li>Look for mobile size design boards and if they are not provided then ask the designer to provide them in 320px width.</li>
-                            <li>Check that the page does not require scrolling in two dimensions at a screen width of 320 CSS pixels and a screen height of 256 CSS pixels.</li>
-                            <li>Ensure that no meaningful content is lost or functionality is compromised when the page is viewed at these dimensions. Content in reflow must not be missing,
-                              cutoff, or overlapping.
-                            </li>
-                            <li>It is acceptable if meaningful content is presented in a different format as long as no meaning is lost, for example a footer list of links 
-                              may be transformed into an accordion as long as all the same links are available to users on all screen sizes.
-                            </li>
-                            <li>Verify that content reflows and is usable without requiring two-dimensional scrolling, except for parts of content that require a two-dimensional layout, 
-                              such as tables.</li>
+                            <li>Identify elements with time limits: Review designs for components like quizzes, forms, or timed interactions, noting any that impose time limits on user actions.</li>
+                            <li>Check for timer controls: Ensure there are designs for user controls to adjust, extend, or turn off time limits, including visual cues for these options.</li>
+                            <li>Look for warnings before time expiration: Confirm the presence of designs for warning messages alerting users before a time limit expires.</li>
+                            <li>Inspect for multiple extension opportunities: Verify designs include options for users to easily extend time limits multiple times without complex interactions.</li>
+                            <li>Assess for essential time limits: Differentiate between components with essential time limits and those where adjustments could be made, marking potential areas for design modifications.</li>
                           </ol>
                           <div class="d-inline-block border border-dark p-2 rounded">
                             <div class="d-flex flex-row">
                               <div class="text-to-copy">
-                                <h3>Reflow</h3>
+                                <h3>Timing Adjustable</h3>
                                 <ul role="list">
-                                  <li>Content or functionality is lost when the page is viewed at 320 CSS pixels width or 256 CSS pixels height.</li>
-                                  <li><i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i> Warning: Ensure that content reflows to adapt to different screen sizes and orientations.</li>
-                                  <li>Recommendation: Use responsive design techniques to ensure content reflows effectively at different screen sizes and orientations.</li>
+                                  <li>If a time limit is set and it is shorter than 20 hours, it must be adjustable/extendable.</li>
+                                  <li><i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i> Warning: Ensure timing is adjustable or extenable through an accessible mechanism.</li>
+                                  <li>Recommendation: Use an accessible warning dialog with options to extend time.</li>
                                 </ul>
                               </div>
                               <div>
@@ -155,17 +153,17 @@
                       </h2>
                       <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
                         <div class="accordion-body">
-                          <h3>Implementing Reflow Accessibility in Development</h3>
+                          <h3>Developing with Timing Adjustable Considerations</h3>
                           <ul>
-                            <li><strong>Responsive Design Techniques:</strong> Utilize CSS media queries to create responsive layouts that adapt to various screen sizes, ensuring content is accessible without two-dimensional scrolling.</li>
-                            <li><strong>Minimize Fixed Dimensions:</strong> Avoid using fixed width and height in CSS for elements. Instead, use percentages or viewport units to allow elements to adjust dynamically to screen sizes.</li>
-                            <li><strong>Testing on Various Devices:</strong> Test your implementation on devices with small screens (e.g., 320 CSS pixels in width and 256 CSS pixels in height) to ensure content reflows properly without requiring scrolling in two dimensions.</li>
-                            <li><strong>Adaptive Images and Containers:</strong> Implement techniques for images and containers that scale or hide appropriately to maintain content and functionality without the need for horizontal scrolling.</li>
+                            <li><strong>Implement Adjustable Timers:</strong> Ensure all time-limited functionalities allow users to adjust, extend, or disable timing. Provide options in the UI for users to select their preferred time settings.</li>
+                            <li><strong>Warning Messages:</strong> Code warning messages to alert users before a time limit expires, with an easy mechanism to extend the time directly from the alert.</li>
+                            <li><strong>Accessible Controls:</strong> Develop accessible controls for adjusting time limits, ensuring they can be operated with keyboard alone and are clearly labeled for assistive technology.</li>
+                            <li><strong>Document Essential Limits:</strong> For time limits that are essential and cannot be adjusted, provide thorough documentation in the code to explain the necessity of the time constraint.</li>
+                            <li><strong>Long Duration Timeouts:</strong> For activities with a timeout longer than 20 hours, ensure mechanisms are in place to preserve user data and state.</li>
                           </ul>
-                          <p>Following these guidelines ensures that your web content complies with WCAG 2.1.4 Reflow criteria, providing a better user experience across all devices and screen sizes.</p>
-                        </div>                                                                                     
+                          <p>Following these guidelines helps developers ensure web content is accessible and compliant with WCAG 2.2.1 Timing Adjustable criteria, catering to users' needs for flexible interaction times.</p>
+                        </div>
                       </div>
-                    </div>
                   <!-- Accordion Item Five Resources -->
                   <div class="accordion-item">
                     <h2 class="accordion-item" id="headingFive">
@@ -176,11 +174,9 @@
                     <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" style="">
                       <div class="accordion-body">
                         <ul>
-                          <li><a href="https://www.a11yproject.com/checklist/" target="_blank">The A11Y Project Checklist</a></li>
-                          <li><a href="https://webaim.org/techniques/css/" target="_blank">WebAIM: CSS Techniques and Concepts</a></li>
-                          <li><a href="https://www.smashingmagazine.com/2014/07/responsive-web-design-should-not-be-your-only-mobile-strategy/" target="_blank">Smashing Magazine: Responsive Web Design</a></li>
-                          <li><a href="https://www.sitepoint.com/responsive-web-design-tips-tricks/" target="_blank">SitePoint: Tips & Tricks for Responsive Web Design</a></li>
-                          <li><a href="https://css-tricks.com/the-trick-to-viewport-units-on-mobile/" target="_blank">CSS-Tricks: Viewport Units on Mobile</a></li>
+                          <li><a href="https://webaim.org/blog/time-limits-and-disabilities/" target="_blank">WebAIM: Time Limits and Disabilities</a></li>
+                          <li><a href="https://a11yproject.com/posts/how-to-write-accessible-web-applications-part-5/" target="_blank">The A11Y Project: How to Write Accessible Web Applications - Timing</a></li>
+                          <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Keyboard" target="_blank">MDN Web Docs: Understanding WCAG - Keyboard Accessible</a></li>
                         </ul>                                           
                       </div>
                     </div>
@@ -195,20 +191,15 @@
                     <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" style="">
                       <div class="accordion-body">
                         <ul>
-                          <li><a href="https://www.w3.org/TR/WCAG21/#reflow" target="_blank">WCAG 2.1 Success Criterion 1.4.10 Reflow</a></li>
-                          <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/reflow.html" target="_blank">Understanding Success Criterion 1.4.10: Reflow</a></li>
+                          <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/timing-adjustable.html" target="_blank">WCAG 2.1 Understanding Timing Adjustable</a></li>
+                          <li><a href="https://www.w3.org/TR/WCAG21/#timing-adjustable" target="_blank">WCAG 2.1 Timing Adjustable</a></li>
                         </ul>                        
                       </div>
                     </div>
                   </div>
               </div>
           <!-- End Accordion -->
-          </main>
-
-
-
-
-        
+          </main>   
     </div>
   </div>
 

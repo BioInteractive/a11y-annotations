@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reflow</title>
+    <title>Three Flashes or Below</title>
 
     <!-- Link to Bootstrap CSS from CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
@@ -37,7 +37,7 @@
             <!-- A11y Live Region -->
             <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
             <div class="container-xxl bd-gutter mt-3">
-                <h1>Reflow</h1>
+                <h1>Three Flashes or Below</h1>
                 <!-- Begin Accordion -->
                 <div class="accordion" id="accordionOpen">
                     <!-- Accordion Item One -->
@@ -49,13 +49,13 @@
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                         <div class="accordion-body">
-                          <p><strong>1.4.10 Reflow</strong> Content can be presented without loss of information or functionality, and without requiring scrolling in two dimensions for:</p>
+                          <p><strong>2.3.1 Three Flashes or Below Threshold:</strong> Web pages must ensure that content does not flash more than three times per second to prevent seizures and reactions in susceptible users. This criterion aims to protect users from content that could cause serious health risks.</p>
                           <ul role="list">
-                            <li>Vertical scrolling content at a width equivalent to 320 CSS pixels;</li>
-                            <li>Horizontal scrolling content at a height equivalent to 256 CSS pixels;</li>
-                            <li>Except for parts of the content which require two-dimensional layout for usage or meaning</li>
-                        </ul>
-                        </div>
+                            <li><strong>Flash Limits:</strong> Ensure no content flashes more than three times in any one-second period.</li>
+                            <li><strong>Below Threshold:</strong> If flashing is necessary, it must be below the general and red flash thresholds to minimize risks.</li>
+                            <li><strong>Non-Interference:</strong> All webpage content, regardless of its purpose, must adhere to this criterion to prevent interference with the user's ability to use the page fully.</li>
+                          </ul>
+                        </div>                        
                       </div>
                     </div>
                     <!-- Accordion Item Two Designer -->
@@ -74,15 +74,14 @@
                       </h2>
                       <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" style="">
                         <div class="accordion-body">
-                          <h3>Designing for Reflow Accessibility</h3>
+                          <h3>Design Considerations for Three Flashes or Below Threshold</h3>
                           <ul>
-                            <li><strong>Responsive Layouts:</strong> Employ responsive design strategies that allow content to adjust dynamically for a variety of screen sizes, ensuring no two-dimensional scrolling is required for viewing content.</li>
-                            <li><strong>Test on Small Screens:</strong> Specifically test your designs at a width equivalent to 320 CSS pixels and a height of 256 CSS pixels to ensure content does not require two-dimensional scrolling.</li>
-                            <li><strong>Consider All Devices:</strong> Design with consideration for both vertical and horizontal orientations to accommodate different devices and user preferences.</li>
-                            <li><strong>Flexible Content and Images:</strong> Use scalable units for content and images to ensure they can reflow and are fully accessible within the constraints of smaller screens.</li>
+                            <li><strong>Coordinate with Content Leads:</strong> Work with content leads to identify any elements that may flash or have animations. Ensure these elements comply with the flash thresholds to prevent seizures.</li>
+                            <li><strong>Plan Mindful Transitions:</strong> When designing transitions or animations, ensure they do not flash more than three times per second. Use smooth transitions and avoid rapid flashing effects.</li>
+                            <li><strong>Review Animations Carefully:</strong> Critically assess any animations or video content within the design for flashing risks and adjust as necessary to meet the criteria.</li>
                           </ul>
-                          <p>Integrating these practices into your design process supports accessibility and usability, aligning with WCAG 2.1.4 Reflow criteria, and ensures your content is accessible on a wide range of devices without loss of information or functionality.</p>
-                        </div>                                                                                
+                          <p>By taking these steps during the design phase, designers can help ensure that digital content is safer and adheres to WCAG 2.3.1 criteria, protecting users from potential seizures caused by flashing content.</p>
+                        </div>                                                                                                   
                       </div>
                     </div>
                     <!-- Accordion Item Three Auditor -->
@@ -107,26 +106,22 @@
                       </h2>
                       <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" style="">
                         <div class="accordion-body">
-                          <ol role="list">
-                            <li>Look for mobile size design boards and if they are not provided then ask the designer to provide them in 320px width.</li>
-                            <li>Check that the page does not require scrolling in two dimensions at a screen width of 320 CSS pixels and a screen height of 256 CSS pixels.</li>
-                            <li>Ensure that no meaningful content is lost or functionality is compromised when the page is viewed at these dimensions. Content in reflow must not be missing,
-                              cutoff, or overlapping.
-                            </li>
-                            <li>It is acceptable if meaningful content is presented in a different format as long as no meaning is lost, for example a footer list of links 
-                              may be transformed into an accordion as long as all the same links are available to users on all screen sizes.
-                            </li>
-                            <li>Verify that content reflows and is usable without requiring two-dimensional scrolling, except for parts of content that require a two-dimensional layout, 
-                              such as tables.</li>
-                          </ol>
+                          <h3>Auditing for Flashing Content Accessibility</h3>
+                          <ul>
+                            <li><strong>Inspect for Flashing Elements:</strong> Review the design for any elements that may flash, including transitions and animations. Flag any components that could potentially flash more than three times in one second.</li>
+                            <li><strong>Video Content Review:</strong> Ensure any embedded or planned video content is assessed for flashing elements that exceed the thresholds. Videos may require a detailed review or consultation with content creators.</li>
+                            <li><strong>Consultation with Content Leads:</strong> Collaborate with content leads to verify if any dynamic content will include flashing or blinking elements. Document and communicate any concerns that may affect accessibility.</li>
+                            <li><strong>Recommendations for Mitigation:</strong> Provide actionable recommendations for redesigning or modifying elements that fail the flashing content criteria, including alternatives for transitions and animations that maintain the design's intent without causing seizures or physical reactions.</li>
+                          </ul>
+                          <p>Conducting thorough audits for flashing content ensures designs adhere to WCAG 2.3.1 criteria, preventing seizures and providing a safer experience for all users.</p>
                           <div class="d-inline-block border border-dark p-2 rounded">
                             <div class="d-flex flex-row">
                               <div class="text-to-copy">
-                                <h3>Reflow</h3>
+                                <h3>Timing Adjustable</h3>
                                 <ul role="list">
-                                  <li>Content or functionality is lost when the page is viewed at 320 CSS pixels width or 256 CSS pixels height.</li>
-                                  <li><i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i> Warning: Ensure that content reflows to adapt to different screen sizes and orientations.</li>
-                                  <li>Recommendation: Use responsive design techniques to ensure content reflows effectively at different screen sizes and orientations.</li>
+                                  <li>Content must not flash more than three times per second.</li>
+                                  <li><i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i> Warning: Ensure content does not flash more than three times per second.</li>
+                                  <li>Recommendation: Do not use flashing content, animations or videos that contain flashing.</li>
                                 </ul>
                               </div>
                               <div>
@@ -155,17 +150,16 @@
                       </h2>
                       <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
                         <div class="accordion-body">
-                          <h3>Implementing Reflow Accessibility in Development</h3>
+                          <h3>Developing with Flashing Content Guidelines</h3>
                           <ul>
-                            <li><strong>Responsive Design Techniques:</strong> Utilize CSS media queries to create responsive layouts that adapt to various screen sizes, ensuring content is accessible without two-dimensional scrolling.</li>
-                            <li><strong>Minimize Fixed Dimensions:</strong> Avoid using fixed width and height in CSS for elements. Instead, use percentages or viewport units to allow elements to adjust dynamically to screen sizes.</li>
-                            <li><strong>Testing on Various Devices:</strong> Test your implementation on devices with small screens (e.g., 320 CSS pixels in width and 256 CSS pixels in height) to ensure content reflows properly without requiring scrolling in two dimensions.</li>
-                            <li><strong>Adaptive Images and Containers:</strong> Implement techniques for images and containers that scale or hide appropriately to maintain content and functionality without the need for horizontal scrolling.</li>
+                            <li><strong>Implement Safe Animations:</strong> Ensure animations and transitions do not flash more than three times per second. Use CSS or JavaScript libraries that adhere to safe animation practices.</li>
+                            <li><strong>Video Content Checks:</strong> For embedded videos, verify that they do not contain flashing elements above the thresholds. Utilize accessible video players that allow users to control playback.</li>
+                            <li><strong>Provide Control Mechanisms:</strong> Offer users the ability to stop, pause, or hide animations, especially for dynamic content that might flash.</li>
+                            <li><strong>Testing and Validation:</strong> Use automated testing tools and manual checks to validate that no content flashes more than three times per second, ensuring compliance with WCAG 2.3.1.</li>
                           </ul>
-                          <p>Following these guidelines ensures that your web content complies with WCAG 2.1.4 Reflow criteria, providing a better user experience across all devices and screen sizes.</p>
-                        </div>                                                                                     
+                          <p>By following these development practices, you contribute to creating web content that is safe and accessible, preventing risks of seizures and complying with WCAG 2.3.1 Three Flashes or Below Threshold criteria.</p>
+                        </div>
                       </div>
-                    </div>
                   <!-- Accordion Item Five Resources -->
                   <div class="accordion-item">
                     <h2 class="accordion-item" id="headingFive">
@@ -176,11 +170,10 @@
                     <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" style="">
                       <div class="accordion-body">
                         <ul>
-                          <li><a href="https://www.a11yproject.com/checklist/" target="_blank">The A11Y Project Checklist</a></li>
-                          <li><a href="https://webaim.org/techniques/css/" target="_blank">WebAIM: CSS Techniques and Concepts</a></li>
-                          <li><a href="https://www.smashingmagazine.com/2014/07/responsive-web-design-should-not-be-your-only-mobile-strategy/" target="_blank">Smashing Magazine: Responsive Web Design</a></li>
-                          <li><a href="https://www.sitepoint.com/responsive-web-design-tips-tricks/" target="_blank">SitePoint: Tips & Tricks for Responsive Web Design</a></li>
-                          <li><a href="https://css-tricks.com/the-trick-to-viewport-units-on-mobile/" target="_blank">CSS-Tricks: Viewport Units on Mobile</a></li>
+                          <li><a href="https://www.pearson.com/accessibility-guidelines/operable-principle/three-flashes-or-below.html" target="_blank">Pearson: Three Flashes or Below Threshold</a></li>
+                          <li><a href="https://communications.uams.edu/web/kb/wcag-2-3-seizures-and-physical-reactions/" target="_blank">WCAG 2.3 - Seizures and Physical Reactions</a></li>
+                          <li><a href="https://webaim.org/articles/seizure/" target="_blank">WebAIM: Seizure Disorders and Web Accessibility</a></li>
+                          <li><a href="https://www.w3.org/TR/WCAG20-TECHS/G15.html" target="_blank">G15: Using a tool to ensure that content does not violate the general flash threshold</a></li>
                         </ul>                                           
                       </div>
                     </div>
@@ -195,20 +188,15 @@
                     <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" style="">
                       <div class="accordion-body">
                         <ul>
-                          <li><a href="https://www.w3.org/TR/WCAG21/#reflow" target="_blank">WCAG 2.1 Success Criterion 1.4.10 Reflow</a></li>
-                          <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/reflow.html" target="_blank">Understanding Success Criterion 1.4.10: Reflow</a></li>
+                          <li><a href="https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold" target="_blank">WCAG 2.1 Three Flashes or Below Threshold</a></li>
+                          <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html" target="_blank">Understanding Three Flashes or Below Threshold</a></li>
                         </ul>                        
                       </div>
                     </div>
                   </div>
               </div>
           <!-- End Accordion -->
-          </main>
-
-
-
-
-        
+          </main>   
     </div>
   </div>
 
