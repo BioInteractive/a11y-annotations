@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reflow</title>
+    <title>Pause, Stop, Hide</title>
 
     <!-- Link to Bootstrap CSS from CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
@@ -37,7 +37,7 @@
             <!-- A11y Live Region -->
             <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
             <div class="container-xxl bd-gutter mt-3">
-                <h1>Reflow</h1>
+                <h1>Pause, Stop, Hide</h1>
                 <!-- Begin Accordion -->
                 <div class="accordion" id="accordionOpen">
                     <!-- Accordion Item One -->
@@ -49,12 +49,11 @@
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                         <div class="accordion-body">
-                          <p><strong>1.4.10 Reflow</strong> Content can be presented without loss of information or functionality, and without requiring scrolling in two dimensions for:</p>
+                          <p><strong>2.2.2 Pause, Stop, Hide:</strong> For moving, blinking, scrolling, or auto-updating information, users need mechanisms to control these elements unless they are essential to the activity.</p>
                           <ul role="list">
-                            <li>Vertical scrolling content at a width equivalent to 320 CSS pixels;</li>
-                            <li>Horizontal scrolling content at a height equivalent to 256 CSS pixels;</li>
-                            <li>Except for parts of the content which require two-dimensional layout for usage or meaning</li>
-                        </ul>
+                            <li><strong>Moving, Blinking, Scrolling:</strong> If it starts automatically, lasts more than five seconds, and is parallel with other content, users must be able to pause, stop, or hide it unless essential.</li>
+                            <li><strong>Auto-updating:</strong> If it starts automatically and is presented alongside other content, there must be a mechanism for users to pause, stop, hide it, or control the update frequency unless it's essential.</li>
+                          </ul>
                         </div>
                       </div>
                     </div>
@@ -74,15 +73,15 @@
                       </h2>
                       <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" style="">
                         <div class="accordion-body">
-                          <h3>Designing for Reflow Accessibility</h3>
+                          <h3>Designing for Pause, Stop, Hide Accessibility</h3>
                           <ul>
-                            <li><strong>Responsive Layouts:</strong> Employ responsive design strategies that allow content to adjust dynamically for a variety of screen sizes, ensuring no two-dimensional scrolling is required for viewing content.</li>
-                            <li><strong>Test on Small Screens:</strong> Specifically test your designs at a width equivalent to 320 CSS pixels and a height of 256 CSS pixels to ensure content does not require two-dimensional scrolling.</li>
-                            <li><strong>Consider All Devices:</strong> Design with consideration for both vertical and horizontal orientations to accommodate different devices and user preferences.</li>
-                            <li><strong>Flexible Content and Images:</strong> Use scalable units for content and images to ensure they can reflow and are fully accessible within the constraints of smaller screens.</li>
+                            <li><strong>Identify Auto-updating or Moving Elements:</strong> Coordinate with content leads to determine if any components (like carousels) will auto-update, move, or blink.</li>
+                            <li><strong>Implement Control Mechanisms:</strong> Design pause, stop, or hide buttons for auto-updating or moving content to allow users to control these elements.</li>
+                            <li><strong>Accessibility Annotations:</strong> Annotate designs to highlight these control mechanisms and ensure they are clearly communicated to developers for implementation.</li>
+                            <li><strong>Ensure Visibility:</strong> Design these controls to be visible and accessible to all users, including those who rely on assistive technologies.</li>
                           </ul>
-                          <p>Integrating these practices into your design process supports accessibility and usability, aligning with WCAG 2.1.4 Reflow criteria, and ensures your content is accessible on a wide range of devices without loss of information or functionality.</p>
-                        </div>                                                                                
+                          <p>By incorporating these design considerations, you'll contribute to creating accessible content that meets WCAG 2.2.2 Pause, Stop, Hide criteria, enhancing user control and accessibility.</p>
+                        </div>                                                                            
                       </div>
                     </div>
                     <!-- Accordion Item Three Auditor -->
@@ -107,26 +106,23 @@
                       </h2>
                       <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" style="">
                         <div class="accordion-body">
+                          <h3>Auditor Checklist for Pause, Stop, Hide Criteria</h3>
                           <ol role="list">
-                            <li>Look for mobile size design boards and if they are not provided then ask the designer to provide them in 320px width.</li>
-                            <li>Check that the page does not require scrolling in two dimensions at a screen width of 320 CSS pixels and a screen height of 256 CSS pixels.</li>
-                            <li>Ensure that no meaningful content is lost or functionality is compromised when the page is viewed at these dimensions. Content in reflow must not be missing,
-                              cutoff, or overlapping.
-                            </li>
-                            <li>It is acceptable if meaningful content is presented in a different format as long as no meaning is lost, for example a footer list of links 
-                              may be transformed into an accordion as long as all the same links are available to users on all screen sizes.
-                            </li>
-                            <li>Verify that content reflows and is usable without requiring two-dimensional scrolling, except for parts of content that require a two-dimensional layout, 
-                              such as tables.</li>
+                            <li>Identify any auto-updating, moving, or blinking elements in designs. Ask if uncertain about content behavior.</li>
+                            <li>Confirm the presence of mechanisms (pause, stop, hide buttons) for controlling auto-updating or moving content.</li>
+                            <li>Ensure controls for these elements are accessible, easily identifiable, and clearly documented in design annotations.</li>
+                            <li>Flag any elements lacking control mechanisms, especially in cases of auto-scrolling or auto-playing content.</li>
+                            <li>Consult with designers and content leads on implementing accessible control features for dynamic content.</li>
                           </ol>
+                          <p>Following these steps helps ensure designs meet WCAG 2.2.2 Pause, Stop, Hide criteria, enhancing accessibility and user control over dynamic content.</p>
                           <div class="d-inline-block border border-dark p-2 rounded">
                             <div class="d-flex flex-row">
                               <div class="text-to-copy">
-                                <h3>Reflow</h3>
+                                <h3>Pause, Stop, Hide</h3>
                                 <ul role="list">
-                                  <li>Content or functionality is lost when the page is viewed at 320 CSS pixels width or 256 CSS pixels height.</li>
-                                  <li><i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i> Warning: Ensure that content reflows to adapt to different screen sizes and orientations.</li>
-                                  <li>Recommendation: Use responsive design techniques to ensure content reflows effectively at different screen sizes and orientations.</li>
+                                  <li> If there is moving blinking scrolling auto updating or autoplaying content there must be an accessible mechanism provided to pause stop or hide it.</li>
+                                  <li><i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i> Warning: Content that is moving, blinking, scrolling or auto updating does not have a mechanism to pause stop or hide it.</li>
+                                  <li>Recommendation: Implement a pause play button or other mechanism.</li>
                                 </ul>
                               </div>
                               <div>
@@ -155,17 +151,17 @@
                       </h2>
                       <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
                         <div class="accordion-body">
-                          <h3>Implementing Reflow Accessibility in Development</h3>
+                          <h3>Developer Guidelines for Implementing Pause, Stop, Hide Features</h3>
                           <ul>
-                            <li><strong>Responsive Design Techniques:</strong> Utilize CSS media queries to create responsive layouts that adapt to various screen sizes, ensuring content is accessible without two-dimensional scrolling.</li>
-                            <li><strong>Minimize Fixed Dimensions:</strong> Avoid using fixed width and height in CSS for elements. Instead, use percentages or viewport units to allow elements to adjust dynamically to screen sizes.</li>
-                            <li><strong>Testing on Various Devices:</strong> Test your implementation on devices with small screens (e.g., 320 CSS pixels in width and 256 CSS pixels in height) to ensure content reflows properly without requiring scrolling in two dimensions.</li>
-                            <li><strong>Adaptive Images and Containers:</strong> Implement techniques for images and containers that scale or hide appropriately to maintain content and functionality without the need for horizontal scrolling.</li>
+                            <li><strong>Integrate Control Mechanisms:</strong> For any auto-updating or moving content, implement accessible controls (e.g., pause, stop, hide buttons) allowing users to manage content display.</li>
+                            <li><strong>Ensure Accessibility:</strong> Controls should be keyboard navigable and have clear labels for assistive technologies.</li>
+                            <li><strong>Test Functionality:</strong> Verify that control mechanisms work as expected across different devices and browsers.</li>
+                            <li><strong>Documentation:</strong> Annotate code to document how and where control mechanisms are implemented for future reference and maintenance.</li>
+                            <li><strong>Consult Design Annotations:</strong> Work closely with design annotations to accurately implement the envisioned pause, stop, or hide functionalities.</li>
                           </ul>
-                          <p>Following these guidelines ensures that your web content complies with WCAG 2.1.4 Reflow criteria, providing a better user experience across all devices and screen sizes.</p>
-                        </div>                                                                                     
+                          <p>Adhering to these guidelines ensures your web content meets WCAG 2.2.2 Pause, Stop, Hide criteria, enhancing user control and accessibility.</p>
+                        </div>
                       </div>
-                    </div>
                   <!-- Accordion Item Five Resources -->
                   <div class="accordion-item">
                     <h2 class="accordion-item" id="headingFive">
@@ -176,13 +172,13 @@
                     <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" style="">
                       <div class="accordion-body">
                         <ul>
-                          <li><a href="https://www.a11yproject.com/checklist/" target="_blank">The A11Y Project Checklist</a></li>
-                          <li><a href="https://webaim.org/techniques/css/" target="_blank">WebAIM: CSS Techniques and Concepts</a></li>
-                          <li><a href="https://www.smashingmagazine.com/2014/07/responsive-web-design-should-not-be-your-only-mobile-strategy/" target="_blank">Smashing Magazine: Responsive Web Design</a></li>
-                          <li><a href="https://www.sitepoint.com/responsive-web-design-tips-tricks/" target="_blank">SitePoint: Tips & Tricks for Responsive Web Design</a></li>
-                          <li><a href="https://css-tricks.com/the-trick-to-viewport-units-on-mobile/" target="_blank">CSS-Tricks: Viewport Units on Mobile</a></li>
-                        </ul>                                           
-                      </div>
+                          <li><a href="https://www.w3.org/WAI/WCAG21/quickref/#pause-stop-hide" target="_blank">WCAG Quick Reference: Pause, Stop, Hide</a></li>
+                          <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Carousel_Role" target="_blank">MDN Web Docs: Using the carousel role</a></li>
+                          <li><a href="https://webaim.org/techniques/javascript/" target="_blank">WebAIM: JavaScript and Accessibility</a></li>
+                          <li><a href="https://a11yproject.com/posts/creating-an-accessible-carousel/" target="_blank">The A11Y Project: Creating an Accessible Carousel</a></li>
+                          <li><a href="https://inclusive-components.design/carousels/" target="_blank">Inclusive Components: Carousels</a></li>
+                        </ul>
+                      </div>                      
                     </div>
                   </div>
                   <!-- Accordion Item Six WCAG -->
@@ -195,20 +191,15 @@
                     <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" style="">
                       <div class="accordion-body">
                         <ul>
-                          <li><a href="https://www.w3.org/TR/WCAG21/#reflow" target="_blank">WCAG 2.1 Success Criterion 1.4.10 Reflow</a></li>
-                          <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/reflow.html" target="_blank">Understanding Success Criterion 1.4.10: Reflow</a></li>
-                        </ul>                        
+                          <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide.html" target="_blank">WCAG 2.1 Understanding Pause, Stop, Hide</a></li>
+                          <li><a href="https://www.w3.org/TR/WCAG21/#pause-stop-hide" target="_blank">WCAG 2.1 Pause, Stop, Hide</a></li>
+                        </ul>                                                
                       </div>
                     </div>
                   </div>
               </div>
           <!-- End Accordion -->
-          </main>
-
-
-
-
-        
+          </main>   
     </div>
   </div>
 

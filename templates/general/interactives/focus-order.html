@@ -13,6 +13,16 @@
     <link rel="stylesheet" href="../../../../../assets/styles/custom.css">
     <!-- Include Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/a11y-annotations/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/a11y-annotations/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/a11y-annotations/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/a11y-annotations/assets/images/site.webmanifest">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
 </head>
 <body>
   <header class="d-block px-3 py-2 shadow">
@@ -35,57 +45,86 @@
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          Standards SC 2.4.3 2.0 Level A
+                          Success Criteria
                         </button>
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                         <div class="accordion-body">
+                          <p><strong>2.4.3 Focus Order</strong> If a Web page can be navigated sequentially and the navigation sequences affect meaning or operation, focusable components receive focus in an order that preserves meaning and operability.</p>
                           <ul role="list">
                             <li>All focusable components receive focus in an order that preserves meaning and operability.</li>
-                            <li>Focus order will typically maintain a left-to-right, top-to-bottom sequence.</li>
+                            <li>Focus order will typically maintain a left-to-right, top-to-bottom sequence, but this is not a hard directional requirement as long as focus moves logically.</li>
                             <li>Focus must be sent to dialogs, stay trapped within them while open, and return to the triggering element when closed.</li>
                             <li>When moving the user's focus in response to activating a link or control, the next tab stop must move focus to the correct focusable element.</li>
                           </ul>                          
                         </div>
                       </div>
                     </div>
-                    <!-- Accordion Item Two -->
+                    <!-- Accordion Item Two Designer -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          How to Test
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                          Accessibility Considerations
+                          <!-- Designer Tag -->
+                          <span class="dev-tag ms-3">
+                            Designer 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M12 2H8.5C7.57174 2 6.6815 2.36875 6.02513 3.02513C5.36875 3.6815 5 4.57174 5 5.5C5 6.42826 5.36875 7.3185 6.02513 7.97487C6.6815 8.63125 7.57174 9 8.5 9M12 2V9M12 2H15.5C15.9596 2 16.4148 2.09053 16.8394 2.26642C17.264 2.44231 17.6499 2.70012 17.9749 3.02513C18.2999 3.35013 18.5577 3.73597 18.7336 4.16061C18.9095 4.58525 19 5.04037 19 5.5C19 5.95963 18.9095 6.41475 18.7336 6.83939C18.5577 7.26403 18.2999 7.64987 17.9749 7.97487C17.6499 8.29988 17.264 8.55769 16.8394 8.73358C16.4148 8.90947 15.9596 9 15.5 9M12 9H8.5M12 9H15.5M12 9V16M8.5 9C7.57174 9 6.6815 9.36875 6.02513 10.0251C5.36875 10.6815 5 11.5717 5 12.5C5 13.4283 5.36875 14.3185 6.02513 14.9749C6.6815 15.6313 7.57174 16 8.5 16M15.5 9C15.0404 9 14.5852 9.09053 14.1606 9.26642C13.736 9.44231 13.3501 9.70012 13.0251 10.0251C12.7001 10.3501 12.4423 10.736 12.2664 11.1606C12.0905 11.5852 12 12.0404 12 12.5C12 12.9596 12.0905 13.4148 12.2664 13.8394C12.4423 14.264 12.7001 14.6499 13.0251 14.9749C13.3501 15.2999 13.736 15.5577 14.1606 15.7336C14.5852 15.9095 15.0404 16 15.5 16C15.9596 16 16.4148 15.9095 16.8394 15.7336C17.264 15.5577 17.6499 15.2999 17.9749 14.9749C18.2999 14.6499 18.5577 14.264 18.7336 13.8394C18.9095 13.4148 19 12.9596 19 12.5C19 12.0404 18.9095 11.5852 18.7336 11.1606C18.5577 10.736 18.2999 10.3501 17.9749 10.0251C17.6499 9.70012 17.264 9.44231 16.8394 9.26642C16.4148 9.09053 15.9596 9 15.5 9ZM8.5 16C7.57174 16 6.6815 16.3687 6.02513 17.0251C5.36875 17.6815 5 18.5717 5 19.5C5 20.4283 5.36875 21.3185 6.02513 21.9749C6.6815 22.6313 7.57174 23 8.5 23C9.42826 23 10.3185 22.6313 10.9749 21.9749C11.6313 21.3185 12 20.4283 12 19.5V16M8.5 16H12" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </span>
                         </button>
                       </h2>
                       <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" style="">
                         <div class="accordion-body">
-                          <ol role="list">
-                            <li>Visual Inspection: Examine your Figma design annotations carefully, paying attention to the layout and order of interactive elements. Ensure that the order in which elements are presented in the design corresponds to a logical and meaningful sequence.</li>
-                            <li>Tab Order Annotation: Include annotations or notes within your Figma design that describe the expected tab order or focus order. You can use text or comment tools to provide explanations for the intended flow of keyboard focus.</li>
-                            <li>Interactive State Annotations: If your design includes interactive states (e.g., menus, modals, pop-ups), annotate these states to indicate how the focus should behave when these elements are triggered and opened. Describe how the focus should move within and return from these states.</li>
-                            <li>Keyboard Navigation Flow: Review the flowchart or documentation you've created to describe the expected keyboard navigation flow. Ensure that it aligns with your design annotations and that the focus order is logical.</li>
-                            <li>Documentation for Developers: If you're sharing the Figma design with developers, include additional documentation that outlines the desired focus order and behavior. This can serve as a reference for developers during implementation.</li>                          
-                          </ol>
-                        </div>
+                          <h3>Focus Order Design Considerations</h3>
+                          <ul>
+                            <li><strong>Document Focus Flow:</strong> In your design documentation, specify the intended focus order to guide development. Highlight how the focus should progress across the page to ensure logical navigation.</li>
+                            <li><strong>Visual Indicators for Dialogs:</strong> Clearly mark areas in your designs that will become dialogs or modals. Include notes on how focus should be handled, ensuring it remains within these elements while they are active.</li>
+                            <li><strong>Collaborate on Focus Strategy:</strong> Work closely with the development team to ensure the focus order in your design can be accurately implemented. This collaboration helps maintain the usability and accessibility of the final product.</li>
+                          </ul>
+                          <p>Providing clear documentation and annotations regarding focus order in your Figma designs will assist developers in creating accessible and operable web content, aligning with WCAG 2.4.3 Focus Order criteria.</p>
+                        </div>                                     
                       </div>
                     </div>
-                    <!-- Accordion Item Three -->
+                    <!-- Accordion Item Three Auditor -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingThree">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Focus Order Failure
+                          How to Test & Annotate
+                          <!-- Auditor Tag -->
+                          <span class="dev-tag ms-3">
+                            Auditor 
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M14 7H19.6404C20.0877 7 20.3113 7 20.4421 7.09404C20.5562 7.17609 20.6306 7.30239 20.6469 7.442C20.6656 7.602 20.5569 7.79751 20.3397 
+                                8.18851L18.9936 10.6115C18.9148 10.7533 18.8755 10.8242 18.86 10.8993C18.8463 10.9657 18.8463 11.0343 18.86 11.1007C18.8755 11.1758 18.9148 
+                                11.2467 18.9936 11.3885L20.3397 13.8115C20.5569 14.2025 20.6656 14.398 20.6469 14.558C20.6306 14.6976 20.5562 14.8239 20.4421 14.906C20.3113 
+                                15 20.0877 15 19.6404 15H12.6C12.0399 15 11.7599 15 11.546 14.891C11.3578 14.7951 11.2049 14.6422 11.109 14.454C11 14.2401 11 13.9601 11 
+                                13.4V11M4 21L4 4M4 11H12.4C12.9601 11 13.2401 11 13.454 10.891C13.6422 10.7951 13.7951 10.6422 13.891 10.454C14 10.2401 14 9.96005 14 9.4V4.6C14 
+                                4.03995 14 3.75992 13.891 3.54601C13.7951 3.35785 13.6422 3.20487 13.454 3.10899C13.2401 3 12.9601 3 12.4 3H5.6C5.03995 3 4.75992 3 4.54601 
+                                3.10899C4.35785 3.20487 4.20487 3.35785 4.10899 3.54601C4 3.75992 4 4.03995 4 4.6V11Z" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                          </span> 
                         </button>
                       </h2>
                       <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" style="">
                         <div class="accordion-body">
+                          <ol role="list">
+                            <li><strong>Visual Inspection:</strong> Examine the Figma designs carefully, paying attention to the layout and order of interactive elements. Ensure that the order in which elements are presented in the design corresponds to a logical and meaningful sequence.</li>
+                            <li><strong>Annotation for Focus Return:</strong> Annotate designs where focus should return to a specific element after closing a modal or completing an action, ensuring a seamless user experience.</li>
+                            <li><strong>Tab Order Annotation:</strong> Include annotations or notes within your Figma design that describe the expected tab order or focus order. You can use text or comment tools to provide explanations for the intended flow of keyboard focus for more complex designs.</li>
+                            <li><strong>Interactive State Annotations:</strong> If your design includes interactive states (e.g., menus, modals, pop-ups), annotate these states to indicate how the focus should behave when these elements are triggered and opened. Describe how the focus should move within and return from these states.</li>
+                            <li><strong>Preparing for Developer Hand-off:</strong> Include additional annotations that outline the desired focus order and behavior. This can serve as a reference for developers during implementation.</li>                          
+                          </ol>
                           <div class="d-inline-block border border-dark p-2 rounded">
                             <div class="d-flex flex-row">
                               <div class="text-to-copy">
+                                <h3>Focus Order</h3>
                                 <ul role="list">
-                                  <li>The tab order does not follow a logical sequence.</li>
-                                  <li>Review and adjust the tab order to ensure it follows a left-to-right, top-to-bottom flow that preserves meaning and operability.</li>
+                                  <li>The tab order must follow a logical sequence.</li>
+                                  <li>Review and adjust the focus order to ensure it follows a left-to-right, top-to-bottom flow that preserves meaning and operability.</li>
                                   <li>Ensure that when interacting with links or controls, the next tab stop moves focus to the correct focusable element in a predictable manner.</li>
                                   <li>If there are dialogs or pop-ups, confirm that focus is trapped within them when open and returns to the triggering element when closed.</li>
-                                </ul>
+                                </ul>                              
                               </div>
                               <div>
                                   <button class="ml-1r btn copy-btn">
@@ -93,18 +132,46 @@
                                   </button>
                               </div>
                             </div>
-                          </div>
-                        </div>
+                          </div>                         
+                        </div>                        
                       </div>
                     </div>
-                    <!-- Accordion Item Four -->
+                    <!-- Accordion Item Four Developer -->
                     <div class="accordion-item">
-                      <h2 class="accordion-item" id="headingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                        Resources
+                      <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                          Accessibility Considerations
+                          <!-- Developer Tag -->
+                          <span class="dev-tag ms-3">
+                            Developer 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                          </span> 
                         </button>
                       </h2>
                       <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
+                        <div class="accordion-body">
+                          <h3>Implementing Focus Order for Accessibility</h3>
+                          <ul>
+                            <li><strong>Sequential Focus Navigation:</strong> Implement focusable elements in a sequence that reflects the logical flow of the content, ensuring it preserves meaning and operability.</li>
+                            <li><strong>Dialog Focus Management:</strong> For modals or dialog boxes, ensure focus is trapped within these elements while they're active and returns to the previously focused element upon closure.</li>
+                            <li><strong>Focusable Elements Identification:</strong> Use proper semantic HTML to mark up focusable components such as links, buttons, and form controls, ensuring they receive focus in the correct order.</li>
+                            <li><strong>Custom Focus Handling:</strong> When using custom controls or dynamic content, add appropriate ARIA roles and attributes, and use JavaScript to manage focus order and return as needed.</li>
+                            <li><strong>Testing and Validation:</strong> Regularly test your application with keyboard navigation alone to ensure that the focus order is logical and does not cause confusion or navigation issues.</li>
+                          </ul>
+                          <p>By carefully managing the focus order and ensuring that all interactive elements are navigable in a logical sequence, developers can greatly enhance the usability and accessibility of web content for keyboard users, aligning with WCAG 2.4.3 Focus Order criteria.</p>
+                        </div>                                               
+                      </div>
+                    </div>                
+                    <!-- Accordion Item Five Resources -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-item" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                        Resources
+                        </button>
+                      </h2>
+                      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" style="">
                         <div class="accordion-body">
                           <ul>
                             <li><a href="https://webaim.org/techniques/keyboard/" target="_blank">WebAIM - Keyboard Accessibility</a></li>
@@ -120,14 +187,14 @@
                         </div>
                       </div>
                     </div>
-                    <!-- Accordion Item Five -->
+                    <!-- Accordion Item Six WCAG -->
                     <div class="accordion-item">
-                      <h2 class="accordion-item" id="headingFive">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                      <h2 class="accordion-item" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
                         WCAG Guideline References
                         </button>
                       </h2>
-                      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" style="">
+                      <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" style="">
                         <div class="accordion-body">
                           <ul>
                             <li><a href="https://www.w3.org/TR/WCAG21/#focus-order" target="_blank">WCAG 2.1 Recommendation 2.4.3 Focus Order (Level A)</a></li>
