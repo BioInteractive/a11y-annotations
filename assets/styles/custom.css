@@ -70,6 +70,7 @@ a {
   #sidebar-container {
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.205)!important;
     padding-top: 1.25rem;
+    min-width: 265px;
   }
 
   /* Copy Button */
@@ -265,4 +266,39 @@ p.dev-tag {
 .btn-vs-link-child small {
   font-size: .75em;
   font-family: system-ui;
+}
+
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+
+/**************** Components ******************/
+/* Navigation Examples */
+.nav-example {
+  border: 1px solid var(--primary-green);
+  border-radius: 8px;
+  color: rgba(0, 0, 0, .85);
+}
+.navbar-toggler {
+  border: 1px solid #888888 !important;
+}
+.page-link {
+  border: 1px solid var(--primary-green);
+  color: rgba(0, 0, 0, .85);
+}
+
+/* Buttons */
+.button-active {
+  outline: 1px solid #000;
+  outline-offset: 2px;
+  outline-style: auto;
 }

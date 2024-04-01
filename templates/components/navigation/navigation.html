@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+
+    <!-- Link to Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <!-- Link to Custom Stylesheet -->
+    <link rel="stylesheet" href="../../../../assets/styles/custom.css">
+    <!-- Link to Custom Stylesheet Production -->
+    <link rel="stylesheet" href="../../../../../assets/styles/custom.css">
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/a11y-annotations/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/a11y-annotations/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/a11y-annotations/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/a11y-annotations/assets/images/site.webmanifest">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+</head>
+<body>
+  <header class="d-block px-3 py-2 shadow">
+    <img src="https://www.biointeractive.org/themes/gesso/images/hhmi-logo.svg" alt="hhmi Biointeractive logo" style="max-width: 320px;">
+  </header>
+  <div class="container-fluid">
+      <div class="row">
+          <!-- Includes the Sidebar Navigation using jQuery -->
+          <div id="sidebar-container" class="col-md-2 border-end"></div>
+
+          <!-- Main Content -->
+          <main class="col-md-10">
+            <!-- A11y Live Region -->
+            <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
+            <div class="container-xxl bd-gutter mt-3">
+                <h1>Navigation</h1>
+                <!-- Begin Accordion -->
+                <div class="accordion" id="accordionOpen">
+                    <!-- Accordion Item One -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          WCAG Requirements
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Must be in a navigation landmark: Use <code>&lt;nav&gt;</code> or a sectioning element with <code>role="navigation"</code>. 
+                                    <a href="https://www.w3.org/TR/WCAG21/#info-and-relationships" target="_blank">1.3.1 Info and Relationships</a>
+                                </li>
+                                <li>Must have a unique name if multiple navigational elements are present on the same page. 
+                                    <a href="https://www.w3.org/TR/WCAG21/#name-role-value" target="_blank">4.1.2 Name, Role, Value</a>
+                                </li>
+                                <li>Must be consistent across all pages of a website and ordered consistently. 
+                                    <a href="https://www.w3.org/TR/WCAG21/#consistent-navigation" target="_blank">3.2.3 Consistent Navigation</a>
+                                </li>
+                                <li>If the navigation element contains a list of links, those must be in a list structure with valid link markup. 
+                                    <a href="https://www.w3.org/TR/WCAG21/#info-and-relationships" target="_blank">1.3.1 Info and Relationships</a>
+                                </li>
+                            </ul> 
+                            <h3>Simple Navigation Bar Example</h3>
+                            <nav class="navbar navbar-expand-lg navbar-light bg-light nav-example" aria-label="Simple example">
+                              <div class="container-fluid">
+                                <a class="navbar-brand" href="#">Navbar</a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Menu">
+                                  <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNav">
+                                  <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                      <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" href="#">Features</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" href="#">Pricing</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </nav>
+                            <div class="space-large"></div>
+                            <h3>Simple Navigation Bar with Submenu Example</h3>
+                            <nav class="navbar navbar-expand-lg navbar-light bg-light nav-example" aria-label="Simple example with submenu">
+                              <div class="container-fluid">
+                                <a class="navbar-brand" href="#">Navbar</a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle Menu">
+                                  <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                      <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" href="#">About</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Dropdown
+                                      </a>
+                                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="#">Linked list item</a></li>
+                                        <li><a class="dropdown-item" href="#">Another Linked list item</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                      </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </nav>
+                            <div class="space-large"></div>
+                            <p>When a navigation bar has a disclosure button revealing a sub menu these accessibility considerations must also be included:</p>
+                            <h4>Submenu Disclosure Button</h4>
+                            <ul>
+                              <li>Must be a <code>&lt;button&gt;</code> OR have <code>role="button"</code> and <code>tabindex="0"</code> and function equally with mouse and keyboard. (May need additional event handlers added)</li>
+                              <li>Must have toggling <code>aria-expanded="true/false"</code> depending on expanded/collapsed states.</li>
+                              <li>Should have <code>aria-controls</code> attribute equal to the ID of the container of the submenu it controls.</li>
+                            </ul>
+                            <h4>Submenu Disclosure Panel</h4>
+                            <ul>
+                              <li>List of links must be in list markup</li>
+                              <li>Each link must have a valid href, and the text content/name of the control should give the link purpose and reflect its destination.</li>
+                              <li>The panel must collapse when focus leaves with forward and backwards tabbing navigation so it does not obscure of content.</li>
+                            </ul>
+                            <div class="space-large"></div> 
+                            <h3>Mobile Navigation with Disclosure Button Available on Resize/Reflow</h3>
+                            <p>To see an example of Moble Navigation with a 'Hamburger' disclosure button you may resize this page smaller than 1000px. Once resized you will see the simple nav bar 
+                              examples transform into a hidden panels with visibility that is controled by Hamburger disclosure buttons.
+                            </p>
+                            <p>The mobile disclosure must:</p>   
+                            <ul>
+                              <li>Have an accessible name for the hamburger button given with an aria-label, aria-labelledby or sr-only text.</li>
+                              <li>The hamburger button must have a toggling <code>aria-expanded="true\false"</code> that accurately reflects the expanded/collapsed state.</li>
+                              <li> The hamburger button must also have the attribute <code>aria-controls</code> referencing the unique ID of the panel it controls.</li>
+                              <li> The interactive elements within the panel must be in list markup and must be properly hidden with a <code>display:none;</code> or <code>visibility:hidden;</code> 
+                                property that ensures they are not in reading or focus order when they are not visible.</li>
+                            </ul>                        
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Inserted -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingNew">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNew" aria-expanded="false" aria-controls="collapseNew">
+                          <!-- Designer Tag -->
+                          Accessibility Considerations
+                        <span class="dev-tag ms-3">
+                          Designer 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M12 2H8.5C7.57174 2 6.6815 2.36875 6.02513 3.02513C5.36875 3.6815 5 4.57174 5 5.5C5 6.42826 5.36875 7.3185 6.02513 7.97487C6.6815 8.63125 7.57174 9 8.5 9M12 2V9M12 2H15.5C15.9596 2 16.4148 2.09053 16.8394 2.26642C17.264 2.44231 17.6499 2.70012 17.9749 3.02513C18.2999 3.35013 18.5577 3.73597 18.7336 4.16061C18.9095 4.58525 19 5.04037 19 5.5C19 5.95963 18.9095 6.41475 18.7336 6.83939C18.5577 7.26403 18.2999 7.64987 17.9749 7.97487C17.6499 8.29988 17.264 8.55769 16.8394 8.73358C16.4148 8.90947 15.9596 9 15.5 9M12 9H8.5M12 9H15.5M12 9V16M8.5 9C7.57174 9 6.6815 9.36875 6.02513 10.0251C5.36875 10.6815 5 11.5717 5 12.5C5 13.4283 5.36875 14.3185 6.02513 14.9749C6.6815 15.6313 7.57174 16 8.5 16M15.5 9C15.0404 9 14.5852 9.09053 14.1606 9.26642C13.736 9.44231 13.3501 9.70012 13.0251 10.0251C12.7001 10.3501 12.4423 10.736 12.2664 11.1606C12.0905 11.5852 12 12.0404 12 12.5C12 12.9596 12.0905 13.4148 12.2664 13.8394C12.4423 14.264 12.7001 14.6499 13.0251 14.9749C13.3501 15.2999 13.736 15.5577 14.1606 15.7336C14.5852 15.9095 15.0404 16 15.5 16C15.9596 16 16.4148 15.9095 16.8394 15.7336C17.264 15.5577 17.6499 15.2999 17.9749 14.9749C18.2999 14.6499 18.5577 14.264 18.7336 13.8394C18.9095 13.4148 19 12.9596 19 12.5C19 12.0404 18.9095 11.5852 18.7336 11.1606C18.5577 10.736 18.2999 10.3501 17.9749 10.0251C17.6499 9.70012 17.264 9.44231 16.8394 9.26642C16.4148 9.09053 15.9596 9 15.5 9ZM8.5 16C7.57174 16 6.6815 16.3687 6.02513 17.0251C5.36875 17.6815 5 18.5717 5 19.5C5 20.4283 5.36875 21.3185 6.02513 21.9749C6.6815 22.6313 7.57174 23 8.5 23C9.42826 23 10.3185 22.6313 10.9749 21.9749C11.6313 21.3185 12 20.4283 12 19.5V16M8.5 16H12" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </span>
+                        </button>
+                      </h2>
+                      <div id="collapseNew" class="accordion-collapse collapse" aria-labelledby="headingNew" style="">
+                        <div class="accordion-body">
+                          <ul>
+                            <li><strong>Consider Color Contrast:</strong> Design with high contrast ratios for text, graphical objects, and button borders to ensure readability and visibility for users with visual impairments. Please reference General Color section for more detials.</li>
+                            <li><strong>Visual Indicators for Disclosure Buttons:</strong> Include a visual indicator, such as a caret, for disclosure buttons to signify their function of opening submenus, aiding in setting the right user expectations.</li>
+                            <li><strong>Differentiate Submenu Buttons from Links:</strong> Clearly distinguish submenu buttons from hyperlinks in their design to accurately reflect their functionality, focusing on visual differentiation in the user interface.</li>
+                            <li><strong>Interactive Element Cues:</strong> Provide intuitive visual cues for elements within the navigation bar to clearly convey their functionality, ensuring users understand how to interact with each element.</li>
+                            <li><strong>Legibility of Text and Icons:</strong> Design text and icons to be legible and scalable, maintaining readability across different screen sizes and resolutions.</li>
+                            <li><strong>Consistent Navigation Design:</strong> Keep the navigation bar design consistent across different pages and states to aid user familiarity and improve overall navigation usability.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Two -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          How to Test and Annotate
+                          <!-- Auditor Tag -->
+                        <span class="dev-tag ms-3">
+                          Auditor 
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                              <path d="M14 7H19.6404C20.0877 7 20.3113 7 20.4421 7.09404C20.5562 7.17609 20.6306 7.30239 20.6469 7.442C20.6656 7.602 20.5569 7.79751 20.3397 
+                              8.18851L18.9936 10.6115C18.9148 10.7533 18.8755 10.8242 18.86 10.8993C18.8463 10.9657 18.8463 11.0343 18.86 11.1007C18.8755 11.1758 18.9148 
+                              11.2467 18.9936 11.3885L20.3397 13.8115C20.5569 14.2025 20.6656 14.398 20.6469 14.558C20.6306 14.6976 20.5562 14.8239 20.4421 14.906C20.3113 
+                              15 20.0877 15 19.6404 15H12.6C12.0399 15 11.7599 15 11.546 14.891C11.3578 14.7951 11.2049 14.6422 11.109 14.454C11 14.2401 11 13.9601 11 
+                              13.4V11M4 21L4 4M4 11H12.4C12.9601 11 13.2401 11 13.454 10.891C13.6422 10.7951 13.7951 10.6422 13.891 10.454C14 10.2401 14 9.96005 14 9.4V4.6C14 
+                              4.03995 14 3.75992 13.891 3.54601C13.7951 3.35785 13.6422 3.20487 13.454 3.10899C13.2401 3 12.9601 3 12.4 3H5.6C5.03995 3 4.75992 3 4.54601 
+                              3.10899C4.35785 3.20487 4.20487 3.35785 4.10899 3.54601C4 3.75992 4 4.03995 4 4.6V11Z" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+                      </span> 
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" style="">
+                        <div class="accordion-body">
+                          <ul role="list">
+                            <li><strong>Color Contrast:</strong>
+                              Assess the navigation bar to ensure that text, icons, and graphical elements have sufficient color contrast against their background colors. This is to guarantee readability and visibility for users with visual impairments.
+                            </li>
+                            <li><strong>Visual Indicators for Disclosure Buttons:</strong>
+                              Review the design for clear visual indicators on disclosure buttons or dropdowns, such as carets, to signify their expandable nature. Lack of clear indicators should be noted for design improvements.
+                            </li>
+                            <li><strong>Differentiation Between Submenu Buttons and Links:</strong>
+                              Check that submenu buttons and links are distinctly designed to accurately reflect their functionality. Ensure that the design visually differentiates between clickable links and buttons that trigger submenus.
+                            </li>
+                            <li><strong>Interactive Element Cues:</strong>
+                              Inspect interactive elements within the navigation bar for intuitive visual cues that clearly convey their functionality. This includes examining hover states, selected states, and other visual feedback mechanisms.
+                            </li>
+                            <li><strong>Legibility of Text and Icons:</strong>
+                              Evaluate the legibility of text and the clarity of icons within the navigation bar, especially considering various screen sizes and resolutions. Flag any elements that compromise legibility or scalability.
+                            </li>
+                            <li><strong>Consistency in Navigation Design:</strong>
+                              Ensure that the navigation bar's design is consistent across different pages and states. Inconsistencies in design can lead to confusion and should be highlighted for correction.
+                            </li>
+                          </ul>
+                          <div class="d-inline-block border border-dark p-2 rounded">
+                            <div class="d-flex flex-row">
+                              <div class="text-to-copy">
+                                <h3>Primary Navigation</h3>
+                                <ul role="list">
+                                  <li>Must be contained in a <code>&lt;nav&gt;</code> element OR container element such as a <code>&lt;div&gt;</code> must have <code>role="navigation"</code></li>
+                                  <li>When multiple navigation elements are present on a page, such as a primary and a secondary navigation, we need to provide additional labeling for screen reader users. Add <code>aria-label="Primary"</code></li>
+                                </ul>
+                              </div>
+                              <div>
+                                  <button class="ml-1r btn copy-btn">
+                                    <i class="bi bi-clipboard-heart-fill" aria-hidden="true"></i> Copy
+                                  </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="space-large"></div>
+                          <div class="d-inline-block border border-dark p-2 rounded">
+                            <div class="d-flex flex-row">
+                              <div class="text-to-copy">
+                                <h3>Navigation Submenu Disclosure</h3>
+                                <h4>Submenu Button</h4>
+                                <ul role="list">
+                                  <li>Must be a <code>&lt;button&gt;</code> OR have <code>role="button"</code> and <code>tabindex="0"</code> and function equally with mouse and keyboard. (May need additional event handlers added)</code></li>
+                                  <li>Must have toggling <code>aria-expanded="true/false"</code> depending on expanded/collapsed states.</code></li>
+                                  <li>Should have <code>aria-controls</code> attribute equal to the ID of the container of the submenu it controls.</li>
+                                </ul>
+                                <h4>Submenu Panel</h4>
+                                <ul role="list">
+                                  <li>List of links must be in list markup</li>
+                                  <li>Each link must have a valid href, and the text content/name of the control should give the link purpose and reflect its destination.</code></li>
+                                  <li>The panel must collapse when focus leaves with forward and backwards tabbing navigation so it does not obscure other content.</li>
+                                </ul>
+                              </div>
+                              <div>
+                                  <button class="ml-1r btn copy-btn">
+                                    <i class="bi bi-clipboard-heart-fill" aria-hidden="true"></i> Copy
+                                  </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Four - Accessibility Considerations Developer -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                          Accessibility Considerations 
+                          <!-- Developer Tag -->
+                          <span class="dev-tag ms-3">
+                            Developer 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                          </span> 
+                        </button>
+                      </h2>
+                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
+                        <div class="accordion-body">                            
+                          <ul role="list">
+                            <li><strong>Semantic HTML:</strong> Use semantic HTML elements to structure the navigation bar. This includes using the <code>&lt;nav&gt;</code> element to wrap the entire navigation bar and <code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code>, and <code>&lt;a&gt;</code> for navigation items to ensure proper screen reader interpretation.</li>
+                            <li><strong>Roles and Properties:</strong> Apply appropriate ARIA roles and properties where native HTML does not suffice. This is particularly important for complex widgets like disclosure buttons, which should have <code>aria-expanded</code>, <code>aria-controls</code>, and <code>role="button"</code> attributes to communicate state and functionality.</li>
+                            <li><strong>Keyboard Navigation:</strong> Ensure all interactive elements within the navigation bar are operable with keyboard alone. This includes ensuring tab order is logical and that submenu items are accessible via keyboard commands.</li>
+                            <li><strong>Focus Management:</strong> Manage focus for interactive components, particularly for navigation bars with submenus. When a submenu is opened via a disclosure button, focus should move to the first item in the submenu. On close, focus should return to the disclosure button.</li>
+                            <li><strong>Color Contrast:</strong> Implement sufficient color contrast ratios for text, icons, and interactive elements against their background colors. Please see General Color section for more details.</li>
+                            <li><strong>Visible Focus Indicators:</strong> Provide clear visual focus indicators for interactive elements to help users understand which element has focus during keyboard navigation.</li>
+                            <li><strong>Testing with Screen Readers:</strong> Test the navigation bar with screen readers to ensure that all text is read correctly, and that interactive elements are announced with their state (e.g., expanded or collapsed for submenus).</li>
+                            <li><strong>Consistent Navigation:</strong> Keep the navigation structure consistent across the entire website to help users predict where navigation elements will be located and how they will function, enhancing usability and accessibility.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Five - Resources -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                          Resources
+                        </button>
+                      </h2>
+                      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive">
+                        <div class="accordion-body">
+                          <ul>
+                            <li><a href="https://getbootstrap.com/docs/5.1/components/navbar/" target="_blank">Bootstrap Navbar Documentation</a></li>
+                            <li><a href="https://webaim.org/techniques/css/invisiblecontent/" target="_blank">WebAIM: Invisible Content Just for Screen Reader Users</a></li>
+                            <li><a href="https://www.w3.org/WAI/tutorials/menus/" target="_blank">W3C WAI: Menus Tutorial</a></li>
+                            <li><a href="https://a11yproject.com/patterns/#navigation" target="_blank">The A11Y Project: Navigation Patterns</a></li>
+                            <li><a href="https://www.smashingmagazine.com/2017/11/building-accessible-menu-systems/" target="_blank">Smashing Magazine: Building Accessible Menu Systems</a></li>
+                            <li><a href="https://inclusive-components.design/menus-menu-buttons/" target="_blank">Inclusive Components: Menus & Menu Buttons</a></li>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role" target="_blank">MDN Web Docs: ARIA Navigation Role</a></li>
+                            <li><a href="https://uxdesign.cc/designing-accessible-navigation-8afb4f9754" target="_blank">Designing Accessible Navigation - UX Design</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Six - WCAG Guideline References -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                          WCAG Guideline References
+                        </button>
+                      </h2>
+                      <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix">
+                        <div class="accordion-body">
+                          <ul>
+                            <li><a href="https://www.w3.org/TR/WCAG21/#info-and-relationships" target="_blank">WCAG 2.1 Recommendation 1.3.1 Info and Relationships</a></li>
+                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html" target="_blank">WCAG 2.1 Understanding 1.3.1 Info and Relationships (Level A)</a></li>
+                            <li><a href="https://www.w3.org/TR/WCAG21/#meaningful-sequence" target="_blank">WCAG 2.1 Recommendation 1.3.2 Meaningful Sequence</a></li>
+                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence.html" target="_blank">WCAG 2.1 Understanding 1.3.2 Meaningful Sequence</a></li>
+                            <li><a href="https://www.w3.org/TR/WCAG21/#keyboard-accessible" target="_blank">WCAG 2.1 Recommendation 2.1.1 Keyboard</a></li>
+                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html" target="_blank">WCAG 2.1 Understanding 2.1.1 Keyboard</a></li>
+                            <li><a href="https://www.w3.org/TR/WCAG21/#name-role-value" target="_blank">WCAG 2.1 Recommendation 4.1.2 Name, Role, Value</a></li>
+                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" target="_blank">WCAG 2.1 Understanding 4.1.2 Name, Role, Value</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Accordion -->
+                </main>
+              </div>
+            </div>
+
+    <!-- Script links and jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../../../assets/js/global.js"></script>
+    <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- Add sidebar navigation to page -->
+    <script>
+      $(document).ready(function () {
+          // Determine the path relative to the root directory
+          var rootRelativePath = "../../sidebar-navigation.html";
+  
+          // Use jQuery to load the sidebar-navigation.html file
+          $("#sidebar-container").load(rootRelativePath);
+      });
+    </script>
+</body>
+</html>
