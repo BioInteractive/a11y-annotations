@@ -118,16 +118,61 @@
         </li>
         <li class="border-top my-3"></li>
         <li class="mb-1">
-            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-                data-bs-target="#dashboard-collapse" aria-expanded="false" aria-controls="dashboard-collapse">
+            <button class="btn btn-toggle align-items-center rounded collapsed fs-4 mb-1" data-bs-toggle="collapse"
+                data-bs-target="#dashboard-collapse" aria-expanded="false">
                 Components
             </button>
             <div class="collapse" id="dashboard-collapse">
-                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                    <li><a href="#" class="link-dark rounded">Placeholder</a></li>
-                    <li><a href="#" class="link-dark rounded">Placeholder</a></li>
-                    <li><a href="#" class="link-dark rounded">Placeholder</a></li>
-                    <li><a href="#" class="link-dark rounded">Placeholder</a></li>
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ml-1r">
+                    <!-- Navigation and Wayfinding -->
+                    <li class="mb-1">
+                        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#navigation-wayfinding-collapse" aria-expanded="false" 
+                                aria-controls="navigation-wayfinding-collapse">
+                            Navigation
+                        </button>
+                        <div class="collapse" id="navigation-wayfinding-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="/templates/components/navigation/navigation.html" class="link-dark rounded">Navigation</a></li>
+                                <li><a href="/templates/components/navigation/pagination.html" class="link-dark rounded">Pagination</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- Basic Elements -->
+                    <li class="mb-1">
+                        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#basic-elements-list" aria-expanded="false" 
+                                aria-controls="basic-elements-list">
+                            Basic Elements
+                        </button>
+                        <div class="collapse" id="basic-elements-list">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="/templates/components/basic/accordion.html" class="link-dark rounded">Accordion</a></li>
+                                <li><a href="#" class="link-dark rounded">Alerts</a></li>
+                                <li><a href="#" class="link-dark rounded">Avatar</a></li>
+                                <li><a href="#" class="link-dark rounded">Badge</a></li>
+                                <li><a href="/templates/components/basic/buttons.html" class="link-dark rounded">Buttons</a></li>
+                                <li><a href="#" class="link-dark rounded">Dropdowns</a></li>
+                                <li><a href="#" class="link-dark rounded">Progress</a></li>
+                                <li><a href="#" class="link-dark rounded">Media Objects</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- Forms -->
+                    <li class="mb-1">
+                        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#forms-collapse" aria-expanded="false" 
+                                aria-controls="forms-collapse">
+                            Forms
+                        </button>
+                        <div class="collapse" id="forms-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#" class="link-dark rounded">Form Groups</a></li>
+                                <li><a href="#" class="link-dark rounded">File Inputs</a></li>
+                                <li><a href="#" class="link-dark rounded">Login/Register Forms</a></li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </li>
@@ -181,5 +226,4 @@
         });
     });
 </script>
-
 
