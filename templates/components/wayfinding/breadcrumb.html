@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Use of Color</title>
+    <title>Breadcrumb</title>
 
     <!-- Link to Bootstrap CSS from CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
@@ -38,20 +38,48 @@
             <!-- A11y Live Region -->
             <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
             <div class="container-xxl bd-gutter mt-3">
-                <h1>Use of Color</h1>
+                <h1>Breadcrumb</h1>
                 <!-- Begin Accordion -->
                 <div class="accordion" id="accordionOpen">
                     <!-- Accordion Item One -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          WCAG Success Criteria
+                          WCAG Success Criteria Requirements and Examples
                         </button>
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                         <div class="accordion-body">
-                        <p>Color must not be used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.
-                        </p>
+                            <ul>
+                                <li>Must be in a navigation landmark: Use <code>&lt;nav&gt;</code> or a sectioning element with <code>role="navigation"</code>. 
+                                    <a href="https://www.w3.org/TR/WCAG21/#info-and-relationships" target="_blank">1.3.1 Info and Relationships</a>
+                                </li>
+                                <li>Must have a unique name if multiple navigational elements are present on the same page. 
+                                    <a href="https://www.w3.org/TR/WCAG21/#name-role-value" target="_blank">4.1.2 Name, Role, Value</a>
+                                </li>
+                                <li>Must be consistently placed across pages when it is present and ordered consistently. 
+                                    <a href="https://www.w3.org/TR/WCAG21/#consistent-navigation" target="_blank">3.2.3 Consistent Navigation</a>
+                                </li>
+                                <li>The set of links must be structured using an ordered list and links must have with valid link markup. 
+                                    <a href="https://www.w3.org/TR/WCAG21/#info-and-relationships" target="_blank">1.3.1 Info and Relationships</a>
+                                </li>
+                                <li>Must apply an aria-current="page" to the last item of the set to indicate that it represents the current page. 
+                                  <a href="https://www.w3.org/TR/WCAG21/#name-role-value" target="_blank">4.1.2 Name, Role, Value</a>
+                                </li>
+                                <li>The decorative seperator must be hidden from assistive technoloiges with an <code>aria-hidden="true"</code> 
+                                  <a href="https://www.w3.org/TR/WCAG21/#non-text-content" target="_blank">1.1.1 Non-text Content</a>
+                                </li>
+                              </ul> 
+                            <h3>Simple Breadcrumb Example</h3>
+                            <nav aria-label="breadcrumb">
+                              <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">Library</a></li>
+                                <li class="breadcrumb-item active" aria-current="page"><a href="#">Data</a></li>
+                              </ol>
+                            </nav>
+                            <p><strong>Current page link</strong> must have <code>aria-current="page"</code> so the current state is programmatically determinable. If there is a visual indication of state, such as color then the current and not current links must have a minimum of 3:1 contrast ratio. 
+                            A visual indication is not a requirement because the visual hierarchy is considered sufficient visual indication.</p>                 
                         </div>
                       </div>
                     </div>
@@ -72,13 +100,13 @@
                       <div id="collapseNew" class="accordion-collapse collapse" aria-labelledby="headingNew" style="">
                         <div class="accordion-body">
                           <ul>
-                            <li><strong>Understand Color Accessibility:</strong> Familiarize yourself with WCAG 2.1 Guidelines to help understand that color should not be the only means of conveying information.</li>
-                            <li><strong>Provide Alternative Indicators:</strong> When using color to convey information (like errors, success, links), always include an alternative indicator. This could be a text label, an icon, underlining, or patterns.</li>
-                            <li><strong>Use Descriptive Labels and Icons:</strong> Accompany color cues with clear text labels or descriptive icons, especially for important actions like error messages, success notifications, or call-to-action buttons.</li>
-                            <li><strong>Annotate Color Usage:</strong> When annotating your designs, explicitly mention how color is used and what additional indicators are provided for accessibility.</li>
-                            <li><strong>Interactive Elements:</strong> For interactive elements like links or buttons, use more than color to indicate interactivity. Include underlines, different font styles or borders, hover states and/or focus states.</li>
-                            <li><strong>Feedback and Error States:</strong> Clearly indicate error states or feedback messages with text descriptions and/or icons alongside color changes.</li>
-                          </ul>                          
+                            <li><strong>Visual Clarity and Hierarchy:</strong> Design breadcrumb items with clear, legible typography and ensure adequate spacing for easy identification and interaction.</li>
+                            <li><strong>Color Contrast:</strong> Ensure text and interactive elements within the breadcrumb meet WCAG contrast ratio guidelines to guarantee readability for users with visual impairments.</li>
+                            <li><strong>Consistent Design and Placement:</strong> Maintain a consistent design and placement for the breadcrumb across different pages to aid in user navigation and orientation.</li>
+                            <li><strong>Current Page Indication:</strong> If you add a visual indicator that separates it from other links. Also, include consideration for a contrast ratio of at least 3:1 with other breadcrumb items to highlight its status or use a non color indicator such as bold text or an underline.</li>
+                            <li><strong>Use of Separators:</strong> Incorporate visually clear separators between breadcrumb items. These should be designed to be recognized as decorative and non-interactive.</li>
+                            <li><strong>Interactive Feedback:</strong> Provide hover and focus states for breadcrumb links to offer visual feedback, aiding users in understanding which items are interactive.</li>
+                        </ul>                                                                       
                         </div>
                       </div>
                     </div>
@@ -86,7 +114,7 @@
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingTwo">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          How to Test 
+                          How to Test and Annotate
                           <!-- Auditor Tag -->
                         <span class="dev-tag ms-3">
                           Auditor 
@@ -104,35 +132,12 @@
                       </h2>
                       <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" style="">
                         <div class="accordion-body">
-                          <ul role="list">
-                            <li><strong>Color-Reliant Information:</strong>
-                              Examine the design and identify any instances where color is used to convey information or distinguish visual elements. This may include things like:
-                              <ul>
-                                <li>Using red text and/or borders to indicate errors.</li>
-                                <li>Using green text and/or borders to indicate success.</li>
-                                <li>Using color-coded icons or labels to represent different categories or statuses.</li>
-                                <li>Using color alone to indicate a link in a block of text.</li>
-                              </ul>
-                            </li>
-                            <li><strong>Check for Redundant Cues:</strong> Ensure that information or distinctions made through color are also conveyed using additional visual cues, such as text labels, icons, patterns, or shapes. This provides redundancy and ensures that people who cannot perceive color can still understand the content.</li>
+                          <ul>
+                            <li><strong>Color Contrast for Text:</strong> Test the color contrast of regular-sized text in breadcrumb links against their background to ensure it meets a minimum of 4.5:1 ratio, aligning with <a href="https://www.w3.org/TR/WCAG21/#contrast-minimum" target="_blank">WCAG 2.1 guideline 1.4.3 Contrast (Minimum)</a>.</li>
+                            <li><strong>Color Contrast between Current and Not Current Links:</strong> If a visual indication of state (e.g., color differentiation) is used for the current page link, verify that the contrast ratio between the current page link and not current links is at least 3:1. This ensures that users can distinguish the current page within the breadcrumb trail, in compliance with <a href="https://www.w3.org/TR/WCAG21/#contrast-minimum" target="_blank">WCAG 2.1 guideline 1.4.3 Contrast (Minimum)</a>.</li>
+                            <li><strong>Visual Hierarchy as Indication:</strong> Acknowledge that a separate visual indication for the current page link is not a strict requirement, provided that the breadcrumb's design leverages visual hierarchy effectively to indicate the current page's status.</li>
                           </ul>
-                          <div class="d-inline-block border border-dark p-2 rounded">
-                            <div class="d-flex flex-row">
-                              <div class="text-to-copy">
-                                <h3>Use of Color</h3>
-                                <ul role="list">
-                                  <li>Color is used as the only visual means of conveying _________________.</li>
-                                  <li><i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i> Warning: Color must not be the only visual indication.</li>
-                                  <li>Recommendation: Add a non-color indicator such as an underline, symbol and/or text.</li>
-                                </ul>
-                              </div>
-                              <div>
-                                  <button class="ml-1r btn copy-btn">
-                                    <i class="bi bi-clipboard-heart-fill" aria-hidden="true"></i> Copy
-                                  </button>
-                              </div>
-                            </div>
-                          </div>
+                          <p>To annotate for any text or text state color failures please visit the color section under the general tab.</p>
                         </div>
                       </div>
                     </div>
@@ -151,20 +156,17 @@
                         </button>
                       </h2>
                       <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
-                        <div class="accordion-body">
-                          <!-- Your content here for Developer Instructions: Ensuring Information Is Not Conveyed By Color Alone -->
-                          <p>Implement content without relying solely on color to convey information. Non-color indicators may include:</p>
+                        <div class="accordion-body">                            
                           <ul>
-                            <li><strong>Text Labels:</strong> Use clear and descriptive text labels alongside color indicators.</li>
-                            <li><strong>Icons and Symbols:</strong> Incorporate universally recognized icons or symbols to convey information.</li>
-                            <li><strong>Texture or Patterns:</strong> Apply different textures or patterns to elements that need to be distinguished from one another.</li>
-                            <li><strong>Shape:</strong> Use distinct shapes to signify different statuses or categories.</li>
-                            <li><strong>Size:</strong> Alter the size of elements to indicate their importance or to differentiate between items.</li>
-                            <li><strong>Positioning:</strong> Place elements strategically to suggest a relationship or to differentiate them.</li>
-                            <li><strong>Typography:</strong> Employ bold text, different font styles, or underlining to highlight information.</li>
-                            <li><strong>Contrast:</strong> Increase contrast with background elements, not just with color, but also with lightness or darkness with a minimum of a 3:1 contrast ratio.</li>
-                          </ul>                              
-                          <p>These practices ensure content is accessible to everyone, including users with color vision deficiencies.</p>
+                            <li><strong>Use Semantic Navigation Landmarks:</strong> Wrap the breadcrumb component in a <code>&lt;nav&gt;</code> element or use a sectioning element with <code>role="navigation"</code> to ensure it's recognized as a navigation landmark, aiding assistive technologies in understanding its purpose.</li>
+                            <li><strong>Ensure Unique Names for Multiple Navigation Landmarks:</strong> If your page includes multiple navigation landmarks, assign unique names to each (using <code>aria-label</code> or <code>aria-labelledby</code>) to distinguish them for users of assistive technologies.</li>
+                            <li><strong>Maintain Consistency Across Pages:</strong> Ensure the breadcrumb's structure and presentation remain consistent across different sections of the site, facilitating user navigation and orientation.</li>
+                            <li><strong>Structure Breadcrumb Items Properly:</strong> Organize breadcrumb links within an ordered list (<code>&lt;ol&gt;</code>) to reflect the sequential nature of navigation paths, using <code>&lt;li&gt;</code> for each breadcrumb item to ensure semantic structure.</li>
+                            <li><strong>Indicate the Current Page with ARIA:</strong> Apply <code>aria-current="page"</code> to the last breadcrumb link, which represents the current page. This attribute offers a clear, programmatic indication of the breadcrumb's active state to assistive technologies.</li>
+                            <li><strong>Color Contrast Compliance:</strong> Verify that the text of breadcrumb links, including the current page indicator, meets the minimum color contrast ratio of 4.5:1 against their background for regular text, in accordance with <a href="https://www.w3.org/TR/WCAG21/#contrast-minimum" target="_blank">WCAG 2.1 guideline 1.4.3 Contrast (Minimum)</a>. Additionally, ensure a minimum contrast ratio of 3:1 between the current page link and other links if a visual state indication is utilized.</li>
+                            <li><strong>Hide Decorative Separators from Assistive Technologies:</strong> If using decorative separators (e.g., slashes or arrows) between breadcrumb items, use <code>aria-hidden="true"</code> to hide these elements from screen readers, as they do not convey meaningful content.</li>
+                            <li><strong>Option Text for Current:</strong> It is absolutely acceptable to use text instead of a link for the current breadcrumb item.</li> 
+                          </ul>                                                
                         </div>
                       </div>
                     </div>
@@ -178,14 +180,15 @@
                       <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive">
                         <div class="accordion-body">
                           <ul>
-                            <li><a href="https://www.vischeck.com/" target="_blank">Vischeck</a></li>
-                            <li><a href="http://colorlab.wickline.org/colorblind/colorlab/" target="_blank">AWARE Color Laboratory</a></li>
-                            <li><a href="https://en.wikipedia.org/wiki/Color_blindness" target="_blank">Wikipedia: Color Blindness</a></li>
-                            <li><a href="https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/accessibility/test-color-blindness" target="_blank">Microsoft: Verify that a page is usable by people with color blindness</a></li>
-                            <li><a href="http://www.webexhibits.org/causesofcolor/2C.html" target="_blank">Causes of Color: How do people inherit colorblindness? How often?: Genetics</a></li>
-                            <li><a href="https://jfly.uni-koeln.de/color/" target="_blank">How to make figures and presentations that are friendly to Colorblind people</a></li>
-                            <li><a href="https://colortutorial.design/tutor.html" target="_blank">The Color Tutor application</a></li>
-                          </ul>
+                            <li><a href="https://getbootstrap.com/docs/4.0/components/breadcrumb/" target="_blank">Bootstrap Breadcrumb Documentation</a></li>
+                            <li><a href="https://www.w3.org/TR/wai-aria-practices/examples/breadcrumb/index.html" target="_blank">W3C WAI ARIA Practices: Breadcrumb Example</a></li>
+                            <li><a href="https://a11yproject.com/posts/breadcrumb-navigation/" target="_blank">The A11Y Project: Breadcrumb Navigation</a></li>
+                            <li><a href="https://www.smashingmagazine.com/2019/03/web-accessibility-breadcrumb-navigation/" target="_blank">Smashing Magazine: Web Accessibility, Breadcrumb Navigation</a></li>
+                            <li><a href="https://css-tricks.com/a-breadcrumb-navigation-with-aria-describedby/" target="_blank">CSS-Tricks: A Breadcrumb Navigation with aria-describedby</a></li>
+                            <li><a href="https://inclusive-components.design/breadcrumbs/" target="_blank">Inclusive Components: Breadcrumbs</a></li>
+                            <li><a href="https://uxdesign.cc/designing-accessible-breadcrumbs-d532470f1d02" target="_blank">Designing Accessible Breadcrumbs - UX Design</a></li>
+                            <li><a href="https://www.nngroup.com/articles/breadcrumb-navigation-useful/" target="_blank">Nielsen Norman Group: Breadcrumb Navigation: Further Investigation of Usage</a></li>
+                          </ul>                         
                         </div>
                       </div>
                     </div>
@@ -199,9 +202,15 @@
                       <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix">
                         <div class="accordion-body">
                           <ul>
-                            <li><a href="https://www.w3.org/TR/WCAG21/#use-of-color" target="_blank">WCAG 2.1 Recommendation 1.4.1 Use of Color</a></li>
-                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/use-of-color" target="_blank">WCAG 2.1 Understanding 1.4.1 Use of Color (Level A)</a></li>
-                          </ul>
+                            <li><a href="https://www.w3.org/TR/WCAG21/#info-and-relationships" target="_blank">WCAG 2.1 Recommendation 1.3.1 Info and Relationships</a></li>
+                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html" target="_blank">WCAG 2.1 Understanding 1.3.1 Info and Relationships</a></li>
+                            <li><a href="https://www.w3.org/TR/WCAG21/#name-role-value" target="_blank">WCAG 2.1 Recommendation 4.1.2 Name, Role, Value</a></li>
+                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" target="_blank">WCAG 2.1 Understanding 4.1.2 Name, Role, Value</a></li>
+                            <li><a href="https://www.w3.org/TR/WCAG21/#consistent-navigation" target="_blank">WCAG 2.1 Recommendation 3.2.3 Consistent Navigation</a></li>
+                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/consistent-navigation.html" target="_blank">WCAG 2.1 Understanding 3.2.3 Consistent Navigation</a></li>
+                            <li><a href="https://www.w3.org/TR/WCAG21/#non-text-content" target="_blank">WCAG 2.1 Recommendation 1.1.1 Non-text Content</a></li>
+                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html" target="_blank">WCAG 2.1 Understanding 1.1.1 Non-text Content</a></li>
+                          </ul>                        
                         </div>
                       </div>
                     </div>

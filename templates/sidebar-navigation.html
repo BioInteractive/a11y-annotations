@@ -12,17 +12,17 @@
     <a href="/default/auditor-checklist.html" class="d-flex align-items-center pb-1 pl-1 mb-3 link-dark text-decoration-none">
         <span class="fs-6 fw-semibold">Auditor Checklist</span>
     </a>
-    <a href="/default/style-guide.html" class="d-flex align-items-center pb-1 pl-1 mb-3 link-dark text-decoration-none">
+    <!-- <a href="/default/style-guide.html" class="d-flex align-items-center pb-1 pl-1 mb-3 link-dark text-decoration-none">
         <span class="fs-6 fw-semibold">Style Guide</span>
-    </a>
+    </a> -->
     <ul class="list-unstyled ps-0">
         <!-- General Section -->
         <li class="mb-3">
             <button class="btn btn-toggle align-items-center rounded collapsed fs-4" data-bs-toggle="collapse"
-                data-bs-target="#general-collapse" aria-expanded="true">
+                data-bs-target="#general-collapse" aria-expanded="false">
                 General
             </button>
-            <div class="collapse show" id="general-collapse">
+            <div class="collapse" id="general-collapse">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-2 small  ml-1r">
                     <!-- Nested Accessibility Criteria Sections -->
                     <!-- Structure Section -->
@@ -52,9 +52,9 @@
                         </button>
                         <div class="collapse show" id="color-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="/templates/general/color/use-of-color.html" class="link-dark rounded">Use of Color (1.4.1)</a></li>
-                                <li><a href="/templates/general/color/text-contrast.html" class="link-dark rounded">Text Color Contrast (1.4.3)</a></li>
-                                <li><a href="/templates/general/color/non-text-contrast.html" class="link-dark rounded">Non-text Color Contrast (1.4.11)</a></li>
+                                <li><a href="/templates/general/color/use-of-color.html" class="link-dark rounded">Use of Color</a></li>
+                                <li><a href="/templates/general/color/text-contrast.html" class="link-dark rounded">Text Color Contrast</a></li>
+                                <li><a href="/templates/general/color/non-text-contrast.html" class="link-dark rounded">Non-text Color Contrast</a></li>
                             </ul>
                         </div>
                     </li>
@@ -67,7 +67,11 @@
                         <div class="collapse show" id="images-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                                 <li><a href="/templates/general/non-text-content/images.html" class="link-dark rounded">Images</a></li>
+                                <li><a href="/templates/general/non-text-content/images-of-text.html" class="link-dark rounded">Images of Text</a></li>
                                 <li><a href="/templates/general/non-text-content/media.html" class="link-dark rounded">Time-based Media</a></li>
+                                <li><a href="/templates/general/non-text-content/timing-adjustable.html" class="link-dark rounded">Timing Adjustable</a></li> 
+                                <li><a href="/templates/general/non-text-content/pause-stop-hide.html" class="link-dark rounded">Pause, Stop, Hide</a></li>
+                                <li><a href="/templates/general/non-text-content/three-flashes.html" class="link-dark rounded">Three Flashes or Below Threshold</a></li>  
                             </ul>
                         </div>
                     </li>
@@ -79,9 +83,9 @@
                         </button>
                         <div class="collapse show" id="interactives-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="/templates/general/interactives/keyboard.html" class="link-dark rounded">Keyboard (2.1.1)</a></li>
-                                <li><a href="/templates/general/interactives/focus-visible.html" class="link-dark rounded">Focus Visible (2.4.7)</a></li>
-                                <li><a href="/templates/general/interactives/focus-order.html" class="link-dark rounded">Focus Order (2.4.3)</a></li>
+                                <li><a href="/templates/general/interactives/keyboard.html" class="link-dark rounded">Keyboard</a></li>
+                                <li><a href="/templates/general/interactives/focus-visible.html" class="link-dark rounded">Focus Visible</a></li>
+                                <li><a href="/templates/general/interactives/focus-order.html" class="link-dark rounded">Focus Order</a></li>
                             </ul>
                         </div>
                     </li>
@@ -93,23 +97,9 @@
                         </button>
                         <div class="collapse show" id="screen-magnification-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">                                
-                                <li><a href="/templates/general/screen-magnification/resize.html" class="link-dark rounded">Resize Text (1.4.4)</a></li>
-                                <li><a href="/templates/general/screen-magnification/reflow.html" class="link-dark rounded">Reflow (1.4.10)</a></li> 
-                                <li><a href="/templates/general/screen-magnification/text-spacing.html" class="link-dark rounded">Text Spacing (1.4.12)</a></li>   
-                            </ul>
-                        </div>
-                    </li>
-                    <!-- Movement & Flashing Section -->
-                    <li class="mb-1">
-                        <button class="text-left btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-                            data-bs-target="#movement-collapse" aria-expanded="true" aria-controls="movement-collapse">
-                            <span><i class="bi bi-lightning-fill" aria-hidden="true"></i> Movement & Flashing</span>
-                        </button>
-                        <div class="collapse show" id="movement-collapse">
-                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="/templates/general/movement/timing-adjustable.html" class="link-dark rounded">Timing Adjustable (2.2.1)</a></li> 
-                                <li><a href="/templates/general/movement/pause-stop-hide.html" class="link-dark rounded">Pause, Stop, Hide (2.2.2)</a></li>
-                                <li><a href="/templates/general/movement/three-flashes.html" class="link-dark rounded">Three Flashes or Below Threshold (2.3.1)</a></li>                                   
+                                <li><a href="/templates/general/screen-magnification/resize.html" class="link-dark rounded">Resize Text</a></li>
+                                <li><a href="/templates/general/screen-magnification/reflow.html" class="link-dark rounded">Reflow</a></li> 
+                                <li><a href="/templates/general/screen-magnification/text-spacing.html" class="link-dark rounded">Text Spacing</a></li>   
                             </ul>
                         </div>
                     </li>
@@ -129,12 +119,13 @@
                         <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
                                 data-bs-target="#navigation-wayfinding-collapse" aria-expanded="false" 
                                 aria-controls="navigation-wayfinding-collapse">
-                            Navigation
+                            Wayfinding
                         </button>
                         <div class="collapse" id="navigation-wayfinding-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="/templates/components/navigation/navigation.html" class="link-dark rounded">Navigation</a></li>
-                                <li><a href="/templates/components/navigation/pagination.html" class="link-dark rounded">Pagination</a></li>
+                                <li><a href="/templates/components/wayfinding/navigation.html" class="link-dark rounded">Navigation</a></li>
+                                <li><a href="/templates/components/wayfinding/breadcrumb.html" class="link-dark rounded">Breadcrumb</a></li>
+                                <li><a href="/templates/components/wayfinding/pagination.html" class="link-dark rounded">Pagination</a></li>
                             </ul>
                         </div>
                     </li>
@@ -148,7 +139,7 @@
                         <div class="collapse" id="basic-elements-list">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                                 <li><a href="/templates/components/basic/accordion.html" class="link-dark rounded">Accordion</a></li>
-                                <li><a href="#" class="link-dark rounded">Alerts</a></li>
+                                <li><a href="/templates/components/basic/alert.html" class="link-dark rounded">Alert</a></li>
                                 <li><a href="#" class="link-dark rounded">Avatar</a></li>
                                 <li><a href="#" class="link-dark rounded">Badge</a></li>
                                 <li><a href="/templates/components/basic/buttons.html" class="link-dark rounded">Buttons</a></li>
@@ -196,8 +187,42 @@
     </ul>
 </nav>
 
-<!-- Comment out for local development and enable for production -->
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+// Sidebar Focus Management
+$(document).ready(function() {
+    // Get current URL path
+    var currentPath = window.location.pathname;
+
+    // Find the matching link in the sidebar and set focus
+    $('.sidebar a').each(function() {
+        var linkPath = $(this).attr('href');
+        // Check if the link matches the current URL path
+        if (currentPath.endsWith(linkPath)) {
+            $(this).focus(); // Set focus on the matching link
+            $(this).attr('aria-current', 'page'); // Set ARIA current attribute
+
+            // Append an icon to indicate the current page
+            $(this).append(' <i class="bi bi-caret-left-fill text-success" aria-hidden="true"></i>');
+
+            // Ensure all parent collapsible elements are expanded
+            $(this).parents('.collapse').each(function() {
+                if (!$(this).hasClass('show')) {
+                    $(this).collapse('show'); // Use Bootstrap's collapse method to show the element
+                    // Update the 'aria-expanded' attribute of the associated toggle button
+                    var targetId = $(this).attr('id');
+                    $('button[data-bs-target="#' + targetId + '"]').attr('aria-expanded', 'true').removeClass('collapsed');
+                }
+            });
+
+            return false; // Break the loop once the matching link is found
+        }
+    });
+});
+</script>
+
+<!-- Comment out for local development and enable for production -->
 <script>
     $(document).ready(function() {
         // Select all links in the sidebar navigation except for index.html

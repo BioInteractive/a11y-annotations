@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Images</title>
+    <title>Images of Text</title>
 
     <!-- Link to Bootstrap CSS from CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
@@ -28,7 +28,7 @@
             <!-- A11y Live Region -->
             <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
             <div class="container-xxl bd-gutter mt-3">
-                <h1>Images</h1>
+                <h1>Images of Text</h1>
                 <!-- Begin Accordion -->
                 <div class="accordion" id="accordionOpen">
                     <!-- Accordion Item One -->
@@ -40,12 +40,15 @@
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                         <div class="accordion-body">
-                          <p><strong>1.1.1 Non-text Content:</strong> All meaningful non-text content (images, video, audio, SVGs, icons and other content that isn't conveyed by text) 
-                            needs to have alt text that provides the same information found in the content.</p>
-                          <p>Every <code>&lt;img&gt;</code> you add to your site needs to have an alt attribute. If the image is informational, set the alt equal to a descriptive alternative for that image.</p>
-                          <p>If the image is decorative or redundant to adjacent text, set <code>alt=""</code>, which conveys to assistive technology users that the image isn't necessary for understanding the page. 
-                            Purely decorative content (for example, a dividing line between a navigation bar and content) does not require alternative text.</p>
-                          <p>Avoid using generic strings like photo, image, or icon as alt values, as they don't communicate valuable content to the user. Be as descriptive as possible.</p>                      
+                          <p><strong>1.4.5 Images of Text:</strong> If the technologies being used can achieve the visual presentation, text is used to convey information rather than 
+                            images of text. If an author can use text to achieve the same visual effect, he or she should present the information as text rather than using an image.</p>
+                          <p>Exceptions include the following:</p> 
+                          <ul>
+                            <li>Customizable: When the image of text can be visually customized to the user's requirements;</li>
+                            <li>Essential: A particular presentation of text is essential to the information being conveyed.</li>
+                            <li>Logotypes (text that is part of a logo or brand name) are considered essential.</li>
+                          </ul> 
+                          <p><strong>1.4.3 Contrast (Minimum):</strong> The visual presentation of text and images of text has a contrast ratio of at least 4.5:1 (some exceptions). (Level AA)</p>                         
                         </div>
                       </div>
                     </div>
@@ -67,12 +70,13 @@
                         <div class="accordion-body">
                           <p>As a Designer using Figma, your role in ensuring accessibility for images begins with thoughtful planning and documentation:</p>
                           <ul>
-                            <li><strong>Choice of Images:</strong> You're free to choose images that best suit the design needs, but be mindful about the use of text within images and the contrast in images.</li>
+                            <li><strong>Choice of Images:</strong> You're free to choose images that best suit the design needs, but be mindful about the use of text within images.</li> 
+                            <li><strong>Avoid embedding text directly into images</strong> to ensure the content is accessible to all users, including those using screen readers.</li>
+                            <li><strong>Only embed text directly into images</strong> when it is absolutly necessary to use a special font or its essentia to the information being conveyed.</li>
                             <li><strong>Documentation:</strong> For each image you decide to include in the design, document its purpose and whether it's decorative or meaningful. This documentation will be invaluable for developers and content authors when they assign alternative text or decide on the appropriate ARIA attributes.</li>
                             <li><strong>Consult with Content Leads:</strong> For complex or meaningful images, work closely with content leads or authors to understand the context and the message the image conveys. This collaboration ensures that appropriate and accurate alternative text can be developed, enhancing accessibility.</li>
-                            <li><strong>Be Mindful of Images of Text:</strong> Use text within images sparingly and only when necessary. If the image of text is essential, ensure that it's legible and meets color contrast requirements. Always consider how the text will be translated into alternative text for assistive technologies.</li>
                           </ul>
-                          <p>By incorporating these practices into your workflow, you contribute significantly to creating designs that are accessible and inclusive from the start.</p>
+                          <p>By incorporating these practices into your workflow, you contribute significantly to creating images and designs that are accessible and inclusive from the start.</p>
                         </div>                        
                       </div>
                     </div>      
@@ -100,56 +104,21 @@
                         <div class="accordion-body">
                           <ol role="list">
                             <li>Use this <a target="_blank" href="https://www.figma.com/file/txsKugjRb6ALXDK4uKGcp1/A11y-Annotation-Kit---HHMI?type=design&node-id=0-1&mode=design&t=c6seYgq1nqTYby7h-0">A11y Annotation Kit</a>.</li>
-                            <li>Identify all the images.</li>
-                            <li>Inquire if the images are going to be presented as <code class="code-tag">&lt;img&gt;</code>s, SVGs or icons.</li>
-                            <li>Decide which images are meaningful and decorative.</li>
-                            <li>Add a sticky note annotation to define the image as decorative with <code>alt=""</code> or meaningful <code>alt="foo"</code>.</li>
+                            <li>Identify all images of text.</li>
+                            <li>Assess whether the text in each image could be easily replicated using HTML text content. If it is feasible to reproduce the text with HTML, 
+                              flag the image and inform the designer that the text should be removed from the image and implemented as actual text content.</li>
                           </ol>
-                          <h3>Meaningful Images <img src="../../../assets/images/alt-meaningful.png" alt="annotation tag with alt equals sign foo between quotes"></h3>
-                          <p>Meaningful images are those that convey important information or functionality to users. These images play a significant role in providing context, enhancing understanding, 
-                            or facilitating user interactions on a web page. Examples of meaningful images include:</p>
-                          <ul>
-                            <li>Graphs and charts that illustrate data and statistics.</li>
-                            <li>Icons representing actionable elements like buttons, links, or controls.</li>
-                            <li>Images depicting products, people, or objects relevant to the content.</li>
-                            <li>Illustrations supporting the textual content to explain concepts or processes.</li>
-                          </ul>
-                          <h3>Decorative Images <img src="../../../assets/images/alt-decorative.png" alt="annotation tag with alt equals sign and empty quotes"></h3>
-                          <p>Decorative images are images that are used purely for aesthetic or decorative purposes and does not convey meaningful content or information. 
-                          Decorative images are typically added to enhance the visual design of a web page but do not serve a functional role in conveying information to users.
-                          A few examples include:</p>
-                          <ul>
-                            <li>Ornamental borders used to create decorative borders around content or sections of a webpage.</li>
-                            <li>Background images used in the background of a webpage to create a specific ambiance or atmosphere.</li>
-                            <li>Background textures to enhance the visual appearance of a webpage.</li>
-                            <li>Icons or graphics used purely for visual embellishment and not representing actionable elements.</li>
-                          </ul>
-                          <h3>Additional annotations for SVGs and Icons</h3>
+
+                          
+                          <h3>Annotations for failing Images of Text</h3>
                           <div class="d-inline-block border border-dark p-2 rounded">
                             <div class="d-flex flex-row">
                               <div class="text-to-copy">
-                                <h4>SVGs</h4>
+                                <h4>Image of Text</h4>
                                 <ul role="list">
-                                  <li><strong>Meaningful SVG</strong> must have a <code class="code-tag">&lt;title&gt;</code> as the first child with a unique IDREF.</li>
-                                  <li>The <code class="code-tag">&lt;svg&gt;</code> must then have an aria-labelledby="IDREF"</li>
-                                  <li><strong>Decorative SVG</strong> must have aria-hidden="true" so it will be ignored by assistive technologies.</li>                
-                                </ul>
-                              </div>
-                              <div>
-                                  <button class="ml-1r btn copy-btn">
-                                    <i class="bi bi-clipboard-heart-fill" aria-hidden="true"></i> Copy
-                                  </button>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="space-large"></div>
-                          <div class="d-inline-block border border-dark p-2 rounded"> 
-                            <div class="d-flex flex-row">
-                              <div class="text-to-copy">
-                                <h4>Icons</h4>
-                                <ul role="list">
-                                  <li><strong>Meaningful Icon</strong> must have an accessible name from an aria-label, aria-labelledby or sr-only text.</li>
-                                  <li><strong>Decorative Icon</strong> must have aria-hidden="true" so it will be ignored by assistive technologies.</li>                                  </li>
+                                  <li>Image does not qualify as an exception.</li>
+                                  <li>Text must be real text content.</li>
+                                  <li>Text on image does not pass minimum contrast requirements.</li>
                                 </ul>
                               </div>
                               <div>
@@ -179,12 +148,10 @@
                       <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" style="">
                         <div class="accordion-body">
                           <h3>Implementing Images for Accessibility</h3>
-                          <p>Proper implementation of images is crucial for web accessibility, adhering to <strong>WCAG 2.1</strong> standards, particularly for non-text content and images of text:</p>
+                          <p>Proper implementation of text on top of images is crucial for web accessibility, adhering to <strong>WCAG 2.1</strong> standards, particularly for non-text content and images of text:</p>
                           <ul>
-                            <li><strong>Alt Text for Images:</strong> Provide meaningful alternative (alt) text for images that convey information. Alt text should succinctly describe the image's content or function.</li>
-                            <li><strong>SVGs:</strong> For meaningful SVGs, use a <code>&lt;title&gt;</code> tag immediately after the SVG tag to provide an accessible name, and reference it with <code>aria-labelledby</code>. Decorative SVGs should have an <code>aria-hidden="true"</code> attribute to hide them from assistive technologies.</li>
-                            <li><strong>Icons:</strong> Decorative icons should be placed in a container with <code>aria-hidden="true"</code> to ensure they are not announced by screen readers. Meaningful icons require an accessible name, provided via <code>aria-label</code> or visually hidden text that can be translated into other languages for broader accessibility.</li>
-                            <li><strong>Images of Text:</strong> Avoid using images of text unless absolutely necessary. If images of text are used, ensure they meet contrast requirements and provide an accessible alternative for the text content.</li>
+                            <li><strong>Images of Text:</strong> When absolutely neccesary ensure that all text on image is included in the text alternative so it will be programmatically determinable.</li>
+                            <li><strong>Use HTML Text Instead of Images of Text: </strong> Avoid using images of text unless absolutely necessary. If images of text are used, ensure they meet contrast requirements and provide an accessible alternative for the text content.</li>
                             <li><strong>Testing and Validation:</strong> Use accessibility testing tools to validate the presence of alt text and appropriate use of ARIA attributes for images, SVGs, and icons.</li>
                           </ul>
                           <p>Following these guidelines ensures that all users, including those using assistive technologies, can fully engage with your web content.</p>
@@ -227,6 +194,8 @@
                             <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html" target="_blank">WCAG 2.1 Understanding 1.1.1 Non-text Content (Level A)</a></li>
                             <li><a href="https://www.w3.org/TR/WCAG21/#images-of-text" target="_blank">WCAG 2.1 Recommendation 1.4.5 Images of Text</a></li>
                             <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html" target="_blank">WCAG 2.1 Understanding 1.4.5 Images of Text (Level AA)</a></li>
+                            <li><a href="https://www.w3.org/TR/WCAG21/#contrast-minimum" target="_blank">WCAG 2.1 Recommendation 1.4.3 Contrast (Minimum)</a></li>
+                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" target="_blank">WCAG 2.1 Understanding 1.4.3 Contrast (Minimum) (Level AA)</a></li>
                           </ul>                          
                         </div>
                       </div>
