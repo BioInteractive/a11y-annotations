@@ -72,6 +72,9 @@ a {
     padding-top: 1.25rem;
     min-width: 265px;
   }
+  #structure-collapse > ul > li > a:hover > i {
+    color: black !important;
+}
 
   /* Copy Button */
   .copy-btn {
@@ -301,4 +304,9 @@ p.dev-tag {
   outline: 1px solid #000;
   outline-offset: 2px;
   outline-style: auto;
+}
+
+/* Breadcrumb */
+.breadcrumb li a {
+  text-decoration: none !important;
 }
