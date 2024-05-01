@@ -38,7 +38,15 @@
             <!-- A11y Live Region -->
             <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
             <div class="container-xxl bd-gutter mt-3">
-                <h1>Buttons</h1>
+                <h1>Button</h1>
+                <!-- Button vs Link Call out -->
+                <div class="btn-vs-link-parent">
+                  <div class="btn-vs-link-child">
+                    <h2>Button Vs. Link</h2>
+                    <p>A button <code>&lt;button&gt;</code> performs an action. <i class="bi bi-gear-fill"></i> <small>(Open Disclosure, Play Video, Launch Dialog)</small></p>
+                    <p>A link <code>&lt;a&gt;</code> navigates. <i class="bi bi-box-arrow-up-right"></i> <small>(In-page anchor link, internal/external URL)</small></p>
+                  </div>
+                </div>
                 <!-- Begin Accordion -->
                 <div class="accordion" id="accordionOpen">
                     <!-- Accordion Item One -->
@@ -55,22 +63,28 @@
                                 <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#button" target="_blank">ARIA: Button Role</a>
                             </li>
                             <li><strong>Accessible Names:</strong> Ensure buttons have accessible names, which can be provided by inner text or by attributes like <code>aria-label</code> if the button contains only an icon or an image. 
-                                <a href="https://www.w3.org/TR/WCAG21/#name-role-value" target="_blank">4.1.2 Name, Role, Value</a>
+                                <a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" target="_blank">4.1.2 Name, Role, Value</a>
                             </li>
-                            <li><strong>Indicating Button States:</strong> Clearly indicate button states (e.g., disabled, active) visually and programmatically. Disabled buttons should have <code>aria-disabled="true"</code> and active buttons should indicate their state with <code>aria-pressed</code> for toggle buttons or <code>aria-current="page"</code> for navigation buttons.
+                            <li><strong>Indicating Button States:</strong> Clearly indicate button states (e.g., disabled, active, current) visually and programmatically. Disabled buttons should have <code>aria-disabled="true"</code> and active buttons should indicate their state with <code>aria-pressed</code> for toggle buttons or <code>aria-current</code> for currently selected buttons.
+                              <a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" target="_blank">4.1.2 Name, Role, Value</a>
                                 <ul>
                                     <li><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-disabled" target="_blank">ARIA: aria-disabled</a></li>
                                     <li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/examples/button/button.html" target="_blank">WAI-ARIA Authoring Practices 1.1: Button Examples</a></li>
-                                </ul>
+                                  </ul>
                             </li>
-                            <li><strong>Visual Design and Contrast:</strong> Design buttons with adequate color contrast ratios. Text or icons on buttons must have at least a 4.5:1 contrast ratio against their background, and buttons should be visually distinguishable from their background with a clear border or background color.
+                            <li><strong>Dialog Opening Function:</strong> Clearly indicate the function of the dialog opening button with an <code>aria-haspopup="dialog"</code> attribute or by 
+                            adding sr-only text "opens dialog" to warn users that activating the button will open a dialog window and send focus to the new window. a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" target="_blank">4.1.2 Name, Role, Value</a></li>
+                            <li><strong>Button Text Contrast:</strong> Text on buttons must have at least a 4.5:1 contrast ratio against their background for regular sized text and 3:1 for large size text.
                                 <a href="https://www.w3.org/TR/WCAG21/#contrast-minimum" target="_blank">1.4.3 Contrast (Minimum)</a>
                             </li>
-                            <li><strong>Ensuring Keyboard Accessibility:</strong> Buttons must be fully functional using a keyboard alone, including being focusable and interactive through keyboard events like <code>Enter</code> or <code>Space</code> keys.
-                                <a href="https://www.w3.org/TR/WCAG21/#keyboard" target="_blank">2.1.1 Keyboard</a>
+                            <li><strong>Button Contrast Usability:</strong> buttons should be visually distinguishable from their background with a clear border or background color.
+                              <a href="https://www.w3.org/TR/WCAG21/#non-text-contrast" target="_blank">1.4.11 Non-text Contrast</a>
                             </li>
                             <li><strong>Image Buttons:</strong> Use <code>&lt;input type="image"&gt;</code> for image buttons, ensuring to provide a meaningful <code>alt</code> attribute that describes the button's action.
-                                <a href="https://www.w3.org/TR/WCAG21/#non-text-contrast" target="_blank">1.4.11 Non-text Contrast</a>
+                              <a href="https://www.w3.org/TR/WCAG21/#non-text-contrast" target="_blank">1.4.11 Non-text Contrast</a> <a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html" target="_blank">1.1.1 Non-text Content</a>
+                            </li>
+                            <li><strong>Ensuring Keyboard Accessibility:</strong> Buttons must be fully functional using a keyboard alone, including being focusable and interactive through keyboard events like <code>Enter</code> or <code>Space</code> keys.
+                              <a href="https://www.w3.org/TR/WCAG21/#keyboard" target="_blank">2.1.1 Keyboard</a>
                             </li>
                           </ul>                        
                           <h3>Button Types</h3>
@@ -116,21 +130,22 @@
                       </h2>
                       <div id="collapseNew" class="accordion-collapse collapse" aria-labelledby="headingNew" style="">
                         <div class="accordion-body">
+                          <h3>Accessibility Considerations for Button Design in Figma</h3>
                           <ul>
-                            <li><strong>Clear Button Identification:</strong> Design buttons to visually communicate their functionality, ensuring they are easily distinguishable from other elements like links. Buttons should look like buttons, implying clickability through design cues such as shadows, gradients, or shapes that suggest interactivity.</li>
-                            <li><strong>Contrast Ratios:</strong> Ensure text and outline colors on buttons meet a minimum contrast ratio of 4.5:1 against their background to comply with <a href="https://www.w3.org/TR/WCAG21/#contrast-minimum" target="_blank">WCAG 2.1 AA guidelines for text and images of text (1.4.3 Contrast (Minimum))</a>. This guideline ensures that text on buttons is legible to users with visual impairments.</li>
-                            <li><strong>Touch Target Size:</strong> Design buttons with a minimum touch target size of 44x44 pixels to meet <a href="https://www.w3.org/WAI/WCAG21/Understanding/target-size.html" target="_blank">WCAG 2.1 guidelines for target size (2.5.5)</a>, ensuring that buttons are easily clickable or tappable, enhancing usability for all users, including those with mobility impairments.</li>
-                            <li><strong>Functional Distinction:</strong> If the component navigates to another page, it should be designed as a link and look like a link; if it performs an action (e.g., submission, expansion), it should be designed and function as a button. This distinction helps users understand the action they are about to take.</li>
+                            <li><strong>Distinguishable Buttons:</strong> Design buttons to be clearly distinguishable from links or non-interactive elements. Use shape, elevation, or texture in addition to color.</li>
+                            <li><strong>Descriptive Names for Action:</strong> Whether using text or icons, ensure the purpose of the button is clear and descriptive. Avoid ambiguity to make the interface intuitive for all users, including those using assistive technologies.</li>
+                            <li><strong>Contrast and Visibility:</strong> Ensure sufficient contrast between button icons (or text) and their background, adhering to a minimum contrast ratio of 4.5:1 for text/icons to background. For larger text/icons, a minimum ratio of 3:1 is required.</li>
                             <li><strong>State Design Examples:</strong> Provide clear design examples for different button states including:
-                                <ul>
-                                    <li>Default state: How the button appears normally.</li>
-                                    <li>Focus state: Visually distinct changes when the button is focused, which is crucial for keyboard navigation.</li>
-                                    <li>Disabled state: Indications that the button is not interactive, which could include lower opacity or a change in color that still meets contrast ratios.</li>
-                                    <li>Note: While hover states enhance user experience, focus and disabled states are essential for accessibility.</li>
-                                </ul>
+                              <ul>
+                                <li>Default state: How the button appears normally.</li>
+                                <li>Focus state: Visually distinct changes when the button is focused, which is crucial for keyboard navigation.</li>
+                                <li>Disabled state: Indications that the button is not interactive, which could include lower opacity or a change in color that still meets contrast ratios.</li>
+                                <li>Note: While hover states enhance user experience, focus and disabled states are essential for accessibility.</li>
+                              </ul>
                             </li>
                             <li><strong>Icons and Images on Buttons:</strong> When using icons or images on buttons, ensure that text alternatives are provided. This could be in the form of visible text on the button or through documentation for auditors and developers to implement <code>alt</code> text or <code>aria-label</code> attributes, ensuring the button’s function is clear to all users, including those using screen readers.</li>
                           </ul>
+                          <p>By incorporating these design considerations into Figma prototypes, designers can create more accessible and user-friendly interfaces that comply with key accessibility standards.</p>
                         </div>                        
                       </div>
                     </div>
@@ -156,18 +171,23 @@
                       </h2>
                       <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" style="">
                         <div class="accordion-body">
-                          <ul>
-                            <li><strong>Color Contrast:</strong> Check that text and visual elements of the pagination component have sufficient color contrast ratios as per WCAG guidelines to ensure legibility for users with visual impairments.</li>
-                            <li><strong>Visual Clarity of Interactive Elements:</strong> Verify that interactive elements such as page numbers, 'Previous', and 'Next' buttons are visually distinguishable from non-interactive elements and clearly indicate their purpose.</li>
-                            <li><strong>Disabled State Indication:</strong> Review designs for disabled states (e.g., 'Previous' button on the first page) to ensure they are clearly indicated as non-interactive while remaining visible to the user.</li>
-                            <li><strong>Active State Indication:</strong> Ensure that the current page number is visually distinct from other page numbers to clearly indicate the current position in the pagination sequence.</li>
-                            <li><strong>Consistency Across Pages:</strong> Assess the consistency of pagination design across different sections or pages of the product to ensure a predictable navigation experience for users.</li>
-                            <li><strong>Icons and Visual Indicators:</strong> Examine the use of icons or visual indicators (like arrows or ellipses) for their simplicity, recognizability, and whether they are accompanied by clear, descriptive labels or implied visual meanings.</li>
-                            <li><strong>Hover and Focus State Designs:</strong> Check for the presence of hover and focus state designs for interactive elements, recognizing that actual state changes will be verified in development.</li>
-                            <li><strong>Design for Large Sets of Pages:</strong> For designs accommodating large sets of pages, ensure visual indicators for page skipping (e.g., ellipses) are clear and understandable.</li>
+                          <h3>Conducting Accesibility Audit and Annotations</h3>
+                          <ol role="list">
+                            <li>Use this <a target="_blank" href="https://www.figma.com/file/txsKugjRb6ALXDK4uKGcp1/A11y-Annotation-Kit---HHMI?type=design&node-id=0-1&mode=design&t=c6seYgq1nqTYby7h-0">A11y Annotation Kit</a>.</li>
+                            <li>Identify all UI elements that perform actions.</li>
+                            <li>During phase one, ask questions if neccesary to understand functionality.</li>
+                            <li>During phase two in preparation for developer hand-off, add a sticky note annotation to define each button element as a button.</li>
+                            <li>Most buttons will require further annotating for the developer hand-off phase. Please see interactives and the How to Annotate for more detailed
+                              instructions on how to number the elements and write annotations specific for more complex components.
+                            </li>
+                            <li>If the button does not have a visible text label it is recommended to use the button annotation tag with the additional label to ensure the button 
+                              name will be communicated to the developer for programming.
+                            </li>
+                          </ol>
+                          <ul class="list-unstyled inline-flex-images" role="list">
+                            <li><img src="/assets/images/button.png" alt="button annotation tag"></li>
+                            <li><img src="/assets/images/button-with-label.png" alt="button annotation tag with label equals sign and the word foo in quotes"></li>
                           </ul>
-                          <p>Please refer to General > Structure > Buttons for detailed annotations.</p>
-                        </div>
                       </div>
                     </div>
                     <!-- Accordion Item Four - Accessibility Considerations Developer -->
@@ -185,23 +205,18 @@
                         </button>
                       </h2>
                       <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
-                        <div class="accordion-body">                            
+                        <div class="accordion-body">
+                          <h3>Accessibility Considerations for Implementing Buttons in HTML</h3>
+                          <p>For developers translating Figma designs into accessible HTML, adhering to WCAG criteria 1.3.1 (Info and Relationships) and 4.1.2 (Name, Role, Value) is crucial, especially for buttons, including those with icons:</p>
                           <ul>
-                            <li><strong>Semantic HTML:</strong> Use the <code>&lt;button&gt;</code> tag for action buttons to ensure accessibility and native browser support for keyboard interactions. For links that navigate, use the <code>&lt;a&gt;</code> tag and style it accordingly.
-                                <a href="https://www.w3.org/TR/html52/sec-forms.html#the-button-element" target="_blank">HTML5 Button Element</a>
-                            </li>
-                            <li><strong>Accessible Button States:</strong> Implement and test different states for buttons including default, hover, focus, and disabled states. Ensure the focus state is visually distinct to aid keyboard navigation, and use <code>aria-disabled="true"</code> for disabled buttons to convey state to assistive technologies.
-                            </li>
-                            <li><strong>Color Contrast:</strong> Verify that the text and border color contrasts of buttons meet or exceed the WCAG AA level requirements for minimum contrast ratios, ensuring text is legible and buttons are distinguishable.
-                                <a href="https://www.w3.org/TR/WCAG21/#contrast-minimum" target="_blank">WCAG 2.1 1.4.3 Contrast (Minimum)</a>
-                            </li>
-                            <li><strong>Button Appearance:</strong> Code buttons to be clearly identifiable as clickable elements distinct from other components. Utilize CSS to replicate the visual design provided in Figma, including dimensions, colors, and typography that make buttons appear as interactive elements.
-                            </li>
-                            <li><strong>Icons and Images on Buttons:</strong> If a button includes icons or images, ensure they are implemented with alternative text descriptions for screen readers. Use <code>alt</code> text for images and <code>aria-label</code> or <code>aria-labelledby</code> for icons.
-                            </li>
-                            <li><strong>Keyboard Accessibility:</strong> Test buttons to confirm they are fully functional with keyboard-only controls. This includes being able to focus, activate, and navigate between buttons using keyboard inputs such as the Tab key and Enter/Spacebar keys.
-                            </li>
-                          </ul>                                                
+                            <li><strong>Semantic HTML:</strong> Utilize the <code>&lt;button&gt;</code> element for buttons to ensure they are accessible and their role is understood by assistive technologies. Avoid using <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code> for interactive elements unless necessary.</li>
+                            <li><strong>Accessible Name for Icon Buttons:</strong> When a button is represented by an icon without visible text, use <code>aria-label</code> or <code>aria-labelledby</code> to provide an accessible name that describes the button's action, ensuring it is comprehensible to screen reader users.</li>
+                            <li><strong>Interactive States:</strong> Define clear visual and programmable states (hover, active, focus, disabled) for buttons using CSS and ARIA attributes to communicate the state changes to all users, including those using assistive technologies.</li>
+                            <li><strong>Contrast and Visibility:</strong> Ensure that buttons meet the minimum contrast ratio requirements against their background. Use CSS to achieve a contrast ratio of at least 4.5:1 for text and icons to background. Larger elements require a ratio of at least 3:1.</li>
+                            <li><strong>Focus Management:</strong> Implement proper focus management to ensure keyboard users can navigate through interactive elements seamlessly. Use <code>tabindex</code> where necessary and ensure custom buttons made from non-semantic elements are fully keyboard accessible.</li>
+                            <li><strong>Use of ARIA:</strong> Apply ARIA roles and properties judiciously to enhance accessibility when native HTML does not suffice. For instance, <code>aria-pressed</code> for toggle buttons to indicate their state.</li>
+                          </ul>
+                          <p>By focusing on these development practices, developers can ensure that the buttons in the web interface are accessible, providing a better user experience for everyone, including those relying on assistive technologies.</p>
                         </div>
                       </div>
                     </div>
@@ -224,28 +239,9 @@
                             <li><a href="https://inclusive-components.design/buttons/" target="_blank">Inclusive Components: Buttons</a></li>
                             <li><a href="https://smashingmagazine.com/2016/11/building-accessible-menu-systems/" target="_blank">Smashing Magazine: Building Accessible Menu Systems</a></li>
                             <li><a href="https://webaim.org/techniques/javascript/eventhandlers#button" target="_blank">WebAIM: JavaScript and Accessibility</a></li>
+                            <li><a href="https://a11y-dialog.netlify.app/" target="_blank">A11y Dialog Pattern</a></li>
                             <li><a href="https://uxdesign.cc/designing-accessible-buttons-and-button-components-456ea6b7f4ae" target="_blank">Designing Accessible Buttons and Button Components - UX Design</a></li>
                           </ul>                                                
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Accordion Item Six - WCAG Guideline References -->
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingSix">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                          WCAG Guideline References
-                        </button>
-                      </h2>
-                      <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix">
-                        <div class="accordion-body">
-                          <ul>
-                            <li><a href="https://www.w3.org/TR/WCAG21/#info-and-relationships" target="_blank">WCAG 2.1 Recommendation 1.3.1 Info and Relationships</a></li>
-                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html" target="_blank">WCAG 2.1 Understanding 1.3.1 Info and Relationships</a></li>
-                            <li><a href="https://www.w3.org/TR/WCAG21/#keyboard-accessible" target="_blank">WCAG 2.1 Recommendation 2.1.1 Keyboard</a></li>
-                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html" target="_blank">WCAG 2.1 Understanding 2.1.1 Keyboard</a></li>
-                            <li><a href="https://www.w3.org/TR/WCAG21/#name-role-value" target="_blank">WCAG 2.1 Recommendation 4.1.2 Name, Role, Value</a></li>
-                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" target="_blank">WCAG 2.1 Understanding 4.1.2 Name, Role, Value</a></li>
-                          </ul>
                         </div>
                       </div>
                     </div>
@@ -265,7 +261,7 @@
     <script>
       $(document).ready(function () {
           // Determine the path relative to the root directory
-          var rootRelativePath = "../../sidebar-navigation.html";
+          var rootRelativePath = "../sidebar-navigation.html";
   
           // Use jQuery to load the sidebar-navigation.html file
           $("#sidebar-container").load(rootRelativePath);
