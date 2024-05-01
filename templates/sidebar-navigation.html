@@ -37,10 +37,6 @@
                                 <li><a href="/templates/general/structure/landmarks.html" class="link-dark rounded">Landmarks</a></li>
                                 <li><a href="/templates/general/structure/headings.html" class="link-dark rounded">Headings</a></li>
                                 <li><a href="/templates/general/structure/lists.html" class="link-dark rounded">Lists</a></li>
-                                <li><a href="/templates/general/structure/tables.html" class="link-dark rounded">Tables</a></li>
-                                <li><a href="/templates/general/structure/buttons.html" class="link-dark rounded">Buttons</a></li>
-                                <li><a href="/templates/general/structure/links.html" class="link-dark rounded">Links</a></li>
-                                <li><a href="/templates/general/structure/forms.html" class="link-dark rounded">Forms</a></li>
                             </ul>
                         </div>
                     </li>                               
@@ -86,6 +82,10 @@
                                 <li><a href="/templates/general/interactives/keyboard.html" class="link-dark rounded">Keyboard</a></li>
                                 <li><a href="/templates/general/interactives/focus-visible.html" class="link-dark rounded">Focus Visible</a></li>
                                 <li><a href="/templates/general/interactives/focus-order.html" class="link-dark rounded">Focus Order</a></li>
+                                <li><a href="/templates/general/interactives/on-focus.html" class="link-dark rounded">On Focus</a></li>
+                                <li><a href="/templates/general/interactives/on-input.html" class="link-dark rounded">On Input</a></li>
+                                <li><a href="/templates/general/interactives/on-input.html" class="link-dark rounded">Dynamic Changes</a></li>
+                                <li><a href="/templates/general/interactives/hover-or-focus.html" class="link-dark rounded">Content on Hover or Focus</a></li>
                             </ul>
                         </div>
                     </li>
@@ -114,56 +114,24 @@
             </button>
             <div class="collapse" id="dashboard-collapse">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ml-1r">
-                    <!-- Navigation and Wayfinding -->
-                    <li class="mb-1">
-                        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-                                data-bs-target="#navigation-wayfinding-collapse" aria-expanded="false" 
-                                aria-controls="navigation-wayfinding-collapse">
-                            Wayfinding
-                        </button>
-                        <div class="collapse" id="navigation-wayfinding-collapse">
-                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="/templates/components/wayfinding/navigation.html" class="link-dark rounded">Navigation</a></li>
-                                <li><a href="/templates/components/wayfinding/breadcrumb.html" class="link-dark rounded">Breadcrumb</a></li>
-                                <li><a href="/templates/components/wayfinding/pagination.html" class="link-dark rounded">Pagination</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <!-- Basic Elements -->
-                    <li class="mb-1">
-                        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-                                data-bs-target="#basic-elements-list" aria-expanded="false" 
-                                aria-controls="basic-elements-list">
-                            Basic Elements
-                        </button>
-                        <div class="collapse" id="basic-elements-list">
-                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="/templates/components/basic/accordion.html" class="link-dark rounded">Accordion</a></li>
-                                <li><a href="/templates/components/basic/alert.html" class="link-dark rounded">Alert</a></li>
-                                <li><a href="#" class="link-dark rounded">Avatar</a></li>
-                                <li><a href="#" class="link-dark rounded">Badge</a></li>
-                                <li><a href="/templates/components/basic/buttons.html" class="link-dark rounded">Buttons</a></li>
-                                <li><a href="#" class="link-dark rounded">Dropdowns</a></li>
-                                <li><a href="#" class="link-dark rounded">Progress</a></li>
-                                <li><a href="#" class="link-dark rounded">Media Objects</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <!-- Forms -->
-                    <li class="mb-1">
-                        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-                                data-bs-target="#forms-collapse" aria-expanded="false" 
-                                aria-controls="forms-collapse">
-                            Forms
-                        </button>
-                        <div class="collapse" id="forms-collapse">
-                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="#" class="link-dark rounded">Form Groups</a></li>
-                                <li><a href="#" class="link-dark rounded">File Inputs</a></li>
-                                <li><a href="#" class="link-dark rounded">Login/Register Forms</a></li>
-                            </ul>
-                        </div>
-                    </li>
+                    <li><a href="/templates/components/accordion.html" class="link-dark rounded">Accordion</a></li>
+                    <li><a href="/templates/components/alert.html" class="link-dark rounded">Alert</a></li>
+                    <li><a href="#" class="link-dark rounded">Avatar</a></li>
+                    <li><a href="#" class="link-dark rounded">Badge</a></li>
+                    <li><a href="/templates/components/breadcrumb.html" class="link-dark rounded">Breadcrumb</a></li>
+                    <li><a href="/templates/components/button.html" class="link-dark rounded">Button</a></li>
+                    <li><a href="#" class="link-dark rounded">Dropdown</a></li>
+                    <li><a href="#" class="link-dark rounded">File Input</a></li>
+                    <li><a href="/templates/components/forms.html" class="link-dark rounded">Form</a></li>
+                    <li><a href="#" class="link-dark rounded">Form Group</a></li>
+                    <li><a href="/templates/components/links.html" class="link-dark rounded">Link</a></li>
+                    <li><a href="#" class="link-dark rounded">Media Object</a></li>
+                    <li><a href="/templates/components/navigation.html" class="link-dark rounded">Navigation</a></li>
+                    <li><a href="/templates/components/pagination.html" class="link-dark rounded">Pagination</a></li>
+                    <li><a href="#" class="link-dark rounded">Progress</a></li>
+                    <li><a href="/templates/components/tables.html" class="link-dark rounded">Table</a></li> 
+                    <li><a href="#" class="link-dark rounded">Tooltip</a></li>
+                    <li><a href="#" class="link-dark rounded">Toggletip</a></li>                
                 </ul>
             </div>
         </li>
@@ -190,37 +158,65 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-// Sidebar Focus Management
-$(document).ready(function() {
-    // Get current URL path
-    var currentPath = window.location.pathname;
+  // Sidebar Focus Management
+  $(window).on('load', function() {
+      console.log('Window loaded');
 
-    // Find the matching link in the sidebar and set focus
-    $('.sidebar a').each(function() {
-        var linkPath = $(this).attr('href');
-        // Check if the link matches the current URL path
-        if (currentPath.endsWith(linkPath)) {
-            $(this).focus(); // Set focus on the matching link
-            $(this).attr('aria-current', 'page'); // Set ARIA current attribute
+      // Get current URL path without query or hash
+      var currentPath = window.location.pathname;
+      console.log('Current Path:', currentPath);
 
-            // Append an icon to indicate the current page
-            $(this).append(' <i class="bi bi-caret-left-fill text-success" aria-hidden="true"></i>');
+      // Find the matching link in the sidebar
+      $('#sidebar-nav a').each(function() {
+          var hrefValue = $(this).attr('href');
+          var linkPath = new URL(hrefValue, window.location.origin).pathname;
+          console.log('Testing link with path:', linkPath);
 
-            // Ensure all parent collapsible elements are expanded
-            $(this).parents('.collapse').each(function() {
-                if (!$(this).hasClass('show')) {
-                    $(this).collapse('show'); // Use Bootstrap's collapse method to show the element
-                    // Update the 'aria-expanded' attribute of the associated toggle button
-                    var targetId = $(this).attr('id');
-                    $('button[data-bs-target="#' + targetId + '"]').attr('aria-expanded', 'true').removeClass('collapsed');
-                }
-            });
+          // Check if the normalized current path matches the normalized link path
+          if (currentPath === linkPath) {
+              console.log('Match found for link:', hrefValue);
 
-            return false; // Break the loop once the matching link is found
-        }
-    });
-});
+              // Set focus and ARIA current attribute on the matching link
+              // Using setTimeout to ensure that focus is called after other document ready scripts
+              setTimeout(() => $(this).focus(), 0);
+
+              // Add aria-current attribute
+              $(this).attr('aria-current', 'page');
+
+              // Check if icon exists, if not append it
+              if ($(this).find('i.bi-caret-left-fill').length === 0) {
+                  $(this).append('<i class="bi bi-caret-left-fill text-success" aria-hidden="true"></i>');
+              }
+
+              // Ensure all parent collapsible elements are expanded
+              $(this).parents('.collapse').each(function() {
+                  var targetId = $(this).attr('id');
+                  if (!$(this).hasClass('show')) {
+                      $(this).addClass('show');
+                      $('button[data-bs-target="#' + targetId + '"]')
+                          .attr('aria-expanded', 'true')
+                          .removeClass('collapsed');
+                      console.log('Expanding and setting aria-expanded for:', targetId);
+                  }
+              });
+
+              // Scroll the focused element into view if necessary
+              var elementOffset = $(this).offset().top;
+              if (elementOffset > $(window).height()) {
+                  console.log('Scrolling to focused element');
+                  $('html, body').animate({
+                      scrollTop: elementOffset
+                  }, 1000);
+              }
+
+              return false; // Exit the loop after the first match
+          }
+      });
+  });
 </script>
+
+
+
 
 <!-- Comment out for local development and enable for production -->
 <script>
@@ -251,4 +247,3 @@ $(document).ready(function() {
         });
     });
 </script>
-

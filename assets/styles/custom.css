@@ -8,7 +8,9 @@ a:focus-visible {
   outline-offset: 2px !important;
   box-shadow: none !important;
 }
-
+input {
+  border-color: #777 !important;
+}
 /* Color Variables */
 :root {
     --primary-teal: #058d96;
@@ -309,4 +311,25 @@ p.dev-tag {
 /* Breadcrumb */
 .breadcrumb li a {
   text-decoration: none !important;
+}
+
+/* Form Component */
+.example-form-one {
+  margin: 0px 10px;
+  background-color: #DFDFDF;
+  border: 1px solid #058d96;
+  border-radius: .25rem;
+  padding: 1rem;
+}
+.form-text {
+  color: #212529;
+}
+.form-control:focus, .form-check-input:focus {
+  outline: 1px solid black !important;
+  outline-offset: 2px !important;
+}
+
+/* Images */
+.example-img {
+  max-width: 320px;
 }

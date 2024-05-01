@@ -40,12 +40,30 @@
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                         <div class="accordion-body">
-                          <p><strong>1.1.1 Non-text Content:</strong> All meaningful non-text content (images, video, audio, SVGs, icons and other content that isn't conveyed by text) 
+                          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html" target="_blank" rel="noopener noreferrer">1.1.1 Non-text Content</a>
+                            All meaningful non-text content (images, video, audio, SVGs, icons and other content that isn't conveyed by text) 
                             needs to have alt text that provides the same information found in the content.</p>
-                          <p>Every <code>&lt;img&gt;</code> you add to your site needs to have an alt attribute. If the image is informational, set the alt equal to a descriptive alternative for that image.</p>
-                          <p>If the image is decorative or redundant to adjacent text, set <code>alt=""</code>, which conveys to assistive technology users that the image isn't necessary for understanding the page. 
-                            Purely decorative content (for example, a dividing line between a navigation bar and content) does not require alternative text.</p>
+                          <p><strong>Every <code>&lt;img&gt;</code> must have an alt attribute.</strong></p>
+                          <h3>Meaningful Image Example</h3>
+                          <img src="/a11y-annotations/assets/images/biome-viewer-thumb.webp"/ alt="Digital globe highlighting North America with shaded regions indicating varying impacts across the continent, suggesting a study of environmental or climatic changes at different times." class="example-img">
+                          <p class="mt-3">If the image is informational/meaningful, set the <code>alt</code> equal to a descriptive alternative for that image. Alt text for an image MUST describe the content and function of the image succinctly, including relevant details or context that are essential to understanding the webpage.</p>
                           <p>Avoid using generic strings like photo, image, or icon as alt values, as they don't communicate valuable content to the user. Be as descriptive as possible.</p>                      
+                          <h3>Decorative Image Example</h3>
+                          <div class="d-flex" style="width: 320px;">
+                            <img src="/a11y-annotations/assets/images/storylines.webp"/ alt="" class="example-img  mx-auto">
+                          </div>
+                          <p class="mt-3">If the image is decorative or redundant to adjacent text, set <code>alt=""</code>, which conveys to assistive technology users that the image isn't necessary for understanding the page. 
+                            Purely decorative content (for example, a dividing line between a navigation bar and content) does not require alternative text.</p>
+                          <h3>Complex Image Example</h3>
+                          <img src="/assets/images/photosynthesis.jpg"/ alt="Photosynthesis Process" aria-describedby="photosynthesis-desc" class="example-img">
+                          <details id="photosynthesis-desc">
+                            <summary>Photosynthesis Process</summary>
+                            Illustration of the process of photosynthesis in a tree. The sun is depicted shining on the tree, which uses the energy to convert water absorbed from the ground and carbon dioxide from the air into carbohydrates and oxygen. The transformation is shown with arrows: water molecules and carbon dioxide entering the tree, and carbohydrates, depicted as clusters of colorful atoms, along with oxygen molecules, are shown as the output. This visual representation highlights the tree's role in producing vital oxygen and storing energy in the form of carbohydrates through photosynthesis.
+                          </details>
+                          <p class="mt-3">Images that are too complex to be fully described in a short text alternative MUST have their purpose described using alt text. Equivalent text alternatives to complex images MUST be provided in context or on a separate page (linked and/or referenced via aria-describedby property).
+                          </p>
+                           <p><strong>Need More Guidance?</strong> For more detailed guideline descriptions for images please check out
+                          <a href="https://dequeuniversity.com/checklists/web/guide" target="_blank">Deque's accessibility developer's guide</a>.</p>                         
                         </div>
                       </div>
                     </div>
@@ -214,7 +232,7 @@
                       </div>
                     </div>
                     <!-- Accordion Item Five -->
-                    <div class="accordion-item">
+                    <!-- <div class="accordion-item">
                       <h2 class="accordion-item" id="headingFive">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
                         WCAG Guideline References
@@ -230,7 +248,7 @@
                           </ul>                          
                         </div>
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                   <!-- End Accordion -->
                 </main>
