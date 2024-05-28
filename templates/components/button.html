@@ -188,6 +188,23 @@
                             <li><img src="/assets/images/button.png" alt="button annotation tag"></li>
                             <li><img src="/assets/images/button-with-label.png" alt="button annotation tag with label equals sign and the word foo in quotes"></li>
                           </ul>
+                          <div class="d-inline-block border border-dark p-2 rounded">
+                            <div class="d-flex flex-row">
+                              <div class="text-to-copy">
+                                <h3>Button</h3>
+                                <ul role="list">
+                                  <li>Button must be in a <code>&lt;button&gt;</code> element or the element used such as a <code>&lt;div&gt;</code> must have <code>role="button"</code> and <code>tabindex="0"</code> as an equivalent with keyboard event handlers ensuring equal functionality for mouse, keyboard and touch users.</li>
+                                  <li>Buttons must have an accessible name. Use text, img alt, aria-label, aria-labelledby or add sr-only text.</li>
+                                  <li>What action does the button perform? Depending on the action the button may require additional aria - such as <code>aria-haspopup</code> or <code>aria-expanded</code> etc.</li>
+                                </ul>                              
+                              </div>
+                              <div>
+                                  <button class="ml-1r btn copy-btn">
+                                    <i class="bi bi-clipboard-heart-fill" aria-hidden="true"></i> Copy
+                                  </button>
+                              </div>
+                            </div>
+                          </div>  
                       </div>
                     </div>
                     <!-- Accordion Item Four - Accessibility Considerations Developer -->

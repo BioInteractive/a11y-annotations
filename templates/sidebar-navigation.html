@@ -84,8 +84,9 @@
                                 <li><a href="/templates/general/interactives/focus-order.html" class="link-dark rounded">Focus Order</a></li>
                                 <li><a href="/templates/general/interactives/on-focus.html" class="link-dark rounded">On Focus</a></li>
                                 <li><a href="/templates/general/interactives/on-input.html" class="link-dark rounded">On Input</a></li>
-                                <li><a href="/templates/general/interactives/on-input.html" class="link-dark rounded">Dynamic Changes</a></li>
+                                <li><a href="/templates/general/interactives/dynamic-changes.html" class="link-dark rounded">Dynamic Changes</a></li>
                                 <li><a href="/templates/general/interactives/hover-or-focus.html" class="link-dark rounded">Content on Hover or Focus</a></li>
+                                <li><a href="/templates/general/interactives/touch-target.html" class="link-dark rounded">Target Size</a></li>
                             </ul>
                         </div>
                     </li>
@@ -120,7 +121,8 @@
                     <li><a href="#" class="link-dark rounded">Badge</a></li>
                     <li><a href="/templates/components/breadcrumb.html" class="link-dark rounded">Breadcrumb</a></li>
                     <li><a href="/templates/components/button.html" class="link-dark rounded">Button</a></li>
-                    <li><a href="#" class="link-dark rounded">Dropdown</a></li>
+                    <li><a href="/templates/components/dialog-modal.html" class="link-dark rounded">Dialog (Modal)</a></li>
+                    <li><a href="/templates/components/disclosure.html" class="link-dark rounded">Dropdown / Disclosure</a></li>
                     <li><a href="#" class="link-dark rounded">File Input</a></li>
                     <li><a href="/templates/components/forms.html" class="link-dark rounded">Form</a></li>
                     <li><a href="#" class="link-dark rounded">Form Group</a></li>
@@ -130,8 +132,9 @@
                     <li><a href="/templates/components/pagination.html" class="link-dark rounded">Pagination</a></li>
                     <li><a href="#" class="link-dark rounded">Progress</a></li>
                     <li><a href="/templates/components/tables.html" class="link-dark rounded">Table</a></li> 
-                    <li><a href="#" class="link-dark rounded">Tooltip</a></li>
-                    <li><a href="#" class="link-dark rounded">Toggletip</a></li>                
+                    <li><a href="/templates/components/tabs.html" class="link-dark rounded">Tabs</a></li>
+                    <li><a href="/templates/components/tooltip.html" class="link-dark rounded">Tooltip</a></li>
+                    <li><a href="/templates/components/toggletip.html" class="link-dark rounded">Toggletip</a></li>                
                 </ul>
             </div>
         </li>
@@ -160,21 +163,17 @@
 <script>
   // Sidebar Focus Management
   $(window).on('load', function() {
-      console.log('Window loaded');
 
       // Get current URL path without query or hash
       var currentPath = window.location.pathname;
-      console.log('Current Path:', currentPath);
 
       // Find the matching link in the sidebar
       $('#sidebar-nav a').each(function() {
           var hrefValue = $(this).attr('href');
           var linkPath = new URL(hrefValue, window.location.origin).pathname;
-          console.log('Testing link with path:', linkPath);
 
           // Check if the normalized current path matches the normalized link path
           if (currentPath === linkPath) {
-              console.log('Match found for link:', hrefValue);
 
               // Set focus and ARIA current attribute on the matching link
               // Using setTimeout to ensure that focus is called after other document ready scripts
@@ -196,14 +195,12 @@
                       $('button[data-bs-target="#' + targetId + '"]')
                           .attr('aria-expanded', 'true')
                           .removeClass('collapsed');
-                      console.log('Expanding and setting aria-expanded for:', targetId);
                   }
               });
 
               // Scroll the focused element into view if necessary
               var elementOffset = $(this).offset().top;
               if (elementOffset > $(window).height()) {
-                  console.log('Scrolling to focused element');
                   $('html, body').animate({
                       scrollTop: elementOffset
                   }, 1000);
