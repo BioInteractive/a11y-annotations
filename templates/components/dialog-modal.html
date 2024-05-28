@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog (Modal)</title>
+
+    <!-- Link to Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <!-- Link to Custom Stylesheet -->
+    <link rel="stylesheet" href="../../../../assets/styles/custom.css">
+    <!-- Link to Custom Stylesheet Production -->
+    <link rel="stylesheet" href="../../../../../assets/styles/custom.css">
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/a11y-annotations/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/a11y-annotations/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/a11y-annotations/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/a11y-annotations/assets/images/site.webmanifest">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+</head>
+<body>
+  <header class="d-block px-3 py-2 shadow">
+    <img src="https://www.biointeractive.org/themes/gesso/images/hhmi-logo.svg" alt="hhmi Biointeractive logo" style="max-width: 320px;">
+  </header>
+  <div class="container-fluid">
+      <div class="row">
+          <!-- Includes the Sidebar Navigation using jQuery -->
+          <div id="sidebar-container" class="col-md-2 border-end"></div>
+
+          <!-- Main Content -->
+          <main class="col-md-10">
+            <!-- A11y Live Region -->
+            <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
+            <div class="container-xxl bd-gutter mt-3">
+                <h1>Dialog (Modal)</h1>
+                <!-- Begin Accordion -->
+                <div class="accordion" id="accordionOpen">
+                    <!-- Accordion Item One -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          WCAG Success Criteria Requirements and Examples
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
+                        <div class="accordion-body">
+                          <ul>
+                            <li><strong>Proper Use of ARIA Roles and Properties:</strong> Implement <code>role="dialog"</code> on dialog components to ensure they are recognized as modal dialogues by assistive technologies, which aids in accessibility management.
+                                <a href="https://www.w3.org/TR/wai-aria-1.1/#dialog" target="_blank">ARIA: Dialog Role</a>
+                            </li>
+                            <li><strong>Focus Management:</strong> Ensure that focus is managed correctly by setting initial focus on the first focusable element or the dialog container, and trapping focus within the dialog while it is open. This should adhere to the WCAG 2.4.3 Focus Order to ensure a logical sequence.
+                                <a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html" target="_blank">2.4.3 Focus Order</a>
+                            </li>
+                            <li><strong>Keyboard Interaction:</strong> Dialogs must be fully operable via keyboard, including the ability to open, navigate within, and close them using standard keyboard commands, ensuring compliance with WCAG 2.1.1 Keyboard Accessible.
+                                <a href="https://www.w3.org/TR/wai-aria-practices-1.1/examples/dialog-modal/dialog.html" target="_blank">ARIA: Dialog Example</a>
+                            </li>
+                            <li><strong>ARIA Attributes:</strong> Use <code>aria-modal="true"</code> to enhance dialog modality, and <code>aria-labelledby</code> for associating the dialog with its label, ensuring the role, name, and value are correctly used as per WCAG 4.1.2.
+                                <a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" target="_blank">4.1.2 Name, Role, Value</a>
+                            </li>
+                            <li><strong>Dismissible:</strong> Ensure dialogs covering other content are dismissible using the ESC key, aligning with accessible design practices and enhancing user control.
+                                <a href="https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html" target="_blank">1.4.13 Content on Hover or Focus</a>
+                            </li>
+                          </ul>                                                                                          
+                          <h3>Dialog (Modal) Examples</h3>
+                          <!-- Start Examples -->
+                          <!-- Button trigger modal -->
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLive" id="openModalButton">
+                            Launch modal
+                          </button>
+                          <!-- Modal -->
+                          <div class="modal fade" id="exampleModalLive" tabindex="-1" role="dialog" aria-labelledby="exampleModalLiveLabel" aria-hidden="true" aria-modal="true" style="display: none;">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h1 class="modal-title" id="exampleModalLiveLabel">Modal Example</h1>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <p>Woohoo, you're reading this text in a modal!</p>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal" id="cancel-btn">Cancel</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>                          
+                          <!-- End Example -->
+
+                          <div class="space-large"></div>
+
+                          <!-- Table -->
+                          <h2 id="rps_label">Role, Property, State, and Tabindex Attributes</h2>
+                          <div class="table-wrap">
+                            <table aria-labelledby="rps_label" class="table table-light table-striped table-bordered">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Role</th>
+                                  <th scope="col">Attribute</th>
+                                  <th scope="col">Element</th>
+                                  <th scope="col">Usage</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr data-test-id="dialog-role">
+                                  <th scope="row"><code>dialog</code></th>
+                                  <td></td>
+                                  <td><code>div</code></td>
+                                  <td>Identifies the element that serves as the dialog container.</td>
+                                </tr>
+                                <tr data-test-id="aria-labelledby">
+                                  <td></td>
+                                  <th scope="row">
+                                    <code>aria-labelledby=<q>IDREF</q></code>
+                                  </th>
+                                  <td><code>div</code></td>
+                                  <td>Gives the dialog an accessible name by referring to the element that provides the dialog title.</td>
+                                </tr>
+                                <tr data-test-id="aria-describedby">
+                                  <td></td>
+                                  <th scope="row">
+                                    <code>aria-describedby=<q>IDREF</q></code>
+                                  </th>
+                                  <td><code>div</code></td>
+                                  <td>
+                                    <ul>
+                                      <li>Gives the dialog an accessible description by referring to the dialog content that describes the primary message or purpose of the dialog.</li>
+                                      <li>
+                                        Used in three of the four dialogs included in the example.
+                                        See the above accessibility features section for an explanation.
+                                      </li>
+                                    </ul>
+                                  </td>
+                                </tr>
+                                <tr data-test-id="aria-modal">
+                                  <td></td>
+                                  <th scope="row">
+                                    <code>aria-modal=<q>true</q></code>
+                                  </th>
+                                  <td><code>div</code></td>
+                                  <td>Tells assistive technologies that the windows underneath the current dialog are not available for interaction (inert).</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>           
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Inserted -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingNew">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNew" aria-expanded="false" aria-controls="collapseNew">
+                          <!-- Designer Tag -->
+                          Accessibility Considerations
+                        <span class="dev-tag ms-3">
+                          Designer 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M12 2H8.5C7.57174 2 6.6815 2.36875 6.02513 3.02513C5.36875 3.6815 5 4.57174 5 5.5C5 6.42826 5.36875 7.3185 6.02513 7.97487C6.6815 8.63125 7.57174 9 8.5 9M12 2V9M12 2H15.5C15.9596 2 16.4148 2.09053 16.8394 2.26642C17.264 2.44231 17.6499 2.70012 17.9749 3.02513C18.2999 3.35013 18.5577 3.73597 18.7336 4.16061C18.9095 4.58525 19 5.04037 19 5.5C19 5.95963 18.9095 6.41475 18.7336 6.83939C18.5577 7.26403 18.2999 7.64987 17.9749 7.97487C17.6499 8.29988 17.264 8.55769 16.8394 8.73358C16.4148 8.90947 15.9596 9 15.5 9M12 9H8.5M12 9H15.5M12 9V16M8.5 9C7.57174 9 6.6815 9.36875 6.02513 10.0251C5.36875 10.6815 5 11.5717 5 12.5C5 13.4283 5.36875 14.3185 6.02513 14.9749C6.6815 15.6313 7.57174 16 8.5 16M15.5 9C15.0404 9 14.5852 9.09053 14.1606 9.26642C13.736 9.44231 13.3501 9.70012 13.0251 10.0251C12.7001 10.3501 12.4423 10.736 12.2664 11.1606C12.0905 11.5852 12 12.0404 12 12.5C12 12.9596 12.0905 13.4148 12.2664 13.8394C12.4423 14.264 12.7001 14.6499 13.0251 14.9749C13.3501 15.2999 13.736 15.5577 14.1606 15.7336C14.5852 15.9095 15.0404 16 15.5 16C15.9596 16 16.4148 15.9095 16.8394 15.7336C17.264 15.5577 17.6499 15.2999 17.9749 14.9749C18.2999 14.6499 18.5577 14.264 18.7336 13.8394C18.9095 13.4148 19 12.9596 19 12.5C19 12.0404 18.9095 11.5852 18.7336 11.1606C18.5577 10.736 18.2999 10.3501 17.9749 10.0251C17.6499 9.70012 17.264 9.44231 16.8394 9.26642C16.4148 9.09053 15.9596 9 15.5 9ZM8.5 16C7.57174 16 6.6815 16.3687 6.02513 17.0251C5.36875 17.6815 5 18.5717 5 19.5C5 20.4283 5.36875 21.3185 6.02513 21.9749C6.6815 22.6313 7.57174 23 8.5 23C9.42826 23 10.3185 22.6313 10.9749 21.9749C11.6313 21.3185 12 20.4283 12 19.5V16M8.5 16H12" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </span>
+                        </button>
+                      </h2>
+                      <div id="collapseNew" class="accordion-collapse collapse" aria-labelledby="headingNew" style="">
+                        <div class="accordion-body">
+                          <ul>
+                            <li><strong>Trigger and Close Button Design:</strong> Display the dialog trigger button in its static state and after activation. Ensure that the close and cancel buttons within the dialog are clearly visible and designed consistently with other buttons in the application. This helps with user familiarity and expectation management.</li>
+                            <li><strong>Dialog Visibility:</strong> Design the dialog to stand out visually from other content. Use layering and shadows to indicate that the dialog is active and the content behind it is inactive. This visual differentiation helps users focus on the dialog content without distractions.</li>
+                            <li><strong>Content Accessibility:</strong> The content beneath the dialog should be made inaccessible while the dialog is open, typically by using the <code>inert</code> attribute or equivalent techniques. This prevents users from interacting with background content and ensures the dialog remains the focus of interaction.</li>
+                            <li><strong>Consistent Interaction:</strong> Include visible mechanisms such as a 'cancel' or 'close' button within the dialog to allow easy dismissal. These controls should be prominently placed and easy to interact with, facilitating accessibility for users with limited dexterity or visibility.</li>
+                            <li><strong>Layering and Focus Management:</strong> Show examples of the dialog in an open state and ensure it is layered appropriately over other content. Describe how focus is managed, e.g., focus should shift to the dialog immediately when opened and should trap focus until the dialog is dismissed. This prevents loss of focus and disorientation for users relying on keyboard navigation.</li>
+                            <li><strong>Visual Consistency:</strong> Maintain consistency in the design of dialog elements with other UI components. Use familiar visual cues such as borders, spacing, and typography to enhance readability and usability.</li>
+                            <li><strong>Non-reliance on Color Alone:</strong> Ensure that critical information in the dialog is not conveyed by color alone. Use text labels, icons, or patterns to communicate important messages, making the dialog accessible to users with color vision deficiencies.</li>
+                          </ul>                                      
+                        </div>                                                                      
+                      </div>
+                    </div>
+                    <!-- Accordion Item Two -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          How to Test and Annotate
+                          <!-- Auditor Tag -->
+                        <span class="dev-tag ms-3">
+                          Auditor 
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                              <path d="M14 7H19.6404C20.0877 7 20.3113 7 20.4421 7.09404C20.5562 7.17609 20.6306 7.30239 20.6469 7.442C20.6656 7.602 20.5569 7.79751 20.3397 
+                              8.18851L18.9936 10.6115C18.9148 10.7533 18.8755 10.8242 18.86 10.8993C18.8463 10.9657 18.8463 11.0343 18.86 11.1007C18.8755 11.1758 18.9148 
+                              11.2467 18.9936 11.3885L20.3397 13.8115C20.5569 14.2025 20.6656 14.398 20.6469 14.558C20.6306 14.6976 20.5562 14.8239 20.4421 14.906C20.3113 
+                              15 20.0877 15 19.6404 15H12.6C12.0399 15 11.7599 15 11.546 14.891C11.3578 14.7951 11.2049 14.6422 11.109 14.454C11 14.2401 11 13.9601 11 
+                              13.4V11M4 21L4 4M4 11H12.4C12.9601 11 13.2401 11 13.454 10.891C13.6422 10.7951 13.7951 10.6422 13.891 10.454C14 10.2401 14 9.96005 14 9.4V4.6C14 
+                              4.03995 14 3.75992 13.891 3.54601C13.7951 3.35785 13.6422 3.20487 13.454 3.10899C13.2401 3 12.9601 3 12.4 3H5.6C5.03995 3 4.75992 3 4.54601 
+                              3.10899C4.35785 3.20487 4.20487 3.35785 4.10899 3.54601C4 3.75992 4 4.03995 4 4.6V11Z" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+                      </span> 
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" style="">
+                        <div class="accordion-body">
+                          <p>When auditing a Dialog Modal component within a Figma design, please review the documentation provided by content leads and the designer's implementation to ensure consistency and alignment with accessibility standards.</p>
+                          <p>During the audit of the Dialog Modal component in Figma, consider the following accessibility issues to flag any discrepancies for the designer's review:</p>
+                          <ul>
+                            <li><strong>Button Appearance:</strong> Verify that all buttons, including those to close or cancel the dialog, are visually identifiable as buttons. Check for visual consistency with other interactive elements within the application.</li>
+                            <li><strong>Contrast Requirements:</strong> Ensure that buttons and text within the dialog meet the minimum contrast ratio requirement of 4.5:1 for normal text to guarantee legibility for users with visual impairments.</li>
+                            <li><strong>Dialog Closure Mechanisms:</strong> Confirm that there are mechanisms, such as a close or cancel button, clearly provided to allow users to dismiss the dialog. These should be easily accessible and operable.</li>
+                            <li><strong>Dialog State Visibility:</strong> Check that the modal dialog is available in both its closed and open states within the design. If the open state is not displayed, make a note to the designer to include this in their Figma frames.</li>
+                            <li><strong>Consistency and Usability:</strong> Review the dialog for consistent use of UI components like buttons and check that all functional elements such as close mechanisms are in place and conform to recognized patterns.</li>
+                            <li><strong>Non-reliance on Color:</strong> Ensure that no critical information within the dialog is conveyed by color alone. All necessary information should be accessible through text or other non-color dependent means.</li>
+                          </ul>
+                          <div class="d-inline-block border border-dark p-2 rounded">
+                            <div class="d-flex flex-row">
+                              <div class="text-to-copy">
+                                <h3>Dialog (Modal)</h3>
+                                <h4>Dialog name, role and value:</h4>
+                                <ul>
+                                  <li><strong>Role:</strong> Must have <code>role="dialog"</code> on the parent container.</li>
+                                  <li><strong>Aria-modal:</strong> Must have <code>aria-modal="true"</code> on the parent container.</li>
+                                  <li><strong>Header:</strong> Should have an <code>H1</code> element with a unique ID attribute. "_____" should be the <code>&lt;h1&gt;</code>.</li>
+                                  <li><strong>Accessible Name:</strong> Must have an accessible name. It is preferable to use <code>aria-labelledby</code> equal to the <code>H1</code>'s ID on the parent container instead of <code>aria-label</code>.</li>
+                                </ul>
+
+                                <h4>Dialog Trigger Button:</h4>
+                                <ul>
+                                  <li><strong>Element:</strong> Must be a <code>&lt;button&gt;</code> or have <code>role="button"</code> and <code>tabindex="0"</code> with event handlers.</li>
+                                  <li><strong>Accessible Name:</strong> Must have an accessible name. The name should include a meaningful icon and additional sr-only text describing which glossary definition will be opened.</li>
+                                  <li><strong>Aria-haspopup:</strong> Must have <code>aria-haspopup="dialog"</code> on the triggering element or include screen-reader only text in the element indicating it will open a dialog.</li>
+                                </ul>
+
+                                <h4>Dialog Focus:</h4>
+                                <ul>
+                                  <li><strong>Focus on Launch:</strong> Must get focus when launched. Send focus to the container with the <code>role="dialog"</code> that has a <code>tabindex="-1"</code>.</li>
+                                  <li><strong>Focus Trap:</strong> Must trap focus within the dialog while open.</li>
+                                  <li><strong>Escape Key:</strong> Additionally, allow closing the dialog by pressing the Escape key (usability enhancement).</li>
+                                  <li><strong>Return Focus:</strong> When the dialog is closed, return focus to the element which triggered the dialog, unless the element has been removed from the page, in which case place focus on the next logical element.</li>
+                                </ul>                  
+                              </div>
+                              <div>
+                                  <button class="ml-1r btn copy-btn">
+                                    <i class="bi bi-clipboard-heart-fill" aria-hidden="true"></i> Copy
+                                  </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Four - Accessibility Considerations Developer -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                          Accessibility Considerations 
+                          <!-- Developer Tag -->
+                          <span class="dev-tag ms-3">
+                            Developer 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                          </span> 
+                        </button>
+                      </h2>
+                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
+                        <div class="accordion-body">                            
+                          <h3>Dialog (modal)</h3>
+                          <h4>Dialog name, role and value:</h4>
+                          <ul>
+                            <li><strong>Role:</strong> Must have <code>role="dialog"</code> on the parent container.</li>
+                            <li><strong>Aria-modal:</strong> Must have <code>aria-modal="true"</code> on the parent container.</li>
+                            <li><strong>Header:</strong> Should have an <code>H1</code> element with a unique ID attribute. "_____" should be the <code>&lt;h1&gt;</code>.</li>
+                            <li><strong>Accessible Name:</strong> Must have an accessible name. It is preferable to use <code>aria-labelledby</code> equal to the <code>H1</code>'s ID on the parent container instead of <code>aria-label</code>.</li>
+                          </ul>
+                        
+                          <h4>Dialog Trigger Button:</h4>
+                          <ul>
+                            <li><strong>Element:</strong> Must be a <code>&lt;button&gt;</code> or have <code>role="button"</code> and <code>tabindex="0"</code> with event handlers.</li>
+                            <li><strong>Accessible Name:</strong> Must have an accessible name. The name should include a meaningful icon and additional sr-only text describing which glossary definition will be opened.</li>
+                            <li><strong>Aria-haspopup:</strong> Must have <code>aria-haspopup="dialog"</code> on the triggering element or include screen-reader only text in the element indicating it will open a dialog.</li>
+                          </ul>
+                        
+                          <h4>Dialog Focus:</h4>
+                          <ul>
+                            <li><strong>Focus on Launch:</strong> Must get focus when launched. Send focus to the container with the <code>role="dialog"</code> that has a <code>tabindex="-1"</code>.</li>
+                            <li><strong>Focus Trap:</strong> Must trap focus within the dialog while open.</li>
+                            <li><strong>Escape Key:</strong> Additionally, allow closing the dialog by pressing the Escape key (usability enhancement).</li>
+                            <li><strong>Return Focus:</strong> When the dialog is closed, return focus to the element which triggered the dialog, unless the element has been removed from the page, in which case place focus on the next logical element.</li>
+                          </ul>                                                                                
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Five - Resources -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                          Resources
+                        </button>
+                      </h2>
+                      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive">
+                        <div class="accordion-body">
+                          <ul>
+                            <li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal" target="_blank">WAI-ARIA Authoring Practices: Dialog (Modal) Pattern</a></li>
+                            <li><a href="https://getbootstrap.com/docs/5.1/components/modal/" target="_blank">Bootstrap Modal Documentation</a></li>
+                            <li><a href="https://a11yproject.com/posts/understanding-aria-dialog/" target="_blank">A11Y Project: How to Build Accessible Modals</a></li>
+                            <li><a href="https://inclusive-components.design/dialogs/" target="_blank">Inclusive Components: Designing Accessible Dialogs</a></li>
+                            <li><a href="https://smashingmagazine.com/2021/08/building-accessible-modal-dialogs/" target="_blank">Smashing Magazine: Building Accessible Modal Dialogs</a></li>
+                            <li><a href="https://css-tricks.com/building-accessible-modal-dialogs/" target="_blank">CSS-Tricks: Building Accessible Modal Dialogs</a></li>
+                            <li><a href="https://webaim.org/techniques/javascript/eventhandlers#dialog" target="_blank">WebAIM: JavaScript and Accessibility - Dialogs</a></li>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role" target="_blank">MDN Web Docs: Using the Dialog Role</a></li>
+                            <li><a href="https://uxdesign.cc/designing-accessible-modals-9c7b4f98c171" target="_blank">UX Design: Designing Accessible Modals</a></li>
+                            <li><a href="https://www.deque.com/blog/accessible-modal-dialogs-aria/" target="_blank">Deque: Accessible Modal Dialogs with ARIA</a></li>
+                            <li><a href="https://a11y-dialog.netlify.app/" target="_blank">A11y Dialog Pattern</a></li>
+                          </ul>                                                                                                       
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Accordion -->
+                </main>
+              </div>
+            </div>
+
+    <!-- Script links and jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../../../assets/js/global.js"></script>
+    <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- Add sidebar navigation to page -->
+    <script>
+      $(document).ready(function () {
+          // Determine the path relative to the root directory
+          var rootRelativePath = "../sidebar-navigation.html";
+  
+          // Use jQuery to load the sidebar-navigation.html file
+          $("#sidebar-container").load(rootRelativePath);
+      });
+    </script>
+
+    <!-- Dialog Modal -->
+    <script>
+    $(document).ready(function () {
+        const $openModalButton = $('#openModalButton');
+        const $modal = $('#exampleModalLive');
+        const $closeButton = $('.close, #cancel-btn'); // Includes the cancel button
+
+        // Function to trap focus inside the dialog
+        function trapFocus(element) {
+            const $focusableElements = element.find('a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select');
+            const $firstFocusableElement = $focusableElements.first();
+            const $lastFocusableElement = $focusableElements.last();
+
+            // Event handler to trap focus inside the dialog
+            element.on('keydown', function (e) {
+                if (e.key === 'Tab') {
+                    if (e.shiftKey) /* shift + tab */ {
+                        if (document.activeElement === $firstFocusableElement[0]) {
+                            $lastFocusableElement.focus();
+                            e.preventDefault();
+                        }
+                    } else /* tab */ {
+                        if (document.activeElement === $lastFocusableElement[0]) {
+                            $firstFocusableElement.focus();
+                            e.preventDefault();
+                        }
+                    }
+                } else if (e.key === "Escape") { // Handle the escape key
+                    closeModal();
+                }
+            });
+        }
+
+        function closeModal() {
+            $modal.removeClass('show').css('display', 'none').attr('aria-hidden', 'true').off('keydown');
+            $openModalButton.focus();  // Return focus to the modal open button
+        }
+
+        // Open modal and trap focus
+        $openModalButton.click(function() {
+            $modal.css('display', 'block').addClass('show').attr('aria-hidden', 'false');
+            trapFocus($modal);
+            $focusableElements.first().focus(); // Set initial focus
+        });
+
+        // Close modal on button clicks and Escape key
+        $closeButton.click(closeModal);
+
+        // Optionally, if you need to handle the closing from other parts of the script
+        $modal.on('hidden.bs.modal', closeModal);
+    });
+    </script>
+
+</body>
+</html>

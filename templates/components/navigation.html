@@ -246,6 +246,7 @@
                                 <h4>Submenu Button</h4>
                                 <ul role="list">
                                   <li>Must be a <code>&lt;button&gt;</code> OR have <code>role="button"</code> and <code>tabindex="0"</code> and function equally with mouse and keyboard. (May need additional event handlers added)</code></li>
+                                  <li>Must have an accessible name "_____" may come from text content, an aria-label or sr-only text or an aria-labelledby referencing sr-only text.</li>
                                   <li>Must have toggling <code>aria-expanded="true/false"</code> depending on expanded/collapsed states.</code></li>
                                   <li>Should have <code>aria-controls</code> attribute equal to the ID of the container of the submenu it controls.</li>
                                 </ul>
@@ -254,6 +255,30 @@
                                   <li>List of links must be in list markup</li>
                                   <li>Each link must have a valid href, and the text content/name of the control should give the link purpose and reflect its destination.</code></li>
                                   <li>The panel must collapse when focus leaves with forward and backwards tabbing navigation so it does not obscure other content.</li>
+                                </ul>
+                              </div>
+                              <div>
+                                  <button class="ml-1r btn copy-btn">
+                                    <i class="bi bi-clipboard-heart-fill" aria-hidden="true"></i> Copy
+                                  </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="space-large"></div>
+                          <div class="d-inline-block border border-dark p-2 rounded">
+                            <div class="d-flex flex-row">
+                              <div class="text-to-copy">
+                                <h3>Primary Mobile Navigation</h3>
+                                <ul role="list">
+                                  <li>Must be contained in a <code>&lt;nav&gt;</code> element OR container element such as a <code>&lt;div&gt;</code> must have <code>role="navigation"</code></li>
+                                  <li>When multiple navigation elements are present on a page, such as a primary and a secondary navigation, we need to provide additional labeling for screen reader users. Add <code>aria-label="Primary"</code></li>
+                                </ul>
+                                <h4>Mobile Menu Button</h4>
+                                <ul role="list">
+                                  <li>Must be a <code>&lt;button&gt;</code> OR have <code>role="button"</code> and <code>tabindex="0"</code> and function equally with mouse and keyboard. (May need additional event handlers added)</code></li>
+                                  <li>Must have an accessible name "_____" may come from text content, an aria-label or sr-only text or an aria-labelledby referencing sr-only text.</li>
+                                  <li>Must have toggling <code>aria-expanded="true/false"</code> depending on expanded/collapsed states.</code></li>
+                                  <li>Should have <code>aria-controls</code> attribute equal to the ID of the container of the submenu it controls.</li>
                                 </ul>
                               </div>
                               <div>

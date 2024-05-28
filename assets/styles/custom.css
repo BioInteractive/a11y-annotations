@@ -100,6 +100,14 @@ a {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
+  .space-medium{
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+  }
+  .space-small{
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+  }
 
   /* Accordion Overrides */
   .accordion-item {
@@ -332,4 +340,130 @@ p.dev-tag {
 /* Images */
 .example-img {
   max-width: 320px;
+}
+
+/* Tooltip */
+.tooltip-container {
+  position: relative; /* Sets the positioning context to the container */
+}
+
+#tooltiptext {
+  visibility: hidden;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 10px;
+
+  /* Positioning and styling */
+  position: absolute;
+  z-index: 1000; /* Ensures the tooltip is on top */
+  bottom: 100%; /* Positions the tooltip above the button */
+  left: 20%; /* Centers the tooltip */
+  transform: translateX(-50%); /* Precisely center align the tooltip */
+  transition: visibility 0.5s;
+
+  /* Adding some margin to separate it from the button */
+  margin-bottom: 5px;
+}
+#tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* Arrow from bottom of tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent; /* Arrow color and orientation */
+}
+
+/* Tabs Component styles */
+.tabs {
+  width: 100%;
+  font-family: "lucida grande", sans-serif;
+}
+
+[role="tablist"] {
+  margin: 0 0 -0.1em;
+  overflow: visible;
+}
+
+[role="tab"] {
+  position: relative;
+  margin: 0;
+  padding: 10px 16px;
+  border: 1px solid hsl(219, 1%, 72%);
+  border-radius: 0.2em 0.2em 0 0;
+  box-shadow: 0 0 0.2em hsl(219, 1%, 72%);
+  overflow: visible;
+  font-family: inherit;
+  font-size: inherit;
+  background: hsl(220, 20%, 94%);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+[role="tab"]:hover::before,
+[role="tab"]:focus::before,
+[role="tab"][aria-selected="true"]::before {
+  position: absolute;
+  bottom: 100%;
+  right: -1px;
+  left: -1px;
+  border-radius: 0.2em 0.2em 0 0;
+  border-top: 3px solid var(--primary-teal);;
+  content: '';
+}
+
+[role="tab"][aria-selected="true"] {
+  border-radius: 0;
+  background: hsl(220, 43%, 99%);
+  outline: 0;
+}
+
+[role="tab"][aria-selected="true"]:not(:focus):not(:hover)::before {
+  border-top: 5px solid var(--primary-teal);;
+}
+
+[role="tab"][aria-selected="true"]::after {
+  position: absolute;
+  z-index: 3;
+  bottom: -1px;
+  right: 0;
+  left: 0;
+  height: 0.3em;
+  background: hsl(220, 43%, 99%);
+  box-shadow: none;
+  content: '';
+}
+
+[role="tab"]:hover,
+[role="tab"]:focus,
+[role="tab"]:active {
+  outline: 0;
+  border-radius: 0;
+  color: inherit;
+}
+
+[role="tab"]:hover::before,
+[role="tab"]:focus::before {
+  border-color: var(--primary-teal);;
+}
+
+[role="tabpanel"] {
+  position: relative;
+  z-index: 2;
+  padding: 24px 16px;
+  border: 1px solid hsl(219, 1%, 72%);
+  border-radius: 0 0.2em 0.2em 0.2em;
+  box-shadow: 0 0 0.2em hsl(219, 1%, 72%);
+  background: hsl(220, 43%, 99%);
+}
+
+[role="tabpanel"] p {
+  margin: 0;
+}
+
+[role="tabpanel"] * + p {
+  margin-top: 1em;
 }
