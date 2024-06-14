@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accordion</title>
+    <title>Dropdown</title>
 
     <!-- Link to Bootstrap CSS from CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
@@ -38,7 +38,7 @@
             <!-- A11y Live Region -->
             <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
             <div class="container-xxl bd-gutter mt-3">
-                <h1>Accordion</h1>
+                <h1>Dropdown (Disclosure)</h1>
                 <!-- Begin Accordion -->
                 <div class="accordion" id="accordionOpen">
                     <!-- Accordion Item One -->
@@ -51,126 +51,98 @@
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                         <div class="accordion-body">
                           <ul>
-                            <li><strong>Proper Use of ARIA Roles and Properties:</strong> Implement <code>role="button"</code> for each accordion header, <code>aria-expanded</code> to indicate the open or closed state of the accordion panel, and <code>aria-controls</code> to link the header to its corresponding panel.
-                                <a href="https://www.w3.org/TR/wai-aria-practices-1.1/examples/accordion/accordion.html" target="_blank">ARIA: Accordion Example</a>
+                            <li><strong>Proper Use of ARIA Roles and Properties:</strong> Implement <code>role="button"</code> for the dropdown trigger, <code>aria-expanded</code> to indicate the open or closed state of the dropdown, and <code>aria-controls</code> to link the button with its corresponding panel.
+                                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/examples/disclosure-navigation/" target="_blank">ARIA: Disclosure Example</a>
                             </li>
-                            <li><strong>Keyboard Navigation:</strong> Ensure accordion headers are navigable and operable with keyboard alone, including the ability to expand/collapse with Enter/Space keys and navigate between headers with arrow keys.
-                                <a href="https://www.w3.org/TR/WCAG21/#keyboard-accessible" target="_blank">2.1.1 Keyboard</a>
+                            <li><strong>Keyboard Navigation:</strong> Ensure the dropdown is navigable and operable with both mouse and keyboard. Users should be able to expand/collapse the dropdown with Enter/Space keys and navigate through the dropdown items with arrow keys.
+                                <a href="https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html" target="_blank">2.1.1 Keyboard</a>
                             </li>
-                            <li><strong>Focus Management:</strong> Manage focus within the accordion to ensure a logical tab order and that moving through the component does not trap keyboard users.
-                                <a href="https://www.w3.org/TR/WCAG21/#focus-order" target="_blank">2.4.3 Focus Order</a>
+                            <li><strong>Includes State Indication:</strong> Use <code>aria-expanded</code> to indicate the state of the dropdown (expanded or collapsed) to assist users in understanding the current state of the dropdown.
+                                <a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html" target="_blank">1.3.1 Info and Relationships</a>
                             </li>
-                            <li><strong>Panel Role and Labeling:</strong> Use <code>role="region"</code> for accordion panels and <code>aria-labelledby</code> to associate each panel with its header, enhancing screen reader user experience.
-                                <a href="https://www.w3.org/TR/wai-aria-1.1/#region" target="_blank">ARIA: region role</a>
-                            </li>
-                            <li><strong>State Indication:</strong> Visually indicate the expanded or collapsed state of each accordion section, in addition to using <code>aria-expanded</code>, to assist users in understanding the accordion's current state.
-                                <a href="https://www.w3.org/TR/WCAG21/#info-and-relationships" target="_blank">1.3.1 Info and Relationships</a>
-                            </li>
+                            <li><strong>Dismissing Panel:</strong> Ensure that pressing the Esc key closes an open dropdown when focus is inside the navigation region. Moving focus out of the navigation region should also close the dropdown to meet WCAG 2.1 1.4.13: Content on Hover or Focus.
+                              <a href="https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html" target="_blank">1.4.13: Content on Hover or Focus</a>
+                            </li>                         
                             <li><strong>Screen Reader Hidden Icons:</strong> For icons that indicate the expanded or collapsed state, ensure they are marked with <code>aria-hidden="true"</code> if they are purely decorative or redundant when text labels are provided.
-                                <a href="https://www.w3.org/TR/WCAG21/#hidden-controls" target="_blank">4.1.2 Name, Role, Value</a>
+                                <a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" target="_blank">4.1.2 Name, Role, Value</a>
                             </li>
-                            <li><strong>Visual Contrast:</strong> Design accordion headers with sufficient color contrast between text/icons and their background, ensuring visibility for users with visual impairments.
-                                <a href="https://www.w3.org/TR/WCAG21/#contrast-minimum" target="_blank">1.4.3 Contrast (Minimum)</a>
+                            <li><strong>Focus Visibility:</strong> Ensure that focus indicators are visible when interactive elements receive focus. For more information, see the General section on Interactives.
+                                <a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html" target="_blank">2.4.7 Focus Visible</a>
                             </li>
-                          </ul>                                       
-                          <h3>Accordion Bootstrap Example</h3>
-                          <div class="accordion" id="accordionExample" style="max-width: 500px;">
-                            <div class="accordion-item">
-                              <h2 class="accordion-header" id="heading1">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                  Accordion Item #1
-                                </button>
-                              </h2>
-                              <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                  <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                </div>
-                              </div>
-                            </div>
-                            <div class="accordion-item">
-                              <h2 class="accordion-header" id="heading2">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                  Accordion Item #2
-                                </button>
-                              </h2>
-                              <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                </div>
-                              </div>
-                            </div>
-                            <div class="accordion-item">
-                              <h2 class="accordion-header" id="heading3">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                  Accordion Item #3
-                                </button>
-                              </h2>
-                              <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                          </ul>
+                                                              
+                          <h3>Dropdown Bootstrap Example</h3>
+                          <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Dropdown button
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                          </div>                            
                           <!-- End Example -->
                           <div class="space-large"></div>
                           <!-- Table -->
                           <h2 id="rps_label">Role, Property, State, and Tabindex Attributes</h2>
                           <div class="table-wrap">
                             <table aria-labelledby="rps_label" class="table table-light table-striped table-bordered">
-                            <thead>
-                              <tr>
-                                <th scope="col">Role</th>
-                                <th scope="col">Attribute</th>
-                                <th scope="col">Element</th>
-                                <th scope="col">Usage</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr data-test-id="h3-element">
-                                <td></td>
-                                <td></td>
-                                <th scope="row"><code>h3</code></th>
-                                <td>
-                                  <ul>
-                                    <li>Element that serves as an accordion header.</li>
-                                    <li>Each accordion header element contains a button that controls the visibility of its content panel.</li>
-                                    <li>The example uses heading level 3 so it fits correctly within the outline of the page; the example is contained in a section titled with a level 2 heading.</li>
-                                  </ul>
-                                </td>
-                              </tr>
-                              <tr data-test-id="button-aria-expanded">
-                                <td></td>
-                                <th scope="row"><code>aria-expanded="true"</code></th>
-                                <td><code>button</code></td>
-                                <td>Set to <code>true</code> when the Accordion panel is expanded, otherwise set to <code>false</code>.</td>
-                              </tr>
-                              <tr data-test-id="button-aria-controls">
-                                <td></td>
-                                <th scope="row"><code>aria-controls="ID"</code></th>
-                                <td><code>button</code></td>
-                                <td>Points to the ID of the panel which the header controls.</td>
-                              </tr>
-                              <tr data-test-id="region-role">
-                                <th scope="row"><code>region</code></th>
-                                <td></td>
-                                <td><code>div</code></td>
-                                <td>Creates a landmark region that contains the currently expanded accordion panel.</td>
-                              </tr>
-                              <tr data-test-id="region-aria-labelledby">
-                                <td></td>
-                                <th scope="row"><code>aria-labelledby="IDREF"</code></th>
-                                <td><code>div</code></td>
-                                <td>
-                                  <ul>
-                                    <li>Defines the accessible name for the <code>region</code> element.</li>
-                                    <li>References the accordion header button that expands and collapses the region.</li>
-                                    <li><code>region</code> elements are required to have an accessible name to be identified as a landmark.</li>
-                                  </ul>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
+                              <thead>
+                                <tr>
+                                  <th scope="col">Role</th>
+                                  <th scope="col">Attribute</th>
+                                  <th scope="col">Element</th>
+                                  <th scope="col">Usage</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr data-test-id="button-aria-controls">
+                                  <td></td>
+                                  <th scope="row">
+                                    <code>aria-controls="IDREF"</code>
+                                  </th>
+                                  <td>
+                                    <code>button</code>
+                                  </td>
+                                  <td>The disclosure button controls visibility of the container identified by the <code>IDREF</code> value.</td>
+                                </tr>
+                                <tr data-test-id="button-aria-expanded">
+                                  <td></td>
+                                  <th scope="row">
+                                    <code>aria-expanded="false"</code>
+                                  </th>
+                                  <td>
+                                    <code>button</code>
+                                  </td>
+                                  <td>
+                                    <ul>
+                                      <li>Indicates that the container controlled by the disclosure button is <em>hidden</em>.</li>
+                                      <li>
+                                        CSS attribute selectors (e.g. <code>[aria-expanded="false"]</code>) are used to synchronize the visual states with the value of the <code>aria-expanded</code> attribute.
+                                      </li>
+                                    </ul>
+                                  </td>
+                                </tr>
+                                <tr data-test-id="button-aria-expanded">
+                                  <td></td>
+                                  <th scope="row">
+                                    <code>aria-expanded="true"</code>
+                                  </th>
+                                  <td>
+                                    <code>button</code>
+                                  </td>
+                                  <td>
+                                    <ul>
+                                      <li>Indicates that the container controlled by the disclosure button is <em>visible</em>.</li>
+                                      <li>
+                                        CSS attribute selectors (e.g. <code>[aria-expanded="true"]</code>) are used to synchronize the visual states with the value of the <code>aria-expanded</code> attribute.
+                                      </li>
+                                    </ul>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
                           </div>
                         </div>
                       </div>
@@ -192,11 +164,11 @@
                       <div id="collapseNew" class="accordion-collapse collapse" aria-labelledby="headingNew" style="">
                         <div class="accordion-body">
                           <ul>
-                            <li><strong>Visual Clarity:</strong> Ensure accordion headers are easily distinguishable as clickable elements, using visual cues like icons or contrasting colors.</li>
-                            <li><strong>State Indicators:</strong> Design icons or indicators that clearly show whether accordion sections are expanded or collapsed.</li>
-                            <li><strong>Consistent Association:</strong> Maintain a clear visual relationship between accordion headers and their content panels to help users understand which sections they control.</li>
-                            <li><strong>Contrast and Legibility:</strong> Use sufficient color contrast for text and interactive elements to ensure legibility and visibility for all users.</li>
-                          </ul>                        
+                            <li><strong>Visual Clarity:</strong> Ensure dropdown triggers are clearly identifiable as interactive elements. Use visual cues such as arrows, icons, or contrasting colors to indicate that they can be clicked or tapped.</li>
+                            <li><strong>State Indicators:</strong> Design icons or indicators that clearly show whether the dropdown is expanded or collapsed. This helps users understand the current state of the dropdown.</li>
+                            <li><strong>Text Legibility:</strong> Use sufficient color contrast for text and interactive elements within the dropdown to ensure legibility for users with visual impairments.</li>
+                            <li><strong>Interactive States:</strong> Use Figma's prototyping features to show different states of the dropdown, such as default, focused, expanded, and collapsed, to provide a clear understanding of how the component behaves.</li>
+                          </ul>                                                 
                         </div>                        
                       </div>
                     </div>
@@ -222,35 +194,28 @@
                       </h2>
                       <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" style="">
                         <div class="accordion-body">
-                          <p> When auditing an Accordion component please review the content leads documentation and the designer's implementation for alignment and consistency.
-                            Then review for accessibility considerations to flag for the designer and then annotate the component requirements for developer handoff.
-                          </p>
-                          <p>When auditing the accordion component within a Figma design please consider the following accessibility issues to flag for the designer to review:</p>
+                          <p>When auditing a dropdown disclosure button component, please review the content leads documentation and the designer's implementation for alignment and consistency. Then review for accessibility considerations to flag for the designer and annotate the component requirements for developer handoff.</p>
+                          <p>When auditing the dropdown disclosure button component within a Figma design, please consider the following accessibility issues to flag for the designer to review:</p>
                           <ul>
                             <li><strong>Visual Clarity of Buttons:</strong> Ensure buttons are clearly designed as interactive elements and are easily distinguishable from other content.</li>
-                            <li><strong>State Indication Icons:</strong> Verify if there are icons indicating the expanded or collapsed states of the accordion, and ensure these icons are visually intuitive.</li>
+                            <li><strong>State Indication Icons:</strong> Verify if there are icons indicating the expanded or collapsed states of the dropdown, and ensure these icons are visually intuitive.</li>
                             <li><strong>Association Between Button and Panel:</strong> Check that each button is clearly associated with its corresponding panel, with visual cues to indicate this relationship.</li>
-                            <li><strong>Consistency of Design:</strong> Assess the consistency in the design of all accordion components throughout the project to ensure a uniform user experience.</li>
-                            <li><strong>Heading Structure:</strong> Review if the accordion's design suggests a proper heading structure for the content within each collapsible panel.</li>
+                            <li><strong>Consistency of Design:</strong> Assess the consistency in the design of all dropdown components throughout the project to ensure a uniform user experience.</li>
                             <li><strong>Legibility:</strong> Confirm that text within buttons and panels is legible, with adequate font size and color contrast.</li>
-                          </ul>                     
+                          </ul>
                           <div class="d-inline-block border border-dark p-2 rounded">
                             <div class="d-flex flex-row">
                               <div class="text-to-copy">
-                                <h3>Accordion</h3>
+                                <h3>Dropdown</h3>
                                 <p><strong>Must function equally with mouse and keyboard.</strong></p>
-                                <h4>Accordion Buttons</h3>
+                                <h4>Dropdown</h3>
                                 <ul>
-                                    <li>Maintain heading structure</li>
-                                    <li>Nest <code>&lt;button&gt;</code> in heading tags</li>
-                                    <li>Must have toggling <code>aria-expanded="true/false"</code> depending on expanded/collapsed states.</li>
-                                    <li>Must have <code>aria-controls</code> attribute equal to the ID of the container of the element it controls.</li>
-                                </ul>
-                                <h4>Accordion Panels</h3>
-                                <ul>
-                                    <li>Must have <code>role="region"</code></li>
-                                    <li>An <code>aria-labelledby</code> attribute equal to the ID of the associated button.</li>
-                                    <li>Icon should be hidden for screen reader users with <code>aria-hidden="true"</code></li>
+                                  <li>Button must be in a <code>&lt;button&gt;</code> element or the element used such as a <code>&lt;div&gt;</code> must have <code>role="button"</code> and <code>tabindex="0"</code> as an equivalent with keyboard event handlers ensuring equal functionality for mouse, keyboard and touch users.</li>
+                                  <li>Buttons must have an accessible name. Use text content, img alt, aria-label, aria-labelledby or add sr-only text.</li>
+                                  <li>Must have toggling <code>aria-expanded="true/false"</code> depending on expanded/collapsed states.</li>
+                                  <li>Must have <code>aria-controls</code> attribute equal to the ID of the panel of the element it controls.</li>
+                                  <li>Must be dismissible with ESC key is covering other meaningful content in expanded state and must collapse when focus leave component.</li>
+                                  <li>Icon should be hidden for screen reader users with <code>aria-hidden="true"</code></li>
                                 </ul>
                               </div>
                               <div>
@@ -278,7 +243,16 @@
                         </button>
                       </h2>
                       <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
-                        <div class="accordion-body">                            
+                        <div class="accordion-body"> 
+                          <ul>
+                            <li>Button must be in a <code>&lt;button&gt;</code> element or the element used such as a <code>&lt;div&gt;</code> must have <code>role="button"</code> and <code>tabindex="0"</code> as an equivalent with keyboard event handlers ensuring equal functionality for mouse, keyboard and touch users.</li>
+                            <li>Buttons must have an accessible name. Use text content, img alt, aria-label, aria-labelledby or add sr-only text.</li>
+                            <li>Must have toggling <code>aria-expanded="true/false"</code> depending on expanded/collapsed states.</li>
+                            <li>Must have <code>aria-controls</code> attribute equal to the ID of the panel of the element it controls.</li>
+                            <li>Must be dismissible with ESC key is covering other meaningful content in expanded state and must collapse when focus leave component.</li>
+                            <li>Icon should be hidden for screen reader users with <code>aria-hidden="true"</code></li>
+                            <li><strong>Focus Management:</strong> Ensure that moving through the accordion with a keyboard is intuitive, with focus shifting logically through button and panel to the content within expanded panels.</li>                            
+                          </ul>                           
                           <ul>
                             <li><strong>Use ARIA Roles:</strong> Apply <code>role="button"</code> to accordion headers to make them recognizable as interactive elements to assistive technologies. For accordion panels, use <code>role="region"</code> and associate each panel with its header via <code>aria-labelledby</code>.</li>
                             <li><strong>Manage ARIA States:</strong> Implement <code>aria-expanded="true/false"</code> on accordion headers to indicate the visibility of their associated panel, ensuring this attribute toggles accurately with interaction.</li>
@@ -301,17 +275,17 @@
                       <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive">
                         <div class="accordion-body">
                           <ul>
-                            <li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/#accordion" target="_blank">WAI-ARIA Authoring Practices: Accordion Pattern</a></li>
-                            <li><a href="https://getbootstrap.com/docs/5.1/components/accordion/" target="_blank">Bootstrap Accordion Documentation</a></li>
-                            <li><a href="https://a11yproject.com/posts/how-to-make-an-accessible-accordion/" target="_blank">A11Y Project: How to Make an Accessible Accordion</a></li>
+                            <li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/" target="_blank">WAI-ARIA Authoring Practices: Disclosure Pattern</a></li>
+                            <li><a href="https://getbootstrap.com/docs/5.3/components/dropdowns/" target="_blank">Bootstrap Dropdown Documentation</a></li>
+                            <li><a href="https://www.a11yproject.com/posts/2021-07-21-how-to-make-a-disclosure-widget/" target="_blank">A11Y Project: How to Make an Accessible Disclosure Widget</a></li>
                             <li><a href="https://inclusive-components.design/collapsible-sections/" target="_blank">Inclusive Components: Collapsible Sections</a></li>
-                            <li><a href="https://smashingmagazine.com/2021/09/accessible-accordion-design-patterns/" target="_blank">Smashing Magazine: Accessible Accordion Design Patterns</a></li>
-                            <li><a href="https://css-tricks.com/accessible-accordion-pattern/" target="_blank">CSS-Tricks: The Accessible Accordion Pattern</a></li>
+                            <li><a href="https://www.smashingmagazine.com/2020/07/designing-accessible-dropdowns/" target="_blank">Smashing Magazine: Designing Accessible Dropdowns</a></li>
+                            <li><a href="https://css-tricks.com/accessible-simple-css-dropdown-menu/" target="_blank">CSS-Tricks: Accessible Simple CSS Dropdown Menu</a></li>
                             <li><a href="https://webaim.org/techniques/aria/" target="_blank">WebAIM: Using ARIA</a></li>
-                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role" target="_blank">MDN Web Docs: Using the Tab Role</a></li> <!-- Relevant for understanding how to manage focus within components like accordions -->
-                            <li><a href="https://uxdesign.cc/designing-accessible-accordions-d5dd5fa5f3f1" target="_blank">Designing Accessible Accordions - UX Design</a></li>
-                            <li><a href="https://www.deque.com/blog/accessible-aria-buttons" target="_blank">Building Accessible Buttons with ARIA</a></li> <!-- Relevant because accordions often use buttons to toggle sections -->
-                          </ul>                                                                   
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/button_role" target="_blank">MDN Web Docs: Using the Button Role</a></li>
+                            <li><a href="https://uxdesign.cc/designing-accessible-dropdowns-47f4a3b3ff38" target="_blank">UX Design: Designing Accessible Dropdowns</a></li>
+                            <li><a href="https://www.deque.com/blog/accessible-aria-buttons" target="_blank">Deque: Building Accessible Buttons with ARIA</a></li>
+                          </ul>                                                                                           
                         </div>
                       </div>
                     </div>
@@ -324,8 +298,8 @@
     <!-- Script links and jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="../../../assets/js/global.js"></script>
-    <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+    <!-- Bootstrap JavaScript including Popper.js from CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Add sidebar navigation to page -->
     <script>

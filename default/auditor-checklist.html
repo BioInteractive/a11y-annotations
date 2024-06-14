@@ -57,11 +57,11 @@
                       <th scope="col" colspan="4">Status</th>
                   </tr>
                   <tr>
-                      <!-- Empty headers for the first four columns -->
-                      <th></th>
-                      <th></th>
-                      <th></th>
-                      <th></th>
+                      <!-- Empty cells for the first four columns -->
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
                       <!-- Sub-Headers under Status -->
                       <th scope="col" id="pass">Pass</th>
                       <th scope="col" id="fail">Fail</th>
@@ -72,209 +72,409 @@
               <tbody>
                   <tr>
                     <!-- Row 1: First Checkpoint -->
-                      <th scope="row" rowspan="5">1</th>
-                      <td rowspan="5">Structures and Pages</td>
-                      <td rowspan="5">Users can make sense of the structure of the content on each page and understand how to operate and navigate within the system.</td>
+                      <th scope="row" rowspan="11">1</th>
+                      <td rowspan="11">Structures and Pages</td>
+                      <td rowspan="11">Users can make sense of the structure of the content on each page and understand how to operate and navigate within the system.</td>
                       <!-- Page title -->
                       <td id="page-title">Do the pages have meaningful title text, with page-specific information going first?</td>
                       <!-- Status Checkboxes -->
                       <td class="checkbox-td">
                         <!-- Pass Chekbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                           <input type="checkbox" id="chk1-1-pass" name="chk1-1-pass" aria-labelledby="pass page-title">
                           <span></span>
-                        </label>                        
+                        </div>                        
                       </td>
                       <td class="checkbox-td">
                         <!-- Fail Chekbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                           <input type="checkbox" id="chk1-1-fail" name="chk1-1-fail" aria-labelledby="fail page-title">
                           <span></span>
-                        </label>                        
+                        </div>                        
                       </td>
                       <td class="checkbox-td">
                         <!-- Annotated Chekbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                           <input type="checkbox" id="chk1-1-annotated" name="chk1-1-annotated" aria-labelledby="annotated page-title">
                           <span></span>
-                        </label>                        
+                        </div>                        
                       </td>
                       <td class="checkbox-td">
                         <!-- N/A Chekbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                           <input type="checkbox" id="chk1-1-na" name="chk1-1-na" aria-labelledby="na page-title">
                           <span></span>
-                        </label>                        
+                        </div>                        
                       </td>
                     </tr> 
-                    <!-- Row 2: Second Checkpoint -->
+                    <!-- Row 2: First Checkpoint -->
                     <tr> 
                       <!-- Multiple Ways title -->
                       <td id="multiple-ways">Do the pages provide at least two methods of locating a page on the site?</td>
                       <!-- Status Checkboxes -->
                       <td class="checkbox-td">
                         <!-- Pass Chekbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                           <input type="checkbox" id="chk1-2-pass" name="chk1-2-pass" aria-labelledby="pass multiple-ways">
                           <span></span>
-                        </label>                        
+                        </div>                        
                       </td>
                       <td class="checkbox-td">
                         <!-- Fail Chekbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                           <input type="checkbox" id="chk1-2-fail" name="chk1-2-fail" aria-labelledby="fail multiple-ways">
                           <span></span>
-                        </label>                        
+                        </div>                        
                       </td>
                       <td class="checkbox-td">
                         <!-- Annotated Chekbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                           <input type="checkbox" id="chk1-2-annotated" name="chk1-2-annotated" aria-labelledby="annotated multiple-ways">
                           <span></span>
-                        </label>                        
+                        </div>                        
                       </td>
                       <td class="checkbox-td">
                         <!-- N/A Chekbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                           <input type="checkbox" id="chk1-2-na" name="chk1-2-na" aria-labelledby="na multiple-ways">
                           <span></span>
-                        </label>                        
+                        </div>                        
                       </td>
                     </tr>
-                    <!-- Row 3: Third Checkpoint -->
+                    <!-- Row 3: First Checkpoint -->
                     <tr>
                       <td id="content-bypass">Is there a mechanism available to bypass blocks of content that are repeated on multiple pages?</td>
                       <!-- Status Checkboxes -->
                       <td class="checkbox-td">
                           <!-- Pass Checkbox -->
-                          <label class="custom-checkbox">
+                          <div class="custom-checkbox">
                               <input type="checkbox" id="chk1-3-pass" name="chk1-3-pass" aria-labelledby="pass content-bypass">
                               <span></span>
-                          </label>
+                          </div>
                       </td>
                       <td class="checkbox-td">
                           <!-- Fail Checkbox -->
-                          <label class="custom-checkbox">
+                          <div class="custom-checkbox">
                               <input type="checkbox" id="chk1-3-fail" name="chk1-3-fail" aria-labelledby="fail content-bypass">
                               <span></span>
-                          </label>
+                          </div>
                       </td>
                       <td class="checkbox-td">
                           <!-- Annotated Checkbox -->
-                          <label class="custom-checkbox">
+                          <div class="custom-checkbox">
                               <input type="checkbox" id="chk1-3-annotated" name="chk1-3-annotated" aria-labelledby="annotated content-bypass">
                               <span></span>
-                          </label>
+                          </div>
                       </td>
                       <td class="checkbox-td">
                           <!-- N/A Checkbox -->
-                          <label class="custom-checkbox">
+                          <div class="custom-checkbox">
                               <input type="checkbox" id="chk1-3-na" name="chk1-3-na" aria-labelledby="na content-bypass">
                               <span></span>
-                          </label>
+                          </div>
                       </td>
                     </tr>
-                  <!-- Row 4: Fourth Checkpoint -->
+                    <!-- Row 4: First Checkpoint -->
                     <tr>
                     <td id="meaningful-headings">Do the pages have meaningful headings for each major section?</td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk1-4-pass" name="chk1-4-pass" aria-labelledby="pass meaningful-headings">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk1-4-fail" name="chk1-4-fail" aria-labelledby="fail meaningful-headings">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk1-4-annotated" name="chk1-4-annotated" aria-labelledby="annotated meaningful-headings">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk1-4-na" name="chk1-4-na" aria-labelledby="na meaningful-headings">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     </tr>
-                    <!-- Row 5: Fifth Checkpoint -->
+                    <!-- Row 5: First Checkpoint -->
                     <tr>
-                <td id="data-tables-header">Are data tables clearly assigned header columns and/or rows?</td>
-                <!-- Status Checkboxes -->
-                <td class="checkbox-td">
-                    <!-- Pass Checkbox -->
-                    <label class="custom-checkbox">
-                        <input type="checkbox" id="chk1-5-pass" name="chk1-5-pass" aria-labelledby="pass data-tables-header">
-                        <span></span>
-                    </label>
-                </td>
-                <td class="checkbox-td">
-                    <!-- Fail Checkbox -->
-                    <label class="custom-checkbox">
-                        <input type="checkbox" id="chk1-5-fail" name="chk1-5-fail" aria-labelledby="fail data-tables-header">
-                        <span></span>
-                    </label>
-                </td>
-                <td class="checkbox-td">
-                    <!-- Annotated Checkbox -->
-                    <label class="custom-checkbox">
-                        <input type="checkbox" id="chk1-5-annotated" name="chk1-5-annotated" aria-labelledby="annotated data-tables-header">
-                        <span></span>
-                    </label>
-                </td>
-                <td class="checkbox-td">
-                    <!-- N/A Checkbox -->
-                    <label class="custom-checkbox">
-                        <input type="checkbox" id="chk1-5-na" name="chk1-5-na" aria-labelledby="na data-tables-header">
-                        <span></span>
-                    </label>
-                </td>
+                        <td id="data-tables-header">Are data tables clearly assigned header columns and/or rows?</td>
+                        <!-- Status Checkboxes -->
+                        <td class="checkbox-td">
+                            <!-- Pass Checkbox -->
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="chk1-5-pass" name="chk1-5-pass" aria-labelledby="pass data-tables-header">
+                                <span></span>
+                            </div>
+                        </td>
+                        <td class="checkbox-td">
+                            <!-- Fail Checkbox -->
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="chk1-5-fail" name="chk1-5-fail" aria-labelledby="fail data-tables-header">
+                                <span></span>
+                            </div>
+                        </td>
+                        <td class="checkbox-td">
+                            <!-- Annotated Checkbox -->
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="chk1-5-annotated" name="chk1-5-annotated" aria-labelledby="annotated data-tables-header">
+                                <span></span>
+                            </div>
+                        </td>
+                        <td class="checkbox-td">
+                            <!-- N/A Checkbox -->
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="chk1-5-na" name="chk1-5-na" aria-labelledby="na data-tables-header">
+                                <span></span>
+                            </div>
+                        </td>
                     </tr>
+                    <!-- Row 6: First Checkpoint -->
+                    <tr>
+                        <td id="data-tables-header">Are headings in logical hierachy and not skipping levels (e.g., not jumping from h1 to h3)?</td>
+                        <!-- Status Checkboxes -->
+                        <td class="checkbox-td">
+                            <!-- Pass Checkbox -->
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="chk1-5-pass" name="chk1-5-pass" aria-labelledby="pass data-tables-header">
+                                <span></span>
+                            </div>
+                        </td>
+                        <td class="checkbox-td">
+                            <!-- Fail Checkbox -->
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="chk1-5-fail" name="chk1-5-fail" aria-labelledby="fail data-tables-header">
+                                <span></span>
+                            </div>
+                        </td>
+                        <td class="checkbox-td">
+                            <!-- Annotated Checkbox -->
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="chk1-5-annotated" name="chk1-5-annotated" aria-labelledby="annotated data-tables-header">
+                                <span></span>
+                            </div>
+                        </td>
+                        <td class="checkbox-td">
+                            <!-- N/A Checkbox -->
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="chk1-5-na" name="chk1-5-na" aria-labelledby="na data-tables-header">
+                                <span></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Row 7: First Checkpoint -->
+                    <tr>
+                        <td id="data-tables-header">Has the recommended line spacing (1.5 within paragraphs and double spacing between them) been applied?</td>
+                        <!-- Status Checkboxes -->
+                        <td class="checkbox-td">
+                            <!-- Pass Checkbox -->
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="chk1-5-pass" name="chk1-5-pass" aria-labelledby="pass data-tables-header">
+                                <span></span>
+                            </div>
+                        </td>
+                        <td class="checkbox-td">
+                            <!-- Fail Checkbox -->
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="chk1-5-fail" name="chk1-5-fail" aria-labelledby="fail data-tables-header">
+                                <span></span>
+                            </div>
+                        </td>
+                        <td class="checkbox-td">
+                            <!-- Annotated Checkbox -->
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="chk1-5-annotated" name="chk1-5-annotated" aria-labelledby="annotated data-tables-header">
+                                <span></span>
+                            </div>
+                        </td>
+                        <td class="checkbox-td">
+                            <!-- N/A Checkbox -->
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="chk1-5-na" name="chk1-5-na" aria-labelledby="na data-tables-header">
+                                <span></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Row 8: First Checkpoint -->
+                    <tr>
+                        <td id="data-tables-header">Is the language used in the design clear, concise, and free of jargon to ensure it is easily understood by the target audience?</td>
+                        <!-- Status Checkboxes -->
+                        <td class="checkbox-td">
+                            <!-- Pass Checkbox -->
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="chk1-5-pass" name="chk1-5-pass" aria-labelledby="pass data-tables-header">
+                                <span></span>
+                            </div>
+                        </td>
+                        <td class="checkbox-td">
+                            <!-- Fail Checkbox -->
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="chk1-5-fail" name="chk1-5-fail" aria-labelledby="fail data-tables-header">
+                                <span></span>
+                            </div>
+                        </td>
+                        <td class="checkbox-td">
+                            <!-- Annotated Checkbox -->
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="chk1-5-annotated" name="chk1-5-annotated" aria-labelledby="annotated data-tables-header">
+                                <span></span>
+                            </div>
+                        </td>
+                        <td class="checkbox-td">
+                            <!-- N/A Checkbox -->
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="chk1-5-na" name="chk1-5-na" aria-labelledby="na data-tables-header">
+                                <span></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Row 9: First Checkpoint -->
+                    <tr>
+                        <td id="data-tables-header">Has a readable, web-safe font been selected that ensures legibility across different devices and screen sizes?</td>
+                        <!-- Status Checkboxes -->
+                        <td class="checkbox-td">
+                            <!-- Pass Checkbox -->
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="chk1-5-pass" name="chk1-5-pass" aria-labelledby="pass data-tables-header">
+                                <span></span>
+                            </div>
+                        </td>
+                        <td class="checkbox-td">
+                            <!-- Fail Checkbox -->
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="chk1-5-fail" name="chk1-5-fail" aria-labelledby="fail data-tables-header">
+                                <span></span>
+                            </div>
+                        </td>
+                        <td class="checkbox-td">
+                            <!-- Annotated Checkbox -->
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="chk1-5-annotated" name="chk1-5-annotated" aria-labelledby="annotated data-tables-header">
+                                <span></span>
+                            </div>
+                        </td>
+                        <td class="checkbox-td">
+                            <!-- N/A Checkbox -->
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="chk1-5-na" name="chk1-5-na" aria-labelledby="na data-tables-header">
+                                <span></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Row 10: First Checkpoint -->
+                    <tr>
+                        <td id="data-tables-header">Is the text content broken up into small, manageable blocks to enhance readability?</td>
+                        <!-- Status Checkboxes -->
+                        <td class="checkbox-td">
+                            <!-- Pass Checkbox -->
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="chk1-5-pass" name="chk1-5-pass" aria-labelledby="pass data-tables-header">
+                                <span></span>
+                            </div>
+                        </td>
+                        <td class="checkbox-td">
+                            <!-- Fail Checkbox -->
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="chk1-5-fail" name="chk1-5-fail" aria-labelledby="fail data-tables-header">
+                                <span></span>
+                            </div>
+                        </td>
+                        <td class="checkbox-td">
+                            <!-- Annotated Checkbox -->
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="chk1-5-annotated" name="chk1-5-annotated" aria-labelledby="annotated data-tables-header">
+                                <span></span>
+                            </div>
+                        </td>
+                        <td class="checkbox-td">
+                            <!-- N/A Checkbox -->
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="chk1-5-na" name="chk1-5-na" aria-labelledby="na data-tables-header">
+                                <span></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Row 11: First Checkpoint -->
+                    <tr>
+                        <td id="data-tables-header">Are lists properly formatted with clear bullet points or numbering to improve readability and comprehension?</td>
+                        <!-- Status Checkboxes -->
+                        <td class="checkbox-td">
+                            <!-- Pass Checkbox -->
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="chk1-5-pass" name="chk1-5-pass" aria-labelledby="pass data-tables-header">
+                                <span></span>
+                            </div>
+                        </td>
+                        <td class="checkbox-td">
+                            <!-- Fail Checkbox -->
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="chk1-5-fail" name="chk1-5-fail" aria-labelledby="fail data-tables-header">
+                                <span></span>
+                            </div>
+                        </td>
+                        <td class="checkbox-td">
+                            <!-- Annotated Checkbox -->
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="chk1-5-annotated" name="chk1-5-annotated" aria-labelledby="annotated data-tables-header">
+                                <span></span>
+                            </div>
+                        </td>
+                        <td class="checkbox-td">
+                            <!-- N/A Checkbox -->
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="chk1-5-na" name="chk1-5-na" aria-labelledby="na data-tables-header">
+                                <span></span>
+                            </div>
+                        </td>
+                    </tr>
+            
+            
             <!-- New Row for Heuristic 2: Structure - Forms -->
                 <tr>
-                  <th scope="row" rowspan="6">2</th> 
-                  <td rowspan="6">Structure - Forms</td>
-                  <td rowspan="6">Interactive controls have persistent, meaningful labels and instructions to help prevent mistakes, and provide users with clear error states which indicate what the problems are - and how to fix them whenever errors are returned.</td>
+                  <th scope="row" rowspan="7">2</th> 
+                  <td rowspan="7">Structure - Forms</td>
+                  <td rowspan="7">Interactive controls have persistent, meaningful labels and instructions to help prevent mistakes, and provide users with clear error states which indicate what the problems are - and how to fix them whenever errors are returned.</td>
                   <!-- First Checkpoint for Structure - Forms -->
                   <td id="form-labels">Are persistent, visible labels specified on all form controls?</td>
                   <!-- Status Checkboxes -->
                   <td class="checkbox-td">
                       <!-- Pass Checkbox -->
-                      <label class="custom-checkbox">
+                      <div class="custom-checkbox">
                           <input type="checkbox" id="chk2-1-pass" name="chk2-1-pass" aria-labelledby="pass form-labels">
                           <span></span>
-                      </label>
+                      </div>
                   </td>
                   <td class="checkbox-td">
                       <!-- Fail Checkbox -->
-                      <label class="custom-checkbox">
+                      <div class="custom-checkbox">
                           <input type="checkbox" id="chk2-1-fail" name="chk2-1-fail" aria-labelledby="fail form-labels">
                           <span></span>
-                      </label>
+                      </div>
                   </td>
                   <td class="checkbox-td">
                       <!-- Annotated Checkbox -->
-                      <label class="custom-checkbox">
+                      <div class="custom-checkbox">
                           <input type="checkbox" id="chk2-1-annotated" name="chk2-1-annotated" aria-labelledby="annotated form-labels">
                           <span></span>
-                      </label>
+                      </div>
                   </td>
                   <td class="checkbox-td">
                       <!-- N/A Checkbox -->
-                      <label class="custom-checkbox">
+                      <div class="custom-checkbox">
                           <input type="checkbox" id="chk2-1-na" name="chk2-1-na" aria-labelledby="na form-labels">
                           <span></span>
-                      </label>
+                      </div>
                   </td>
                 </tr>
                 <!-- Row 2: Second Checkpoint for Heuristic 2 -->
@@ -283,31 +483,31 @@
                   <!-- Status Checkboxes -->
                   <td class="checkbox-td">
                       <!-- Pass Checkbox -->
-                      <label class="custom-checkbox">
+                      <div class="custom-checkbox">
                           <input type="checkbox" id="chk2-2-pass" name="chk2-2-pass" aria-labelledby="pass labels-proximity">
                           <span></span>
-                      </label>
+                      </div>
                   </td>
                   <td class="checkbox-td">
                       <!-- Fail Checkbox -->
-                      <label class="custom-checkbox">
+                      <div class="custom-checkbox">
                           <input type="checkbox" id="chk2-2-fail" name="chk2-2-fail" aria-labelledby="fail labels-proximity">
                           <span></span>
-                      </label>
+                      </div>
                   </td>
                   <td class="checkbox-td">
                       <!-- Annotated Checkbox -->
-                      <label class="custom-checkbox">
+                      <div class="custom-checkbox">
                           <input type="checkbox" id="chk2-2-annotated" name="chk2-2-annotated" aria-labelledby="annotated labels-proximity">
                           <span></span>
-                      </label>
+                      </div>
                   </td>
                   <td class="checkbox-td">
                       <!-- N/A Checkbox -->
-                      <label class="custom-checkbox">
+                      <div class="custom-checkbox">
                           <input type="checkbox" id="chk2-2-na" name="chk2-2-na" aria-labelledby="na labels-proximity">
                           <span></span>
-                      </label>
+                      </div>
                   </td>
                 </tr>
                 <!-- Row 3: Third Checkpoint for Heuristic 2 -->
@@ -316,31 +516,31 @@
                   <!-- Status Checkboxes -->
                   <td class="checkbox-td">
                       <!-- Pass Checkbox -->
-                      <label class="custom-checkbox">
+                      <div class="custom-checkbox">
                           <input type="checkbox" id="chk2-3-pass" name="chk2-3-pass" aria-labelledby="pass required-fields">
                           <span></span>
-                      </label>
+                      </div>
                   </td>
                   <td class="checkbox-td">
                       <!-- Fail Checkbox -->
-                      <label class="custom-checkbox">
+                      <div class="custom-checkbox">
                           <input type="checkbox" id="chk2-3-fail" name="chk2-3-fail" aria-labelledby="fail required-fields">
                           <span></span>
-                      </label>
+                      </div>
                   </td>
                   <td class="checkbox-td">
                       <!-- Annotated Checkbox -->
-                      <label class="custom-checkbox">
+                      <div class="custom-checkbox">
                           <input type="checkbox" id="chk2-3-annotated" name="chk2-3-annotated" aria-labelledby="annotated required-fields">
                           <span></span>
-                      </label>
+                      </div>
                   </td>
                   <td class="checkbox-td">
                       <!-- N/A Checkbox -->
-                      <label class="custom-checkbox">
+                      <div class="custom-checkbox">
                           <input type="checkbox" id="chk2-3-na" name="chk2-3-na" aria-labelledby="na required-fields">
                           <span></span>
-                      </label>
+                      </div>
                   </td>
                 </tr>
                 <!-- Row 4: Fourth Checkpoint for Heuristic 2 -->
@@ -349,31 +549,31 @@
                   <!-- Status Checkboxes -->
                   <td class="checkbox-td">
                       <!-- Pass Checkbox -->
-                      <label class="custom-checkbox">
+                      <div class="custom-checkbox">
                           <input type="checkbox" id="chk2-4-pass" name="chk2-4-pass" aria-labelledby="pass form-instructions">
                           <span></span>
-                      </label>
+                      </div>
                   </td>
                   <td class="checkbox-td">
                       <!-- Fail Checkbox -->
-                      <label class="custom-checkbox">
+                      <div class="custom-checkbox">
                           <input type="checkbox" id="chk2-4-fail" name="chk2-4-fail" aria-labelledby="fail form-instructions">
                           <span></span>
-                      </label>
+                      </div>
                   </td>
                   <td class="checkbox-td">
                       <!-- Annotated Checkbox -->
-                      <label class="custom-checkbox">
+                      <div class="custom-checkbox">
                           <input type="checkbox" id="chk2-4-annotated" name="chk2-4-annotated" aria-labelledby="annotated form-instructions">
                           <span></span>
-                      </label>
+                      </div>
                   </td>
                   <td class="checkbox-td">
                       <!-- N/A Checkbox -->
-                      <label class="custom-checkbox">
+                      <div class="custom-checkbox">
                           <input type="checkbox" id="chk2-4-na" name="chk2-4-na" aria-labelledby="na form-instructions">
                           <span></span>
-                      </label>
+                      </div>
                   </td>
                 </tr>
                 <!-- Row 5: Fifth Checkpoint for Heuristic 2 Structure - Forms -->
@@ -382,31 +582,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk2-5-pass" name="chk2-5-pass" aria-labelledby="pass form-errors">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk2-5-fail" name="chk2-5-fail" aria-labelledby="fail form-errors">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk2-5-annotated" name="chk2-5-annotated" aria-labelledby="annotated form-errors">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk2-5-na" name="chk2-5-na" aria-labelledby="na form-errors">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 6: Sixth Checkpoint for Heuristic 2 Structure - Forms -->
@@ -415,31 +615,64 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk2-6-pass" name="chk2-6-pass" aria-labelledby="pass inline-errors">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk2-6-fail" name="chk2-6-fail" aria-labelledby="fail inline-errors">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk2-6-annotated" name="chk2-6-annotated" aria-labelledby="annotated inline-errors">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk2-6-na" name="chk2-6-na" aria-labelledby="na inline-errors">
                             <span></span>
-                        </label>
+                        </div>
+                    </td>
+                </tr>
+                <!-- Row 7: Seventh Checkpoint for Heuristic 2 Structure - Forms -->
+                <tr>
+                    <td id="inline-errors">Are status/success messages provided with sufficient user notification?</td>
+                    <!-- Status Checkboxes -->
+                    <td class="checkbox-td">
+                        <!-- Pass Checkbox -->
+                        <div class="custom-checkbox">
+                            <input type="checkbox" id="chk2-6-pass" name="chk2-6-pass" aria-labelledby="pass inline-errors">
+                            <span></span>
+                        </div>
+                    </td>
+                    <td class="checkbox-td">
+                        <!-- Fail Checkbox -->
+                        <div class="custom-checkbox">
+                            <input type="checkbox" id="chk2-6-fail" name="chk2-6-fail" aria-labelledby="fail inline-errors">
+                            <span></span>
+                        </div>
+                    </td>
+                    <td class="checkbox-td">
+                        <!-- Annotated Checkbox -->
+                        <div class="custom-checkbox">
+                            <input type="checkbox" id="chk2-6-annotated" name="chk2-6-annotated" aria-labelledby="annotated inline-errors">
+                            <span></span>
+                        </div>
+                    </td>
+                    <td class="checkbox-td">
+                        <!-- N/A Checkbox -->
+                        <div class="custom-checkbox">
+                            <input type="checkbox" id="chk2-6-na" name="chk2-6-na" aria-labelledby="na inline-errors">
+                            <span></span>
+                        </div>
                     </td>
                 </tr>
                 <!-- First Row for Heuristic 3: Color -->
@@ -452,31 +685,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk3-1-pass" name="chk3-1-pass" aria-labelledby="pass color-alone">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk3-1-fail" name="chk3-1-fail" aria-labelledby="fail color-alone">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk3-1-annotated" name="chk3-1-annotated" aria-labelledby="annotated color-alone">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk3-1-na" name="chk3-1-na" aria-labelledby="na color-alone">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- New Row for Heuristic 3: Color -->
@@ -485,31 +718,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk3-2-pass" name="chk3-2-pass" aria-labelledby="pass contrast-ratio">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk3-2-fail" name="chk3-2-fail" aria-labelledby="fail contrast-ratio">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk3-2-annotated" name="chk3-2-annotated" aria-labelledby="annotated contrast-ratio">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk3-2-na" name="chk3-2-na" aria-labelledby="na contrast-ratio">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 3: Third Checkpoint for Heuristic 3: Color -->
@@ -519,31 +752,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk3-3-pass" name="chk3-3-pass" aria-labelledby="pass link-text-contrast">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk3-3-fail" name="chk3-3-fail" aria-labelledby="fail link-text-contrast">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk3-3-annotated" name="chk3-3-annotated" aria-labelledby="annotated link-text-contrast">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk3-3-na" name="chk3-3-na" aria-labelledby="na link-text-contrast">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 4: Fourth Checkpoint for Heuristic 3: Color -->
@@ -552,31 +785,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk3-4-pass" name="chk3-4-pass" aria-labelledby="pass ui-contrast">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk3-4-fail" name="chk3-4-fail" aria-labelledby="fail ui-contrast">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk3-4-annotated" name="chk3-4-annotated" aria-labelledby="annotated ui-contrast">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk3-4-na" name="chk3-4-na" aria-labelledby="na ui-contrast">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 5: Fifth Checkpoint for Heuristic 3: Color -->
@@ -585,31 +818,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk3-5-pass" name="chk3-5-pass" aria-labelledby="pass ui-border-contrast">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk3-5-fail" name="chk3-5-fail" aria-labelledby="fail ui-border-contrast">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk3-5-annotated" name="chk3-5-annotated" aria-labelledby="annotated ui-border-contrast">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk3-5-na" name="chk3-5-na" aria-labelledby="na ui-border-contrast">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
 
@@ -623,31 +856,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk4-1-pass" name="chk4-1-pass" aria-labelledby="pass focus-indicator">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk4-1-fail" name="chk4-1-fail" aria-labelledby="fail focus-indicator">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk4-1-annotated" name="chk4-1-annotated" aria-labelledby="annotated focus-indicator">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk4-1-na" name="chk4-1-na" aria-labelledby="na focus-indicator">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 2: Second Checkpoint for Heuristic 4: Navigation and Wayfinding -->
@@ -656,31 +889,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk4-2-pass" name="chk4-2-pass" aria-labelledby="pass page-title">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk4-2-fail" name="chk4-2-fail" aria-labelledby="fail page-title">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk4-2-annotated" name="chk4-2-annotated" aria-labelledby="annotated page-title">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk4-2-na" name="chk4-2-na" aria-labelledby="na page-title">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 3: Third Checkpoint for Heuristic 4: Navigation and Wayfinding -->
@@ -689,31 +922,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk4-3-pass" name="chk4-3-pass" aria-labelledby="pass title-h1-similarity">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk4-3-fail" name="chk4-3-fail" aria-labelledby="fail title-h1-similarity">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk4-3-annotated" name="chk4-3-annotated" aria-labelledby="annotated title-h1-similarity">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk4-3-na" name="chk4-3-na" aria-labelledby="na title-h1-similarity">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 4: Fourth Checkpoint for Heuristic 4: Navigation and Wayfinding -->
@@ -722,31 +955,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk4-4-pass" name="chk4-4-pass" aria-labelledby="pass meaningful-headings">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk4-4-fail" name="chk4-4-fail" aria-labelledby="fail meaningful-headings">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk4-4-annotated" name="chk4-4-annotated" aria-labelledby="annotated meaningful-headings">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk4-4-na" name="chk4-4-na" aria-labelledby="na meaningful-headings">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 5: Fifth Checkpoint for Heuristic 4: Navigation and Wayfinding -->
@@ -755,31 +988,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk4-5-pass" name="chk4-5-pass" aria-labelledby="pass link-purpose">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk4-5-fail" name="chk4-5-fail" aria-labelledby="fail link-purpose">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk4-5-annotated" name="chk4-5-annotated" aria-labelledby="annotated link-purpose">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk4-5-na" name="chk4-5-na" aria-labelledby="na link-purpose">
                             <span></span>
-                        </        </label>
+                        </        </div>
                     </td>
                 </tr>
                 <!-- Row 6: Sixth Checkpoint for Heuristic 4: Navigation and Wayfinding -->
@@ -788,31 +1021,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk4-6-pass" name="chk4-6-pass" aria-labelledby="pass skip-link">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk4-6-fail" name="chk4-6-fail" aria-labelledby="fail skip-link">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk4-6-annotated" name="chk4-6-annotated" aria-labelledby="annotated skip-link">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk4-6-na" name="chk4-6-na" aria-labelledby="na skip-link">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 7: Seventh Checkpoint for Heuristic 4: Navigation and Wayfinding -->
@@ -821,31 +1054,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk4-7-pass" name="chk4-7-pass" aria-labelledby="pass nav-organization">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk4-7-fail" name="chk4-7-fail" aria-labelledby="fail nav-organization">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk4-7-annotated" name="chk4-7-annotated" aria-labelledby="annotated nav-organization">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk4-7-na" name="chk4-7-na" aria-labelledby="na nav-organization">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Non-Text Content Heuristic 5 -->
@@ -858,28 +1091,28 @@
                     <td id="informative-img-alt">Are informative images provided with meaningful alt text describing their content?</td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk5-1-pass" name="chk5-1-pass" aria-labelledby="pass informative-img-alt">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk5-1-fail" name="chk5-1-fail" aria-labelledby="fail informative-img-alt">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk5-1-annotated" name="chk5-1-annotated" aria-labelledby="annotated informative-img-alt">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk5-1-na" name="chk5-1-na" aria-labelledby="na informative-img-alt">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 2: Second Checkpoint for Non-Text Content -->
@@ -887,28 +1120,28 @@
                     <td id="active-img-alt">Are active images provided with meaningful alt text describing their purpose?</td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk5-2-pass" name="chk5-2-pass" aria-labelledby="pass active-img-alt">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk5-2-fail" name="chk5-2-fail" aria-labelledby="fail active-img-alt">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk5-2-annotated" name="chk5-2-annotated" aria-labelledby="annotated active-img-alt">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk5-2-na" name="chk5-2-na" aria-labelledby="na active-img-alt">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 3: Third Checkpoint for Non-Text Content -->
@@ -916,28 +1149,28 @@
                     <td id="decorative-img">Are decorative images identified so they can be ignored by assistive technologies?</td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk5-3-pass" name="chk5-3-pass" aria-labelledby="pass decorative-img">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk5-3-fail" name="chk5-3-fail" aria-labelledby="fail decorative-img">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk5-3-annotated" name="chk5-3-annotated" aria-labelledby="annotated decorative-img">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk5-3-na" name="chk5-3-na" aria-labelledby="na decorative-img">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 4: Fourth Checkpoint for Non-Text Content -->
@@ -945,28 +1178,28 @@
                     <td id="complex-img-description">Are complex images given alt text and an extended full-text description?</td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk5-4-pass" name="chk5-4-pass" aria-labelledby="pass complex-img-description">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk5-4-fail" name="chk5-4-fail" aria-labelledby="fail complex-img-description">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk5-4-annotated" name="chk5-4-annotated" aria-labelledby="annotated complex-img-description">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk5-4-na" name="chk5-4-na" aria-labelledby="na complex-img-description">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 5: Fifth Checkpoint for Non-Text Content -->
@@ -974,28 +1207,28 @@
                     <td id="audio-transcript">Is a transcript placeholder designed for audio-only and video-only content?</td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk5-5-pass" name="chk5-5-pass" aria-labelledby="pass audio-transcript">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk5-5-fail" name="chk5-5-fail" aria-labelledby="fail audio-transcript">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk5-5-annotated" name="chk5-5-annotated" aria-labelledby="annotated audio-transcript">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk5-5-na" name="chk5-5-na" aria-labelledby="na audio-transcript">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 6: Sixth Checkpoint for Non-Text Content -->
@@ -1003,28 +1236,28 @@
                     <td id="video-captions">Are synchronized captions provided for pre-recorded videos?</td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk5-6-pass" name="chk5-6-pass" aria-labelledby="pass video-captions">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk5-6-fail" name="chk5-6-fail" aria-labelledby="fail video-captions">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk5-6-annotated" name="chk5-6-annotated" aria-labelledby="annotated video-captions">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk5-6-na" name="chk5-6-na" aria-labelledby="na video-captions">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 7: Seventh Checkpoint for Non-Text Content -->
@@ -1032,28 +1265,28 @@
                     <td id="audio-descriptions">Are audio description tracks provided for pre-recorded videos?</td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk5-7-pass" name="chk5-7-pass" aria-labelledby="pass audio-descriptions">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk5-7-fail" name="chk5-7-fail" aria-labelledby="fail audio-descriptions">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk5-7-annotated" name="chk5-7-annotated" aria-labelledby="annotated audio-descriptions">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk5-7-na" name="chk5-7-na" aria-labelledby="na audio-descriptions">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 1: Starting Interactives Section 6 -->
@@ -1064,196 +1297,196 @@
                     <!-- First Checkpoint for Interactives -->
                     <td id="mouse-specific">Are any of the interactions designed to be mouse specific?</td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-1-pass" name="chk6-1-pass" aria-labelledby="pass mouse-specific">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-1-fail" name="chk6-1-fail" aria-labelledby="fail mouse-specific">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-1-annotated" name="chk6-1-annotated" aria-labelledby="annotated mouse-specific">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-1-na" name="chk6-1-na" aria-labelledby="na mouse-specific">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Second Checkpoint for Interactives -->
                 <tr>
                     <td id="keyboard-accessible">Is every functionality designed to be fully keyboard accessible?</td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-2-pass" name="chk6-2-pass" aria-labelledby="pass keyboard-accessible">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-2-fail" name="chk6-2-fail" aria-labelledby="fail keyboard-accessible">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-2-annotated" name="chk6-2-annotated" aria-labelledby="annotated keyboard-accessible">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-2-na" name="chk6-2-na" aria-labelledby="na keyboard-accessible">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Third Checkpoint for Interactives -->
                 <tr>
                     <td id="touch-accessible">Are features designed to be fully functional using touch screens?</td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-3-pass" name="chk6-3-pass" aria-labelledby="pass touch-accessible">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-3-fail" name="chk6-3-fail" aria-labelledby="fail touch-accessible">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-3-annotated" name="chk6-3-annotated" aria-labelledby="annotated touch-accessible">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-3-na" name="chk6-3-na" aria-labelledby="na touch-accessible">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Fourth Checkpoint for Interactives -->
                 <tr>
                     <td id="realistic-interactions">Are the design interactions realistic from a tabbing, touch or voice perspective?</td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-4-pass" name="chk6-4-pass" aria-labelledby="pass realistic-interactions">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-4-fail" name="chk6-4-fail" aria-labelledby="fail realistic-interactions">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-4-annotated" name="chk6-4-annotated" aria-labelledby="annotated realistic-interactions">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-4-na" name="chk6-4-na" aria-labelledby="na realistic-interactions">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Fifth Checkpoint for Interactives -->
                 <tr>
                     <td id="voice-commands">Can the design interactions be operated through voice commands?</td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-5-pass" name="chk6-5-pass" aria-labelledby="pass voice-commands">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-5-fail" name="chk6-5-fail" aria-labelledby="fail voice-commands">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-5-annotated" name="chk6-5-annotated" aria-labelledby="annotated voice-commands">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-5-na" name="chk6-5-na" aria-labelledby="na voice-commands">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Sixth Checkpoint for Interactives -->
                 <tr>
                     <td id="limited-tab-stops">Is the focus order structured to ensure a logical navigation sequence?</td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-6-pass" name="chk6-6-pass" aria-labelledby="pass limited-tab-stops">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-6-fail" name="chk6-6-fail" aria-labelledby="fail limited-tab-stops">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-6-annotated" name="chk6-6-annotated" aria-labelledby="annotated limited-tab-stops">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-6-na" name="chk6-6-na" aria-labelledby="na limited-tab-stops">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Seventh Checkpoint for Interactives -->
                 <tr>
                     <td id="focus-visible">Has a visible focus indicator been provided for all interactive elements?</td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-7-pass" name="chk6-7-pass" aria-labelledby="pass focus-visible">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-7-fail" name="chk6-7-fail" aria-labelledby="fail focus-visible">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-7-annotated" name="chk6-7-annotated" aria-labelledby="annotated focus-visible">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-7-na" name="chk6-7-na" aria-labelledby="na focus-visible">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 1 for Heuristic 7: Movement and Flashing -->
@@ -1266,31 +1499,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk7-1-pass" name="chk7-1-pass" aria-labelledby="pass pause-content">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk7-1-fail" name="chk7-1-fail" aria-labelledby="fail pause-content">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk7-1-annotated" name="chk7-1-annotated" aria-labelledby="annotated pause-content">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk7-1-na" name="chk7-1-na" aria-labelledby="na pause-content">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 2: Second Checkpoint for Heuristic 7: Movement and Flashing -->
@@ -1299,31 +1532,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk7-2-pass" name="chk7-2-pass" aria-labelledby="pass control-updates">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk7-2-fail" name="chk7-2-fail" aria-labelledby="fail control-updates">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk7-2-annotated" name="chk7-2-annotated" aria-labelledby="annotated control-updates">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk7-2-na" name="chk7-2-na" aria-labelledby="na control-updates">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 3: Third Checkpoint for Heuristic 7: Movement and Flashing -->
@@ -1332,31 +1565,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk7-3-pass" name="chk7-3-pass" aria-labelledby="pass update-rate">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk7-3-fail" name="chk7-3-fail" aria-labelledby="fail update-rate">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk7-3-annotated" name="chk7-3-annotated" aria-labelledby="annotated update-rate">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk7-3-na" name="chk7-3-na" aria-labelledby="na update-rate">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 4: Fourth Checkpoint for Heuristic 7: Movement and Flashing -->
@@ -1365,31 +1598,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk7-4-pass" name="chk7-4-pass" aria-labelledby="pass no-autoplay">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk7-4-fail" name="chk7-4-fail" aria-labelledby="fail no-autoplay">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk7-4-annotated" name="chk7-4-annotated" aria-labelledby="annotated no-autoplay">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk7-4-na" name="chk7-4-na" aria-labelledby="na no-autoplay">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 5: Fifth Checkpoint for Heuristic 7: Movement and Flashing -->
@@ -1398,31 +1631,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk7-5-pass" name="chk7-5-pass" aria-labelledby="pass adjustable-volume">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk7-5-fail" name="chk7-5-fail" aria-labelledby="fail adjustable-volume">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk7-5-annotated" name="chk7-5-annotated" aria-labelledby="annotated adjustable-volume">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk7-5-na" name="chk7-5-na" aria-labelledby="na adjustable-volume">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 6: Sixth Checkpoint for Heuristic 7: Movement and Flashing -->
@@ -1431,31 +1664,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk7-6-pass" name="chk7-6-pass" aria-labelledby="pass no-flashing">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk7-6-fail" name="chk7-6-fail" aria-labelledby="fail no-flashing">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk7-6-annotated" name="chk7-6-annotated" aria-labelledby="annotated no-flashing">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk7-6-na" name="chk7-6-na" aria-labelledby="na no-flashing">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 7: Seventh Checkpoint for Heuristic 7: Movement and Flashing -->
@@ -1464,31 +1697,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk7-7-pass" name="chk7-7-pass" aria-labelledby="pass quick-reactions">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk7-7-fail" name="chk7-7-fail" aria-labelledby="fail quick-reactions">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk7-7-annotated" name="chk7-7-annotated" aria-labelledby="annotated quick-reactions">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk7-7-na" name="chk7-7-na" aria-labelledby="na quick-reactions">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 1 for Heuristic 8: Timing and Preservation -->
@@ -1501,31 +1734,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk8-1-pass" name="chk8-1-pass" aria-labelledby="pass time-extension-mechanism">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk8-1-fail" name="chk8-1-fail" aria-labelledby="fail time-extension-mechanism">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk8-1-annotated" name="chk8-1-annotated" aria-labelledby="annotated time-extension-mechanism">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk8-1-na" name="chk8-1-na" aria-labelledby="na time-extension-mechanism">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 2: Second Checkpoint for Heuristic 8: Timing and Preservation -->
@@ -1534,31 +1767,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk8-2-pass" name="chk8-2-pass" aria-labelledby="pass session-timeout-warning">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk8-2-fail" name="chk8-2-fail" aria-labelledby="fail session-timeout-warning">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk8-2-annotated" name="chk8-2-annotated" aria-labelledby="annotated session-timeout-warning">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk8-2-na" name="chk8-2-na" aria-labelledby="na session-timeout-warning">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 3: Third Checkpoint for Heuristic 8: Timing and Preservation -->
@@ -1567,31 +1800,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk8-3-pass" name="chk8-3-pass" aria-labelledby="pass time-limit-control">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk8-3-fail" name="chk8-3-fail" aria-labelledby="fail time-limit-control">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk8-3-annotated" name="chk8-3-annotated" aria-labelledby="annotated time-limit-control">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk8-3-na" name="chk8-3-na" aria-labelledby="na time-limit-control">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 4: Fourth Checkpoint for Heuristic 8: Timing and Preservation -->
@@ -1600,31 +1833,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk8-4-pass" name="chk8-4-pass" aria-labelledby="pass suppress-interruptions">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk8-4-fail" name="chk8-4-fail" aria-labelledby="fail suppress-interruptions">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk8-4-annotated" name="chk8-4-annotated" aria-labelledby="annotated suppress-interruptions">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk8-4-na" name="chk8-4-na" aria-labelledby="na suppress-interruptions">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 5: Fifth Checkpoint for Heuristic 8: Timing and Preservation -->
@@ -1633,31 +1866,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk8-5-pass" name="chk8-5-pass" aria-labelledby="pass user-requested-updates">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk8-5-fail" name="chk8-5-fail" aria-labelledby="fail user-requested-updates">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk8-5-annotated" name="chk8-5-annotated" aria-labelledby="annotated user-requested-updates">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk8-5-na" name="chk8-5-na" aria-labelledby="na user-requested-updates">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 6: Sixth Checkpoint for Heuristic 8: Timing and Preservation -->
@@ -1666,31 +1899,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk8-6-pass" name="chk8-6-pass" aria-labelledby="pass data-recovery">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk8-6-fail" name="chk8-6-fail" aria-labelledby="fail data-recovery">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk8-6-annotated" name="chk8-6-annotated" aria-labelledby="annotated data-recovery">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk8-6-na" name="chk8-6-na" aria-labelledby="na data-recovery">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 7: Seventh Checkpoint for Heuristic 8: Timing and Preservation -->
@@ -1699,31 +1932,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk8-7-pass" name="chk8-7-pass" aria-labelledby="pass form-save-data">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk8-7-fail" name="chk8-7-fail" aria-labelledby="fail form-save-data">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk8-7-annotated" name="chk8-7-annotated" aria-labelledby="annotated form-save-data">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk8-7-na" name="chk8-7-na" aria-labelledby="na form-save-data">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 1 for Heuristic 9: Screen Magnification -->
@@ -1736,31 +1969,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk9-1-pass" name="chk9-1-pass" aria-labelledby="pass zoom-restriction">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk9-1-fail" name="chk9-1-fail" aria-labelledby="fail zoom-restriction">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk9-1-annotated" name="chk9-1-annotated" aria-labelledby="annotated zoom-restriction">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk9-1-na" name="chk9-1-na" aria-labelledby="na zoom-restriction">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 2: Second Checkpoint for Heuristic 9: Screen Magnification -->
@@ -1769,31 +2002,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk9-2-pass" name="chk9-2-pass" aria-labelledby="pass resize-200">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk9-2-fail" name="chk9-2-fail" aria-labelledby="fail resize-200">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk9-2-annotated" name="chk9-2-annotated" aria-labelledby="annotated resize-200">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk9-2-na" name="chk9-2-na" aria-labelledby="na resize-200">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 3: Third Checkpoint for Heuristic 9: Screen Magnification -->
@@ -1802,31 +2035,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk9-3-pass" name="chk9-3-pass" aria-labelledby="pass accommodate-text-scaling">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk9-3-fail" name="chk9-3-fail" aria-labelledby="fail accommodate-text-scaling">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk9-3-annotated" name="chk9-3-annotated" aria-labelledby="annotated accommodate-text-scaling">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk9-3-na" name="chk9-3-na" aria-labelledby="na accommodate-text-scaling">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 4: Fourth Checkpoint for Heuristic 9: Screen Magnification -->
@@ -1835,31 +2068,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk9-4-pass" name="chk9-4-pass" aria-labelledby="pass resize-400">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk9-4-fail" name="chk9-4-fail" aria-labelledby="fail resize-400">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk9-4-annotated" name="chk9-4-annotated" aria-labelledby="annotated resize-400">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk9-4-na" name="chk9-4-na" aria-labelledby="na resize-400">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 5: Fifth Checkpoint for Heuristic 9: Screen Magnification -->
@@ -1868,31 +2101,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk9-5-pass" name="chk9-5-pass" aria-labelledby="pass two-dim-scrolling">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk9-5-fail" name="chk9-5-fail" aria-labelledby="fail two-dim-scrolling">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk9-5-annotated" name="chk9-5-annotated" aria-labelledby="annotated two-dim-scrolling">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk9-5-na" name="chk9-5-na" aria-labelledby="na two-dim-scrolling">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 6: Sixth Checkpoint for Heuristic 9: Screen Magnification -->
@@ -1901,31 +2134,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk9-6-pass" name="chk9-6-pass" aria-labelledby="pass content-visibility">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk9-6-fail" name="chk9-6-fail" aria-labelledby="fail content-visibility">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk9-6-annotated" name="chk9-6-annotated" aria-labelledby="annotated content-visibility">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk9-6-na" name="chk9-6-na" aria-labelledby="na content-visibility">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
                 <!-- Row 7: Seventh Checkpoint for Heuristic 9: Screen Magnification -->
@@ -1934,31 +2167,31 @@
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk9-7-pass" name="chk9-7-pass" aria-labelledby="pass text-spacing">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Fail Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk9-7-fail" name="chk9-7-fail" aria-labelledby="fail text-spacing">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- Annotated Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk9-7-annotated" name="chk9-7-annotated" aria-labelledby="annotated text-spacing">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                     <td class="checkbox-td">
                         <!-- N/A Checkbox -->
-                        <label class="custom-checkbox">
+                        <div class="custom-checkbox">
                             <input type="checkbox" id="chk9-7-na" name="chk9-7-na" aria-labelledby="na text-spacing">
                             <span></span>
-                        </label>
+                        </div>
                     </td>
                 </tr>
               </tbody>

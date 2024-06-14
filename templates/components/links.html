@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Links</title>
+    <title>Link</title>
 
     <!-- Link to Bootstrap CSS from CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
@@ -39,7 +39,7 @@
             <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
             <div class="container-xxl bd-gutter mt-3">
               <div class="heading-callout-container">
-                <h1>Links</h1>
+                <h1>Link</h1>
                 <!-- Button vs Link Call out -->
                 <div class="btn-vs-link-parent">
                   <div class="btn-vs-link-child">
@@ -143,6 +143,24 @@
                             <li><img src="/assets/images/link-tag.png" alt="link annotation tag"></li>
                             <li><img src="/assets/images/link-with-label.png" alt="link annotation tag with label equals sign and the word foo in quotes"></li>
                           </ul>
+                          <!-- Copy Annotation -->
+                          <div class="d-inline-block border border-dark p-2 rounded">
+                            <div class="d-flex flex-row">
+                              <div class="text-to-copy">
+                                <h3>Link</h3>
+                                <ul role="list">
+                                  <li>Link must be in a <code>&lt;a&gt;</code> element or the element used such as a <code>&lt;div&gt;</code> must have <code>role="link"</code> and <code>tabindex="0"</code> as an equivalent with keyboard event handlers ensuring equal functionality for mouse, keyboard and touch users.</li>
+                                  <li>Links must have an accessible name with good link purpose. Use text, img alt, aria-label, aria-labelledby or add sr-only text.</li>
+                                  <li>Links with ambiguous names such as "Learn More" and "Read More" will need additional context added with an aria-label starting with the link name or sr-only text or an aria-describedby association to add context to where the link will naviagte to.</li>
+                                </ul>                              
+                              </div>
+                              <div>
+                                  <button class="ml-1r btn copy-btn">
+                                    <i class="bi bi-clipboard-heart-fill" aria-hidden="true"></i> Copy
+                                  </button>
+                              </div>
+                            </div>
+                          </div>  
                         </div>
                       </div>
                     </div>
