@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+
+    <!-- Link to Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <!-- Link to Custom Stylesheet -->
+    <link rel="stylesheet" href="../../../../assets/styles/custom.css">
+    <!-- Link to Custom Stylesheet Production -->
+    <link rel="stylesheet" href="../../../../../assets/styles/custom.css">
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/a11y-annotations/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/a11y-annotations/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/a11y-annotations/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/a11y-annotations/assets/images/site.webmanifest">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+</head>
+<body>
+  <header class="d-block px-3 py-2 shadow">
+    <img src="https://www.biointeractive.org/themes/gesso/images/hhmi-logo.svg" alt="hhmi Biointeractive logo" style="max-width: 320px;">
+  </header>
+  <div class="container-fluid">
+      <div class="row">
+          <!-- Includes the Sidebar Navigation using jQuery -->
+          <div id="sidebar-container" class="col-md-2 border-end"></div>
+
+          <!-- Main Content -->
+          <main class="col-md-10">
+            <!-- A11y Live Region -->
+            <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
+            <div class="container-xxl bd-gutter mt-3">
+                <h1>Carousel</h1>
+                <h2 class="mt-4 mb-3">Component Accessibility Considerations</h2>
+                <p>HHMI has a policy to avoid using carousels in web design due to their known accessibility issues. Carousels often fail to meet several WCAG requirements and present challenges for many users, including those with disabilities. Below, we list the most common accessibility issues with carousels and provide alternative methods for presenting content typically found in carousels.</p>
+                
+                <h2 class="mt-4 mb-3">Common Accessibility Issues with Carousels</h2>
+                <p>Carousels are a popular design element, but they often come with significant accessibility challenges, including:</p>
+                <ul>
+                  <li><strong>Inconsistent Navigation:</strong> Carousels can make navigation difficult for keyboard and screen reader users. Users must be able to pause, stop, or navigate the carousel using keyboard controls, which is often not implemented correctly. <a href="https://www.w3.org/WAI/tutorials/carousels/" target="_blank" rel="noopener noreferrer">[W3C: Carousels]</a></li>
+                  <li><strong>Focus Order Issues:</strong> Moving content in carousels can disrupt the logical focus order, making it confusing for keyboard and screen reader users to navigate through the content. <a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html" target="_blank" rel="noopener noreferrer">[WCAG 2.4.3 Focus Order]</a></li>
+                  <li><strong>Time Constraints:</strong> Auto-rotating carousels can move too quickly for users to read and interact with the content, creating a poor user experience. <a href="https://www.w3.org/WAI/WCAG21/Understanding/time-adjustable.html" target="_blank" rel="noopener noreferrer">[WCAG 2.2.1 Timing Adjustable]</a></li>
+                  <li><strong>Screen Reader Announcements:</strong> Screen readers may not properly announce the content of each slide, leading to incomplete information being conveyed to users. <a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" target="_blank" rel="noopener noreferrer">[WCAG 4.1.2 Name, Role, Value]</a></li>
+                  <li><strong>Content Visibility:</strong> Important content can be hidden in slides that are not currently visible, which can be problematic for users who rely on screen magnification. <a href="https://resonatorinc.com/the-low/5-reasons-carousels-sliders-are-bad-ux/" target="_blank" rel="noopener noreferrer">[Resonator: 5 Reasons Carousels are Bad UX]</a></li>
+                </ul>
+                
+                <h2 class="mt-4 mb-3">Alternative Ways to Present Carousel Content</h2>
+                <p>Instead of using carousels, consider these accessible alternatives to present content:</p>
+                <ul>
+                  <li><strong>Static Images and Content:</strong> Display all images and content statically on the page, allowing users to scroll through at their own pace. This approach avoids the pitfalls of auto-rotating carousels and ensures that all content is always visible.</li>
+                  <li><strong>Tabbed Interfaces:</strong> Use tabs to organize content into different sections that users can navigate through easily. Tabs are generally more accessible and provide a clearer structure for content. <a href="https://www.w3.org/WAI/tutorials/tabs/" target="_blank" rel="noopener noreferrer">[W3C: Tabs]</a></li>
+                  <li><strong>Collapsible Sections:</strong> Use expandable and collapsible sections to organize content. This allows users to expand only the sections they are interested in, providing a more accessible way to navigate through the content. <a href="https://www.w3.org/WAI/WCAG21/Understanding/accordion.html" target="_blank" rel="noopener noreferrer">[W3C: Accordions]</a></li>
+                  <li><strong>Manual Slideshows:</strong> If a slideshow is necessary, ensure it is fully controllable by the user, with accessible buttons for navigation, play, pause, and a clear indication of the current slide. <a href="https://www.w3.org/WAI/tutorials/sliders/" target="_blank" rel="noopener noreferrer">[W3C: Sliders]</a></li>
+                </ul>
+
+                <h2 class="mt-4 mb-3">Additional Resources</h2>
+                <ul>
+                  <li><a href="https://www.smashingmagazine.com/2018/03/infinite-scrolling-pagination-carousel/" target="_blank">Smashing Magazine: Infinite Scrolling, Pagination Or ‘Load More’ Buttons?</a></li>
+                  <li><a href="https://www.css-tricks.com/infinite-scrolling-introduction-and-recommendations/" target="_blank">CSS-Tricks: Infinite Scrolling: An Introduction And Recommendations</a></li>
+                  <li><a href="https://www.nngroup.com/articles/auto-forwarding/" target="_blank">Nielsen Norman Group: Auto-Forwarding Carousels and Accordions Annoy Users and Reduce Visibility</a></li>
+                  <li><a href="https://webaim.org/blog/carousel-wcag-compliance/" target="_blank">WebAIM: Carousels and WCAG Compliance</a></li>
+                  <li><a href="https://www.deque.com/blog/why-auto-rotating-carousels-fail-accessibility/" target="_blank">Deque: Why Auto-Rotating Carousels Fail Accessibility</a></li>
+                  <li><a href="https://www.uxbooth.com/articles/designing-effective-carousels-our-findings/" target="_blank">UX Booth: Designing Effective Carousels: Our Findings</a></li>
+                  <li><a href="https://www.thegood.com/insights/ecommerce-image-carousels/" target="_blank">The Good: Why Most Ecommerce Image Carousels Are a Bad Idea</a></li>
+                  <li><a href="https://www.impactplus.com/blog/why-homepage-carousels-are-bad" target="_blank">IMPACT: Why Homepage Carousels Are Bad</a></li>
+                  <li><a href="https://resonatorinc.com/the-low/5-reasons-carousels-sliders-are-bad-ux/" target="_blank">Resonator: 5 Reasons Carousels & Sliders Are Bad UX</a></li>
+                </ul>                                                                                 
+                    
+          </main>
+        </div>
+      </div>
+
+    <!-- Script links and jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../../../assets/js/global.js"></script>
+    <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- Add sidebar navigation to page -->
+    <script>
+      $(document).ready(function () {
+          // Determine the path relative to the root directory
+          var rootRelativePath = "../sidebar-navigation.html";
+  
+          // Use jQuery to load the sidebar-navigation.html file
+          $("#sidebar-container").load(rootRelativePath);
+      });
+    </script>
+</body>
+</html>

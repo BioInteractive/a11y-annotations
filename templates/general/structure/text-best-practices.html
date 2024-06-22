@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Practices for Text Readability and Accessibility</title>
+
+    <!-- Link to Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <!-- Link to Custom Stylesheet -->
+    <link rel="stylesheet" href="../../../../assets/styles/custom.css">
+    <!-- Link to Custom Stylesheet Production -->
+    <link rel="stylesheet" href="../../../../../assets/styles/custom.css">
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/a11y-annotations/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/a11y-annotations/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/a11y-annotations/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/a11y-annotations/assets/images/site.webmanifest">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+</head>
+<body>
+  <header class="d-block px-3 py-2 shadow">
+    <img src="https://www.biointeractive.org/themes/gesso/images/hhmi-logo.svg" alt="hhmi Biointeractive logo" style="max-width: 320px;">
+  </header>
+  <div class="container-fluid">
+      <div class="row">
+          <!-- Includes the Sidebar Navigation using jQuery -->
+          <div id="sidebar-container" class="col-md-2 border-end"></div>
+
+          <!-- Main Content -->
+          <main class="col-md-10">
+            <!-- A11y Live Region -->
+            <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
+            <div class="container-xxl bd-gutter mt-3">
+                <h1>Text Readability and Accessibility</h1>
+                <h2 class="mb-3">Best Practices</h2>
+
+                <p>Ensuring text is readable and accessible is crucial for making content inclusive for everyone, including individuals with disabilities. Here are some key practices to keep in mind:</p>
+
+                <h3>Use Clear and Simple Language</h3>
+                <ul>
+                    <li>Plain Language: Use straightforward language that is easy to understand. Avoid jargon and complex sentences.</li>
+                    <li>Active Voice: Prefer active voice over passive voice to make sentences clearer.</li>
+                </ul>
+
+                <h3>Choose Readable Fonts</h3>
+                <ul>
+                    <li>Sans-Serif Fonts: Fonts like Arial, Verdana, and Helvetica are generally easier to read on screens.</li>
+                    <li>Font Size: Ensure a minimum font size of 16px for body text to enhance readability.</li>
+                </ul>
+
+                <h3>Provide Adequate Spacing</h3>
+                <ul>
+                    <li>Line Height: Use a line height (line spacing) of at least 1.5 times the font size.</li>
+                    <li>Paragraph Spacing: Leave sufficient space between paragraphs to break up text and make it easier to scan.</li>
+                </ul>
+
+                <h3>Avoid All Caps and Italics</h3>
+                <ul>
+                    <li>All Caps: Text in all capital letters can be harder to read and may be interpreted as shouting.</li>
+                    <li>Italics: Use italics sparingly as they can be difficult to read, especially for individuals with dyslexia.</li>
+                </ul>
+
+                <h3>Use Headings and Lists</h3>
+                <ul>
+                    <li>Headings: Use headings (H1, H2, H3, etc.) to structure your content logically. This helps screen readers and improves navigation.
+                        <a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships" target="_blank" rel="noopener noreferrer">[1.3.1 Info and Relationships]</a>
+                    </li>
+                    <li>Lists: Use bullet points or numbered lists to break down information into digestible chunks.</li>
+                </ul>                
+
+                <h3>Ensure Sufficient Contrast</h3>
+                <ul>
+                    <li>Color Contrast: Make sure there is a high contrast between text and background colors. This helps people with visual impairments or color blindness. Tools like Deque's color contrast analyzer can be very helpful.
+                        <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum" target="_blank" rel="noopener noreferrer">[1.4.3 Contrast (Minimum)]</a>
+                    </li>
+                </ul>
+
+                <h3>Provide Text Alternatives</h3>
+                <ul>
+                    <li>Alt Text: Always provide descriptive alt text for images to ensure that screen readers can convey the information to users who are blind or have low vision.
+                        <a href="https://www.w3.org/WAI/WCAG21/Understanding/text-alternatives" target="_blank" rel="noopener noreferrer">[1.1.1 Non-text Content]</a>
+                    </li>
+                    <li>Captions and Transcripts: For audio and video content, provide captions and transcripts.
+                        <a href="https://www.w3.org/WAI/WCAG21/Understanding/media-alternatives-prerecorded" target="_blank" rel="noopener noreferrer">[1.2.1 Audio-only and Video-only (Prerecorded)]</a>
+                    </li>
+                </ul>
+
+                <h3>Test with Assistive Technologies</h3>
+                <ul>
+                    <li>Screen Readers: Test your content with screen readers to ensure it is navigable and understandable.
+                        <a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" target="_blank" rel="noopener noreferrer">[4.1.2 Name, Role, Value]</a>
+                    </li>
+                    <li>Keyboard Navigation: Ensure that all interactive elements can be accessed and used with a keyboard.
+                        <a href="https://www.w3.org/WAI/WCAG21/Understanding/keyboard" target="_blank" rel="noopener noreferrer">[2.1.1 Keyboard]</a>
+                    </li>
+                </ul>
+
+                <p>By following these best practices, you'll create content that is accessible and user-friendly for everyone. 🌐</p>
+
+                <h2>Additional Resources</h2>
+                <ul>
+                  <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html" target="_blank">W3C Web Accessibility Initiative: Text Spacing</a></li>
+                  <li><a href="https://webaim.org/techniques/fonts/" target="_blank">WebAIM: Fonts</a></li>
+                  <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" target="_blank">W3C Web Accessibility Initiative: Contrast Minimum</a></li>
+                  <li><a href="https://www.nngroup.com/articles/typography/" target="_blank">Nielsen Norman Group: Typography</a></li>
+                  <li><a href="https://www.smashingmagazine.com/guidelines-for-responsive-web-design/" target="_blank">Smashing Magazine: Web Typography</a></li>
+                </ul>
+
+                </main>
+              </div>
+            </div>
+
+    <!-- Script links and jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../../../assets/js/global.js"></script>
+    <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- Add sidebar navigation to page -->
+    <script>
+      $(document).ready(function () {
+          // Determine the path relative to the root directory
+          var rootRelativePath = "../../sidebar-navigation.html";
+  
+          // Use jQuery to load the sidebar-navigation.html file
+          $("#sidebar-container").load(rootRelativePath);
+      });
+    </script>
+</body>
+</html>
