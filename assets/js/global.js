@@ -29,61 +29,70 @@ document.querySelectorAll(".copy-btn").forEach((button) => {
 // Checklist Script to save and reset local storage
 // Document ready function
 $(document).ready(function() {
-// Hide the alert message initially
-$('#confirmAlert').hide();
+  // Hide the alert message initially
+  $('#confirmAlert').hide();
 
-// Function to load the checklist state
-function loadChecklistState() {
-    // Loop through all the checkboxes in the checklist
-    $('input[type="checkbox"]').each(function() {
-    var id = $(this).attr('id');
-    var checked = localStorage.getItem(id) === 'true';
-    $(this).prop('checked', checked);
+  // Function to load the checklist state
+  function loadChecklistState() {
+      // Loop through all the checkboxes in the checklist
+      $('input[type="checkbox"]').each(function() {
+      var id = $(this).attr('id');
+      var checked = localStorage.getItem(id) === 'true';
+      $(this).prop('checked', checked);
+      });
+  }
+
+  // Function to save the checklist state
+  function saveChecklistState() {
+      // Loop through all the checkboxes in the checklist
+      $('input[type="checkbox"]').each(function() {
+      var id = $(this).attr('id');
+      var checked = $(this).is(':checked');
+      localStorage.setItem(id, checked);
+      });
+  }
+
+  // Event listener for checkbox state change
+  $('input[type="checkbox"]').change(function() {
+      saveChecklistState();
+  });
+
+  // Load checklist state from local storage on page load
+  loadChecklistState();
+
+  // Event listener for the reset button
+  $('#clearBtn').click(function() {
+      $('#confirmAlert').show(); // Show the alert
+  });
+
+  // Event listener for the confirm button in the alert
+  $('#confirmBtn').click(function() {
+      // Loop through all the checkboxes and clear them
+      $('input[type="checkbox"]').each(function() {
+      $(this).prop('checked', false);
+      });
+      
+      // Clear the local storage
+      localStorage.clear();
+
+      // Hide the alert again
+      $('#confirmAlert').hide();
+
+      // Set focus back to the reset button
+      $('#clearBtn').focus();
+
+      // You may want to reload the page to reset all form controls
+      // location.reload();
     });
-}
 
-// Function to save the checklist state
-function saveChecklistState() {
-    // Loop through all the checkboxes in the checklist
-    $('input[type="checkbox"]').each(function() {
-    var id = $(this).attr('id');
-    var checked = $(this).is(':checked');
-    localStorage.setItem(id, checked);
-    });
-}
+  // Event listener for the cancel button in the alert
+  $('#cancelBtn').click(function() {
+      // Hide the alert message
+      $('#confirmAlert').hide();
 
-// Event listener for checkbox state change
-$('input[type="checkbox"]').change(function() {
-    saveChecklistState();
-});
-
-// Load checklist state from local storage on page load
-loadChecklistState();
-
-// Event listener for the reset button
-$('#clearBtn').click(function() {
-    $('#confirmAlert').show(); // Show the alert
-});
-
-// Event listener for the confirm button in the alert
-$('#confirmBtn').click(function() {
-    // Loop through all the checkboxes and clear them
-    $('input[type="checkbox"]').each(function() {
-    $(this).prop('checked', false);
-    });
-    
-    // Clear the local storage
-    localStorage.clear();
-
-    // Hide the alert again
-    $('#confirmAlert').hide();
-
-    // Set focus back to the reset button
-    $('#clearBtn').focus();
-
-    // You may want to reload the page to reset all form controls
-    // location.reload();
-    });
+      // Set focus back to the reset checklist button
+      $('#clearBtn').focus();
+  });
 });
 
 // Tabs Component
@@ -288,4 +297,65 @@ $('#confirmBtn').click(function() {
     };
   }());
   
+// Form Component Error Messaging
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('form');
 
+  if (form) {
+    const emailInput = document.getElementById('exampleInputEmail1');
+    const passwordInput = document.getElementById('exampleInputPassword1');
+    const emailError = document.getElementById('email-error');
+    const passwordError = document.getElementById('password-error');
+    const successMsg = document.querySelector('.success-msg');
+
+    // Validation function for email
+    function validateEmail() {
+      if (emailInput.value === '' || !emailInput.value.includes('@')) {
+        emailInput.classList.add('is-invalid');
+        emailInput.setAttribute('aria-invalid', 'true');
+        emailError.style.display = 'block';
+        emailInput.setAttribute('aria-describedby', 'emailHelp email-error');
+        return false;
+      } else {
+        emailInput.classList.remove('is-invalid');
+        emailInput.removeAttribute('aria-invalid');
+        emailError.style.display = 'none';
+        emailInput.setAttribute('aria-describedby', 'emailHelp');
+        return true;
+      }
+    }
+
+    // Validation function for password
+    function validatePassword() {
+      if (passwordInput.value !== 'Password123') {
+        passwordInput.classList.add('is-invalid');
+        passwordInput.setAttribute('aria-invalid', 'true');
+        passwordError.style.display = 'block';
+        passwordInput.setAttribute('aria-describedby', 'passwordHelper password-error');
+        return false;
+      } else {
+        passwordInput.classList.remove('is-invalid');
+        passwordInput.removeAttribute('aria-invalid');
+        passwordError.style.display = 'none';
+        passwordInput.setAttribute('aria-describedby', 'passwordHelper');
+        return true;
+      }
+    }
+
+    // Event listeners for input fields
+    emailInput.addEventListener('change', validateEmail);
+    passwordInput.addEventListener('change', validatePassword);
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      const isEmailValid = validateEmail();
+      const isPasswordValid = validatePassword();
+
+      if (isEmailValid && isPasswordValid) {
+        form.style.display = 'none';
+        successMsg.style.display = 'block';
+        successMsg.focus();
+      }
+    });
+  }
+});

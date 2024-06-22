@@ -185,7 +185,6 @@ p.dev-tag {
 }
 
 /* Custom Checkboxes */
-
 .custom-checkbox {
   display: inline-block;
   height: 24px;
@@ -205,11 +204,12 @@ p.dev-tag {
 .custom-checkbox span {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 5;
   height: 100%;
   width: 100%;
   background-color: transparent;
   border: 1px solid #000; /* Border color */
+  pointer-events: none; /* Prevent span from blocking input */
 }
 
 .custom-checkbox input[type="checkbox"]:checked + span {
@@ -224,6 +224,12 @@ p.dev-tag {
   left: 0px;
   top: -18px;
 }
+
+.custom-checkbox input[type="checkbox"]:focus + span {
+  outline: 2px solid black; /* Focus indicator color */
+  outline-offset: 2px; /* Adjust the offset as needed */
+}
+
 
 /* Centering Checkboxes in Table Cells */
   .checkbox-td {

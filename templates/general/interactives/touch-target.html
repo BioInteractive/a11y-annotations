@@ -50,19 +50,41 @@
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                         <div class="accordion-body">
+                          <p><a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html" target="_blank">2.5.8 - Target Size (Minimum)</a> The size of the target for pointer inputs must be at least 24 by 24 CSS pixels.</p>                          
+                          <p>HHMI recommend's a minimum standard size of 44 X 44 as a best practice for all touch targets.</p>
+                          <h3>Except where:</h3>
                           <ul role="list">
-                            <li><a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html" target="_blank">2.5.8 - Target Size (Minimum)</a> The size of the target for pointer inputs must be at least 24 by 24 CSS pixels.</li>
-                            <li>
-                              Except where:
-                              <ul role="list">
-                                <li><strong>Spacing:</strong> Small touch targets must not overlap with each other or larger targets to avoid accidental taps.</li>
-                                <li><strong>Equivalent Controls:</strong> If there's another way to do the same action with larger touch targets on the same page, it should be provided.</li>
-                                <li><strong>Inline Targets:</strong> Even if a touch target is within a sentence or constrained by nearby text, it should still be comfortably sized for tapping.</li>
-                                <li><strong>User Agent Control:</strong> The device (e.g., phone or tablet) should determine touch target size, not the website or app.</li>
-                                <li><strong>Essential Presentation:</strong> If a specific touch target presentation is necessary for clarity or legal reasons, it should meet the minimum size requirement.</li>
-                              </ul>                              
-                            </li>
-                          </ul>                          
+                            <li><strong>Spacing:</strong> Small touch targets must not overlap with each other or larger targets to avoid accidental taps.</li>
+                            <li><strong>Equivalent Controls:</strong> If there's another way to do the same action with larger touch targets on the same page, it should be provided.</li>
+                            <li><strong>Inline Targets:</strong> Even if a touch target is within a sentence or constrained by nearby text, it should still be comfortably sized for tapping.</li>
+                            <li><strong>User Agent Control:</strong> The device (e.g., phone or tablet) should determine touch target size, not the website or app.</li>
+                            <li><strong>Essential Presentation:</strong> If a specific touch target presentation is necessary for clarity or legal reasons, it should meet the minimum size requirement.</li>
+                          </ul>                                     
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Designer -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingDesign">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDesign" aria-expanded="false" aria-controls="collapseDesign">
+                          Accessibility Considerations
+                          <!-- Designer Tag -->
+                          <span class="dev-tag ms-3">
+                            Designer 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M12 2H8.5C7.57174 2 6.6815 2.36875 6.02513 3.02513C5.36875 3.6815 5 4.57174 5 5.5C5 6.42826 5.36875 7.3185 6.02513 7.97487C6.6815 8.63125 7.57174 9 8.5 9M12 2V9M12 2H15.5C15.9596 2 16.4148 2.09053 16.8394 2.26642C17.264 2.44231 17.6499 2.70012 17.9749 3.02513C18.2999 3.35013 18.5577 3.73597 18.7336 4.16061C18.9095 4.58525 19 5.04037 19 5.5C19 5.95963 18.9095 6.41475 18.7336 6.83939C18.5577 7.26403 18.2999 7.64987 17.9749 7.97487C17.6499 8.29988 17.264 8.55769 16.8394 8.73358C16.4148 8.90947 15.9596 9 15.5 9M12 9H8.5M12 9H15.5M12 9V16M8.5 9C7.57174 9 6.6815 9.36875 6.02513 10.0251C5.36875 10.6815 5 11.5717 5 12.5C5 13.4283 5.36875 14.3185 6.02513 14.9749C6.6815 15.6313 7.57174 16 8.5 16M15.5 9C15.0404 9 14.5852 9.09053 14.1606 9.26642C13.736 9.44231 13.3501 9.70012 13.0251 10.0251C12.7001 10.3501 12.4423 10.736 12.2664 11.1606C12.0905 11.5852 12 12.0404 12 12.5C12 12.9596 12.0905 13.4148 12.2664 13.8394C12.4423 14.264 12.7001 14.6499 13.0251 14.9749C13.3501 15.2999 13.736 15.5577 14.1606 15.7336C14.5852 15.9095 15.0404 16 15.5 16C15.9596 16 16.4148 15.9095 16.8394 15.7336C17.264 15.5577 17.6499 15.2999 17.9749 14.9749C18.2999 14.6499 18.5577 14.264 18.7336 13.8394C18.9095 13.4148 19 12.9596 19 12.5C19 12.0404 18.9095 11.5852 18.7336 11.1606C18.5577 10.736 18.2999 10.3501 17.9749 10.0251C17.6499 9.70012 17.264 9.44231 16.8394 9.26642C16.4148 9.09053 15.9596 9 15.5 9ZM8.5 16C7.57174 16 6.6815 16.3687 6.02513 17.0251C5.36875 17.6815 5 18.5717 5 19.5C5 20.4283 5.36875 21.3185 6.02513 21.9749C6.6815 22.6313 7.57174 23 8.5 23C9.42826 23 10.3185 22.6313 10.9749 21.9749C11.6313 21.3185 12 20.4283 12 19.5V16M8.5 16H12" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </span>
+                        </button>
+                      </h2>
+                      <div id="collapseDesign" class="accordion-collapse collapse" aria-labelledby="headingDesign" style="">
+                        <div class="accordion-body">
+                          <h3>Touch Target</h3>
+                          <ul role="list">
+                            <li>Interactive element should be a minimum of 44x44 CSS pixels and sufficiently spaced from other controls.</li>
+                            <li>Text links should be a minimum of 44x44 CSS pixels and sufficiently spaced from other controls.</li>
+                            <li>Small form input fields should be a minimum of 44x44 CSS pixels and sufficiently spaced from other controls.</li>
+                          </ul>
                         </div>
                       </div>
                     </div>
@@ -71,6 +93,19 @@
                       <h2 class="accordion-header" id="headingTwo">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                           How to Test and Annotate
+                          <!-- Auditor Tag -->
+                          <span class="dev-tag ms-3">
+                            Auditor 
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M14 7H19.6404C20.0877 7 20.3113 7 20.4421 7.09404C20.5562 7.17609 20.6306 7.30239 20.6469 7.442C20.6656 7.602 20.5569 7.79751 20.3397 
+                                8.18851L18.9936 10.6115C18.9148 10.7533 18.8755 10.8242 18.86 10.8993C18.8463 10.9657 18.8463 11.0343 18.86 11.1007C18.8755 11.1758 18.9148 
+                                11.2467 18.9936 11.3885L20.3397 13.8115C20.5569 14.2025 20.6656 14.398 20.6469 14.558C20.6306 14.6976 20.5562 14.8239 20.4421 14.906C20.3113 
+                                15 20.0877 15 19.6404 15H12.6C12.0399 15 11.7599 15 11.546 14.891C11.3578 14.7951 11.2049 14.6422 11.109 14.454C11 14.2401 11 13.9601 11 
+                                13.4V11M4 21L4 4M4 11H12.4C12.9601 11 13.2401 11 13.454 10.891C13.6422 10.7951 13.7951 10.6422 13.891 10.454C14 10.2401 14 9.96005 14 9.4V4.6C14 
+                                4.03995 14 3.75992 13.891 3.54601C13.7951 3.35785 13.6422 3.20487 13.454 3.10899C13.2401 3 12.9601 3 12.4 3H5.6C5.03995 3 4.75992 3 4.54601 
+                                3.10899C4.35785 3.20487 4.20487 3.35785 4.10899 3.54601C4 3.75992 4 4.03995 4 4.6V11Z" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                          </span> 
                         </button>
                       </h2>
                       <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" style="">
@@ -81,25 +116,14 @@
                             <li>For the interactive elements that are too small visually, draw a touch target area and include notes for the designer to adjust the sizes before dev hand-off.</li>                          
                             <li>Number and add additional notes for developers with touch target requirements for any elements that were originally flagged for potential issues.</li>
                           </ol>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Accordion Item Three -->
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Touch Target Failure
-                        </button>
-                      </h2>
-                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" style="">
-                        <div class="accordion-body">
                           <div class="d-inline-block border border-dark p-2 rounded">
                             <div class="d-flex flex-row">
                               <div class="text-to-copy">
+                                <h3>Touch Target</h3>
                                 <ul role="list">
-                                  <li>Small interactive element below 24x24 CSS pixels and insufficiently spaced from other controls.</li>
-                                  <li>Text links below 24x24 CSS pixels and and insufficiently spaced from other controls.</li>
-                                  <li>Small form input fields below 24x24 CSS pixels and insufficiently spaced from other controls.</li>
+                                  <li>Small interactive element below 44x44 CSS pixels and insufficiently spaced from other controls.</li>
+                                  <li>Text links below 44x44 CSS pixels and insufficiently spaced from other controls.</li>
+                                  <li>Small form input fields below 44x44 CSS pixels and insufficiently spaced from other controls.</li>
                                 </ul>
                               </div>
                               <div>
@@ -109,6 +133,31 @@
                               </div>
                             </div>
                           </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Three -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Accessibility Considerations
+                          <!-- Developer Tag -->
+                          <span class="dev-tag ms-3">
+                            Developer 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                              <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                          </span> 
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" style="">
+                        <div class="accordion-body">
+                          <h3>Touch Target</h3>
+                          <ul role="list">
+                            <li>Interactive element should be a minimum of 44x44 CSS pixels and sufficiently spaced from other controls.</li>
+                            <li>Text links should be a minimum of 44x44 CSS pixels and sufficiently spaced from other controls.</li>
+                            <li>Small form input fields should be a minimum of 44x44 CSS pixels and sufficiently spaced from other controls.</li>
+                          </ul>
                         </div>
                       </div>
                     </div>
@@ -122,9 +171,9 @@
                       <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
                         <div class="accordion-body">
                           <ul>
-                            <li><a href="https://dequeuniversity.com/rules/axe/4.3/targets?application=lighthouse" target="_blank">Deque University - Touch Target Accessibility Checker</a></li>
+                            <li><a href="https://dequeuniversity.com/rules/axe/4.7/target-size" target="_blank">Deque University - Touch Target Accessibility</a></li>
                             <li><a href="https://developer.apple.com/design/human-interface-guidelines/ios/controls/buttons/" target="_blank">Apple Human Interface Guidelines - Buttons</a></li>
-                            <li><a href="https://developer.android.com/guide/topics/ui/controls/buttons" target="_blank">Android Developers - Buttons</a></li>
+                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/target-size.html" target="_blank">WCAG 2.1 AAA Understanding Target Size</a></li>
                             <li><a href="https://web.dev/tap-targets/" target="_blank">Web.dev - Tap Targets and Size Guidelines</a></li>
                             <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets" target="_blank">MDN Web Docs - Keyboard-navigable JavaScript widgets</a></li>
                             <li><a href="https://www.smashingmagazine.com/2021/04/touch-targets-mobile-web-design/" target="_blank">Smashing Magazine - Designing Touch Targets in Mobile Web Design</a></li>
