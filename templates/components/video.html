@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+
+    <!-- Link to Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <!-- Link to Custom Stylesheet -->
+    <link rel="stylesheet" href="../../../../assets/styles/custom.css">
+    <!-- Link to Custom Stylesheet Production -->
+    <link rel="stylesheet" href="../../../../../assets/styles/custom.css">
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/a11y-annotations/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/a11y-annotations/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/a11y-annotations/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/a11y-annotations/assets/images/site.webmanifest">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+</head>
+<body>
+  <header class="d-block px-3 py-2 shadow">
+    <img src="https://www.biointeractive.org/themes/gesso/images/hhmi-logo.svg" alt="hhmi Biointeractive logo" style="max-width: 320px;">
+  </header>
+  <div class="container-fluid">
+      <div class="row">
+          <!-- Includes the Sidebar Navigation using jQuery -->
+          <div id="sidebar-container" class="col-md-2 border-end"></div>
+
+          <!-- Main Content -->
+          <main class="col-12 col-sm-12 col-md-10 col-lg-8">
+            <!-- A11y Live Region -->
+            <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
+            <div class="container-xxl bd-gutter mt-3">
+                <h1>Video</h1>
+                <!-- Begin Accordion -->
+                <div class="accordion" id="accordionOpen">
+                    <!-- Accordion Item One -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          WCAG Success Criteria Requirements and Examples
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
+                        <div class="accordion-body">
+                          <ul>
+                              <li><strong>1.4.11 Non-text Contrast:</strong> Graphical elements, such as video controls, must have a contrast ratio of at least 3:1 against adjacent colors.</li>
+                              <li><strong>4.1.2 Name, Role, Value:</strong> All interface components, including video and iframe elements, must have an accessible name that describes their function.</li>
+                              <li><strong>2.1.1 Keyboard:</strong> All interactive elements must be operable through keyboard, mouse, and touch inputs.</li>
+                              <li><strong>2.4.7 Focus Visible:</strong> Interactive elements and controls of a video component must receive a visible focus indicator when navigated using the keyboard.</li>
+                          </ul>
+
+                          <h3>Time-Based Media Requirements</h3>
+                          <p>For more detailed information on the following requirements, please visit the <a href="https://biointeractive.github.io/a11y-annotations/templates/general/non-text-content/media.html" target="_blank" rel="noopener noreferrer">General > Time-based Media page</a>.</p>
+                          <ul>
+                              <li><strong>1.2.1 Audio-only and Video-only:</strong> Provide alternatives for time-based media for both audio-only and video-only content.</li>
+                              <li><strong>1.2.2 Captions (Prerecorded):</strong> Provide captions for all prerecorded audio content in synchronized media.</li>
+                              <li><strong>1.2.3 Audio Description or Media Alternative:</strong> Provide an alternative for time-based media or an audio description for prerecorded video content.</li>
+                              <li><strong>1.2.4 Captions (Live):</strong> Provide captions for all live audio content in synchronized media.</li>
+                              <li><strong>1.2.5 Audio Description (Prerecorded):</strong> Provide audio description for all prerecorded video content in synchronized media.</li>
+                          </ul>
+                           <!-- Start Examples -->                   
+                          <h3>Video YouTube Embed Example</h3>                         
+                          <div class="video-container">
+                            <iframe class="youtube-embed" width="720" height="500" src="https://www.youtube.com/embed/Afo2q2O2xQE" title="BioInteractive Online Community" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#transcriptPanel" aria-expanded="false" aria-controls="transcriptPanel">
+                              Transcript
+                            </button>
+                            <div class="collapse" id="transcriptPanel">
+                              <div class="card card-body">
+                                <p><strong>Narrator:</strong> There are so many things to attend to in your important work as a science educator and never enough time. What if there was a way to share the load?</p>
+                                <p><strong>(hhmi Biointeractive logo, Empowering Educators. Inspiring Students. Real science, real stories and real data to engage students in exploring the living world.)</strong></p>
+                                <p><strong>Narrator:</strong> The Biointeractive online community is a new way to connect with other life science educators to share expertise and resources, including modifications of Biointeractive content.</p>
+                                <p><strong>(Four teacher illustrations each with a chat bubble. Teacher one: "Thanks for sharing" Teacher two: "Let's connect." Teacher three: "Amazing resources" Teacher four: "Great for my class")</strong></p>
+                                <p><strong>Narrator:</strong> The online community is a centralized destination for professional networking where you can participate in community groups to discuss your teaching practice, find and share resources, access new teaching tools, and engage in professional development—and it's all free.</p>
+                                <p><strong>Narrator:</strong> Verified educators from anywhere can join the online community and access all the exciting features it provides, including an educator resource library with resources submitted by community workers.</p>
+                                <p><strong>(Science of an Extreme Athlete Video - Guided Questions. Four teachers with chat bubbles: Teacher one: "This is great, thanks!" Teacher two: "So helpful" Teacher three: "Classroom Ready!" Teacher four: "Amazing")</strong></p>
+                                <p><strong>Narrator:</strong> Join the Biointeractive online community today. Make an account, get verified, and unlock the full power of Biointeractive.</p>
+                                <p><strong>(hhmi Biointeractive logo Online Community)</strong></p>
+                              </div>
+                            </div>
+                            <h3>Custom Video Element Example</h3>
+                            <div class="video-container">
+                              <video class="custom-video" controls aria-label="The Animated Life of A. R. Wallace" aria-describedby="videoTranscript" poster="/assets/images/video-opdoc-wallace-articleLarge.jpg">
+                                <source src="/assets/videos/ARWallace_SD.m4v" type="video/mp4">
+                                Your browser does not support the video tag.
+                              </video>
+                              <button class="btn btn-secondary" onclick="window.open('/assets/documents/TheLifeofAlfredRusselWallace-transcript-shortfilm.pdf', '_blank')">
+                                Download PDF Transcript <i class="bi bi-box-arrow-up-right" role="img" aria-label="opens in new tab"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <!-- End Example -->
+                          <div class="space-large"></div>                
+                          </div>           
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Inserted -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingNew">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNew" aria-expanded="false" aria-controls="collapseNew">
+                          <!-- Designer Tag -->
+                          Accessibility Considerations
+                        <span class="dev-tag ms-3">
+                          Designer 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M12 2H8.5C7.57174 2 6.6815 2.36875 6.02513 3.02513C5.36875 3.6815 5 4.57174 5 5.5C5 6.42826 5.36875 7.3185 6.02513 7.97487C6.6815 8.63125 7.57174 9 8.5 9M12 2V9M12 2H15.5C15.9596 2 16.4148 2.09053 16.8394 2.26642C17.264 2.44231 17.6499 2.70012 17.9749 3.02513C18.2999 3.35013 18.5577 3.73597 18.7336 4.16061C18.9095 4.58525 19 5.04037 19 5.5C19 5.95963 18.9095 6.41475 18.7336 6.83939C18.5577 7.26403 18.2999 7.64987 17.9749 7.97487C17.6499 8.29988 17.264 8.55769 16.8394 8.73358C16.4148 8.90947 15.9596 9 15.5 9M12 9H8.5M12 9H15.5M12 9V16M8.5 9C7.57174 9 6.6815 9.36875 6.02513 10.0251C5.36875 10.6815 5 11.5717 5 12.5C5 13.4283 5.36875 14.3185 6.02513 14.9749C6.6815 15.6313 7.57174 16 8.5 16M15.5 9C15.0404 9 14.5852 9.09053 14.1606 9.26642C13.736 9.44231 13.3501 9.70012 13.0251 10.0251C12.7001 10.3501 12.4423 10.736 12.2664 11.1606C12.0905 11.5852 12 12.0404 12 12.5C12 12.9596 12.0905 13.4148 12.2664 13.8394C12.4423 14.264 12.7001 14.6499 13.0251 14.9749C13.3501 15.2999 13.736 15.5577 14.1606 15.7336C14.5852 15.9095 15.0404 16 15.5 16C15.9596 16 16.4148 15.9095 16.8394 15.7336C17.264 15.5577 17.6499 15.2999 17.9749 14.9749C18.2999 14.6499 18.5577 14.264 18.7336 13.8394C18.9095 13.4148 19 12.9596 19 12.5C19 12.0404 18.9095 11.5852 18.7336 11.1606C18.5577 10.736 18.2999 10.3501 17.9749 10.0251C17.6499 9.70012 17.264 9.44231 16.8394 9.26642C16.4148 9.09053 15.9596 9 15.5 9ZM8.5 16C7.57174 16 6.6815 16.3687 6.02513 17.0251C5.36875 17.6815 5 18.5717 5 19.5C5 20.4283 5.36875 21.3185 6.02513 21.9749C6.6815 22.6313 7.57174 23 8.5 23C9.42826 23 10.3185 22.6313 10.9749 21.9749C11.6313 21.3185 12 20.4283 12 19.5V16M8.5 16H12" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </span>
+                        </button>
+                      </h2>
+                      <div id="collapseNew" class="accordion-collapse collapse" aria-labelledby="headingNew" style="">
+                        <div class="accordion-body">
+                          <ul>
+                            <li><strong>Contrast Requirements for Controls:</strong> Ensure that all video controls (play, pause, volume, etc.) meet the WCAG contrast requirements. Controls should have sufficient contrast against their background to be easily visible.</li>
+                            <li><strong>Different States:</strong> Design video controls to show different states, such as active, hover, and focus states. This helps users understand which control is currently selected or being interacted with.</li>
+                            <li><strong>Focus Indicators:</strong> Provide clear focus indicators for all interactive elements within the video component. This helps keyboard users to navigate and interact with the controls effectively.</li>
+                            <li><strong>Accessible Labels:</strong> Ensure that all controls have accessible labels that can be read by screen readers. Use appropriate ARIA attributes to enhance the accessibility of these controls.</li>
+                            <li><strong>Consistent Design:</strong> Maintain consistency in the design of video controls across the application or website. This includes the placement, size, and styling of controls to ensure a uniform user experience.</li>
+                            <li><strong>Responsive Design:</strong> Design video components to be responsive and work well on different screen sizes and devices. Ensure that controls are easily accessible on both desktop and mobile devices.</li>
+                            <li><strong>Important Considerations:</strong> Consult with content leads or accessibility specialists on your team to determine if the video will require captions, descriptive transcripts, or audio descriptions. Plan how these elements will be included in the design, such as integrating descriptive transcripts within a disclosure on the page or providing them as a downloadable PDF.</li>
+                          </ul>                                                                    
+                        </div>                        
+                      </div>
+                    </div>
+                    <!-- Accordion Item Two -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          How to Test and Annotate
+                          <!-- Auditor Tag -->
+                        <span class="dev-tag ms-3">
+                          Auditor 
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                              <path d="M14 7H19.6404C20.0877 7 20.3113 7 20.4421 7.09404C20.5562 7.17609 20.6306 7.30239 20.6469 7.442C20.6656 7.602 20.5569 7.79751 20.3397 
+                              8.18851L18.9936 10.6115C18.9148 10.7533 18.8755 10.8242 18.86 10.8993C18.8463 10.9657 18.8463 11.0343 18.86 11.1007C18.8755 11.1758 18.9148 
+                              11.2467 18.9936 11.3885L20.3397 13.8115C20.5569 14.2025 20.6656 14.398 20.6469 14.558C20.6306 14.6976 20.5562 14.8239 20.4421 14.906C20.3113 
+                              15 20.0877 15 19.6404 15H12.6C12.0399 15 11.7599 15 11.546 14.891C11.3578 14.7951 11.2049 14.6422 11.109 14.454C11 14.2401 11 13.9601 11 
+                              13.4V11M4 21L4 4M4 11H12.4C12.9601 11 13.2401 11 13.454 10.891C13.6422 10.7951 13.7951 10.6422 13.891 10.454C14 10.2401 14 9.96005 14 9.4V4.6C14 
+                              4.03995 14 3.75992 13.891 3.54601C13.7951 3.35785 13.6422 3.20487 13.454 3.10899C13.2401 3 12.9601 3 12.4 3H5.6C5.03995 3 4.75992 3 4.54601 
+                              3.10899C4.35785 3.20487 4.20487 3.35785 4.10899 3.54601C4 3.75992 4 4.03995 4 4.6V11Z" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+                      </span> 
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" style="">
+                        <div class="accordion-body">
+                          <p> When auditing a Video component, please review the content leads documentation and the designer's implementation for alignment and consistency.
+                            Then review for accessibility considerations to flag for the designer and then annotate the component requirements for developer handoff.
+                        </p>
+                        <p>When auditing the Video component within a Figma design, please consider the following accessibility issues to flag for the designer to review:</p>
+                        <ul>
+                          <li><strong>Color Contrast of Controls:</strong> Verify that all video controls (e.g., play, pause, volume) have sufficient color contrast against their background, meeting the minimum contrast ratio requirement of 4.5:1, to ensure visibility for users with visual impairments.</li>
+                          <li><strong>Different States:</strong> Check that video controls show different states (e.g., hover, focus, active) to help users understand their current interaction with the video component.</li>
+                          <li><strong>Focus Indicators:</strong> Ensure that all interactive elements within the video component have clear focus indicators to assist keyboard users in navigating and interacting with the controls effectively.</li>
+                          <li><strong>Accessible Labels:</strong> Confirm that all video controls have accessible labels that can be read by screen readers. Use appropriate ARIA attributes to enhance the accessibility of these controls.</li>
+                          <li><strong>Responsive Design:</strong> Check that the video component is designed to be responsive and works well on different screen sizes and devices, ensuring that controls are easily accessible on both desktop and mobile devices.</li>
+                          <li><strong>Descriptive Elements:</strong> Consult with content leads or accessibility specialists on whether the video requires captions, descriptive transcripts, or audio descriptions. Verify that these elements are included in the design, either within a disclosure on the page or as downloadable resources. For videos that are audio-only, video-only, or both, ensure that they have descriptive elements such as alt text for images, transcripts, and audio descriptions to provide equivalent information for all users.</li>
+                          <li><strong>Consistency:</strong> Verify that the design of video controls is consistent across the application or website to ensure a uniform user experience.</li>
+                        </ul>
+                                                                   
+                          <div class="d-inline-block border border-dark p-2 rounded">
+                            <div class="d-flex flex-row">
+                              <div class="text-to-copy">
+                                <h3>Video</h3>
+                                <ul>
+                                  <li>Ensure all video controls (e.g., play, pause, volume) have sufficient color contrast against their background to meet the minimum contrast ratio requirement of 3:1.</li>
+                                  <li>Provide clear focus indicators for all interactive elements within the video component to assist keyboard users in navigating and interacting with the controls effectively.</li>
+                                  <li>If the video component uses an iframe, ensure the iframe has an accessible name with the <code>title</code> attribute describing the video content.</li>
+                                  <li>If custom HTML video element ensure it has an accessible name. If using a custom video component, the accessible name should describe the content of the video.</li>
+                                  <li>Implement <code>aria-describedby</code> on the video element or its controls to associate any descriptive text, such as captions or transcripts, with the video.</li>
+                                  <li>Ensure that captions are available for all video audio content. Consult with content leads to determine if descriptive transcripts or audio descriptions are also necessary and how they should be included in development.</li>
+                                  <li>Make all video controls mouse, touch and keyboard accessible, ensuring all users can navigate and operate the video player equally. Additional event handlers may be needed.</li>
+                                  <li>Ensure that all video content is responsive and works well on different screen sizes and devices, maintaining accessibility across platforms.</li>
+                                </ul>                  
+                              </div>
+                              <div>
+                                  <button class="ml-1r btn copy-btn">
+                                    <i class="bi bi-clipboard-heart-fill" aria-hidden="true"></i> Copy
+                                  </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Four - Accessibility Considerations Developer -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                          Accessibility Considerations 
+                          <!-- Developer Tag -->
+                          <span class="dev-tag ms-3">
+                            Developer 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                          </span> 
+                        </button>
+                      </h2>
+                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
+                        <div class="accordion-body">                            
+                          <p>Ensuring video content is accessible is crucial for providing an inclusive user experience. Failure to make video components accessible can significantly impact users with disabilities, preventing them from accessing essential information and enjoying content. The following guidelines help developers build accessible video components, ensuring all users can interact with and benefit from video content effectively.</p>
+                          <p>For comprehensive guidance and examples, refer to the <a href="https://www.w3.org/WAI/media/av/player/" target="_blank" rel="noopener noreferrer">WAI Media Accessibility User Requirements</a>.</p>
+                          <ul>
+                            <li><strong>Color Contrast for Video Controls:</strong> Ensure all video controls (e.g., play, pause, volume) have sufficient color contrast against their background to meet the minimum contrast ratio requirement of 3:1. This enhances visibility for users with visual impairments.</li>
+                            <li><strong>Focus Indicators for Interactive Elements:</strong> Provide clear focus indicators for all interactive elements within the video component to assist keyboard users in navigating and interacting with the controls effectively.</li>
+                            <li><strong>Accessible Name for iframes:</strong> If the video component uses an iframe, ensure the iframe has an accessible name with the <code>title</code> attribute describing the video content. This helps screen reader users understand the content of the iframe.</li>
+                            <li><strong>Accessible Name for Custom Video Elements:</strong> If using a custom HTML video element, ensure it has an accessible name. The accessible name should describe the content of the video, aiding users who rely on assistive technologies.</li>
+                            <li><strong>Associating Descriptive Text with Video Elements:</strong> Implement <code>aria-describedby</code> on the video element or its controls to associate any descriptive text, such as captions or transcripts, with the video. This provides additional context to screen reader users.</li>
+                            <li><strong>Captions and Descriptive Transcripts:</strong> Ensure that captions are available for all video audio content. Consult with content leads to determine if descriptive transcripts or audio descriptions are also necessary and how they should be included in development.</li>
+                            <li><strong>Keyboard and Mouse Accessibility:</strong> Make all video controls mouse, touch, and keyboard accessible, ensuring all users can navigate and operate the video player equally. This may involve adding additional event handlers for keyboard accessibility.</li>
+                            <li><strong>Responsive Video Content:</strong> Ensure that all video content is responsive and works well on different screen sizes and devices, maintaining accessibility across platforms. This includes ensuring controls and content adjust appropriately for various device orientations and sizes.</li>
+                          </ul>  
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item Five - Resources -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                          Resources
+                        </button>
+                      </h2>
+                      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive">
+                        <div class="accordion-body">
+                          <ul>
+                            <li><a href="https://www.w3.org/WAI/media/av/" target="_blank">W3C WAI: Media Accessibility User Requirements</a></li>
+                            <li><a href="https://www.w3.org/WAI/media/av/player/" target="_blank">W3C WAI: Accessible Media Player Guidelines</a></li>
+                            <li><a href="https://a11yproject.com/posts/accessible-video/" target="_blank">A11Y Project: Accessible Video</a></li>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/video_role" target="_blank">MDN Web Docs: Using the Video Role</a></li>
+                            <li><a href="https://webaim.org/techniques/captions/" target="_blank">WebAIM: Captions, Transcripts, and Audio Descriptions</a></li>
+                            <li><a href="https://www.deque.com/blog/creating-accessible-videos/" target="_blank">Deque: Creating Accessible Videos</a></li>
+                            <li><a href="https://www.smashingmagazine.com/2020/02/creating-accessible-video-player/" target="_blank">Smashing Magazine: Creating an Accessible Video Player</a></li>
+                            <li><a href="https://css-tricks.com/accessible-simple-video-player/" target="_blank">CSS-Tricks: Accessible & Simple Video Player</a></li>
+                            <li><a href="https://inclusive-components.design/video-player/" target="_blank">Inclusive Components: Accessible Video Player</a></li>
+                            <li><a href="https://www.wuhcag.com/video/" target="_blank">Wuhcag: Accessible Video</a></li>
+                            <li><a href="https://www.3playmedia.com/2020/10/13/5-tips-for-making-youtube-videos-accessible/" target="_blank">3Play Media: 5 Tips for Making YouTube Videos Accessible</a></li>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" target="_blank">MDN Web Docs: Iframe Element</a></li>
+                            <li><a href="https://youtu.be/hVTe9cMcKP4?si=75RrpDVyrxnuxy6R" target="_blank">Best Video Accessibility Description EVER on YouTube</a></li>
+                          </ul>                                                                                                                                     
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Accordion -->
+                </main>
+              </div>
+            </div>
+
+    <!-- Script links and jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../../../assets/js/global.js"></script>
+    <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- Add sidebar navigation to page -->
+    <script>
+      $(document).ready(function () {
+          // Determine the path relative to the root directory
+          var rootRelativePath = "../sidebar-navigation.html";
+  
+          // Use jQuery to load the sidebar-navigation.html file
+          $("#sidebar-container").load(rootRelativePath);
+      });
+    </script>
+</body>
+</html>

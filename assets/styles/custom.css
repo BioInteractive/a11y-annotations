@@ -70,9 +70,17 @@ a {
   background-color: var(--accent-green);
 }
 #sidebar-container {
-  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.205)!important;
+  box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.205)!important;
   padding-top: 1.25rem;
   min-width: 265px;
+}
+header {
+  border-bottom: 1px solid rgb(0 0 0 / 11%) !important;
+  box-shadow: 1rem 0rem 1px rgba(0, 0, 0, 0.205) !important;
+}
+.row {
+  margin-right: auto;
+  margin-left: auto;
 }
 #structure-collapse > ul > li > a:hover > i {
   color: black !important;
@@ -477,4 +485,30 @@ p.dev-tag {
 
 [role="tabpanel"] * + p {
   margin-top: 1em;
+}
+
+/* Video Component */
+.youtube-embed{
+  width: 100%;
+  margin: auto;
+}
+.custom-video {
+  width: 100%;
+  margin: auto;
+}
+.video-container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dialog Component Page */
+.modal-header, .modal-footer {
+  border: none !important;
+}
+.modal-title {
+  font-size: 2rem;
+}
+.close {
+  
 }
