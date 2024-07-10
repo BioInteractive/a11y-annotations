@@ -53,7 +53,7 @@
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                         <div class="accordion-body">
-                          <ul>
+                          <ul role="list">
                             <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence.html" target="_blank" rel="noopener noreferrer">1.3.2 Meaningful Sequence</a>
                               When the sequence in which content is presented affects its meaning, a correct reading sequence can be programmatically determined.</li>
                             <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/orientation.html" target="_blank" rel="noopener noreferrer">1.3.4 Orientation</a>
@@ -98,7 +98,7 @@
                               </svg>
                             </span>
                           </h4>
-                          <ul>
+                          <ul role="list">
                             <li>Use semantic HTML elements to structure the content logically (e.g., <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>).</li>
                             <li>Ensure the reading and navigation order is logical and intuitive, especially when CSS is used for layout adjustments.</li>
                             <li>Avoid using CSS to visually reorder elements that disrupts the natural reading sequence.</li>
@@ -132,7 +132,7 @@
                               </svg>
                             </span>
                           </h4>
-                          <ul>
+                          <ul role="list">
                               <li>Design and develop web content that works in both portrait and landscape orientations.</li>
                               <li>Avoid locking the orientation to either portrait or landscape unless necessary for specific functionalities.</li>
                               <li>Ensure that all functionality and content are available in both orientations.</li>
@@ -168,7 +168,7 @@
                             <li><strong>Designing Skip Links:</strong> Include visual representations of skip links in your Figma designs displaying them with brand colors in focus state. 
                               This not only aids in early planning for keyboard navigation but also highlights repetitive blocks of content that require skip links during the design phase.</li>
                             <li><strong>Identifying Common Repetitive Blocks of Content:</strong> Recognize common areas where skip links are required and/or beneficial for usability. This includes:
-                              <ul>
+                              <ul role="list">
                                 <li>Repetitive navigational elements like top navigation bars, sidebar menus or secondary navigational menus.</li>
                                 <li>Recurring elements like carousels when they contain multiple items or links, long lists of links or lengthy introductory content especially. (A skip link is only 
                                   required if the content is repetitive across multiple pages but highly recommended if there are multiple tab stops that will make navigational difficult for keyboard 
@@ -223,10 +223,10 @@
                             </span>
                             <span class="ml-1r">How to Develop Skip Links</span>
                           </h4>
-                          <ol class="list-unstyled">
+                          <ol role="list" class="list-unstyled">
                               <li class="mb-2">
                                   <strong>Step 1: Identify the Correct Target</strong>
-                                  <ol>
+                                  <ol role="list">
                                       <li>Determine the content area after the repetitive block that will be bypassed. The content section should be a landmark, names region or heading. 
                                         Add or use existing unique ID of the target.</li>
                                       <li>Use Semantic HTML: Ensure that this area is clearly marked and accessible so the user will be able to easily identify where their focus is being sent.</li>
@@ -234,14 +234,14 @@
                               </li>
                               <li class="mb-2">
                                   <strong>Step 2: Update Skip Link's Href Attribute</strong>
-                                  <ol>
+                                  <ol role="list">
                                       <li>Adjust the href Attribute: The href of the skip link should point to the ID of the identified content element, like <code>href="#main-content"</code>.</li>
                                       <li>Ensure Unique IDs: Confirm that the ID is unique within the page.</li>
                                   </ol>
                               </li>
                               <li class="mb-2">
                                   <strong>Step 3: Verify Visual and Functional Clarity</strong>
-                                  <ol>
+                                  <ol role="list">
                                       <li>Test Visibility: Make the skip link visible upon activation, when the element recieves focus it should become visible.</li>
                                       <li>Use CSS to accomplish the toggling visibility by adjusting the margin to keep it off screen until it receives focus, program with the psuedo class <code>:focus</code></li>
                                       <li>Do not use <code>display: none;</code> or <code>visibility:hidden;</code> because these CSS properties will completely remove the element from tab order so it will not be focusable.</li>
@@ -249,7 +249,7 @@
                               </li>
                               <li class="mb-2">
                                   <strong>Step 4: Implement Consistency Across Pages</strong>
-                                  <ol>
+                                  <ol role="list">
                                       <li>Standardize Skip Links: Maintain consistency in skip link phrasing, placement, and targets across all pages.</li>
                                       <li>Template Updates: For sites using templates, include the skip link and its target in the template to ensure uniformity across pages.</li>
                                   </ol>
@@ -281,7 +281,7 @@
                               </svg>
                             </span>
                           </h4>
-                          <ul>
+                          <ul role="list">
                             <li>Name each Figma page board with names that indicate the intended page titles.</li>
                             <li>Keep the title concise yet descriptive enough to provide information about the page content at a glance.</li>
                             <li>Figma board names should correspond with the primary H1 tags for each page, enhancing navigability and consistency.</li>
@@ -295,7 +295,7 @@
                               </svg>
                             </span> 
                           </h4>
-                          <ul>
+                          <ul role="list">
                               <li>Ensure each webpage has a descriptive <code>&lt;title&gt;</code> element that accurately describes the topic or purpose of the page.</li>
                               <li>Figma boards and page H1s should reflect the correct page titles. Place the <code>&lt;title&gt;</code> element within the page's <code>&lt;head&gt;</code> section.</li>
                               <li>For websites with multiple pages, start the title with unique information, followed by more general information, like the site name.</li>
@@ -330,7 +330,7 @@
                               </svg>
                             </span>
                           </h4>
-                          <ul>
+                          <ul role="list">
                             <li>Incorporating design elements like search functionality and sitemaps, in addition to traditional navigation menus.</li>
                             <li>Coordinate with content authors to provide a minimum of two ways of finding a webpage are present.</li>
                           </ul>
@@ -343,7 +343,7 @@
                               </svg>
                             </span>   
                           </h4>
-                          <ul>
+                          <ul role="list">
                               <li>Include a consistent, primary navigation menu across all webpages.</li>
                               <li>Provide a site map that lists and links to all accessible pages, especially for large or complex websites.</li>
                               <li>Implement a search functionality to help users find content more directly.</li>
@@ -377,7 +377,7 @@
                               </svg>
                             </span> 
                           </h4>
-                          <ul>
+                          <ul role="list">
                               <li>Use the <code>lang</code> attribute in the <code>&lt;html&gt;</code> tag to specify the primary language of the webpage.</li>
                               <li>Choose the appropriate language code for the <code>lang</code> attribute based on the primary content language of the page.</li>
                               <li>For pages containing multiple languages, identify the primary language of the page in the <code>lang</code> attribute and use additional <code>lang</code> attributes for content sections in different languages.</li>
@@ -410,7 +410,7 @@
                               </svg>
                             </span>
                           </h4>
-                          <ul>
+                          <ul role="list">
                               <li>Use the <code>lang</code> attribute on elements containing text in a language different from the main page language.</li>
                               <li>Identify and mark every section or phrase with a different language accurately.</li>
                               <li>Ensure that changes in language are clearly identified in the code, so assistive technologies can adjust pronunciation and reading accordingly.</li>
@@ -428,88 +428,22 @@
                       </h2>
                       <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine">
                         <div class="accordion-body">
-                          <ul>
-                            <li>
-                              <a href="https://blog.equally.ai/1-3-2-meaningful-sequence-level-a/" target="_blank" rel="noopener noreferrer">1.3.2 Meaningful Sequence (WCAG 2.0 A) - Equally AI Blog</a>
-                            </li>
-                            <li>
-                              <a href="https://wcag.com/designers/1-3-4-orientation/" target="_blank" rel="noopener noreferrer">1.3.4 Orientation (WCAG 2.1 AA) - WCAG.com</a>
-                            </li>
-                            <li>
-                              <a href="https://www.digitala11y.com/understanding-sc-2-4-1-bypass-blocks/" target="_blank" rel="noopener noreferrer">2.4.1 Bypass Blocks (WCAG 2.0 A) - DigitalA11Y</a>
-                            </li>
-                            <li>
-                              <a href="https://www.digitala11y.com/understanding-sc-2-4-2-page-titled/" target="_blank" rel="noopener noreferrer">2.4.2 Page Titled (WCAG 2.0 A) - DigitalA11Y</a>
-                            </li>
-                            <li>
-                              <a href="https://www.digitala11y.com/understanding-sc-2-4-5-multiple-ways/" target="_blank" rel="noopener noreferrer">2.4.5 Multiple Ways (WCAG 2.0 AA) - DigitalA11Y</a>
-                            </li>
-                            <li>
-                              <a href="https://www.digitala11y.com/understanding-sc-3-1-1-language-of-page/" target="_blank" rel="noopener noreferrer">3.1.1 Language of Page (WCAG 2.0 A) - DigitalA11Y</a>
-                            </li>
-                            <li>
-                              <a href="https://www.digitala11y.com/understanding-sc-3-1-2-language-of-parts/" target="_blank" rel="noopener noreferrer">3.1.2 Language of Parts (WCAG 2.0 AA) - DigitalA11Y</a>
-                            </li>
+                          <ul role="list">
+                            <li><a href="https://blog.equally.ai/1-3-2-meaningful-sequence-level-a/" target="_blank" rel="noopener noreferrer">1.3.2 Meaningful Sequence (WCAG 2.0 A) - Equally AI Blog</a></li>
+                            <li><a href="https://wcag.com/designers/1-3-4-orientation/" target="_blank" rel="noopener noreferrer">1.3.4 Orientation (WCAG 2.1 AA) - WCAG.com</a></li>
+                            <li><a href="https://webaim.org/techniques/page_structure/" target="_blank" rel="noopener noreferrer">WebAIM - Page Structure</a></li>
+                            <li><a href="https://www.w3.org/WAI/tutorials/page-structure/" target="_blank" rel="noopener noreferrer">W3C WAI - Page Structure Tutorial</a></li>
+                            <li><a href="https://www.deque.com/resources/aria/" target="_blank" rel="noopener noreferrer">Deque - ARIA Resources</a></li>
+                            <li><a href="https://www.pearson.com/accessible-assessments/meaningful-sequence.html" target="_blank" rel="noopener noreferrer">Pearson - Meaningful Sequence</a></li>
+                            <li><a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=141#bypass-blocks" target="_blank" rel="noopener noreferrer">W3C - Bypass Blocks</a></li>
+                            <li><a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=141#page-titled" target="_blank" rel="noopener noreferrer">W3C - Page Titled</a></li>
+                            <li><a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=141#multiple-ways" target="_blank" rel="noopener noreferrer">W3C - Multiple Ways</a></li>
+                            <li><a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=141#language-of-page" target="_blank" rel="noopener noreferrer">W3C - Language of Page</a></li>
+                            <li><a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=141#language-of-parts" target="_blank" rel="noopener noreferrer">W3C - Language of Parts</a></li>
                           </ul>                                                                           
                         </div>
                       </div>
-                    </div>
-                    <!-- Accordion Item Ten -->
-                    <!-- <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingTen">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                          WCAG Guideline References
-                        </button>
-                      </h2>
-                      <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen">
-                        <div class="accordion-body">
-                          <ul>
-                            <li>
-                              <a href="https://www.w3.org/TR/WCAG21/#meaningful-sequence" target="_blank" rel="noopener noreferrer">WCAG 2.1 Success Criterion 1.3.2 - Meaningful Sequence</a>
-                            </li>
-                            <li>
-                              <a href="https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence.html" target="_blank" rel="noopener noreferrer">WCAG 2.1 Understanding - 1.3.2 Meaningful Sequence</a>
-                            </li>
-                            <li>
-                              <a href="https://www.w3.org/TR/WCAG21/#orientation" target="_blank" rel="noopener noreferrer">WCAG 2.1 Success Criterion 1.3.4 - Orientation</a>
-                            </li>
-                            <li>
-                              <a href="https://www.w3.org/WAI/WCAG21/Understanding/orientation.html" target="_blank" rel="noopener noreferrer">WCAG 2.1 Understanding - 1.3.4 Orientation</a>
-                            </li>
-                            <li>
-                              <a href="https://www.w3.org/TR/WCAG21/#bypass-blocks" target="_blank" rel="noopener noreferrer">WCAG 2.1 Success Criterion 2.4.1 - Bypass Blocks</a>
-                            </li>
-                            <li>
-                              <a href="https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html" target="_blank" rel="noopener noreferrer">WCAG 2.1 Understanding - 2.4.1 Bypass Blocks</a>
-                            </li>
-                            <li>
-                              <a href="https://www.w3.org/TR/WCAG21/#page-titled" target="_blank" rel="noopener noreferrer">WCAG 2.1 Success Criterion 2.4.2 - Page Titled</a>
-                            </li>
-                            <li>
-                              <a href="https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html" target="_blank" rel="noopener noreferrer">WCAG 2.1 Understanding - 2.4.2 Page Titled</a>
-                            </li>
-                            <li>
-                              <a href="https://www.w3.org/TR/WCAG21/#multiple-ways" target="_blank" rel="noopener noreferrer">WCAG 2.1 Success Criterion 2.4.5 - Multiple Ways</a>
-                            </li>
-                            <li>
-                              <a href="https://www.w3.org/WAI/WCAG21/Understanding/multiple-ways.html" target="_blank" rel="noopener noreferrer">WCAG 2.1 Understanding - 2.4.5 Multiple Ways</a>
-                            </li>
-                            <li>
-                              <a href="https://www.w3.org/TR/WCAG21/#language-of-page" target="_blank" rel="noopener noreferrer">WCAG 2.1 Success Criterion 3.1.1 - Language of Page</a>
-                            </li>
-                            <li>
-                              <a href="https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html" target="_blank" rel="noopener noreferrer">WCAG 2.1 Understanding - 3.1.1 Language of Page</a>
-                            </li>
-                            <li>
-                              <a href="https://www.w3.org/TR/WCAG21/#language-of-parts" target="_blank" rel="noopener noreferrer">WCAG 2.1 Success Criterion 3.1.2 - Language of Parts</a>
-                            </li>
-                            <li>
-                              <a href="https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html" target="_blank" rel="noopener noreferrer">WCAG 2.1 Understanding - 3.1.2 Language of Parts</a>
-                            </li>
-                          </ul>                          
-                        </div>
-                      </div>
-                    </div> -->
+                    </div>              
                   </div>
                   <!-- End Accordion -->
                 </main>
