@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Components Resources</title>
+
+    <!-- Link to Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <!-- Link to Custom Stylesheet -->
+    <link rel="stylesheet" href="../../../assets/styles/custom.css">
+    <!-- Link to Custom Stylesheet Production -->
+    <link rel="stylesheet" href="../../../../assets/styles/custom.css">
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/a11y-annotations/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/a11y-annotations/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/a11y-annotations/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/a11y-annotations/assets/images/site.webmanifest">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+</head>
+<body>
+  <header class="d-block px-3 py-2 shadow">
+    <img src="https://www.biointeractive.org/themes/gesso/images/hhmi-logo.svg" alt="hhmi Biointeractive logo" style="max-width: 320px;">
+  </header>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Includes the Sidebar Navigation using jQuery -->
+      <div id="sidebar-container" class="col-md-2 border-end"></div>
+
+      <!-- Main Content -->
+      <main class="col-md-10">
+        <!-- A11y Live Region -->
+        <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
+        <div class="container-xxl bd-gutter mt-3">
+          <div class="instructions mb-5">
+            <h1>Components Resources</h1>
+          </div> 
+          <div>
+            <h2>Accordion</h2>
+            <ul>
+              <li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/#accordion" target="_blank">WAI-ARIA Authoring Practices: Accordion Pattern</a></li>
+              <li><a href="https://getbootstrap.com/docs/5.1/components/accordion/" target="_blank">Bootstrap Accordion Documentation</a></li>
+              <li><a href="https://a11yproject.com/posts/how-to-make-an-accessible-accordion/" target="_blank">A11Y Project: How to Make an Accessible Accordion</a></li>
+              <li><a href="https://inclusive-components.design/collapsible-sections/" target="_blank">Inclusive Components: Collapsible Sections</a></li>
+              <li><a href="https://smashingmagazine.com/2021/09/accessible-accordion-design-patterns/" target="_blank">Smashing Magazine: Accessible Accordion Design Patterns</a></li>
+              <li><a href="https://css-tricks.com/accessible-accordion-pattern/" target="_blank">CSS-Tricks: The Accessible Accordion Pattern</a></li>
+              <li><a href="https://webaim.org/techniques/aria/" target="_blank">WebAIM: Using ARIA</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role" target="_blank">MDN Web Docs: Using the Tab Role</a></li> <!-- Relevant for understanding how to manage focus within components like accordions -->
+              <li><a href="https://uxdesign.cc/designing-accessible-accordions-d5dd5fa5f3f1" target="_blank">Designing Accessible Accordions - UX Design</a></li>
+              <li><a href="https://www.deque.com/blog/accessible-aria-buttons" target="_blank">Building Accessible Buttons with ARIA</a></li> <!-- Relevant because accordions often use buttons to toggle sections -->
+            </ul>
+            <h2>Alert</h2>
+            <ul>
+              <li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/#alert" target="_blank">WAI-ARIA Authoring Practices: Alert Pattern</a></li>
+              <li><a href="https://getbootstrap.com/docs/5.1/components/alerts/" target="_blank">Bootstrap Alert Documentation</a></li>
+              <li><a href="https://a11yproject.com/posts/how-to-write-accessible-alerts/" target="_blank">A11Y Project: How to Write Accessible Alerts</a></li>
+              <li><a href="https://inclusive-components.design/notifications-and-feedback/" target="_blank">Inclusive Components: Notifications and Feedback</a></li>
+              <li><a href="https://smashingmagazine.com/2021/08/accessible-notifications-web-applications/" target="_blank">Smashing Magazine: Accessible Notifications in Web Applications</a></li>
+              <li><a href="https://css-tricks.com/building-good-notifications/" target="_blank">CSS-Tricks: Building Good Notifications</a></li>
+              <li><a href="https://webaim.org/techniques/aria/" target="_blank">WebAIM: Using ARIA</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role" target="_blank">MDN Web Docs: Using the Alert Role</a></li>
+              <li><a href="https://uxdesign.cc/how-to-use-alerts-to-improve-accessibility-63e5ca6a4f94" target="_blank">Designing Accessible Alerts - UX Design</a></li>
+              <li><a href="https://www.deque.com/blog/accessible-notifications-for-websites-and-apps-with-aria-live-regions/" target="_blank">Deque: Accessible Notifications with ARIA Live Regions</a></li>
+            </ul>
+            <h2>Breadcrumb</h2>
+            <ul>
+              <li><a href="https://www.w3.org/TR/WCAG21/#info-and-relationships" target="_blank">WCAG 2.1 Recommendation 1.3.1 Info and Relationships</a></li>
+              <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html" target="_blank">WCAG 2.1 Understanding 1.3.1 Info and Relationships</a></li>
+              <li><a href="https://www.w3.org/TR/WCAG21/#name-role-value" target="_blank">WCAG 2.1 Recommendation 4.1.2 Name, Role, Value</a></li>
+              <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" target="_blank">WCAG 2.1 Understanding 4.1.2 Name, Role, Value</a></li>
+              <li><a href="https://www.w3.org/TR/WCAG21/#consistent-navigation" target="_blank">WCAG 2.1 Recommendation 3.2.3 Consistent Navigation</a></li>
+              <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/consistent-navigation.html" target="_blank">WCAG 2.1 Understanding 3.2.3 Consistent Navigation</a></li>
+              <li><a href="https://www.w3.org/TR/WCAG21/#non-text-content" target="_blank">WCAG 2.1 Recommendation 1.1.1 Non-text Content</a></li>
+              <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html" target="_blank">WCAG 2.1 Understanding 1.1.1 Non-text Content</a></li>
+            </ul> 
+            <h2>Button</h2>
+            <ul>
+              <li><a href="https://www.deque.com/blog/accessible-aria-buttons" target="_blank">Building Accessible Buttons with ARIA</a></li>
+              <li><a href="https://css-tricks.com/user-facing-state/" target="_blank">User Facing State</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role" target="_blank">Using the button role</a></li>
+              <li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/examples/button/button.html" target="_blank">W3C Button Examples</a></li>
+              <li><a href="https://getbootstrap.com/docs/5.1/components/buttons/" target="_blank">Bootstrap Buttons Documentation</a></li>
+              <li><a href="https://a11yproject.com/posts/how-to-choose-the-right-ui-component/" target="_blank">How to Choose the Right UI Component</a></li>
+              <li><a href="https://inclusive-components.design/buttons/" target="_blank">Inclusive Components: Buttons</a></li>
+              <li><a href="https://smashingmagazine.com/2016/11/building-accessible-menu-systems/" target="_blank">Smashing Magazine: Building Accessible Menu Systems</a></li>
+              <li><a href="https://webaim.org/techniques/javascript/eventhandlers#button" target="_blank">WebAIM: JavaScript and Accessibility</a></li>
+              <li><a href="https://a11y-dialog.netlify.app/" target="_blank">A11y Dialog Pattern</a></li>
+              <li><a href="https://uxdesign.cc/designing-accessible-buttons-and-button-components-456ea6b7f4ae" target="_blank">Designing Accessible Buttons and Button Components - UX Design</a></li>
+            </ul> 
+            <h2>Carousel</h2>
+            <ul>
+              <li><a href="https://www.smashingmagazine.com/2018/03/infinite-scrolling-pagination-carousel/" target="_blank">Smashing Magazine: Infinite Scrolling, Pagination Or ‘Load More’ Buttons?</a></li>
+              <li><a href="https://www.css-tricks.com/infinite-scrolling-introduction-and-recommendations/" target="_blank">CSS-Tricks: Infinite Scrolling: An Introduction And Recommendations</a></li>
+              <li><a href="https://www.nngroup.com/articles/auto-forwarding/" target="_blank">Nielsen Norman Group: Auto-Forwarding Carousels and Accordions Annoy Users and Reduce Visibility</a></li>
+              <li><a href="https://webaim.org/blog/carousel-wcag-compliance/" target="_blank">WebAIM: Carousels and WCAG Compliance</a></li>
+              <li><a href="https://www.deque.com/blog/why-auto-rotating-carousels-fail-accessibility/" target="_blank">Deque: Why Auto-Rotating Carousels Fail Accessibility</a></li>
+              <li><a href="https://www.uxbooth.com/articles/designing-effective-carousels-our-findings/" target="_blank">UX Booth: Designing Effective Carousels: Our Findings</a></li>
+              <li><a href="https://www.thegood.com/insights/ecommerce-image-carousels/" target="_blank">The Good: Why Most Ecommerce Image Carousels Are a Bad Idea</a></li>
+              <li><a href="https://www.impactplus.com/blog/why-homepage-carousels-are-bad" target="_blank">IMPACT: Why Homepage Carousels Are Bad</a></li>
+              <li><a href="https://resonatorinc.com/the-low/5-reasons-carousels-sliders-are-bad-ux/" target="_blank">Resonator: 5 Reasons Carousels & Sliders Are Bad UX</a></li>
+            </ul>  
+            <h2>Data Chart</h2>
+            <ul>
+              <li><a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank">WCAG 2.1 Quick Reference</a></li>
+              <li><a href="https://inclusive-components.design/toggle-switch/" target="_blank">Inclusive Components: Toggle Switch</a></li>
+              <li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/switch/examples/switch-button/" target="_blank">WAI-ARIA Authoring Practices: Switch Button Example</a></li>
+              <li><a href="https://a11yproject.com/posts/accessible-toggle-switch/" target="_blank">A11Y Project: How to Build Accessible Toggle Switches</a></li>
+              <li><a href="https://getbootstrap.com/docs/5.1/components/buttons/#checkbox-and-radio-buttons" target="_blank">Bootstrap Buttons Documentation (related to Toggle Switches)</a></li>
+              <li><a href="https://smashingmagazine.com/2021/02/complete-guide-accessible-front-end-components/#toggle-switches" target="_blank">Smashing Magazine: Complete Guide to Accessible Front-End Components: Toggle Switches</a></li>
+              <li><a href="https://css-tricks.com/a-guide-to-building-a-toggle-switch/" target="_blank">CSS-Tricks: A Guide to Building a Toggle Switch</a></li>
+              <li><a href="https://webaim.org/techniques/forms/controls#toggle" target="_blank">WebAIM: Techniques for Accessible Toggle Controls</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role" target="_blank">MDN Web Docs: ARIA Switch Role</a></li>
+              <li><a href="https://uxdesign.cc/the-art-of-building-toggle-switches-a-comprehensive-guide-9168b85c2531" target="_blank">UX Design: The Art of Building Toggle Switches - A Comprehensive Guide</a></li>
+              <li><a href="https://www.deque.com/blog/toggle-switches-accessible-design-pattern/" target="_blank">Deque: Toggle Switches - An Accessible Design Pattern</a></li>
+            </ul>   
+            <h2>Data Visualization</h2>
+            <ul>
+              <li><a href="https://www.smashingmagazine.com/2021/03/complete-guide-accessible-front-end-components/#accessible-data-visualizations" target="_blank">Smashing Magazine: Accessible Data Visualizations</a></li>
+              <li><a href="https://www.w3.org/WAI/tutorials/images/complex/" target="_blank">WAI Tutorial: Complex Images</a></li>
+              <li><a href="https://www.w3.org/WAI/WCAG21/quickref/#principle-1-perceivable" target="_blank">WCAG 2.1 Quick Reference: Perceivable</a></li>
+              <li><a href="https://www.a11yproject.com/posts/2021-06-28-how-to-build-accessible-data-visualizations/" target="_blank">A11Y Project: How to Build Accessible Data Visualizations</a></li>
+              <li><a href="https://inclusive-components.design/data-visualizations/" target="_blank">Inclusive Components: Data Visualizations</a></li>
+              <li><a href="https://www.deque.com/blog/creating-accessible-data-visualizations/" target="_blank">Deque: Creating Accessible Data Visualizations</a></li>
+              <li><a href="https://www.tpgi.com/infographic-accessibility-tips-for-designers-and-developers/" target="_blank">TPGi: Infographic Accessibility Tips for Designers and Developers</a></li>
+              <li><a href="https://uxdesign.cc/designing-accessible-data-visualizations-2a6a5a6c0bb6" target="_blank">UX Design: Designing Accessible Data Visualizations</a></li>
+              <li><a href="https://medium.com/microsoft-design/making-data-visualization-more-accessible-a1e73de10a56" target="_blank">Microsoft Design: Making Data Visualization More Accessible</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Graphics_role" target="_blank">MDN Web Docs: ARIA Graphics Role</a></li>
+            </ul>  
+            <h2>Dialog</h2>
+            <ul>
+              <li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal" target="_blank">WAI-ARIA Authoring Practices: Dialog (Modal) Pattern</a></li>
+              <li><a href="https://getbootstrap.com/docs/5.1/components/modal/" target="_blank">Bootstrap Modal Documentation</a></li>
+              <li><a href="https://a11yproject.com/posts/understanding-aria-dialog/" target="_blank">A11Y Project: How to Build Accessible Modals</a></li>
+              <li><a href="https://inclusive-components.design/dialogs/" target="_blank">Inclusive Components: Designing Accessible Dialogs</a></li>
+              <li><a href="https://smashingmagazine.com/2021/08/building-accessible-modal-dialogs/" target="_blank">Smashing Magazine: Building Accessible Modal Dialogs</a></li>
+              <li><a href="https://css-tricks.com/building-accessible-modal-dialogs/" target="_blank">CSS-Tricks: Building Accessible Modal Dialogs</a></li>
+              <li><a href="https://webaim.org/techniques/javascript/eventhandlers#dialog" target="_blank">WebAIM: JavaScript and Accessibility - Dialogs</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role" target="_blank">MDN Web Docs: Using the Dialog Role</a></li>
+              <li><a href="https://uxdesign.cc/designing-accessible-modals-9c7b4f98c171" target="_blank">UX Design: Designing Accessible Modals</a></li>
+              <li><a href="https://www.deque.com/blog/accessible-modal-dialogs-aria/" target="_blank">Deque: Accessible Modal Dialogs with ARIA</a></li>
+              <li><a href="https://a11y-dialog.netlify.app/" target="_blank">A11y Dialog Pattern</a></li>
+            </ul>  
+            <h2>Dropdown / Disclosure</h2>
+            <ul>
+              <li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/" target="_blank">WAI-ARIA Authoring Practices: Disclosure Pattern</a></li>
+              <li><a href="https://getbootstrap.com/docs/5.3/components/dropdowns/" target="_blank">Bootstrap Dropdown Documentation</a></li>
+              <li><a href="https://www.a11yproject.com/posts/2021-07-21-how-to-make-a-disclosure-widget/" target="_blank">A11Y Project: How to Make an Accessible Disclosure Widget</a></li>
+              <li><a href="https://inclusive-components.design/collapsible-sections/" target="_blank">Inclusive Components: Collapsible Sections</a></li>
+              <li><a href="https://www.smashingmagazine.com/2020/07/designing-accessible-dropdowns/" target="_blank">Smashing Magazine: Designing Accessible Dropdowns</a></li>
+              <li><a href="https://css-tricks.com/accessible-simple-css-dropdown-menu/" target="_blank">CSS-Tricks: Accessible Simple CSS Dropdown Menu</a></li>
+              <li><a href="https://webaim.org/techniques/aria/" target="_blank">WebAIM: Using ARIA</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/button_role" target="_blank">MDN Web Docs: Using the Button Role</a></li>
+              <li><a href="https://uxdesign.cc/designing-accessible-dropdowns-47f4a3b3ff38" target="_blank">UX Design: Designing Accessible Dropdowns</a></li>
+              <li><a href="https://www.deque.com/blog/accessible-aria-buttons" target="_blank">Deque: Building Accessible Buttons with ARIA</a></li>
+            </ul>
+            <h2>Form</h2>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button" target="_blank" rel="noopener noreferrer">MDN Web Docs: <code>&lt;button&gt;</code> Element</a> - Comprehensive documentation on the HTML <code>&lt;button&gt;</code> element, including semantics and usage.</li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role" target="_blank" rel="noopener noreferrer">MDN Web Docs: Using the button role</a> - Guidance on using <code>role="button"</code> to make non-button elements behave like buttons for accessibility.</li>
+              <li><a href="https://www.w3.org/TR/wai-aria-1.2/#button" target="_blank" rel="noopener noreferrer">WAI-ARIA 1.2 Specification: Button</a> - Details on the ARIA `button` role and how to use it to enhance button accessibility.</li>
+              <li><a href="https://www.w3.org/TR/wai-aria-practices-1.2/#button" target="_blank" rel="noopener noreferrer">WAI-ARIA Authoring Practices 1.2: Button Widgets</a> - Practical examples and guidance for implementing accessible button widgets.</li>
+              <li><a href="https://www.a11yproject.com/posts/2013-01-11-when-is-a-button-not-a-button/" target="_blank" rel="noopener noreferrer">The A11Y Project: When is a Button Not a Button?</a> - A discussion on the semantic meaning of buttons and when to use the <code>&lt;button&gt;</code> element.</li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button" target="_blank" rel="noopener noreferrer">MDN Web Docs: <code>&lt;button&gt;</code> Element</a> - Detailed information on the HTML <code>&lt;button&gt;</code> element and its usage as a clickable control.</li>
+              <li><a href="https://www.w3.org/WAI/tutorials/forms/buttons/" target="_blank" rel="noopener noreferrer">W3C WAI: Creating Accessible Buttons</a> - A tutorial on creating buttons that are accessible to all users.</li>
+              <li><a href="https://webaim.org/techniques/buttons/" target="_blank" rel="noopener noreferrer">WebAIM: Buttons</a> - Guidance on creating accessible buttons, including JavaScript event listeners for keyboard and screen reader users.</li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label" target="_blank" rel="noopener noreferrer">MDN Web Docs: <code>&lt;label&gt;</code> Element</a> - Documentation on the HTML <code>&lt;label&gt;</code> element and its role in associating labels with form controls.</li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete" target="_blank" rel="noopener noreferrer">MDN Web Docs: autocomplete attribute</a> - Information on using the `autocomplete` attribute to improve form autofill behavior.</li>
+              <li><a href="https://www.w3.org/TR/WCAG21/#input-purposes" target="_blank" rel="noopener noreferrer">WCAG 2.1: Input Purposes</a> - Guidelines on input purposes, including recommendations for using autocomplete attributes for accessibility.</li>
+              <li><a href="https://www.w3.org/TR/WCAG21/" target="_blank" rel="noopener noreferrer">WCAG 2.1 - Web Content Accessibility Guidelines</a> - The official guidelines for making web content, including forms, accessible to people with disabilities.</li>
+              <li><a href="https://www.w3.org/TR/html-aapi/" target="_blank" rel="noopener noreferrer">HTML Accessibility API Mappings</a> - Details on how HTML features, including form elements, should be exposed to accessibility APIs.</li>
+              <li><a href="https://www.w3.org/TR/wai-aria-practices-1.2/#aria_ex" target="_blank" rel="noopener noreferrer">WAI-ARIA Authoring Practices 1.2: Accessible Forms</a> - Guidance on creating accessible forms using ARIA roles and attributes.</li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility" target="_blank" rel="noopener noreferrer">MDN Web Docs: Web Accessibility</a> - A comprehensive resource on web accessibility, including forms and their accessibility considerations.</li>
+            </ul>            
+            <h2>Form Group</h2>
+            <ul>
+              <li><a href="https://www.w3.org/WAI/tutorials/forms/grouping/" target="_blank" rel="noopener noreferrer">W3C WAI: Grouping Related Controls</a> - A tutorial on how to group related form controls using fieldsets and legends for accessibility.</li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset" target="_blank" rel="noopener noreferrer">MDN Web Docs: <code>&lt;fieldset&gt;</code> Element</a> - Documentation on the HTML <code>&lt;fieldset&gt;</code> element, its usage, and best practices.</li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend" target="_blank" rel="noopener noreferrer">MDN Web Docs: <code>&lt;legend&gt;</code> Element</a> - Information on the HTML <code>&lt;legend&gt;</code> element, used to provide a caption for the <code>&lt;fieldset&gt;</code>.</li>
+              <li><a href="https://www.w3.org/TR/wai-aria-practices-1.2/#group" target="_blank" rel="noopener noreferrer">WAI-ARIA Authoring Practices: Group Role</a> - Guidance on using the <code>role="group"</code> attribute for grouping controls outside of form contexts.</li>
+              <li><a href="https://webaim.org/techniques/forms/" target="_blank" rel="noopener noreferrer">WebAIM: Accessible Forms</a> - Comprehensive guide on creating accessible forms, including grouping related controls.</li>
+            </ul>            
+            <h2>Link</h2>
+            <ul>
+              <li><a href="https://www.w3.org/TR/WCAG21/#info-and-relationships" target="_blank" rel="noopener noreferrer">WCAG 2.1 Success Criterion 1.3.1 - Info and Relationships</a></li>
+              <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html" target="_blank" rel="noopener noreferrer">WCAG 2.1 Understanding - 1.3.1 Info and Relationships</a></li>
+              <li><a href="https://www.w3.org/TR/WCAG22/#link-purpose-in-context" target="_blank" rel="noopener noreferrer">WCAG 2.2 Success Criterion 2.4.4: Link Purpose (In Context)</a> - Information on ensuring link purpose can be determined from the link text and context.</li>
+              <li><a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener noreferrer">Web Content Accessibility Guidelines (WCAG) 2.2</a> - The latest version of the WCAG, with updates and additions to accessibility requirements.</li>
+            </ul>
+            <h2>Navigation</h2>
+            <ul>
+              <li><a href="https://getbootstrap.com/docs/5.1/components/navbar/" target="_blank">Bootstrap Navbar Documentation</a></li>
+              <li><a href="https://webaim.org/techniques/css/invisiblecontent/" target="_blank">WebAIM: Invisible Content Just for Screen Reader Users</a></li>
+              <li><a href="https://www.w3.org/WAI/tutorials/menus/" target="_blank">W3C WAI: Menus Tutorial</a></li>
+              <li><a href="https://a11yproject.com/patterns/#navigation" target="_blank">The A11Y Project: Navigation Patterns</a></li>
+              <li><a href="https://www.smashingmagazine.com/2017/11/building-accessible-menu-systems/" target="_blank">Smashing Magazine: Building Accessible Menu Systems</a></li>
+              <li><a href="https://inclusive-components.design/menus-menu-buttons/" target="_blank">Inclusive Components: Menus & Menu Buttons</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role" target="_blank">MDN Web Docs: ARIA Navigation Role</a></li>
+              <li><a href="https://uxdesign.cc/designing-accessible-navigation-8afb4f9754" target="_blank">Designing Accessible Navigation - UX Design</a></li>
+            </ul>
+            <h2>Pagination</h2>
+            <ul>
+              <li><a href="https://getbootstrap.com/docs/5.1/components/pagination/" target="_blank">Bootstrap Pagination Documentation</a></li>
+              <li><a href="https://www.a11ymatters.com/pattern/pagination/" target="_blank">A11y Matters: Understanding Pagination</a></li>
+              <li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/pagination/" target="_blank">W3C WAI ARIA Practices: Pagination Pattern</a></li>
+              <li><a href="https://a11yproject.com/posts/creating-a-pagination-component/" target="_blank">The A11Y Project: Creating a Pagination Component</a></li>
+              <li><a href="https://www.smashingmagazine.com/2020/11/accessible-pagination-pattern/" target="_blank">Smashing Magazine: Building An Accessible Pagination Component</a></li>
+              <li><a href="https://inclusive-components.design/pagination/" target="_blank">Inclusive Components: Pagination</a></li>
+              <li><a href="https://css-tricks.com/building-a-good-pagination/" target="_blank">CSS-Tricks: Building A Good Pagination</a></li>
+              <li><a href="https://uxdesign.cc/design-better-pagination-92007658a8a1" target="_blank">Designing Better Pagination - UX Design</a></li>
+            </ul>
+            <h2>Progress</h2>
+            <ul>
+              <li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/#progressbar" target="_blank">WAI-ARIA Authoring Practices: Progressbar Pattern</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role" target="_blank">MDN Web Docs: Using the Progressbar Role</a></li>
+              <li><a href="https://www.a11yproject.com/posts/creating-an-accessible-progress-bar/" target="_blank">A11Y Project: Creating an Accessible Progress Bar</a></li>
+              <li><a href="https://inclusive-components.design/progress-bar/" target="_blank">Inclusive Components: Accessible Progress Bar</a></li>
+              <li><a href="https://www.smashingmagazine.com/2021/07/creating-progress-bar-web-component/" target="_blank">Smashing Magazine: Creating a Progress Bar Web Component</a></li>
+              <li><a href="https://webaim.org/techniques/aria/" target="_blank">WebAIM: Using ARIA</a></li>
+              <li><a href="https://www.deque.com/blog/accessible-progress-bar/" target="_blank">Deque: Accessible Progress Bar</a></li>
+            </ul>
+            <h2>Table</h2>
+            <ul>
+              <li><a href="https://www.w3.org/WAI/tutorials/tables/" target="_blank" rel="noopener noreferrer">W3C WAI: Tables Tutorial</a> - A comprehensive guide on creating accessible tables.</li>
+              <li><a href="https://webaim.org/techniques/tables/" target="_blank" rel="noopener noreferrer">WebAIM: Creating Accessible Tables</a> - Offers guidelines and best practices for table accessibility.</li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Advanced" target="_blank" rel="noopener noreferrer">MDN Web Docs: Advanced Table Techniques</a> - Covers advanced topics in HTML table creation.</li>
+              <li><a href="https://www.a11yproject.com/posts/2021-01-11-how-to-write-good-alt-text/" target="_blank" rel="noopener noreferrer">The A11Y Project: How to Write Good Alt Text</a> - Although focused on alt text, this resource is useful for understanding how to describe complex data, like that found in tables.</li>
+              <li><a href="https://www.w3.org/TR/wai-aria-practices-1.2/examples/table/table.html" target="_blank" rel="noopener noreferrer">WAI-ARIA Authoring Practices 1.2: Table Examples</a> - Examples of tables created with ARIA roles and properties.</li>
+              <li><a href="https://accessibility.digital.gov/visual-design/tables/" target="_blank" rel="noopener noreferrer">U.S. Web Design System: Accessibility Guidelines for Tables</a> - Accessibility guidelines for table design in digital products.</li>
+              <li><a href="https://inclusive-components.design/tables/" target="_blank" rel="noopener noreferrer">Inclusive Components: Tables</a> - Tips and tricks for making tables more inclusive and accessible.</li>
+            </ul>            
+            <h2>Tabs</h2>
+            <ul>
+              <li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel" target="_blank">WAI-ARIA Authoring Practices: Tab Panel</a></li>
+              <li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/tabs/" target="_blank">WAI ARIA Practices Guide: Tabs Pattern</a></li>
+              <li><a href="https://a11yproject.com/posts/creating-accessible-tabs/" target="_blank">A11Y Project: How to Create Accessible Tabs</a></li>
+              <li><a href="https://inclusive-components.design/tabbed-interfaces/" target="_blank">Inclusive Components: Tabbed Interfaces</a></li>
+              <li><a href="https://smashingmagazine.com/2023/01/building-accessible-tabs/" target="_blank">Smashing Magazine: Building Accessible Tabs</a></li>
+              <li><a href="https://css-tricks.com/functional-css-tabs-revisited/" target="_blank">CSS-Tricks: Functional CSS Tabs Revisited</a></li>
+              <li><a href="https://webaim.org/techniques/aria/" target="_blank">WebAIM: Techniques for Creating Accessible Web Content</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role" target="_blank">MDN Web Docs: ARIA Tab Role</a></li>
+              <li><a href="https://uxdesign.cc/designing-accessible-tabs-345f5f3a9a8" target="_blank">Designing Accessible Tabs - UX Design</a></li>
+              <li><a href="https://www.deque.com/blog/dont-lose-focus-3-keys-web-accessibility/" target="_blank">Deque: Focus Management in Accessible Web Applications</a></li>
+            </ul> 
+            <h2>Tooltip</h2>
+            <ul>
+              <li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/#tooltip" target="_blank">WAI-ARIA Authoring Practices: Tooltip Widget</a></li>
+              <li><a href="https://getbootstrap.com/docs/5.1/components/tooltips/" target="_blank">Bootstrap Tooltip Documentation</a></li>
+              <li><a href="https://a11yproject.com/posts/building-a-tooltip/" target="_blank">A11Y Project: How to Build Accessible Tooltips</a></li>
+              <li><a href="https://inclusive-components.design/tooltips-toggletips/" target="_blank">Inclusive Components: Tooltips and Toggletips</a></li>
+              <li><a href="https://smashingmagazine.com/2018/09/css-exclusions-2021-state/" target="_blank">Smashing Magazine: Advanced Tooltips with CSS</a></li>
+              <li><a href="https://css-tricks.com/practical-css-tooltips/" target="_blank">CSS-Tricks: Building Practical CSS Tooltips</a></li>
+              <li><a href="https://webaim.org/techniques/css/invisiblecontent/" target="_blank">WebAIM: Techniques for creating accessible CSS</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/tooltip_role" target="_blank">MDN Web Docs: Using the Tooltip Role</a></li>
+              <li><a href="https://uxdesign.cc/designing-more-efficient-forms-structure-inputs-labels-and-actions-e3a47007114f" target="_blank">Designing Accessible Tooltips - UX Design</a></li>
+              <li><a href="https://www.deque.com/blog/how-to-design-accessible-tooltips/" target="_blank">Deque: How to Design Accessible Tooltips</a></li>
+            </ul>  
+            <h2>Toggletip</h2>
+            <ul>
+              <li><a href="https://inclusive-components.design/tooltips-toggletips/" target="_blank">Inclusive Components: Tooltips and Toggletips</a></li>
+              <li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/examples/tooltip/tooltip.html" target="_blank">WAI-ARIA Authoring Practices: Toggletip Examples</a></li>
+              <li><a href="https://a11yproject.com/posts/building-a-tooltip/" target="_blank">A11Y Project: How to Build Accessible Toggletips</a></li>
+              <li><a href="https://getbootstrap.com/docs/5.1/components/popovers/" target="_blank">Bootstrap Popovers Documentation (related to Toggletips)</a></li>
+              <li><a href="https://smashingmagazine.com/2021/02/complete-guide-accessible-front-end-components/#toggletips" target="_blank">Smashing Magazine: Complete Guide to Accessible Front-End Components: Toggletips</a></li>
+              <li><a href="https://css-tricks.com/building-a-complex-ui-animation-in-react-simply/" target="_blank">CSS-Tricks: Building Toggletips in React</a></li>
+              <li><a href="https://webaim.org/techniques/css/invisiblecontent/" target="_blank">WebAIM: Techniques for managing invisible content (relevant for toggletips)</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/button_role#Toggle_buttons" target="_blank">MDN Web Docs: ARIA Toggle Button Role</a></li>
+              <li><a href="https://uxdesign.cc/the-art-of-building-toggletips-a-comprehensive-guide-9168b85c2531" target="_blank">UX Design: The Art of Building Toggletips - A Comprehensive Guide</a></li>
+              <li><a href="https://www.deque.com/blog/toggletips-accessible-design-pattern/" target="_blank">Deque: Toggletips - An Accessible Design Pattern</a></li>
+            </ul>
+            <h2>Toggle Switch</h2>
+            <ul>
+              <li><a href="https://inclusive-components.design/toggle-switch/" target="_blank">Inclusive Components: Toggle Switch</a></li>
+              <li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/switch/examples/switch-button/" target="_blank">WAI-ARIA Authoring Practices: Switch Button Example</a></li>
+              <li><a href="https://a11yproject.com/posts/accessible-toggle-switch/" target="_blank">A11Y Project: How to Build Accessible Toggle Switches</a></li>
+              <li><a href="https://getbootstrap.com/docs/5.1/components/buttons/#checkbox-and-radio-buttons" target="_blank">Bootstrap Buttons Documentation (related to Toggle Switches)</a></li>
+              <li><a href="https://smashingmagazine.com/2021/02/complete-guide-accessible-front-end-components/#toggle-switches" target="_blank">Smashing Magazine: Complete Guide to Accessible Front-End Components: Toggle Switches</a></li>
+              <li><a href="https://css-tricks.com/a-guide-to-building-a-toggle-switch/" target="_blank">CSS-Tricks: A Guide to Building a Toggle Switch</a></li>
+              <li><a href="https://webaim.org/techniques/forms/controls#toggle" target="_blank">WebAIM: Techniques for Accessible Toggle Controls</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role" target="_blank">MDN Web Docs: ARIA Switch Role</a></li>
+              <li><a href="https://uxdesign.cc/the-art-of-building-toggle-switches-a-comprehensive-guide-9168b85c2531" target="_blank">UX Design: The Art of Building Toggle Switches - A Comprehensive Guide</a></li>
+              <li><a href="https://www.deque.com/blog/toggle-switches-accessible-design-pattern/" target="_blank">Deque: Toggle Switches - An Accessible Design Pattern</a></li>
+            </ul>
+            <h2>Video</h2>
+            <ul>
+              <li><a href="https://www.w3.org/WAI/media/av/" target="_blank">W3C WAI: Media Accessibility User Requirements</a></li>
+              <li><a href="https://www.w3.org/WAI/media/av/player/" target="_blank">W3C WAI: Accessible Media Player Guidelines</a></li>
+              <li><a href="https://a11yproject.com/posts/accessible-video/" target="_blank">A11Y Project: Accessible Video</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/video_role" target="_blank">MDN Web Docs: Using the Video Role</a></li>
+              <li><a href="https://webaim.org/techniques/captions/" target="_blank">WebAIM: Captions, Transcripts, and Audio Descriptions</a></li>
+              <li><a href="https://www.deque.com/blog/creating-accessible-videos/" target="_blank">Deque: Creating Accessible Videos</a></li>
+              <li><a href="https://www.smashingmagazine.com/2020/02/creating-accessible-video-player/" target="_blank">Smashing Magazine: Creating an Accessible Video Player</a></li>
+              <li><a href="https://css-tricks.com/accessible-simple-video-player/" target="_blank">CSS-Tricks: Accessible & Simple Video Player</a></li>
+              <li><a href="https://inclusive-components.design/video-player/" target="_blank">Inclusive Components: Accessible Video Player</a></li>
+              <li><a href="https://www.wuhcag.com/video/" target="_blank">Wuhcag: Accessible Video</a></li>
+              <li><a href="https://www.3playmedia.com/2020/10/13/5-tips-for-making-youtube-videos-accessible/" target="_blank">3Play Media: 5 Tips for Making YouTube Videos Accessible</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" target="_blank">MDN Web Docs: Iframe Element</a></li>
+              <li><a href="https://youtu.be/hVTe9cMcKP4?si=75RrpDVyrxnuxy6R" target="_blank">Best Video Accessibility Description EVER on YouTube</a></li>
+            </ul> 
+          </div> 
+        </div>  
+      </main>
+    </div>
+  </div>
+
+   <!-- Script links and jQuery CDN -->
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+   <script src="../../assets/js/global.js"></script>
+   <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+   <!-- Add sidebar navigation to page -->
+   <script>
+     $(document).ready(function () {
+         // Determine the path relative to the root directory
+         var rootRelativePath = "../sidebar-navigation.html";
+ 
+         // Use jQuery to load the sidebar-navigation.html file
+         $("#sidebar-container").load(rootRelativePath);
+     });
+   </script>
+</body>
+</html>
