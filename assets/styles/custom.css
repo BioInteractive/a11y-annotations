@@ -1,6 +1,7 @@
 /* Global Styles */
 body {
   font-family: Arial, Helvetica, sans-serif
+  color: #171717;
 }
 button:focus-visible,
 a:focus-visible {
@@ -13,12 +14,15 @@ input {
 }
 /* Color Variables */
 :root {
-    --primary-teal: #058d96;
-    --primary-green: #00a450;
-    --secondary-green: #52b448;
-    --accent-green: #8ac341;
-  }
-
+  --primary-teal: #058d96;
+  --primary-green: #00a450;
+  --secondary-green: #52b448;
+  --accent-green: #8ac341;
+}
+/* Heading */
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+}
 /* Style Overrides */
 a {
   color: var(--primary-teal);
@@ -28,6 +32,9 @@ a {
 }
 
 /* Sidebar Navigation */
+.reg-nav-link {
+  font-weight: 500;
+}
 .btn-toggle {
   display: inline-flex;
   align-items: center;
@@ -64,6 +71,8 @@ a {
   margin-top: .125rem;
   margin-left: 1.25rem;
   text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 500;
 }
 .btn-toggle-nav a:hover,
 .btn-toggle-nav a:focus {
@@ -74,6 +83,27 @@ a {
   padding-top: 1.25rem;
   min-width: 265px;
 }
+
+/* Apply styles for screens wider than 1100px */
+@media (min-width: 1100px) {
+  #sidebar-container {
+    position: sticky;
+    top: 0; /* Keeps the sidebar at the top of its container */
+    overflow-y: auto; /* Adds vertical scrollbar if the content overflows */
+    max-height: 100vh; /* Ensures the sidebar doesn’t exceed the viewport height */
+  }
+}
+
+/* Apply styles for screens narrower than 1100px */
+@media (max-width: 1099px) {
+  #sidebar-container {
+    position: static; /* Resets the position for smaller screens */
+    overflow-y: visible; /* Ensures sidebar content is visible */
+    max-height: none; /* Removes the height constraint */
+    width: 100%;
+  }
+}
+
 header {
   border-bottom: 1px solid rgb(0 0 0 / 11%) !important;
   box-shadow: 1rem 0rem 1px rgba(0, 0, 0, 0.205) !important;
@@ -85,9 +115,14 @@ header {
 #structure-collapse > ul > li > a:hover > i {
   color: black !important;
 }
-@media (min-width: 768px) {
+@media (min-width: 1099px) {
   .col-md-3 {
       width: auto !important;
+  }
+}
+@media (max-width: 1099px) {
+  .col-md-9{
+    width: 100% !important;
   }
 }
 
@@ -101,92 +136,97 @@ header {
 }
 
   
-  /*** Layout Spacing ***/
-  h1, h2, h3, h4, h5 {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-  .ml-1r {
-    margin-left: 1rem;
-  }
-  .space-large{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-  .space-medium{
-    margin-top: .5rem;
-    margin-bottom: .5rem;
-  }
-  .space-small{
-    margin-top: .25rem;
-    margin-bottom: .25rem;
-  }
+/*** Layout Spacing ***/
+h1, h2, h3, h4, h5 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.ml-1r {
+  margin-left: 1rem;
+}
+.space-large{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.space-medium{
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+.space-small{
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+}
 
-  /* Accordion Overrides */
-  .accordion-item {
-    border: none !important;
-  }
-  .accordion-button {
-    border: #3779b5 solid !important;
-  }
-  .accordion-button:not(.collapsed) {
-    color: #3779b5 !important;
-  }
+/* Accordion Overrides */
+.accordion-item {
+  border: none !important;
+}
+.accordion-button {
+  border: #3779b5 solid !important;
+}
+.accordion-button:not(.collapsed) {
+  color: #3779b5 !important;
+}
 
-  /* Code */
-  .code-tag, code {
-    font-weight: 600;
-    color: #8B307F;
-  }
+/* Code */
+.code-tag, code {
+  font-weight: 600;
+  color: #8B307F;
+}
 
-  /* Tables */
-  .table {
-    border-color: dimgrey;
-  }
+/* Tables */
+.table {
+  border-color: dimgrey;
+}
 
-  /* Lists */
-  .list-unstyled {
-    list-style-type: none;
-  }
+/* Lists */
+.list-unstyled {
+  list-style-type: none;
+}
 
-  /* Custom CSS for evenly spaced images */
-  .inline-flex-images {
-    display: inline-flex;
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  .inline-flex-images li {
-    padding: 8px;
-  }
+/* Custom CSS for evenly spaced images */
+.inline-flex-images {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.inline-flex-images li {
+  padding: 8px;
+}
 
-  /* Example buttons */
-  .example-list-button {
-    background-color: #178387;
-    border: 0;
-    border-radius: 0;
-    color: #fff;
-    cursor: pointer;
-    font-size: 0.875rem;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    font-weight: 700;
-    line-height: 1.25;
-    padding: .75rem 1.25rem;
-    text-align: center;
-    text-decoration: none;
-    margin-bottom: .25rem;
-  }
-
-  .dev-tag {
-    padding: 3px 8px;
-    border: 3px solid var(--primary-teal);
-    border-radius: 8px;
-    color: rgba(0, 0, 0, .85);
-    font-weight: 600;
-    width: fit-content;
+/* Example buttons */
+.example-list-button {
+  background-color: #178387;
+  border: 0;
+  border-radius: 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.875rem;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 700;
+  line-height: 1.25;
+  padding: .75rem 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: .25rem;
+}
+.dev-tag {
+  padding: 3px 8px;
+  border: 3px solid var(--primary-teal);
+  border-radius: 8px;
+  color: rgba(0, 0, 0, .85);
+  font-weight: 600;
+  width: fit-content;
+  display: flex;
+}
+.dev-tag svg {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 4px;
 }
 p.dev-tag {
   font-size: 1.25rem;
@@ -509,6 +549,166 @@ p.dev-tag {
 .modal-title {
   font-size: 2rem;
 }
-.close {
-  
+
+/* Homepage Card Components */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.card-container li {
+  flex: 1 1 30%;
+  max-width: 300px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Updated box shadow */
+}
+
+.icon-image-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.card-heading {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Media query for responsive design */
+@media (max-width: 900px) {
+  .card-container li {
+      flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-container li {
+      flex: 1 1 100%;
+  }
+}
+
+/* Fancy Checklists */
+.fancy-checklist {
+  list-style: none; /* Remove default bullets */
+  padding-left: 0;
+}
+
+.fancy-checklist li {
+  position: relative;
+  padding-left: 30px; /* Adjust padding to make space for the icon */
+  margin-bottom: 10px; /* Add some space between items */
+}
+
+.fancy-checklist li::before {
+  content: "\2713"; /* Unicode for the checkmark symbol */
+  position: absolute;
+  left: 0;
+  top: 10%;
+  width: 20px;
+  height: 20px;
+  background-color: #8ac341;
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 3px; /* Rounded square */
+}
+
+/* Styles for sublists */
+.fancy-checklist ul {
+  list-style: none; /* Remove default bullets from sublists */
+  padding-left: 20px; /* Adjust padding for sublists */
+  margin-top: 5px;
+}
+
+.fancy-checklist ul li {
+  padding-left: 25px; /* Add space for the checkmark in sublists */
+  margin-bottom: 5px; /* Smaller spacing between sublist items */
+}
+
+.fancy-checklist ul li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  top: 10%;
+  width: 16px; /* Smaller checkmark background for sublists */
+  height: 16px;
+  background-color: #8ac341;
+  color: black;
+  font-size: 12px; /* Smaller font size for sublist checkmarks */
+  line-height: 16px;
+  text-align: center;
+  border-radius: 3px;
+}
+/* Class for splitting a list into two columns */
+.two-column-list {
+  column-count: 2; /* Divide the list into two columns */
+  column-gap: 20px; /* Space between the columns */
+  padding-left: 0; /* Remove default padding */
+}
+
+.two-column-list li {
+  margin-bottom: 10px; /* Space between list items */
+}
+/* Call Out Bar */
+.call-out-bar {
+  background-color: #058d9699;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* Reset columns for screens narrower than 600px */
+@media (max-width: 599px) {
+  .two-column-list {
+    column-count: 1; /* Revert to a single column */
+  }
+}
+
+/* Style for ordered lists with green background for numbers */
+.styled-ol {
+  list-style: none; /* Remove default list numbering */
+  counter-reset: list-counter; /* Reset counter for custom numbering */
+  padding-left: 0; /* Remove default padding */
+}
+
+.styled-ol li {
+  position: relative; /* Position relative to place the custom number */
+  background: #e8f5e9; /* Light green background for the list item */
+  border-radius: 5px; /* Rounded corners for the list item background */
+  padding-bottom: .75rem; /* Padding inside the list item */
+  padding-left: 2rem; /* Space for the custom number */
+}
+
+/* Style for the custom number */
+.styled-ol li::before {
+  content: counter(list-counter) '. '; /* Custom numbering */
+  counter-increment: list-counter; /* Increment the counter */
+  position: absolute; /* Position absolute for placement */
+  left: 0; /* Align to the left of the list item */
+  top: 30%; /* Center vertically */
+  transform: translateY(-50%); /* Center vertically */
+  background: #8ac341; /* Green background for the number */
+  color: #000; /* Black color for the number */
+  width: 1.5rem; /* Width of the background */
+  height: 1.5rem; /* Height of the background */
+  border-radius: 50%; /* Round background to a circle */
+  display: flex; /* Flexbox for centering text */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  font-weight: bold; /* Bold text */
 }
