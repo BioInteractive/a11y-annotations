@@ -1,38 +1,26 @@
 <!-- Custom style sheet link -->
 <link rel="stylesheet" href="/a11y-annotations/assets/styles/custom.css">
 
+<!-- Hamburger Menu Button -->
+<button id="sidebar-toggle" class="hamburger rounded" aria-expanded="false" aria-label="Menu" aria-controls="sidebar-nav">
+    <span class="hamburger-icon"></span>
+    <span class="hamburger-icon"></span>
+    <span class="hamburger-icon"></span>
+</button>
+
+
 <!-- sidebar-navigation.html -->
-<nav id="sidebar-nav" class="sidebar">
-    <a href="/index.html" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+<nav id="sidebar-nav" class="sidebar rounded">
+    <div class="space-medium"></div>
+    <a href="/index.html" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom fs-4">
         <span class="reg-nav-link"><i class="bi bi-house-heart-fill" aria-hidden="true"></i> A11y Annotations</span>
     </a>
-    <a href="/default/how-to-annotate.html" class="d-flex align-items-center pb-1 p-1 mb-3 link-dark text-decoration-none">        
-        <span class="dev-tag small">
-            Auditor 
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M14 7H19.6404C20.0877 7 20.3113 7 20.4421 7.09404C20.5562 7.17609 20.6306 7.30239 20.6469 7.442C20.6656 7.602 20.5569 7.79751 20.3397 
-                8.18851L18.9936 10.6115C18.9148 10.7533 18.8755 10.8242 18.86 10.8993C18.8463 10.9657 18.8463 11.0343 18.86 11.1007C18.8755 11.1758 18.9148 
-                11.2467 18.9936 11.3885L20.3397 13.8115C20.5569 14.2025 20.6656 14.398 20.6469 14.558C20.6306 14.6976 20.5562 14.8239 20.4421 14.906C20.3113 
-                15 20.0877 15 19.6404 15H12.6C12.0399 15 11.7599 15 11.546 14.891C11.3578 14.7951 11.2049 14.6422 11.109 14.454C11 14.2401 11 13.9601 11 
-                13.4V11M4 21L4 4M4 11H12.4C12.9601 11 13.2401 11 13.454 10.891C13.6422 10.7951 13.7951 10.6422 13.891 10.454C14 10.2401 14 9.96005 14 9.4V4.6C14 
-                4.03995 14 3.75992 13.891 3.54601C13.7951 3.35785 13.6422 3.20487 13.454 3.10899C13.2401 3 12.9601 3 12.4 3H5.6C5.03995 3 4.75992 3 4.54601 
-                3.10899C4.35785 3.20487 4.20487 3.35785 4.10899 3.54601C4 3.75992 4 4.03995 4 4.6V11Z" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-        </span> 
-        <span class="ms-2 reg-nav-link">How to Annotate</span>
+    <a href="/default/how-to-annotate.html" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom fs-4">        
+        <span class="reg-nav-link">How to Annotate</span>
     </a>
-    <a href="/default/auditor-checklist.html" class="d-flex align-items-center pb-1 pl-1 mb-3 link-dark text-decoration-none">
-        <img src="/a11y-annotations/assets/images/HHMIA11yChecklist.png"
-            srcset="/assets/images/HHMIA11yChecklist.png 1x, 
-                    ../assets/images/HHMIA11yChecklist.png 2x,
-                    ../../assets/images/HHMIA11yChecklist.png 3x"
-            width="64px"
-            alt="">
+    <a href="/default/auditor-checklist.html" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom fs-4">                               
         <span class="reg-nav-link">Accessibility Checklist</span>
     </a>
-    <!-- <a href="/default/style-guide.html" class="d-flex align-items-center pb-1 pl-1 mb-3 link-dark text-decoration-none">
-        <span class="fs-6 fw-semibold">Style Guide</span>
-    </a> -->
     <ul class="list-unstyled ps-0">
         <!-- General Section -->
         <li class="mb-3">
@@ -45,10 +33,10 @@
                     <!-- Structure Section -->
                     <li class="mb-1">
                         <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-                            data-bs-target="#structure-collapse" aria-expanded="true" aria-controls="structure-collapse">
+                            data-bs-target="#structure-collapse" aria-expanded="false" aria-controls="structure-collapse">
                             <span><i class="bi bi-hammer" aria-hidden="true"></i> Structure</span>
                         </button>
-                        <div class="collapse show" id="structure-collapse">
+                        <div class="collapse" id="structure-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                                 <li><a href="/templates/general/structure/page.html" class="link-dark rounded">Page</a></li>
                                 <li><a href="/templates/general/structure/text-best-practices.html" class="link-dark rounded">Text</a></li>
@@ -61,10 +49,10 @@
                     <!-- Color Section -->
                     <li class="mb-1">
                         <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-                            data-bs-target="#color-collapse" aria-expanded="true" aria-controls="color-collapse">
+                            data-bs-target="#color-collapse" aria-expanded="flase" aria-controls="color-collapse">
                             <span><i class="bi bi-eyedropper" aria-hidden="true"></i> Color</span>
                         </button>
-                        <div class="collapse show" id="color-collapse">
+                        <div class="collapse" id="color-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                                 <li><a href="/templates/general/color/use-of-color.html" class="link-dark rounded">Use of Color</a></li>
                                 <li><a href="/templates/general/color/text-contrast.html" class="link-dark rounded">Text Color Contrast</a></li>
@@ -75,10 +63,10 @@
                     <!-- Non-text Content Section -->
                     <li class="mb-1">
                         <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-                            data-bs-target="#images-collapse" aria-expanded="true" aria-controls="images-collapse">
+                            data-bs-target="#images-collapse" aria-expanded="false" aria-controls="images-collapse">
                             <span><i class="bi bi-images" aria-hidden="true"></i> Non-text Content</span>
                         </button>
-                        <div class="collapse show" id="images-collapse">
+                        <div class="collapse" id="images-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                                 <li><a href="/templates/general/non-text-content/images.html" class="link-dark rounded">Images</a></li>
                                 <li><a href="/templates/general/non-text-content/images-of-text.html" class="link-dark rounded">Images of Text</a></li>
@@ -92,10 +80,10 @@
                     <!-- Interactives Section -->
                     <li class="mb-1">
                         <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-                            data-bs-target="#interactives-collapse" aria-expanded="true" aria-controls="interactives-collapse">
+                            data-bs-target="#interactives-collapse" aria-expanded="false" aria-controls="interactives-collapse">
                             <span><i class="bi bi-hand-index-thumb" aria-hidden="true"></i> Interactives</span>
                         </button>
-                        <div class="collapse show" id="interactives-collapse">
+                        <div class="collapse" id="interactives-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                                 <li><a href="/templates/general/interactives/keyboard.html" class="link-dark rounded">Keyboard</a></li>
                                 <li><a href="/templates/general/interactives/focus-visible.html" class="link-dark rounded">Focus Visible</a></li>
@@ -111,10 +99,10 @@
                     <!-- Screen Magnification Section -->
                     <li class="mb-1">
                         <button class="text-left btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-                            data-bs-target="#screen-magnification-collapse" aria-expanded="true" aria-controls="screen-magnification-collapse">
+                            data-bs-target="#screen-magnification-collapse" aria-expanded="false" aria-controls="screen-magnification-collapse">
                             <span><i class="bi bi-search-heart" aria-hidden="true"></i> Screen Magnification</span>
                         </button>
-                        <div class="collapse show" id="screen-magnification-collapse">
+                        <div class="collapse" id="screen-magnification-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">                                
                                 <li><a href="/templates/general/screen-magnification/resize.html" class="link-dark rounded">Resize Text</a></li>
                                 <li><a href="/templates/general/screen-magnification/reflow.html" class="link-dark rounded">Reflow</a></li> 
@@ -159,7 +147,7 @@
         </li>
         <li class="border-top my-3"></li>
         <li class="mb-1">
-            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+            <button class="btn btn-toggle align-items-center rounded collapsed fs-4" data-bs-toggle="collapse"
                 data-bs-target="#resources-collapse" aria-expanded="false" aria-controls="resources-collapse">
                 Resources
             </button>
@@ -178,6 +166,41 @@
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Toggle the sidebar when the hamburger button is clicked
+        $('#sidebar-toggle').on('click', function() {
+            $(this).toggleClass('active');
+            $('#sidebar-nav').toggleClass('show');
+            $(this).attr('aria-expanded', function(i, attr) {
+                return attr === 'true' ? 'false' : 'true';
+            });
+        });
+    
+        // Close the sidebar when clicking outside of it
+        $(document).on('click touchstart', function(e) {
+            if (!$(e.target).closest('#sidebar-nav, #sidebar-toggle').length) {
+                if ($('#sidebar-nav').hasClass('show')) {
+                    $('#sidebar-nav').removeClass('show');
+                    $('#sidebar-toggle').removeClass('active').attr('aria-expanded', 'false');
+                }
+            }
+        });
+    
+        // Close the sidebar when focus leaves it (forward and backward tabbing)
+        $('#sidebar-nav').on('focusout', function(e) {
+            var $this = $(this);
+            setTimeout(function() {
+                if (!$this.find(':focus').length) {
+                    $this.removeClass('show');
+                    $('#sidebar-toggle').removeClass('active').attr('aria-expanded', 'false');
+                }
+            }, 10);
+        });
+    });
+    
+</script>
+
 <script>
   // Sidebar Focus Management
   $(window).on('load', function() {
@@ -233,7 +256,7 @@
 
 
 
-<!-- Comment out for local development and enable for production --> 
+<!-- Comment out for local development and enable for production 
 <script>
     $(document).ready(function() {
         // Select all links in the sidebar navigation except for index.html
@@ -262,3 +285,4 @@
         });
     });
 </script>
+--> 

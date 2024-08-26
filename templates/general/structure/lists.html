@@ -202,13 +202,13 @@
                       <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
                         <div class="accordion-body">
                           <p>Correctly coding lists is fundamental to web accessibility, ensuring compliance with WCAG 1.3.1. Lists that visually appear as such should be semantically marked up to reflect their structure and function. Follow these guidelines for implementing lists:</p>
-                          <ol>
+                          <ul role="list">
                             <li><strong>Semantic Markup for Lists:</strong> Use the appropriate HTML list element for its purpose. An unordered list (<code>&lt;ul&gt;</code>) for items without a specific order, an ordered list (<code>&lt;ol&gt;</code>) for items that follow a sequence, and a description list (<code>&lt;dl&gt;</code>) for pairs of terms and descriptions.</li>
                             <li><strong>Consistent List Styling:</strong> Ensure that lists are styled in a manner that reflects their hierarchy and function. Use CSS to visually distinguish between different types of lists and their nested levels.</li>
                             <li><strong>Nesting Lists Properly:</strong> When lists are nested within other lists, make sure the nesting is logical and semantically correct. Each nested list should be contained within a list item (<code>&lt;li&gt;</code>) of the parent list.</li>
                             <li><strong>Use of Description Lists:</strong> Employ description lists (<code>&lt;dl&gt;</code>) for grouping together terms and their descriptions. This is particularly useful for glossaries, metadata presentations, or any scenario where a term needs to be associated with a description.</li>
                             <li><strong>Accessible List Markup:</strong> Beyond using the correct list type, ensure that additional attributes like ARIA roles and properties are applied as necessary to enhance the accessibility of complex list structures or when lists are used for navigation purposes.</li>
-                          </ol>
+                          </ul>
                           <p>By adhering to these guidelines, developers can create list structures that are both meaningful and accessible, promoting better navigation and understanding of the content for all users, including those using assistive technologies.</p>                                                
                         </div>
                       </div>

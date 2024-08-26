@@ -32,9 +32,12 @@ a {
 }
 
 /* Sidebar Navigation */
+/* Sidebar Navigation */
 .reg-nav-link {
-  font-weight: 500;
+  font-weight: 400;
+  padding-left: 5px;
 }
+
 .btn-toggle {
   display: inline-flex;
   align-items: center;
@@ -44,6 +47,7 @@ a {
   background-color: transparent;
   border: 0;
 }
+
 .btn-toggle:hover,
 .btn-toggle:focus {
   color: rgba(0, 0, 0, .85);
@@ -61,6 +65,7 @@ a {
 .btn-toggle[aria-expanded="true"] {
   color: rgba(0, 0, 0, .85);
 }
+
 .btn-toggle[aria-expanded="true"]::before {
   transform: rotate(90deg);
 }
@@ -74,35 +79,109 @@ a {
   font-size: 1.1em;
   font-weight: 500;
 }
+
 .btn-toggle-nav a:hover,
-.btn-toggle-nav a:focus {
+.btn-toggle-nav a:focus,
+#sidebar-toggle:hover,
+#sidebar-toggle:focus {
   background-color: var(--accent-green);
+  transition: .5ms;
 }
+
 #sidebar-container {
-  box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.205)!important;
+  box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.205);
   padding-top: 1.25rem;
   min-width: 265px;
 }
 
-/* Apply styles for screens wider than 1100px */
+/* Hamburger Menu Icon */
+.hamburger {
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+}
+
+/* Hamburger Menu Icon */
+.hamburger-icon {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #000;
+    margin: 6px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Transform hamburger into X when active */
+.hamburger.active .hamburger-icon:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active .hamburger-icon:nth-child(2) {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hamburger.active .hamburger-icon:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: opacity 0.3s ease;
+}
+
+
+/* Hide sidebar by default on smaller screens */
+#sidebar-nav {
+    display: none;
+}
+
+/* Show sidebar when it's active */
+#sidebar-nav.show {
+    display: block;
+}
+
+/* Ensure hamburger menu only appears on smaller screens */
 @media (min-width: 1100px) {
-  #sidebar-container {
-    position: sticky;
-    top: 0; /* Keeps the sidebar at the top of its container */
-    overflow-y: auto; /* Adds vertical scrollbar if the content overflows */
-    max-height: 100vh; /* Ensures the sidebar doesn’t exceed the viewport height */
-  }
+    .hamburger {
+        display: none;
+    }
+    #sidebar-nav {
+        display: block;
+        position: sticky;
+        top: 0;
+        overflow-y: auto;
+        max-height: 100vh;
+    }
 }
 
 /* Apply styles for screens narrower than 1100px */
 @media (max-width: 1099px) {
-  #sidebar-container {
-    position: static; /* Resets the position for smaller screens */
-    overflow-y: visible; /* Ensures sidebar content is visible */
-    max-height: none; /* Removes the height constraint */
-    width: 100%;
-  }
+    .hamburger {
+        display: block;
+    }
+    #sidebar-nav {
+        display: none; /* Hide sidebar by default on smaller screens */
+    }
+    #sidebar-nav.show {
+        display: block; /* Show sidebar when toggled */
+        position: absolute;
+        background-color: #fff;
+        width: 320px;
+        z-index: 9999;
+    }
+    #sidebar-container {
+      border: none !important;
+      box-shadow: none;
+      width: 100%;
+      position: relative;
+    }
 }
+
+
+
+
+/* End mobile menu css */
 
 header {
   border-bottom: 1px solid rgb(0 0 0 / 11%) !important;
