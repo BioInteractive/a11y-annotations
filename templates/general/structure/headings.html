@@ -175,12 +175,12 @@
                       <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
                         <div class="accordion-body">
                           <p>Nesting headings correctly is crucial for maintaining a logical and meaningful structure on your web page. Incorrect nesting can result in WCAG 1.3.1 failures. Follow these guidelines:</p>
-                          <ol>
+                          <ul role="list">
                             <li><strong>Use <code>&lt;h1&gt;</code> for the Main Heading:</strong> The main heading of your page should always be <code>&lt;h1&gt;</code>. It represents the primary topic or title of the page.</li>
                             <li><strong>Nest Subheadings Sequentially:</strong> When adding subheadings, use <code>&lt;h2&gt;</code> for the first-level subheading, <code>&lt;h3&gt;</code> for second-level, and so on. Each subheading should be nested under the previous heading to create a logical hierarchy.</li>
                             <li><strong>Avoid Skipping Heading Levels:</strong> Do not skip heading levels. For example, do not jump from <code>&lt;h2&gt;</code> to <code>&lt;h4&gt;</code> without using <code>&lt;h3&gt;</code> in between. Skipping levels can cause confusion and accessibility issues.</li>
                             <li><strong>Use Semantic HTML:</strong> Whenever possible use semantic HTML elements but if not possible you may use <code>role="heading"</code> and the appropriate number level indicated with <code>aria-level="_"</code>.</li>
-                          </ol>                         
+                          </ul>                         
                         </div>
                       </div>
                     </div>

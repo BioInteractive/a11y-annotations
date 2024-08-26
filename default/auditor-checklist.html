@@ -23,6 +23,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
     <link rel="manifest" href="assets/images/site.webmanifest">
+
+    <!-- Library to export table -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
 </head>
 <body>
   <header class="d-block px-3 py-2 shadow">
@@ -41,6 +44,10 @@
           <div class="container mt-4">
             <h1 id="table-label">Auditor Checklist</h1>
             <div class="d-flex">
+                <button id="exportBtn" class="btn btn-secondary">Export to Excel</button>
+            </div>
+            <div class="space-small"></div>
+            <div class="d-flex">
                 <button type="button" class="btn btn-danger" id="clearBtn">Reset Checklist</button>
             </div>
             <div class="alert alert-danger" role="alert" id="confirmAlert">
@@ -48,7 +55,8 @@
                 <button type="button" class="btn btn-secondary" id="confirmBtn">Confirm</button>
                 <button type="button" class="btn btn-danger" id="cancelBtn">Cancel</button>
             </div>
-            <table class="table" aria-labelledby="table-label">
+            
+            <table class="table" aria-labelledby="table-label" id="checklist">
               <thead>
                   <tr>
                       <th scope="col">No.</th>
@@ -2202,6 +2210,7 @@
     </div>
   </div>
 
+
     <!-- Script links and jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="../assets/js/global.js"></script>
@@ -2218,5 +2227,46 @@
           $("#sidebar-container").load(rootRelativePath);
       });
     </script>
+    <!-- Export HTML to Excel file -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('exportBtn').addEventListener('click', function() {
+                exportTableToExcel('checklist', 'Checklist');
+            });
+        });
+
+        function exportTableToExcel(tableID, filename = '') {
+            var table = document.getElementById(tableID);
+            if (!table) {
+                console.error('Table not found!');
+                return;
+            }
+            
+            // Create the workbook from the table
+            var wb = XLSX.utils.table_to_book(table, {sheet: "Checklist"});
+
+            // Convert the workbook to binary
+            var wbout = XLSX.write(wb, {bookType: 'xls', type: 'binary'});
+
+            // Function to convert string to ArrayBuffer
+            function s2ab(s) {
+                var buf = new ArrayBuffer(s.length);
+                var view = new Uint8Array(buf);
+                for (var i = 0; i != s.length; ++i) view[i] = s.charCodeAt(i) & 0xFF;
+                return buf;
+            }
+
+            // Set the filename and trigger the download
+            filename = filename ? filename + '.xls' : 'exported_data.xls';
+            var blob = new Blob([s2ab(wbout)], {type: "application/vnd.ms-excel"});
+            var link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = filename;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+
 </body>
 </html>

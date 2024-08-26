@@ -51,13 +51,14 @@
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                         <div class="accordion-body">
                           <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus" target="_blank">1.4.13 Content on Hover or Focus</a> is a guideline that ensures any additional content that appears when a user hovers over or focuses on an element is accessible to all users.</p>
-                          <ul role="list">
+                          <ul role="list" class="fancy-checklist">
                             <li><strong>Dismissible:</strong> There must be a way to close the additional content without moving the pointer or keyboard focus, unless the additional content is an error message or does not block or replace other content. This helps users remove unnecessary content that might be obstructing their view or interaction.</li>
                             <li><strong>Hoverable:</strong> If the additional content appears when hovering, the user must be able to move their pointer over this content without it disappearing. This ensures that users can interact with the additional content without it vanishing unexpectedly.</li>
                             <li><strong>Persistent:</strong> The additional content should remain visible until the hover or focus is removed, the user dismisses it, or the information is no longer relevant. This ensures a stable and predictable experience for users interacting with dynamic content.</li>
                           </ul>
-                          <p><strong>Exception:</strong> If the visual presentation of the additional content is controlled by the browser and not modified by the author, it is exempt from this requirement.</p>
-                          <ul>
+                          <h3>Exception</h3>
+                          <p>If the visual presentation of the additional content is controlled by the browser and not modified by the author, it is exempt from this requirement.</p>
+                          <ul class="fancy-checklist">
                             <li>Examples of browser-controlled additional content include tooltips created using the HTML title attribute.</li>
                             <li>Custom tooltips, sub-menus, and other non-modal popups that appear on hover and focus are examples of additional content that must comply with this criterion.</li>
                           </ul>
