@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,82 +25,260 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
     <link rel="manifest" href="assets/images/site.webmanifest">
 </head>
+
 <body>
-  <header class="d-block px-3 py-2 shadow">
-    <img src="https://www.biointeractive.org/themes/gesso/images/hhmi-logo.svg" alt="hhmi Biointeractive logo" style="max-width: 320px;">
-  </header>
-  <div class="container-fluid">
-      <div class="row">
-          <!-- Includes the Sidebar Navigation using jQuery -->
-          <div id="sidebar-container" class="col-md-2 border-end"></div>
+    <header class="d-block px-3 py-2 shadow">
+        <img src="https://www.biointeractive.org/themes/gesso/images/hhmi-logo.svg" alt="hhmi Biointeractive logo"
+            style="max-width: 320px;">
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Includes the Sidebar Navigation using jQuery -->
+            <div id="sidebar-container" class="col-md-2 border-end"></div>
 
-          <!-- Main Content -->
-          <main class="col-md-9">
-            <!-- A11y Live Region -->
-            <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
-            <div class="container-xxl bd-gutter mt-3">
-                  <div class="instructions">
-                    <h1>How to Annotate Figma Designs for Accessibility</h1>
-                    <p>Follow these steps to create design annotations for accessibility in Figma.</p>
+            <!-- Main Content -->
+            <main class="col-md-9">
+                <!-- A11y Live Region -->
+                <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
+                <div class="container-xxl bd-gutter mt-3">
+                    <div class="instructions">
+                        <h1>How to Annotate Figma Designs for Accessibility</h1>
+                        <p>Follow these steps to create design annotations for accessibility in Figma.</p>
 
-                    <!-- Phase One: Annotating Figma Boards for design changes -->
-                    <h2>Phase One: Annotating Figma Boards for Design Changes</h2>
-                    <p>Figma boards should be analyzed using a combination of automated testing tools and manual testing tools to clearly identify WCAG defects that must be fixed by the designer.</p>
-                    <ul>
-                        <li>Large and Regular sized text color contrast issues</li>
-                        <li>Non-text color contrast issues</li>
-                        <li>Touch target size issues</li>
-                        <li>Missing elements such as: headings, buttons, necessary controls</li>
-                        <li>Form labeling, status, and error messaging</li>
-                        <li>Resize/Reflow issues</li>
-                    </ul>
+                        <!-- Phase One: Annotating Figma Boards for design changes -->
+                        <h2>Phase One: Annotating Figma Boards for Design Changes</h2>
+                        <p>Figma boards should be analyzed using a combination of automated testing tools and manual
+                            testing tools to clearly identify WCAG defects that must be fixed by the designer.</p>
+                        <ul>
+                            <li>Large and Regular sized text color contrast issues</li>
+                            <li>Non-text color contrast issues</li>
+                            <li>Touch target size issues</li>
+                            <li>Missing elements such as: headings, buttons, necessary controls</li>
+                            <li>Form labeling, status, and error messaging</li>
+                            <li>Resize/Reflow issues</li>
+                        </ul>
 
-                    <!-- Phase Two: Annotating Figma Boards for developer hand-off -->
-                    <h2>Phase Two: Annotating Figma Boards for Developer Hand-off</h2>
-                    <p>Final design boards should have an accessibility layer added with your plugin of choice, such as the Include plugin by eBay. Follow these steps:</p>
-                    <ol>
-                        <li>Outline Landmarks (naming duplicates and regions appropriately) and heading levels elements with the plugin.</li>
-                        <li>Using an accessibility annotation kit, add sticky notes to all: meaningful and decorative images and graphics, links and buttons.</li>
-                        <li>Add number badges to all first instance elements and create a side panel for written annotations using those numbers.</li>
-                    </ol>
+                        <!-- Phase Two: Annotating Figma Boards for developer hand-off -->
+                        <h2>Phase Two: Annotating Figma Boards for Developer Hand-off</h2>
+                        <p>Final design boards should have an accessibility layer added with your plugin of choice, such
+                            as the Include plugin by eBay. Follow these steps:</p>
+                        <ol>
+                            <li>Outline Landmarks (naming duplicates and regions appropriately) and heading levels
+                                elements with the plugin.</li>
+                            <li>Using an accessibility annotation kit, add sticky notes to all: meaningful and
+                                decorative images and graphics, links and buttons.</li>
+                            <li>Add number badges to all first instance elements and create a side panel for written
+                                annotations using those numbers.</li>
+                        </ol>
 
-                    <!-- Ensuring Accessibility in Written Design Annotations -->
-                    <h2>Ensuring Accessibility in Written Design Annotations</h2>
-                    <p>In the written annotation side panel, name the component and add a list of information using this as your base:</p>
-                    <ul>
-                        <li>Name:</li>
-                        <li>Role:</li>
-                        <li>State: (Static, Focusable, Focused, Hover, Expanded, Collapsed, Current, Selected, Pressed, Disabled, Enabled, Error, Success, Active, Activated, Dragged, On, Off)</li>
-                        <li>ARIA:</li>
-                        <li>Color Hex Codes for Foreground and Background combinations with contrast ratios</li>
-                    </ul>
+                        <!-- Ensuring Accessibility in Written Design Annotations -->
+                        <h2>Ensuring Accessibility in Written Design Annotations</h2>
+                        <p>In the written annotation side panel, name the component and add a list of information using
+                            this as your base:</p>
+                        <ul>
+                            <li>Name:</li>
+                            <li>Role:</li>
+                            <li>State: (Static, Focusable, Focused, Hover, Expanded, Collapsed, Current, Selected,
+                                Pressed, Disabled, Enabled, Error, Success, Active, Activated, Dragged, On, Off)</li>
+                            <li>ARIA:</li>
+                            <li>Color Hex Codes for Foreground and Background combinations with contrast ratios</li>
+                        </ul>
 
-                    <p>Use the <a href="https://www.figma.com/file/txsKugjRb6ALXDK4uKGcp1/A11y-Annotation-Kit---HHMI?type=design&node-id=0%3A1&mode=design&t=Ht71svZKEKGMUAyL-1">
-                     A11y Annotation Kit</a> to mark up designs for elements that do not have number and sidebar written annotations. Such as images, links, buttons, list etc.</p>
-                    <p>Once you've completed these steps, and gone through a few rounds with the designer your Figma design will be well-annotated for accessibility, ensuring 
-                    an inclusive hand-off to developers for a seamless web development process.</p>
-                  </div>
+                        <p>Use the <a
+                                href="https://www.figma.com/file/txsKugjRb6ALXDK4uKGcp1/A11y-Annotation-Kit---HHMI?type=design&node-id=0%3A1&mode=design&t=Ht71svZKEKGMUAyL-1">
+                                A11y Annotation Kit</a> to mark up designs for elements that do not have number and
+                            sidebar written annotations. Such as images, links, buttons, list etc.</p>
+                        <p>Once you've completed these steps, and gone through a few rounds with the designer your Figma
+                            design will be well-annotated for accessibility, ensuring
+                            an inclusive hand-off to developers for a seamless web development process.</p>
 
-                
-                </main>
-              </div>
-            </div>
+
+
+                        <!-- New Phase Two Content -->
+                        <!-- Phase Two: Annotating Figma Boards for Developer Hand-off -->
+                        <h2>Phase Two: Annotating Figma Boards for Developer Hand-off</h2>
+                        <div class="space-medium"></div>
+                        <p>Please note, only the first instance of each unique component will be annotated; subsequent instances of the same component will not be 
+                            annotated, so it is the responsibility of the developers to identify these repeated components and apply the annotations consistently across the 
+                            project.</p>
+
+
+                        <div class="container">
+                            <!-- Step 1: Ensure Communication and Prepare Design -->
+                            <div class="row mb-4">
+                                <div class="col-md-12">
+                                    <h3>Step 1: Ensure Communication and Prepare Design</h3>
+                                    <p>Communicate with the team including content leads, the project manager, and the
+                                        designer to ensure that the design is finalized. Once confirmed, create a clean
+                                        copy of the finalized page and add "A11y Annotations" to the end of its name.
+                                    </p>
+                                    <figure>
+                                        <img src="../assets/images/copy-of-page.png" class="img-fluid zoomable"
+                                            alt="Screenshot of a Figma workspace showing the layers panel on the left. A page is selected and named 'Design A11y Annotations,' indicating a clean copy of the finalized design with the correct naming convention.">
+                                        <figcaption class="mt-2">Clean copy of the finalized Figma page with the correct
+                                            naming convention.</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+
+                            <!-- Step 2: Access and Use the A11y Annotation Kit -->
+                            <div class="row mb-4">
+                                <div class="col-md-12">
+                                    <h3>Step 2: Access and Use the A11y Annotation Kit</h3>
+                                    <p>Navigate to the <a
+                                            href="https://www.figma.com/design/txsKugjRb6ALXDK4uKGcp1/A11y-Annotation-Kit---HHMI?node-id=0-1&t=ULnLo03ntwaxamRD-1"
+                                            target="_blank">A11y Annotation Kit</a> for HHMI.
+                                        Copy the required annotation components such as Headings, Buttons, Links, and
+                                        more, and paste them into your annotation page.</p>
+                                    <figure>
+                                        <img src="/assets/images/a11y-annotation-kit.png" class="img-fluid zoomable"
+                                            alt="Screenshot of a Figma workspace showing the 'Current HHMI A11y Annotation Kit' with various labeled components like Headings, Buttons, Links, Lists, General, Images, and Arrows, arranged in groups. These components are ready to be copied and pasted into another design page.">
+                                        <figcaption class="mt-2">Current HHMI A11y Annotation Kit ready for use.
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+
+                            <!-- Step 3: Use the Include—Accessibility Annotations Plugin -->
+                            <div class="row mb-4">
+                                <div class="col-md-12">
+                                    <h3>Step 3: Use the Include—Accessibility Annotations Plugin</h3>
+                                    <p>Activate the Include—Accessibility Annotations plugin from the Figma toolbar. If
+                                        needed, install the <a
+                                            href="https://www.figma.com/community/plugin/1208180794570801545/includeaccessibility-annotations"
+                                            target="_blank"> Include plugin</a>.
+                                        Once the plugin is running, start by selecting the web option and adding
+                                        landmarks to your design. Ensure each page has only one Main element, and label
+                                        any vague landmarks. Save your progress and continue. Add all accessibility layers and landmarks to boards that will be annotated.</p>
+                                    <figure>
+                                        <img src="/assets/images/add-landmarks.png" class="img-fluid zoomable"
+                                            alt="Screenshot of a Figma workspace with the Include—Accessibility Annotations plugin active. The selected design page shows landmarks like 'header,' 'main,' and 'section' added to the Introduction page of the design. The right panel displays the plugin's interface with options for selecting and labeling landmarks.">
+                                        <figcaption class="mt-2">Landmarks successfully added to the design using the
+                                            Include—Accessibility Annotations plugin.</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+
+                            <!-- Step 4: Add the A11y Annotation Kit Tags -->
+                            <div class="row mb-4">
+                                <div class="col-md-12">
+                                    <h3>Step 4: Add the A11y Annotation Kit Tags</h3>
+                                    <p>It's time to apply the A11y Annotation Kit tags to the design. Start by examining the structure and identifying key elements such as links, buttons, images, headings, paragraphs, and lists. Find the appropriate annotation tag for each element, then copy, paste, and add it to the accessibility layer.</p>
+                                    <p>If you know the URL for a link, add it to the corresponding annotation tag. If you have the alt text for an image, include it in the annotation tag as well. Also, add any additional tags like the "Skip to Main Content" link. When placing the tags, ensure that they do not cover any meaningful content within the design.</p>
+                                    <p>If a tag is too long or might obscure important content, it's preferable to place the tag outside the accessibility layer and use arrows to point to the relevant element. Please avoid covering meaningful content with the annotation tags. Once you have added tags to the first instances of all meaningful and decorative elements, you may move on to the next step.</p>
+                                    <figure>
+                                        <img src="/assets/images/a11y-add-tags.png" class="img-fluid zoomable"
+                                            alt="Figma design with A11y annotation tags applied to various elements like links, headings, and images. Tags are placed in a way that avoids covering important content, with arrows pointing to the elements they annotate.">
+                                        <figcaption class="mt-2">Example of A11y annotation tags applied to the design.</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+
+                            <!-- Step 5: Annotate Complex Elements with Additional Notes -->
+                            <div class="row mb-4">
+                                <div class="col-md-12">
+                                    <h3>Step 5: Annotate Complex Elements with Additional Notes</h3>
+                                    <p>In this step, you'll identify and annotate more complex elements within the Figma design that are not fully covered by standard annotation tags. These elements require additional notes to ensure they are built to be accessible and WCAG conformant.</p>
+                                    <p>The annotation notes should include any semantic and/or role requirements, accessible name requirements with suggestions, and any required ARIA attributes that convey state or function, such as: Static, Focusable, Focused, Hover, Expanded, Collapsed, Current, Selected, Pressed, Disabled, Enabled, Error, Success, Active, Activated, Dragged, On, Off. Additionally, provide instructions on the element’s functionality that may not be fully clear from the Figma design alone.</p>
+                                    
+                                    <p>The A11y Annotation Repository was specifically designed to help streamline these annotation notes, making them easy to find, copy, paste, and review on any of our interactive designs. For this example, we will be annotating the "Skip to main content" link. This element is located under "Structure" in the sidebar navigation panel, and within the "Page" section under "Bypass Blocks." Inside this accordion, you'll find a tag for auditors and a copy-and-paste section with a border and a Copy button.</p>
+                                    
+                                    <!-- First Image (Annotation Repository) -->
+                                    <figure>
+                                        <img src="/assets/images/a11y-copy-notes.png" class="img-fluid zoomable"
+                                            alt="Screenshot of the A11y Annotation Repository with the 'Skip to main content' link annotation, showing the tag for auditors and a copy-and-paste section with a Copy button.">
+                                        <figcaption class="mt-2">Using the A11y Annotation Repository to copy and paste annotation notes.</figcaption>
+                                    </figure>
+                                    
+                                    <p>Activate the Copy button to copy the notes to your clipboard. Then, select the comment option within Figma, add a comment to the link, paste the notes inside the comment, and adjust them for any specific needs of the design you are working on. These annotation notes were written to be design agnostic and may need further details to fit within the specific interactivity of the design you are currently working on.</p>
+                                    <p>Please name your components in the commenting system, with the name coming first in bold, followed by "Developer" if the comment is specifically for the development team. Include a list of the requirements and information necessary to create an accessible component. Save your comment and move on to the next element.</p>
+                                    
+                                    <!-- Second Image (Figma Comment) -->
+                                    <figure>
+                                        <img src="/assets/images/a11y-add-comment.png" class="img-fluid zoomable"
+                                            alt="Screenshot of a Figma design with an annotation comment being added for the 'Skip to main content' link. The comment includes detailed accessibility notes for developers.">
+                                        <figcaption class="mt-2">Adding a detailed annotation comment in Figma for the 'Skip to main content' link.</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <!-- Step 5: Annotate Complex Elements with Additional Notes -->
+                            <div class="row mb-4">
+                                <div class="col-md-12">
+                                    <p>***Need to add Step 5 for handoff document creation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </main>
+        </div>
+    </div>
 
     <!-- Script links and jQuery CDN -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="../assets/js/global.js"></script>
     <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
 
     <!-- Add sidebar navigation to page -->
     <script>
-      $(document).ready(function () {
-          // Determine the path relative to the root directory
-          var rootRelativePath = "../templates/sidebar-navigation.html";
-  
-          // Use jQuery to load the sidebar-navigation.html file
-          $("#sidebar-container").load(rootRelativePath);
-      });
+        $(document).ready(function () {
+            // Determine the path relative to the root directory
+            var rootRelativePath = "../templates/sidebar-navigation.html";
+
+            // Use jQuery to load the sidebar-navigation.html file
+            $("#sidebar-container").load(rootRelativePath);
+        });
+    </script>
+
+    <!-- Zoomable Images -->
+    <script>
+      $(document).ready(function() {
+        // Create the zoom cursor
+            var zoomCursor = $('<div class="zoom-cursor"></div>');
+            $('body').append(zoomCursor);
+
+            $('.zoomable').each(function() {
+                var $img = $(this);
+
+                $img.on('mousemove', function(e) {
+                    // Get the image offset and dimensions
+                    var offset = $img.offset();
+                    var width = $img.width();
+                    var height = $img.height();
+
+                    // Calculate the position of the cursor relative to the image
+                    var x = e.pageX - offset.left;
+                    var y = e.pageY - offset.top;
+
+                    // Ensure the cursor stays within the image bounds
+                    if (x >= 0 && y >= 0 && x <= width && y <= height) {
+                        // Move the zoom cursor to follow the mouse
+                        zoomCursor.css({
+                            left: e.pageX + 'px',
+                            top: e.pageY + 'px',
+                            display: 'block',
+                            'background-image': `url(${$img.attr('src')})`,
+                            'background-size': `${width * 2}px ${height * 2}px`,
+                            'background-position': `-${(x * 2) - 50}px -${(y * 2) - 50}px` // Center the zoom
+                        });
+                    } else {
+                        zoomCursor.hide(); // Hide if outside the image bounds
+                    }
+                });
+
+                $img.on('mouseleave', function() {
+                    // Hide the zoom cursor when the mouse leaves the image
+                    zoomCursor.hide();
+                });
+
+                $img.on('mouseenter', function() {
+                    // Show the zoom cursor when the mouse enters the image
+                    zoomCursor.show();
+                });
+            });
+        });
     </script>
 </body>
+
 </html>

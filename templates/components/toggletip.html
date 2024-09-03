@@ -221,12 +221,14 @@
                           <div class="d-inline-block border border-dark p-2 rounded">
                             <div class="d-flex flex-row">
                               <div class="text-to-copy">
-                                <h3>Toggletip</h3>
+                                <h3>Toggletip</h3>   
                                 <ul>
+                                  <li>Must have role="tooltip" on container of text.</li>
                                   <li>Toggletip must display on click & keypress</li>
                                   <li>Toggletip must be dismissible with ESC key - if it covers any other content on any screen size.</li>
                                   <li>Toggletip text must be associated with UI control. Use aria-describedby to associate the toggletip with the UI control.</li>
                                   <li>Toggletip text must be persistently visible while mouse hovers over tooltip text.</li>
+                                  <li>Add aria-hidden="true" to tooltip text when not visible.</li>
                                 </ul>                                                    
                               </div>
                               <div>

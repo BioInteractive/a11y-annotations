@@ -199,11 +199,10 @@
                               <div class="text-to-copy">
                                 <h3>Skip Link</h3>
                                 <ul role="list">
-                                  <li>The point of a skip link is to bypass repetitive blocks of content such as a navigation bar.</li>
-                                  <li>Skip link must be a link <code>&lt;a&gt;</code> with a valid href to the main element's ID.</li>
+                                  <li>Must be a link <code>&lt;a&gt;</code> with a valid href to the <code>&lt;main&gt;</code> element's ID.</li>
                                   <li>Targeted main element after navigation should be either in a <code>&lt;main&gt;</code> or sectioning element with role="main".</li>
-                                  <li>Link should be visually hidden until receiving focus - then visually hidden again when focus leaves.</li>
-                                  <li>Main element should receive <code>tabindex="-1"</code> when the link is activated and then remove the tabindex once focus leaves the main landmark element.</li>
+                                  <li>Link should be visually hidden with CSS styling until receiving focus and then visually hidden again when focus leaves.</li>
+                                  <li>Main element should have a <code>tabindex="-1"</code> so that when the link is activated the element will be focusable but not in regular focus order.</li>
                                 </ul>
                               </div>
                               <div>

@@ -791,3 +791,28 @@ p.dev-tag {
   justify-content: center; /* Center horizontally */
   font-weight: bold; /* Bold text */
 }
+
+/* Zoomable Images */
+/* Container for the image */
+.zoom-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Hide the default cursor */
+.zoomable {
+    cursor: none;
+}
+
+/* The large zoom cursor */
+.zoom-cursor {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    display: none; /* Hidden by default */
+}
+
