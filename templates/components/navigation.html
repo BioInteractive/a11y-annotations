@@ -146,7 +146,7 @@
                             <ul>
                               <li>Have an accessible name for the hamburger button given with an aria-label, aria-labelledby or sr-only text.</li>
                               <li>The hamburger button must have a toggling <code>aria-expanded="true\false"</code> that accurately reflects the expanded/collapsed state.</li>
-                              <li> The hamburger button must also have the attribute <code>aria-controls</code> referencing the unique ID of the panel it controls.</li>
+                              <li> The hamburger button should also have the attribute <code>aria-controls</code> referencing the unique ID of the panel it controls.</li>
                               <li> The interactive elements within the panel must be in list markup and must be properly hidden with a <code>display:none;</code> or <code>visibility:hidden;</code> 
                                 property that ensures they are not in reading or focus order when they are not visible.</li>
                             </ul>                        
@@ -225,10 +225,15 @@
                           <div class="d-inline-block border border-dark p-2 rounded">
                             <div class="d-flex flex-row">
                               <div class="text-to-copy">
-                                <h3>Primary Navigation</h3>
+                                <h3>Navigation</h3>
                                 <ul role="list">
-                                  <li>Must be contained in a <code>&lt;nav&gt;</code> element OR container element such as a <code>&lt;div&gt;</code> must have <code>role="navigation"</code></li>
-                                  <li>When multiple navigation elements are present on a page, such as a primary and a secondary navigation, we need to provide additional labeling for screen reader users. Add <code>aria-label="Primary"</code></li>
+                                  <li>Must be contained in a <code>&lt;nav&gt;</code> element OR a sectioning element such as a <code>&lt;div&gt;</code> with <code>role="navigation"</code></li>
+                                  <li>If multiple navigation elements are present on a page, such as a Primary and a Utilities navigation component, each must provide additional 
+                                    labeling for screen reader users. Add <code>aria-label="Primary"</code></li>
+                                  <li>If current page navigation link has visual indicator then it must also be programmatically determinable with <code>aria-current="page"</code>. The
+                                  visual indicator must have a minimum 3:1 contrast ratio with the adjacent colors and/or another non-color distinguishing visual indicator, such as bold text,
+                                  an underline, a border, etc.</li>
+                                  <li>If navigation contains a list of links they should be in list markup <code>&lt;ul&gt;</code></li>
                                 </ul>
                               </div>
                               <div>

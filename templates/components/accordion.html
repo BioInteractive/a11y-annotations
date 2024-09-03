@@ -244,13 +244,13 @@
                                     <li>Maintain heading structure</li>
                                     <li>Nest <code>&lt;button&gt;</code> in heading tags</li>
                                     <li>Must have toggling <code>aria-expanded="true/false"</code> depending on expanded/collapsed states.</li>
-                                    <li>Must have <code>aria-controls</code> attribute equal to the ID of the container of the element it controls.</li>
+                                    <li>Should have <code>aria-controls</code> attribute equal to the ID of the container of the element it controls.</li>
+                                    <li>Icon should be hidden for screen reader users with <code>aria-hidden="true"</code></li>
                                 </ul>
                                 <h4>Accordion Panels</h3>
                                 <ul>
                                     <li>Must have <code>role="region"</code></li>
-                                    <li>An <code>aria-labelledby</code> attribute equal to the ID of the associated button.</li>
-                                    <li>Icon should be hidden for screen reader users with <code>aria-hidden="true"</code></li>
+                                    <li>An <code>aria-labelledby</code> attribute equal to the ID of the associated button.</li>  
                                 </ul>
                               </div>
                               <div>
@@ -301,7 +301,7 @@
                       <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive">
                         <div class="accordion-body">
                           <ul>
-                            <li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/#accordion" target="_blank">WAI-ARIA Authoring Practices: Accordion Pattern</a></li>
+                            <li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/accordion/" target="_blank">WAI-ARIA Authoring Practices: Accordion Pattern</a></li>
                             <li><a href="https://getbootstrap.com/docs/5.1/components/accordion/" target="_blank">Bootstrap Accordion Documentation</a></li>
                             <li><a href="https://a11yproject.com/posts/how-to-make-an-accessible-accordion/" target="_blank">A11Y Project: How to Make an Accessible Accordion</a></li>
                             <li><a href="https://inclusive-components.design/collapsible-sections/" target="_blank">Inclusive Components: Collapsible Sections</a></li>

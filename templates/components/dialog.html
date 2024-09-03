@@ -300,25 +300,25 @@
                                 <h3>Dialog (Modal)</h3>
                                 <h4>Dialog name, role and value:</h4>
                                 <ul>
-                                  <li><strong>Role:</strong> Must have <code>role="dialog"</code> on the parent container.</li>
-                                  <li><strong>Aria-modal:</strong> Must have <code>aria-modal="true"</code> on the parent container.</li>
-                                  <li><strong>Header:</strong> Should have an <code>H1</code> element with a unique ID attribute. "_____" should be the <code>&lt;h1&gt;</code>.</li>
-                                  <li><strong>Accessible Name:</strong> Must have an accessible name. It is preferable to use <code>aria-labelledby</code> equal to the <code>H1</code>'s ID on the parent container instead of <code>aria-label</code>.</li>
+                                  <li>Must have <code>role="dialog"</code> on the parent container.</li>
+                                  <li>Must have <code>aria-modal="true"</code> on the parent container.</li>
+                                  <li>Should have an <code>H1</code> element with a unique ID attribute. "_____" should be the <code>&lt;h1&gt;</code>.</li>
+                                  <li>Must have an accessible name. It is preferable to use <code>aria-labelledby</code> equal to the <code>H1</code>'s ID on the parent container instead of <code>aria-label</code>.</li>
                                 </ul>
 
                                 <h4>Dialog Trigger Button:</h4>
                                 <ul>
-                                  <li><strong>Element:</strong> Must be a <code>&lt;button&gt;</code> or have <code>role="button"</code> and <code>tabindex="0"</code> with event handlers.</li>
-                                  <li><strong>Accessible Name:</strong> Must have an accessible name. The name should include a meaningful icon and additional sr-only text describing which glossary definition will be opened.</li>
-                                  <li><strong>Aria-haspopup:</strong> Must have <code>aria-haspopup="dialog"</code> on the triggering element or include screen-reader only text in the element indicating it will open a dialog.</li>
+                                  <li>Must be a <code>&lt;button&gt;</code> or have <code>role="button"</code> and <code>tabindex="0"</code> with event handlers.</li>
+                                  <li>Must have an accessible name. The name should include a meaningful icon and additional sr-only text describing which glossary definition will be opened.</li>
+                                  <li>Must have <code>aria-haspopup="dialog"</code> on the triggering element or include screen-reader only text in the element indicating it will open a dialog.</li>
                                 </ul>
 
                                 <h4>Dialog Focus:</h4>
                                 <ul>
-                                  <li><strong>Focus on Launch:</strong> Must get focus when launched. Send focus to the container with the <code>role="dialog"</code> that has a <code>tabindex="-1"</code>.</li>
-                                  <li><strong>Focus Trap:</strong> Must trap focus within the dialog while open.</li>
-                                  <li><strong>Escape Key:</strong> Additionally, allow closing the dialog by pressing the Escape key (usability enhancement).</li>
-                                  <li><strong>Return Focus:</strong> When the dialog is closed, return focus to the element which triggered the dialog, unless the element has been removed from the page, in which case place focus on the next logical element.</li>
+                                  <li>Must get focus when launched. Send focus to the container with the <code>role="dialog"</code> that has a <code>tabindex="-1"</code>.</li>
+                                  <li>Must trap focus within the dialog while open.</li>
+                                  <li>Additionally, allow closing the dialog by pressing the Escape key (usability enhancement).</li>
+                                  <li>When the dialog is closed, return focus to the element which triggered the dialog, unless the element has been removed from the page, in which case place focus on the next logical element.</li>
                                 </ul>                  
                               </div>
                               <div>
