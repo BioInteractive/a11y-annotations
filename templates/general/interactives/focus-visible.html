@@ -45,14 +45,45 @@
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          WCAG Success Criteria
+                          WCAG Success Criteria Requirements and Examples
                         </button>
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                         <div class="accordion-body">
                           <p>
-                            <a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html" target="_blank">2.4.7 Focus Visible</a> user interface that can be operated using a keyboard should have a mode where the keyboard focus indicator is clearly visible.
+                            <a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html" target="_blank">2.4.7 Focus Visible</a> ensures that user interface components operable via keyboard have a visible focus indicator, so users can easily see where keyboard interactions will occur.
                           </p>
+                          
+                          <h3>Benefits of Focus Visible</h3>
+                          <p>
+                            This success criterion is crucial for keyboard-only users, including people with motor disabilities, as it allows them to visually identify which element has focus. Additionally, users with cognitive disabilities, such as attention or memory limitations, benefit by easily discovering where focus is located, reducing confusion.
+                          </p>
+                          
+                          <h3>Examples of Focus Visibility</h3>
+                          <ul>
+                            <li><strong>Text Fields:</strong> When a text field receives focus, a blinking caret appears, indicating the user can type, or the text is highlighted, showing it can be edited.</li>
+                            <li><strong>Interactive Elements:</strong> When a button or link receives focus, a visible border or outline appears around the element, signaling that it is the current focus point.</li>
+                          </ul>
+                          <div>
+                            <p> Button with persistently visible focus style:</p>
+                            <button type="button" class="btn btn-primary forced-focus-visible">Keyboard Focused</button>
+                          </div>
+                          
+                          <h3>Best Practices</h3>
+                          <ul>
+                            <li><strong>Ensure High Contrast:</strong> The focus indicator should be clear and have enough contrast with the surrounding content. Avoid subtle changes that can be hard to notice, especially for users with low vision or color blindness.</li>
+                            <li><strong>Custom Focus Styles:</strong> Use CSS to enhance the focus indicator (<code>:focus</code>, <code>:focus-visible</code>) without removing it completely. Removing focus indicators entirely (<code>outline: none;</code>) can make navigation impossible for keyboard users.</li>
+                          </ul>
+                          
+                          <h3>Focus Indicator and Non-Text Contrast Requirements</h3>
+                          <p>
+                            Focus indicators must also meet non-text contrast requirements to ensure they are easily distinguishable from surrounding elements. For more information, please see: <a href="https://biointeractive.github.io/a11y-annotations/templates/general/color/non-text-contrast.html">Non-Text Contrast Guide</a>.
+                          </p>
+                          
+                          <p>
+                            Following these guidelines will ensure that your site is accessible to all users, particularly those relying on keyboard navigation.
+                          </p>                          
+
                         </div>
                       </div>
                     </div>

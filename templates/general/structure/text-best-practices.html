@@ -39,78 +39,68 @@
             <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
             <div class="container-xxl bd-gutter mt-3">
                 <h1>Best Practices for Text Readability and Accessibility</h1>
-                <h2 class="mb-3">Best Practices</h2>
 
                 <p>Ensuring text is readable and accessible is crucial for making content inclusive for everyone, including individuals with disabilities. Here are some key practices to keep in mind:</p>
 
-                <h3>Use Clear and Simple Language</h3>
+                <h2>Use Clear and Simple Language</h2>
                 <ul>
-                    <li>Plain Language: Use straightforward language that is easy to understand. Avoid jargon and complex sentences.</li>
-                    <li>Active Voice: Prefer active voice over passive voice to make sentences clearer.</li>
+                    <li><strong>Plain Language:</strong> Use straightforward language that is easy to understand. Avoid jargon, complex vocabulary, and overly technical terms. This benefits not only people with cognitive disabilities but also a broader audience, including non-native speakers.</li>
+                    <li><strong>Short Sentences:</strong> Keep sentences short and to the point. Aim for one idea per sentence, which helps with comprehension and reduces cognitive load.</li>
+                    <li><strong>Active Voice:</strong> Prefer active voice over passive voice to make sentences clearer and easier to follow. For example, "The developer fixed the issue" is clearer than "The issue was fixed by the developer."</li>
                 </ul>
-
-                <h3>Choose Readable Fonts</h3>
+                
+                <h2>Choose Readable Fonts</h2>
                 <ul>
-                    <li>Sans-Serif Fonts: Fonts like Arial, Verdana, and Helvetica are generally easier to read on screens.</li>
-                    <li>Font Size: Ensure a minimum font size of 16px for body text to enhance readability.</li>
+                    <li><strong>Sans-Serif Fonts:</strong> Fonts like Arial, Verdana, and Helvetica are generally easier to read on screens, especially for people with visual impairments. Avoid overly decorative or script fonts that can be harder to read.</li>
+                    <li><strong>Font Size:</strong> Ensure a minimum font size of 16px for body text to enhance readability. Small font sizes can strain the eyes, especially for users with low vision. Allow users to adjust font sizes using browser controls without breaking your layout.</li>
+                    <li><strong>Limit Font Variations:</strong> Use no more than two or three font families in your design. Too many fonts can create a cluttered and inconsistent user experience.</li>
                 </ul>
-
-                <h3>Provide Adequate Spacing</h3>
+                
+                <h2>Provide Adequate Spacing</h2>
                 <ul>
-                    <li>Line Height: Use a line height (line spacing) of at least 1.5 times the font size.</li>
-                    <li>Paragraph Spacing: Leave sufficient space between paragraphs to break up text and make it easier to scan.</li>
+                    <li><strong>Line Height:</strong> Use a line height (line spacing) of at least 1.5 times the font size to ensure text is easy to read and doesn't feel crowded. This is especially important for users with cognitive disabilities, as well as for mobile readers.</li>
+                    <li><strong>Paragraph Spacing:</strong> Leave sufficient space between paragraphs to break up text and make it easier to scan. A good rule of thumb is to leave at least one blank line between paragraphs to reduce visual clutter.</li>
+                    <li><strong>Whitespace:</strong> Don't overcrowd your content. Use whitespace around text, images, and other elements to give the page a clean, uncluttered look, making it easier for users to focus.</li>
                 </ul>
-
-                <h3>Avoid All Caps and Italics</h3>
+                
+                <h2>Avoid All Caps and Italics</h2>
                 <ul>
-                    <li>All Caps: Text in all capital letters can be harder to read and may be interpreted as shouting.</li>
-                    <li>Italics: Use italics sparingly as they can be difficult to read, especially for individuals with dyslexia.</li>
+                    <li><strong>All Caps:</strong> Text in all capital letters can be harder to read because the shapes of words become less recognizable. Additionally, all caps are often interpreted as shouting. Reserve all caps for short sections like acronyms or brief headings if necessary.</li>
+                    <li><strong>Italics:</strong> Use italics sparingly, as they can be difficult to read, especially for individuals with dyslexia. If emphasis is needed, consider using bold or other styling options instead.</li>
                 </ul>
-
-                <h3>Use Headings and Lists</h3>
+                
+                <h2>Use Headings and Lists</h2>
                 <ul>
-                    <li>Headings: Use headings (H1, H2, H3, etc.) to structure your content logically. This helps screen readers and improves navigation.
-                        <a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships" target="_blank" rel="noopener noreferrer">[1.3.1 Info and Relationships]</a>
+                    <li><strong>Headings:</strong> Use headings (H1, H2, H3, etc.) to structure your content logically. This helps not only with visual hierarchy but also with screen reader navigation. Make sure headings are meaningful and descriptive, so users can quickly understand the content that follows.
+                        For more information, please see: <a href="https://biointeractive.github.io/a11y-annotations/templates/general/structure/headings.html">Headings</a>.
                     </li>
-                    <li>Lists: Use bullet points or numbered lists to break down information into digestible chunks.</li>
-                </ul>                
-
-                <h3>Ensure Sufficient Contrast</h3>
-                <ul>
-                    <li>Color Contrast: Make sure there is a high contrast between text and background colors. This helps people with visual impairments or color blindness. Tools like Deque's color contrast analyzer can be very helpful.
-                        <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum" target="_blank" rel="noopener noreferrer">[1.4.3 Contrast (Minimum)]</a>
+                    <li><strong>Lists:</strong> Use bullet points or numbered lists to break down information into digestible chunks. This makes scanning and understanding information faster and easier for everyone, especially users with cognitive disabilities. For more information, please see: <a href="https://biointeractive.github.io/a11y-annotations/templates/general/structure/lists.html">Lists</a>.
                     </li>
                 </ul>
-
-                <h3>Provide Text Alternatives</h3>
+                
+                <h2>Ensure Sufficient Contrast</h2>
                 <ul>
-                    <li>Alt Text: Always provide descriptive alt text for images to ensure that screen readers can convey the information to users who are blind or have low vision.
-                        <a href="https://www.w3.org/WAI/WCAG21/Understanding/text-alternatives" target="_blank" rel="noopener noreferrer">[1.1.1 Non-text Content]</a>
-                    </li>
-                    <li>Captions and Transcripts: For audio and video content, provide captions and transcripts.
-                        <a href="https://www.w3.org/WAI/WCAG21/Understanding/media-alternatives-prerecorded" target="_blank" rel="noopener noreferrer">[1.2.1 Audio-only and Video-only (Prerecorded)]</a>
+                    <li><strong>Color Contrast:</strong> Make sure there is a high contrast between text and background colors. This is crucial for users with low vision or color blindness. For example, dark text on a light background is generally easier to read. Use tools like the <a href="https://www.tpgi.com/color-contrast-checker/" target="_blank" rel="noopener noreferrer">TPGI Colour Contrast Analyser</a> to verify compliance with WCAG standards.
+                     For more information, please see: <a href="https://biointeractive.github.io/a11y-annotations/templates/general/color/text-contrast.html">Text Color Contrast</a>.
                     </li>
                 </ul>
-
-                <h3>Test with Assistive Technologies</h3>
+                
+                <h2>Ensure Text Resizes Correctly</h2>
                 <ul>
-                    <li>Screen Readers: Test your content with screen readers to ensure it is navigable and understandable.
-                        <a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" target="_blank" rel="noopener noreferrer">[4.1.2 Name, Role, Value]</a>
-                    </li>
-                    <li>Keyboard Navigation: Ensure that all interactive elements can be accessed and used with a keyboard.
-                        <a href="https://www.w3.org/WAI/WCAG21/Understanding/keyboard" target="_blank" rel="noopener noreferrer">[2.1.1 Keyboard]</a>
+                    <li><strong>Text Resizing:</strong> Ensure that text, except for captions and images of text, can be resized up to 200% without the use of assistive technology and without loss of content or functionality. This allows users with low vision or other visual impairments to adjust the text size according to their needs without breaking the page layout. 
+                        For more information, please see: <a href="https://biointeractive.github.io/a11y-annotations/templates/general/screen-magnification/resize.html">Resize Text</a>.
                     </li>
                 </ul>
-
-                <p>By following these best practices, you'll create content that is accessible and user-friendly for everyone. 🌐</p>
-
+                
+                <p>By following these best practices, you'll create content that is accessible and user-friendly for everyone, ensuring compliance with WCAG guidelines and improving overall usability.</p                
+                
                 <h2>Additional Resources</h2>
                 <ul role="list">
-                  <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html" target="_blank">W3C Web Accessibility Initiative: Text Spacing</a></li>
                   <li><a href="https://webaim.org/techniques/fonts/" target="_blank">WebAIM: Fonts</a></li>
                   <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" target="_blank">W3C Web Accessibility Initiative: Contrast Minimum</a></li>
                   <li><a href="https://www.nngroup.com/articles/typography/" target="_blank">Nielsen Norman Group: Typography</a></li>
                   <li><a href="https://www.smashingmagazine.com/guidelines-for-responsive-web-design/" target="_blank">Smashing Magazine: Web Typography</a></li>
+                  <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html" target="_blank">W3C Web Accessibility Initiative: Text Spacing</a></li>
                 </ul>
 
                 </main>

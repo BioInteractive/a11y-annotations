@@ -13,14 +13,15 @@
 <nav id="sidebar-nav" class="sidebar rounded">
     <div class="space-medium"></div>
     <a href="/index.html" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom fs-4">
-        <span class="reg-nav-link"><i class="bi bi-house-heart-fill" aria-hidden="true"></i> A11y Annotations</span>
-    </a>
-    <a href="/default/how-to-annotate.html" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom fs-4">        
-        <span class="reg-nav-link">How to Annotate</span>
+        <span class="reg-nav-link"><i class="bi bi-house-heart-fill" aria-hidden="true"></i> Introduction</span>
     </a>
     <a href="/default/auditor-checklist.html" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom fs-4">                               
         <span class="reg-nav-link">Accessibility Checklist</span>
     </a>
+    <a href="/default/how-to-annotate.html" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom fs-4">        
+        <span class="reg-nav-link">How to Annotate</span>
+    </a>
+
     <ul class="list-unstyled ps-0">
         <!-- General Section -->
         <li class="mb-3">
@@ -113,7 +114,7 @@
                 </ul>
             </div>
         </li>
-        <li class="border-top my-3"></li>
+        <li class="border-top my-3" aria-hidden="true"></li>
         <li class="mb-1">
             <button class="btn btn-toggle align-items-center rounded collapsed fs-4 mb-1" data-bs-toggle="collapse"
                 data-bs-target="#dashboard-collapse" aria-expanded="false">
@@ -145,7 +146,7 @@
                 </ul>
             </div>
         </li>
-        <li class="border-top my-3"></li>
+        <li class="border-top my-3" aria-hidden="true"></li>
         <li class="mb-1">
             <button class="btn btn-toggle align-items-center rounded collapsed fs-4" data-bs-toggle="collapse"
                 data-bs-target="#resources-collapse" aria-expanded="false" aria-controls="resources-collapse">
@@ -161,7 +162,11 @@
                 </ul>
             </div>
         </li>
+        <li class="border-top my-3" aria-hidden="true"></li>
     </ul>
+    <a href="/default/sitemap.html" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom fs-4">        
+        <span class="reg-nav-link">Sitemap</span>
+    </a>
 </nav>
 
 
@@ -257,6 +262,7 @@
 
 
 <!-- Comment out for local development and enable for production --> 
+
 <script>
     $(document).ready(function() {
         // Select all links in the sidebar navigation except for index.html

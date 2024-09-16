@@ -58,6 +58,15 @@
                             <li>Resize/Reflow issues</li>
                         </ul>
 
+                        <p>If any accessibility issues or failures are identified during the phase one design review, 
+                            add a comment directly to the Figma board and tag the designer. Provide detailed information 
+                            about the issue and offer recommendations for fixing it. Once the designer makes the necessary 
+                            adjustments, review the design again to ensure all issues are resolved before moving on to phase two. 
+                            Be sure to thoroughly review the Figma boards and prototypes, asking any questions needed to fully 
+                            understand the user flow and interactions. This will help you identify potential issues and prepare 
+                            the walkthrough documentation for the developers.</p>
+                        <div class="space-large"></div>
+
                         <!-- Phase Two: Annotating Figma Boards for developer hand-off -->
                         <h2>Phase Two: Annotating Figma Boards for Developer Hand-off</h2>
                         <p>Final design boards should have an accessibility layer added with your plugin of choice, such
@@ -71,29 +80,6 @@
                                 annotations using those numbers.</li>
                         </ol>
 
-                        <!-- Ensuring Accessibility in Written Design Annotations -->
-                        <h2>Ensuring Accessibility in Written Design Annotations</h2>
-                        <p>In the written annotation side panel, name the component and add a list of information using
-                            this as your base:</p>
-                        <ul>
-                            <li>Name:</li>
-                            <li>Role:</li>
-                            <li>State: (Static, Focusable, Focused, Hover, Expanded, Collapsed, Current, Selected,
-                                Pressed, Disabled, Enabled, Error, Success, Active, Activated, Dragged, On, Off)</li>
-                            <li>ARIA:</li>
-                            <li>Color Hex Codes for Foreground and Background combinations with contrast ratios</li>
-                        </ul>
-
-                        <p>Use the <a
-                                href="https://www.figma.com/file/txsKugjRb6ALXDK4uKGcp1/A11y-Annotation-Kit---HHMI?type=design&node-id=0%3A1&mode=design&t=Ht71svZKEKGMUAyL-1">
-                                A11y Annotation Kit</a> to mark up designs for elements that do not have number and
-                            sidebar written annotations. Such as images, links, buttons, list etc.</p>
-                        <p>Once you've completed these steps, and gone through a few rounds with the designer your Figma
-                            design will be well-annotated for accessibility, ensuring
-                            an inclusive hand-off to developers for a seamless web development process.</p>
-
-
-
                         <!-- New Phase Two Content -->
                         <!-- Phase Two: Annotating Figma Boards for Developer Hand-off -->
                         <h2>Phase Two: Annotating Figma Boards for Developer Hand-off</h2>
@@ -101,7 +87,6 @@
                         <p>Please note, only the first instance of each unique component will be annotated; subsequent instances of the same component will not be 
                             annotated, so it is the responsibility of the developers to identify these repeated components and apply the annotations consistently across the 
                             project.</p>
-
 
                         <div class="container">
                             <!-- Step 1: Ensure Communication and Prepare Design -->
@@ -163,7 +148,9 @@
                             <div class="row mb-4">
                                 <div class="col-md-12">
                                     <h3>Step 4: Add the A11y Annotation Kit Tags</h3>
-                                    <p>It's time to apply the A11y Annotation Kit tags to the design. Start by examining the structure and identifying key elements such as links, buttons, images, headings, paragraphs, and lists. Find the appropriate annotation tag for each element, then copy, paste, and add it to the accessibility layer.</p>
+                                    <p>It's time to apply the <a
+                                href="https://www.figma.com/file/txsKugjRb6ALXDK4uKGcp1/A11y-Annotation-Kit---HHMI?type=design&node-id=0%3A1&mode=design&t=Ht71svZKEKGMUAyL-1" target="_blank">
+                        A11y Annotation Kit</a> tags to the design. Start by examining the structure and identifying key elements such as links, buttons, images, headings, paragraphs, and lists. Find the appropriate annotation tag for each element, then copy, paste, and add it to the accessibility layer.</p>
                                     <p>If you know the URL for a link, add it to the corresponding annotation tag. If you have the alt text for an image, include it in the annotation tag as well. Also, add any additional tags like the "Skip to Main Content" link. When placing the tags, ensure that they do not cover any meaningful content within the design.</p>
                                     <p>If a tag is too long or might obscure important content, it's preferable to place the tag outside the accessibility layer and use arrows to point to the relevant element. Please avoid covering meaningful content with the annotation tags. Once you have added tags to the first instances of all meaningful and decorative elements, you may move on to the next step.</p>
                                     <figure>
@@ -201,10 +188,39 @@
                                     </figure>
                                 </div>
                             </div>
-                            <!-- Step 5: Annotate Complex Elements with Additional Notes -->
+                            <!-- Step 6: Create an Interactive Walkthrough Document in Google Docs -->
                             <div class="row mb-4">
                                 <div class="col-md-12">
-                                    <p>***Need to add Step 5 for handoff document creation.</p>
+                                    <h3>Step 6: Create an Interactive Walkthrough Document in Google Docs</h3>
+                                    <p>In this step, auditors will create an interactive walkthrough document using Google Docs. Name the document with the name of the project followed by "Interactive Walkthrough Document." Be sure to include your name at the top of the document, along with the purpose and scope, followed by a table of contents.</p>
+                                    
+                                    <p>The walkthrough document should start at the topmost level of the interactive, beginning with the navigation menu. For each element, provide specific examples and detail their accessibility requirements, tips, and tricks. Where applicable, include links to relevant accessibility guidelines and considerations from this A11y Annotation Repository.</p>
+                                    
+                                    <p>Structure the document by page and component, and ensure the correct heading hierarchy is used so that the table of contents aligns properly. After listing out all interactions, user flows, and complex components, include a section at the end for general accessibility considerations. This section should also include:</p>
+                                    <ul>
+                                        <li>WCAG 2.1 AA Understanding document links</li>
+                                        <li>ARIA specification links</li>
+                                        <li>W3C Authoring Practices links</li>
+                                        <li>Relevant resources from Deque and other accessibility tools</li>
+                                    </ul>
+
+                                    <p>For reference, please <a href="https://docs.google.com/document/d/1NMmzapgDMYpBtZXDNxOHCxIZfiMYl-qoPUl5L4umb3c/edit?usp=sharing" target="_blank">request access to this document</a> which serves as an example of the structure for an interactive walkthrough document.</p>
+                                    
+                                    <p>Below is an example screenshot showing the basic setup for a Google document with the title, purpose and scope, and table of contents:</p>
+                                    
+                                    <!-- Screenshot Example of Google Doc -->
+                                    <figure>
+                                        <img src="/assets/images/a11y-walkthrough-document.png" class="img-fluid zoomable"
+                                            alt="Screenshot example of a Google Doc showing the title 'Cellular Respiration Interactive Walkthrough Document,' purpose and scope, and table of contents.">
+                                        <figcaption class="mt-2">Example of the Google Doc structure for the Cellular Respiration Interactive Walkthrough Document.</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <!-- Conclusion -->
+                            <div class="row mb-4">
+                                <div class="col-md-12">
+                                    <p>Congratulations once you finish step 6 you are ready to submit your figma link and interactive walkthrough document to your supervisor for review.
+                                    </p>
                                 </div>
                             </div>
                         </div>

@@ -3,8 +3,16 @@ body {
   font-family: Arial, Helvetica, sans-serif
   color: #171717;
 }
+main {
+  margin-bottom: 3rem;
+}
 button:focus-visible,
 a:focus-visible {
+  outline: 2px solid black !important;
+  outline-offset: 2px !important;
+  box-shadow: none !important;
+}
+.forced-focus-visible {
   outline: 2px solid black !important;
   outline-offset: 2px !important;
   box-shadow: none !important;
@@ -22,6 +30,12 @@ input {
 /* Heading */
 h1, h2, h3, h4 {
   font-family: 'Montserrat', 'Arial', sans-serif;
+}
+h3 {
+  font-size: 1.6rem;
+}
+h4 {
+  font-size: 1.35rem;
 }
 /* Style Overrides */
 a {
@@ -357,12 +371,22 @@ p.dev-tag {
   outline-offset: 2px; /* Adjust the offset as needed */
 }
 
+/* Fail Column: Red X with hex color and adjusted size */
+.custom-checkbox input[type="checkbox"]:checked[name*="fail"] + span:after {
+  content: '\2717'; /* Unicode for 'X' */
+  position: absolute;
+  color: #FF0000 !important; /* Hex color for red */
+  font-size: 28px; /* Reduced size for a smaller X */
+  left: 0px; /* Adjust left to center the X */
+  top: -10px; /* Adjust top to center vertically */
+}
 
 /* Centering Checkboxes in Table Cells */
   .checkbox-td {
     text-align: center; /* Centers content horizontally */
     vertical-align: middle; /* Centers content vertically */
   }
+
 
 /* Tables */
 .styled-table {
@@ -389,7 +413,15 @@ p.dev-tag {
 .styled-table tr:nth-child(even) {
   background-color: #f9f9f9;
 }
-
+/* Checklist Controls */
+#confirmAlert {
+  margin-top: .5rem;
+}
+.control-group{
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
 /* Link vs Button Call out styles */
 .heading-callout-container {
   display: flex;
@@ -710,14 +742,14 @@ p.dev-tag {
 
 /* Styles for sublists */
 .fancy-checklist ul {
-  list-style: none; /* Remove default bullets from sublists */
-  padding-left: 20px; /* Adjust padding for sublists */
+  list-style: none; 
+  padding-left: 20px;
   margin-top: 5px;
 }
 
 .fancy-checklist ul li {
-  padding-left: 25px; /* Add space for the checkmark in sublists */
-  margin-bottom: 5px; /* Smaller spacing between sublist items */
+  padding-left: 25px;
+  margin-bottom: 5px; 
 }
 
 .fancy-checklist ul li::before {
@@ -725,15 +757,22 @@ p.dev-tag {
   position: absolute;
   left: 0;
   top: 10%;
-  width: 16px; /* Smaller checkmark background for sublists */
+  width: 16px; 
   height: 16px;
   background-color: #8ac341;
   color: black;
-  font-size: 12px; /* Smaller font size for sublist checkmarks */
+  font-size: 12px;
   line-height: 16px;
   text-align: center;
   border-radius: 3px;
 }
+/* No fancy checkmarks */
+.no-pseudo-elements > li::before,
+.no-pseudo-elements > li::after {
+    content: none !important;
+}
+
+
 /* Class for splitting a list into two columns */
 .two-column-list {
   column-count: 2; /* Divide the list into two columns */
