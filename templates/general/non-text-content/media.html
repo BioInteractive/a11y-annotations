@@ -42,9 +42,9 @@
                         <div class="accordion-body">
                           <ul role="list" class="fancy-checklist">
                             <li><a href="https://www.w3.org/WAI/WCAG20/Understanding/media-equiv.html" target="_blank" rel="noopener noreferrer">1.2.1 Audio-only and Video-only</a> For prerecorded audio-only and prerecorded video-only media, the following are true, except when the audio or video is a media alternative for text and is clearly labeled as such:
-                              <ul role="list">
-                                <li><strong>Prerecorded Audio-only:</strong> An alternative for time-based media is provided that presents equivalent information for prerecorded audio-only content.</li>
-                                <li><strong>Prerecorded Video-only:</strong> Either an alternative for time-based media or an audio track is provided that presents equivalent information for prerecorded video-only content.</li>
+                              <ul role="list" class="no-pseudo-elements" style="list-style-type: circle;">
+                                <li style="padding-left: 5px;"><strong>Prerecorded Audio-only:</strong> An alternative for time-based media is provided that presents equivalent information for prerecorded audio-only content.</li>
+                                <li style="padding-left: 5px;"><strong>Prerecorded Video-only:</strong> Either an alternative for time-based media or an audio track is provided that presents equivalent information for prerecorded video-only content.</li>
                               </ul>
                             </li>
                             <li><a href="https://www.w3.org/WAI/WCAG20/Understanding/captions-prerecorded.html" target="_blank" rel="noopener noreferrer">1.2.2 Captions (Prerecorded)</a> Captions are provided for all prerecorded audio content in synchronized media, except when the media is a media alternative for text and is clearly labeled as such.</li>
@@ -90,39 +90,7 @@
                           </table>
                 
                           <h3>WCAG Standards for Live Media Content</h3>
-                
-                          <table class="table table-bordered table-responsive">
-                            <tbody>
-                              <tr>
-                                <th scope="col">&nbsp;</th>
-                                <th scope="col">Transcript</th>
-                                <th scope="col">Captions</th>
-                                <th scope="col">Audio Description</th>
-                                <th scope="col">Sign Language</th>
-                              </tr>
-                              <tr>
-                                <th scope="row">Audio-only</th>
-                                <td></td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">Video-only</th>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">Video with Audio</th>
-                                <td>&nbsp;</td>
-                                <td><strong><a href="https://www.w3.org/WAI/WCAG21/Understanding/captions-live">1.2.4</a></strong></td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                              </tr>
-                            </tbody>
-                          </table>
+                          <p>According to WCAG 2.1 <strong><a href="https://www.w3.org/WAI/WCAG21/Understanding/captions-live" target="_blank" rel="noopener noreferrer">1.2.4 Captions (Live)</a></strong>, captions are required for all live audio content in synchronized media, such as live video with audio. This helps ensure that individuals with hearing impairments can access live multimedia content.</p>
                         </div>
                       </div>
                     </div>

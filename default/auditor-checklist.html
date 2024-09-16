@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auditor Checklist</title>
+    <title>Accessibility Checklist</title>
 
     <!-- Link to Bootstrap CSS from CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
@@ -42,20 +42,83 @@
         <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
         <div class="container-xxl bd-gutter mt-3">
           <div class="container mt-4">
-            <h1 id="table-label">Auditor Checklist</h1>
-            <div class="d-flex">
-                <button id="exportBtn" class="btn btn-secondary">Export to Excel</button>
-            </div>
-            <div class="space-small"></div>
-            <div class="d-flex">
-                <button type="button" class="btn btn-danger" id="clearBtn">Reset Checklist</button>
-            </div>
-            <div class="alert alert-danger" role="alert" id="confirmAlert">
-                <p>Please confirm if you wish to reset the checklist. This action cannot be undone.</p>
-                <button type="button" class="btn btn-secondary" id="confirmBtn">Confirm</button>
-                <button type="button" class="btn btn-danger" id="cancelBtn">Cancel</button>
-            </div>
+            <h1 id="table-label">Accessibility Checklist</h1>
+
+            <!-- Accessible Form Section Above the Table -->
+            <form id="project-details-form" class="needs-validation example-form-one" novalidate>
+                <fieldset>
+                <legend id="form-section-title">Project Details</legend>
             
+                <!-- Project Title -->
+                <div class="mb-3">
+                    <label for="project-title" class="form-label">Project Title *</label>
+                    <input type="text" class="form-control" id="project-title" name="project-title" aria-describedby="project-title-help" required>
+                    <div id="project-title-help" class="form-text">Enter the title of the project.</div>
+                    <span class="invalid-feedback" style="display:none; color: #BA0B1A;" id="project-title-error" role="alert">Project title is required</span>
+                </div>
+            
+                <!-- Role -->
+                <div class="mb-3">
+                    <label for="role" class="form-label">Role *</label>
+                    <input type="text" class="form-control" id="role" name="role" aria-describedby="role-help" required>
+                    <div id="role-help" class="form-text">Specify your role in the project.</div>
+                    <span class="invalid-feedback" style="display:none; color: #BA0B1A;" id="role-error" role="alert">Role is required</span>
+                </div>
+            
+                <!-- Person's Name with Autocomplete -->
+                <div class="mb-3">
+                    <label for="name" class="form-label">Your Name *</label>
+                    <input type="text" class="form-control" id="name" name="name" aria-describedby="name-help" autocomplete="name" required>
+                    <div id="name-help" class="form-text">Enter your full name.</div>
+                    <span class="invalid-feedback" style="display:none; color: #BA0B1A;" id="name-error" role="alert">Name is required</span>
+                </div>
+            
+                <!-- Date -->
+                <div class="mb-3">
+                    <label for="date" class="form-label">Date *</label>
+                    <input type="date" class="form-control" id="date" name="date" aria-describedby="date-help" required>
+                    <div id="date-help" class="form-text">Select the current date or project start date.</div>
+                    <span class="invalid-feedback" style="display:none; color: #BA0B1A;" id="date-error" role="alert">Date is required</span>
+                </div>
+            
+                <!-- Save Button -->
+                <button type="submit" class="btn btn-primary">Save</button>
+                </fieldset>
+            </form>
+
+            <!-- Checklist Controls -->
+            <div class="checklist-btn-group" role="group" aria-label="Checklist Controls">
+                <div class="control-group">
+                    <button id="exportBtn" class="btn btn-secondary">Export Blank Checklist</button>
+                    <!-- <button id="exportWithDataBtn" class="btn btn-secondary">Export Checklist with Data</button> -->
+                    <button type="button" class="btn btn-danger" id="clearBtn">Reset Checklist</button>
+                </div>
+                <div class="alert alert-danger" role="alert" id="confirmAlert">
+                    <p>Please confirm if you wish to reset the checklist. This action cannot be undone.</p>
+                    <button type="button" class="btn btn-secondary" id="confirmBtn">Confirm</button>
+                    <button type="button" class="btn btn-danger" id="cancelBtn">Cancel</button>
+                </div>
+            </div>
+            <!-- Display area for the form input -->
+            <div id="project-info" class="card" style="display: none; margin-bottom: 20px; margin-top: 20px;">
+                <div class="card-body">
+                <h2 class="card-title">Project Information</h2>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Project Title:</strong> <span id="display-project-title"></span></li>
+                    <li class="list-group-item"><strong>Role:</strong> <span id="display-role"></span></li>
+                    <li class="list-group-item"><strong>Your Name:</strong> <span id="display-name"></span></li>
+                    <li class="list-group-item"><strong>Date:</strong> <span id="display-date"></span></li>
+                </ul>
+                </div>
+            </div>
+  
+            
+            <!-- Edit Button (Initially hidden) -->
+            <button id="edit-btn" class="btn btn-secondary" style="display:none;">Edit</button>
+            <!-- Reset Button to clear data -->
+            <button id="reset-btn" class="btn btn-danger" style="display:none;">Reset Project Information</button>
+  
+            <!-- Checklist Table -->
             <table class="table" aria-labelledby="table-label" id="checklist">
               <thead>
                   <tr>
@@ -2227,46 +2290,7 @@
           $("#sidebar-container").load(rootRelativePath);
       });
     </script>
-    <!-- Export HTML to Excel file -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('exportBtn').addEventListener('click', function() {
-                exportTableToExcel('checklist', 'Checklist');
-            });
-        });
 
-        function exportTableToExcel(tableID, filename = '') {
-            var table = document.getElementById(tableID);
-            if (!table) {
-                console.error('Table not found!');
-                return;
-            }
-            
-            // Create the workbook from the table
-            var wb = XLSX.utils.table_to_book(table, {sheet: "Checklist"});
-
-            // Convert the workbook to binary
-            var wbout = XLSX.write(wb, {bookType: 'xls', type: 'binary'});
-
-            // Function to convert string to ArrayBuffer
-            function s2ab(s) {
-                var buf = new ArrayBuffer(s.length);
-                var view = new Uint8Array(buf);
-                for (var i = 0; i != s.length; ++i) view[i] = s.charCodeAt(i) & 0xFF;
-                return buf;
-            }
-
-            // Set the filename and trigger the download
-            filename = filename ? filename + '.xls' : 'exported_data.xls';
-            var blob = new Blob([s2ab(wbout)], {type: "application/vnd.ms-excel"});
-            var link = document.createElement('a');
-            link.href = URL.createObjectURL(blob);
-            link.download = filename;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-    </script>
 
 </body>
 </html>
