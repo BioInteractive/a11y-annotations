@@ -1,22 +1,28 @@
 // Copy Text - Copy Buttons
-// Function to copy text and formatting to the clipboard
-function copyTextWithFormattingToClipboard(element) {
-    const range = document.createRange();
-    range.selectNode(element);
-    window.getSelection().removeAllRanges();
-    window.getSelection().addRange(range);
-    document.execCommand("copy");
-    window.getSelection().removeAllRanges();
+// Function to copy text and formatting to the clipboard using Clipboard API
+function copyTextToClipboard(element) {
+    const text = element.innerText; // Or element.textContent
+    navigator.clipboard.writeText(text).then(() => {
+        // Insert "Copied to clipboard" into the live region
+        const liveRegion = document.getElementById("page-live-region");
+        liveRegion.textContent = "Copied to clipboard";
 
-    // Insert "Copied to clipboard" into the live region
-    const liveRegion = document.getElementById("page-live-region");
-    liveRegion.textContent = "Copied to clipboard";
-
-    // Remove the message after 2 seconds
-    setTimeout(() => {
-        liveRegion.textContent = "";
-    }, 2000);
+        // Remove the message after 2 seconds
+        setTimeout(() => {
+            liveRegion.textContent = "";
+        }, 2000);
+    }).catch(err => {
+        console.error("Failed to copy text: ", err);
+    });
 }
+
+document.querySelectorAll(".copy-btn").forEach((button) => {
+    button.addEventListener("click", () => {
+        const textToCopy = button.parentElement.previousElementSibling;
+        copyTextToClipboard(textToCopy);
+    });
+});
+
 
 // Attach click event handler to copy button
 document.querySelectorAll(".copy-btn").forEach((button) => {
@@ -508,3 +514,100 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Site Search
+    // Redirect user to search results page with the query in the URL
+      function redirectToSearchPage(event) {
+          event.preventDefault(); // Prevent the form from submitting the traditional way
+
+          const query = document.getElementById('search-input').value.trim();
+          if (query) {
+              // Redirect to the search results page, passing the search query as a URL parameter
+              window.location.href = `/default/search.html?query=${encodeURIComponent(query)}`;
+          }
+      }
+
+      // Search index (static data embedded directly)
+      const pages = [
+          { title: 'Introduction', url: '/index.html', description: 'This is the introduction to the A11y Annotations website.' },
+          { title: 'Accessibility Checklist', url: '/default/auditor-checklist.html', description: 'Find the complete accessibility checklist.' },
+          { title: 'How to Annotate', url: '/default/how-to-annotate.html', description: 'Learn how to annotate accessibility issues step by step.' },
+          { title: 'Landmarks', url: '/templates/general/structure/landmarks.html', description: 'Learn about the role of landmarks in accessible web design.' },
+          { title: 'Headings', url: '/templates/general/structure/headings.html', description: 'How to structure headings for accessibility.' },
+          { title: 'Use of Color', url: '/templates/general/color/use-of-color.html', description: 'Ensure proper use of color to meet accessibility standards.' },
+          { title: 'Text Color Contrast', url: '/templates/general/color/text-contrast.html', description: 'How to achieve sufficient text color contrast.' },
+          { title: 'Non-text Color Contrast', url: '/templates/general/color/non-text-contrast.html', description: 'Guidance for non-text color contrast requirements.' },
+          { title: 'Images', url: '/templates/general/non-text-content/images.html', description: 'Accessible image guidelines and best practices.' },
+          { title: 'Images of Text', url: '/templates/general/non-text-content/images-of-text.html', description: 'Why and how to avoid using images of text.' },
+          { title: 'Time-based Media', url: '/templates/general/non-text-content/media.html', description: 'Requirements and best practices for time-based media.' },
+          { title: 'Timing Adjustable', url: '/templates/general/non-text-content/timing-adjustable.html', description: 'Guidelines for making timing adjustable for users.' },
+          { title: 'Pause, Stop, Hide', url: '/templates/general/non-text-content/pause-stop-hide.html', description: 'Learn how to allow users to pause, stop, or hide content.' },
+          { title: 'Three Flashes or Below Threshold', url: '/templates/general/non-text-content/three-flashes.html', description: 'Avoid content that flashes more than three times per second.' },
+          { title: 'Keyboard Accessibility', url: '/templates/general/interactives/keyboard.html', description: 'Ensure full keyboard accessibility for interactive content.' },
+          { title: 'Focus Visible', url: '/templates/general/interactives/focus-visible.html', description: 'Provide clear focus indicators for users navigating by keyboard.' },
+          { title: 'Focus Order', url: '/templates/general/interactives/focus-order.html', description: 'How to maintain logical focus order for accessibility.' },
+          { title: 'On Focus', url: '/templates/general/interactives/on-focus.html', description: 'Best practices for handling content when elements receive focus.' },
+          { title: 'On Input', url: '/templates/general/interactives/on-input.html', description: 'Accessible handling of changes that result from user input.' },
+          { title: 'Dynamic Changes', url: '/templates/general/interactives/dynamic-changes.html', description: 'Ensure users are aware of dynamic changes in content.' },
+          { title: 'Content on Hover or Focus', url: '/templates/general/interactives/hover-or-focus.html', description: 'Guidance for displaying content on hover or focus.' },
+          { title: 'Target Size', url: '/templates/general/interactives/touch-target.html', description: 'Ensure sufficient target size for touch interactions.' },
+          { title: 'Resize Text', url: '/templates/general/screen-magnification/resize.html', description: 'How to support resizing of text for better readability.' },
+          { title: 'Reflow', url: '/templates/general/screen-magnification/reflow.html', description: 'Allow reflowing content to fit different screen sizes.' },
+          { title: 'Text Spacing', url: '/templates/general/screen-magnification/text-spacing.html', description: 'Provide adjustable text spacing for better readability.' },
+          { title: 'Accordion', url: '/templates/components/accordion.html', description: 'Accessible implementation of accordion components.' },
+          { title: 'Alert', url: '/templates/components/alert.html', description: 'Create accessible alerts for web content.' },
+          { title: 'Breadcrumb', url: '/templates/components/breadcrumb.html', description: 'Guide users with accessible breadcrumb navigation.' },
+          { title: 'Button', url: '/templates/components/button.html', description: 'Best practices for accessible buttons.' },
+          { title: 'Carousel', url: '/templates/components/carousel.html', description: 'Learn how to build accessible carousels.' },
+          { title: 'Data Chart', url: '/templates/components/data-chart.html', description: 'Implement accessible data charts on your website.' },
+          { title: 'Data Visualization', url: '/templates/components/data-visualization.html', description: 'Accessible data visualization techniques and best practices.' },
+          { title: 'Dialog', url: '/templates/components/dialog.html', description: 'How to create accessible dialog windows.' },
+          { title: 'Dropdown / Disclosure', url: '/templates/components/dropdown.html', description: 'Accessible dropdowns and disclosure components.' },
+          { title: 'Form', url: '/templates/components/forms.html', description: 'Build accessible forms with proper field labels.' },
+          { title: 'Form Group', url: '/templates/components/form-group.html', description: 'Group form elements for better accessibility.' },
+          { title: 'Link', url: '/templates/components/links.html', description: 'Create accessible links for easy navigation.' },
+          { title: 'Navigation', url: '/templates/components/navigation.html', description: 'Best practices for accessible website navigation.' },
+          { title: 'Pagination', url: '/templates/components/pagination.html', description: 'Implement accessible pagination for web content.' },
+          { title: 'Progress', url: '/templates/components/progress.html', description: 'Accessible progress indicators for dynamic content.' },
+          { title: 'Table', url: '/templates/components/tables.html', description: 'Create accessible data tables for web content.' },
+          { title: 'Tabs', url: '/templates/components/tabs.html', description: 'Build accessible tab interfaces for content sections.' },
+          { title: 'Tooltip', url: '/templates/components/tooltip.html', description: 'Best practices for accessible tooltips.' },
+          { title: 'Toggletip', url: '/templates/components/toggletip.html', description: 'Ensure accessibility for toggletip elements.' },
+          { title: 'Toggle Switch', url: '/templates/components/toggle-switch.html', description: 'Implement accessible toggle switches for user interaction.' },
+          { title: 'Video', url: '/templates/components/video.html', description: 'How to make video content accessible for all users.' },
+          { title: 'General Accessibility Resources', url: '/templates/resources/general-resources.html', description: 'Find general resources on accessibility best practices.' },
+          { title: 'Components Resources', url: '/templates/resources/components-resources.html', description: 'Resources for building accessible web components.' },
+          { title: 'Designer Resources', url: '/templates/resources/design-resources.html', description: 'Accessibility resources specifically for designers.' },
+          { title: 'Developer Resources', url: '/templates/resources/development-resources.html', description: 'Resources for developers implementing accessible code.' },
+          { title: 'Auditor & Testing Resources', url: '/templates/resources/auditor-resources.html', description: 'Find resources for auditing and testing accessibility.' }
+      ];
+      
+      // Perform search
+      function performSearch(event) {
+          event.preventDefault(); // Prevent form submission
+      
+          const query = document.getElementById('search-input').value.toLowerCase();
+          const resultsContainer = document.getElementById('results');
+          if (!resultsContainer) return; // Exit if there's no results container (e.g., on non-search pages)
+      
+          resultsContainer.innerHTML = ''; // Clear previous results
+      
+          const results = pages.filter(page =>
+              page.title.toLowerCase().includes(query) ||
+              page.description.toLowerCase().includes(query)
+          );
+      
+          if (results.length > 0) {
+              results.forEach(result => {
+                  const resultItem = document.createElement('div');
+                  resultItem.classList.add('result-item');
+                  resultItem.innerHTML = `
+                      <a href="${result.url}">${result.title}</a>
+                      <p>${result.description}</p>
+                  `;
+                  resultsContainer.appendChild(resultItem);
+              });
+          } else {
+              resultsContainer.innerHTML = '<p>No results found.</p>';
+          }
+      }
+      
