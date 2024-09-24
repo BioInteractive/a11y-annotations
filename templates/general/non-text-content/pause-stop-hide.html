@@ -55,6 +55,19 @@
                             <li><strong>Moving, Blinking, Scrolling:</strong> If it starts automatically, lasts more than five seconds, and is parallel with other content, users must be able to pause, stop, or hide it unless essential.</li>
                             <li><strong>Auto-updating:</strong> If it starts automatically and is presented alongside other content, there must be a mechanism for users to pause, stop, hide it, or control the update frequency unless it's essential.</li>
                           </ul>
+                          <p>User-activated animations, such as scrolling effects that only trigger when users interact with the page, are not covered by the 
+                          2.2.2 Pause, Stop, Hide success criteria. These types of animations do not require control mechanisms, as they are initiated by the user and do not occur automatically. However, 
+                          it's important to ensure that all animations enhance the user experience and do not cause disruption or discomfort.</p>
+                          <p>For the best user experience, it is recommended to implement the <code>prefers-reduced-motion</code> CSS media query, which allows users with 
+                          motion sensitivities to minimize or disable animations. This ensures that individuals who may be negatively impacted by movement can still navigate 
+                          the website comfortably. It is essential to apply these considerations to common elements that often include animations, which can affect users if 
+                          not properly managed.</p>
+                          <ul>
+                            <li>Autoplaying videos</li>
+                            <li>Carousels or sliders</li>
+                            <li>GIF images</li>
+                            <li>Background animations</li>
+                          </ul>
                         </div>
                       </div>
                     </div>
@@ -179,6 +192,7 @@
                           <li><a href="https://www.wuhcag.com/pause-stop-hide/" target="_blank" rel="noopener noreferrer">Wuhcag: Pause, Stop, Hide</a> - Practical tips for implementing controls to pause, stop, or hide moving content.</li>
                           <li><a href="https://blog.equally.ai/wcag-2-2-2-pause-stop-hide/" target="_blank" rel="noopener noreferrer">Equally AI: WCAG 2.2.2 Pause, Stop, Hide</a> - Detailed guidance on providing controls for dynamic content to enhance accessibility.</li>
                           <li><a href="https://www.digitala11y.com/understanding-sc-2-2-2-pause-stop-hide/" target="_blank" rel="noopener noreferrer">DigitalA11Y: Understanding SC 2.2.2 Pause, Stop, Hide</a> - Comprehensive overview of this success criterion and techniques to comply with it.</li>
+                          <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion" target="_blank" rel="noopener noreferrer">Learn more about prefers-reduced-motion on MDN Web Docs</a></li>
                         </ul>                      
                       </div>                      
                     </div>

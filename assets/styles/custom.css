@@ -1,6 +1,6 @@
 /* Global Styles */
 body {
-  font-family: Arial, Helvetica, sans-serif
+  font-family: Arial, Helvetica, sans-serif;
   color: #171717;
 }
 main {
@@ -855,3 +855,14 @@ p.dev-tag {
     display: none; /* Hidden by default */
 }
 
+/* Basic styles for results */
+.result-item {
+    margin: 10px 0;
+}
+.result-item a {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.result-item p {
+    margin: 5px 0;
+}
