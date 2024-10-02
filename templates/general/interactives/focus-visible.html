@@ -25,9 +25,9 @@
     <link rel="manifest" href="assets/images/site.webmanifest">
 </head>
 <body>
-  <header class="d-block px-3 py-2 shadow">
-    <img src="https://www.biointeractive.org/themes/gesso/images/hhmi-logo.svg" alt="hhmi Biointeractive logo" style="max-width: 320px;">
-  </header>
+  <!-- Insert Header -->
+  <div id="header--container"></div>
+  
   <div class="container-fluid">
       <div class="row">
           <!-- Includes the Sidebar Navigation using jQuery -->
@@ -225,15 +225,20 @@
     <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
 
-    <!-- Add sidebar navigation to page -->
+    <!-- Add sidebar navigation and header to the page -->
     <script>
       $(document).ready(function () {
-          // Determine the path relative to the root directory
-          var rootRelativePath = "../../sidebar-navigation.html";
-  
-          // Use jQuery to load the sidebar-navigation.html file
-          $("#sidebar-container").load(rootRelativePath);
+           // Determine the paths relative to the root directory
+           var sidebarPath = "../../sidebar-navigation.html";
+           var headerPath = "../../header.html";
+      
+           // Use jQuery to load the sidebar-navigation.html file
+           $("#sidebar-container").load(sidebarPath);
+      
+           // Use jQuery to load the header.html file
+           $("#header--container").load(headerPath);
       });
     </script>
+
 </body>
 </html>

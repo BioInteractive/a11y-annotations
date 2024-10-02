@@ -25,9 +25,9 @@
     <link rel="manifest" href="assets/images/site.webmanifest">
 </head>
 <body>
-  <header class="d-block px-3 py-2 shadow">
-    <img src="https://www.biointeractive.org/themes/gesso/images/hhmi-logo.svg" alt="hhmi Biointeractive logo" style="max-width: 320px;">
-  </header>
+  <!-- Insert Header -->
+  <div id="header--container"></div>
+
   <div class="container-fluid">
       <div class="row">
           <!-- Includes the Sidebar Navigation using jQuery -->
@@ -138,7 +138,8 @@
                               <li>The panel must collapse when focus leaves with forward and backwards tabbing navigation so it does not obscure of content.</li>
                             </ul>
                             <div class="space-large"></div> 
-                            <h3>Mobile Navigation with Disclosure Button Available on Resize/Reflow</h3>
+
+                            <h3>Mobile Navigation with Disclosure Button</h3>
                             <p>To see an example of Moble Navigation with a 'Hamburger' disclosure button you may resize this page smaller than 1000px. Once resized you will see the simple nav bar 
                               examples transform into a hidden panels with visibility that is controled by Hamburger disclosure buttons.
                             </p>
@@ -149,7 +150,11 @@
                               <li> The hamburger button should also have the attribute <code>aria-controls</code> referencing the unique ID of the panel it controls.</li>
                               <li> The interactive elements within the panel must be in list markup and must be properly hidden with a <code>display:none;</code> or <code>visibility:hidden;</code> 
                                 property that ensures they are not in reading or focus order when they are not visible.</li>
-                            </ul>                        
+                            </ul> 
+                            
+                            <h3>In-page Navigation</h3>
+                            <p>In-page navigation must be anchored to an element on the page with <code>tabindex="-1"</code> and focus must be sent to that element when the page scrolls.
+                            Please ensure the element has an accessible name. The recommendation is to use heading elements as anchors.</p>
                         </div>
                       </div>
                     </div>
@@ -233,7 +238,7 @@
                                   <li>If current page navigation link has visual indicator then it must also be programmatically determinable with <code>aria-current="page"</code>. The
                                   visual indicator must have a minimum 3:1 contrast ratio with the adjacent colors and/or another non-color distinguishing visual indicator, such as bold text,
                                   an underline, a border, etc.</li>
-                                  <li>If navigation contains a list of links they should be in list markup <code>&lt;ul&gt;</code></li>
+                                  <li>If navigation contains a list of links they should be in list markup <code>&lt;ul&gt;</code> and links must be keyboard navigable in <code>&lt;a&gt;</code> elements with valid href's and link purpose.</li>
                                 </ul>
                               </div>
                               <div>
@@ -359,15 +364,20 @@
     <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
 
-    <!-- Add sidebar navigation to page -->
+    <!-- Add sidebar navigation and header to the page -->
     <script>
       $(document).ready(function () {
-          // Determine the path relative to the root directory
-          var rootRelativePath = "../sidebar-navigation.html";
-  
-          // Use jQuery to load the sidebar-navigation.html file
-          $("#sidebar-container").load(rootRelativePath);
+           // Determine the paths relative to the root directory
+           var sidebarPath = "../sidebar-navigation.html";
+           var headerPath = "../header.html";
+      
+           // Use jQuery to load the sidebar-navigation.html file
+           $("#sidebar-container").load(sidebarPath);
+      
+           // Use jQuery to load the header.html file
+           $("#header--container").load(headerPath);
       });
     </script>
+  
 </body>
 </html>

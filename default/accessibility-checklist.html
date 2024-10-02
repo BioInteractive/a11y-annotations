@@ -28,10 +28,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
 </head>
 <body>
-  <header class="d-block px-3 py-2 shadow">
-    <img src="https://www.biointeractive.org/themes/gesso/images/hhmi-logo.svg" alt="hhmi Biointeractive logo" style="max-width: 320px;">
-  </header>
-  <div class="container-fluid">
+    <!-- Insert Header -->
+    <div id="header--container"></div>
+    
+    <div class="container-fluid">
     <div class="row">
       <!-- Includes the Sidebar Navigation using jQuery -->
       <div id="sidebar-container" class="col-md-2 border-end"></div>
@@ -119,7 +119,7 @@
             <button id="reset-btn" class="btn btn-danger" style="display:none;">Reset Project Information</button>
   
             <!-- Checklist Table -->
-            <table class="table" aria-labelledby="table-label" id="checklist">
+            <table class="table" aria-labelledby="table-label" id="checklist" tabindex="0">
               <thead>
                   <tr>
                       <th scope="col">No.</th>
@@ -2280,15 +2280,19 @@
     <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
 
-    <!-- Add sidebar navigation to page -->
+    <!-- Add sidebar navigation and header to the page -->
     <script>
-      $(document).ready(function () {
-          // Determine the path relative to the root directory
-          var rootRelativePath = "../templates/sidebar-navigation.html";
-  
-          // Use jQuery to load the sidebar-navigation.html file
-          $("#sidebar-container").load(rootRelativePath);
-      });
+    $(document).ready(function () {
+         // Determine the paths relative to the root directory
+         var sidebarPath = "../templates/sidebar-navigation.html";
+         var headerPath = "../templates/header.html";
+    
+         // Use jQuery to load the sidebar-navigation.html file
+         $("#sidebar-container").load(sidebarPath);
+    
+         // Use jQuery to load the header.html file
+         $("#header--container").load(headerPath);
+    });
     </script>
 
 
