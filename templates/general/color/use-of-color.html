@@ -25,9 +25,9 @@
     <link rel="manifest" href="assets/images/site.webmanifest">
 </head>
 <body>
-  <header class="d-block px-3 py-2 shadow">
-    <img src="https://www.biointeractive.org/themes/gesso/images/hhmi-logo.svg" alt="hhmi Biointeractive logo" style="max-width: 320px;">
-  </header>
+  <!-- Insert Header -->
+  <div id="header--container"></div>
+
   <div class="container-fluid">
       <div class="row">
           <!-- Includes the Sidebar Navigation using jQuery -->
@@ -50,9 +50,19 @@
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                         <div class="accordion-body">
-                        <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/use-of-color" target="_blank">1.4.1 Use of Color</a>
-                          Color must not be used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.
-                        </p>
+                          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/use-of-color" target="_blank">1.4.1 Use of Color</a>
+                            Color must not be used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.
+                          </p>
+                          <h3>Commonly found examples of the use of color in web design:</h3>
+                          <ul>
+                            <li><strong>Error messages</strong>: Using red text or borders to indicate an error in a form field.</li>
+                            <li><strong>Success messages</strong>: Using green text or borders to signify successful form submission or actions.</li>
+                            <li><strong>Links</strong>: Using color alone to indicate a hyperlink in a block of text.</li>
+                            <li><strong>Categories or status labels</strong>: Color-coded icons or labels to represent different statuses, like “urgent” in red, “complete” in green, etc.</li>
+                            <li><strong>Required fields</strong>: Indicating required form fields using only a colored text label.</li>
+                            <li><strong>Priority levels</strong>: Using colors like red, yellow, or green to show levels of urgency or importance.</li>
+                            <li><strong>Charts or graphs</strong>: Using color alone to differentiate data sets without alternative markers like shapes, labels, or patterns.</li>
+                          </ul>                      
                         </div>
                       </div>
                     </div>
@@ -207,15 +217,20 @@
     <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
 
-    <!-- Add sidebar navigation to page -->
+    <!-- Add sidebar navigation and header to the page -->
     <script>
       $(document).ready(function () {
-          // Determine the path relative to the root directory
-          var rootRelativePath = "../../sidebar-navigation.html";
-  
-          // Use jQuery to load the sidebar-navigation.html file
-          $("#sidebar-container").load(rootRelativePath);
+           // Determine the paths relative to the root directory
+           var sidebarPath = "../../sidebar-navigation.html";
+           var headerPath = "../../header.html";
+      
+           // Use jQuery to load the sidebar-navigation.html file
+           $("#sidebar-container").load(sidebarPath);
+      
+           // Use jQuery to load the header.html file
+           $("#header--container").load(headerPath);
       });
     </script>
+
 </body>
 </html>

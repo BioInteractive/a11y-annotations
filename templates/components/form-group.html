@@ -25,9 +25,9 @@
     <link rel="manifest" href="assets/images/site.webmanifest">
 </head>
 <body>
-  <header class="d-block px-3 py-2 shadow">
-    <img src="https://www.biointeractive.org/themes/gesso/images/hhmi-logo.svg" alt="hhmi Biointeractive logo" style="max-width: 320px;">
-  </header>
+  <!-- Insert Header -->
+  <div id="header--container"></div>
+
   <div class="container-fluid">
       <div class="row">
           <!-- Includes the Sidebar Navigation using jQuery -->
@@ -44,7 +44,7 @@
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingZero">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseZero" aria-expanded="true" aria-controls="collapseZero">
-                          WCAG Success Criteria                       
+                          WCAG Success Criteria Requirements and Examples                                            
                         </button>
                       </h2>
                       <div id="collapseZero" class="accordion-collapse collapse show" aria-labelledby="headingZero" style=""> 
@@ -74,20 +74,7 @@
                           </p>
                           <p>Related controls may also be associated with ARIA. ARIA provides a grouping role that functions similarly to the fieldset and 
                             legend. <code>role="group"</code> with an aria-labelledby pointing to a visible text node is a sufficient technique as well.
-                          </p>                                                 
-                        </div>                        
-                      </div>
-                    </div>
-                    <!-- Accordion with Example of Accessible Form  -->
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                          Example of Accessible Form
-                        </button>
-                      </h2>
-                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" style="">
-                        <div class="accordion-body">
-                          
+                          </p> 
                           <h3>Example 1: Grouping with Fieldset and Legend</h3>
                           <form class="p-3 mb-3 border">
                             <fieldset class="mb-3">
@@ -162,9 +149,8 @@
                                 <div class="form-text">Enter your phone number</div>
                               </div>
                             </div>
-                          </form>
-                          
-                        </div>
+                          </form>                                              
+                        </div>                        
                       </div>
                     </div>
                     <!-- Accordion Item Two Designer-->
@@ -227,9 +213,9 @@
                           <div class="d-inline-block border border-dark p-2 rounded">
                             <div class="d-flex flex-row">
                               <div class="text-to-copy">
-                                <h3>Form Labels and Autocomplete</h3>
+                                <h3>Form Control Group</h3>
                                 <ul role="list">
-                                  <li><strong>Control Group</strong> must be grouped within a <code class="code-tag">&lt;fieldset&gt;</code> and <code class="code-tag">&lt;legend&gt;</code></li>
+                                  <li>Must be grouped within a <code class="code-tag">&lt;fieldset&gt;</code> and <code class="code-tag">&lt;legend&gt;</code></li>
                                   <li>Or in some instances a <code>role="group"</code> and an <code>aria-labelledby</code> equal to the unique ID of the labelling text.</li>
                                 </ul>
                               </div>
@@ -304,15 +290,20 @@
     <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
 
-    <!-- Add sidebar navigation to page -->
+    <!-- Add sidebar navigation and header to the page -->
     <script>
       $(document).ready(function () {
-          // Determine the path relative to the root directory
-          var rootRelativePath = "../sidebar-navigation.html";
-  
-          // Use jQuery to load the sidebar-navigation.html file
-          $("#sidebar-container").load(rootRelativePath);
+           // Determine the paths relative to the root directory
+           var sidebarPath = "../sidebar-navigation.html";
+           var headerPath = "../header.html";
+      
+           // Use jQuery to load the sidebar-navigation.html file
+           $("#sidebar-container").load(sidebarPath);
+      
+           // Use jQuery to load the header.html file
+           $("#header--container").load(headerPath);
       });
     </script>
+  
 </body>
 </html>

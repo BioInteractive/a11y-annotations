@@ -25,9 +25,9 @@
     <link rel="manifest" href="assets/images/site.webmanifest">
 </head>
 <body>
-  <header class="d-block px-3 py-2 shadow">
-    <img src="https://www.biointeractive.org/themes/gesso/images/hhmi-logo.svg" alt="hhmi Biointeractive logo" style="max-width: 320px;">
-  </header>
+  <!-- Insert Header -->
+  <div id="header--container"></div>
+
   <div class="container-fluid">
       <div class="row">
           <!-- Includes the Sidebar Navigation using jQuery -->
@@ -55,13 +55,13 @@
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          WCAG Success Criteria
+                          WCAG Success Criteria Requirements and Examples
                         </button>
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                         <div class="accordion-body">
                         <p>
-                          <strong>1.3.1 Info and Relationships:</strong> Information, structure, and relationships conveyed through presentation can be programmatically determined 
+                          <a href="https://www.w3.org/TR/WCAG21/#info-and-relationships" target="_blank" rel="noopener noreferrer">1.3.1 Info and Relationships</a>: Information, structure, and relationships conveyed through presentation can be programmatically determined 
                           or are available in text.
                         </p>
                         <p>
@@ -69,7 +69,7 @@
                            users to navigate to another webpage, resource, or location by specifying a URL, enhancing the interconnectedness of web content.
                         </p>
                         <p>
-                          <strong>2.4.4 Link Purpose:</strong> The purpose of each link can be determined from the link text alone or from the link text together with its programmatically 
+                          <a href="https://www.w3.org/TR/WCAG22/#link-purpose-in-context" target="_blank" rel="noopener noreferrer">2.4.4 Link Purpose</a>: The purpose of each link can be determined from the link text alone or from the link text together with its programmatically 
                           determined link context, except where the purpose of the link would be ambiguous to users in general.
                         </p>
                         <p>
@@ -151,7 +151,7 @@
                                 <ul role="list">
                                   <li>Link must be in a <code>&lt;a&gt;</code> element or the element used such as a <code>&lt;div&gt;</code> must have <code>role="link"</code> and <code>tabindex="0"</code> as an equivalent with keyboard event handlers ensuring equal functionality for mouse, keyboard and touch users.</li>
                                   <li>Links must have an accessible name with good link purpose. Use text, img alt, aria-label, aria-labelledby or add sr-only text.</li>
-                                  <li>Links with ambiguous names such as "Learn More" and "Read More" will need additional context added with an aria-label starting with the link name or sr-only text or an aria-describedby association to add context to where the link will naviagte to.</li>
+                                  <li>Links with ambiguous names such as "Learn More" and "Read More" will need additional context added with an aria-label starting with the link name or sr-only text or an aria-describedby association to add context to where the link will navigate to.</li>
                                 </ul>                              
                               </div>
                               <div>
@@ -229,24 +229,6 @@
                         </div>
                       </div>
                     </div>
-                    <!-- Accordion Item Six WCAG -->
-                    <div class="accordion-item">
-                      <h2 class="accordion-item" id="headingSix">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
-                        WCAG Guideline References
-                        </button>
-                      </h2>
-                      <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" style="">
-                        <div class="accordion-body">
-                          <ul>
-                            <li><a href="https://www.w3.org/TR/WCAG21/#info-and-relationships" target="_blank" rel="noopener noreferrer">WCAG 2.1 Success Criterion 1.3.1 - Info and Relationships</a></li>
-                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html" target="_blank" rel="noopener noreferrer">WCAG 2.1 Understanding - 1.3.1 Info and Relationships</a></li>
-                            <li><a href="https://www.w3.org/TR/WCAG22/#link-purpose-in-context" target="_blank" rel="noopener noreferrer">WCAG 2.2 Success Criterion 2.4.4: Link Purpose (In Context)</a> - Information on ensuring link purpose can be determined from the link text and context.</li>
-                            <li><a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener noreferrer">Web Content Accessibility Guidelines (WCAG) 2.2</a> - The latest version of the WCAG, with updates and additions to accessibility requirements.</li>
-                          </ul>                          
-                        </div>
-                      </div>
-                    </div>
                   </div>
                   <!-- End Accordion -->
                 </main>
@@ -259,15 +241,20 @@
     <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
 
-    <!-- Add sidebar navigation to page -->
+    <!-- Add sidebar navigation and header to the page -->
     <script>
-      $(document).ready(function () {
-          // Determine the path relative to the root directory
-          var rootRelativePath = "../sidebar-navigation.html";
-  
-          // Use jQuery to load the sidebar-navigation.html file
-          $("#sidebar-container").load(rootRelativePath);
-      });
+    $(document).ready(function () {
+         // Determine the paths relative to the root directory
+         var sidebarPath = "../sidebar-navigation.html";
+         var headerPath = "../header.html";
+    
+         // Use jQuery to load the sidebar-navigation.html file
+         $("#sidebar-container").load(sidebarPath);
+    
+         // Use jQuery to load the header.html file
+         $("#header--container").load(headerPath);
+    });
     </script>
+
 </body>
 </html>
