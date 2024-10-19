@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WCAG Crosswalk</title>
+
+    <!-- Link to Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <!-- Link to Custom Stylesheet -->
+    <link rel="stylesheet" href="../assets/styles/custom.css">
+    <!-- Link to Custom Stylesheet Production -->
+    <link rel="stylesheet" href="../../assets/styles/custom.css">
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/a11y-annotations/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/a11y-annotations/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/a11y-annotations/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/a11y-annotations/assets/images/site.webmanifest">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+</head>
+<body>
+    <!-- Insert Header -->
+    <div id="header--container"></div>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Includes the Sidebar Navigation using jQuery -->
+            <div id="sidebar-container" class="col-md-3"></div>
+
+            <!-- Main Content -->
+            <main class="col-md-9" id="main-content" tabindex="-1">
+                <div class="container-xxl bd-gutter mt-3">
+                    <h1 class="mb-3">WCAG Crosswalk</h1>
+                    <p>This page provides a crosswalk between WCAG 2.1 criteria and the BioInteractive A11y Annotation Repository. Use the links in each row to access the relevant annotation information.</p>
+
+                    <table class="table table-striped table-bordered" aria-label="WCAG Crosswalk" tabindex="0">
+                    <thead>
+                        <tr>
+                        <th scope="col">WCAG Criteria</th>
+                        <th scope="col">Mapping to A11y Annotation Repository Pages</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td>1.1.1 Non-text Content</td>
+                        <td>
+                            <a href="/templates/general/non-text-content/images.html" target="_blank">Images</a>
+                          </td>
+                        </tr>
+                        <tr>
+                        <td>1.2.1 Audio-only and Video-only (Prerecorded)</td>
+                        <td>
+                            <a href="/templates/general/non-text-content/media.html" target="_blank">Time-based Media</a>, 
+                            <a href="/templates/components/video.html" target="_blank">Video</a>
+                          </td>
+                        </tr>
+                        <tr>
+                        <td>1.2.2 Captions (Prerecorded)</td>
+                        <td>
+                            <a href="/templates/general/non-text-content/media.html" target="_blank">Time-based Media</a>, 
+                            <a href="/templates/components/video.html" target="_blank">Video</a>
+                          </td>
+                        </tr>
+                        <!-- More rows can be added here, leaving placeholders where needed -->
+                    </tbody>
+                    </table>
+
+                
+                                                                         
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Script links and jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../assets/js/global.js"></script>
+    <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- Add sidebar navigation and header to the page -->
+    <script>
+    $(document).ready(function () {
+         // Determine the paths relative to the root directory
+         var sidebarPath = "../templates/sidebar-navigation.html";
+         var headerPath = "../templates/header.html";
+    
+         // Use jQuery to load the sidebar-navigation.html file
+         $("#sidebar-container").load(sidebarPath);
+    
+         // Use jQuery to load the header.html file
+         $("#header--container").load(headerPath);
+    });
+    </script>
+
+</body>
+</html>

@@ -37,7 +37,7 @@
       <div id="sidebar-container" class="col-md-2 border-end"></div>
 
       <!-- Main Content -->
-      <main class="col-md-9">
+      <main class="col-md-9" id="main-content" tabindex="-1">
         <!-- A11y Live Region -->
         <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
         <div class="container-xxl bd-gutter mt-3">
@@ -80,6 +80,13 @@
                     <div id="date-help" class="form-text">Select the current date or project start date.</div>
                     <span class="invalid-feedback" style="display:none; color: #BA0B1A;" id="date-error" role="alert">Date is required</span>
                 </div>
+                
+                <!-- Comments (Optional) -->
+                <div class="mb-3">
+                    <label for="comments" class="form-label">Comments (Optional)</label>
+                    <textarea class="form-control" id="comments" name="comments" aria-describedby="comments-help" rows="4"></textarea>
+                    <div id="comments-help" class="form-text">Add any additional comments about the project (optional).</div>
+                </div>
             
                 <!-- Save Button -->
                 <button type="submit" class="btn btn-primary">Save</button>
@@ -108,6 +115,7 @@
                     <li class="list-group-item"><strong>Role:</strong> <span id="display-role"></span></li>
                     <li class="list-group-item"><strong>Your Name:</strong> <span id="display-name"></span></li>
                     <li class="list-group-item"><strong>Date:</strong> <span id="display-date"></span></li>
+                    <li class="list-group-item"><strong>Comments:</strong> <span id="display-comments"></span></li>
                 </ul>
                 </div>
             </div>
@@ -145,10 +153,12 @@
                   <tr>
                     <!-- Row 1: First Checkpoint -->
                       <th scope="row" rowspan="11">1</th>
-                      <td rowspan="11">Structures and Pages</td>
+                      <td rowspan="11">General Structure</td>
                       <td rowspan="11">Users can make sense of the structure of the content on each page and understand how to operate and navigate within the system.</td>
                       <!-- Page title -->
-                      <td id="page-title">Do the pages have meaningful title text, with page-specific information going first?</td>
+                      <td id="page-title">Do the pages have meaningful title text, with page-specific information going first? <br>
+                        <a href="/templates/general/structure/page.html" class="link" target="_blank">Page Titled <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                       <!-- Status Checkboxes -->
                       <td class="checkbox-td">
                         <!-- Pass Chekbox -->
@@ -182,7 +192,9 @@
                     <!-- Row 2: First Checkpoint -->
                     <tr> 
                       <!-- Multiple Ways title -->
-                      <td id="multiple-ways">Do the pages provide at least two methods of locating a page on the site?</td>
+                      <td id="multiple-ways">Do the pages provide at least two methods of locating a page on the site? <br>
+                        <a href="/templates/general/structure/page.html" class="link" target="_blank">Multiple Ways <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                       <!-- Status Checkboxes -->
                       <td class="checkbox-td">
                         <!-- Pass Chekbox -->
@@ -215,7 +227,9 @@
                     </tr>
                     <!-- Row 3: First Checkpoint -->
                     <tr>
-                      <td id="content-bypass">Is there a mechanism available to bypass blocks of content that are repeated on multiple pages?</td>
+                      <td id="content-bypass">Is there a mechanism available to bypass blocks of content that are repeated on multiple pages? <br>
+                        <a href="/templates/general/structure/page.html" class="link" target="_blank">Bypass Blocks <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                       <!-- Status Checkboxes -->
                       <td class="checkbox-td">
                           <!-- Pass Checkbox -->
@@ -248,7 +262,9 @@
                     </tr>
                     <!-- Row 4: First Checkpoint -->
                     <tr>
-                    <td id="meaningful-headings">Do the pages have meaningful headings for each major section?</td>
+                    <td id="meaningful-headings">Do the pages have meaningful headings for each major section? <br>
+                        <a href="/templates/general/structure/headings.html" class="link" target="_blank">Headings and Labels <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -281,7 +297,9 @@
                     </tr>
                     <!-- Row 5: First Checkpoint -->
                     <tr>
-                        <td id="data-tables-header">Are data tables clearly assigned header columns and/or rows?</td>
+                        <td id="data-tables-header">Are data tables clearly assigned header columns and/or rows? <br>
+                            <a href="/templates/components/tables.html" class="link" target="_blank">Tables <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                                Opens in new tab</span></i></a></td>
                         <!-- Status Checkboxes -->
                         <td class="checkbox-td">
                             <!-- Pass Checkbox -->
@@ -314,7 +332,9 @@
                     </tr>
                     <!-- Row 6: First Checkpoint -->
                     <tr>
-                        <td id="data-tables-header">Are headings in logical hierachy and not skipping levels (e.g., not jumping from h1 to h3)?</td>
+                        <td id="data-tables-header">Are headings in logical hierachy and not skipping levels (e.g., not jumping from h1 to h3)? <br>
+                            <a href="/templates/general/structure/headings.html" class="link" target="_blank">Headings <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                                Opens in new tab</span></i></a></td>
                         <!-- Status Checkboxes -->
                         <td class="checkbox-td">
                             <!-- Pass Checkbox -->
@@ -347,7 +367,9 @@
                     </tr>
                     <!-- Row 7: First Checkpoint -->
                     <tr>
-                        <td id="data-tables-header">Has the recommended line spacing (1.5 within paragraphs and double spacing between them) been applied?</td>
+                        <td id="data-tables-header">Has the recommended line spacing (1.5 within paragraphs and double spacing between them) been applied? <br>
+                            <a href="/templates/general/structure/text-best-practices.html" class="link" target="_blank">Text Best Practices <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                                Opens in new tab</span></i></a></td>
                         <!-- Status Checkboxes -->
                         <td class="checkbox-td">
                             <!-- Pass Checkbox -->
@@ -380,7 +402,9 @@
                     </tr>
                     <!-- Row 8: First Checkpoint -->
                     <tr>
-                        <td id="data-tables-header">Is the language used in the design clear, concise, and free of jargon to ensure it is easily understood by the target audience?</td>
+                        <td id="data-tables-header">Is the language used in the design clear, concise, and free of jargon to ensure it is easily understood by the target audience? <br>
+                            <a href="/templates/general/structure/text-best-practices.html" class="link" target="_blank">Text Best Practices <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                                Opens in new tab</span></i></a></td>
                         <!-- Status Checkboxes -->
                         <td class="checkbox-td">
                             <!-- Pass Checkbox -->
@@ -413,7 +437,9 @@
                     </tr>
                     <!-- Row 9: First Checkpoint -->
                     <tr>
-                        <td id="data-tables-header">Has a readable, web-safe font been selected that ensures legibility across different devices and screen sizes?</td>
+                        <td id="data-tables-header">Has a readable, web-safe font been selected that ensures legibility across different devices and screen sizes? <br>
+                            <a href="/templates/general/structure/text-best-practices.html" class="link" target="_blank">Text Best Practices <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                                Opens in new tab</span></i></a></td>
                         <!-- Status Checkboxes -->
                         <td class="checkbox-td">
                             <!-- Pass Checkbox -->
@@ -446,7 +472,9 @@
                     </tr>
                     <!-- Row 10: First Checkpoint -->
                     <tr>
-                        <td id="data-tables-header">Is the text content broken up into small, manageable blocks to enhance readability?</td>
+                        <td id="data-tables-header">Is the text content broken up into small, manageable blocks to enhance readability? <br>
+                            <a href="/templates/general/structure/text-best-practices.html" class="link" target="_blank">Text Best Practices <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                                Opens in new tab</span></i></a></td>
                         <!-- Status Checkboxes -->
                         <td class="checkbox-td">
                             <!-- Pass Checkbox -->
@@ -479,7 +507,9 @@
                     </tr>
                     <!-- Row 11: First Checkpoint -->
                     <tr>
-                        <td id="data-tables-header">Are lists properly formatted with clear bullet points or numbering to improve readability and comprehension?</td>
+                        <td id="data-tables-header">Are lists properly formatted with clear bullet points or numbering to improve readability and comprehension? <br>
+                            <a href="/templates/general/structure/lists.html" class="link" target="_blank">Lists <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                                Opens in new tab</span></i></a></td>
                         <!-- Status Checkboxes -->
                         <td class="checkbox-td">
                             <!-- Pass Checkbox -->
@@ -512,13 +542,15 @@
                     </tr>
             
             
-            <!-- New Row for Heuristic 2: Structure - Forms -->
+            <!-- New Row for Heuristic 2: Forms -->
                 <tr>
                   <th scope="row" rowspan="7">2</th> 
-                  <td rowspan="7">Structure - Forms</td>
+                  <td rowspan="7">Forms</td>
                   <td rowspan="7">Interactive controls have persistent, meaningful labels and instructions to help prevent mistakes, and provide users with clear error states which indicate what the problems are - and how to fix them whenever errors are returned.</td>
-                  <!-- First Checkpoint for Structure - Forms -->
-                  <td id="form-labels">Are persistent, visible labels specified on all form controls?</td>
+                  <!-- First Checkpoint for   Forms -->
+                  <td id="form-labels">Are persistent, visible labels specified on all form controls? <br>
+                    <a href="/templates/components/forms.html" class="link" target="_blank">Labels or Instructions <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                        Opens in new tab</span></i></a></td>
                   <!-- Status Checkboxes -->
                   <td class="checkbox-td">
                       <!-- Pass Checkbox -->
@@ -551,7 +583,9 @@
                 </tr>
                 <!-- Row 2: Second Checkpoint for Heuristic 2 -->
                 <tr>
-                  <td id="labels-proximity">Are labels and instructions displayed in close visual proximity to their controls?</td>
+                  <td id="labels-proximity">Are labels and instructions displayed in close visual proximity to their controls? <br>
+                    <a href="/templates/components/forms.html" class="link" target="_blank">Labels or Instructions <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                        Opens in new tab</span></i></a></td>
                   <!-- Status Checkboxes -->
                   <td class="checkbox-td">
                       <!-- Pass Checkbox -->
@@ -582,9 +616,11 @@
                       </div>
                   </td>
                 </tr>
-                <!-- Row 3: Third Checkpoint for Heuristic 2 -->
+                <!-- Row 3: Third Checkpoint for Heuristic 2 - Forms -->
                 <tr>
-                  <td id="required-fields">Are required fields identified as such in the label text?</td>
+                  <td id="required-fields">Are required fields identified as such in the label text? <br>
+                    <a href="/templates/components/forms.html" class="link" target="_blank">Labels or Instructions <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                        Opens in new tab</span></i></a></td>
                   <!-- Status Checkboxes -->
                   <td class="checkbox-td">
                       <!-- Pass Checkbox -->
@@ -617,7 +653,9 @@
                 </tr>
                 <!-- Row 4: Fourth Checkpoint for Heuristic 2 -->
                 <tr>
-                  <td id="form-instructions">Are form instructions worded in text, to provide users with adequate support?</td>
+                  <td id="form-instructions">Are form instructions worded in text, to provide users with adequate support? <br>
+                    <a href="/templates/components/forms.html" class="link" target="_blank">Labels or Instructions <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                        Opens in new tab</span></i></a></td>
                   <!-- Status Checkboxes -->
                   <td class="checkbox-td">
                       <!-- Pass Checkbox -->
@@ -648,9 +686,11 @@
                       </div>
                   </td>
                 </tr>
-                <!-- Row 5: Fifth Checkpoint for Heuristic 2 Structure - Forms -->
+                <!-- Row 5: Fifth Checkpoint for Heuristic 2 - Forms -->
                 <tr>
-                    <td id="form-errors">Are form errors indicated in ways that don’t rely on sensory cues alone?</td>
+                    <td id="form-errors">Are form errors indicated in ways that don't rely on sensory cues alone? <br>
+                        <a href="/templates/components/forms.html" class="link" target="_blank">Error Identification <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -681,9 +721,11 @@
                         </div>
                     </td>
                 </tr>
-                <!-- Row 6: Sixth Checkpoint for Heuristic 2 Structure - Forms -->
+                <!-- Row 6: Sixth Checkpoint for Heuristic 2 - Forms -->
                 <tr>
-                    <td id="inline-errors">Are inline error messages provided, with suggestions on how to fix them?</td>
+                    <td id="inline-errors">Are inline error messages provided, with suggestions on how to fix them? <br>
+                        <a href="/templates/components/forms.html" class="link" target="_blank">Error Suggestion <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -714,9 +756,11 @@
                         </div>
                     </td>
                 </tr>
-                <!-- Row 7: Seventh Checkpoint for Heuristic 2 Structure - Forms -->
+                <!-- Row 7: Seventh Checkpoint for Heuristic 2 Forms -->
                 <tr>
-                    <td id="inline-errors">Are status/success messages provided with sufficient user notification?</td>
+                    <td id="inline-errors">Are status/success messages provided with sufficient user notification? <br>
+                        <a href="/templates/components/forms.html" class="link" target="_blank">Status Messages <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -753,7 +797,9 @@
                     <td rowspan="5">Color</td>
                     <td rowspan="5">Text and other meaningful information can be easily distinguished and read by users of the system.</td> 
                     <!-- First Checkpoint for Color -->
-                    <td id="color-alone">Is information conveyed by means other than just color alone?</td>
+                    <td id="color-alone">Is information conveyed by means other than just color alone? <br>
+                        <a href="/templates/general/color/use-of-color.html" class="link" target="_blank">Use of Color <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -786,7 +832,9 @@
                 </tr>
                 <!-- New Row for Heuristic 3: Color -->
                 <tr>
-                    <td id="contrast-ratio">Is the foreground/background contrast ratio of regular sized text at least 4.5:1 (3:1 for large text)?</td>
+                    <td id="contrast-ratio">Is the foreground/background contrast ratio of regular sized text at least 4.5:1 (3:1 for large text)? <br>
+                        <a href="/templates/general/color/text-contrast.html" class="link" target="_blank">Text Color Contrast <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -820,7 +868,9 @@
                 <!-- Row 3: Third Checkpoint for Heuristic 3: Color -->
                 <tr>
                     <td id="link-text-contrast">Are the links in text blocks clearly marked by a different color with at least a 3:1 contrast from the surrounding text, 
-                        or are they indicated by a method that doesn't rely on color?</td>
+                        or are they indicated by a method that doesn't rely on color? <br>
+                        <a href="/templates/general/color/use-of-color.html" class="link" target="_blank">Use of Color <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -853,7 +903,9 @@
                 </tr>
                 <!-- Row 4: Fourth Checkpoint for Heuristic 3: Color -->
                 <tr>
-                    <td id="ui-contrast">Does the contrast ratio between UI components/graphical objects and their adjacent background reach at least 3:1?</td>
+                    <td id="ui-contrast">Does the contrast ratio between UI components/graphical objects and their adjacent background reach at least 3:1? <br>
+                        <a href="/templates/general/color/non-text-contrast.html" class="link" target="_blank">Non-text Color Contrast <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -886,7 +938,9 @@
                 </tr>
                 <!-- Row 5: Fifth Checkpoint for Heuristic 3: Color -->
                 <tr>
-                    <td id="ui-border-contrast">Does the border of essential interactive UI components have a contrast ratio of at least 3:1 against the immediate surrounding color?</td>
+                    <td id="ui-border-contrast">Does the border of essential interactive UI components have a contrast ratio of at least 3:1 against the immediate surrounding color? <br>
+                        <a href="/templates/general/color/non-text-contrast.html" class="link" target="_blank">Non-text Color Contrast <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -924,7 +978,9 @@
                     <td rowspan="7">Navigation and Wayfinding</td>
                     <td rowspan="7">Users can easily navigate, find content, and determine where they are at all times within the system.</td> 
                     <!-- First Checkpoint for Navigation and Wayfinding -->
-                    <td id="focus-indicator">Is there a clear, visible indicator set on all active elements as they receive focus?</td>
+                    <td id="focus-indicator">Is there a clear, visible indicator set on all active elements as they receive focus? <br>
+                        <a href="/templates/general/interactives/focus-visible.html" class="link" target="_blank">Focus Visible <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -957,7 +1013,9 @@
                 </tr>
                 <!-- Row 2: Second Checkpoint for Heuristic 4: Navigation and Wayfinding -->
                 <tr>
-                    <td id="page-title">Does the page have meaningful title text, with page-specific information going first?</td>
+                    <td id="page-title">Does the page have meaningful title text, with page-specific information going first? <br>
+                        <a href="/templates/general/structure/page.html" class="link" target="_blank">Page Titled <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -990,7 +1048,9 @@
                 </tr>
                 <!-- Row 3: Third Checkpoint for Heuristic 4: Navigation and Wayfinding -->
                 <tr>
-                    <td id="title-h1-similarity">Are the page title element and H1 the same or similar?</td>
+                    <td id="title-h1-similarity">Are landmark elements being implemented for the HTML structure? <br>
+                        <a href="/templates/general/structure/landmarks.html" class="link" target="_blank">Landmarks <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -1023,7 +1083,9 @@
                 </tr>
                 <!-- Row 4: Fourth Checkpoint for Heuristic 4: Navigation and Wayfinding -->
                 <tr>
-                    <td id="meaningful-headings">Does the page have meaningful headings for each major section?</td>
+                    <td id="meaningful-headings">If there are multiple navigation landmarks on a page, does each have a unique name defined? <br>
+                        <a href="/templates/components/navigation.html" class="link" target="_blank">Navigation <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -1056,7 +1118,9 @@
                 </tr>
                 <!-- Row 5: Fifth Checkpoint for Heuristic 4: Navigation and Wayfinding -->
                 <tr>
-                    <td id="link-purpose">Can the links’ purpose be defined from link text alone, or their immediate context?</td>
+                    <td id="link-purpose">Can the links' purpose be defined from link text alone, or their immediate context? <br>
+                        <a href="/templates/components/links.html" class="link" target="_blank">Link Purpose <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -1089,7 +1153,9 @@
                 </tr>
                 <!-- Row 6: Sixth Checkpoint for Heuristic 4: Navigation and Wayfinding -->
                 <tr>
-                    <td id="skip-link">Is a "skip link" provided at the very top of the page, and is it revealed on focus?</td>
+                    <td id="skip-link">Is a "skip link" provided before repetitive blocks of navigational components, and is it revealed on focus? <br>
+                        <a href="/templates/general/structure/page.html" class="link" target="_blank">Bypass Blocks <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -1122,7 +1188,9 @@
                 </tr>
                 <!-- Row 7: Seventh Checkpoint for Heuristic 4: Navigation and Wayfinding -->
                 <tr>
-                    <td id="nav-organization">Does the organization of navigational elements facilitate wayfinding?</td>
+                    <td id="nav-organization">Is the current page visually indicated, programatically determinable and does the indicator pass contrast? <br>
+                        <a href="/templates/components/pagination.html" class="link" target="_blank">Pagination <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -1157,10 +1225,12 @@
                 <!-- Row 1: Fifth Heuristic Title -->
                 <tr>
                     <th scope="row" rowspan="7">5</th>
-                    <td rowspan="7">Non-Text Content</td>
+                    <td rowspan="7">Non-text Content</td>
                     <td rowspan="7">Purely visual or auditory content that conveys information has text-based alternatives for users who can't see or hear.</td>
                     <!-- First Checkpoint for Non-Text Content -->
-                    <td id="informative-img-alt">Are informative images provided with meaningful alt text describing their content?</td>
+                    <td id="informative-img-alt">Are informative images provided with meaningful alt text describing their content? <br>
+                        <a href="/templates/general/non-text-content/images.html" class="link" target="_blank">Images <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <div class="custom-checkbox">
@@ -1189,7 +1259,9 @@
                 </tr>
                 <!-- Row 2: Second Checkpoint for Non-Text Content -->
                 <tr>
-                    <td id="active-img-alt">Are active images provided with meaningful alt text describing their purpose?</td>
+                    <td id="active-img-alt">Are linked images provided with meaningful alt text describing their purpose? <br>
+                        <a href="/templates/components/links.html" class="link" target="_blank">Link Purpose <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <div class="custom-checkbox">
@@ -1218,7 +1290,9 @@
                 </tr>
                 <!-- Row 3: Third Checkpoint for Non-Text Content -->
                 <tr>
-                    <td id="decorative-img">Are decorative images identified so they can be ignored by assistive technologies?</td>
+                    <td id="decorative-img">Are decorative images identified so they can be ignored by assistive technologies? <br>
+                        <a href="/templates/general/non-text-content/images.html" class="link" target="_blank">Images <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <div class="custom-checkbox">
@@ -1247,7 +1321,9 @@
                 </tr>
                 <!-- Row 4: Fourth Checkpoint for Non-Text Content -->
                 <tr>
-                    <td id="complex-img-description">Are complex images given alt text and an extended full-text description?</td>
+                    <td id="complex-img-description">Are complex images given alt text and an extended full-text description? <br>
+                        <a href="/templates/general/non-text-content/images.html" class="link" target="_blank">Images <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <div class="custom-checkbox">
@@ -1276,7 +1352,9 @@
                 </tr>
                 <!-- Row 5: Fifth Checkpoint for Non-Text Content -->
                 <tr>
-                    <td id="audio-transcript">Is a transcript placeholder designed for audio-only and video-only content?</td>
+                    <td id="audio-transcript">Is a descriptive transcript provided for audio-only and video-only content? <br>
+                        <a href="/templates/general/non-text-content/media.html" class="link" target="_blank">Time-based Media <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <div class="custom-checkbox">
@@ -1305,7 +1383,9 @@
                 </tr>
                 <!-- Row 6: Sixth Checkpoint for Non-Text Content -->
                 <tr>
-                    <td id="video-captions">Are synchronized captions provided for pre-recorded videos?</td>
+                    <td id="video-captions">Are synchronized captions provided for pre-recorded videos? <br>
+                        <a href="/templates/general/non-text-content/media.html" class="link" target="_blank">Time-based Media <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <div class="custom-checkbox">
@@ -1334,7 +1414,9 @@
                 </tr>
                 <!-- Row 7: Seventh Checkpoint for Non-Text Content -->
                 <tr>
-                    <td id="audio-descriptions">Are audio description tracks provided for pre-recorded videos?</td>
+                    <td id="audio-descriptions">Are audio description tracks provided for pre-recorded videos? <br>
+                        <a href="/templates/general/non-text-content/media.html" class="link" target="_blank">Time-based Media <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <div class="custom-checkbox">
@@ -1363,11 +1445,13 @@
                 </tr>
                 <!-- Row 1: Starting Interactives Section 6 -->
                 <tr>
-                    <th scope="row" rowspan="7">6</th>
-                    <td rowspan="7">Interactives</td>
-                    <td rowspan="7">Users can efficiently interact with the system using the input method of their choosing (i.e. mouse, keyboard, touch, etc.).</td> 
+                    <th scope="row" rowspan="8">6</th>
+                    <td rowspan="8">Interactives</td>
+                    <td rowspan="8">Users can efficiently interact with the system using the input method of their choosing (i.e. mouse, keyboard, touch, etc.).</td> 
                     <!-- First Checkpoint for Interactives -->
-                    <td id="mouse-specific">Are any of the interactions designed to be mouse specific?</td>
+                    <td id="mouse-specific">Are any of the interactions designed to be mouse-only ( i.e. on hover states)? <br>
+                        <a href="/templates/general/interactives/keyboard.html" class="link" target="_blank">Keyboard <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <td class="checkbox-td">
                         <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-1-pass" name="chk6-1-pass" aria-labelledby="pass mouse-specific">
@@ -1395,7 +1479,9 @@
                 </tr>
                 <!-- Second Checkpoint for Interactives -->
                 <tr>
-                    <td id="keyboard-accessible">Is every functionality designed to be fully keyboard accessible?</td>
+                    <td id="keyboard-accessible">Is every functionality designed to be fully keyboard accessible? <br>
+                        <a href="/templates/general/interactives/keyboard.html" class="link" target="_blank">Keyboard <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <td class="checkbox-td">
                         <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-2-pass" name="chk6-2-pass" aria-labelledby="pass keyboard-accessible">
@@ -1423,7 +1509,9 @@
                 </tr>
                 <!-- Third Checkpoint for Interactives -->
                 <tr>
-                    <td id="touch-accessible">Are features designed to be fully functional using touch screens?</td>
+                    <td id="touch-accessible">Are features designed to be fully functional using touch screens? <br>
+                        <a href="/templates/general/interactives/keyboard.html" class="link" target="_blank">Keyboard <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <td class="checkbox-td">
                         <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-3-pass" name="chk6-3-pass" aria-labelledby="pass touch-accessible">
@@ -1451,7 +1539,9 @@
                 </tr>
                 <!-- Fourth Checkpoint for Interactives -->
                 <tr>
-                    <td id="realistic-interactions">Are the design interactions realistic from a tabbing, touch or voice perspective?</td>
+                    <td id="realistic-interactions">Are the design interactions realistic from a tabbing, touch or voice perspective? <br>
+                        <a href="/templates/general/structure/page.html" class="link" target="_blank">Meaningful Sequence <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <td class="checkbox-td">
                         <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-4-pass" name="chk6-4-pass" aria-labelledby="pass realistic-interactions">
@@ -1479,7 +1569,9 @@
                 </tr>
                 <!-- Fifth Checkpoint for Interactives -->
                 <tr>
-                    <td id="voice-commands">Can the design interactions be operated through voice commands?</td>
+                    <td id="voice-commands">Can the design interactions be operated through voice commands? <br>
+                        <a href="/templates/general/interactives/label-in-name.html" class="link" target="_blank">Label in Name<i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <td class="checkbox-td">
                         <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-5-pass" name="chk6-5-pass" aria-labelledby="pass voice-commands">
@@ -1507,7 +1599,9 @@
                 </tr>
                 <!-- Sixth Checkpoint for Interactives -->
                 <tr>
-                    <td id="limited-tab-stops">Is the focus order structured to ensure a logical navigation sequence?</td>
+                    <td id="limited-tab-stops">Is the focus order structured to ensure a logical navigation sequence? <br>
+                        <a href="/templates/general/interactives/focus-order.html" class="link" target="_blank">Focus Order <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <td class="checkbox-td">
                         <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-6-pass" name="chk6-6-pass" aria-labelledby="pass limited-tab-stops">
@@ -1535,7 +1629,9 @@
                 </tr>
                 <!-- Seventh Checkpoint for Interactives -->
                 <tr>
-                    <td id="focus-visible">Has a visible focus indicator been provided for all interactive elements?</td>
+                    <td id="focus-visible">Has a visible focus indicator been provided for all interactive elements? <br>
+                        <a href="/templates/general/interactives/focus-visible.html" class="link" target="_blank">Focus Visible <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <td class="checkbox-td">
                         <div class="custom-checkbox">
                             <input type="checkbox" id="chk6-7-pass" name="chk6-7-pass" aria-labelledby="pass focus-visible">
@@ -1561,13 +1657,45 @@
                         </div>
                     </td>
                 </tr>
+                <!-- Eighth Checkpoint for Interactives -->
+                <tr>
+                    <td id="focus-visible">Are all interactive elements designed with a minimum touch target size of 44x44 CSS pixels? <br>
+                        <a href="/templates/general/interactives/touch-target.html" class="link" target="_blank">Target Size <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
+                    <td class="checkbox-td">
+                        <div class="custom-checkbox">
+                            <input type="checkbox" id="chk6-8-pass" name="chk6-8-pass" aria-labelledby="pass focus-visible">
+                            <span></span>
+                        </div>
+                    </td>
+                    <td class="checkbox-td">
+                        <div class="custom-checkbox">
+                            <input type="checkbox" id="chk6-8-fail" name="chk6-8-fail" aria-labelledby="fail focus-visible">
+                            <span></span>
+                        </div>
+                    </td>
+                    <td class="checkbox-td">
+                        <div class="custom-checkbox">
+                            <input type="checkbox" id="chk6-8-annotated" name="chk6-8-annotated" aria-labelledby="annotated focus-visible">
+                            <span></span>
+                        </div>
+                    </td>
+                    <td class="checkbox-td">
+                        <div class="custom-checkbox">
+                            <input type="checkbox" id="chk6-8-na" name="chk6-8-na" aria-labelledby="na focus-visible">
+                            <span></span>
+                        </div>
+                    </td>
+                </tr>
                 <!-- Row 1 for Heuristic 7: Movement and Flashing -->
                 <tr>
                     <th scope="row" rowspan="7">7</th> <!-- Adjust rowspan as needed for the number of checkpoints -->
                     <td rowspan="7">Movement and Flashing</td>
                     <td rowspan="7">Elements on the page that move, flash, or animate in other ways can be stopped, and do not distract or harm the users.</td> 
                     <!-- First Checkpoint for Movement and Flashing -->
-                    <td id="pause-content">Can moving or animated content be paused, stopped, or hidden?</td>
+                    <td id="pause-content">Can moving or animated content be paused, stopped, or hidden? <br>
+                        <a href="/templates/general/non-text-content/pause-stop-hide.html" class="link" target="_blank">Pause, Stop, Hide <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -1600,7 +1728,9 @@
                 </tr>
                 <!-- Row 2: Second Checkpoint for Heuristic 7: Movement and Flashing -->
                 <tr>
-                    <td id="control-updates">Can auto-updated content be fully controlled by the users?</td>
+                    <td id="control-updates">Can auto-updated content be fully controlled by the users? <br>
+                        <a href="/templates/general/non-text-content/pause-stop-hide.html" class="link" target="_blank">Pause, Stop, Hide <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -1633,7 +1763,9 @@
                 </tr>
                 <!-- Row 3: Third Checkpoint for Heuristic 7: Movement and Flashing -->
                 <tr>
-                    <td id="update-rate">Can the rate at which content is auto-updated be controlled by the user?</td>
+                    <td id="update-rate">Can the timing be adjusted for content that is temporarily available be controlled by the user? <br>
+                        <a href="/templates/general/non-text-content/timing-adjustable.html" class="link" target="_blank">Timing Adjustable <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -1666,7 +1798,9 @@
                 </tr>
                 <!-- Row 4: Fourth Checkpoint for Heuristic 7: Movement and Flashing -->
                 <tr>
-                    <td id="no-autoplay">Are video and audio files not set to auto-play?</td>
+                    <td id="no-autoplay">Are video and audio files not set to auto-play? <br>
+                        <a href="/templates/general/non-text-content/pause-stop-hide.html" class="link" target="_blank">Pause, Stop, Hide <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -1699,7 +1833,9 @@
                 </tr>
                 <!-- Row 5: Fifth Checkpoint for Heuristic 7: Movement and Flashing -->
                 <tr>
-                    <td id="adjustable-volume">Is audio volume adjustable via a visible control?</td>
+                    <td id="adjustable-volume">Is audio volume adjustable via a visible control? <br>
+                        <a href="/templates/general/non-text-content/pause-stop-hide.html" class="link" target="_blank">Pause, Stop, Hide <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -1732,7 +1868,9 @@
                 </tr>
                 <!-- Row 6: Sixth Checkpoint for Heuristic 7: Movement and Flashing -->
                 <tr>
-                    <td id="no-flashing">Are there any flashing or blinking effects faster than 3 times per second?</td>
+                    <td id="no-flashing">Are there any flashing or blinking effects faster than 3 times per second? <br>
+                        <a href="/templates/general/non-text-content/three-flashes.html" class="link" target="_blank">Three Flashes or Below <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -1765,7 +1903,9 @@
                 </tr>
                 <!-- Row 7: Seventh Checkpoint for Heuristic 7: Movement and Flashing -->
                 <tr>
-                    <td id="quick-reactions">Are users required to react quickly to information or user interface features?</td>
+                    <td id="quick-reactions">Is auto updating content dynamically announced to screen reader users? <br>
+                        <a href="/templates/general/interactives/dynamic-changes.html" class="link" target="_blank">Dynamic Chagnes <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -1798,11 +1938,13 @@
                 </tr>
                 <!-- Row 1 for Heuristic 8: Timing and Preservation -->
                 <tr>
-                    <th scope="row" rowspan="7">8</th> <!-- Adjust rowspan as needed for the number of checkpoints -->
-                    <td rowspan="7">Timing and Preservation</td>
-                    <td rowspan="7">Users are given enough time to complete tasks and do not lose information if their time (i.e., a session) runs out.</td> 
+                    <th scope="row" rowspan="5">8</th> <!-- Adjust rowspan as needed for the number of checkpoints -->
+                    <td rowspan="5">Timing and Preservation</td>
+                    <td rowspan="5">Users are given enough time to complete tasks and do not lose information if their time (i.e., a session) runs out.</td> 
                     <!-- First Checkpoint for Timing and Preservation -->
-                    <td id="time-extension-mechanism">Are users provided with a mechanism to ask for time extensions ahead of time?</td>
+                    <td id="time-extension-mechanism">Are users provided with a mechanism to ask for time extensions ahead of time? <br>
+                        <a href="/templates/general/non-text-content/timing-adjustable.html" class="link" target="_blank">Timing Adjustable <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -1835,7 +1977,9 @@
                 </tr>
                 <!-- Row 2: Second Checkpoint for Heuristic 8: Timing and Preservation -->
                 <tr>
-                    <td id="session-timeout-warning">Are upcoming session timeouts clearly identified as such in the design?</td>
+                    <td id="session-timeout-warning">Are upcoming session timeouts clearly identified as such in the design? <br>
+                        <a href="/templates/general/non-text-content/timing-adjustable.html" class="link" target="_blank">Timing Adjustable <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -1868,7 +2012,9 @@
                 </tr>
                 <!-- Row 3: Third Checkpoint for Heuristic 8: Timing and Preservation -->
                 <tr>
-                    <td id="time-limit-control">Can users turn off, adjust or extend time limits when sessions are about to run out?</td>
+                    <td id="time-limit-control">Can users turn off, adjust or extend time limits when sessions are about to run out? <br>
+                        <a href="/templates/general/non-text-content/timing-adjustable.html" class="link" target="_blank">Timing Adjustable <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -1901,7 +2047,9 @@
                 </tr>
                 <!-- Row 4: Fourth Checkpoint for Heuristic 8: Timing and Preservation -->
                 <tr>
-                    <td id="suppress-interruptions">Does the design offer options to postpone or suppress interruptions?</td>
+                    <td id="suppress-interruptions">Does the design offer options to postpone or suppress interruptions? <br>
+                        <a href="/templates/general/non-text-content/timing-adjustable.html" class="link" target="_blank">Timing Adjustable <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -1934,7 +2082,9 @@
                 </tr>
                 <!-- Row 5: Fifth Checkpoint for Heuristic 8: Timing and Preservation -->
                 <tr>
-                    <td id="user-requested-updates">Can users request content updates, instead of content being updated automatically?</td>
+                    <td id="user-requested-updates">Can users request content updates, instead of content being updated automatically? <br>
+                        <a href="/templates/general/non-text-content/timing-adjustable.html" class="link" target="_blank">Timing Adjustable <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -1965,79 +2115,15 @@
                         </div>
                     </td>
                 </tr>
-                <!-- Row 6: Sixth Checkpoint for Heuristic 8: Timing and Preservation -->
-                <tr>
-                    <td id="data-recovery">Is there a mechanism to allow data recovery after users re-authenticate?</td>
-                    <!-- Status Checkboxes -->
-                    <td class="checkbox-td">
-                        <!-- Pass Checkbox -->
-                        <div class="custom-checkbox">
-                            <input type="checkbox" id="chk8-6-pass" name="chk8-6-pass" aria-labelledby="pass data-recovery">
-                            <span></span>
-                        </div>
-                    </td>
-                    <td class="checkbox-td">
-                        <!-- Fail Checkbox -->
-                        <div class="custom-checkbox">
-                            <input type="checkbox" id="chk8-6-fail" name="chk8-6-fail" aria-labelledby="fail data-recovery">
-                            <span></span>
-                        </div>
-                    </td>
-                    <td class="checkbox-td">
-                        <!-- Annotated Checkbox -->
-                        <div class="custom-checkbox">
-                            <input type="checkbox" id="chk8-6-annotated" name="chk8-6-annotated" aria-labelledby="annotated data-recovery">
-                            <span></span>
-                        </div>
-                    </td>
-                    <td class="checkbox-td">
-                        <!-- N/A Checkbox -->
-                        <div class="custom-checkbox">
-                            <input type="checkbox" id="chk8-6-na" name="chk8-6-na" aria-labelledby="na data-recovery">
-                            <span></span>
-                        </div>
-                    </td>
-                </tr>
-                <!-- Row 7: Seventh Checkpoint for Heuristic 8: Timing and Preservation -->
-                <tr>
-                    <td id="form-save-data">Can users save data while filling out forms, so it can be used after re-authentication?</td>
-                    <!-- Status Checkboxes -->
-                    <td class="checkbox-td">
-                        <!-- Pass Checkbox -->
-                        <div class="custom-checkbox">
-                            <input type="checkbox" id="chk8-7-pass" name="chk8-7-pass" aria-labelledby="pass form-save-data">
-                            <span></span>
-                        </div>
-                    </td>
-                    <td class="checkbox-td">
-                        <!-- Fail Checkbox -->
-                        <div class="custom-checkbox">
-                            <input type="checkbox" id="chk8-7-fail" name="chk8-7-fail" aria-labelledby="fail form-save-data">
-                            <span></span>
-                        </div>
-                    </td>
-                    <td class="checkbox-td">
-                        <!-- Annotated Checkbox -->
-                        <div class="custom-checkbox">
-                            <input type="checkbox" id="chk8-7-annotated" name="chk8-7-annotated" aria-labelledby="annotated form-save-data">
-                            <span></span>
-                        </div>
-                    </td>
-                    <td class="checkbox-td">
-                        <!-- N/A Checkbox -->
-                        <div class="custom-checkbox">
-                            <input type="checkbox" id="chk8-7-na" name="chk8-7-na" aria-labelledby="na form-save-data">
-                            <span></span>
-                        </div>
-                    </td>
-                </tr>
                 <!-- Row 1 for Heuristic 9: Screen Magnification -->
                 <tr>
                     <th scope="row" rowspan="7">9</th> <!-- Adjust rowspan as needed for the number of checkpoints -->
                     <td rowspan="7">Screen Magnification</td>
                     <td rowspan="7">Users are given the ability to resize text up to 200%, zoom and scale up to 400% without loss of content or functionality and/or required scrolling in 2 dimensions.</td> 
                     <!-- First Checkpoint for Screen Magnification -->
-                    <td id="zoom-restriction">Is zooming or scaling limited or restricted?</td>
+                    <td id="zoom-restriction">Is zooming or scaling limited or restricted? <br>
+                        <a href="/templates/general/screen-magnification/resize.html" class="link" target="_blank">Resize Text <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -2070,7 +2156,9 @@
                 </tr>
                 <!-- Row 2: Second Checkpoint for Heuristic 9: Screen Magnification -->
                 <tr>
-                    <td id="resize-200">Are users able to resize text up to 200 percent without loss of content or functionality?</td>
+                    <td id="resize-200">Are users able to resize text up to 200 percent without loss of content or functionality? <br>
+                        <a href="/templates/general/screen-magnification/resize.html" class="link" target="_blank">Resize Text <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -2103,7 +2191,9 @@
                 </tr>
                 <!-- Row 3: Third Checkpoint for Heuristic 9: Screen Magnification -->
                 <tr>
-                    <td id="accommodate-text-scaling">Do web designs accommodate text scaling while preserving content and functionality?</td>
+                    <td id="accommodate-text-scaling">Do web designs accommodate text scaling while preserving content and functionality? <br>
+                        <a href="/templates/general/screen-magnification/resize.html" class="link" target="_blank">Resize Text <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -2136,7 +2226,9 @@
                 </tr>
                 <!-- Row 4: Fourth Checkpoint for Heuristic 9: Screen Magnification -->
                 <tr>
-                    <td id="resize-400">Are users able to resize text up to 400 percent without loss of content or functionality?</td>
+                    <td id="resize-400">Are users able to resize text up to 400 percent without loss of content or functionality? <br>
+                        <a href="/templates/general/screen-magnification/reflow.html" class="link" target="_blank">Reflow <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -2169,7 +2261,9 @@
                 </tr>
                 <!-- Row 5: Fifth Checkpoint for Heuristic 9: Screen Magnification -->
                 <tr>
-                    <td id="two-dim-scrolling">When users resize up to 400% is scrolling required in two dimensions?</td>
+                    <td id="two-dim-scrolling">When users resize up to 400% is scrolling required in two dimensions? <br>
+                        <a href="/templates/general/screen-magnification/reflow.html" class="link" target="_blank">Reflow <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -2202,7 +2296,9 @@
                 </tr>
                 <!-- Row 6: Sixth Checkpoint for Heuristic 9: Screen Magnification -->
                 <tr>
-                    <td id="content-visibility">Does all meaningful content remain available and not obscured or cut off due to resizing?</td>
+                    <td id="content-visibility">Does all meaningful content remain available and not obscured or cut off due to resizing? <br>
+                        <a href="/templates/general/screen-magnification/reflow.html" class="link" target="_blank">Reflow <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->
@@ -2235,7 +2331,9 @@
                 </tr>
                 <!-- Row 7: Seventh Checkpoint for Heuristic 9: Screen Magnification -->
                 <tr>
-                    <td id="text-spacing">When text spacing is applied is there a loss of content or functionality?</td>
+                    <td id="text-spacing">When text spacing is applied is there a loss of content or functionality? <br>
+                        <a href="/templates/general/screen-magnification/text-spacing.html" class="link" target="_blank">Text Spacing <i class="bi bi-box-arrow-up-right"><span class="sr-only">
+                            Opens in new tab</span></i></a></td>
                     <!-- Status Checkboxes -->
                     <td class="checkbox-td">
                         <!-- Pass Checkbox -->

@@ -32,6 +32,19 @@ document.querySelectorAll(".copy-btn").forEach((button) => {
     });
 });
 
+//Skip Link
+document.addEventListener('DOMContentLoaded', function() {
+  const skipLink = document.querySelector('.skip-link');
+  const mainContent = document.querySelector('#main-content');
+
+  if (skipLink && mainContent) { // Check if both elements exist
+    skipLink.addEventListener('click', function(e) {
+      mainContent.focus(); // Send focus to main content
+    });
+  }
+});
+
+
 // Checklist Script to save and reset local storage
 // Document ready function
 $(document).ready(function() {
@@ -366,7 +379,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-// Script for A11y Checklist page - Project Info Form and Detail Editting and Resetting
+// Script for A11y Checklist page - Project Info Form and Detail Editing and Resetting
 document.addEventListener('DOMContentLoaded', function() {
   // Check if the form exists on the page
   const form = document.getElementById('project-details-form');
@@ -380,13 +393,15 @@ document.addEventListener('DOMContentLoaded', function() {
       const role = document.getElementById('role').value;
       const name = document.getElementById('name').value;
       const date = document.getElementById('date').value;
+      const comments = document.getElementById('comments').value; // Get comments value
 
       // Save data to local storage
       const projectData = {
         projectTitle: projectTitle,
         role: role,
         name: name,
-        date: date
+        date: date,
+        comments: comments // Include comments in projectData
       };
       localStorage.setItem('projectData', JSON.stringify(projectData));
 
@@ -403,6 +418,7 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('display-role').textContent = data.role || 'N/A';
       document.getElementById('display-name').textContent = data.name || 'N/A';
       document.getElementById('display-date').textContent = data.date || 'N/A';
+      document.getElementById('display-comments').textContent = data.comments || 'N/A'; // Display comments
       document.getElementById('project-info').style.display = 'block';
     }
 
@@ -423,6 +439,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('role').value = storedData.role;
         document.getElementById('name').value = storedData.name;
         document.getElementById('date').value = storedData.date;
+        document.getElementById('comments').value = storedData.comments; // Restore comments
       }
       document.getElementById('project-details-form').style.display = 'block';
       document.getElementById('project-info').style.display = 'none';
@@ -441,6 +458,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
 
 // A11y Checklist page - Export table to Excel blank 
 
