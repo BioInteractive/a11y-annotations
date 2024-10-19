@@ -900,3 +900,29 @@ p.dev-tag {
     background-color: #b7b7b8;
     font-weight: 600;
 }
+
+.skip-link {
+  position: absolute;
+  top: -200px; /* Hidden off-screen */
+  left: 0;
+  padding: 8px;
+  margin-left: 8px;
+  background-color: #000;
+  color: #fff;
+  z-index: 1000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: top 0.3s ease; /* Smooth transition */
+}
+
+.skip-link:focus {
+  top: 75px; /* Visible when focused */
+}
+
+.skip-link:hover {
+  color: var(--accent-green);
+}
+
+#main-content {
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}
