@@ -540,7 +540,7 @@ document.addEventListener('DOMContentLoaded', function() {
           const query = document.getElementById('search-input').value.trim();
           if (query) {
               // Redirect to the search results page, passing the search query as a URL parameter
-              window.location.href = `/default/search.html?query=${encodeURIComponent(query)}`;
+              window.location.href = `/a11y-annotations/default/search.html?query=${encodeURIComponent(query)}`;
           }
       }
 
