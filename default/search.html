@@ -38,7 +38,7 @@
             <main class="col-md-9" id="main-content" tabindex="-1">
                 <div class="container-xxl bd-gutter mt-3">
                     <h1 class="mb-3">Search Results</h1>
-
+                    
                     <!-- Results inserted here -->
                     <div id="results">Please type a search term in the header Search field for results.</div>
                                                                          
@@ -70,98 +70,79 @@
 
 
     <!-- Enhanced Search Function -->
-<script>
-    // Function to extract query parameters from URL
-    function getQueryParam(param) {
-        const urlParams = new URLSearchParams(window.location.search);
-        return urlParams.get(param);
-    }
-
-    // Perform search when the page loads
-    window.onload = function() {
-        const query = getQueryParam('query');  // Extract 'query' parameter from URL
-        if (query) {
-            // Perform the search using the query parameter
-            performSearchByQuery(query);
+    <script>
+        // Function to extract query parameters from URL
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
         }
-    }
-
-    // Perform search by query
-    function performSearchByQuery(query) {
-        const resultsContainer = document.getElementById('results');
-        resultsContainer.innerHTML = '';  // Clear previous results
-
-        const results = pages.filter(page =>
-            page.title.toLowerCase().includes(query.toLowerCase()) ||
-            page.description.toLowerCase().includes(query.toLowerCase()) ||
-            page.content && page.content.toLowerCase().includes(query.toLowerCase())  // Search in the content field
-        );
-
-        if (results.length > 0) {
-            results.forEach(result => {
-                const resultItem = document.createElement('div');
-                resultItem.classList.add('result-item');
-
-                // Title and link
-                const titleLink = `<a href="${result.url}">${result.title}</a>`;
-                const matchedContent = highlightMatch(result.content, query);  // Optional: Highlight the matched keyword in the content
-
-                // WCAG Criteria
-                let wcagList = '';
-                if (result.wcagCriteria && result.wcagCriteria.length > 0) {
-                    wcagList = '<ul>';
-                    result.wcagCriteria.forEach(criteria => {
-                        wcagList += `<li><strong>WCAG ${criteria.id}</strong>: ${criteria.description}</li>`;
-                    });
-                    wcagList += '</ul>';
-                }
-
-                // Build the result item
-                resultItem.innerHTML = `
-                    ${titleLink}
-                    <p>${matchedContent}</p>  <!-- Display the matched content -->
-                    ${wcagList}  <!-- Display the WCAG list -->
-                `;
-                resultsContainer.appendChild(resultItem);
-            });
-        } else {
-            resultsContainer.innerHTML = '<p>No results found.</p>';
-        }
-    }
-
-    // Optional function to highlight the matching text in the paragraph
-    function highlightMatch(content, query) {
-        if (!content) return '';  // If there's no content field, return an empty string
-        const regex = new RegExp(`(${query})`, 'gi');
-        return content.replace(regex, '<mark>$1</mark>');  // Highlight the matching keyword in the paragraph
-    }
-</script>
-
-
-<!-- Comment out for local development and enable for production --> 
-
-<script>
-    $(document).ready(function() {
-        // Select all anchor tags on the page
-        $("a").each(function() {
-            // Get the current href attribute
-            var currentHref = $(this).attr("href");
-            
-            // Check if the href exists and doesn't already start with "/a11y-annotations"
-            if (currentHref && !currentHref.startsWith("/a11y-annotations")) {
-                // Add "/a11y-annotations" to the beginning of the href attribute
-                var newHref = "/a11y-annotations" + currentHref;
-                
-                // Update the href attribute with the new value
-                $(this).attr("href", newHref);
+    
+        // Perform search when the page loads
+        window.onload = function() {
+            const query = getQueryParam('query');  // Extract 'query' parameter from URL
+            if (query) {
+                // Perform the search using the query parameter
+                performSearchByQuery(query);
             }
-        });
-    });
-</script>
-
-
-
-
+        }
+    
+        // Perform search by query
+        function performSearchByQuery(query) {
+            const resultsContainer = document.getElementById('results');
+            resultsContainer.innerHTML = '';  // Clear previous results
+    
+            // Display the search term and count of results
+            const searchInfo = document.createElement('p');
+            resultsContainer.appendChild(searchInfo);  // Append search info to results container
+    
+            const results = pages.filter(page =>
+                page.title.toLowerCase().includes(query.toLowerCase()) ||
+                page.description.toLowerCase().includes(query.toLowerCase()) ||
+                (page.content && page.content.toLowerCase().includes(query.toLowerCase()))  // Search in the content field
+            );
+    
+            // Update the search term and result count at the top
+            searchInfo.innerHTML = `You searched for: <strong>${query}</strong> | Number of results: <strong>${results.length}</strong>`;
+    
+            if (results.length > 0) {
+                results.forEach(result => {
+                    const resultItem = document.createElement('div');
+                    resultItem.classList.add('result-item');
+    
+                    // Title and link
+                    const titleLink = `<a href="${result.url}">${result.title}</a>`;
+                    const matchedContent = highlightMatch(result.content, query);  // Optional: Highlight the matched keyword in the content
+    
+                    // WCAG Criteria
+                    let wcagList = '';
+                    if (result.wcagCriteria && result.wcagCriteria.length > 0) {
+                        wcagList = '<ul>';
+                        result.wcagCriteria.forEach(criteria => {
+                            wcagList += `<li><strong>WCAG ${criteria.id}</strong>: ${criteria.description}</li>`;
+                        });
+                        wcagList += '</ul>';
+                    }
+    
+                    // Build the result item
+                    resultItem.innerHTML = `
+                        ${titleLink}
+                        <p>${matchedContent}</p>  <!-- Display the matched content -->
+                        ${wcagList}  <!-- Display the WCAG list -->
+                    `;
+                    resultsContainer.appendChild(resultItem);
+                });
+            } else {
+                resultsContainer.innerHTML += '<p>No results found.</p>';
+            }
+        }
+    
+        // Optional function to highlight the matching text in the paragraph
+        function highlightMatch(content, query) {
+            if (!content) return '';  // If there's no content field, return an empty string
+            const regex = new RegExp(`(${query})`, 'gi');
+            return content.replace(regex, '<mark>$1</mark>');  // Highlight the matching keyword in the paragraph
+        }
+    </script>    
 
 </body>
 </html>
