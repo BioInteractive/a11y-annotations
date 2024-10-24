@@ -138,6 +138,29 @@
 </script>
 
 
+<!-- Comment out for local development and enable for production --> 
+
+<script>
+    $(document).ready(function() {
+        // Select all anchor tags on the page
+        $("a").each(function() {
+            // Get the current href attribute
+            var currentHref = $(this).attr("href");
+            
+            // Check if the href exists and doesn't already start with "/a11y-annotations"
+            if (currentHref && !currentHref.startsWith("/a11y-annotations")) {
+                // Add "/a11y-annotations" to the beginning of the href attribute
+                var newHref = "/a11y-annotations" + currentHref;
+                
+                // Update the href attribute with the new value
+                $(this).attr("href", newHref);
+            }
+        });
+    });
+</script>
+
+
+
 
 
 </body>
