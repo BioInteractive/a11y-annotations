@@ -421,7 +421,11 @@ p.dev-tag {
   display: flex;
   gap: 1rem;
   margin-top: 2rem;
+  justify-content: end;
+  flex-wrap: wrap;
 }
+
+
 /* Link vs Button Call out styles */
 .heading-callout-container {
   display: flex;
