@@ -110,7 +110,7 @@
                     resultItem.classList.add('result-item');
     
                     // Title and link
-                    const titleLink = `<a href="${result.url}">${result.title}</a>`;
+                    const titleLink = `<h2 class="search-h2"><a href="${result.url}">${result.title}</a></h2>`;
                     const matchedContent = highlightMatch(result.content, query);  // Optional: Highlight the matched keyword in the content
     
                     // WCAG Criteria

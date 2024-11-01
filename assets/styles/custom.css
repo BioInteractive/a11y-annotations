@@ -904,6 +904,10 @@ p.dev-tag {
     background-color: #b7b7b8;
     font-weight: 600;
 }
+/* Search Results Heading */
+.search-h2 {
+  font-size: 1.25rem;
+}
 
 .skip-link {
   position: absolute;

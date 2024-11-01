@@ -421,6 +421,15 @@ document.addEventListener('DOMContentLoaded', function () {
           ]
         },
         {
+          "title": "Bypass Blocks",
+          "url": "/a11y-annotations/templates/general/interactives/bypass-blocks.html",
+          "description": "Explore how bypass blocks enhance accessibility by allowing users to skip repetitive content, improving navigation for keyboard-only and screen reader users.",
+          "content": "Bypass blocks provide mechanisms, such as skip links, that allow users to bypass repetitive sections like navigation menus and footers, enabling faster access to main content. They are especially beneficial for keyboard and screen reader users, allowing for smoother navigation and a more efficient browsing experience. Implementing bypass blocks effectively meets accessibility requirements and ensures that key content is easily reachable for all users.",
+          "wcagCriteria": [
+            { "id": "2.4.1", "description": "Bypass Blocks - A mechanism is available to bypass blocks of content that are repeated on multiple web pages." }
+          ]
+        },        
+        {
           title: 'Headings',
           url: '/a11y-annotations/templates/general/structure/headings.html',
           description: 'How to structure headings for accessibility, ensuring a logical and meaningful hierarchy for better navigation and understanding.',
@@ -434,11 +443,10 @@ document.addEventListener('DOMContentLoaded', function () {
           title: 'Page',
           url: '/a11y-annotations/templates/general/structure/page.html',
           description: 'Guidelines for developers, designers, and auditors to ensure the structure of a webpage meets accessibility requirements.',
-          content: 'This page covers critical accessibility guidelines for developing web pages, including meaningful sequence, correct orientation, bypass blocks, page titles, multiple ways to navigate, and proper language specification...',
+          content: 'This page covers critical accessibility guidelines for developing web pages, including meaningful sequence, correct orientation, page titles, multiple ways to navigate, and proper language specification...',
           wcagCriteria: [
               { id: '1.3.2', description: 'Meaningful Sequence - Content is presented in a logical reading sequence.' },
               { id: '1.3.4', description: 'Orientation - Content is accessible in both portrait and landscape orientations.' },
-              { id: '2.4.1', description: 'Bypass Blocks - A mechanism is available to bypass repeated blocks of content.' },
               { id: '2.4.2', description: 'Page Titled - Web pages have titles that describe the topic or purpose.' },
               { id: '2.4.5', description: 'Multiple Ways - More than one way is available to locate a webpage within a set of webpages.' },
               { id: '3.1.1', description: 'Language of Page - The default language of the webpage is programmatically determined.' },
