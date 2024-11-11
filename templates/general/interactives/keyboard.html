@@ -65,6 +65,14 @@
                             <li>If keyboard focus can be moved to a component, it must also be possible to move it away using just the keyboard. This helps prevent users from getting trapped in a specific part of the page.</li>
                             <li>If moving focus away requires more than the basic arrow or tab keys, or other standard methods, users must be informed of how to do this. This ensures users are aware of how to navigate freely without encountering barriers.</li>
                           </ul>
+                          <p>
+                            <a href="https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts" target="_blank" rel="noopener noreferrer">2.1.4 Character Key Shortcuts</a> This success criterion ensures that if a keyboard shortcut is implemented using a single character key, it can be turned off, remapped, or activated only on focus. This is critical for users who may inadvertently trigger shortcuts or have difficulty using them, such as those with motor disabilities or screen reader users.
+                          </p>
+                          <ul role="list" class="fancy-checklist">
+                            <li>If single character key shortcuts are available, users should be able to turn them off or remap them to avoid accidental activation.</li>
+                            <li>Shortcuts should only activate when the specific interface component has focus to prevent conflicts with assistive technologies or other user inputs.</li>
+                            <li>Ensure that users are aware of the existence of these shortcuts and provide a way to customize or disable them as needed.</li>
+                          </ul>                          
                         </div>
                       </div>
                     </div>
@@ -168,12 +176,18 @@
                             <li><strong>Equal Functionality:</strong> If an element offers functionality to pointer device users, ensure equivalent functionality is available for keyboard users. This may involve adding specific event listeners for key events to interactive elements.</li>
                             <li><strong>No Timing Dependency:</strong> All functionalities must be operable via a keyboard interface without relying on specific timings for keystrokes, accommodating users who require more time to type or navigate.</li>
                             <li><strong>Manage Focus for Modals and Dialogs:</strong> Implement mechanisms to trap focus within modal dialogs or complex widgets when active, but also provide an easy method for users to escape (untrap focus) using only the keyboard.</li>
-                            <li><strong>Avoid Keyboard Traps:</strong> Be vigilant to ensure that users can navigate to and from all interactive elements without getting stuck in any part of the content. Always provide a mechanism to escape focus traps.</li>
-                            <li><strong>Comprehensive Testing:</strong> Test all web content for keyboard accessibility rigorously, including manual testing and automated tools to identify and resolve potential keyboard navigation issues.</li>
+                            <li><strong>Avoid Keyboard Traps:</strong> Ensure that users can navigate to and from all interactive elements without getting stuck in any part of the content. Provide clear mechanisms for users to move focus away from any trapped area using standard keyboard inputs like Tab or Escape.</li>
+                            <li><strong>Implement Character Key Shortcuts Responsibly:</strong> 
+                              <ul>
+                                <li>If single-character key shortcuts are used, ensure users can turn them off, remap them, or limit their activation to when a specific interface component is focused.</li>
+                                <li>Be mindful of conflicts with assistive technologies and other user inputs. Shortcuts should not interfere with screen readers or other keyboard commands.</li>
+                                <li>Provide a clear method in settings or controls for users to customize or disable shortcuts as needed.</li>
+                              </ul>
+                            </li>
+                            <li><strong>Comprehensive Testing:</strong> Test all web content rigorously for keyboard accessibility. This includes manual testing by navigating through the interface using only the keyboard, as well as using automated tools to identify and resolve potential issues.</li>
                           </ul>
-                          <p>Adhering to these guidelines ensures that your website or application is accessible to users relying on keyboard navigation, fulfilling WCAG 2.1.1 requirements and enhancing overall usability.</p>
-                        </div>                        
-                        </div>
+                          <p>Adhering to these guidelines ensures your website or application meets WCAG 2.1.1, 2.1.2, and 2.1.4 requirements, making it accessible and user-friendly for those relying on keyboard navigation.</p>
+                        </div>                                               
                       </div>
                     </div>
                     <!-- Accordion Item Five -->
@@ -186,17 +200,15 @@
                       <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" style="">
                         <div class="accordion-body">
                           <ul role="list">
-                            <li><a href="https://webaim.org/techniques/keyboard/" target="_blank">WebAIM - Keyboard Accessibility</a></li>
-                            <li><a href="https://dequeuniversity.com/" target="_blank">Deque University - Keyboard Accessibility Course</a></li>
-                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets" target="_blank">MDN Web Docs - Keyboard-navigable JavaScript widgets</a></li>
-                            <li><a href="https://www.paciellogroup.com/blog/2019/01/keyboard-navigation/" target="_blank">The Paciello Group - Keyboard Navigation</a></li>
-                            <li><a href="https://a11yproject.com/posts/2013-01-11-how-do-you-make-your-site-keyboard-navigable/" target="_blank">A11y Project - Keyboard Navigation Guide</a></li>
-                            <li><a href="https://www.smashingmagazine.com/2020/07/keyboard-accessibility-web-design/" target="_blank">Smashing Magazine - Keyboard Accessibility: A Comprehensive Guide</a></li>
-                            <li><a href="https://www.deque.com/blog/focus-management-in-web-applications/" target="_blank">Deque Systems - Focus Management in Web Applications</a></li>
-                            <li><a href="https://www.w3.org/TR/wai-aria-practices/#keyboard-interaction" target="_blank">WAI-ARIA Authoring Practices - Keyboard Interaction</a></li>
-                            <li><a href="https://css-tricks.com/focus-styles-and-accessibility/" target="_blank">CSS-Tricks - Keyboard Navigation For Better Accessibility</a></li>
-                          </ul>                                                                            
-                        </div>
+                            <li><a href="https://webaim.org/techniques/keyboard/" target="_blank" rel="noopener noreferrer">WebAIM - Keyboard Accessibility</a></li>
+                            <li><a href="https://dequeuniversity.com/tips/keyboard-accessible" target="_blank" rel="noopener noreferrer">Deque University - Ensure All Interactive Features Are Keyboard-Accessible</a></li>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets" target="_blank" rel="noopener noreferrer">MDN Web Docs - Keyboard-Navigable JavaScript Widgets</a></li>
+                            <li><a href="https://www.smashingmagazine.com/2022/11/guide-keyboard-accessibility-html-css-part1/" target="_blank" rel="noopener noreferrer">Smashing Magazine - A Guide To Keyboard Accessibility: HTML And CSS (Part 1)</a></li>
+                            <li><a href="https://www.smashingmagazine.com/2022/11/guide-keyboard-accessibility-javascript-part2/" target="_blank" rel="noopener noreferrer">Smashing Magazine - A Guide To Keyboard Accessibility: JavaScript (Part 2)</a></li>
+                            <li><a href="https://www.digitala11y.com/understanding-sc-2-1-2-no-keyboard-trap/" target="_blank" rel="noopener noreferrer">DigitalA11y - Understanding WCAG SC 2.1.2 No Keyboard Trap</a></li>
+                            <li><a href="https://www.accessibilityfordevelopers.com/avoid-keyboard-traps/" target="_blank" rel="noopener noreferrer">Accessibility for Developers - Avoid Keyboard Traps</a></li>
+                          </ul>
+                        </div>                                                                   
                       </div>
                     </div>                    
                   </div>
