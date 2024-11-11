@@ -41,17 +41,35 @@
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                         <div class="accordion-body">
                           <ul role="list" class="fancy-checklist">
-                            <li><a href="https://www.w3.org/WAI/WCAG20/Understanding/media-equiv.html" target="_blank" rel="noopener noreferrer">1.2.1 Audio-only and Video-only</a> For prerecorded audio-only and prerecorded video-only media, the following are true, except when the audio or video is a media alternative for text and is clearly labeled as such:
+                            <li>
+                              <a href="https://www.w3.org/WAI/WCAG20/Understanding/media-equiv.html" target="_blank" rel="noopener noreferrer">1.2.1 Audio-only and Video-only</a>
+                              For prerecorded audio-only and prerecorded video-only media, the following are true, except when the audio or video is a media alternative for text and is clearly labeled as such:
                               <ul role="list" class="no-pseudo-elements" style="list-style-type: circle;">
                                 <li style="padding-left: 5px;"><strong>Prerecorded Audio-only:</strong> An alternative for time-based media is provided that presents equivalent information for prerecorded audio-only content.</li>
                                 <li style="padding-left: 5px;"><strong>Prerecorded Video-only:</strong> Either an alternative for time-based media or an audio track is provided that presents equivalent information for prerecorded video-only content.</li>
                               </ul>
                             </li>
-                            <li><a href="https://www.w3.org/WAI/WCAG20/Understanding/captions-prerecorded.html" target="_blank" rel="noopener noreferrer">1.2.2 Captions (Prerecorded)</a> Captions are provided for all prerecorded audio content in synchronized media, except when the media is a media alternative for text and is clearly labeled as such.</li>
-                            <li><a href="https://www.w3.org/WAI/WCAG20/Understanding/audio-desc-prerecorded.html" target="_blank" rel="noopener noreferrer">1.2.3 Audio Description or Media Alternative</a> An alternative for time-based media or audio description of the prerecorded video content is provided for synchronized media, except when the media is a media alternative for text and is clearly labeled as such.</li>
-                            <li><a href="https://www.w3.org/WAI/WCAG20/Understanding/captions-live.html" target="_blank" rel="noopener noreferrer">1.2.4 Captions (Live)</a> Captions are provided for all live audio content in synchronized media.</li>
-                            <li><a href="https://www.w3.org/WAI/WCAG20/Understanding/audio-desc-prerecorded.html" target="_blank" rel="noopener noreferrer">1.2.5 Audio Description (Prerecorded)</a> Audio description is provided for all prerecorded video content in synchronized media.</li>
-                          </ul>                          
+                            <li>
+                              <a href="https://www.w3.org/WAI/WCAG20/Understanding/captions-prerecorded.html" target="_blank" rel="noopener noreferrer">1.2.2 Captions (Prerecorded)</a>
+                              Captions are provided for all prerecorded audio content in synchronized media, except when the media is a media alternative for text and is clearly labeled as such.
+                            </li>
+                            <li>
+                              <a href="https://www.w3.org/WAI/WCAG20/Understanding/audio-desc-prerecorded.html" target="_blank" rel="noopener noreferrer">1.2.3 Audio Description or Media Alternative</a>
+                              An alternative for time-based media or audio description of the prerecorded video content is provided for synchronized media, except when the media is a media alternative for text and is clearly labeled as such.
+                            </li>
+                            <li>
+                              <a href="https://www.w3.org/WAI/WCAG20/Understanding/captions-live.html" target="_blank" rel="noopener noreferrer">1.2.4 Captions (Live)</a>
+                              Captions are provided for all live audio content in synchronized media.
+                            </li>
+                            <li>
+                              <a href="https://www.w3.org/WAI/WCAG20/Understanding/audio-desc-prerecorded.html" target="_blank" rel="noopener noreferrer">1.2.5 Audio Description (Prerecorded)</a>
+                              Audio description is provided for all prerecorded video content in synchronized media.
+                            </li>
+                            <li>
+                              <a href="https://www.w3.org/WAI/WCAG21/Understanding/audio-control.html" target="_blank" rel="noopener noreferrer">1.4.2 Audio Control</a>
+                              If any audio on a web page plays automatically for more than 3 seconds, a mechanism is provided to pause or stop the audio, or to control the audio volume independently from the overall system volume. This ensures users can manage audio playback to avoid interference or distraction, particularly for those using assistive technologies.
+                            </li>
+                          </ul>                                                  
                           <div class="space-large"></div>
                           <h3>WCAG Standards for Pre-Recorded Media Content</h3>
                           <table class="table table-bordered table-responsive">
@@ -202,9 +220,10 @@
                             <li><strong>Media Player Accessibility:</strong> Choose media players that are accessible and support keyboard navigation, screen readers, and provide controls for captions and audio descriptions.</li>
                             <li><strong>Transcript Disclosures:</strong> Design interfaces that clearly disclose the availability of transcripts, captions, and audio descriptions, making them easy to find and use.</li>
                             <li><strong>External Media Players (Vimeo, YouTube):</strong> When embedding media from external platforms like Vimeo or YouTube, ensure the iframe elements have accessible names using the <code>title</code> attribute to describe the content adequately for screen reader users.</li>
+                            <li><strong>Audio Control:</strong> If any audio plays automatically for more than 3 seconds, provide users with controls to pause, stop, or adjust the volume independently of the system volume. This prevents interference or distraction, particularly for users relying on assistive technologies.</li>
                           </ul>
                           <p>Adhering to these practices ensures that your web content is inclusive to users with hearing and visual impairments, meeting <strong>WCAG</strong> requirements for time-based media.</p>
-                        </div>                        
+                        </div>                                             
                       </div>
                     </div>
                   </div>
@@ -218,16 +237,11 @@
                       <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
                         <div class="accordion-body">
                           <ul role="list">
-                            <li><a href="https://www.tpgi.com/web-accessibility-resources/" target="_blank" rel="noopener noreferrer">TPGi: Web Accessibility Resources</a> - Includes tools and guidelines for making audio and video content accessible.</li>
                             <li><a href="https://webaim.org/techniques/captions/" target="_blank" rel="noopener noreferrer">WebAIM: Captions, Transcripts, and Audio Descriptions</a> - Comprehensive guide on creating captions and transcripts for media.</li>
-                            <li><a href="https://www.deque.com/blog/accessible-audio-video-content/" target="_blank" rel="noopener noreferrer">Deque: Accessible Audio and Video Content</a> - Best practices for ensuring audio and video content is accessible.</li>
-                            <li><a href="https://dequeuniversity.com/checklists/web/audiovideo" target="_blank">Audio and Videa Accessibility Checklist</a></li>
-                            <li><a href="https://www.section508.gov/create/video-audio/" target="_blank" rel="noopener noreferrer">Section 508: Video and Audio Accessibility</a> - Guidelines for making multimedia content compliant with Section 508.</li>
-                            <li><a href="https://www.wuhcag.com/wcag-1-2-1-audio-only-and-video-only-prerecorded/" target="_blank" rel="noopener noreferrer">Wuhcag: WCAG 1.2.1 Audio-only and Video-only</a> - How to meet the criteria for providing alternatives for audio and video content.</li>
-                            <li><a href="https://www.wuhcag.com/non-text-content/" target="_blank">WUHCAG Web Accessibility for Developers</a></li>
-                            <li><a href="https://www.a11yproject.com/posts/2016-07-12-what-is-a-transcript/" target="_blank" rel="noopener noreferrer">The A11Y Project: What is a Transcript?</a> - Explanation and guidelines for creating transcripts for audio and video content.</li>
+                            <li><a href="https://dequeuniversity.com/checklists/web/audiovideo" target="_blank">Audio and Video Accessibility Checklist</a> - Deque Accessibility Techniques for Audio and Video</li>
+                            <li><a href="https://www.w3.org/WAI/media/av/" target="_blank">W3C - Making Audio and Video Media Accessible</a> - This resource explains how to make media accessible.</li>
+                            <li><a href="https://www.section508.gov/create/captions-transcripts/#:~:text=Captions%20and%20transcripts%20are%20valuable,such%20as%20podcasts%20and%20animations." target="_blank" rel="noopener noreferrer">Create Accessible Captions and Transcripts</a> - Explanation and guidelines for creating transcripts for audio and video content.</li>
                             <li><a href="https://www.digitala11y.com/understanding-sc-1-2-1-audio-only-and-video-only-prerecorded/" target="_blank" rel="noopener noreferrer">DigitalA11Y: Understanding SC 1.2.1 Audio-only and Video-only (Prerecorded)</a> - Detailed guidance on meeting WCAG 1.2.1 requirements.</li>
-                            <li><a href="https://ictbaseline.access-board.gov/" target="_blank" rel="noopener noreferrer">US Access Board: Audio-Only and Video-Only Accessibility Requirements</a> - Evaluation of alternative content and test procedures for audio-only and video-only content.</li>
                             <li><a href="https://www.zenythgroup.com/media-best-practices" target="_blank" rel="noopener noreferrer">Zenyth Group: Media Best Practices</a> - Best practices for creating accessible media content.</li>
                           </ul>                                             
                           <h3 id="main-caption-heading">Captions</h3>
