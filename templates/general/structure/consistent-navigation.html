@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Headings</title>
+    <title>Consistent Navigation</title>
 
     <!-- Link to Bootstrap CSS from CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
@@ -38,7 +38,7 @@
             <!-- A11y Live Region -->
             <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
             <div class="container-xxl bd-gutter mt-3">
-                <h1>Headings</h1>
+                <h1>Consistent Navigation</h1>
                 <!-- Begin Accordion -->
                 <div class="accordion" id="accordionOpen">
                     <!-- Accordion Item One -->
@@ -51,29 +51,27 @@
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                         <div class="accordion-body">
                           <p>
-                            <a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html" target="_blank" rel="noopener noreferrer">1.3.1 Info and Relationships</a>
-                             Information, structure, and relationships conveyed through presentation can be programmatically determined 
-                            or are available in text.
+                            <a href="https://www.w3.org/WAI/WCAG21/Understanding/consistent-navigation.html" target="_blank" rel="noopener noreferrer">3.2.3 Consistent Navigation</a>
+                            Navigational mechanisms that are repeated on multiple pages within a set of web pages occur in the same relative order each time they are repeated, unless a change is initiated by the user.
                           </p>
                           <p>
-                            Properly structured headings are essential for web accessibility. They provide a hierarchical structure to your content, making it easier for all users, 
-                            including those who rely on screen readers, to navigate and understand your web page.</p>
-                          <p>
-                            Heading levels should be used sequentially, starting with <code>&lt;h1&gt;</code> for the main page title and following with <code>&lt;h2&gt;</code>, 
-                            <code>&lt;h3&gt;</code>, and so on, to represent subheadings. Avoid skipping levels in the hierarchy, as this can lead to confusion for screen reader users.
+                            Consistent navigation enhances user experience, particularly for those relying on assistive technologies. It allows users to predict the location of navigation components, improving efficiency and reducing cognitive load.
                           </p>
                           <p>
-                            <a href="https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html" target="_blank" rel="noopener noreferrer">2.4.6 Headings and Labels</a>
-                            Headings and labels describe topic or purpose.
+                            Developers and designers should ensure that navigation menus, search bars, and other recurring elements are presented in a predictable order across pages. Even minor changes in navigation can disorient users with cognitive disabilities or those using screen readers.
                           </p>
                           <p>
-                            For effective navigation and understanding of web content, it is vital that headings and labels are designed and implemented to clearly describe the topics or purposes they represent. This clarity assists users, especially those using assistive technologies like screen readers, in finding information and completing tasks.
+                            <strong>Best Practices for Consistent Navigation:</strong>
                           </p>
+                          <ul>
+                            <li>Keep the order and placement of navigation elements consistent across all pages.</li>
+                            <li>Use a standard template for recurring elements like headers, footers, and menus.</li>
+                            <li>Provide flexibility for user customization, such as the ability to pin or rearrange frequently used links.</li>
+                          </ul>
                           <p>
-                            Ensure that headings (<code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>) accurately describe the section of content they introduce, and are used sequentially to maintain the content's hierarchical structure. Labels for form elements, buttons, and other interactive elements should be explicitly associated with the controls they represent and convey clear information about the control's function.
+                            Implementing consistent navigation ensures a seamless experience for all users, promoting accessibility and usability throughout the website.
                           </p>
-                          
-                        </div>
+                        </div>                        
                       </div>
                     </div>
                     <!-- Accordion Item Two Designer-->
@@ -92,15 +90,15 @@
                       </h2>
                       <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" style="">
                         <div class="accordion-body">
-                          <p>Designing with a clear hierarchy for headings is vital for accessibility and ensures your designs comply with accessibility standards. Consider these guidelines when designing headings in Figma:</p>
+                          <p>Designing with consistent navigation ensures users can efficiently navigate your website. Here are key guidelines for accessibility-focused design in Figma:</p>
                           <ul>
-                            <li><strong>Designate the Main Heading to Match Page title:</strong> The primary heading of your designed page should be visually distinguished as the most significant. It encapsulates the main topic and be similiar or the same as the title of the page.</li>
-                            <li><strong>Sequentially Style Subheadings:</strong> Style <code>&lt;h2&gt;</code> first-level subheadings all the same, <code>&lt;h3&gt;</code> second-level subheading the same, etc., ensuring each level is visually distinct. This visual hierarchy helps users understand the structure of the content at a glance.</li>
-                            <li><strong>Consistent Heading Levels:</strong> Ensure that heading styles are consistent across the design. Avoid visual jumps in style that could imply a skip in heading levels, such as a significant increase in font size from <code>&lt;h2&gt;</code> to <code>&lt;h4&gt;</code> without an <code>&lt;h3&gt;</code>.</li>
-                            <li><strong>Style and Size Distinction:</strong> Each heading level should have a specific style, including font size, weight, and color, to visually distinguish between different levels of headings and text within the content.</li>
-                            <li><strong>Descriptive Headings:</strong> As a designer, it's crucial to ensure that headings accurately describe the section of content they introduce. Work with content strategists or authors to refine headings for clarity and relevance.</li>
-                          </ul>                         
-                        </div>
+                            <li><strong>Maintain a Consistent Layout:</strong> Ensure navigational components such as menus, search bars, and footers are placed consistently across all pages in your design.</li>
+                            <li><strong>Style Recurring Elements Uniformly:</strong> Use the same visual styling for repeated navigation elements to help users recognize and interact with them easily.</li>
+                            <li><strong>Use Predictable Navigation Patterns:</strong> Ensure users can rely on familiar navigation structures. Avoid unexpected changes in the order or presentation of links and buttons.</li>
+                            <li><strong>Indicate Active States:</strong> Clearly highlight the current page or section within the navigation to help users understand their location within the site.</li>
+                            <li><strong>Collaborate for Clarity:</strong> Work with content teams to ensure labels for navigation items are clear and intuitive.</li>
+                          </ul>
+                        </div>                        
                       </div>
                     </div>
                     <!-- Accordion Item Three Auditor -->
@@ -125,27 +123,22 @@
                       </h2>
                       <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" style="">
                         <div class="accordion-body">
-                          <ol role="list">
-                            <li>Use this <a target="_blank" href="https://www.figma.com/file/txsKugjRb6ALXDK4uKGcp1/A11y-Annotation-Kit---HHMI?type=design&node-id=0-1&mode=design&t=c6seYgq1nqTYby7h-0">A11y Annotation Kit</a>.</li>
-                            <li>Identify all text styled as headings.</li>
-                            <li>Decide which heading level is logical based on hierachy and surrounding text content.</li>
-                            <li>Add a sticky note annotation by copying and pasting to define text as a heading and indicate the correct heading level.</li>
-                          </ol>
-                          <ul class="list-unstyled inline-flex-images mb-5" role="list">
-                            <li><img src="/assets/images/h1.png" alt="heading level 1 annotation tag"></li>
-                            <li><img src="/assets/images/h2.png" alt="heading level 2 annotation tag"></li>
-                            <li><img src="/assets/images/h3.png" alt="heading level 3 annotation tag"></li>
-                            <li><img src="/assets/images/h4.png" alt="heading level 4 annotation tag"></li>
-                            <li><img src="/assets/images/h5.png" alt="heading level 5 annotation tag"></li>
-                            <li><img src="/assets/images/h6.png" alt="heading level 6 annotation tag"></li>
-                          </ul>
-                          <div class="d-inline-block border border-dark p-2 rounded">
+                          <h3>Auditing for Consistent Navigation</h3>
+                          <ul role="list">
+                            <li><strong>Identify and Verify Navigation Components:</strong> Check that navigation elements (menus, breadcrumbs, etc.) are consistently placed and styled across screens.</li>
+                            <li><strong>Flag Inconsistencies:</strong> Communicate any design discrepancies to the designer for correction during phase one.</li>
+                            <li><strong>Write Detailed Annotations:</strong> Provide precise Figma comments for developers, specifying expected behaviors like active states or focus management.</li>
+                            <li><strong>Document in Handoff:</strong> Include navigation requirements in the handoff document to ensure consistent implementation in development.</li>
+                          </ul>                        
+
+                         <div class="d-inline-block border border-dark p-2 rounded">
                             <div class="d-flex flex-row">
                               <div class="text-to-copy">
-                                <h3>Heading</h3>
+                                <h3>Consistent Navigation</h3>
                                 <ul role="list">
-                                  <li><strong>Heading</strong> must accurately describe the section of content they introduce.</li>
-                                  <li><strong>Consistent Styling for Similar Heading Levels:</strong> Headings of the same level should have a uniform style.</li>
+                                  <li><strong>Global Navigation Bar:</strong> Must be consistent across all pages with keyboard navigability and visible focus indicators.</li>
+                                  <li><strong>Breadcrumbs:</strong> Implement as styled; use <code>aria-current="page"</code> for the active page.</li>
+                                  <li><strong>Active State Indicators:</strong> Match the visual style; use <code>aria-selected="true"</code> to indicate active status.</li>
                                 </ul>
                               </div>
                               <div>
@@ -174,13 +167,14 @@
                       </h2>
                       <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
                         <div class="accordion-body">
-                          <p>Nesting headings correctly is crucial for maintaining a logical and meaningful structure on your web page. Incorrect nesting can result in WCAG 1.3.1 failures. Follow these guidelines:</p>
+                          <h3>Implementing Consistent Navigation</h3>
+                          <p>To ensure a consistent and accessible navigation experience, follow these guidelines:</p>
                           <ul role="list">
-                            <li><strong>Use <code>&lt;h1&gt;</code> for the Main Heading:</strong> The main heading of your page should always be <code>&lt;h1&gt;</code>. It represents the primary topic or title of the page.</li>
-                            <li><strong>Nest Subheadings Sequentially:</strong> When adding subheadings, use <code>&lt;h2&gt;</code> for the first-level subheading, <code>&lt;h3&gt;</code> for second-level, and so on. Each subheading should be nested under the previous heading to create a logical hierarchy.</li>
-                            <li><strong>Avoid Skipping Heading Levels:</strong> Do not skip heading levels. For example, do not jump from <code>&lt;h2&gt;</code> to <code>&lt;h4&gt;</code> without using <code>&lt;h3&gt;</code> in between. Skipping levels can cause confusion and accessibility issues.</li>
-                            <li><strong>Use Semantic HTML:</strong> Whenever possible use semantic HTML elements but if not possible you may use <code>role="heading"</code> and the appropriate number level indicated with <code>aria-level="_"</code>.</li>
-                          </ul>                         
+                            <li><strong>Global Navigation:</strong> Implement a consistent navigation bar across all pages. Ensure it is accessible via keyboard and screen readers, with visible focus indicators.</li>
+                            <li><strong>Breadcrumb Navigation:</strong> Include breadcrumbs where applicable, marking the current page with <code>aria-current="page"</code>.</li>
+                            <li><strong>Highlight Active States:</strong> Use <code>aria-selected="true"</code> or similar attributes to indicate active states in menus or tabs.</li>
+                            <li><strong>Semantic HTML:</strong> Use semantic elements for navigation such as <code>&lt;nav&gt;</code>, <code>&lt;ul&gt;</code>, and <code>&lt;li&gt;</code>. Supplement with ARIA roles if necessary.</li>
+                          </ul>                       
                         </div>
                       </div>
                     </div>
@@ -194,14 +188,13 @@
                       <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" style="">
                         <div class="accordion-body">
                           <ul role="list">
-                            <li><a href="https://dequeuniversity.com/checklists/web/landmarks" target="_blank" rel="noopener noreferrer">Deque University: Web Accessibility Checklist - Links</a></li>
-                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements" target="_blank" rel="noopener noreferrer">MDN Web Docs: HTML Heading Elements</a></li>
-                            <li><a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=141" target="_blank" rel="noopener noreferrer">WCAG 2.1 Techniques for Headings</a></li>
-                            <li><a href="https://webaim.org/techniques/hypertext/" target="_blank" rel="noopener noreferrer">WebAIM: Links and Hypertext</a></li>
-                            <li><a href="https://www.a11yproject.com/posts/2021-01-06-what-are-html-headings-for/" target="_blank" rel="noopener noreferrer">The A11Y Project: What Are HTML Headings For?</a></li>
-                            <li><a href="https://developer.paciellogroup.com/blog/2013/01/html5-accessibility-chops-headings/" target="_blank" rel="noopener noreferrer">The Paciello Group: HTML5 Accessibility Chops - Headings</a></li>
-                            <li><a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=141#link-purpose" target="_blank" rel="noopener noreferrer">W3C WCAG 2.1 - Link Purpose (2.4.4)</a></li>
-                          </ul>                                                                                                  
+                            <li><a href="https://dequeuniversity.com/checklists/web/site-navigation" target="_blank" rel="noopener noreferrer">Deque University: Web Accessibility Checklist - Site Navigation</a></li>
+                            <li><a href="https://www.digitala11y.com/3-2-3-consistent-navigation/" target="_blank" rel="noopener noreferrer">Digital A11Y: 3.2.3 Consistent Navigation</a></li>
+                            <li><a href="https://accessibility.huit.harvard.edu/use-consistent-navigation-and-orientation" target="_blank" rel="noopener noreferrer">Harvard Accessibility: Consistent Navigation and Orientation</a></li>
+                            <li><a href="https://www.getstark.co/wcag-explained/understandable/predictable/consistent-navigation/" target="_blank" rel="noopener noreferrer">Stark: WCAG Explained - Consistent Navigation</a></li>
+                            <li><a href="https://www.pearson.com/accessibility-guidelines/understandable-principle/consistent-navigation.html" target="_blank" rel="noopener noreferrer">Pearson: Consistent Navigation Guidelines</a></li>
+                            <li><a href="https://www.wcag.com/designers/3-2-3-consistent-navigation/" target="_blank" rel="noopener noreferrer">WCAG.com: Designers Guide - Consistent Navigation</a></li>
+                          </ul>                                                                                                                            
                         </div>
                       </div>
                     </div>
