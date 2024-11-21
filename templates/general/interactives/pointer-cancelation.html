@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pointer Cancelation</title>
+
+    <!-- Link to Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <!-- Link to Custom Stylesheet -->
+    <link rel="stylesheet" href="../../../../assets/styles/custom.css">
+    <!-- Link to Custom Stylesheet Production -->
+    <link rel="stylesheet" href="../../../../../assets/styles/custom.css">
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/a11y-annotations/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/a11y-annotations/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/a11y-annotations/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/a11y-annotations/assets/images/site.webmanifest">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+</head>
+<body>
+  <!-- Insert Header -->
+  <div id="header--container"></div>
+  
+  <div class="container-fluid">
+      <div class="row">
+          <!-- Includes the Sidebar Navigation using jQuery -->
+          <div id="sidebar-container" class="col-md-2 border-end"></div>
+
+          <!-- Main Content -->
+          <main class="col-md-9" id="main-content" tabindex="-1">
+            <!-- A11y Live Region -->
+            <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
+            <div class="container-xxl bd-gutter mt-3">
+                <h1>Pointer Cancelation</h1>
+                <!-- Begin Accordion -->
+                <div class="accordion" id="accordionOpen">
+                    <!-- Accordion Item One -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                WCAG Success Criteria Requirements
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+                            <div class="accordion-body"> 
+                                <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation.html" target="_blank" rel="noopener noreferrer">2.5.2 Pointer Cancellation</a> ensures that functions operated by a single pointer (e.g., mouse, touch) are designed to prevent accidental activation. 
+                                It requires that at least one of the following is true for such functions:</p> 
+                                <ul role="list" class="fancy-checklist"> 
+                                    <li><strong>No Down-Event Activation:</strong> The function is not executed when the pointer is pressed down.</li> 
+                                    <li><strong>Abort or Undo Mechanism:</strong> The function completes upon releasing the pointer, and a mechanism is available to abort the 
+                                    function before completion or to undo the function after completion.</li> 
+                                    <li><strong>Up-Event Reversal:</strong> Releasing the pointer reverses any outcome of the preceding down-event.</li> 
+                                    <li><strong>Essential Activation:</strong> Completing the function on the down-event is essential, such as emulating a keyboard key press.</li> 
+                                </ul> 
+                                <p>Implementing these practices helps prevent unintended actions, enhancing accessibility for users with motor impairments or those using assistive technologies.</p> 
+                            </div>
+                        </div>
+                    </div>                   
+                    <!-- Accordion Item Four Developer -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Accessibility Considerations
+                                <!-- Developer Tag -->
+                                <span class="dev-tag ms-3">
+                                    Developer
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                        <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </span> 
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
+                            <div class="accordion-body"> 
+                                <h3>Implementing Pointer Cancellation</h3> 
+                                <ul role="list"> 
+                                    <li><strong>Activate on Up-Event:</strong> Design interactive elements to trigger actions on the pointer's release (up-event) rather than on press (down-event). 
+                                    This approach allows users to move the pointer away to cancel the action before completion.</li> 
+                                    <li><strong>Provide Abort or Undo Options:</strong> If activation on the down-event is necessary, ensure there is a mechanism to abort the action before it 
+                                    completes or to undo it afterward. For example, a confirmation dialog can allow users to cancel the action.</li> 
+                                    <li><strong>Implement Up-Event Reversal:</strong> Allow actions initiated on the down-event to be reversed if the pointer is moved away from the target before 
+                                    the up-event. This technique helps prevent accidental activations.</li> 
+                                    <li><strong>Essential Down-Event Activation:</strong> Only use down-event activation when it is essential for the function, such as in a piano application where keys 
+                                    must sound upon pressing.</li> 
+                                    <li><strong>Test Across Devices:</strong> Ensure that pointer cancellation mechanisms work consistently across various input devices, including mouse, touchscreens, 
+                                    and styluses, to accommodate all users.</li> 
+                                </ul> 
+                                <p>By following these guidelines, developers can create more accessible and user-friendly interfaces that minimize accidental activations and provide users with greater 
+                                control over their interactions.</p> 
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Accordion Item Five Resources -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-item" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                Resources
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive">
+                            <div class="accordion-body">
+                                <ul role="list">
+                                    <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation.html" target="_blank" rel="noopener noreferrer">W3C - Understanding Success Criterion 2.5.2: Pointer Cancellation</a></li>
+                                    <li><a href="https://www.digitala11y.com/2-5-2-pointer-cancellation/" target="_blank" rel="noopener noreferrer">DigitalA11Y - Understanding WCAG SC 2.5.2 Pointer Cancellation</a></li>
+                                    <li><a href="https://www.wuhcag.com/pointer-cancellation/" target="_blank" rel="noopener noreferrer">Wuhcag - Pointer Cancellation (2.5.2 – Level A)</a></li>
+                                    <li><a href="https://www.wcag.com/developers/2-5-2-pointer-cancellation/" target="_blank" rel="noopener noreferrer">WCAG.com - 2.5.2 Pointer Cancellation (Level A)</a></li>
+                                    <li><a href="https://www.pearson.com/accessibility-guidelines/operable-principle/pointer-cancellation.html" target="_blank" rel="noopener noreferrer">Pearson - Pointer Cancellation</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Accordion -->
+            </div>
+          </main>                              
+      </div>
+  </div>
+
+    <!-- Script links and jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../../../assets/js/global.js"></script>
+    <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- Add sidebar navigation and header to the page -->
+    <script>
+      $(document).ready(function () {
+           // Determine the paths relative to the root directory
+           var sidebarPath = "../../sidebar-navigation.html";
+           var headerPath = "../../header.html";
+      
+           // Use jQuery to load the sidebar-navigation.html file
+           $("#sidebar-container").load(sidebarPath);
+      
+           // Use jQuery to load the header.html file
+           $("#header--container").load(headerPath);
+      });
+    </script>
+
+</body>
+</html>
