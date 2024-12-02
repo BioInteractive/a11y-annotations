@@ -474,6 +474,15 @@ document.addEventListener('DOMContentLoaded', function () {
           ]
         },  
         {
+          title: 'Consistent Navigation',
+          url: '/a11y-annotations/templates/general/structure/consistent-navigation.html',
+          description: 'Ensure navigational mechanisms are presented in the same relative order on every page to improve predictability and usability.',
+          content: 'The Consistent Navigation guideline ensures that navigation mechanisms, such as menus, search bars, and other recurring elements, occur in the same relative order across all pages unless a user initiates a change. This consistency improves user experience, particularly for those relying on assistive technologies, by making navigation predictable and reducing cognitive load. Even minor changes in navigation order can disorient users with cognitive disabilities or those using screen readers. Best practices include maintaining a consistent order and placement of navigation elements, using a standard template for headers, footers, and menus, and offering flexibility for user customization, such as pinning or rearranging links.',
+          wcagCriteria: [
+            { id: '3.2.3', description: 'Consistent Navigation - Navigational mechanisms that are repeated on multiple pages occur in the same relative order each time they are repeated, unless a change is initiated by the user.' }
+          ]
+        },        
+        {
           title: 'Use of Color',
           url: '/a11y-annotations/templates/general/color/use-of-color.html',
           description: 'Ensure proper use of color to meet accessibility standards and avoid relying solely on color to convey information.',
@@ -529,7 +538,8 @@ document.addEventListener('DOMContentLoaded', function () {
               { id: '1.2.2', description: 'Captions (Prerecorded) - Provide captions for all prerecorded audio content in synchronized media.' },
               { id: '1.2.3', description: 'Audio Description or Media Alternative - Provide audio description or media alternatives for prerecorded video content.' },
               { id: '1.2.4', description: 'Captions (Live) - Provide captions for all live audio content in synchronized media.' },
-              { id: '1.2.5', description: 'Audio Description (Prerecorded) - Provide audio descriptions for all prerecorded video content.' }
+              { id: '1.2.5', description: 'Audio Description (Prerecorded) - Provide audio descriptions for all prerecorded video content.' },
+              { id: '1.4.2', description: 'Audio Control - Provide a mechanism to pause or stop autoplaying audio and adjust volume.' }
           ]
         },
         {
@@ -560,13 +570,32 @@ document.addEventListener('DOMContentLoaded', function () {
           ]
         },
         {
-          title: 'Keyboard Accessibility',
+          title: 'Name, Role, Value',
+          url: '/a11y-annotations/templates/general/interactives/name-role-value.html',
+          description: 'Ensure all user interface components have programmatically determined names, roles, and values to improve accessibility for assistive technology users.',
+          content: 'The Name, Role, Value guideline ensures that every interactive component, such as buttons, form fields, sliders, and custom widgets, has clear and accessible information. Properly labeling elements and providing their roles helps assistive technologies inform users about the function of each component. Additionally, any state changes (e.g., a checkbox becoming checked or a form input showing an error) must be communicated programmatically to keep users informed of updates. This is critical for users relying on assistive technologies to interact with web content effectively. Use semantic HTML elements or ARIA attributes like aria-label, aria-labelledby, aria-describedby, and role to ensure accurate implementation. Dynamic content or custom widgets often require additional scripting to meet this guideline.',
+          wcagCriteria: [
+            { id: '4.1.2', description: 'Name, Role, Value - For all user interface components, the name, role, and value must be programmatically determined and communicated to assistive technologies.' }
+          ]
+        },
+        {
+          title: 'Status Messages',
+          url: '/a11y-annotations/templates/general/interactives/status-messages.html',
+          description: 'Ensure status messages are conveyed programmatically to users without requiring a change in focus, improving accessibility for dynamic content.',
+          content: 'The Status Messages guideline ensures that important updates, such as form validation errors or success messages, are communicated to users without disrupting their workflow or requiring a change in focus. These messages must be programmatically identified and automatically announced by assistive technologies. Using ARIA live regions, such as aria-live and aria-relevant, or native elements like <output>, ensures these updates are accessible. Examples include form submission confirmations (e.g., "Form submitted successfully"), error messages (e.g., "Please enter a valid email address"), live search results, system notifications, progress updates, and alerts about changes in system status (e.g., "Network connection restored"). Implementing this success criterion ensures dynamic content and interactions are usable for all users.',
+          wcagCriteria: [
+            { id: '4.1.3', description: 'Status Messages - Status messages can be programmatically determined through role or properties so that they are presented to the user without receiving focus.' }
+          ]
+        },                
+        {
+          title: 'Keyboard',
           url: '/a11y-annotations/templates/general/interactives/keyboard.html',
           description: 'Ensure full keyboard accessibility for interactive content.',
           content: 'Keyboard accessibility ensures that all functionality of the content is operable through a keyboard interface, without specific timing requirements for keystrokes. This prevents users from being trapped in any part of the page and ensures seamless navigation.',
           wcagCriteria: [
               { id: '2.1.1', description: 'Keyboard - All content functionality must be operable via a keyboard interface without timing dependencies.' },
-              { id: '2.1.2', description: 'No Keyboard Trap - Keyboard focus can be moved to and away from any component using the keyboard without getting trapped.' }
+              { id: '2.1.2', description: 'No Keyboard Trap - Keyboard focus can be moved to and away from any component using the keyboard without getting trapped.' },
+              { id: '2.1.4', description: 'Character Key Shortcuts - Single character keys can be turned off, remapped or activated only on focus.' }
           ]
         },
         {
@@ -614,6 +643,33 @@ document.addEventListener('DOMContentLoaded', function () {
               { id: '4.1.2', description: 'Name, Role, Value - Dynamically updated content must be announced to assistive technologies.' }
           ]
         },
+        {
+          title: 'Pointer Cancellation',
+          url: '/a11y-annotations/templates/general/interactives/pointer-cancelation.html',
+          description: 'Ensure functions operated by a single pointer are designed to prevent accidental activation by offering mechanisms to abort, undo, or reverse actions.',
+          content: 'The Pointer Cancellation guideline ensures that functions activated by a single pointer (e.g., mouse or touch) are designed to minimize accidental activation. At least one of the following must be true: (1) No Down-Event Activation: The function is not executed when the pointer is pressed down; (2) Abort or Undo Mechanism: The function completes upon releasing the pointer and provides a mechanism to abort the function before completion or to undo the action afterward; (3) Up-Event Reversal: Releasing the pointer reverses any outcome of the preceding down-event; (4) Essential Activation: Completing the function on the down-event is essential, such as emulating a keyboard key press. These measures ensure that users, including those with motor disabilities, can interact with web content confidently and accurately.',
+          wcagCriteria: [
+            { id: '2.5.2', description: 'Pointer Cancellation - For functions operated by a single pointer, at least one mechanism is available to prevent accidental activation or allow reversal of actions.' }
+          ]
+        },
+        {
+          title: 'Pointer Gestures',
+          url: '/a11y-annotations/templates/general/interactives/pointer-gestures.html',
+          description: 'Ensure web content requiring complex gestures is accessible by providing simpler, single-point alternatives that work with a single pointer.',
+          content: 'The Pointer Gestures guideline ensures that web content requiring multi-point or path-based gestures, such as pinch-to-zoom or drag-and-drop, is accessible by offering simpler, single-point alternatives. Key requirements include: (1) Simple Interactions: Provide alternatives, such as buttons or input fields, for complex gestures. (2) Assistive Technology Compatibility: Ensure controls are operable with standard input methods like single-tap or click. (3) Avoiding Gesture Reliance: Do not require path-based gestures for essential functionality without simpler alternatives. (4) Custom Widgets: Ensure tasks requiring gestures can also be performed using simple pointer-based methods or keyboard navigation. These practices enable users with limited dexterity or assistive devices to interact effectively with web content.',
+          wcagCriteria: [
+            { id: '2.5.1', description: 'Pointer Gestures - Multi-point or path-based gestures must have an alternative method of operation that requires only a single pointer.' }
+          ]
+        },
+        {
+          title: 'Motion Actuation',
+          url: '/a11y-annotations/templates/general/interactives/motion-actuation.html',
+          description: 'Ensure functionality triggered by motion, such as shaking or tilting, is also accessible via conventional inputs and can be disabled unless essential.',
+          content: 'The Motion Actuation guideline ensures that any functionality triggered by device or user motion, such as shaking or tilting a device, is accessible via standard controls or interface components. Key requirements include: (1) Providing alternative controls, such as buttons or gestures, for all motion-based functionality. (2) Allowing users to disable motion-based interaction to prevent unintended activation, unless the motion is essential for the function. These requirements ensure inclusivity for users who may have difficulty performing specific motions or who prefer alternative interaction methods for personal or accessibility reasons. Implementing these practices ensures that motion-based interactions are not a barrier for any user.',
+          wcagCriteria: [
+            { id: '2.5.4', description: 'Motion Actuation - Functionality triggered by motion can also be operated by standard controls and can be disabled unless it is essential to the design.' }
+          ]
+        },                        
         {
           title: 'Target Size',
           url: '/a11y-annotations/templates/general/interactives/touch-target.html',
