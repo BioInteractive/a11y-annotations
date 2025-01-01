@@ -582,7 +582,7 @@ document.addEventListener('DOMContentLoaded', function () {
           title: 'Status Messages',
           url: '/a11y-annotations/templates/general/interactives/status-messages.html',
           description: 'Ensure status messages are conveyed programmatically to users without requiring a change in focus, improving accessibility for dynamic content.',
-          content: 'The Status Messages guideline ensures that important updates, such as form validation errors or success messages, are communicated to users without disrupting their workflow or requiring a change in focus. These messages must be programmatically identified and automatically announced by assistive technologies. Using ARIA live regions, such as aria-live and aria-relevant, or native elements like <output>, ensures these updates are accessible. Examples include form submission confirmations (e.g., "Form submitted successfully"), error messages (e.g., "Please enter a valid email address"), live search results, system notifications, progress updates, and alerts about changes in system status (e.g., "Network connection restored"). Implementing this success criterion ensures dynamic content and interactions are usable for all users.',
+          content: 'The Status Messages guideline ensures that important updates, such as form validation errors or success messages, are communicated to users without disrupting their workflow or requiring a change in focus. These messages must be programmatically identified and automatically announced by assistive technologies. Using ARIA live regions, such as aria-live and aria-relevant, or native elements like <output>, ensures these updates are accessible. Examples include form submission confirmations (e.g., "Form submitted successfully"), error messages (e.g., "Please enter a valid email address"), live search results, system notifications, progress updates, and alerts about changes in system status (e.g., "Network connection restored").',
           wcagCriteria: [
             { id: '4.1.3', description: 'Status Messages - Status messages can be programmatically determined through role or properties so that they are presented to the user without receiving focus.' }
           ]
@@ -647,16 +647,16 @@ document.addEventListener('DOMContentLoaded', function () {
           title: 'Pointer Cancellation',
           url: '/a11y-annotations/templates/general/interactives/pointer-cancelation.html',
           description: 'Ensure functions operated by a single pointer are designed to prevent accidental activation by offering mechanisms to abort, undo, or reverse actions.',
-          content: 'The Pointer Cancellation guideline ensures that functions activated by a single pointer (e.g., mouse or touch) are designed to minimize accidental activation. At least one of the following must be true: (1) No Down-Event Activation: The function is not executed when the pointer is pressed down; (2) Abort or Undo Mechanism: The function completes upon releasing the pointer and provides a mechanism to abort the function before completion or to undo the action afterward; (3) Up-Event Reversal: Releasing the pointer reverses any outcome of the preceding down-event; (4) Essential Activation: Completing the function on the down-event is essential, such as emulating a keyboard key press. These measures ensure that users, including those with motor disabilities, can interact with web content confidently and accurately.',
+          content: 'The Pointer Cancellation guideline ensures that functions activated by a single pointer (e.g., mouse or touch) are designed to minimize accidental activation. Functions should not be executed on the down-event unless essential, and mechanisms must be provided to abort the action before completion, undo the action after completion, or reverse the outcome of the preceding down-event upon releasing the pointer. These measures ensure that users, including those with motor disabilities, can interact with web content confidently and accurately without triggering unintended actions.',
           wcagCriteria: [
             { id: '2.5.2', description: 'Pointer Cancellation - For functions operated by a single pointer, at least one mechanism is available to prevent accidental activation or allow reversal of actions.' }
           ]
-        },
+        },               
         {
           title: 'Pointer Gestures',
           url: '/a11y-annotations/templates/general/interactives/pointer-gestures.html',
           description: 'Ensure web content requiring complex gestures is accessible by providing simpler, single-point alternatives that work with a single pointer.',
-          content: 'The Pointer Gestures guideline ensures that web content requiring multi-point or path-based gestures, such as pinch-to-zoom or drag-and-drop, is accessible by offering simpler, single-point alternatives. Key requirements include: (1) Simple Interactions: Provide alternatives, such as buttons or input fields, for complex gestures. (2) Assistive Technology Compatibility: Ensure controls are operable with standard input methods like single-tap or click. (3) Avoiding Gesture Reliance: Do not require path-based gestures for essential functionality without simpler alternatives. (4) Custom Widgets: Ensure tasks requiring gestures can also be performed using simple pointer-based methods or keyboard navigation. These practices enable users with limited dexterity or assistive devices to interact effectively with web content.',
+          content: 'The Pointer Gestures guideline ensures that web content requiring multi-point or path-based gestures, such as pinch-to-zoom or drag-and-drop, is accessible by offering simpler, single-point alternatives. Web content should provide alternatives, such as buttons or input fields, for complex gestures and ensure controls are operable with standard input methods like single-tap or click. Tasks requiring gestures must also be performable using simpler pointer-based methods or keyboard navigation. These practices enable users with limited dexterity or assistive devices to interact effectively with web content.',
           wcagCriteria: [
             { id: '2.5.1', description: 'Pointer Gestures - Multi-point or path-based gestures must have an alternative method of operation that requires only a single pointer.' }
           ]
@@ -665,11 +665,23 @@ document.addEventListener('DOMContentLoaded', function () {
           title: 'Motion Actuation',
           url: '/a11y-annotations/templates/general/interactives/motion-actuation.html',
           description: 'Ensure functionality triggered by motion, such as shaking or tilting, is also accessible via conventional inputs and can be disabled unless essential.',
-          content: 'The Motion Actuation guideline ensures that any functionality triggered by device or user motion, such as shaking or tilting a device, is accessible via standard controls or interface components. Key requirements include: (1) Providing alternative controls, such as buttons or gestures, for all motion-based functionality. (2) Allowing users to disable motion-based interaction to prevent unintended activation, unless the motion is essential for the function. These requirements ensure inclusivity for users who may have difficulty performing specific motions or who prefer alternative interaction methods for personal or accessibility reasons. Implementing these practices ensures that motion-based interactions are not a barrier for any user.',
+          content: 'The Motion Actuation guideline ensures that any functionality triggered by device or user motion, such as shaking or tilting a device, is accessible via standard controls or interface components. Users must be able to disable motion-based interactions to prevent unintended activation unless the motion is essential to the functionality. Alternative controls, such as buttons or gestures, must be provided to ensure accessibility for users who may have difficulty performing specific motions or who prefer alternative interaction methods for personal or accessibility reasons.',
           wcagCriteria: [
             { id: '2.5.4', description: 'Motion Actuation - Functionality triggered by motion can also be operated by standard controls and can be disabled unless it is essential to the design.' }
           ]
-        },                        
+        },        
+        {
+          title: "Sensory Characteristics",
+          url: "/a11y-annotations/templates/general/instructions/sensory-characteristics.html",
+          description: "Ensure that instructions for interacting with content do not rely solely on sensory characteristics such as shape, size, visual location, orientation, or sound.",
+          content: "The Sensory Characteristics guideline ensures that instructions are inclusive and do not rely solely on sensory cues like shape, size, color, or location. Instructions should use descriptive text to complement sensory information. Programmatically determinable descriptions and accessible names should be provided using semantic HTML and ARIA attributes. Relying solely on visual or sensory characteristics can create barriers for users with vision impairments, cognitive disabilities, or those relying on assistive technologies.",
+          wcagCriteria: [
+            {
+              id: "1.3.3",
+              description: "Sensory Characteristics - Instructions for interacting with content do not rely solely on sensory characteristics such as shape, size, visual location, orientation, or sound."
+            }
+          ]
+        },                                      
         {
           title: 'Target Size',
           url: '/a11y-annotations/templates/general/interactives/touch-target.html',
@@ -737,6 +749,12 @@ document.addEventListener('DOMContentLoaded', function () {
           "content": "Carousels are often problematic for accessibility, with issues such as inconsistent navigation, poor focus management, and timing constraints. For a more accessible approach, consider alternatives like static content displays, tabbed interfaces, or collapsible sections. If a carousel is required, ensure it is fully controllable with keyboard navigation, play/pause options, and proper ARIA attributes to convey the current state to assistive technologies."
         },
         {
+          "title": "Combobox",
+          "url": "/a11y-annotations/templates/components/combobox.html",
+          "description": "Explore accessible combobox implementations, ensuring proper ARIA roles, keyboard navigation, and focus management for a seamless user experience.",
+          "content": "Comboboxes are interactive widgets that allow users to select options from a dropdown list or provide input in an editable field. To ensure accessibility, comboboxes must use correct ARIA roles and attributes. The input element must have role=\"combobox\", aria-expanded should indicate whether the dropdown is open, and aria-controls must link the combobox to its associated options list. Individual options should have role=\"option\", and aria-labelledby should associate the combobox with its label. Keyboard navigation is essential: users must be able to navigate options using arrow keys, select with Enter, and close the dropdown with Escape. Focus management should seamlessly transition between the input and options list without disrupting workflow. Use aria-expanded to indicate the current state of the dropdown, ensuring programmatic and visual clarity. Examples include select-only comboboxes, editable comboboxes with various autocomplete behaviors, and more complex implementations such as date pickers. For comprehensive patterns and examples, refer to W3C APG Combo Box Patterns."
+        },        
+        {
           "title": "Data Chart",
           "url": "/a11y-annotations/templates/components/data-chart.html",
           "description": "Implement accessible data charts on your website.",
@@ -778,6 +796,12 @@ document.addEventListener('DOMContentLoaded', function () {
           "description": "Create accessible links for easy navigation, ensuring clarity and proper functionality across devices.",
           "content": "Links are essential navigation elements that must be accessible for all users, including those with disabilities. A link (<code>&lt;a&gt;</code>) is typically used to navigate between webpages, resources, or locations within a page. Links must be styled and marked up properly to be distinguishable from other content. They must have accessible names that clearly indicate their purpose and destination. Links like 'Learn More' or 'Click Here' should provide additional context using aria-labels or visually hidden text to clarify their destination. Additionally, links should be usable with a keyboard alone and have a sufficient contrast ratio with surrounding text to ensure visibility. All links must be in focus order and accessible by assistive technologies to ensure that users understand where each link leads without relying on surrounding content or unclear descriptions."
         },
+        {
+          "title": "Listbox",
+          "url": "/a11y-annotations/templates/components/listbox.html",
+          "description": "Learn how to create accessible listboxes, ensuring proper ARIA roles, keyboard navigation, and focus management for usability and conformance.",
+          "content": "Listboxes are interactive widgets that enable users to select one or more options from a list. To ensure accessibility, listboxes must adhere to WCAG requirements and utilize proper ARIA roles and attributes. The container must have role=\"listbox\", each list item should have role=\"option\", and aria-activedescendant must be used to manage focus on the currently selected item. Focus must be managed effectively to ensure it remains within the listbox, with the selected option clearly indicated both visually and programmatically. Listboxes should support robust keyboard navigation, allowing users to navigate options using arrow keys, select with Enter, and close the listbox (if applicable) using Escape. Use aria-labelledby to associate the listbox with its label, and aria-selected to denote the selected option. For collapsible listboxes, aria-expanded should be used to indicate their current state. Examples include scrollable listboxes, grouped options, and multi-select listboxes with rearrangeable options. For detailed patterns and implementations, refer to W3C APG Listbox Patterns."
+        },        
         {
           "title": "Navigation",
           "url": "/a11y-annotations/templates/components/navigation.html",
@@ -893,4 +917,69 @@ document.addEventListener('DOMContentLoaded', function () {
               resultsContainer.innerHTML = '<p>No results found.</p>';
           }
       }
-      
+// Code Snippet Copy Button insertion and Screen Reader Announcement
+document.addEventListener('DOMContentLoaded', function () {
+  // Check if any <pre><code> elements exist on the page
+  if (document.querySelector('pre code')) {
+    // Add Copy to Clipboard buttons to all <pre><code> snippets
+    document.querySelectorAll('pre code').forEach((codeBlock) => {
+      // Create container for pre and button
+      const preElement = codeBlock.parentElement;
+
+      // Create the button
+      const button = document.createElement('button');
+      button.className = 'copy-code-btn';
+      button.setAttribute('aria-label', 'Copy code snippet');
+      button.setAttribute('name', 'copycode snippet');
+
+      // Add SVG icon and visible label to button
+      button.innerHTML = `
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M19 9h-4V5H9v4H5v10h14V9zm-8 0h2v2h-2zm0 4h2v2h-2zm4 0h2v2h-2zm-8 0h2v2H7zm0-4h2v2H7zm4 0h2v2h-2zm8-4v2h-4V5h2c1.1 0 2 .9 2 2z"></path>
+        </svg>
+        <span>Copy</span>
+      `;
+
+      // Insert the button above the pre element
+      preElement.insertAdjacentElement('beforebegin', button);
+
+      // Create the aria-live polite region
+      const liveRegion = document.createElement('div');
+      liveRegion.className = 'sr-only';
+      liveRegion.setAttribute('aria-live', 'polite');
+      preElement.insertAdjacentElement('afterend', liveRegion);
+
+      // Handle button click
+      button.addEventListener('click', () => {
+        // Copy code to clipboard
+        navigator.clipboard.writeText(codeBlock.textContent).then(() => {
+          // Add announcement to live region
+          liveRegion.textContent = 'Code snippet copied';
+          setTimeout(() => {
+            liveRegion.textContent = '';
+          }, 1000);
+
+          // Change icon to a check mark
+          const originalIcon = button.querySelector('svg').outerHTML;
+          button.querySelector('svg').innerHTML = `
+            <path d="M9 11.5L4.5 7l-1.42 1.41L9 14.33 21 2.33 19.58 1z"></path>
+          `;
+
+          // Revert icon back to original after 1 second
+          setTimeout(() => {
+            button.querySelector('svg').innerHTML = `
+              <path d="M19 9h-4V5H9v4H5v10h14V9zm-8 0h2v2h-2zm0 4h2v2h-2zm4 0h2v2h-2zm-8 0h2v2H7zm0-4h2v2H7zm4 0h2v2h-2zm8-4v2h-4V5h2c1.1 0 2 .9 2 2z"></path>
+            `;
+          }, 1000);
+        });
+      });
+
+      // Make button keyboard accessible
+      button.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          button.click();
+        }
+      });
+    });
+  }
+});

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motion Actuation</title>
+    <title>Sensory Characteristics</title>
 
     <!-- Link to Bootstrap CSS from CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
@@ -38,7 +38,7 @@
             <!-- A11y Live Region -->
             <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
             <div class="container-xxl bd-gutter mt-3">
-                <h1>Motion Actuation</h1>
+                <h1>Sensory Characteristics</h1>
                 <!-- Begin Accordion -->
                 <div class="accordion" id="accordionOpen">
                     <!-- Accordion Item One -->
@@ -50,15 +50,32 @@
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
                             <div class="accordion-body">
-                                <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation" target="_blank">2.5.4 Motion Actuation</a> ensures that functionality triggered by 
-                                    device or user motion, such as shaking or tilting a device, is also available via more conventional inputs, such as buttons or gestures. 
-                                    This success criterion requires that:</p>
+                                <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics" target="_blank">1.3.3 Sensory Characteristics</a> ensures that instructions for interacting with content do not rely solely on sensory characteristics such as shape, size, visual location, orientation, or sound. This success criterion requires that:</p>
                                 <ul role="list" class="fancy-checklist">
-                                    <li>Users can perform all functionality triggered by motion using standard controls or interface components.</li>
-                                    <li>Motion-based interaction can be disabled to avoid unintended activation, unless it is essential for the function.</li>
-                                    <li>The motion used to trigger functionality must meet these requirements unless its use is essential to the design.</li>
+                                    <li>Instructions describe elements using text-based descriptions rather than relying solely on sensory characteristics (e.g., “Click the search icon labeled with a magnifying glass” instead of “Click the round icon”).</li>
+                                    <li>Shape, color, size, or other sensory information should be complemented with textual or programmatically determinable descriptions.</li>
+                                    <li>Instructions must ensure equal access for users who rely on assistive technologies or have difficulty perceiving sensory characteristics.</li>
                                 </ul>
-                                <p>Motion actuation is important for users who may have difficulty performing specific motions or prefer alternative interaction methods for personal or accessibility reasons.</p>
+                                <p>Ensuring that instructions are not based solely on sensory characteristics is critical for users with vision impairments, cognitive disabilities, or users who rely on screen readers or alternative interaction methods.</p>
+                                <h4>Examples:</h4>
+                                <ul role="list">
+                                    <li>Prefer: “Click the search icon labeled with a magnifying glass.”</li>
+                                    <li>Avoid: “Click the round icon.”</li>
+                                    <li>Prefer: “Press the green button labeled Submit.”</li>
+                                    <li>Avoid: “Press the green button.”</li>
+                                </ul>
+                                <h4>Common Failures:</h4>
+                                <ul role="list">
+                                    <li>Providing instructions that rely solely on shapes or locations (e.g., “Select the square in the top-right corner”).</li>
+                                    <li>Using color as the only means of conveying information (e.g., “Click the blue button”).</li>
+                                    <li>Failing to include accessible names or programmatically determinable labels.</li>
+                                </ul>
+                                <h4>Techniques:</h4>
+                                <ul role="list" class="fancy-checklist">
+                                    <li>Use descriptive text that clearly explains how to interact with elements.</li>
+                                    <li>Complement sensory information (e.g., shape, size) with textual descriptions or accessible labels.</li>
+                                    <li>Ensure that all interactive elements are programmatically determinable and provide meaningful names for screen readers.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -78,16 +95,17 @@
                         </h2>
                         <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
                             <div class="accordion-body">
-                                <h3>Implementing Motion Actuation</h3>
+                                <h3>Implementing Sensory Characteristics</h3>
                                 <ul role="list">
-                                    <li><strong>Provide Alternate Controls:</strong> Ensure all functionality triggered by motion (e.g., shaking or tilting) can also be activated using standard interface components such as buttons, sliders, or menus.</li>
-                                    <li><strong>Offer Motion Disable Options:</strong> Include settings to disable motion-based interaction for users who may accidentally trigger actions due to unintended movements.</li>
-                                    <li><strong>Avoid Motion-Only Triggers:</strong> Do not rely solely on motion for interaction unless the motion is essential to the functionality (e.g., pedometer features).</li>
-                                    <li><strong>Test with Motion Disabled:</strong> Simulate scenarios where motion-based triggers are disabled and confirm that all functionality remains accessible through alternative input methods.</li>
-                                    <li><strong>Provide Clear Feedback:</strong> When motion triggers are used, provide clear visual or auditory feedback to inform users that their action has been recognized.</li>
+                                    <li><strong>Use Descriptive Instructions:</strong> Ensure that instructions do not rely solely on sensory cues like shape, size, color, or location. For example, use “Click the search icon labeled with a magnifying glass” instead of “Click the round icon.”</li>
+                                    <li><strong>Complement Visual Cues with Text:</strong> Provide textual or programmatically determinable descriptions to supplement sensory characteristics like shape or location.</li>
+                                    <li><strong>Ensure Accessible Names:</strong> Use semantic HTML and ARIA attributes to provide accessible names and labels for interactive elements. For instance, use `aria-labelledby` or `aria-label` to associate elements with meaningful text.</li>
+                                    <li><strong>Avoid Ambiguity in Design:</strong> Test designs to confirm that users can identify and interact with elements without relying on sensory characteristics alone.</li>
+                                    <li><strong>Test with Assistive Technologies:</strong> Use screen readers, keyboard navigation, and high-contrast settings to verify that instructions are clear and actionable for all users.</li>
+                                    <li><strong>Avoid Solely Color-Based Instructions:</strong> Do not rely on color to differentiate actions or states (e.g., “Click the red button”). Use icons, text, or patterns to provide alternatives.</li>
                                 </ul>
-                                <p>Implementing these considerations ensures that your interface is accessible to a broader audience and complies with WCAG 2.1 Level A requirements for motion actuation.</p>
-                            </div>
+                                <p>Implementing these best practices ensures that sensory characteristics do not create barriers for users with vision impairments, cognitive disabilities, or those relying on assistive technologies, ensuring WCAG 2.1 Level A conformance.</p>
+                            </div>                            
                         </div>
                     </div>
                     <!-- Accordion Item Five Resources -->
@@ -100,12 +118,10 @@
                         <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive">
                             <div class="accordion-body">
                                 <ul role="list">
-                                    <li><a href="https://www.digitala11y.com/2-5-4-motion-actuation/" target="_blank" rel="noopener noreferrer">DigitalA11Y - Understanding WCAG SC 2.5.4 Motion Actuation</a></li>
-                                    <li><a href="https://www.wuhcag.com/motion-actuation/" target="_blank" rel="noopener noreferrer">Wuhcag - Motion Actuation (2.5.4 – Level A)</a></li>
-                                    <li><a href="https://dequeuniversity.com/tips/motion-actuation" target="_blank" rel="noopener noreferrer">Deque University - Tips for Accessible Motion Actuation</a></li>
-                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Motion_Actuation" target="_blank" rel="noopener noreferrer">MDN Web Docs - Accessibility and Motion Actuation</a></li>
-                                    <li><a href="https://www.wcag.com/designers/2-5-4-motion-actuation/" target="_blank" rel="noopener noreferrer">WCAG.com - 2.5.4 Motion Actuation</a></li>
-                                </ul>
+                                    <li><a href="https://www.digitala11y.com/understanding-sc-1-3-3-sensory-characteristics/" target="_blank" rel="noopener noreferrer">DigitalA11Y - Understanding WCAG SC 1.3.3 Sensory Characteristics</a></li>
+                                    <li><a href="https://www.wuhcag.com/sensory-characteristics/" target="_blank" rel="noopener noreferrer">Wuhcag - Sensory Characteristics (1.3.3 – Level A)</a></li>
+                                    <li><a href="https://www.wcag.com/designers/1-3-3-sensory-characteristics/" target="_blank" rel="noopener noreferrer">WCAG.com - 1.3.3 Sensory Characteristics</a></li>
+                                </ul>                                
                             </div>
                         </div>
                     </div>
