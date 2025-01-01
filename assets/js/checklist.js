@@ -80,74 +80,96 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
 // A11y Checklist page - Export table to Excel blank 
-  
+
       document.addEventListener('DOMContentLoaded', function() {
-          // Check if the export button exists
-          var exportBtn = document.getElementById('exportBtn');
-          if (!exportBtn) {
-              return; // Exit if the export button is not found
-          }
-  
-          // Add event listener to the export button
-          exportBtn.addEventListener('click', function() {
-              // Retrieve project info from local storage
-              const storedData = JSON.parse(localStorage.getItem('projectData'));
-  
-              if (storedData) {
-                  const projectTitle = storedData.projectTitle || 'Project';
-                  const role = storedData.role || 'N/A';
-                  const name = storedData.name || 'N/A';
-                  const date = storedData.date || 'N/A';
-  
-                  // Export table with project information
-                  exportTableToExcel('checklist', projectTitle, role, name, date);
-              } else {
-                  // Default export if no project information is found
-                  exportTableToExcel('checklist', 'Checklist');
-              }
-          });
-  
-          function exportTableToExcel(tableID, projectTitle, role, name, date) {
-              var table = document.getElementById(tableID);
-              if (!table) {
-                  console.error('Table not found!');
-                  return;
-              }
-  
-              // Create a new sheet manually to include project info
-              var worksheet = XLSX.utils.aoa_to_sheet([
-                  // Project info as the first row
-                  [`Project Title: ${projectTitle}`, `Role: ${role}`, `Name: ${name}`, `Date: ${date}`],
-                  [] // Empty row for spacing
-              ]);
-  
-              // Append the actual table rows to the worksheet
-              XLSX.utils.sheet_add_dom(worksheet, table, {origin: -1});
-  
-              // Create the workbook and add the sheet
-              var wb = XLSX.utils.book_new();
-              XLSX.utils.book_append_sheet(wb, worksheet, "Checklist");
-  
-              // Convert the workbook to binary
-              var wbout = XLSX.write(wb, {bookType: 'xls', type: 'binary'});
-  
-              // Function to convert string to ArrayBuffer
-              function s2ab(s) {
-                  var buf = new ArrayBuffer(s.length);
-                  var view = new Uint8Array(buf);
-                  for (var i = 0; i != s.length; ++i) view[i] = s.charCodeAt(i) & 0xFF;
-                  return buf;
-              }
-  
-              // Set the filename to match the project title and trigger the download
-              var filename = `${projectTitle || 'exported_data'}.xls`;
-              var blob = new Blob([s2ab(wbout)], {type: "application/vnd.ms-excel"});
-              var link = document.createElement('a');
-              link.href = URL.createObjectURL(blob);
-              link.download = filename;
-              document.body.appendChild(link);
-              link.click();
-              document.body.removeChild(link);
-          }
-      });
-  
+        // Get buttons
+        var exportBlankBtn = document.getElementById('exportBtn');
+        var exportWithDataBtn = document.getElementById('exportWithDataBtn');
+    
+        if (exportBlankBtn) {
+            exportBlankBtn.addEventListener('click', function() {
+                handleExport('blank');
+            });
+        }
+    
+        if (exportWithDataBtn) {
+            exportWithDataBtn.addEventListener('click', function() {
+                handleExport('withData');
+            });
+        }
+    
+        function handleExport(exportType) {
+            // Retrieve project info from local storage
+            const storedData = JSON.parse(localStorage.getItem('projectData'));
+    
+            const projectTitle = storedData?.projectTitle || 'Project';
+            const role = storedData?.role || 'N/A';
+            const name = storedData?.name || 'N/A';
+            const date = storedData?.date || 'N/A';
+    
+            exportTableToExcel('checklist', projectTitle, role, name, date, exportType);
+        }
+    
+        function exportTableToExcel(tableID, projectTitle, role, name, date, exportType) {
+            var table = document.getElementById(tableID);
+            if (!table) {
+                console.error('Table not found!');
+                return;
+            }
+    
+            // Create a new sheet manually to include project info
+            var worksheet = XLSX.utils.aoa_to_sheet([
+                [`Project Title: ${projectTitle}`, `Role: ${role}`, `Name: ${name}`, `Date: ${date}`],
+                [] // Empty row for spacing
+            ]);
+    
+            // Process table rows manually to handle checkbox values
+            var rows = [];
+            table.querySelectorAll('tr').forEach((row) => {
+                var rowData = [];
+                row.querySelectorAll('th, td').forEach((cell) => {
+                    const checkbox = cell.querySelector('input[type="checkbox"]');
+                    if (checkbox && exportType === 'withData') {
+                        // Add "True" for checked checkboxes
+                        rowData.push(checkbox.checked ? "True" : "");
+                    } else if (checkbox && exportType === 'blank') {
+                        // Leave blank for blank export
+                        rowData.push("");
+                    } else {
+                        // Add regular cell text
+                        rowData.push(cell.innerText.trim());
+                    }
+                });
+                rows.push(rowData);
+            });
+    
+            // Add processed rows to the worksheet
+            XLSX.utils.sheet_add_aoa(worksheet, rows, { origin: -1 });
+    
+            // Create the workbook and add the sheet
+            var wb = XLSX.utils.book_new();
+            XLSX.utils.book_append_sheet(wb, worksheet, "Checklist");
+    
+            // Convert the workbook to binary
+            var wbout = XLSX.write(wb, { bookType: 'xls', type: 'binary' });
+    
+            // Function to convert string to ArrayBuffer
+            function s2ab(s) {
+                var buf = new ArrayBuffer(s.length);
+                var view = new Uint8Array(buf);
+                for (var i = 0; i != s.length; ++i) view[i] = s.charCodeAt(i) & 0xFF;
+                return buf;
+            }
+    
+            // Set the filename and trigger download
+            var filename = `${projectTitle}_${exportType === 'withData' ? 'with_data' : 'blank'}.xls`;
+            var blob = new Blob([s2ab(wbout)], { type: "application/vnd.ms-excel" });
+            var link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = filename;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    });
+    

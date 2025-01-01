@@ -107,6 +107,10 @@ a {
   padding-top: 1.25rem;
   min-width: 265px;
 }
+.border-top-sidebar {
+  border-top: 1px solid #dee2e6!important
+  
+}
 
 /* Hamburger Menu Icon */
 .hamburger {
@@ -227,7 +231,9 @@ header {
 .copy-btn:focus {
   border: 1px solid black;
 }
-
+.copy-btn:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle hover effect */
+}
   
 /*** Layout Spacing ***/
 h1, h2, h3, h4, h5 {
@@ -270,6 +276,15 @@ h1, h2, h3, h4, h5 {
 /* Tables */
 .table {
   border-color: dimgrey;
+}
+#checklist td:empty {
+  border: none;
+}
+.border-top {
+  border-top: 1px solid dimgrey !important;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
 }
 
 /* Lists */
@@ -933,4 +948,78 @@ p.dev-tag {
 
 #main-content {
   scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+/* Styles for Preformatted Code Snippets */
+pre {
+  background-color: #2d2d2d; /* Dark background for focus on code */
+  border: 1px solid #444; /* Subtle border */
+  border-radius: 8px; /* Modern rounded corners */
+  padding: 1rem; /* Comfortable padding */
+  overflow-x: auto; /* Horizontal scrolling */
+  font-family: 'Fira Code', 'Courier New', Courier, monospace; /* Monospace font */
+  font-size: 1rem; /* Accessible size */
+  line-height: 1.6; /* Relaxed spacing */
+  color: #f8f8f2; /* Light text for contrast */
+  margin-bottom: 1.5rem; /* Spacing below snippets */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Code Styling (Only Inside Pre) */
+pre code {
+  color: var(--accent-green); /* Bright green for text */
+  padding: 0.2rem 0.4rem; /* Inline padding */
+  border-radius: 4px; /* Rounded corners */
+  font-family: inherit; /* Inherit font from pre */
+  font-size: 0.95rem; /* Slightly smaller size */
+}
+
+/* Pre Hover Effect */
+pre:hover {
+  background-color: #383838; /* Slightly lighter on hover */
+  border-color: var(--secondary-green); /* Enhanced contrast on hover */
+}
+
+/* Accessibility Enhancements */
+pre:focus-within {
+  outline: 2px solid #8be9fd; /* Visible focus outline */
+  outline-offset: 4px;
+}
+
+/* Style for the Copy to Clipboard button */
+.copy-code-btn {
+  width: 63px;
+  height: 62px;
+  background-color: #52b448; /* Bright green background */
+  color: #000; /* Black text */
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  font-family: Arial, sans-serif; /* Clean font for label */
+  font-size: 14px; /* Readable label size */
+  font-weight: bold; /* Emphasized label */
+  display: flex;
+  flex-direction: column; /* Stack icon and text vertically */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-bottom: 8px; /* Spacing between button and code snippet */
+  padding: 0;
+  gap: 2px; /* Small spacing between icon and label */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.copy-code-btn:hover {
+  border: 1px solid black;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle hover effect */
+}
+
+.copy-code-btn svg {
+  width: 24px; /* Fixed width */
+  height: 24px; /* Fixed height */
+  fill: #000; /* Black icon color */
+  flex-shrink: 0; /* Prevent resizing within flex container */
+}
+
+pre {
+  margin-top: 0; /* Remove any extra spacing if button is above */
 }
