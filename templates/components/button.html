@@ -89,17 +89,19 @@
                           </ul>                        
                           <h3>Button Types</h3>
                           <!-- Default -->
-                          <button class="btn btn-primary" type="button" id="button_state" aria-pressed="false" aria-describedby="button-example">Button</button>
+                          <button class="btn btn-primary" type="button" id="button_state">Button</button>
                           <span id="button-example" class="sr-only">Example button markup</span>
                           <!-- Icon Like -->
-                          <button type="button" class="button-icon heart button--outline btn btn-outline-primary" id="button_like" aria-pressed="false" aria-describedby="like-button-example" aria-label="heart icon">Like</button>
+                          <button type="button" class="button-icon heart button--outline btn btn-outline-primary" id="button_like" aria-pressed="false">Like</button>
                           <span id="like-button-example" class="sr-only">Like example button markup</span>
                           <!-- Dialog Launcher -->
-                          <button type="button" class="btn btn-outline-secondary" id="button_all" aria-haspopup="dialog" aria-describedby="a11y-button-example">
+                          <button type="button" class="btn btn-outline-secondary" id="button_all" aria-haspopup="dialog">
                             Open <i class="bi bi-chat-dots" aria-hidden="true"></i>
-                            <span id="a11y-button-example" class="sr-only">Dialog launching example button markup</span>
                           </button>
-                          <input type="image" class="btn btn-outline-secondary" id="button_search" src="/assets/images/search.png" alt="Search"/><br><br>
+                          <button type="button" class="btn btn-outline-secondary" id="button_search">
+                            <i class="bi bi-search" aria-hidden="true"></i>
+                            <span class="sr-only">Search</span>
+                          </button>
                           <h3>Button States</h3>
                           <!-- Default -->
                           <button type="button" class="btn btn-primary">Default</button>
@@ -177,17 +179,15 @@
                             <li>Identify all UI elements that perform actions.</li>
                             <li>During phase one, ask questions if neccesary to understand functionality.</li>
                             <li>During phase two in preparation for developer hand-off, add a sticky note annotation to define each button element as a button.</li>
-                            <li>Most buttons will require further annotating for the developer hand-off phase. Please see interactives and the How to Annotate for more detailed
-                              instructions on how to number the elements and write annotations specific for more complex components.
-                            </li>
                             <li>If the button does not have a visible text label it is recommended to use the button annotation tag with the additional label to ensure the button 
-                              name will be communicated to the developer for programming.
-                            </li>
+                              name will be communicated to the developer for programming.</li>
+                            <li>Button annotations will require further customization to enusre the developer understands specific requiremetns based on button functionality.</li>
                           </ol>
                           <ul class="list-unstyled inline-flex-images" role="list">
                             <li><img src="/assets/images/button.png" alt="button annotation tag"></li>
                             <li><img src="/assets/images/button-with-label.png" alt="button annotation tag with label equals sign and the word foo in quotes"></li>
                           </ul>
+                          <p><strong><em>Please customize annotations specific to each button component.</em></strong></p>
                           <div class="d-inline-block border border-dark p-2 rounded">
                             <div class="d-flex flex-row">
                               <div class="text-to-copy">
@@ -195,7 +195,7 @@
                                 <ul role="list">
                                   <li>Button must be in a <code>&lt;button&gt;</code> element or the element used such as a <code>&lt;div&gt;</code> must have <code>role="button"</code> and <code>tabindex="0"</code> as an equivalent with keyboard event handlers ensuring equal functionality for mouse, keyboard and touch users.</li>
                                   <li>Buttons must have an accessible name. Use text, img alt, aria-label, aria-labelledby or add sr-only text.</li>
-                                  <li>What action does the button perform? Depending on the action the button may require additional aria - such as <code>aria-haspopup</code> or <code>aria-expanded</code> etc.</li>
+                                  <li>[CUSTOMIZE] What action does the button perform? Depending on the action the button may require additional ARIA - such as <code>aria-haspopup</code> or <code>aria-expanded</code> etc.</li>
                                 </ul>                              
                               </div>
                               <div>
