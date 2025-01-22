@@ -233,6 +233,8 @@
                             <li><strong>Consistency of Design:</strong> Assess the consistency in the design of all accordion components throughout the project to ensure a uniform user experience.</li>
                             <li><strong>Heading Structure:</strong> Review if the accordion's design suggests a proper heading structure for the content within each collapsible panel.</li>
                             <li><strong>Legibility:</strong> Confirm that text within buttons and panels is legible, with adequate font size and color contrast.</li>
+                            <li><strong>Text Contrast</strong>Button text must maintain a 4.5:1 minimum contrast with the page background in all states.</li>
+                            <li><strong>Icon Contrast</strong>The icon is meaningful visually and must maintain a minimum 3:1 contrast ratio in all states</li>
                           </ul>                     
                           <div class="d-inline-block border border-dark p-2 rounded">
                             <div class="d-flex flex-row">
@@ -240,8 +242,8 @@
                                 <h3>Accordion</h3>
                                 <h4>Accordion Buttons</h3>
                                 <ul>
-                                    <li>Maintain heading structure</li>
-                                    <li>Nest <code>&lt;button&gt;</code> in heading tags</li>
+                                    <li>Maintain heading structure - if headings have been used</li>
+                                    <li>Nest <code>&lt;button&gt;</code> in heading tags - if headings have been used</li>
                                     <li>Must have toggling <code>aria-expanded="true/false"</code> depending on expanded/collapsed states.</li>
                                     <li>Should have <code>aria-controls</code> attribute equal to the ID of the container of the element it controls.</li>
                                     <li>Icon should be hidden for screen reader users with <code>aria-hidden="true"</code></li>
