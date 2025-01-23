@@ -206,16 +206,23 @@
                           <div class="d-inline-block border border-dark p-2 rounded">
                             <div class="d-flex flex-row">
                               <div class="text-to-copy">
-                                <h3>Dropdown</h3>
-                                <p><strong>Must function equally with mouse and keyboard.</strong></p>
-                                <h4>Dropdown</h3>
+                                <h3>Dropdown/Disclosure</h3>
+                                <p><strong><em>Developer</em></strong></p>
+                                <h4>Disclosure Button</h4>
                                 <ul>
                                   <li>Button must be in a <code>&lt;button&gt;</code> element or the element used such as a <code>&lt;div&gt;</code> must have <code>role="button"</code> and <code>tabindex="0"</code> as an equivalent with keyboard event handlers ensuring equal functionality for mouse, keyboard and touch users.</li>
                                   <li>Buttons must have an accessible name. Use text content, img alt, aria-label, aria-labelledby or add sr-only text.</li>
                                   <li>Must have toggling <code>aria-expanded="true/false"</code> depending on expanded/collapsed states.</li>
-                                  <li>Must have <code>aria-controls</code> attribute equal to the ID of the panel of the element it controls.</li>
-                                  <li>Must be dismissible with ESC key if covering other meaningful content in expanded state and must collapse when focus leave component.</li>
-                                  <li>Icon should be hidden for screen reader users with <code>aria-hidden="true"</code></li>
+                                  <li>Should have <code>aria-controls</code> attribute equal to the ID of the panel of the element it controls.</li>
+                                  <li>Must collapse when focus leaves if the component is covering other meaningful content in an expanded state.</li>
+                                  <li>Should be dismissible with ESC key if covering other meaningful content in an expanded state.</li>
+                                  <li>Icon is visually meaningful and should maintain a 3:1 contrast ratio with the background and should be programmatically hidden for screen reader users with <code>aria-hidden="true"</code></li>
+                                </ul>
+                                <h4>Disclosure Panel</h4>
+                                <ul>
+                                  <li>Must have toggling visibility with <code>display:none;</code> or <code>visibility:hidden;</code> depending on expanded/collapsed states. 
+                                    This is to ensure it is not detectable by assistive technology when in a collapsed state.</li>
+                                  <li>Must have a unique ID for the button's aria-controls attribute, if the attribute is present.</li>
                                 </ul>
                               </div>
                               <div>
@@ -275,15 +282,12 @@
                       <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive">
                         <div class="accordion-body">
                           <ul>
-                            <li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/" target="_blank">WAI-ARIA Authoring Practices: Disclosure Pattern</a></li>
+                            <li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/" target="_blank">ARIA Authoring Practices Guide (APG): Disclosure Patterns</a></li>
                             <li><a href="https://getbootstrap.com/docs/5.3/components/dropdowns/" target="_blank">Bootstrap Dropdown Documentation</a></li>
                             <li><a href="https://www.a11yproject.com/posts/2021-07-21-how-to-make-a-disclosure-widget/" target="_blank">A11Y Project: How to Make an Accessible Disclosure Widget</a></li>
                             <li><a href="https://inclusive-components.design/collapsible-sections/" target="_blank">Inclusive Components: Collapsible Sections</a></li>
-                            <li><a href="https://www.smashingmagazine.com/2020/07/designing-accessible-dropdowns/" target="_blank">Smashing Magazine: Designing Accessible Dropdowns</a></li>
-                            <li><a href="https://css-tricks.com/accessible-simple-css-dropdown-menu/" target="_blank">CSS-Tricks: Accessible Simple CSS Dropdown Menu</a></li>
                             <li><a href="https://webaim.org/techniques/aria/" target="_blank">WebAIM: Using ARIA</a></li>
                             <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/button_role" target="_blank">MDN Web Docs: Using the Button Role</a></li>
-                            <li><a href="https://uxdesign.cc/designing-accessible-dropdowns-47f4a3b3ff38" target="_blank">UX Design: Designing Accessible Dropdowns</a></li>
                             <li><a href="https://www.deque.com/blog/accessible-aria-buttons" target="_blank">Deque: Building Accessible Buttons with ARIA</a></li>
                           </ul>                                                                                           
                         </div>
