@@ -672,7 +672,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },        
         {
           title: "Sensory Characteristics",
-          url: "/a11y-annotations/templates/general/instructions/sensory-characteristics.html",
+          url: "/a11y-annotations/templates/general/structure/sensory-characterists.html",
           description: "Ensure that instructions for interacting with content do not rely solely on sensory characteristics such as shape, size, visual location, orientation, or sound.",
           content: "The Sensory Characteristics guideline ensures that instructions are inclusive and do not rely solely on sensory cues like shape, size, color, or location. Instructions should use descriptive text to complement sensory information. Programmatically determinable descriptions and accessible names should be provided using semantic HTML and ARIA attributes. Relying solely on visual or sensory characteristics can create barriers for users with vision impairments, cognitive disabilities, or those relying on assistive technologies.",
           wcagCriteria: [
