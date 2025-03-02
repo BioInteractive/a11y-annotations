@@ -38,97 +38,163 @@
             <!-- A11y Live Region -->
             <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
             <div class="container-xxl bd-gutter mt-3">
-                <h1>Sensory Characteristics</h1>
-                <!-- Begin Accordion -->
-                <div class="accordion" id="accordionOpen">
-                    <!-- Accordion Item One -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                WCAG Success Criteria
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
-                            <div class="accordion-body">
-                                <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics" target="_blank">1.3.3 Sensory Characteristics</a> ensures that instructions for interacting with content do not rely solely on sensory characteristics such as shape, size, visual location, orientation, or sound. This success criterion requires that:</p>
-                                <ul role="list" class="fancy-checklist">
-                                    <li>Instructions describe elements using text-based descriptions rather than relying solely on sensory characteristics (e.g., “Click the search icon labeled with a magnifying glass” instead of “Click the round icon”).</li>
-                                    <li>Shape, color, size, or other sensory information should be complemented with textual or programmatically determinable descriptions.</li>
-                                    <li>Instructions must ensure equal access for users who rely on assistive technologies or have difficulty perceiving sensory characteristics.</li>
-                                </ul>
-                                <p>Ensuring that instructions are not based solely on sensory characteristics is critical for users with vision impairments, cognitive disabilities, or users who rely on screen readers or alternative interaction methods.</p>
-                                <h4>Examples:</h4>
-                                <ul role="list">
-                                    <li>Prefer: “Click the search icon labeled with a magnifying glass.”</li>
-                                    <li>Avoid: “Click the round icon.”</li>
-                                    <li>Prefer: “Press the green button labeled Submit.”</li>
-                                    <li>Avoid: “Press the green button.”</li>
-                                </ul>
-                                <h4>Common Failures:</h4>
-                                <ul role="list">
-                                    <li>Providing instructions that rely solely on shapes or locations (e.g., “Select the square in the top-right corner”).</li>
-                                    <li>Using color as the only means of conveying information (e.g., “Click the blue button”).</li>
-                                    <li>Failing to include accessible names or programmatically determinable labels.</li>
-                                </ul>
-                                <h4>Techniques:</h4>
-                                <ul role="list" class="fancy-checklist">
-                                    <li>Use descriptive text that clearly explains how to interact with elements.</li>
-                                    <li>Complement sensory information (e.g., shape, size) with textual descriptions or accessible labels.</li>
-                                    <li>Ensure that all interactive elements are programmatically determinable and provide meaningful names for screen readers.</li>
-                                </ul>
-                            </div>
-                        </div>
+              <h1>Sensory Characteristics</h1>
+              <!-- Begin Accordion -->
+              <div class="accordion" id="accordionOpen">
+                <!-- Accordion Item One: WCAG Success Criteria -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      WCAG Success Criteria
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="" role="region">
+                    <div class="accordion-body">
+                      <p>
+                        <a href="https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics" target="_blank">1.3.3 Sensory Characteristics</a> ensures that instructions for interacting with content do not rely solely on sensory characteristics such as shape, size, visual location, orientation, or sound. This success criterion requires that:
+                      </p>
+                      <ul role="list" class="fancy-checklist">
+                        <li>Instructions describe elements using text-based descriptions rather than relying solely on sensory characteristics (e.g., “Click the search icon labeled with a magnifying glass” instead of “Click the round icon”).</li>
+                        <li>Shape, color, size, or other sensory information should be complemented with textual or programmatically determinable descriptions.</li>
+                        <li>Instructions must ensure equal access for users who rely on assistive technologies or have difficulty perceiving sensory characteristics.</li>
+                      </ul>
+                      <p>
+                        Ensuring that instructions are not based solely on sensory characteristics is critical for users with vision impairments, cognitive disabilities, or users who rely on screen readers or alternative interaction methods.
+                      </p>
+                      <h4>Examples:</h4>
+                      <ul role="list">
+                        <li>Prefer: “Activate the search icon labeled with a magnifying glass.”</li>
+                        <li>Avoid: “Click the round icon.”</li>
+                        <li>Prefer: “Press the green button labeled Submit.”</li>
+                        <li>Avoid: “Press the green button.”</li>
+                      </ul>
+                      <h4>Common Failures:</h4>
+                      <ul role="list">
+                        <li>Providing instructions that rely solely on shapes or locations (e.g., “Select the square in the top-right corner”).</li>
+                        <li>Using color as the only means of conveying information (e.g., “Click the blue button”).</li>
+                        <li>Failing to include accessible names or programmatically determinable labels.</li>
+                      </ul>
+                      <h4>Techniques:</h4>
+                      <ul role="list" class="fancy-checklist">
+                        <li>Use descriptive text that clearly explains how to interact with elements.</li>
+                        <li>Complement sensory information (e.g., shape, size) with textual descriptions or accessible labels.</li>
+                        <li>Ensure that all interactive elements are programmatically determinable and provide meaningful names for screen readers.</li>
+                      </ul>
                     </div>
-                    <!-- Accordion Item Four Developer -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingFour">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                Accessibility Considerations
-                                <!-- Developer Tag -->
-                                <span class="dev-tag ms-3">
-                                    Developer
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                        <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </span> 
-                            </button>
-                        </h2>
-                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
-                            <div class="accordion-body">
-                                <h3>Implementing Sensory Characteristics</h3>
-                                <ul role="list">
-                                    <li><strong>Use Descriptive Instructions:</strong> Ensure that instructions do not rely solely on sensory cues like shape, size, color, or location. For example, use “Click the search icon labeled with a magnifying glass” instead of “Click the round icon.”</li>
-                                    <li><strong>Complement Visual Cues with Text:</strong> Provide textual or programmatically determinable descriptions to supplement sensory characteristics like shape or location.</li>
-                                    <li><strong>Ensure Accessible Names:</strong> Use semantic HTML and ARIA attributes to provide accessible names and labels for interactive elements. For instance, use `aria-labelledby` or `aria-label` to associate elements with meaningful text.</li>
-                                    <li><strong>Avoid Ambiguity in Design:</strong> Test designs to confirm that users can identify and interact with elements without relying on sensory characteristics alone.</li>
-                                    <li><strong>Test with Assistive Technologies:</strong> Use screen readers, keyboard navigation, and high-contrast settings to verify that instructions are clear and actionable for all users.</li>
-                                    <li><strong>Avoid Solely Color-Based Instructions:</strong> Do not rely on color to differentiate actions or states (e.g., “Click the red button”). Use icons, text, or patterns to provide alternatives.</li>
-                                </ul>
-                                <p>Implementing these best practices ensures that sensory characteristics do not create barriers for users with vision impairments, cognitive disabilities, or those relying on assistive technologies, ensuring WCAG 2.1 Level A conformance.</p>
-                            </div>                            
-                        </div>
-                    </div>
-                    <!-- Accordion Item Five Resources -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-item" id="headingFive">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-                                Resources
-                            </button>
-                        </h2>
-                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive">
-                            <div class="accordion-body">
-                                <ul role="list">
-                                    <li><a href="https://www.digitala11y.com/understanding-sc-1-3-3-sensory-characteristics/" target="_blank" rel="noopener noreferrer">DigitalA11Y - Understanding WCAG SC 1.3.3 Sensory Characteristics</a></li>
-                                    <li><a href="https://www.wuhcag.com/sensory-characteristics/" target="_blank" rel="noopener noreferrer">Wuhcag - Sensory Characteristics (1.3.3 – Level A)</a></li>
-                                    <li><a href="https://www.wcag.com/designers/1-3-3-sensory-characteristics/" target="_blank" rel="noopener noreferrer">WCAG.com - 1.3.3 Sensory Characteristics</a></li>
-                                </ul>                                
-                            </div>
-                        </div>
-                    </div>
+                  </div>
                 </div>
-                <!-- End Accordion -->
+                <!-- Accordion Item Two: Accessibility Considerations - Designer -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Accessibility Considerations
+                      <span class="dev-tag ms-3">
+                        Designer 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M12 2H8.5C7.57174 2 6.6815 2.36875 6.02513 3.02513C5.36875 3.6815 5 4.57174 5 5.5C5 6.42826 5.36875 7.3185 6.02513 7.97487C6.6815 8.63125 7.57174 9 8.5 9M12 2V9M12 2H15.5C15.9596 2 16.4148 2.09053 16.8394 2.26642C17.264 2.44231 17.6499 2.70012 17.9749 3.02513C18.2999 3.35013 18.5577 3.73597 18.7336 4.16061C18.9095 4.58525 19 5.04037 19 5.5C19 5.95963 18.9095 6.41475 18.7336 6.83939C18.5577 7.26403 18.2999 7.64987 17.9749 7.97487C17.6499 8.29988 17.264 8.55769 16.8394 8.73358C16.4148 8.90947 15.9596 9 15.5 9M12 9H8.5M12 9H15.5M12 9V16M8.5 9C7.57174 9 6.6815 9.36875 6.02513 10.0251C5.36875 10.6815 5 11.5717 5 12.5C5 13.4283 5.36875 14.3185 6.02513 14.9749C6.6815 15.6313 7.57174 16 8.5 16M15.5 9C15.0404 9 14.5852 9.09053 14.1606 9.26642C13.736 9.44231 13.3501 9.70012 13.0251 10.0251C12.7001 10.3501 12.4423 10.736 12.2664 11.1606C12.0905 11.5852 12 12.0404 12 12.5C12 12.9596 12.0905 13.4148 12.2664 13.8394C12.4423 14.264 12.7001 14.6499 13.0251 14.9749C13.3501 15.2999 13.736 15.5577 14.1606 15.7336C14.5852 15.9095 15.0404 16 15.5 16C15.9596 16 16.4148 15.9095 16.8394 15.7336C17.264 15.5577 17.6499 15.2999 17.9749 14.9749C18.2999 14.6499 18.5577 14.264 18.7336 13.8394C18.9095 13.4148 19 12.9596 19 12.5C19 12.0404 18.9095 11.5852 18.7336 11.1606C18.5577 10.736 18.2999 10.3501 17.9749 10.0251C17.6499 9.70012 17.264 9.44231 16.8394 9.26642C16.4148 9.09053 15.9596 9 15.5 9ZM8.5 16C7.57174 16 6.6815 16.3687 6.02513 17.0251C5.36875 17.6815 5 18.5717 5 19.5C5 20.4283 5.36875 21.3185 6.02513 21.9749C6.6815 22.6313 7.57174 23 8.5 23C9.42826 23 10.3185 22.6313 10.9749 21.9749C11.6313 21.3185 12 20.4283 12 19.5V16M8.5 16H12" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" style="" role="region">
+                    <div class="accordion-body">
+                      <h3>Designing for Sensory Accessibility</h3>
+                      <ul>
+                        <li><strong>Complement Sensory Cues:</strong> In your designs, ensure that all sensory information (e.g., shape, color, size, orientation) is complemented with textual descriptions or alternative icons.</li>
+                        <li><strong>Clear Instructional Design:</strong> Create prototypes that clearly differentiate interactive elements through both visual and text-based cues.</li>
+                        <li><strong>Annotate Sensory Elements:</strong> Label and annotate design components that rely on sensory characteristics, specifying alternative cues for development.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- Accordion Item Three: How to Test and Annotate - Auditor -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      How to Test and Annotate
+                      <span class="dev-tag ms-3">
+                        Auditor 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                          <path d="M14 7H19.6404C20.0877 7 20.3113 7 20.4421 7.09404C20.5562 7.17609 20.6306 7.30239 20.6469 7.442C20.6656 7.602 20.5569 7.79751 20.3397 8.18851L18.9936 10.6115C18.9148 10.7533 18.8755 10.8242 18.86 10.8993C18.8463 10.9657 18.8463 11.0343 18.86 11.1007C18.8755 11.1758 18.9148 11.2467 18.9936 11.3885L20.3397 13.8115C20.5569 14.2025 20.6656 14.398 20.6469 14.558C20.6306 14.6976 20.5562 14.8239 20.4421 14.906C20.3113 15 20.0877 15 19.6404 15H12.6C12.0399 15 11.7599 15 11.546 14.891C11.3578 14.7951 11.2049 14.6422 11.109 14.454C11 14.2401 11 13.9601 11 13.4V11M4 21L4 4M4 11H12.4C12.9601 11 13.2401 11 13.454 10.891C13.6422 10.7951 13.7951 10.6422 13.891 10.454C14 10.2401 14 9.96005 14 9.4V4.6C14 4.03995 14 3.75992 13.891 3.54601C13.7951 3.35785 13.6422 3.20487 13.454 3.10899C13.2401 3 12.9601 3 12.4 3H5.6C5.03995 3 4.75992 3 4.54601 3.10899C4.35785 3.20487 4.20487 3.35785 4.10899 3.54601C4 3.75992 4 4.03995 4 4.6V11Z" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" style="" role="region">
+                    <div class="accordion-body">
+                      <ol role="list">
+                        <li><strong>Review Design Artifacts:</strong> Examine Figma prototypes to ensure that sensory-based instructions are complemented with text or icon alternatives.</li>
+                        <li><strong>Annotate Missing Alternatives:</strong> Document any instances where instructions rely solely on sensory cues, noting where additional information is needed.</li>
+                        <li><strong>Confirm Consistency:</strong> Verify that alternative cues are consistently applied across all similar design elements.</li>
+                      </ol>
+                      <div class="d-inline-block border border-dark p-2 rounded">
+                        <div class="d-flex flex-row">
+                          <div class="text-to-copy">
+                            <h3>Sensory Characteristics</h3>
+                            <ul role="list">
+                              <li>Ensure instructions do not rely solely on sensory cues.</li>
+                              <li>The intended approach is: __________ to provide clear alternatives.</li>
+                              <li>Recommendation: Verify that all interactive elements have accessible, descriptive labels.</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <button class="ml-1r btn copy-btn">
+                              <i class="bi bi-clipboard-heart-fill" aria-hidden="true"></i> Copy
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Accordion Item Four: Accessibility Considerations - Developer -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      Accessibility Considerations
+                      <span class="dev-tag ms-3">
+                        Developer 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                          <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </span>
+                    </button>
+                  </h2>
+                  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="" role="region">
+                    <div class="accordion-body">
+                      <h3>Implementing Sensory Characteristics</h3>
+                      <ul role="list">
+                        <li><strong>Use Descriptive Instructions:</strong> Ensure that instructions do not rely solely on sensory cues like shape, size, color, or location. For example, use “Activate the search icon labeled with a magnifying glass” instead of “Click the round icon.”</li>
+                        <li><strong>Complement Visual Cues with Text:</strong> Provide textual or programmatically determinable descriptions to supplement sensory characteristics.</li>
+                        <li><strong>Ensure Accessible Names:</strong> Use semantic HTML and ARIA attributes to provide accessible names and labels for interactive elements.</li>
+                        <li><strong>Avoid Ambiguity:</strong> Validate that users can identify interactive elements through both sensory and textual cues.</li>
+                        <li><strong>Avoid Solely Color-Based Instructions:</strong> Do not rely on color alone; use additional markers such as icons or text to differentiate actions.</li>
+                      </ul>
+                      <p>Implementing these practices ensures that sensory-based instructions are accessible to users with visual, cognitive, or perceptual disabilities.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Accordion Item Five: Resources -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                      Resources
+                    </button>
+                  </h2>
+                  <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" style="" role="region">
+                    <div class="accordion-body">
+                      <ul role="list">
+                        <li><a href="https://www.digitala11y.com/understanding-sc-1-3-3-sensory-characteristics/" target="_blank" rel="noopener noreferrer">DigitalA11Y - Understanding WCAG SC 1.3.3 Sensory Characteristics</a></li>
+                        <li><a href="https://www.wuhcag.com/sensory-characteristics/" target="_blank" rel="noopener noreferrer">Wuhcag - Sensory Characteristics (1.3.3 – Level A)</a></li>
+                        <li><a href="https://www.wcag.com/designers/1-3-3-sensory-characteristics/" target="_blank" rel="noopener noreferrer">WCAG.com - 1.3.3 Sensory Characteristics</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Accordion -->
             </div>
-          </main>                              
+          </main>                             
       </div>
   </div>
 

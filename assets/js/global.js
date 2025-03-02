@@ -440,19 +440,51 @@ document.addEventListener('DOMContentLoaded', function () {
           ]
         },        
         {
-          title: 'Page',
-          url: '/a11y-annotations/templates/general/structure/page.html',
-          description: 'Guidelines for developers, designers, and auditors to ensure the structure of a webpage meets accessibility requirements.',
-          content: 'This page covers critical accessibility guidelines for developing web pages, including meaningful sequence, correct orientation, page titles, multiple ways to navigate, and proper language specification...',
-          wcagCriteria: [
-              { id: '1.3.2', description: 'Meaningful Sequence - Content is presented in a logical reading sequence.' },
-              { id: '1.3.4', description: 'Orientation - Content is accessible in both portrait and landscape orientations.' },
-              { id: '2.4.2', description: 'Page Titled - Web pages have titles that describe the topic or purpose.' },
-              { id: '2.4.5', description: 'Multiple Ways - More than one way is available to locate a webpage within a set of webpages.' },
-              { id: '3.1.1', description: 'Language of Page - The default language of the webpage is programmatically determined.' },
-              { id: '3.1.2', description: 'Language of Parts - The language of each passage or phrase is programmatically determined.' }
+          "title": "Meaningful Sequence",
+          "url": "/a11y-annotations/templates/general/structure/meaningful-sequence.html",
+          "description": "Guidelines for ensuring that content is presented in a logical reading order for assistive technologies.",
+          "content": "This page covers accessibility guidelines related to presenting content in a meaningful sequence, ensuring that the order preserves its intended meaning regardless of visual layout.",
+          "wcagCriteria": [
+            { "id": "1.3.2", "description": "Meaningful Sequence - Content is presented in a logical reading sequence." }
           ]
         },
+        {
+          "title": "Orientation",
+          "url": "/a11y-annotations/templates/general/structure/orientation.html",
+          "description": "Guidelines for ensuring that web content is accessible in both portrait and landscape orientations.",
+          "content": "This page covers accessibility guidelines for ensuring that content adapts to different device orientations, avoiding orientation lock unless essential.",
+          "wcagCriteria": [
+            { "id": "1.3.4", "description": "Orientation - Content is accessible in both portrait and landscape orientations." }
+          ]
+        },
+        {
+          "title": "Page Titled",
+          "url": "/a11y-annotations/templates/general/structure/page-titled.html",
+          "description": "Guidelines for ensuring that web pages have descriptive and informative titles.",
+          "content": "This page outlines best practices for creating clear page titles that reflect the content and purpose of the webpage.",
+          "wcagCriteria": [
+            { "id": "2.4.2", "description": "Page Titled - Web pages have titles that describe the topic or purpose." }
+          ]
+        },
+        {
+          "title": "Multiple Ways",
+          "url": "/a11y-annotations/templates/general/structure/multiple-ways.html",
+          "description": "Guidelines for providing multiple navigation methods to help users locate content on a website.",
+          "content": "This page covers accessibility guidelines for offering diverse navigation options, such as primary menus, site maps, search functions, and breadcrumb trails, to facilitate content discovery and achieve pedagogical learning outcomes.",
+          "wcagCriteria": [
+            { "id": "2.4.5", "description": "Multiple Ways - More than one way is available to locate a webpage within a set of webpages." }
+          ]
+        },
+        {
+          "title": "Language",
+          "url": "/a11y-annotations/templates/general/structure/language.html",
+          "description": "Guidelines for specifying the language of a webpage and its parts for proper assistive technology interpretation.",
+          "content": "This page outlines accessibility guidelines for declaring the default language of a webpage using the lang attribute, as well as marking passages in different languages with additional lang attributes to ensure correct pronunciation and comprehension.",
+          "wcagCriteria": [
+            { "id": "3.1.1", "description": "Language of Page - The default language of the webpage is programmatically determined." },
+            { "id": "3.1.2", "description": "Language of Parts - The language of each passage or phrase is programmatically determined." }
+          ]
+        },        
         {
           title: 'Text Best Practices',
           url: '/a11y-annotations/templates/general/structure/text-best-practices.html',
