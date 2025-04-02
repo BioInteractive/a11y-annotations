@@ -45,35 +45,33 @@
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          WCAG Success Criteria
+                          WCAG Success Criteria Requirements and Examples
                         </button>
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                         <div class="accordion-body">
-                          <p>
-                            <a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html" target="_blank" rel="noopener noreferrer">1.3.1 Info and Relationships</a>
-                             Information, structure, and relationships conveyed through presentation can be programmatically determined 
-                            or are available in text.
-                          </p>
-                          <p>
-                            Properly structured headings are essential for web accessibility. They provide a hierarchical structure to your content, making it easier for all users, 
-                            including those who rely on screen readers, to navigate and understand your web page.</p>
-                          <p>
-                            Heading levels should be used sequentially, starting with <code>&lt;h1&gt;</code> for the main page title and following with <code>&lt;h2&gt;</code>, 
-                            <code>&lt;h3&gt;</code>, and so on, to represent subheadings. Avoid skipping levels in the hierarchy, as this can lead to confusion for screen reader users.
-                          </p>
-                          <p>
-                            <a href="https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html" target="_blank" rel="noopener noreferrer">2.4.6 Headings and Labels</a>
-                            Headings and labels describe topic or purpose.
-                          </p>
-                          <p>
-                            For effective navigation and understanding of web content, it is vital that headings and labels are designed and implemented to clearly describe the topics or purposes they represent. This clarity assists users, especially those using assistive technologies like screen readers, in finding information and completing tasks.
-                          </p>
-                          <p>
-                            Ensure that headings (<code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>) accurately describe the section of content they introduce, and are used sequentially to maintain the content's hierarchical structure. Labels for form elements, buttons, and other interactive elements should be explicitly associated with the controls they represent and convey clear information about the control's function.
-                          </p>
-                          
-                        </div>
+                          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html" target="_blank" rel="noopener noreferrer">1.3.1 Info and Relationships</a> requires that information, structure, and relationships conveyed visually—such as through layout, headings, or grouping—can also be understood programmatically or are available in text.</p>
+                          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html" target="_blank" rel="noopener noreferrer">2.4.6 Headings and Labels</a> requires that headings and labels clearly describe the topic or purpose of the content they reference.</p>
+                          <h3>Briefing and Intent</h3>
+                          <p>Together, these criteria ensure that content structure is communicated clearly—both visually and programmatically. Headings organize content into a logical hierarchy, while labels help users identify the purpose of interactive elements. For users of assistive technologies, this structure allows them to understand and navigate content efficiently. For all users, consistent, descriptive headings and labels reduce confusion and improve usability.</p>
+                          <h3>Benefits</h3>
+                          <p>Clear structural markup helps screen reader users build a mental model of the page and move through it efficiently. Descriptive headings support orientation and scanning, while meaningful labels on form elements and buttons help users complete tasks confidently. These benefits extend to all users, particularly those with cognitive, visual, or motor disabilities.</p>
+                          <h3>Key Requirements</h3>
+                          <ul class="fancy-checklist">
+                            <li>Use semantic HTML elements like <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code> to structure content hierarchically.</li>
+                            <li>Apply heading levels sequentially and avoid skipping levels (e.g., don’t go from <code>&lt;h2&gt;</code> to <code>&lt;h4&gt;</code>).</li>
+                            <li>Ensure headings clearly describe the section of content they introduce.</li>
+                            <li>Use meaningful, visible labels for all form controls, buttons, and other interactive elements.</li>
+                            <li>Ensure labels are programmatically associated with their corresponding input elements (e.g., using <code>&lt;label for=""&gt;</code> or <code>aria-labelledby</code>).</li>
+                          </ul>
+                          <h3>Examples</h3>
+                          <ul>
+                            <li><strong>Page Headings:</strong> A page begins with a <code>&lt;h1&gt;</code> titled “Support Center,” followed by <code>&lt;h2&gt;</code> sections for “Billing Questions” and “Technical Issues.”</li>
+                            <li><strong>Descriptive Section Titles:</strong> A section titled “Frequently Asked Questions for New Users” helps orient users to the content within it.</li>
+                            <li><strong>Form Control Labels:</strong> A visible label “Email Address” is programmatically linked to the input field, so screen readers announce it correctly.</li>
+                            <li><strong>Button Text:</strong> A submit button reads “Send Message” rather than a vague label like “Submit.”</li>
+                          </ul>
+                        </div>                                            
                       </div>
                     </div>
                     <!-- Accordion Item Two Designer-->

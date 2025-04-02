@@ -45,28 +45,41 @@
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          WCAG Success Criteria
+                          WCAG Success Criteria Requirements and Examples
                         </button>
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                         <div class="accordion-body">
-                          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/use-of-color" target="_blank">1.4.1 Use of Color</a>
-                            Color must not be used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.
-                          </p>
-                          <h3>Commonly found examples of the use of color in web design:</h3>
+                          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html" target="_blank" rel="noopener noreferrer">1.4.1 Use of Color</a> requires that color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.</p>
+                        
+                          <h3>Briefing and Intent</h3>
+                          <p>The intent of this success criterion is to ensure that information communicated through color is also available through other visual means such as text, patterns, icons, or placement. This is especially important for users who are color blind, have low vision, or use monochrome displays.</p>
+                        
+                          <h3>Benefits</h3>
+                          <p>By not relying solely on color to convey information, you make your content more inclusive for people with visual impairments or cognitive disabilities. It also improves usability in poor lighting conditions or on devices with low display contrast.</p>
+                        
+                          <h3>Key Requirements</h3>
+                          <ul class="fancy-checklist">
+                            <li>Do not rely on color alone to indicate form field errors, required fields, or selection states. Always pair with text, icons, or visual indicators like borders or patterns.</li>
+                            <li>Ensure that interactive elements (e.g., links, buttons) have multiple indicators of functionality, such as underlines, icons, or contrast changes on hover/focus.</li>
+                            <li>For charts and graphs, use patterns, shapes, or text labels in addition to color to differentiate data sets.</li>
+                            <li>Ensure instructions do not reference color alone (e.g., avoid saying “click the red button”).</li>
+                          </ul>
+                        
+                          <h3>Commonly Found Examples of the Use of Color in Web Design</h3>
                           <ul>
-                            <li><strong>Error messages</strong>: Using red text or borders to indicate an error in a form field.</li>
-                            <li><strong>Success messages</strong>: Using green text or borders to signify successful form submission or actions.</li>
-                            <li><strong>Links</strong>: Using color alone to indicate a hyperlink in a block of text.</li>
-                            <li><strong>Categories or status labels</strong>: Color-coded icons or labels to represent different statuses, like “urgent” in red, “complete” in green, etc.</li>
-                            <li><strong>Required fields</strong>: Indicating required form fields using only a colored text label.</li>
-                            <li><strong>Priority levels</strong>: Using colors like red, yellow, or green to show levels of urgency or importance.</li>
-                            <li><strong>Charts or graphs</strong>: Using color alone to differentiate data sets without alternative markers like shapes, labels, or patterns.</li>
-                          </ul> 
-                          <h3>Colored links in blocks of text:</h3>
-                          <p>If the only visual indication of a link in a block of text is a change to the link's color it must have a minimum of 3:1 contrast with the surrounding text
-                            or a non-color visual indicator such as an underline or bolder font weight.</p>                     
-                        </div>
+                            <li><strong>Error messages:</strong> Using red text or borders to indicate an error in a form field.</li>
+                            <li><strong>Success messages:</strong> Using green text or borders to signify successful form submission or actions.</li>
+                            <li><strong>Links:</strong> Using color alone to indicate a hyperlink in a block of text.</li>
+                            <li><strong>Categories or status labels:</strong> Color-coded icons or labels to represent different statuses, like “urgent” in red, “complete” in green, etc.</li>
+                            <li><strong>Required fields:</strong> Indicating required form fields using only a colored text label.</li>
+                            <li><strong>Priority levels:</strong> Using colors like red, yellow, or green to show levels of urgency or importance.</li>
+                            <li><strong>Charts or graphs:</strong> Using color alone to differentiate data sets without alternative markers like shapes, labels, or patterns.</li>
+                          </ul>
+                        
+                          <h3>Colored Links in Blocks of Text</h3>
+                          <p>If the only visual indication of a link in a block of text is a change to the link's color, it must have a minimum contrast ratio of 3:1 with the surrounding text <em>or</em> include an additional non-color visual indicator such as an underline or bold font weight.</p>
+                        </div>                        
                       </div>
                     </div>
                     <!-- Accordion Item Inserted -->

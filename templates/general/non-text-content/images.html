@@ -40,9 +40,23 @@
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                         <div class="accordion-body">
-                          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html" target="_blank" rel="noopener noreferrer">1.1.1 Non-text Content</a>
-                            All meaningful non-text content (images, video, audio, SVGs, icons and other content that isn't conveyed by text) 
-                            needs to have alt text that provides the same information found in the content.</p>
+                          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html" target="_blank" rel="noopener noreferrer">1.1.1 Non-text Content</a> requires that all meaningful non-text content (images, video, audio, SVGs, icons, and other content that isn't conveyed by text) must have a text alternative that serves the equivalent purpose.</p>
+
+                          <h3>Briefing and Intent</h3>
+                          <p>The goal of this success criterion is to ensure that content presented visually or through other non-text formats is also available to users who cannot perceive it. This includes people who are blind, have low vision, are deaf-blind, or use screen readers and other assistive technologies. Text alternatives allow these users to access the same information and functionality.</p>
+
+                          <h3>Benefits</h3>
+                          <p>Providing text alternatives improves access to important content and functionality for a wide range of users, including those with visual disabilities, users who rely on text-based browsers, and users in low-bandwidth environments. It also enhances search engine indexing and improves content reuse across platforms.</p>
+
+                          <h3>Key Requirements</h3>
+                          <ul class="fancy-checklist">
+                            <li>Provide concise and meaningful <code>alt</code> attributes for all informative images, icons, and graphics.</li>
+                            <li>Use empty <code>alt=""</code> for decorative images that do not convey content or functionality, and ensure they are still in the HTML for layout integrity.</li>
+                            <li>Include text alternatives for complex images (e.g., charts, graphs, diagrams) by referencing a longer description nearby or in the main text.</li>
+                            <li>Ensure that any non-text buttons (e.g., icon-only buttons) include accessible names via <code>aria-label</code>, <code>aria-labelledby</code>, or visually hidden text.</li>
+                            <li>Provide captions, transcripts, or text equivalents for non-text media like audio or video, unless it is purely decorative or supplementary.</li>
+                          </ul>
+                          
                           <p><strong>Every <code>&lt;img&gt;</code> must have an alt attribute.</strong></p>
                           <h3>Meaningful Image Example</h3>
                           <img src="/assets/images/biome-viewer-thumb.webp"/ alt="Digital globe highlighting North America with shaded regions indicating varying impacts across the continent, suggesting a study of environmental or climatic changes at different times." class="example-img">

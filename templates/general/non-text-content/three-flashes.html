@@ -49,14 +49,29 @@
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                         <div class="accordion-body">
-                          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html" target="_blank" rel="noopener noreferrer">2.3.1 Three Flashes or Below Threshold</a>
-                            Web pages must ensure that content does not flash more than three times per second to prevent seizures and reactions in susceptible users. This criterion aims to protect users from content that could cause serious health risks.</p>
-                          <ul role="list" class="fancy-checklist">
-                            <li><strong>Flash Limits:</strong> Ensure no content flashes more than three times in any one-second period.</li>
-                            <li><strong>Below Threshold:</strong> If flashing is necessary, it must be below the general and red flash thresholds to minimize risks.</li>
-                            <li><strong>Non-Interference:</strong> All webpage content, regardless of its purpose, must adhere to this criterion to prevent interference with the user's ability to use the page fully.</li>
+                          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html" target="_blank" rel="noopener noreferrer">2.3.1 Three Flashes or Below Threshold</a> requires that content must not flash more than three times per second, unless the flash is below the defined general flash and red flash thresholds. This protects users from content that could trigger seizures or physical reactions in individuals with photosensitive epilepsy.</p>
+                        
+                          <h3>Briefing and Intent</h3>
+                          <p>The intent of this success criterion is to reduce the risk of seizures and other adverse physical reactions caused by flashing content. Visual content that flashes at certain frequencies—especially in the red spectrum—can trigger seizures in users with photosensitive epilepsy. This rule applies to all web content, regardless of whether it is decorative, functional, or part of media.</p>
+                        
+                          <h3>Benefits</h3>
+                          <p>This criterion protects users with neurological disorders, particularly those with photosensitive epilepsy, from serious health risks. It also improves comfort and usability for many users who are sensitive to visual stimuli such as rapid flashing, strobing effects, or intense animations.</p>
+                        
+                          <h3>Key Requirements</h3>
+                          <ul class="fancy-checklist">
+                            <li><strong>Flash Limits:</strong> Ensure no element on the page flashes more than three times in any one-second period.</li>
+                            <li><strong>Below Threshold:</strong> If flashing is necessary, it must meet the general and red flash thresholds as defined in WCAG to be considered safe.</li>
+                            <li><strong>Non-Interference:</strong> All content—including ads, embedded videos, and decorative effects—must comply, even if not essential to the core user experience.</li>
                           </ul>
-                        </div>                        
+                        
+                          <h3>Examples</h3>
+                          <ul>
+                            <li><strong>Safe Animation:</strong> An animated loading spinner loops smoothly without any rapid flashing or flickering effects.</li>
+                            <li><strong>Video Content:</strong> A pre-recorded video that contains flashing lights is edited to reduce flashes to fewer than three per second or removed entirely.</li>
+                            <li><strong>Interactive Feedback:</strong> A button uses a fade-in/fade-out effect for feedback instead of a flashing highlight to avoid seizure risk.</li>
+                            <li><strong>Game Design:</strong> A game developer replaces flashing explosions with alternative visual cues like scaling or blur effects.</li>
+                          </ul>
+                        </div>                                               
                       </div>
                     </div>
                     <!-- Accordion Item Two Designer -->

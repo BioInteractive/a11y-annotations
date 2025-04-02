@@ -45,33 +45,30 @@
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          WCAG Success Criteria
+                          WCAG Success Criteria Requirements and Examples
                         </button>
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                         <div class="accordion-body">
-                          <p>
-                            <a href="https://www.w3.org/WAI/WCAG21/Understanding/consistent-navigation.html" target="_blank" rel="noopener noreferrer">3.2.3 Consistent Navigation</a>
-                            Navigational mechanisms that are repeated on multiple pages within a set of web pages occur in the same relative order each time they are repeated, unless a change is initiated by the user.
-                          </p>
-                          <p>
-                            Consistent navigation enhances user experience, particularly for those relying on assistive technologies. It allows users to predict the location of navigation components, improving efficiency and reducing cognitive load.
-                          </p>
-                          <p>
-                            Developers and designers should ensure that navigation menus, search bars, and other recurring elements are presented in a predictable order across pages. Even minor changes in navigation can disorient users with cognitive disabilities or those using screen readers.
-                          </p>
-                          <p>
-                            <strong>Best Practices for Consistent Navigation:</strong>
-                          </p>
-                          <ul>
-                            <li>Keep the order and placement of navigation elements consistent across all pages.</li>
-                            <li>Use a standard template for recurring elements like headers, footers, and menus.</li>
-                            <li>Provide flexibility for user customization, such as the ability to pin or rearrange frequently used links.</li>
+                          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/consistent-navigation.html" target="_blank" rel="noopener noreferrer">3.2.3 Consistent Navigation</a> requires that navigational components that appear across multiple pages are presented in the same relative order, unless the user intentionally changes them.</p>
+                          <h3>Briefing and Intent</h3>
+                          <p>The goal of Consistent Navigation is to help users find and use repeated navigation patterns predictably. When navigation elements like menus, headers, or sidebars stay in the same location and order across pages, it reduces the learning curve and helps users orient themselves—especially those using screen readers or with cognitive disabilities.</p>
+                          <h3>Benefits</h3>
+                          <p>Consistent navigation improves efficiency and reduces frustration. It benefits screen reader users who rely on structure to navigate, keyboard users who depend on tab order, and users with cognitive or learning disabilities who benefit from predictable page layouts.</p>
+                          <h3>Key Requirements</h3>
+                          <ul class="fancy-checklist">
+                            <li>Keep the order of repeated navigation items the same across all pages of a site.</li>
+                            <li>Ensure menus, headers, sidebars, and footers appear in the same relative position from page to page.</li>
+                            <li>Only change the navigation order if the user initiates the change (e.g., customizing a dashboard).</li>
+                            <li>Use consistent layout templates when designing recurring navigational elements.</li>
                           </ul>
-                          <p>
-                            Implementing consistent navigation ensures a seamless experience for all users, promoting accessibility and usability throughout the website.
-                          </p>
-                        </div>                        
+                          <h3>Examples</h3>
+                          <ul>
+                            <li><strong>Main Menu:</strong> A top navigation bar with links to Home, About, Services, and Contact appears in the same order on every page.</li>
+                            <li><strong>Sidebar Consistency:</strong> A left-hand menu with related links stays in the same location and order throughout a multi-page guide.</li>
+                            <li><strong>User-Initiated Change:</strong> A user rearranges links in their personalized dashboard, which is an intentional and accessible change in navigation order.</li>
+                          </ul>
+                        </div>                                               
                       </div>
                     </div>
                     <!-- Accordion Item Two Designer-->

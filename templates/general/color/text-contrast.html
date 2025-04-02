@@ -43,33 +43,164 @@
                     <div class="accordion" id="accordionOpen">
                         <!-- Accordion Item One -->
                         <div class="accordion-item">
-                          <h2 class="accordion-header" id="headingOne">
+                          <h2 class="accordion-header" id="headingOne">  
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                              WCAG Success Criteria
+                              WCAG Success Criteria Requirements and Examples
                             </button>
                           </h2>
                           <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                             <div class="accordion-body">
                               <p>
-                                <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" target="_blank" rel="noopener noreferrer">1.4.3 Contrast (Minimum)</a>
-                                The visual presentation of text and images of text must have a contrast ratio of at least 4.5:1, with the following exceptions:
+                                <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" target="_blank" rel="noopener noreferrer">
+                                  1.4.3 Contrast (Minimum)
+                                </a> 
+                                requires that the visual presentation of text and images of text must have a contrast ratio of at least 4.5:1 for normal text and at least 3:1 for large text. Proper contrast ensures readability for users with low vision, color blindness, and other visual impairments.
                               </p>
+                            
+                              <h3>Briefing and Intent</h3>
+                              <p>
+                                The goal of this success criterion is to ensure that all users, especially those with low vision, can read and understand on-screen text. Contrast minimum requirements help prevent text from blending into the background, making content more legible across different lighting conditions and display settings.
+                              </p>
+                            
+                              <h3>Key Requirements</h3>
+                              <ul class="fancy-checklist">
+                                <li><strong>Regular Text Contrast:</strong> Text smaller than 18pt (24px) must maintain a contrast ratio of at least 4.5:1 against the background.</li>
+                                <li><strong>Large Text Contrast:</strong> Large-scale text (18pt/24px and larger, or bold 14pt/18.5px) must have a contrast ratio of at least 3:1.</li>
+                                <li><strong>Incidental Text:</strong> Text that is purely decorative, part of an inactive interface component, or not intended to be read does not need to meet contrast requirements.</li>
+                                <li><strong>Logo Text:</strong> Text that is part of a logo or brand name does not have a contrast requirement.</li>
+                              </ul>
+                            
+                              <h3>Examples</h3>
+                              <p><strong>Regular-Sized Text Contrast</strong> (text smaller than 18pt or 24px)</p>
+                              <div class="contrast-example">
+                                <p style="color: #999; background-color: #fff; padding: 5px;">
+                                  <span aria-hidden="true">❌</span> Fails: This text has a contrast ratio of 2.8:1, which does not meet WCAG 1.4.3 for regular-sized text.
+                                </p>
+                                <p style="color: #333; background-color: #fff; padding: 5px;">
+                                  <span aria-hidden="true">✅</span> Passes: This text has a contrast ratio of 5.2:1, which meets WCAG 1.4.3 for regular-sized text.
+                                </p>
+                              </div>
+
+                              <p><strong>Large-Sized Text Contrast</strong> (text 18pt/24px or bold 14pt/18.5px)</p>
+                              <div class="contrast-example">
+                                <p style="font-size: 24px; color: #777; background-color: #fff; padding: 5px;">
+                                  <span aria-hidden="true">❌</span> Fails: This large text has a contrast ratio of 2.5:1, which does not meet WCAG 1.4.3 for large text.
+                                </p>
+                                <p style="font-size: 24px; color: #222; background-color: #fff; padding: 5px;">
+                                  <span aria-hidden="true">✅</span> Passes: This large text has a contrast ratio of 4.8:1, which exceeds WCAG 1.4.3 requirements.
+                                </p>
+                              </div>
+                                                          
+                              <h3>Common Pitfalls</h3>
                               <ul>
-                                <li>
-                                  <strong>Large Text:</strong> Large-scale text and images of large-scale text must have a contrast ratio of at least 3:1.
-                                </li>
-                                <li>
-                                  <strong>Incidental:</strong> Text or images of text that are part of an inactive user interface component, purely decorative, not visible to anyone, or part of a picture with significant other visual content, have no contrast requirement.
-                                </li>
-                                <li>
-                                  <strong>Logotypes:</strong> Text that is part of a logo or brand name has no contrast requirement.
-                                </li>
-                              </ul>    
-                              <p><strong>Regular sized text and images of text</strong> (text that is less than 18pt or 24px) must have a contrast ratio of at least 4.5:1 against the background.
-                              </p>
-                              <p><strong>Large sized text and images of text</strong> (text that is more than 18pt or 24px or text that is bold and at least 14pt or 18.5px) must have a contrast ratio of at least 3:1 against the background.
-                              </p>
-                            </div>
+                                <li>Using light gray text on a white background, which can cause readability issues.</li>
+                                <li>Failing to account for different screen brightness settings or color blindness.</li>
+                                <li>Assuming that bold text compensates for low contrast—bold only helps if it meets the large text threshold.</li>
+                              </ul>
+
+                              <h3>HHMI Biointeractive Accessible Color Combination Examples</h3>
+                              <h4 id="regular-text-contrast-heading">Regular Text Contrast (4.5:1 Minimum)</h4>
+                              <div class="hhmi-contrast-grid">
+                                <table aria-labelledby="regular-text-contrast-heading" class="hhmi-contrast-table">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">Text Color (Hex)</th>
+                                      <th scope="col">Background Color (Hex)</th>
+                                      <th scope="col">Contrast Ratio</th>
+                                      <th scope="col">Pass/Fail</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td style="color: #178387; background: #FFFFFF;">Primary Teal (#178387)</td>
+                                      <td style="background: #FFFFFF;">White (#FFFFFF)</td>
+                                      <td>4.76:1</td>
+                                      <td><span aria-hidden="true">✅</span> Passes</td>
+                                    </tr>
+                                    <tr>
+                                      <td style="color: #178387; background: #000000;">Primary Teal (#178387)</td>
+                                      <td style="background: #000000; color: #FFF;">Black (#000000)</td>
+                                      <td>6.64:1</td>
+                                      <td><span aria-hidden="true">✅</span> Passes</td>
+                                    </tr>
+                                    <tr>
+                                      <td style="color: #00A450; background: #000000;">Primary Green (#00A450)</td>
+                                      <td style="background: #000000; color: #FFF;">Black (#000000)</td>
+                                      <td>6.43:1</td>
+                                      <td><span aria-hidden="true">✅</span> Passes</td>
+                                    </tr>
+                                    <tr>
+                                      <td style="color: #52B448; background: #000000;">Secondary Green (#52B448)</td>
+                                      <td style="background: #000000; color: #FFF;">Black (#000000)</td>
+                                      <td>7.98:1</td>
+                                      <td><span aria-hidden="true">✅</span> Passes</td>
+                                    </tr>
+                                    <tr>
+                                      <td style="color: #8AC341; background: #000000;">Lightest Green (#8AC341)</td>
+                                      <td style="background: #000000; color: #FFF;">Black (#000000)</td>
+                                      <td>5.01:1</td>
+                                      <td><span aria-hidden="true">✅</span> Passes</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              
+
+                              <h4 id="large-text-contrast-heading">Large Text Contrast (3.0:1 Minimum)</h4>
+                                <div class="hhmi-contrast-grid">
+                                  <table aria-labelledby="large-text-contrast-heading" class="hhmi-contrast-table">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Text Color (Hex)</th>
+                                        <th scope="col">Background Color (Hex)</th>
+                                        <th scope="col">Contrast Ratio</th>
+                                        <th scope="col">Pass/Fail</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td style="color: #178387; background: #FFFFFF;">Primary Teal (#178387)</td>
+                                        <td style="background: #FFFFFF;">White (#FFFFFF)</td>
+                                        <td>4.76:1</td>
+                                        <td><span aria-hidden="true">✅</span> Passes</td>
+                                      </tr>
+                                      <tr>
+                                        <td style="color: #178387; background: #000000;">Primary Teal (#178387)</td>
+                                        <td style="background: #000000; color: #FFF;">Black (#000000)</td>
+                                        <td>6.64:1</td>
+                                        <td><span aria-hidden="true">✅</span> Passes</td>
+                                      </tr>
+                                      <tr>
+                                        <td style="color: #00A450; background: #FFFFFF;">Primary Green (#00A450)</td>
+                                        <td style="background: #FFFFFF;">White (#FFFFFF)</td>
+                                        <td>3.27:1</td>
+                                        <td><span aria-hidden="true">✅</span> Passes</td>
+                                      </tr>
+                                      <tr>
+                                        <td style="color: #00A450; background: #000000;">Primary Green (#00A450)</td>
+                                        <td style="background: #000000; color: #FFF;">Black (#000000)</td>
+                                        <td>6.43:1</td>
+                                        <td><span aria-hidden="true">✅</span> Passes</td>
+                                      </tr>
+                                      <tr>
+                                        <td style="color: #52B448; background: #000000;">Secondary Green (#52B448)</td>
+                                        <td style="background: #000000; color: #FFF;">Black (#000000)</td>
+                                        <td>7.98:1</td>
+                                        <td><span aria-hidden="true">✅</span> Passes</td>
+                                      </tr>
+                                      <tr>
+                                        <td style="color: #8AC341; background: #000000;">Lightest Green (#8AC341)</td>
+                                        <td style="background: #000000; color: #FFF;">Black (#000000)</td>
+                                        <td>5.01:1</td>
+                                        <td><span aria-hidden="true">✅</span> Passes</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+
+
+                              </div>
+                            </div>                            
                           </div>
                         </div>
                         <!-- Accordion Item Two Designer -->
