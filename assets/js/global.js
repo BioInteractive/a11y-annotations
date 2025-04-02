@@ -1,3 +1,68 @@
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('form');
+
+  if (form) {
+    const emailInput = document.getElementById('exampleInputEmail1');
+    const passwordInput = document.getElementById('exampleInputPassword1');
+    const emailError = document.getElementById('email-error');
+    const passwordError = document.getElementById('password-error');
+    const successMsg = document.querySelector('.success-msg');
+
+    // Email validation
+    function validateEmail() {
+      const isValid = emailInput.value.trim() !== '' && emailInput.value.includes('@');
+      emailInput.classList.toggle('is-invalid', !isValid);
+      emailInput.setAttribute('aria-invalid', !isValid);
+      emailError.style.display = isValid ? 'none' : 'block';
+      emailInput.setAttribute('aria-describedby', isValid ? 'emailHelp' : 'emailHelp email-error');
+      return isValid;
+    }
+
+    // Password validation
+    function validatePassword() {
+      const isValid = passwordInput.value === 'Password123';
+      passwordInput.classList.toggle('is-invalid', !isValid);
+      passwordInput.setAttribute('aria-invalid', !isValid);
+      passwordError.style.display = isValid ? 'none' : 'block';
+      passwordInput.setAttribute('aria-describedby', isValid ? 'passwordHelper' : 'passwordHelper password-error');
+      return isValid;
+    }
+
+    // Focus the first invalid field
+    function focusFirstInvalidField() {
+      if (emailInput.classList.contains('is-invalid')) {
+        emailInput.focus();
+      } else if (passwordInput.classList.contains('is-invalid')) {
+        passwordInput.focus();
+      }
+    }
+
+    // Handle form submission
+    form.addEventListener('submit', function (event) {
+      event.preventDefault(); // Always prevent submission for the demo
+
+      const isEmailValid = validateEmail();
+      const isPasswordValid = validatePassword();
+
+      if (isEmailValid && isPasswordValid) {
+        form.style.display = 'none';
+        successMsg.style.display = 'block';
+        successMsg.focus();
+      } else {
+        focusFirstInvalidField();
+      }
+    });
+
+    // Revalidate on change and focus out
+    emailInput.addEventListener('change', validateEmail);
+    emailInput.addEventListener('blur', validateEmail);
+    passwordInput.addEventListener('change', validatePassword);
+    passwordInput.addEventListener('blur', validatePassword);
+  }
+});
+
+
+
 // Copy Text - Copy Buttons
 // Function to copy text and formatting to the clipboard using Clipboard API
 function copyTextToClipboard(element) {
@@ -315,69 +380,6 @@ $(document).ready(function() {
       return delay;
     };
   }());
-  
-// Form Component Error Messaging
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('form');
-
-  if (form) {
-    const emailInput = document.getElementById('exampleInputEmail1');
-    const passwordInput = document.getElementById('exampleInputPassword1');
-    const emailError = document.getElementById('email-error');
-    const passwordError = document.getElementById('password-error');
-    const successMsg = document.querySelector('.success-msg');
-
-    // Validation function for email
-    function validateEmail() {
-      if (emailInput.value === '' || !emailInput.value.includes('@')) {
-        emailInput.classList.add('is-invalid');
-        emailInput.setAttribute('aria-invalid', 'true');
-        emailError.style.display = 'block';
-        emailInput.setAttribute('aria-describedby', 'emailHelp email-error');
-        return false;
-      } else {
-        emailInput.classList.remove('is-invalid');
-        emailInput.removeAttribute('aria-invalid');
-        emailError.style.display = 'none';
-        emailInput.setAttribute('aria-describedby', 'emailHelp');
-        return true;
-      }
-    }
-
-    // Validation function for password
-    function validatePassword() {
-      if (passwordInput.value !== 'Password123') {
-        passwordInput.classList.add('is-invalid');
-        passwordInput.setAttribute('aria-invalid', 'true');
-        passwordError.style.display = 'block';
-        passwordInput.setAttribute('aria-describedby', 'passwordHelper password-error');
-        return false;
-      } else {
-        passwordInput.classList.remove('is-invalid');
-        passwordInput.removeAttribute('aria-invalid');
-        passwordError.style.display = 'none';
-        passwordInput.setAttribute('aria-describedby', 'passwordHelper');
-        return true;
-      }
-    }
-
-    // Event listeners for input fields
-    emailInput.addEventListener('change', validateEmail);
-    passwordInput.addEventListener('change', validatePassword);
-
-    form.addEventListener('submit', function (event) {
-      event.preventDefault();
-      const isEmailValid = validateEmail();
-      const isPasswordValid = validatePassword();
-
-      if (isEmailValid && isPasswordValid) {
-        form.style.display = 'none';
-        successMsg.style.display = 'block';
-        successMsg.focus();
-      }
-    });
-  }
-});
 
 // Site Search
     // Redirect user to search results page with the query in the URL
@@ -1013,5 +1015,103 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
     });
+  }
+});
+// Drag and Drop Pattern
+const list = document.getElementById('draggable-list');
+const liveRegion = document.getElementById('live-region');
+let draggedItem = null;
+let keyboardDragItem = null;
+
+// Mouse / Pointer Drag Events
+list.addEventListener('dragstart', (e) => {
+  if (e.target && e.target.nodeName === 'LI') {
+    draggedItem = e.target;
+    e.target.classList.add('dragging');
+    e.target.setAttribute('aria-grabbed', 'true');
+    e.dataTransfer.effectAllowed = 'move';
+    e.dataTransfer.setData('text/plain', e.target.id);
+  }
+});
+
+list.addEventListener('dragend', (e) => {
+  if (draggedItem) {
+    draggedItem.classList.remove('dragging');
+    draggedItem.setAttribute('aria-grabbed', 'false');
+    draggedItem = null;
+  }
+});
+
+list.addEventListener('dragover', (e) => {
+  e.preventDefault(); // Allow drop
+  if (e.target && e.target.nodeName === 'LI') {
+    e.target.classList.add('dragover');
+  }
+});
+
+list.addEventListener('dragleave', (e) => {
+  if (e.target && e.target.nodeName === 'LI') {
+    e.target.classList.remove('dragover');
+  }
+});
+
+list.addEventListener('drop', (e) => {
+  e.preventDefault();
+  if (e.target && e.target.nodeName === 'LI' && draggedItem) {
+    e.target.classList.remove('dragover');
+    const rect = e.target.getBoundingClientRect();
+    const offset = e.clientY - rect.top;
+    if (offset > rect.height / 2) {
+      e.target.parentNode.insertBefore(draggedItem, e.target.nextSibling);
+    } else {
+      e.target.parentNode.insertBefore(draggedItem, e.target);
+    }
+    liveRegion.textContent = `${draggedItem.textContent} moved.`;
+  }
+});
+
+// Keyboard Interaction: Use Enter/Space to pick up/drop and Arrow Up/Down to move
+list.addEventListener('keydown', (e) => {
+  const currentItem = e.target;
+  if (currentItem.nodeName !== 'LI') return;
+
+  // Start or drop keyboard drag mode
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault();
+    // Toggle selection
+    if (!keyboardDragItem) {
+      // Pick up the item for keyboard dragging
+      keyboardDragItem = currentItem;
+      keyboardDragItem.classList.add('dragging');
+      keyboardDragItem.setAttribute('aria-grabbed', 'true');
+      liveRegion.textContent = `${keyboardDragItem.textContent} picked up. Use arrow keys to move.`;
+    } else {
+      // Drop the item
+      keyboardDragItem.classList.remove('dragging');
+      keyboardDragItem.setAttribute('aria-grabbed', 'false');
+      liveRegion.textContent = `${keyboardDragItem.textContent} dropped.`;
+      keyboardDragItem = null;
+    }
+  }
+
+  // If in keyboard drag mode, use arrow keys to move the item
+  if (keyboardDragItem) {
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      const nextSibling = keyboardDragItem.nextElementSibling;
+      if (nextSibling) {
+        keyboardDragItem.parentNode.insertBefore(keyboardDragItem, nextSibling.nextElementSibling);
+        keyboardDragItem.focus();
+        liveRegion.textContent = `${keyboardDragItem.textContent} moved down.`;
+      }
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      const prevSibling = keyboardDragItem.previousElementSibling;
+      if (prevSibling) {
+        keyboardDragItem.parentNode.insertBefore(keyboardDragItem, prevSibling);
+        keyboardDragItem.focus();
+        liveRegion.textContent = `${keyboardDragItem.textContent} moved up.`;
+      }
+    }
   }
 });

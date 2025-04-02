@@ -75,15 +75,16 @@
                       </h2>
                       <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" style="">
                         <div class="accordion-body">
-                          <h3>Designing for Reflow Accessibility</h3>
+                          <h3>Designing for Reflow</h3>
                           <ul>
-                            <li><strong>Responsive Layouts:</strong> Employ responsive design strategies that allow content to adjust dynamically for a variety of screen sizes, ensuring no two-dimensional scrolling is required for viewing content.</li>
-                            <li><strong>Test on Small Screens:</strong> Specifically test your designs at a width equivalent to 320 CSS pixels and a height of 256 CSS pixels to ensure content does not require two-dimensional scrolling.</li>
-                            <li><strong>Consider All Devices:</strong> Design with consideration for both vertical and horizontal orientations to accommodate different devices and user preferences.</li>
-                            <li><strong>Flexible Content and Images:</strong> Use scalable units for content and images to ensure they can reflow and are fully accessible within the constraints of smaller screens.</li>
+                            <li><strong>Design Flexible Layouts:</strong> Create designs that adapt smoothly to different screen sizes, ensuring content reflows naturally without requiring users to scroll in two directions. Prioritize vertical layouts that can stack and wrap as needed.</li>
+                            <li><strong>Test at Small Viewports:</strong> In Figma, test your designs at a width of 320 CSS pixels to simulate a desktop view at 400% zoom. This is a critical check for users with low vision and helps ensure no content is clipped, cut off, or requires horizontal scrolling.</li>
+                            <li><strong>Use Consistent Breakpoints Visually:</strong> Plan how your layout should shift at common screen sizes—mobile, tablet, and desktop. Consider how grids, columns, and components will adapt at smaller widths to maintain clarity and readability.</li>
+                            <li><strong>Design for All Orientations:</strong> Ensure your content looks good and remains functional in both portrait and landscape layouts. Prioritize flexibility in spacing, stacking, and content flow.</li>
+                            <li><strong>Support Scalable Content and Images:</strong> Use image containers and flexible spacing in your layouts to ensure that text and images resize or wrap properly at smaller screen widths or high zoom settings.</li>
                           </ul>
-                          <p>Integrating these practices into your design process supports accessibility and usability, aligning with WCAG 2.1.4 Reflow criteria, and ensures your content is accessible on a wide range of devices without loss of information or functionality.</p>
-                        </div>                                                                                
+                          <p>Designing with reflow in mind is one of the most effective ways to support users with low vision. By keeping your Figma layouts flexible and readable at all screen sizes, you help ensure accessibility across devices and zoom levels in alignment with WCAG 1.4.10 Reflow.</p>
+                        </div>                                                                                                        
                       </div>
                     </div>
                     <!-- Accordion Item Three Auditor -->
@@ -156,7 +157,7 @@
                       </h2>
                       <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
                         <div class="accordion-body">
-                          <h3>Implementing Reflow Accessibility in Development</h3>
+                          <h3>Implementing Reflow in Development</h3>
                           <ul>
                             <li><strong>Responsive Design Techniques:</strong> Utilize CSS media queries to create responsive layouts that adapt to various screen sizes, ensuring content is accessible without two-dimensional scrolling.</li>
                             <li><strong>Minimize Fixed Dimensions:</strong> Avoid using fixed width and height in CSS for elements. Instead, use percentages or viewport units to allow elements to adjust dynamically to screen sizes.</li>

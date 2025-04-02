@@ -40,15 +40,34 @@
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                         <div class="accordion-body">
-                          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html" target="_blank" rel="noopener noreferrer">1.4.5 Images of Text</a>
-                            If the technologies being used can achieve the visual presentation, text is used to convey information rather than 
-                            images of text. If an author can use text to achieve the same visual effect, he or she should present the information as text rather than using an image.</p>
-                          <p>Exceptions include the following:</p> 
+                          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html" target="_blank" rel="noopener noreferrer">1.4.5 Images of Text</a> requires that if the technologies being used can achieve the visual presentation, text is used to convey information rather than using images of text. If a visual style or effect can be achieved with real text, that is the preferred and more accessible option.</p>
+                        
+                          <h3>Briefing and Intent</h3>
+                          <p>The goal of this criterion is to ensure that information is presented in a way that can be customized, resized, and rendered accurately across devices and assistive technologies. Images of text typically do not respond to user preferences like font size, contrast settings, or screen reader parsing, which can exclude users with visual or cognitive disabilities.</p>
+                        
+                          <h3>Benefits</h3>
+                          <p>Using actual text instead of images of text improves readability, allows for user customization, enhances responsiveness, and ensures compatibility with assistive technologies. Screen readers can interpret real text accurately, whereas images of text can create barriers unless properly labeled.</p>
+                        
+                          <h3>Key Requirements</h3>
+                          <ul class="fancy-checklist">
+                            <li>Use real text (HTML/CSS) to present information whenever possible, instead of embedding the information in an image.</li>
+                            <li>Ensure that all textual content remains selectable, resizable, and stylable via user settings (e.g., browser zoom, high contrast mode).</li>
+                            <li>Only use images of text when absolutely necessary or essential to the content’s meaning or visual identity.</li>
+                          </ul>
+                        
+                          <h3>Examples</h3>
+                          <ul>
+                            <li><strong>Correct:</strong> A heading with stylized font effects is created using CSS and HTML so that it remains accessible and responsive.</li>
+                            <li><strong>Incorrect:</strong> A button label is displayed as a PNG image of styled text, preventing users from resizing or translating it.</li>
+                            <li><strong>Correct:</strong> A logo that includes stylized text is used as an image with appropriate alt text or <code>aria-hidden="true"</code> if it’s purely decorative and accompanied by a real text label.</li>
+                          </ul>
+                        
+                          <h3>Exceptions</h3>
                           <ul role="list">
-                            <li>Customizable: When the image of text can be visually customized to the user's requirements;</li>
-                            <li>Essential: A particular presentation of text is essential to the information being conveyed.</li>
-                            <li>Logotypes (text that is part of a logo or brand name) are considered essential.</li>
-                          </ul> 
+                            <li><strong>Customizable:</strong> When the image of text can be visually customized to the user's requirements (e.g., captions with contrast controls).</li>
+                            <li><strong>Essential:</strong> A particular presentation of text is essential to the information being conveyed (e.g., stylized text in an art exhibit).</li>
+                            <li><strong>Logotypes:</strong> Text that is part of a logo or brand name is considered essential and permitted as an image of text.</li>
+                          </ul>
                           <p><strong>1.4.3 Contrast (Minimum):</strong> The visual presentation of text and images of text has a contrast ratio of at least 4.5:1 (some exceptions). (Level AA)</p>                         
                         </div>
                       </div>

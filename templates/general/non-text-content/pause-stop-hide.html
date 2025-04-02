@@ -49,26 +49,32 @@
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                         <div class="accordion-body">
-                          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide.html" target="_blank" rel="noopener noreferrer">2.2.2 Pause, Stop, Hide</a>
-                            For moving, blinking, scrolling, or auto-updating information, users need mechanisms to control these elements unless they are essential to the activity.</p>
-                          <ul role="list" class="fancy-checklist">
-                            <li><strong>Moving, Blinking, Scrolling:</strong> If it starts automatically, lasts more than five seconds, and is parallel with other content, users must be able to pause, stop, or hide it unless essential.</li>
-                            <li><strong>Auto-updating:</strong> If it starts automatically and is presented alongside other content, there must be a mechanism for users to pause, stop, hide it, or control the update frequency unless it's essential.</li>
+                          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide.html" target="_blank" rel="noopener noreferrer">2.2.2 Pause, Stop, Hide</a> requires that users be able to pause, stop, or hide any moving, blinking, scrolling, or auto-updating content that starts automatically, lasts more than five seconds, and is presented alongside other content—unless it is essential to the activity.</p>
+                        
+                          <h3>Briefing and Intent</h3>
+                          <p>The goal of this success criterion is to reduce distraction and improve usability for people with cognitive disabilities, vestibular disorders, or attention challenges. Uncontrolled motion can interrupt comprehension, impair concentration, and even cause physical discomfort. This criterion ensures that users maintain control over dynamic content that competes for their attention.</p>
+                        
+                          <h3>Benefits</h3>
+                          <p>Providing control over motion ensures a more inclusive experience for users who may be negatively impacted by visual distractions or animation. It helps users focus on primary content and allows screen reader users to control timing when navigating or reviewing updates in real time.</p>
+                        
+                          <h3>Key Requirements</h3>
+                          <ul class="fancy-checklist">
+                            <li><strong>Moving, Blinking, Scrolling:</strong> If it starts automatically, lasts more than five seconds, and is displayed in parallel with other content, users must be able to pause, stop, or hide it—unless it is essential to the activity (e.g., a real-time simulation).</li>
+                            <li><strong>Auto-updating:</strong> If content updates automatically and appears alongside other content, users must be able to pause, stop, hide it, or control the update frequency, unless the update is essential (e.g., a real-time stock ticker).</li>
                           </ul>
-                          <p>User-activated animations, such as scrolling effects that only trigger when users interact with the page, are not covered by the 
-                          2.2.2 Pause, Stop, Hide success criteria. These types of animations do not require control mechanisms, as they are initiated by the user and do not occur automatically. However, 
-                          it's important to ensure that all animations enhance the user experience and do not cause disruption or discomfort.</p>
-                          <p>For the best user experience, it is recommended to implement the <code>prefers-reduced-motion</code> CSS media query, which allows users with 
-                          motion sensitivities to minimize or disable animations. This ensures that individuals who may be negatively impacted by movement can still navigate 
-                          the website comfortably. It is essential to apply these considerations to common elements that often include animations, which can affect users if 
-                          not properly managed.</p>
+                        
+                          <h3>Examples</h3>
                           <ul>
-                            <li>Autoplaying videos</li>
-                            <li>Carousels or sliders</li>
-                            <li>GIF images</li>
-                            <li>Background animations</li>
+                            <li><strong>Autoplaying Videos:</strong> A video that begins playing when the page loads includes a pause button for users to stop it.</li>
+                            <li><strong>Carousel or Slider:</strong> An image carousel automatically cycles every 5 seconds, but includes controls to pause or navigate slides manually.</li>
+                            <li><strong>GIF Animations:</strong> An animated GIF is set to only loop once or is accompanied by a control to stop playback.</li>
+                            <li><strong>Background Animations:</strong> Subtle motion effects in the page background can be toggled off by the user or are disabled entirely if the system has motion reduction settings enabled.</li>
                           </ul>
-                        </div>
+                        
+                          <h3>Additional Notes</h3>
+                          <p>User-activated animations, such as scrolling effects that only trigger when users interact with the page (e.g., clicking, scrolling, hovering), are not covered under 2.2.2. These do not require pause/stop/hide controls because the user initiates them. However, it’s still important to ensure that such animations are not disruptive.</p>
+                          <p>To enhance accessibility for people with motion sensitivity, developers are strongly encouraged to implement the <code>prefers-reduced-motion</code> CSS media query. This respects user operating system settings and allows animations to be reduced or removed for those who need it.</p>
+                        </div>                        
                       </div>
                     </div>
                     <!-- Accordion Item Two Designer -->

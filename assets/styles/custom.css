@@ -1023,3 +1023,83 @@ pre:focus-within {
 pre {
   margin-top: 0; /* Remove any extra spacing if button is above */
 }
+/* Drag and Drop Pattern */
+#draggable-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#draggable-list li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #777;
+  background: #f9f9f9;
+  cursor: grab;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+#draggable-list li:focus {
+  border: 3px solid var(--primary-green);
+}
+
+#draggable-list li.dragging {
+  background-color: #e0e0e0;
+  font-weight: bold;
+  cursor: grabbing;
+}
+
+#draggable-list li.dragover {
+  border: 2px dashed #000;
+}
+
+.drag-icon {
+  margin-right: 8px;
+  display: inline-flex;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+}
+
+/* HHMI Contrast Grid Styles */
+.hhmi-contrast-grid {
+  margin: 20px 0;
+}
+
+.hhmi-contrast-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.hhmi-contrast-table th, .hhmi-contrast-table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.hhmi-contrast-table th {
+  background-color: #f4f4f4;
+}
+
+.hhmi-contrast-table td:nth-child(2) {
+  width: 50px;
+}
+
+.hhmi-contrast-table td:nth-child(3) {
+  font-weight: bold;
+}
+
+.hhmi-contrast-table td:nth-child(4) {
+  font-weight: bold;
+}
+
+.hhmi-contrast-table td span {
+  padding: 5px 10px;
+  border-radius: 4px;
+}

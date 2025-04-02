@@ -45,22 +45,31 @@
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          WCAG Success Criteria
+                          WCAG Success Criteria Requirements and Examples
                         </button>
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                         <div class="accordion-body">
-                        <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast" target="_blank">1.4.11 Non-text Contrast</a>
-                          The visual presentation of the following have a contrast ratio of at least 3:1 against adjacent color(s):</p>
-                        <ul role="list" class="fancy-checklist">
-                          <li><span class="fw-bold">User Interface Components</span><br>
-                            Visual information required to identify user interface components and states, except for inactive components or where the appearance of the component is determined by the user agent and not modified by the author;
-                          </li>
-                          <li><span class="fw-bold">Graphical Objects</span><br>
-                            Parts of graphics required to understand the content, except when a particular presentation of graphics is essential to the information being conveyed.
-                          </li>
-                        </ul>
-                        </div>
+                          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html" target="_blank" rel="noopener noreferrer">1.4.11 Non-text Contrast</a> requires that visual elements—like user interface components and meaningful graphics—maintain a minimum contrast ratio of 3:1 against adjacent colors to ensure visibility and usability.</p>
+                          <h3>Briefing and Intent</h3>
+                          <p>The intent of this success criterion is to ensure that all essential visual information—not just text—is perceivable by users with low vision or color contrast sensitivity. This includes buttons, form fields, focus indicators, icons, charts, and other non-text content that conveys meaning or requires interaction.</p>
+                          <h3>Benefits</h3>
+                          <p>Meeting non-text contrast requirements helps users who may not be able to distinguish elements with low contrast due to visual impairments, aging vision, or environmental conditions like glare. It ensures that all users can identify interactive components and understand graphical content.</p>
+                          <h3>Key Requirements</h3>
+                          <ul class="fancy-checklist">
+                            <li><strong>User Interface Components:</strong> Ensure that visual indicators used to identify interactive elements (e.g., borders around input fields, buttons, focus indicators) have a contrast ratio of at least 3:1 against adjacent colors.</li>
+                            <li><strong>Component States:</strong> Indicators of state (e.g., focus, hover, selected) must also meet the 3:1 contrast threshold.</li>
+                            <li><strong>Graphical Objects:</strong> Parts of graphics required to understand the content (such as lines in a chart or icons used in navigation) must have a contrast ratio of at least 3:1.</li>
+                            <li><strong>Exclude Decorative Elements:</strong> Contrast requirements do not apply to purely decorative graphics or elements that are inactive or controlled by the user agent.</li>
+                          </ul>
+                          <h3>Examples</h3>
+                          <ul>
+                            <li><strong>Button Outline:</strong> A button with a gray border on a light background fails contrast. Updating the border to a darker color ensures it meets the 3:1 ratio and is clearly distinguishable.</li>
+                            <li><strong>Focus Indicator:</strong> A keyboard focus ring around a form input has sufficient contrast against both the field and the page background, allowing keyboard users to track their position visually.</li>
+                            <li><strong>Chart Lines:</strong> A line graph includes lines that meet a 3:1 contrast ratio against the chart background so that all users can perceive and interpret the data visually.</li>
+                            <li><strong>Icon-Only Button:</strong> An icon used for a "submit" action is easily distinguishable from the background with a minimum contrast ratio of 3:1, even without accompanying text.</li>
+                          </ul>
+                        </div>                        
                       </div>
                     </div>
                     <!-- Accordion Item Two Designer -->
@@ -81,17 +90,17 @@
                         <div class="accordion-body">
                           <h3>Ensuring Accessibility of Interactive Elements, UI Components, and Graphical Objects:</h3>
                           <p>Begin by establishing an accessible color palette that adheres to contrast requirements for interactive elements, UI components, and graphical objects.</p>
-                          <p>To meet <strong>WCAG 2.1 Level AA</strong> standards, particularly SC 1.4.11 for non-text contrast, use the <a href="https://www.tpgi.com/color-contrast-checker/" target="_blank">Color Contrast Analyzer tool by TPGI</a> to evaluate and adjust the contrast between these elements and their adjacent colors:</p>
+                          <p>To meet <strong>WCAG 2.1 Level AA</strong> standards, particularly SC 1.4.11 for non-text contrast, use the <a href="https://www.figma.com/community/plugin/733025261168520714/Able-%E2%80%93-Color-Contrast-Checker" target="_blank">Able – Color Contrast Checker plugin for Figma</a> to evaluate and adjust the contrast between these elements and their adjacent colors:</p>
                           <ol>
-                            <li><strong>Download the Tool:</strong> Acquire the Color Contrast Analyzer from TPGI's official website, which facilitates the identification of contrast ratios in your Figma designs.</li>
-                            <li><strong>Determine Element Boundaries:</strong> Use the tool's eyedropper feature to precisely select the colors of the interactive elements or graphical objects and their immediate backgrounds.</li>
-                            <li><strong>Analyze Contrast Ratios:</strong> The tool will automatically compute the contrast ratio, enabling rapid assessment against WCAG 2.1 Level AA requirements for non-text elements.</li>
+                            <li><strong>Install the Plugin:</strong> Add the Able plugin to Figma from the Figma Community page to begin testing contrast directly in your design workspace.</li>
+                            <li><strong>Select Elements:</strong> In Figma, select the interactive element and its adjacent background layer that you want to test.</li>
+                            <li><strong>Check Contrast Ratio:</strong> The plugin will display the contrast ratio between the selected layers, along with a WCAG AA/AAA pass or fail indicator.</li>
                             <li><strong>Make Necessary Adjustments:</strong> Ensure that all interactive elements, UI components, and essential graphical objects have a contrast ratio of at least 3:1 against adjacent colors to guarantee accessibility.</li>
                           </ol>
                           <p>Incorporating these contrast checks into your design process is crucial for creating accessible interfaces that accommodate users with visual impairments.</p>
                           <p>Purely decorative content is exempt from color contrast requirements.</p>
-                          <p>Refer to the Resources section for additional tools and guidelines on achieving and testing for adequate color contrast.</p>                        
-                        </div>
+                          <p>Refer to the Resources section for additional tools and guidelines on achieving and testing for adequate color contrast.</p>
+                        </div>                        
                       </div>
                     </div>
                     <!-- Accordion Item Three Auditor -->
@@ -188,6 +197,7 @@
                       <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" style="">
                         <div class="accordion-body">
                           <ul role="list">
+                            <li><a href="https://www.figma.com/community/plugin/733025261168520714/Able-%E2%80%93-Color-Contrast-Checker" target="_blank" rel="noopener noreferrer">Figma Plugin - Able: Color Contrast Checker</a></li>
                             <li><a href="https://www.tpgi.com/color-contrast-checker/" target="_blank" rel="noopener noreferrer">Downloadable App - TPGi's Color Contrast Analyzer</a></li>
                             <li><a href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener noreferrer">WebAIM Contrast Checker Webpage</a></li>
                             <li><a href="https://www.deque.com/resources/aria/" target="_blank" rel="noopener noreferrer">Deque: ARIA Resources</a></li>

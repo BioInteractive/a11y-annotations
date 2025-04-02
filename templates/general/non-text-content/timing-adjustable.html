@@ -49,17 +49,32 @@
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                         <div class="accordion-body">
-                          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/timing-adjustable.html" target="_blank" rel="noopener noreferrer">2.2.1 Timing Adjustable</a>
-                            For time limits set by the content, users must have options to manage these limits effectively, ensuring accessibility and user control.</p>
-                          <ul role="list" class="fancy-checklist">
+                          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/timing-adjustable.html" target="_blank" rel="noopener noreferrer">2.2.1 Timing Adjustable</a> requires that users must be able to control time limits imposed by content unless specific exceptions apply. This ensures that people with disabilities are not disadvantaged by short or inflexible timeframes.</p>
+                        
+                          <h3>Briefing and Intent</h3>
+                          <p>The intent of this success criterion is to ensure that users have adequate time to read, interact with, and respond to content—particularly those with motor disabilities, cognitive limitations, or who use assistive technologies. Time restrictions that cannot be adjusted may prevent users from completing tasks or fully accessing content.</p>
+                        
+                          <h3>Benefits</h3>
+                          <p>Providing control over time limits ensures inclusivity for users who require more time to read, make decisions, or navigate content. This helps reduce anxiety, increase comprehension, and accommodate users who may be interrupted, require assistive tools, or need extended processing time.</p>
+                        
+                          <h3>Key Requirements</h3>
+                          <ul class="fancy-checklist">
                             <li><strong>Turn Off:</strong> Users can disable the time limit before encountering it.</li>
                             <li><strong>Adjust:</strong> Users can adjust time limits before they start, up to at least ten times the default duration.</li>
                             <li><strong>Extend:</strong> Users receive a warning before a time limit expires and can easily extend it at least ten times by performing a simple action.</li>
                             <li><strong>Real-time Exception:</strong> Time limits integral to real-time events (e.g., auctions) where no alternative exists.</li>
-                            <li><strong>Essential Exception:</strong> Time limits that are crucial and where extension would invalidate the activity.</li>
-                            <li><strong>20 Hour Exception:</strong> Time limits exceeding 20 hours.</li>
+                            <li><strong>Essential Exception:</strong> Time limits that are crucial and where extension would invalidate the activity (e.g., standardized tests).</li>
+                            <li><strong>20 Hour Exception:</strong> Time limits that exceed 20 hours are not required to be adjustable.</li>
                           </ul>
-                        </div>
+                        
+                          <h3>Examples</h3>
+                          <ul>
+                            <li><strong>Session Timeout:</strong> A web app displays a warning 2 minutes before session timeout and provides a button to extend the session.</li>
+                            <li><strong>Custom Timer:</strong> A timed quiz includes settings where users can adjust the time limit before starting the quiz.</li>
+                            <li><strong>Real-Time Auction:</strong> A live auction does not offer time adjustments because it’s a real-time event. This falls under the real-time exception.</li>
+                            <li><strong>Form Completion:</strong> A form warns users about inactivity and lets them reset the timer to continue without losing their progress.</li>
+                          </ul>
+                        </div>                        
                       </div>
                     </div>
                     <!-- Accordion Item Two Designer -->
