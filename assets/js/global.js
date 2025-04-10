@@ -633,6 +633,42 @@ $(document).ready(function() {
           ]
         },
         {
+          title: 'Error Identification',
+          url: '/a11y-annotations/templates/general/interactives/error-identification.html',
+          description: 'Clearly identify input errors and describe them in text.',
+          content: 'Error Identification ensures that when an input error is automatically detected, the field in error is identified and the issue is described to the user in text. This helps users correct mistakes, particularly those using screen readers or cognitive support tools.',
+          wcagCriteria: [
+            { id: '3.3.1', description: 'Error Identification - The item in error is identified and described to the user in text.' }
+          ]
+        },
+        {
+          title: 'Labels or Instructions',
+          url: '/a11y-annotations/templates/general/interactives/labels-instructions.html',
+          description: 'Provide clear labels and instructions when user input is required.',
+          content: 'Labels or Instructions ensures that users are given sufficient guidance before providing input. Clear labels and helper text support all users—especially screen reader users and those with cognitive or memory impairments—by clarifying what is expected.',
+          wcagCriteria: [
+            { id: '3.3.2', description: 'Labels or Instructions - Provide labels or instructions when content requires user input.' }
+          ]
+        },
+        {
+          title: 'Error Suggestion',
+          url: '/a11y-annotations/templates/general/interactives/error-suggestion.html',
+          description: 'Provide suggestions to help users correct input errors.',
+          content: 'Error Suggestion ensures that when an input error is detected and a solution is known, the user is given a suggestion to correct it. This improves task success rates, particularly for users with language or memory barriers.',
+          wcagCriteria: [
+            { id: '3.3.3', description: 'Error Suggestion - If suggestions for correcting input errors are known, provide them to the user.' }
+          ]
+        },
+        {
+          title: 'Error Prevention',
+          url: '/a11y-annotations/templates/general/interactives/error-prevention.html',
+          description: 'Prevent errors on pages involving legal, financial, or data-sensitive actions.',
+          content: 'Error Prevention ensures that users can review, correct, and confirm their input before finalizing legal, financial, or data-impacting transactions. This protects users from serious, irreversible errors and supports accessibility for people with cognitive or visual limitations.',
+          wcagCriteria: [
+            { id: '3.3.4', description: 'Error Prevention - Provide review, correction, and confirmation mechanisms before finalizing actions involving legal or financial data.' }
+          ]
+        },        
+        {
           title: 'Focus Visible',
           url: '/a11y-annotations/templates/general/interactives/focus-visible.html',
           description: 'Provide clear focus indicators for users navigating by keyboard.',
