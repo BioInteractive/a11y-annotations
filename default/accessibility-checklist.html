@@ -611,271 +611,96 @@
                             </div>
                         </td>
                     </tr>                                
-            
-            <!-- New Row for Heuristic 2: Forms -->
+
+                <!-- New Row for Heuristic 2: Forms -->
                 <tr>
-                  <th scope="row" class="border-top">2</th> 
-                  <td class="border-top">Forms</td>
-                  <td class="border-top">Interactive controls have persistent, meaningful labels and instructions to help prevent mistakes, and provide users with clear error states which indicate what the problems are - and how to fix them whenever errors are returned.</td>
-                  <!-- First Checkpoint for   Forms -->
-                  <td id="form-labels">Are persistent, visible labels specified on all form controls? <br>
-                    <a href="/a11y-annotations/templates/components/forms.html" class="link" target="_blank">Labels or Instructions <i class="bi bi-box-arrow-up-right"><span class="sr-only">
-                        Opens in new tab</span></i></a></td>
-                  <!-- Status Checkboxes -->
-                  <td class="checkbox-td">
-                      <!-- Pass Checkbox -->
-                      <div class="custom-checkbox">
-                          <input type="checkbox" id="chk2-1-pass" name="chk2-1-pass" aria-labelledby="pass form-labels">
-                          <span></span>
-                      </div>
-                  </td>
-                  <td class="checkbox-td">
-                      <!-- Fail Checkbox -->
-                      <div class="custom-checkbox">
-                          <input type="checkbox" id="chk2-1-fail" name="chk2-1-fail" aria-labelledby="fail form-labels">
-                          <span></span>
-                      </div>
-                  </td>
-                  <td class="checkbox-td">
-                      <!-- Annotated Checkbox -->
-                      <div class="custom-checkbox">
-                          <input type="checkbox" id="chk2-1-annotated" name="chk2-1-annotated" aria-labelledby="annotated form-labels">
-                          <span></span>
-                      </div>
-                  </td>
-                  <td class="checkbox-td">
-                      <!-- N/A Checkbox -->
-                      <div class="custom-checkbox">
-                          <input type="checkbox" id="chk2-1-na" name="chk2-1-na" aria-labelledby="na form-labels">
-                          <span></span>
-                      </div>
-                  </td>
+                    <th scope="row" class="border-top">2</th> 
+                    <td class="border-top">Forms</td>
+                    <td class="border-top">Interactive controls have persistent, meaningful labels and instructions to help prevent mistakes, and provide users with clear error states which indicate what the problems are—and how to fix them whenever errors are returned.</td>
+                
+                    <!-- Consolidated Labeling Row -->
+                    <td id="form-labels">Are all form fields clearly labeled, positioned near their controls, and marked as required or optional as appropriate? <br>
+                    <a href="/a11y-annotations/templates/general/interactives/labels-instructions.html" class="link" target="_blank">Labels or Instructions <span class="sr-only">Opens in new tab</span><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+                    </td>
+                    <td class="checkbox-td"><div class="custom-checkbox"><input type="checkbox" id="chk2-1-pass" name="chk2-1-pass" aria-labelledby="pass form-labels"><span></span></div></td>
+                    <td class="checkbox-td"><div class="custom-checkbox"><input type="checkbox" id="chk2-1-fail" name="chk2-1-fail" aria-labelledby="fail form-labels"><span></span></div></td>
+                    <td class="checkbox-td"><div class="custom-checkbox"><input type="checkbox" id="chk2-1-annotated" name="chk2-1-annotated" aria-labelledby="annotated form-labels"><span></span></div></td>
+                    <td class="checkbox-td"><div class="custom-checkbox"><input type="checkbox" id="chk2-1-na" name="chk2-1-na" aria-labelledby="na form-labels"><span></span></div></td>
                 </tr>
-                <!-- Row 2: Second Checkpoint for Heuristic 2 -->
+                
+                <!-- Row 2: Formatting Instructions -->
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td> 
-                  <td id="labels-proximity">Are labels and instructions displayed in close visual proximity to their controls? <br>
-                    <a href="/a11y-annotations/templates/components/forms.html" class="link" target="_blank">Labels or Instructions <i class="bi bi-box-arrow-up-right"><span class="sr-only">
-                        Opens in new tab</span></i></a></td>
-                  <!-- Status Checkboxes -->
-                  <td class="checkbox-td">
-                      <!-- Pass Checkbox -->
-                      <div class="custom-checkbox">
-                          <input type="checkbox" id="chk2-2-pass" name="chk2-2-pass" aria-labelledby="pass labels-proximity">
-                          <span></span>
-                      </div>
-                  </td>
-                  <td class="checkbox-td">
-                      <!-- Fail Checkbox -->
-                      <div class="custom-checkbox">
-                          <input type="checkbox" id="chk2-2-fail" name="chk2-2-fail" aria-labelledby="fail labels-proximity">
-                          <span></span>
-                      </div>
-                  </td>
-                  <td class="checkbox-td">
-                      <!-- Annotated Checkbox -->
-                      <div class="custom-checkbox">
-                          <input type="checkbox" id="chk2-2-annotated" name="chk2-2-annotated" aria-labelledby="annotated labels-proximity">
-                          <span></span>
-                      </div>
-                  </td>
-                  <td class="checkbox-td">
-                      <!-- N/A Checkbox -->
-                      <div class="custom-checkbox">
-                          <input type="checkbox" id="chk2-2-na" name="chk2-2-na" aria-labelledby="na labels-proximity">
-                          <span></span>
-                      </div>
-                  </td>
+                    <td></td><td></td><td></td>
+                    <td id="form-instructions">Are formatting instructions or helper text provided to guide users before they submit input? <br>
+                    <a href="/a11y-annotations/templates/general/interactives/labels-instructions.html" class="link" target="_blank">Labels or Instructions <span class="sr-only">Opens in new tab</span><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+                    </td>
+                    <td class="checkbox-td"><div class="custom-checkbox"><input type="checkbox" id="chk2-2-pass" name="chk2-2-pass" aria-labelledby="pass form-instructions"><span></span></div></td>
+                    <td class="checkbox-td"><div class="custom-checkbox"><input type="checkbox" id="chk2-2-fail" name="chk2-2-fail" aria-labelledby="fail form-instructions"><span></span></div></td>
+                    <td class="checkbox-td"><div class="custom-checkbox"><input type="checkbox" id="chk2-2-annotated" name="chk2-2-annotated" aria-labelledby="annotated form-instructions"><span></span></div></td>
+                    <td class="checkbox-td"><div class="custom-checkbox"><input type="checkbox" id="chk2-2-na" name="chk2-2-na" aria-labelledby="na form-instructions"><span></span></div></td>
                 </tr>
-                <!-- Row 3: Third Checkpoint for Heuristic 2 - Forms -->
+                
+                <!-- Row 3: Error Identification -->
                 <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td> 
-                  <td id="required-fields">Are required fields identified as such in the label text? <br>
-                    <a href="/a11y-annotations/templates/components/forms.html" class="link" target="_blank">Labels or Instructions <i class="bi bi-box-arrow-up-right"><span class="sr-only">
-                        Opens in new tab</span></i></a></td>
-                  <!-- Status Checkboxes -->
-                  <td class="checkbox-td">
-                      <!-- Pass Checkbox -->
-                      <div class="custom-checkbox">
-                          <input type="checkbox" id="chk2-3-pass" name="chk2-3-pass" aria-labelledby="pass required-fields">
-                          <span></span>
-                      </div>
-                  </td>
-                  <td class="checkbox-td">
-                      <!-- Fail Checkbox -->
-                      <div class="custom-checkbox">
-                          <input type="checkbox" id="chk2-3-fail" name="chk2-3-fail" aria-labelledby="fail required-fields">
-                          <span></span>
-                      </div>
-                  </td>
-                  <td class="checkbox-td">
-                      <!-- Annotated Checkbox -->
-                      <div class="custom-checkbox">
-                          <input type="checkbox" id="chk2-3-annotated" name="chk2-3-annotated" aria-labelledby="annotated required-fields">
-                          <span></span>
-                      </div>
-                  </td>
-                  <td class="checkbox-td">
-                      <!-- N/A Checkbox -->
-                      <div class="custom-checkbox">
-                          <input type="checkbox" id="chk2-3-na" name="chk2-3-na" aria-labelledby="na required-fields">
-                          <span></span>
-                      </div>
-                  </td>
-                </tr>
-                <!-- Row 4: Fourth Checkpoint for Heuristic 2 -->
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td> 
-                  <td id="form-instructions">Are form instructions worded in text, to provide users with adequate support? <br>
-                    <a href="/a11y-annotations/templates/components/forms.html" class="link" target="_blank">Labels or Instructions <i class="bi bi-box-arrow-up-right"><span class="sr-only">
-                        Opens in new tab</span></i></a></td>
-                  <!-- Status Checkboxes -->
-                  <td class="checkbox-td">
-                      <!-- Pass Checkbox -->
-                      <div class="custom-checkbox">
-                          <input type="checkbox" id="chk2-4-pass" name="chk2-4-pass" aria-labelledby="pass form-instructions">
-                          <span></span>
-                      </div>
-                  </td>
-                  <td class="checkbox-td">
-                      <!-- Fail Checkbox -->
-                      <div class="custom-checkbox">
-                          <input type="checkbox" id="chk2-4-fail" name="chk2-4-fail" aria-labelledby="fail form-instructions">
-                          <span></span>
-                      </div>
-                  </td>
-                  <td class="checkbox-td">
-                      <!-- Annotated Checkbox -->
-                      <div class="custom-checkbox">
-                          <input type="checkbox" id="chk2-4-annotated" name="chk2-4-annotated" aria-labelledby="annotated form-instructions">
-                          <span></span>
-                      </div>
-                  </td>
-                  <td class="checkbox-td">
-                      <!-- N/A Checkbox -->
-                      <div class="custom-checkbox">
-                          <input type="checkbox" id="chk2-4-na" name="chk2-4-na" aria-labelledby="na form-instructions">
-                          <span></span>
-                      </div>
-                  </td>
-                </tr>
-                <!-- Row 5: Fifth Checkpoint for Heuristic 2 - Forms -->
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td></td><td></td><td></td>
                     <td id="form-errors">Are form errors indicated in ways that don't rely on sensory cues alone? <br>
-                        <a href="/a11y-annotations/templates/components/forms.html" class="link" target="_blank">Error Identification <span class="sr-only">Opens in new tab</span><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a></td>
-                    <!-- Status Checkboxes -->
-                    <td class="checkbox-td">
-                        <!-- Pass Checkbox -->
-                        <div class="custom-checkbox">
-                            <input type="checkbox" id="chk2-5-pass" name="chk2-5-pass" aria-labelledby="pass form-errors">
-                            <span></span>
-                        </div>
+                    <a href="/a11y-annotations/templates/general/interactives/error-identification.html" class="link" target="_blank">Error Identification <span class="sr-only">Opens in new tab</span><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
                     </td>
-                    <td class="checkbox-td">
-                        <!-- Fail Checkbox -->
-                        <div class="custom-checkbox">
-                            <input type="checkbox" id="chk2-5-fail" name="chk2-5-fail" aria-labelledby="fail form-errors">
-                            <span></span>
-                        </div>
-                    </td>
-                    <td class="checkbox-td">
-                        <!-- Annotated Checkbox -->
-                        <div class="custom-checkbox">
-                            <input type="checkbox" id="chk2-5-annotated" name="chk2-5-annotated" aria-labelledby="annotated form-errors">
-                            <span></span>
-                        </div>
-                    </td>
-                    <td class="checkbox-td">
-                        <!-- N/A Checkbox -->
-                        <div class="custom-checkbox">
-                            <input type="checkbox" id="chk2-5-na" name="chk2-5-na" aria-labelledby="na form-errors">
-                            <span></span>
-                        </div>
-                    </td>
+                    <td class="checkbox-td"><div class="custom-checkbox"><input type="checkbox" id="chk2-3-pass" name="chk2-3-pass" aria-labelledby="pass form-errors"><span></span></div></td>
+                    <td class="checkbox-td"><div class="custom-checkbox"><input type="checkbox" id="chk2-3-fail" name="chk2-3-fail" aria-labelledby="fail form-errors"><span></span></div></td>
+                    <td class="checkbox-td"><div class="custom-checkbox"><input type="checkbox" id="chk2-3-annotated" name="chk2-3-annotated" aria-labelledby="annotated form-errors"><span></span></div></td>
+                    <td class="checkbox-td"><div class="custom-checkbox"><input type="checkbox" id="chk2-3-na" name="chk2-3-na" aria-labelledby="na form-errors"><span></span></div></td>
                 </tr>
-                <!-- Row 6: Sixth Checkpoint for Heuristic 2 - Forms -->
+                
+                <!-- Row 4: Error Suggestion -->
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td></td><td></td><td></td>
                     <td id="inline-errors">Are inline error messages provided, with suggestions on how to fix them? <br>
-                        <a href="/a11y-annotations/templates/components/forms.html" class="link" target="_blank">Error Suggestion <span class="sr-only">Opens in new tab</span><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a></td>
-                    <!-- Status Checkboxes -->
-                    <td class="checkbox-td">
-                        <!-- Pass Checkbox -->
-                        <div class="custom-checkbox">
-                            <input type="checkbox" id="chk2-6-pass" name="chk2-6-pass" aria-labelledby="pass inline-errors">
-                            <span></span>
-                        </div>
+                    <a href="/a11y-annotations/templates/general/interactives/error-suggestion.html" class="link" target="_blank">Error Suggestion <span class="sr-only">Opens in new tab</span><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
                     </td>
-                    <td class="checkbox-td">
-                        <!-- Fail Checkbox -->
-                        <div class="custom-checkbox">
-                            <input type="checkbox" id="chk2-6-fail" name="chk2-6-fail" aria-labelledby="fail inline-errors">
-                            <span></span>
-                        </div>
-                    </td>
-                    <td class="checkbox-td">
-                        <!-- Annotated Checkbox -->
-                        <div class="custom-checkbox">
-                            <input type="checkbox" id="chk2-6-annotated" name="chk2-6-annotated" aria-labelledby="annotated inline-errors">
-                            <span></span>
-                        </div>
-                    </td>
-                    <td class="checkbox-td">
-                        <!-- N/A Checkbox -->
-                        <div class="custom-checkbox">
-                            <input type="checkbox" id="chk2-6-na" name="chk2-6-na" aria-labelledby="na inline-errors">
-                            <span></span>
-                        </div>
-                    </td>
+                    <td class="checkbox-td"><div class="custom-checkbox"><input type="checkbox" id="chk2-4-pass" name="chk2-4-pass" aria-labelledby="pass inline-errors"><span></span></div></td>
+                    <td class="checkbox-td"><div class="custom-checkbox"><input type="checkbox" id="chk2-4-fail" name="chk2-4-fail" aria-labelledby="fail inline-errors"><span></span></div></td>
+                    <td class="checkbox-td"><div class="custom-checkbox"><input type="checkbox" id="chk2-4-annotated" name="chk2-4-annotated" aria-labelledby="annotated inline-errors"><span></span></div></td>
+                    <td class="checkbox-td"><div class="custom-checkbox"><input type="checkbox" id="chk2-4-na" name="chk2-4-na" aria-labelledby="na inline-errors"><span></span></div></td>
                 </tr>
-                <!-- Row 7: Seventh Checkpoint for Heuristic 2 Forms -->
+                
+                <!-- Row 5: Error Naming -->
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td id="inline-errors">Are status/success messages provided with sufficient user notification? <br>
-                        <a href="/a11y-annotations/templates/components/forms.html" class="link" target="_blank">Status Messages <span class="sr-only">Opens in new tab</span><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a></td>
-                    <!-- Status Checkboxes -->
-                    <td class="checkbox-td">
-                        <!-- Pass Checkbox -->
-                        <div class="custom-checkbox">
-                            <input type="checkbox" id="chk2-6-pass" name="chk2-6-pass" aria-labelledby="pass inline-errors">
-                            <span></span>
-                        </div>
+                    <td></td><td></td><td></td>
+                    <td id="error-label-naming">Do error messages clearly identify the field in error using the field’s visible label? <br>
+                    <a href="/a11y-annotations/templates/general/interactives/error-identification.html" class="link" target="_blank">Error Identification <span class="sr-only">Opens in new tab</span><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
                     </td>
-                    <td class="checkbox-td">
-                        <!-- Fail Checkbox -->
-                        <div class="custom-checkbox">
-                            <input type="checkbox" id="chk2-6-fail" name="chk2-6-fail" aria-labelledby="fail inline-errors">
-                            <span></span>
-                        </div>
-                    </td>
-                    <td class="checkbox-td">
-                        <!-- Annotated Checkbox -->
-                        <div class="custom-checkbox">
-                            <input type="checkbox" id="chk2-6-annotated" name="chk2-6-annotated" aria-labelledby="annotated inline-errors">
-                            <span></span>
-                        </div>
-                    </td>
-                    <td class="checkbox-td">
-                        <!-- N/A Checkbox -->
-                        <div class="custom-checkbox">
-                            <input type="checkbox" id="chk2-6-na" name="chk2-6-na" aria-labelledby="na inline-errors">
-                            <span></span>
-                        </div>
-                    </td>
+                    <td class="checkbox-td"><div class="custom-checkbox"><input type="checkbox" id="chk2-5-pass" name="chk2-5-pass" aria-labelledby="pass error-label-naming"><span></span></div></td>
+                    <td class="checkbox-td"><div class="custom-checkbox"><input type="checkbox" id="chk2-5-fail" name="chk2-5-fail" aria-labelledby="fail error-label-naming"><span></span></div></td>
+                    <td class="checkbox-td"><div class="custom-checkbox"><input type="checkbox" id="chk2-5-annotated" name="chk2-5-annotated" aria-labelledby="annotated error-label-naming"><span></span></div></td>
+                    <td class="checkbox-td"><div class="custom-checkbox"><input type="checkbox" id="chk2-5-na" name="chk2-5-na" aria-labelledby="na error-label-naming"><span></span></div></td>
                 </tr>
+                
+                <!-- Row 6: Error Prevention -->
+                <tr>
+                    <td></td><td></td><td></td>
+                    <td id="error-prevention">Is a review or confirmation step included before finalizing legal, financial, or data-impacting actions? <br>
+                    <a href="/a11y-annotations/templates/general/interactives/error-prevention.html" class="link" target="_blank">Error Prevention <span class="sr-only">Opens in new tab</span><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+                    </td>
+                    <td class="checkbox-td"><div class="custom-checkbox"><input type="checkbox" id="chk2-6-pass" name="chk2-6-pass" aria-labelledby="pass error-prevention"><span></span></div></td>
+                    <td class="checkbox-td"><div class="custom-checkbox"><input type="checkbox" id="chk2-6-fail" name="chk2-6-fail" aria-labelledby="fail error-prevention"><span></span></div></td>
+                    <td class="checkbox-td"><div class="custom-checkbox"><input type="checkbox" id="chk2-6-annotated" name="chk2-6-annotated" aria-labelledby="annotated error-prevention"><span></span></div></td>
+                    <td class="checkbox-td"><div class="custom-checkbox"><input type="checkbox" id="chk2-6-na" name="chk2-6-na" aria-labelledby="na error-prevention"><span></span></div></td>
+                </tr>
+                
+                <!-- Row 7: Status Messages (unchanged) -->
+                <tr>
+                    <td></td><td></td><td></td>
+                    <td id="status-messages">Are status/success messages provided with sufficient user notification? <br>
+                    <a href="/a11y-annotations/templates/components/forms.html" class="link" target="_blank">Status Messages <span class="sr-only">Opens in new tab</span><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+                    </td>
+                    <td class="checkbox-td"><div class="custom-checkbox"><input type="checkbox" id="chk2-7-pass" name="chk2-7-pass" aria-labelledby="pass status-messages"><span></span></div></td>
+                    <td class="checkbox-td"><div class="custom-checkbox"><input type="checkbox" id="chk2-7-fail" name="chk2-7-fail" aria-labelledby="fail status-messages"><span></span></div></td>
+                    <td class="checkbox-td"><div class="custom-checkbox"><input type="checkbox" id="chk2-7-annotated" name="chk2-7-annotated" aria-labelledby="annotated status-messages"><span></span></div></td>
+                    <td class="checkbox-td"><div class="custom-checkbox"><input type="checkbox" id="chk2-7-na" name="chk2-7-na" aria-labelledby="na status-messages"><span></span></div></td>
+                </tr>
+  
+
                 <!-- First Row for Heuristic 3: Color -->
                 <tr>
                     <th scope="row" class="border-top">3</th>

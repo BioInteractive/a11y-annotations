@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Identification</title>
+
+    <!-- Link to Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <!-- Link to Custom Stylesheet -->
+    <link rel="stylesheet" href="../../../../assets/styles/custom.css">
+    <!-- Link to Custom Stylesheet Production -->
+    <link rel="stylesheet" href="../../../../../assets/styles/custom.css">
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/a11y-annotations/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/a11y-annotations/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/a11y-annotations/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/a11y-annotations/assets/images/site.webmanifest">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+</head>
+<body>
+  <!-- Insert Header -->
+  <div id="header--container"></div>
+  
+  <div class="container-fluid">
+      <div class="row">
+          <!-- Includes the Sidebar Navigation using jQuery -->
+          <div id="sidebar-container" class="col-md-2 border-end"></div>
+
+          <!-- Main Content -->
+          <main class="col-md-9" id="main-content" tabindex="-1">
+            <!-- A11y Live Region -->
+            <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
+            <div class="container-xxl bd-gutter mt-3">
+                <h1>Error Identification</h1>
+                <!-- Accordion Item One -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      WCAG Success Criteria Requirements and Examples
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+                    <div class="accordion-body">
+                      <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html" target="_blank" rel="noopener noreferrer">3.3.1 Error Identification</a> requires that if an input error is automatically detected, the item that is in error must be identified, and the error must be described to the user in text. This allows users to understand what went wrong and how to fix it, particularly those using assistive technologies.</p>
+
+                      <h3>Briefing and Intent</h3>
+                      <p>The intent of this success criterion is to help users understand when a mistake has occurred and how to correct it. If a user submits a form with errors—such as leaving a required field blank or entering invalid data—they must be clearly informed of which field is affected and what needs to be corrected.</p>
+
+                      <h3>Benefits</h3>
+                      <p>Clearly identifying errors helps all users, especially those with cognitive disabilities, low vision, or who use screen readers. Providing a text explanation ensures users understand what happened and how to proceed. It also reduces frustration, abandonment, and the likelihood of repeated errors.</p>
+
+                      <h3>Key Requirements</h3>
+                      <ul class="fancy-checklist">
+                        <li><strong>Text Descriptions:</strong> When an input error is detected, a clear, specific message must be provided in text near the input or at the top of the form.</li>
+                        <li><strong>Error Association:</strong> The error message must be programmatically associated with the input field (e.g., using <code>aria-describedby</code> or inline labels).</li>
+                        <li><strong>Identify the Error:</strong> Visually indicate which field contains the error, such as with a visible border and clear focus styling.</li>
+                        <li><strong>Accessible Alerts:</strong> Ensure that screen reader users are alerted to the error messages using ARIA roles or live regions if applicable.</li>
+                      </ul>
+
+                      <h3>Examples</h3>
+                      <ul>
+                        <li><strong>Required Field:</strong> A user submits a form without filling in the required email address. The field is outlined in red and an inline text message reads, “Email address is required.”</li>
+                        <li><strong>Invalid Format:</strong> The phone number field only accepts digits. An inline message reads, “Phone number requires a 10-digit number with no spaces or dashes.”</li>
+                        <li><strong>Programmatic Association:</strong> The error message for a password field is linked using <code>aria-describedby</code> so that screen readers announce it when the user returns to the field.</li>
+                        <li><strong>Multiple Errors:</strong> A form displays a summary at the top listing all detected errors. Each error identifies the field by name and includes the reason for the error—for example: “Phone Number requires a 10-digit number with no spaces or dashes,” and “Email Address is required.” Each item in the summary is an anchor link that moves focus to the corresponding field in the form.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- Accordion Item Two Designer -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Accessibility Considerations
+                      <!-- Designer Tag -->
+                      <span class="dev-tag ms-3">
+                        Designer 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M12 2H8.5C7.57174 2 6.6815 2.36875 6.02513 3.02513C5.36875 3.6815 5 4.57174 5 5.5C5 6.42826 5.36875 7.3185 6.02513 7.97487C6.6815 8.63125 7.57174 9 8.5 9M12 2V9M12 2H15.5C15.9596 2 16.4148 2.09053 16.8394 2.26642C17.264 2.44231 17.6499 2.70012 17.9749 3.02513C18.2999 3.35013 18.5577 3.73597 18.7336 4.16061C18.9095 4.58525 19 5.04037 19 5.5C19 5.95963 18.9095 6.41475 18.7336 6.83939C18.5577 7.26403 18.2999 7.64987 17.9749 7.97487C17.6499 8.29988 17.264 8.55769 16.8394 8.73358C16.4148 8.90947 15.9596 9 15.5 9M12 9H8.5M12 9H15.5M12 9V16M8.5 9C7.57174 9 6.6815 9.36875 6.02513 10.0251C5.36875 10.6815 5 11.5717 5 12.5C5 13.4283 5.36875 14.3185 6.02513 14.9749C6.6815 15.6313 7.57174 16 8.5 16M15.5 9C15.0404 9 14.5852 9.09053 14.1606 9.26642C13.736 9.44231 13.3501 9.70012 13.0251 10.0251C12.7001 10.3501 12.4423 10.736 12.2664 11.1606C12.0905 11.5852 12 12.0404 12 12.5C12 12.9596 12.0905 13.4148 12.2664 13.8394C12.4423 14.264 12.7001 14.6499 13.0251 14.9749C13.3501 15.2999 13.736 15.5577 14.1606 15.7336C14.5852 15.9095 15.0404 16 15.5 16C15.9596 16 16.4148 15.9095 16.8394 15.7336C17.264 15.5577 17.6499 15.2999 17.9749 14.9749C18.2999 14.6499 18.5577 14.264 18.7336 13.8394C18.9095 13.4148 19 12.9596 19 12.5C19 12.0404 18.9095 11.5852 18.7336 11.1606C18.5577 10.736 18.2999 10.3501 17.9749 10.0251C17.6499 9.70012 17.264 9.44231 16.8394 9.26642C16.4148 9.09053 15.9596 9 15.5 9ZM8.5 16C7.57174 16 6.6815 16.3687 6.02513 17.0251C5.36875 17.6815 5 18.5717 5 19.5C5 20.4283 5.36875 21.3185 6.02513 21.9749C6.6815 22.6313 7.57174 23 8.5 23C9.42826 23 10.3185 22.6313 10.9749 21.9749C11.6313 21.3185 12 20.4283 12 19.5V16M8.5 16H12" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" style="">
+                    <div class="accordion-body">
+                      <h3>Designing for Error Identification</h3>
+                      <ul>
+                        <li><strong>Error Message Placement:</strong> Always place error messages adjacent to the input field that is in error. For forms with multiple errors, use a clearly labeled summary at the top of the form that identifies each field by name and describes why it's in error.</li>
+                        <li><strong>Contrast Requirements:</strong> If red is used for error text or input borders, ensure it meets WCAG 2.1 AA color contrast requirements for regular-sized text (4.5:1). Reference the <a href="/templates/general/color/text-contrast.html" target="_blank" rel="noopener noreferrer">Text Contrast</a> page in the repository for full guidance.</li>
+                        <li><strong>Form States in Design:</strong> Designers must show both the static/default state and error state of form components in Figma. This helps ensure developers implement visual error handling accurately and consistently.</li>
+                        <li><strong>Format Guidance:</strong> Clearly indicate required input formats (e.g., date, phone number) either in:
+                          <ul>
+                            <li>The field label itself</li>
+                            <li>Helper or hint text adjacent to the input</li>
+                            <li>The error message itself when the format is invalid</li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <p>By addressing these details in your Figma files, you’ll ensure that error messages are accessible, understandable, and aligned with WCAG 3.3.1 Error Identification requirements.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Accordion Item Three Auditor -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      How to Test and Annotate
+                      <!-- Auditor Tag -->
+                      <span class="dev-tag ms-3">
+                        Auditor 
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                          <path d="M14 7H19.6404C20.0877 7 20.3113 7 20.4421 7.09404C20.5562 7.17609 20.6306 7.30239 20.6469 7.442C20.6656 7.602 20.5569 7.79751 20.3397 8.18851L18.9936 10.6115C18.9148 10.7533 18.8755 10.8242 18.86 10.8993C18.8463 10.9657 18.8463 11.0343 18.86 11.1007C18.8755 11.1758 18.9148 11.2467 18.9936 11.3885L20.3397 13.8115C20.5569 14.2025 20.6656 14.398 20.6469 14.558C20.6306 14.6976 20.5562 14.8239 20.4421 14.906C20.3113 15 20.0877 15 19.6404 15H12.6C12.0399 15 11.7599 15 11.546 14.891C11.3578 14.7951 11.2049 14.6422 11.109 14.454C11 14.2401 11 13.9601 11 13.4V11M4 21L4 4M4 11H12.4C12.9601 11 13.2401 11 13.454 10.891C13.6422 10.7951 13.7951 10.6422 13.891 10.454C14 10.2401 14 9.96005 14 9.4V4.6C14 4.03995 14 3.75992 13.891 3.54601C13.7951 3.35785 13.6422 3.20487 13.454 3.10899C13.2401 3 12.9601 3 12.4 3H5.6C5.03995 3 4.75992 3 4.54601 3.10899C4.35785 3.20487 4.20487 3.35785 4.10899 3.54601C4 3.75992 4 4.03995 4 4.6V11Z" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span> 
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" style="">
+                    <div class="accordion-body">
+                      <h3>Testing and Annotating for Error Identification</h3>
+                      <ol role="list">
+                        <li>Review all required input fields and confirm that error states are shown in the Figma design when fields are left blank or contain invalid values.</li>
+                        <li>Check that each error message identifies the field by name and clearly describes the issue (e.g., missing input or invalid format).</li>
+                        <li>Confirm that error messages are placed directly adjacent to the input field in error, except when included in a summary at the top of the form.</li>
+                        <li>Ensure that multiple error summaries include each field name and reason for the error. These should not rely solely on color to convey meaning.</li>
+                        <li>Flag any designs that do not include error styling (e.g., borders, messages) or fail contrast requirements.</li>
+                      </ol>
+                      <p>Be sure to annotate in the Figma file with specific notes to developers for error message placement, content, and association. Document findings in your walkthrough and confirm all expected behavior is represented visually.</p>
+                      <div class="d-inline-block border border-dark p-2 rounded">
+                        <div class="d-flex flex-row">
+                          <div class="text-to-copy">
+                            <h3>Error Identification</h3>
+                            <ul role="list">
+                              <li>Show error message adjacent to the input field in error.</li>
+                              <li>Error message must name the field and clearly describe the issue.</li>
+                              <li>Associate error message programmatically using <code>aria-describedby</code> or equivalent.</li>
+                              <li>Move focus to the first field in error on submission failure.</li>
+                              <li>Do not rely on color alone—use visible text and semantic markup.</li>
+                            </ul>                            
+                          </div>
+                          <div>
+                            <button class="ml-1r btn copy-btn">
+                              <i class="bi bi-clipboard-heart-fill" aria-hidden="true"></i> Copy
+                            </button>
+                          </div>
+                        </div>
+                      </div>                      
+                    </div>                        
+                  </div>
+                </div>
+                <!-- Accordion Item Four Developer -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      Accessibility Considerations
+                      <!-- Developer Tag -->
+                      <span class="dev-tag ms-3">
+                        Developer 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                          <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </span> 
+                    </button>
+                  </h2>
+                  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
+                    <div class="accordion-body">
+                      <h3>Developing with Error Identification Considerations</h3>
+                      <ul>
+                        <li><strong>Detect Input Errors:</strong> Implement client-side and/or server-side validation to detect errors such as missing required fields or incorrect data formats.</li>
+                        <li><strong>Describe the Error in Text:</strong> When an error is detected, display a clear, descriptive error message that identifies the field by name and explains what is wrong.</li>
+                        <li><strong>Programmatic Association:</strong> Use <code>aria-describedby</code> or link the <code>&lt;label&gt;</code> and error message to ensure screen readers announce the error when the user focuses on the field.</li>
+                        <li><strong>Focus and Visibility:</strong> Move focus to the first field in error after submission, and ensure error messages are placed next to the field and styled to be clearly visible.</li>
+                        <li><strong>Do Not Rely on Color Alone:</strong> Use visible text and semantic HTML to indicate errors. If using color to highlight an error (e.g., red borders), also include icons, messages, or helper text to ensure full accessibility.</li>
+                      </ul>
+                      <p>Meeting 3.3.1 ensures that all users, including those using screen readers, keyboard navigation, or with cognitive disabilities, can understand what went wrong and how to correct it.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Accordion Item Five Resources -->
+                <div class="accordion-item">
+                  <h2 class="accordion-item" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                      Resources
+                    </button>
+                  </h2>
+                  <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" style="">
+                    <div class="accordion-body">
+                      <ul role="list">
+                        <li><a href="https://www.w3.org/WAI/tutorials/forms/notifications/" target="_blank" rel="noopener noreferrer">W3C WAI Tutorial: Form Notifications</a> – Best practices for showing helpful and accessible error messages.</li>
+                        <li><a href="https://dequeuniversity.com/checklists/web/form-validation-feedback" target="_blank" rel="noopener noreferrer">Deque: Form Validation</a> – Accessibility Techniques for Form Validation and Feedback</li>
+                        <li><a href="https://silktide.com/accessibility-guide/the-wcag-standard/3-3/input-assistance/3-3-3-error-suggestion/" target="_blank" rel="noopener noreferrer">WCAG 3.3.3 by Silktide</a> – Clear explanations and markup examples for accessible, contextual error messaging.</li>
+                        <li><a href="https://www.smashingmagazine.com/2023/02/guide-accessible-form-validation/" target="_blank" rel="noopener noreferrer">Smashing Magazine: Accessible Form Validation</a> – Practical guide to writing clear, helpful error suggestions and placing them correctly.</li>
+                      </ul>                     
+                    </div>
+                  </div>
+                </div> 
+              </div>               
+          </main>
+        </div>
+      </div>
+
+    <!-- Script links and jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../../../assets/js/global.js"></script>
+    <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- Add sidebar navigation and header to the page -->
+    <script>
+      $(document).ready(function () {
+           // Determine the paths relative to the root directory
+           var sidebarPath = "../../sidebar-navigation.html";
+           var headerPath = "../../header.html";
+      
+           // Use jQuery to load the sidebar-navigation.html file
+           $("#sidebar-container").load(sidebarPath);
+      
+           // Use jQuery to load the header.html file
+           $("#header--container").load(headerPath);
+      });
+    </script>
+
+</body>
+</html>
