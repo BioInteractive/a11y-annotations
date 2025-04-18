@@ -705,6 +705,15 @@ $(document).ready(function() {
           ]
         },
         {
+          title: 'Identify Input Purpose',
+          url: '/a11y-annotations/templates/general/interactives/input-purpose.html',
+          description: 'Helps users by identifying common input fields programmatically.',
+          content: 'Identify Input Purpose ensures that fields collecting user data—like name, email, phone, and address—can be programmatically determined. This enables browsers and assistive technologies to offer features like autofill, voice input, and personalized assistance to users with cognitive or motor disabilities.',
+          wcagCriteria: [
+            { id: '1.3.5', description: 'Identify Input Purpose - The purpose of user input fields must be programmatically determinable using valid autocomplete attributes.' }
+          ]
+        },        
+        {
           title: 'Dynamic Changes',
           url: '/a11y-annotations/templates/general/interactives/dynamic-changes.html',
           description: 'Ensure users are aware of dynamic changes in content.',
