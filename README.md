@@ -1,5 +1,5 @@
 # a11y-annotations
-Design and Development Accessibility Annotations
+Design, Auditor, and Development Accessibility Annotations
 
 Repository created by Crystal Scott, Freelance Web Accessibility Engineer.
 
