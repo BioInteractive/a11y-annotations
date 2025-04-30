@@ -45,24 +45,50 @@
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          WCAG Success Criteria
+                          WCAG Success Criteria Requirements and Examples
                         </button>
                       </h2>
-                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" role="region">
                         <div class="accordion-body">
-                          <p><a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html" target="_blank">2.5.8 - Target Size (Minimum)</a> The size of the target for pointer inputs must be at least 24 by 24 CSS pixels.</p>                          
-                          <p>HHMI recommend's a minimum standard size of 44 X 44 as a best practice for all touch targets.</p>
-                          <h3>Exceptions</h3>
-                          <ul role="list" class="fancy-checklist">
-                            <li><strong>Spacing:</strong> Small touch targets must not overlap with each other or larger targets to avoid accidental taps.</li>
-                            <li><strong>Equivalent Controls:</strong> If there's another way to do the same action with larger touch targets on the same page, it should be provided.</li>
-                            <li><strong>Inline Targets:</strong> Even if a touch target is within a sentence or constrained by nearby text, it should still be comfortably sized for tapping.</li>
-                            <li><strong>User Agent Control:</strong> The device (e.g., phone or tablet) should determine touch target size, not the website or app.</li>
-                            <li><strong>Essential Presentation:</strong> If a specific touch target presentation is necessary for clarity or legal reasons, it should meet the minimum size requirement.</li>
-                          </ul>                                     
+                    
+                          <p>
+                            <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html" target="_blank" rel="noopener noreferrer">2.5.8 Target Size (Minimum)</a> requires that touch targets (e.g., buttons, links, icons) are at least 24 by 24 CSS pixels in size. This helps users with limited motor control avoid accidental taps and improves usability across a range of devices.
+                          </p>
+                    
+                          <h3>Briefing and Intent</h3>
+                          <p>
+                            The purpose of this success criterion is to ensure that interactive elements are large enough to be easily activated without precision. Small or densely packed targets can lead to errors, especially for users with motor disabilities or those using touch input on small screens. Providing sufficiently sized and well-spaced targets improves accuracy and reduces frustration.
+                          </p>
+                    
+                          <h3>Benefits</h3>
+                          <ul>
+                            <li>Improves usability for users with motor impairments or tremors who may have difficulty with precise pointer movements.</li>
+                            <li>Reduces accidental activation of nearby controls, especially on mobile and touch devices.</li>
+                            <li>Enhances overall accessibility and ease of use on small screens and high-density touch displays.</li>
+                            <li>Improves inclusivity for older adults and users with temporary impairments like injury or fatigue.</li>
+                          </ul>
+                    
+                          <h3>Key Requirements</h3>
+                          <ul class="fancy-checklist">
+                            <li>All touch targets should be at least <strong>24px by 24px</strong> in size (WCAG 2.2 minimum).</li>
+                            <li><strong>HHMI Best Practice:</strong> Aim for a minimum target size of <strong>44px by 44px</strong> for improved accessibility and usability.</li>
+                            <li>Touch targets must not overlap or be placed too close to one another unless spacing prevents accidental activation.</li>
+                            <li>If a small target is used, an alternative method of performing the same action with a larger control should be available on the same screen.</li>
+                            <li>Targets embedded inline (e.g., links inside sentences) must still be reasonably sized and visually distinguishable.</li>
+                            <li>This requirement does not apply if the user agent (e.g., browser or OS) determines the target size, or if the target’s size is essential to the presentation.</li>
+                          </ul>
+                    
+                          <h3>Examples</h3>
+                          <ul>
+                            <li><strong>Good:</strong> A button with 48px of width and height offers generous tap space and enough margin from nearby controls.</li>
+                            <li><strong>Bad:</strong> Tiny icons (<20px) placed side-by-side cause frequent accidental taps on touch screens.</li>
+                            <li><strong>Good:</strong> A dropdown menu link is just 22px tall, but the same action is also available through a larger on-page button.</li>
+                            <li><strong>Good:</strong> Inline links in body text use increased line height and padding to provide a wider tap area.</li>
+                          </ul>
+                    
                         </div>
                       </div>
-                    </div>
+                    </div>                    
                     <!-- Accordion Item Designer -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingDesign">

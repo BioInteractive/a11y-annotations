@@ -45,37 +45,59 @@
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          WCAG Success Criteria
+                          WCAG Success Criteria Requirements and Examples
                         </button>
                       </h2>
-                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" role="region">
                         <div class="accordion-body">
-                          <p>
-                            <a href="https://www.w3.org/WAI/WCAG21/Understanding/keyboard" target="_blank" rel="noopener noreferrer">2.1.1 Keyboard</a>
-                            All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes, except where the underlying function requires input that depends on the path of the user's movement and not just the endpoints.
-                          </p>
-                          <ul role="list" class="fancy-checklist">
-                            <li>This exception relates to the underlying function, not the input technique. For example, if using handwriting to enter text, the input technique (handwriting) requires path-dependent input but the underlying function (text input) does not.</li>
-                            <li>This does not forbid and should not discourage providing mouse input or other input methods in addition to keyboard operation.</li>
+                          <ul role="list">
+                            <li>
+                              <a href="https://www.w3.org/WAI/WCAG21/Understanding/keyboard" target="_blank" rel="noopener noreferrer">2.1.1 Keyboard:</a>
+                              All functionality of the content must be operable through a keyboard interface, without requiring specific timings for individual keystrokes. Mouse input can still be supported, but it cannot be required.
+                            </li>
+                            <li>
+                              <a href="https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap" target="_blank" rel="noopener noreferrer">2.1.2 No Keyboard Trap:</a>
+                              If keyboard focus can be moved to a component, it must also be possible to move focus away from that component using only the keyboard. If this requires non-standard keys, users must be informed how.
+                            </li>
+                            <li>
+                              <a href="https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts" target="_blank" rel="noopener noreferrer">2.1.4 Character Key Shortcuts:</a>
+                              If a keyboard shortcut uses a single character key (like "S" or "D"), it must be able to be turned off, remapped, or restricted to only work when its associated element has focus.
+                            </li>
                           </ul>
+                    
+                          <h3>Briefing and Intent</h3>
                           <p>
-                            <a href="https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap" target="_blank" rel="noopener noreferrer">2.1.2 No Keyboard Trap</a> This success criterion ensures that if keyboard focus can be moved to a component of the page using a keyboard interface, it can also be moved away from that component using only a keyboard interface. This is crucial for ensuring that users who rely on keyboards to navigate can use the page effectively without getting stuck on any part of it.
+                            These criteria ensure that users can navigate and interact with a site using only the keyboard, without being trapped in elements like custom modals or widgets, and without accidentally triggering unwanted actions via keyboard shortcuts. The guidelines support both basic accessibility and customization for users who rely on assistive technologies or alternative input methods.
                           </p>
-                          <ul role="list" class="fancy-checklist">
-                            <li>If keyboard focus can be moved to a component, it must also be possible to move it away using just the keyboard. This helps prevent users from getting trapped in a specific part of the page.</li>
-                            <li>If moving focus away requires more than the basic arrow or tab keys, or other standard methods, users must be informed of how to do this. This ensures users are aware of how to navigate freely without encountering barriers.</li>
+                    
+                          <h3>Benefits</h3>
+                          <ul>
+                            <li>Supports screen reader users and keyboard-only users by enabling complete control without requiring a mouse.</li>
+                            <li>Prevents keyboard users from getting stuck in interactive components like carousels, modals, or form fields.</li>
+                            <li>Reduces frustration for users who may trigger unintended actions due to single-character shortcuts, especially those using speech-to-text or screen readers.</li>
                           </ul>
-                          <p>
-                            <a href="https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts" target="_blank" rel="noopener noreferrer">2.1.4 Character Key Shortcuts</a> This success criterion ensures that if a keyboard shortcut is implemented using a single character key, it can be turned off, remapped, or activated only on focus. This is critical for users who may inadvertently trigger shortcuts or have difficulty using them, such as those with motor disabilities or screen reader users.
-                          </p>
-                          <ul role="list" class="fancy-checklist">
-                            <li>If single character key shortcuts are available, users should be able to turn them off or remap them to avoid accidental activation.</li>
-                            <li>Shortcuts should only activate when the specific interface component has focus to prevent conflicts with assistive technologies or other user inputs.</li>
-                            <li>Ensure that users are aware of the existence of these shortcuts and provide a way to customize or disable them as needed.</li>
-                          </ul>                          
+                    
+                          <h3>Key Requirements</h3>
+                          <ul class="fancy-checklist">
+                            <li>All interactive elements must be operable via keyboard alone (2.1.1).</li>
+                            <li>Users must be able to move into and out of all components using standard keyboard controls, like Tab and Shift+Tab (2.1.2).</li>
+                            <li>If a keyboard shortcut is implemented using a single character key, users must be able to disable or remap it, or it should only activate when the associated element has focus (2.1.4).</li>
+                            <li>Custom components (modals, menus, sliders) must support logical keyboard interaction and follow expected focus patterns.</li>
+                            <li>Instructions should be provided if any non-standard keyboard interactions are required.</li>
+                          </ul>
+                    
+                          <h3>Examples</h3>
+                          <ul>
+                            <li><strong>Keyboard-Only Form Access:</strong> A user can tab through every input, checkbox, and submit button without needing a mouse.</li>
+                            <li><strong>Escaping Modals:</strong> A modal trap is prevented by ensuring Esc or Shift+Tab lets the user exit the modal, and focus returns to the element that opened it.</li>
+                            <li><strong>Calendar Widget:</strong> A calendar popup allows users to navigate via arrow keys and close it via Esc, with no keyboard trap inside the component.</li>
+                            <li><strong>Shortcut Remapping:</strong> A webmail app allows users to disable or remap single-key shortcuts like "D" for delete.</li>
+                            <li><strong>Focus-Sensitive Shortcuts:</strong> A shortcut to add items to a cart only activates when the "Add to cart" button or row is focused, preventing accidental triggers during typing.</li>
+                          </ul>
                         </div>
                       </div>
                     </div>
+                    
                     <!-- Accordion Item Two Designer -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingTwo">

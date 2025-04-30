@@ -45,21 +45,47 @@
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          WCAG Success Criteria
+                          WCAG Success Criteria Requirements and Examples
                         </button>
                       </h2>
-                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" role="region">
                         <div class="accordion-body">
-                          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/on-input.html" target="_blank">3.2.2 On Input</a> Changing the setting of any user interface component does not automatically cause a change of context unless the user has been advised of the behavior before using the component.</p>
-                          <ul role="list" class="fancy-checklist">
-                            <li><strong>No automatic context changes:</strong> Adjusting a user interface component should not result in an unexpected change of context, such as navigating to a new page, opening a new window, or submitting a form.</li>
-                            <li><strong>Explicit user control:</strong> Changes in context must only occur through explicit user actions, like clicking a submit button or confirming a selection.</li>
-                            <li><strong>Notification of behavior:</strong> If a change in context is necessary, users must be informed of this behavior before they interact with the component.</li>
-                            <li><strong>Maintain input stability:</strong> Ensure that changes in input do not disrupt the user's workflow or cause unexpected navigation issues.</li>
+                    
+                          <p>
+                            <a href="https://www.w3.org/WAI/WCAG21/Understanding/on-focus" target="_blank" rel="noopener noreferrer">3.2.1 On Focus</a> requires that when a user interface component receives focus, it does not automatically trigger a change of context. Focus alone should never result in navigation, submission, or content restructuring without user confirmation.
+                          </p>
+                    
+                          <h3>Briefing and Intent</h3>
+                          <p>
+                            The goal of this success criterion is to prevent disorienting or disruptive experiences for users who navigate by keyboard or use assistive technologies. Receiving focus should not cause an unexpected action, such as navigating to a new page, opening a modal, or submitting a form. Context changes must only occur through intentional, explicit actions—such as clicking a button or pressing Enter.
+                          </p>
+                    
+                          <h3>Benefits</h3>
+                          <ul>
+                            <li>Prevents screen reader or keyboard-only users from being redirected without warning.</li>
+                            <li>Supports users with cognitive disabilities who may become confused by automatic changes.</li>
+                            <li>Maintains a predictable and stable navigation experience.</li>
                           </ul>
-                      </div>                                            
+                    
+                          <h3>Key Requirements</h3>
+                          <ul class="fancy-checklist">
+                            <li>Focusable elements must not cause a change of context simply by receiving focus.</li>
+                            <li>Actions like navigation, modal triggers, or form submission must be initiated by an explicit user interaction (e.g., click, tap, Enter).</li>
+                            <li>Focus behavior should be stable and not trigger reflow, page reload, or popups.</li>
+                            <li>Ensure that visual focus indicators are clearly visible to help users track where focus is on the page.</li>
+                          </ul>
+                    
+                          <h3>Examples</h3>
+                          <ul>
+                            <li><strong>Bad:</strong> A dropdown menu navigates to a new page as soon as it receives keyboard focus.</li>
+                            <li><strong>Good:</strong> A select element receives focus, but a page redirect only occurs after the user chooses an option and presses Enter or clicks a button.</li>
+                            <li><strong>Bad:</strong> A form field triggers an automatic submit when focused by a keyboard user.</li>
+                            <li><strong>Good:</strong> A modal opens only after a user presses Enter on a “More Info” button—not when the button is focused by tabbing through the page.</li>
+                          </ul>
+                    
+                        </div>
                       </div>
-                    </div>
+                    </div>                    
                     <!-- Accordion Item Two Designer -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingTwo">

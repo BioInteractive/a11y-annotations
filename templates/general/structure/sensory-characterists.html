@@ -48,41 +48,48 @@
                       WCAG Success Criteria Requirements and Examples
                     </button>
                   </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="" role="region">
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" role="region">
                     <div class="accordion-body">
-                      <p>
-                        <a href="https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics" target="_blank">1.3.3 Sensory Characteristics</a> ensures that instructions for interacting with content do not rely solely on sensory characteristics such as shape, size, visual location, orientation, or sound. This success criterion requires that:
-                      </p>
-                      <ul role="list" class="fancy-checklist">
-                        <li>Instructions describe elements using text-based descriptions rather than relying solely on sensory characteristics (e.g., “Click the search icon labeled with a magnifying glass” instead of “Click the round icon”).</li>
-                        <li>Shape, color, size, or other sensory information should be complemented with textual or programmatically determinable descriptions.</li>
-                        <li>Instructions must ensure equal access for users who rely on assistive technologies or have difficulty perceiving sensory characteristics.</li>
+                      <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics" target="_blank" rel="noopener noreferrer">1.3.3 Sensory Characteristics</a> requires that instructions for interacting with content do not rely solely on visual or sensory cues such as shape, size, location, orientation, color, or sound.</p>
+                
+                      <h3>Briefing and Intent</h3>
+                      <p>The intent of this success criterion is to ensure that users can understand and follow instructions regardless of how they perceive content. When instructions refer only to visual or auditory cues, they exclude users with visual, cognitive, or auditory disabilities who may not be able to perceive those characteristics. Instructions must instead refer to meaningful text, labels, or programmatic attributes that all users can access.</p>
+                
+                      <h3>Benefits</h3>
+                      <p>This helps people who are blind, have low vision, use screen readers, have color blindness, or have cognitive disabilities. It also supports users who rely on alternative input methods or magnification tools, where shape, position, or color may not be visually apparent.</p>
+                
+                      <h3>Key Requirements</h3>
+                      <ul class="fancy-checklist">
+                        <li>Do not rely on shape, color, position, or sound alone to convey meaning or give instructions.</li>
+                        <li>Refer to elements using visible labels, clear text, or programmatic associations (e.g., accessible names).</li>
+                        <li>Ensure that all instructional references (such as “click,” “select,” or “submit”) are paired with descriptive identifiers.</li>
+                        <li>Use accessible names and roles so that assistive technologies can communicate the same information.</li>
                       </ul>
-                      <p>
-                        Ensuring that instructions are not based solely on sensory characteristics is critical for users with vision impairments, cognitive disabilities, or users who rely on screen readers or alternative interaction methods.
-                      </p>
-                      <h4>Examples:</h4>
-                      <ul role="list">
-                        <li>Prefer: “Activate the search icon labeled with a magnifying glass.”</li>
-                        <li>Avoid: “Click the round icon.”</li>
-                        <li>Prefer: “Press the green button labeled Submit.”</li>
-                        <li>Avoid: “Press the green button.”</li>
+                
+                      <h3>Examples</h3>
+                      <ul>
+                        <li><strong>Clear Instruction:</strong> “Click the search icon labeled with a magnifying glass.”</li>
+                        <li><strong>Unclear Instruction:</strong> “Click the round icon.”</li>
+                        <li><strong>Clear Instruction:</strong> “Press the green button labeled Submit.”</li>
+                        <li><strong>Unclear Instruction:</strong> “Press the green button.”</li>
                       </ul>
-                      <h4>Common Failures:</h4>
-                      <ul role="list">
-                        <li>Providing instructions that rely solely on shapes or locations (e.g., “Select the square in the top-right corner”).</li>
-                        <li>Using color as the only means of conveying information (e.g., “Click the blue button”).</li>
-                        <li>Failing to include accessible names or programmatically determinable labels.</li>
+                
+                      <h3>Common Failures</h3>
+                      <ul>
+                        <li>Using shape-only references (e.g., “Click the square in the corner”).</li>
+                        <li>Using color alone to indicate status or next steps (e.g., “Press the blue button”).</li>
+                        <li>Omitting labels or accessible names that clarify what element is being referenced.</li>
                       </ul>
-                      <h4>Techniques:</h4>
-                      <ul role="list" class="fancy-checklist">
-                        <li>Use descriptive text that clearly explains how to interact with elements.</li>
-                        <li>Complement sensory information (e.g., shape, size) with textual descriptions or accessible labels.</li>
-                        <li>Ensure that all interactive elements are programmatically determinable and provide meaningful names for screen readers.</li>
+                
+                      <h3>Techniques</h3>
+                      <ul class="fancy-checklist">
+                        <li>Use clear, text-based instructions that reference labels or element names.</li>
+                        <li>Complement sensory cues (e.g., shape or position) with readable text or labels.</li>
+                        <li>Ensure elements are programmatically determinable with proper HTML or ARIA markup.</li>
                       </ul>
                     </div>
                   </div>
-                </div>
+                </div>                
                 <!-- Accordion Item Two: Accessibility Considerations - Designer -->
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingTwo">

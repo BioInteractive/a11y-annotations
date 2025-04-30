@@ -44,24 +44,49 @@
                     <!-- Accordion Item One -->
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                WCAG Success Criteria
-                            </button>
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            WCAG Success Criteria Requirements and Examples
+                          </button>
                         </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
-                            <div class="accordion-body">
-                                <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation" target="_blank">2.5.4 Motion Actuation</a> ensures that functionality triggered by 
-                                    device or user motion, such as shaking or tilting a device, is also available via more conventional inputs, such as buttons or gestures. 
-                                    This success criterion requires that:</p>
-                                <ul role="list" class="fancy-checklist">
-                                    <li>Users can perform all functionality triggered by motion using standard controls or interface components.</li>
-                                    <li>Motion-based interaction can be disabled to avoid unintended activation, unless it is essential for the function.</li>
-                                    <li>The motion used to trigger functionality must meet these requirements unless its use is essential to the design.</li>
-                                </ul>
-                                <p>Motion actuation is important for users who may have difficulty performing specific motions or prefer alternative interaction methods for personal or accessibility reasons.</p>
-                            </div>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" role="region">
+                          <div class="accordion-body">
+                      
+                            <p>
+                              <a href="https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation" target="_blank" rel="noopener noreferrer">2.5.4 Motion Actuation</a> requires that when functionality is triggered by user or device motion—such as shaking, tilting, or rotating a device—the same function must also be available through standard controls like buttons, switches, or gestures. In addition, motion activation must be able to be disabled unless it is essential to the operation.
+                            </p>
+                      
+                            <h3>Briefing and Intent</h3>
+                            <p>
+                              The intent of this criterion is to ensure that users who cannot perform physical movements or who rely on assistive technologies are not excluded from accessing content or features. Motion actuation includes any interaction triggered by moving the device or user (e.g., gestures like shaking to undo or tilting to scroll), and these interactions should not be the only way to perform an action.
+                            </p>
+                      
+                            <h3>Benefits</h3>
+                            <ul>
+                              <li>Allows users with motor disabilities or tremors to avoid unintentional actions triggered by motion.</li>
+                              <li>Supports users who rely on alternate inputs such as switches, screen readers, or voice control.</li>
+                              <li>Prevents user frustration by offering traditional UI controls as an alternative to device motion.</li>
+                              <li>Improves usability in unstable or noisy environments where motion input may be inaccurate.</li>
+                            </ul>
+                      
+                            <h3>Key Requirements</h3>
+                            <ul class="fancy-checklist">
+                              <li>Any function triggered by device motion (e.g., shake, tilt, rotation) must also be available via a conventional user interface control.</li>
+                              <li>There must be a way to disable motion activation, such as via system settings or an in-app toggle, unless the motion is essential to the functionality.</li>
+                              <li>Motion-based input should not be the only method of interaction unless the entire purpose of the content relies on motion (e.g., a step counter).</li>
+                              <li>Device orientation alone should not determine content access or behavior unless essential.</li>
+                            </ul>
+                      
+                            <h3>Examples</h3>
+                            <ul>
+                              <li><strong>Undo by Shake:</strong> A mobile app allows users to shake their phone to undo, but also provides an “Undo” button on screen for the same action.</li>
+                              <li><strong>Interactive Map:</strong> A map zooms in when a user tilts their device, but the app also includes zoom in/out buttons as an alternative.</li>
+                              <li><strong>Photo App:</strong> Tilting a device rotates the image, but the app includes a rotate button as a backup.</li>
+                              <li><strong>Essential Motion:</strong> A fitness app tracks running activity based on motion sensors. Since the function is based on tracking physical motion, no alternative is required.</li>
+                            </ul>
+                      
+                          </div>
                         </div>
-                    </div>
+                    </div>                      
                     <!-- Accordion Item Four Developer -->
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingFour">

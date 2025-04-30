@@ -45,26 +45,52 @@
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          WCAG Success Criteria
+                          WCAG Success Criteria Requirements and Examples
                         </button>
                       </h2>
-                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" role="region">
                         <div class="accordion-body">
                           <p>
-                            <a href="https://www.w3.org/WAI/WCAG22/Understanding/name-role-value" target="_blank" rel="noopener noreferrer">4.1.2 Name, Role, Value</a>
-                            Dynamically updated content needs to have aria-live added to the parent element for the content. This will ensure that screen readers announce the change of content to users.</p>
-                            <p>
-                              When updating dynamic content, whether automatically or due to user interaction, it's crucial to ensure that changes are communicated accessibly.
-                            </p>
-                            <ul role="list" class="fancy-checklist">
-                              <li><strong>Notification Appropriateness:</strong> Tailor notifications to the significance of the updates; critical alerts like errors should have higher priority over less critical updates like newsfeed changes.</li>
-                              <li><strong>Identification of Updated Content:</strong> Mark content that may change as a WAI-ARIA live region using the <code>aria-live</code> attribute, or use special live region roles in certain cases.</li>
-                              <li><strong>Awareness of Important Changes:</strong> Clearly distinguish between critical updates that require immediate attention and informational updates to avoid disrupting the user unnecessarily, particularly benefiting screen reader users and those with cognitive disabilities.</li>
-                              <li><strong>Priority of Update Notifications:</strong> Determine the importance of users hearing updates promptly to decide if it should interrupt what the screen reader is currently processing, impacting the value assigned to the <code>aria-live</code> attribute.</li>
-                            </ul>                          
+                            <a href="https://www.w3.org/WAI/WCAG22/Understanding/name-role-value" target="_blank" rel="noopener noreferrer">4.1.2 Name, Role, Value</a> requires that for all user interface components (including form elements, links, and custom widgets), the name, role, and value can be programmatically determined, and that user notifications are communicated to assistive technologies.
+                          </p>
+                    
+                          <h3>Briefing and Intent</h3>
+                          <p>
+                            This success criterion ensures that users of assistive technologies, such as screen readers, can correctly perceive and interact with controls and dynamic content. When interface elements are customized or updated, users need access to the control's label (name), type (role), and current state or data (value), as well as any status updates triggered by interaction or automation.
+                          </p>
+                    
+                          <h3>Benefits</h3>
+                          <ul>
+                            <li>Screen reader users receive clear announcements when a button is pressed, a value changes, or an alert appears.</li>
+                            <li>Users with cognitive disabilities benefit from consistent and predictable communication of changes.</li>
+                            <li>Keyboard and switch device users can understand and interact with complex widgets when the correct roles and names are conveyed.</li>
+                          </ul>
+                    
+                          <h3>Key Requirements</h3>
+                          <ul class="fancy-checklist">
+                            <li><strong>Accessible Names:</strong> Ensure all interactive elements have accessible names via <code>aria-label</code>, <code>aria-labelledby</code>, or native HTML labels.</li>
+                            <li><strong>Programmatic Roles:</strong> Custom components (e.g., modals, sliders, tabs) must expose appropriate ARIA <code>role</code> attributes.</li>
+                            <li><strong>Value States:</strong> Communicate current values of sliders, checkboxes, and status indicators using ARIA or native properties.</li>
+                            <li><strong>Live Regions:</strong> When content updates dynamically (e.g., form errors, alerts, or status updates), use <code>aria-live</code> to inform assistive tech users of the change.</li>
+                            <li><strong>Prioritization of Updates:</strong> Choose the correct <code>aria-live</code> level (<code>polite</code>, <code>assertive</code>, etc.) based on whether the information is critical, so users are not overwhelmed or interrupted unnecessarily.</li>
+                          </ul>
+                    
+                          <h3>Examples</h3>
+                          <ul>
+                            <li><strong>Error Banner:</strong> A validation error summary appears above a form and uses <code>role="alert"</code> so that the entire alert is announced to screen reader users when focus is moved to it.</li>
+                            <li><strong>Live Filter Update:</strong> A user applies a category filter on a product grid. A status line above the grid dynamically updates to say “Showing 12 results” in a <code>&lt;div aria-live="polite"&gt;</code>.</li>
+                            <li><strong>Live Status Area:</strong> A notification area uses <code>aria-live="polite"</code> to inform users of non-critical updates, such as “New message received” or “Settings saved.”</li>
+                            <li><strong>Custom Slider:</strong> A JavaScript-powered range slider uses <code>role="slider"</code> and updates the <code>aria-valuenow</code> attribute in real time to reflect the slider’s value for screen reader users.</li>
+                          </ul>
+                          <h4>Note</h4>
+                          <p>
+                            When using <code>aria-live</code> regions, make sure the element is present in the DOM before the page loads. Screen readers only detect changes in live regions that already exist in the DOM at load time. Dynamically inserting an <code>aria-live</code> region after the change occurs will not trigger an announcement.
+                          </p>
+
+
                         </div>
                       </div>
-                    </div>
+                    </div>                    
                     <!-- Accordion Item Two Designer -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingTwo">
@@ -211,7 +237,6 @@
                       <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" style="">
                         <div class="accordion-body">
                           <ul role="list">
-                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html" target="_blank">W3C - WCAG 2.1 Understanding Status Messages</a></li>
                             <li><a href="https://www.w3.org/TR/wai-aria-practices/#aria_lh_live" target="_blank">WAI-ARIA Authoring Practices - Live Regions</a></li>
                             <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions" target="_blank">MDN Web Docs - ARIA Live Regions</a></li>
                             <li><a href="https://accessibility.huit.harvard.edu/provide-notification-dynamic-changes-content" target="_blank">Harvard University Accessibility - Provide Notification of Dynamic Changes to Content</a></li>

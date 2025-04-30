@@ -45,21 +45,46 @@
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          WCAG Success Criteria
+                          WCAG Success Criteria Requirements and Examples
                         </button>
                       </h2>
-                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" role="region">
                         <div class="accordion-body">
-                          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-order" target="_blank">2.4.3 Focus Order</a> If a Web page can be navigated sequentially and the navigation sequences affect meaning or operation, focusable components receive focus in an order that preserves meaning and operability.</p>
-                          <ul role="list" class="fancy-checklist">
-                            <li>All focusable components receive focus in an order that preserves meaning and operability.</li>
-                            <li>Focus order will typically maintain a left-to-right, top-to-bottom sequence, but this is not a hard directional requirement as long as focus moves logically.</li>
-                            <li>Focus must be sent to dialogs, stay trapped within them while open, and return to the triggering element when closed.</li>
-                            <li>When moving the user's focus in response to activating a link or control, the next tab stop must move focus to the correct focusable element.</li>
-                          </ul>                          
+                          <p>
+                            <a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-order" target="_blank" rel="noopener noreferrer">2.4.3 Focus Order</a> requires that when a web page is navigated sequentially, the order of focusable elements must preserve meaning and operability. This ensures that users relying on keyboard navigation or assistive technologies experience content in a logical and predictable sequence.
+                          </p>
+                    
+                          <h3>Briefing and Intent</h3>
+                          <p>
+                            The intent of this criterion is to make sure that as users tab through the page, the focus moves in a meaningful order that reflects the structure of the content and supports its functionality. An illogical focus sequence can confuse users, cause them to miss critical controls, or create barriers to task completion—especially for users navigating via keyboard, screen reader, or switch device.
+                          </p>
+                    
+                          <h3>Benefits</h3>
+                          <ul>
+                            <li>Screen reader and keyboard-only users can move through content in a predictable, meaningful way.</li>
+                            <li>Users do not lose track of interactive elements or find themselves trapped in inaccessible areas of the page.</li>
+                            <li>Users with cognitive or visual processing disabilities are better able to understand and complete tasks when focus follows expected content structure.</li>
+                          </ul>
+                    
+                          <h3>Key Requirements</h3>
+                          <ul class="fancy-checklist">
+                            <li>Focusable elements (e.g., links, buttons, form fields) must receive focus in an order that matches the content’s intended reading and interaction flow.</li>
+                            <li>Dialogs and modals should receive focus on open, trap focus while active, and return focus to the trigger when closed.</li>
+                            <li>Custom interactions (e.g., tabs, accordions) should manage focus so that keyboard users can follow the same flow as mouse users.</li>
+                            <li>Programmatic focus shifts should be intentional, not jarring, and should not disorient the user or disrupt expected navigation.</li>
+                            <li>Visually reordered elements using CSS (like flexbox or grid) should not break the expected focus order unless meaning is preserved.</li>
+                          </ul>
+                    
+                          <h3>Examples</h3>
+                          <ul>
+                            <li><strong>Logical Page Layout:</strong> A user presses Tab and moves from the site logo to the primary navigation, then to the main call to action—following the visual flow of the page.</li>
+                            <li><strong>Modal Behavior:</strong> A keyboard user triggers a modal. Focus immediately moves to the modal header, stays within the modal while it’s open, and returns to the trigger button when it closes.</li>
+                            <li><strong>Filter Interaction:</strong> Activating a “Show filters” button sends focus into the filter panel, and closing the panel returns focus to the button.</li>
+                            <li><strong>Dynamic Content:</strong> A form dynamically inserts a new input field. That field is placed in the correct position in the DOM so that it becomes the next logical tab stop.</li>
+                          </ul>
                         </div>
                       </div>
-                    </div>
+                    </div>                    
                     <!-- Accordion Item Two Designer -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingTwo">
