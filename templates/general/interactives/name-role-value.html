@@ -45,27 +45,61 @@
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          WCAG Success Criteria Requirements
+                          WCAG Success Criteria Requirements and Examples
                         </button>
                       </h2>
-                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" role="region">
                         <div class="accordion-body">
-                          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" target="_blank" rel="noopener noreferrer">4.1.2 Name, Role, Value</a>: This success criterion ensures that all user interface components have programmatically determined names, roles, and values. These attributes must also be updated programmatically when their state or properties change. This is essential for assistive technologies like screen readers to accurately convey the purpose and status of interactive elements to users.</p>
-                          <p>The Name, Role, Value guideline focuses on ensuring that every interactive component, such as buttons, form fields, sliders, and custom widgets, has clear and accessible information. Properly labeling elements and providing their roles helps assistive technologies inform users about the function of each component. Additionally, any state changes (e.g., a checkbox becoming checked or a form input showing an error) must be communicated programmatically to keep users informed of updates.</p>
-                          <p>Common implementations include using semantic HTML elements (like <code>&lt;button&gt;</code> and <code>&lt;input&gt;</code>) or ARIA attributes such as <code>aria-label</code>, <code>aria-labelledby</code>, <code>aria-describedby</code>, and <code>role</code>. Dynamic content or custom widgets often require additional scripting to ensure these attributes are set and updated appropriately. Proper use of ARIA ensures that elements behave predictably and are accurately described by assistive technologies. For more details on ARIA, see the <a href="/templates/general/interactive/aria.html">ARIA Guide.</a></p>
-                          <p>For users relying on assistive technologies, accurate names, roles, and values are critical for understanding and interacting with web content effectively. Without these, users may face confusion or be unable to operate certain elements, leading to a significant accessibility barrier. Implementing this criterion ensures a more inclusive experience for all users, particularly those with disabilities.</p>
-                          <p><strong>Note:</strong> This guideline mainly applies to developers creating custom user interface components. Standard HTML elements like buttons, inputs, and links meet this criterion by default when used correctly, as they already provide built-in names, roles, and values.</p>
+                    
+                          <p>
+                            <a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" target="_blank" rel="noopener noreferrer">4.1.2 Name, Role, Value</a> ensures that all user interface components have programmatically determined names, roles, and values. These attributes must also be updated appropriately when the component’s state or properties change. This helps assistive technologies convey accurate information to users.
+                          </p>
+                    
+                          <h3>Briefing and Intent</h3>
+                          <p>
+                            This success criterion ensures that assistive technologies can identify interactive elements on a page and accurately convey their purpose and status to users. Custom components and dynamic widgets require special care to expose the correct name (label), role (function), and value (state or data). Without this, users relying on screen readers or alternative input methods may struggle to understand how to interact with controls or know when something has changed.
+                          </p>
+                    
+                          <h3>Benefits</h3>
+                          <ul>
+                            <li>Screen reader users receive accurate labels and context for buttons, inputs, sliders, and dynamic content.</li>
+                            <li>Users with cognitive disabilities benefit from consistent labeling and interaction cues.</li>
+                            <li>Developers using accessible markup ensure compatibility with a wide range of assistive technologies.</li>
+                          </ul>
+                    
+                          <h3>Key Requirements</h3>
+                          <ul class="fancy-checklist">
+                            <li>Each interactive component must expose an accessible name, role, and value to assistive technologies.</li>
+                            <li>Use semantic HTML whenever possible (e.g., <code>&lt;button&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;select&gt;</code>).</li>
+                            <li>For custom components, use ARIA attributes like <code>aria-label</code>, <code>aria-labelledby</code>, <code>aria-describedby</code>, and <code>role</code> to expose correct metadata.</li>
+                            <li>Update accessible attributes dynamically when content or state changes (e.g., a checkbox becomes checked or a form field shows an error).</li>
+                            <li>Ensure all roles used are valid and appropriate to the function of the component.</li>
+                          </ul>
+                    
+                          <h3>Examples</h3>
+                          <ul>
+                            <li><strong>Accessible Toggle:</strong> A custom toggle switch has <code>role="switch"</code>, <code>aria-checked="true"</code>, and <code>aria-label="Enable Notifications"</code>, allowing screen readers to announce the correct label and state.</li>
+                            <li><strong>Live Status Message:</strong> A form updates a confirmation message inside a <code>div</code> with <code>aria-live="polite"</code>, so screen readers announce it automatically.</li>
+                            <li><strong>Custom Button:</strong> A <code>&lt;div&gt;</code> styled as a button includes <code>role="button"</code>, <code>tabindex="0"</code>, and an <code>aria-label</code> to provide expected behavior and labeling.</li>
+                            <li><strong>Slider:</strong> A custom range slider includes <code>role="slider"</code>, <code>aria-valuemin</code>, <code>aria-valuemax</code>, <code>aria-valuenow</code>, and an accessible label to communicate its state and context.</li>
+                          </ul>
+                    
+                          <h3>Definitions</h3>
                           <dl>
                             <dt><strong>Name</strong></dt>
-                            <dd>The label or identifier of a user interface component. This can be a visible label (like text on a button) or an accessible name provided via attributes such as <code>aria-label</code> or <code>aria-labelledby</code>.</dd>
+                            <dd>The label or identifier of a user interface component (e.g., button text or <code>aria-label</code>).</dd>
                             <dt><strong>Role</strong></dt>
-                            <dd>The function or purpose of a user interface component, such as "button," "checkbox," or "dialog." Roles help assistive technologies convey the expected behavior of the element to users.</dd>
+                            <dd>The purpose or type of the element (e.g., button, checkbox, slider, dialog).</dd>
                             <dt><strong>Value</strong></dt>
-                            <dd>The current state or property of a user interface component, such as whether a checkbox is checked, the current value of a slider, or the text entered in an input field.</dd>
+                            <dd>The current state or data held by the element (e.g., whether a toggle is on/off, the number on a slider, or the text in an input).</dd>
                           </dl>
-                        </div>                                               
+                    
+                          <p><strong>Note:</strong> Native HTML elements like <code>&lt;button&gt;</code> and <code>&lt;input&gt;</code> meet this requirement by default. This criterion primarily applies to developers building custom interactive components that require additional ARIA markup to expose the correct structure and meaning.</p>
+                    
+                        </div>
                       </div>
                     </div>
+                    
                     <!-- Accordion Item Two Designer -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingTwo">

@@ -45,36 +45,51 @@
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          WCAG Success Criteria Requirements
+                          WCAG Success Criteria Requirements and Examples
                         </button>
                       </h2>
-                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" role="region">
                         <div class="accordion-body">
+                    
                           <p>
-                            <a href="https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html" target="_blank" rel="noopener noreferrer">
-                              4.1.3 Status Messages
-                            </a>: 
-                            This success criterion ensures that status messages are conveyed to users without requiring a change in focus. These messages must be programmatically identified, allowing assistive technologies to announce them automatically.
+                            <a href="https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html" target="_blank" rel="noopener noreferrer">4.1.3 Status Messages</a> requires that important changes in content—like form validation messages, alerts, or confirmations—are conveyed to assistive technologies without shifting focus or requiring user intervention. This ensures screen reader users and others relying on assistive technology are made aware of important updates in real time.
                           </p>
+                    
+                          <h3>Briefing and Intent</h3>
                           <p>
-                            Status messages include information like form validation errors or confirmation messages (e.g., "Form submitted successfully"). Using ARIA live regions, such as <code>aria-live</code> and <code>aria-relevant</code>, or native elements like <code>&lt;output&gt;</code>, ensures updates are announced without disrupting the user's workflow.
+                            The purpose of this success criterion is to support users who may miss visual updates to a page if those updates are not also programmatically communicated. For users who rely on screen readers, status messages must be announced automatically using ARIA live regions or native HTML elements that expose changes. These messages should not steal focus or interrupt the user's current task.
                           </p>
-                          <p>
-                            This approach provides critical updates to users, enhancing the accessibility and usability of dynamic content and forms.
-                          </p>
-                          <h3>Examples of Appropriate Uses for Status Messages</h3>
+                    
+                          <h3>Benefits</h3>
                           <ul>
-                            <li>Form submission confirmation (e.g., "Your form has been successfully submitted").</li>
-                            <li>Error messages for invalid form inputs (e.g., "Please enter a valid email address").</li>
-                            <li>Live search results or suggestions appearing dynamically.</li>
-                            <li>System notifications, such as "You have been logged out due to inactivity."</li>
-                            <li>Progress updates (e.g., "Uploading 50% completed").</li>
-                            <li>Alerts about changes in system status (e.g., "Network connection restored").</li>
+                            <li>Ensures that users with visual impairments or who use screen readers are made aware of changes in system state or form feedback.</li>
+                            <li>Supports keyboard-only users by announcing updates without requiring a change in focus or forcing navigation back to the message.</li>
+                            <li>Improves the usability of dynamic content like autocomplete fields, progress indicators, and system alerts.</li>
                           </ul>
-                          <p>For more information specific to forms status messages, please visit the <a href="https://biointeractive.github.io/a11y-annotations/templates/components/forms.html">Forms Component page</a>.</p>
-                        </div>                                                                    
+                    
+                          <h3>Key Requirements</h3>
+                          <ul class="fancy-checklist">
+                            <li>Status messages must be conveyed to screen readers without requiring focus changes or manual intervention.</li>
+                            <li>Use <code>aria-live="polite"</code> for non-critical updates and <code>role="alert"</code> or <code>aria-live="assertive"</code> for urgent information.</li>
+                            <li>Ensure that the status region exists in the DOM on page load; otherwise, updates may not be announced.</li>
+                            <li>Status messages should be concise, meaningful, and clearly describe the result of a user’s action or system change.</li>
+                            <li>Avoid announcing purely decorative content or frequent updates that may overwhelm the user.</li>
+                          </ul>
+                    
+                          <h3>Examples</h3>
+                          <ul>
+                            <li><strong>Form Confirmation:</strong> After a user submits a form, a message appears that says “Your form has been successfully submitted,” announced using <code>aria-live="polite"</code>.</li>
+                            <li><strong>Inline Error Message:</strong> An error summary or field-level message uses <code>role="alert"</code> to announce the issue when the form is submitted with invalid fields.</li>
+                            <li><strong>Live Search Suggestions:</strong> As a user types, a region updates with suggested results, and <code>aria-live="polite"</code> announces the updated results count or first suggestion.</li>
+                            <li><strong>System Alert:</strong> A banner message saying “You’ve been logged out due to inactivity” uses <code>role="alert"</code> to immediately notify the user.</li>
+                            <li><strong>Progress Update:</strong> A file upload progress bar announces “Uploading: 50% complete” using a polite live region.</li>
+                          </ul>
+                    
+                          <p>For additional examples specific to forms, please visit the <a href="https://biointeractive.github.io/a11y-annotations/templates/components/forms.html">Forms Component page</a>.</p>
+                    
+                        </div>
                       </div>
-                    </div>
+                    </div>                    
                     <!-- Accordion Item Two Designer -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingTwo">

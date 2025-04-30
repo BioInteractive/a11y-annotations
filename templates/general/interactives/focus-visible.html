@@ -48,45 +48,61 @@
                           WCAG Success Criteria Requirements and Examples
                         </button>
                       </h2>
-                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" role="region">
                         <div class="accordion-body">
                           <p>
-                            <a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html" target="_blank">2.4.7 Focus Visible</a> ensures that user interface components operable via keyboard have a visible focus indicator, so users can easily see where keyboard interactions will occur.
+                            <a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html" target="_blank" rel="noopener noreferrer">2.4.7 Focus Visible</a> ensures that all user interface components operable via keyboard have a clearly visible focus indicator. This allows users to visually identify which element is currently focused and where their interaction will take place.
                           </p>
-                          
-                          <h3>Benefits of Focus Visible</h3>
+                    
+                          <h3>Briefing and Intent</h3>
                           <p>
-                            This success criterion is crucial for keyboard-only users, including people with motor disabilities, as it allows them to visually identify which element has focus. Additionally, users with cognitive disabilities, such as attention or memory limitations, benefit by easily discovering where focus is located, reducing confusion.
+                            This success criterion exists to support keyboard users—particularly those with motor impairments, vision loss, or cognitive disabilities—by providing a consistent visual cue to track their position within the interface. Focus indicators help users stay oriented as they navigate through the page using the Tab or arrow keys.
                           </p>
-                          
-                          <h3>Examples of Focus Visibility</h3>
+                    
+                          <h3>Benefits</h3>
                           <ul>
-                            <li><strong>Text Fields:</strong> When a text field receives focus, a blinking caret appears, indicating the user can type, or the text is highlighted, showing it can be edited.</li>
-                            <li><strong>Interactive Elements:</strong> When a button or link receives focus, a visible border or outline appears around the element, signaling that it is the current focus point.</li>
+                            <li>Keyboard-only users can see where their focus is at all times without relying on a mouse.</li>
+                            <li>Users with low vision or color blindness benefit from clearly styled outlines or borders.</li>
+                            <li>Users with attention-related or memory-related disabilities are less likely to lose track of their current location.</li>
                           </ul>
+                    
+                          <h3>Key Requirements</h3>
+                          <ul class="fancy-checklist">
+                            <li>All interactive elements (buttons, links, form fields) must display a visible focus indicator when focused via keyboard.</li>
+                            <li>Do not remove focus indicators using CSS (<code>outline: none</code>) unless replaced with an accessible custom style.</li>
+                            <li>Focus indicators should be clearly visible and meet a minimum 3:1 contrast ratio against adjacent colors (<a href="https://biointeractive.github.io/a11y-annotations/templates/general/color/non-text-contrast.html">Non-Text Contrast Guide</a>).</li>
+                            <li>Custom components must support focus styling that is consistent and persistent across all browsers and states.</li>
+                          </ul>
+                    
+                          <h3>Examples</h3>
+                          <ul>
+                            <li><strong>Text Fields:</strong> When a user tabs into an input field, a visible border appears or the cursor blinks inside the text box, signaling the field is editable.</li>
+                            <li><strong>Interactive Elements:</strong> Buttons or links receive a thick outline, border, or glow effect when focused via keyboard navigation.</li>
+                          </ul>
+                    
                           <div>
-                            <p> Button with persistently visible focus style:</p>
+                            <p>Button with persistently visible focus style:</p>
                             <button type="button" class="btn btn-primary forced-focus-visible">Keyboard Focused</button>
                           </div>
-                          
+                    
                           <h3>Best Practices</h3>
                           <ul>
-                            <li><strong>Ensure High Contrast:</strong> The focus indicator should be clear and have enough contrast with the surrounding content. Avoid subtle changes that can be hard to notice, especially for users with low vision or color blindness.</li>
-                            <li><strong>Custom Focus Styles:</strong> Use CSS to enhance the focus indicator (<code>:focus</code>, <code>:focus-visible</code>) without removing it completely. Removing focus indicators entirely (<code>outline: none;</code>) can make navigation impossible for keyboard users.</li>
+                            <li><strong>Ensure High Contrast:</strong> Focus indicators should not rely on subtle color changes. Use borders, shadows, or outlines that meet color contrast standards.</li>
+                            <li><strong>Use <code>:focus-visible</code>:</strong> Prefer the <code>:focus-visible</code> pseudo-class to avoid showing outlines during mouse interaction, while preserving them for keyboard users.</li>
+                            <li><strong>Test Across Browsers:</strong> Make sure focus styles appear consistently across Chrome, Firefox, Safari, and Edge.</li>
                           </ul>
-                          
+                    
                           <h3>Focus Indicator and Non-Text Contrast Requirements</h3>
                           <p>
-                            Focus indicators must also meet non-text contrast requirements to ensure they are easily distinguishable from surrounding elements. For more information, please see: <a href="https://biointeractive.github.io/a11y-annotations/templates/general/color/non-text-contrast.html">Non-Text Contrast Guide</a>.
+                            Focus indicators must meet the same visibility and contrast expectations as other non-text interface elements. This means outlines, borders, or glows should stand out clearly from their surroundings and meet a minimum contrast ratio of 3:1.
                           </p>
-                          
+                    
                           <p>
-                            Following these guidelines will ensure that your site is accessible to all users, particularly those relying on keyboard navigation.
-                          </p>                          
-
+                            Following these practices helps ensure an inclusive navigation experience for all users, particularly those navigating by keyboard or using screen readers.
+                          </p>
                         </div>
                       </div>
-                    </div>
+                    </div>                    
                     <!-- Accordion Item Two Designer -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingTwo">

@@ -44,26 +44,55 @@
                     <!-- Accordion Item One -->
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                WCAG Success Criteria Requirements
-                            </button>
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            WCAG Success Criteria Requirements and Examples
+                          </button>
                         </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
-                            <div class="accordion-body">
-                                <p>
-                                  <a href="https://www.w3.org/WAI/WCAG21/Understanding/pointer-gestures.html" target="_blank" rel="noopener noreferrer">2.5.1 Pointer Gestures</a> 
-                                  ensures that web content requiring complex gestures for operation is accessible by providing simpler, single-point alternatives that can be operated with a single pointer (e.g., finger or mouse).
-                                </p>
-                                <ul role="list" class="fancy-checklist">
-                                  <li><strong>Simple interactions:</strong> Ensure that all multi-point or path-based gestures (e.g., pinch-to-zoom, drag-and-drop) have equivalent, single-point alternatives, such as buttons or input fields.</li> 
-                                  <li><strong>Assistive technology compatibility:</strong> Provide controls operable with standard input methods (e.g., single-tap, click) to ensure accessibility for users with limited dexterity or those relying on assistive devices.</li>
-                                  <li><strong>Avoiding gesture reliance:</strong> Do not require path-based gestures (e.g., swiping, drawing a shape) for essential functionality without offering a simpler alternative.</li>
-                                  <li><strong>Custom widgets:</strong> For custom components that involve gestures, ensure users can perform the same tasks using simple pointer-based methods or keyboard navigation.</li>
-                                </ul>
-                                <p><strong>Note:</strong> To meet this criterion, always provide a simple, single-point interaction for any complex gesture. For example, if a feature requires swiping or dragging, include an alternative like a button click or tap. Failing to meet this criterion happens when functionality is only accessible through complex gestures, such as pinch-to-zoom or path-based drawing, without providing an alternative method that can be performed with a single tap or click.</p>
-                            </div>                              
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" role="region">
+                          <div class="accordion-body">
+                      
+                            <p>
+                              <a href="https://www.w3.org/WAI/WCAG21/Understanding/pointer-gestures.html" target="_blank" rel="noopener noreferrer">2.5.1 Pointer Gestures</a> requires that content operable through complex gestures—such as multi-finger swipes, path-based gestures, or dragging—also be operable through simpler, single-pointer methods. This includes using a mouse click, single tap, or keyboard navigation to achieve the same result.
+                            </p>
+                      
+                            <h3>Briefing and Intent</h3>
+                            <p>
+                              The purpose of this criterion is to make functionality accessible to users who cannot perform complex gestures due to physical, motor, or device limitations. Path-based and multipoint gestures are often difficult or impossible to perform with assistive technologies, switch controls, screen readers, or single-point touch devices. Providing alternatives ensures equal access to core functionality.
+                            </p>
+                      
+                            <h3>Benefits</h3>
+                            <ul>
+                              <li>Ensures that users with limited dexterity or fine motor control can complete gestures through simpler means.</li>
+                              <li>Allows assistive technology users to activate components that would otherwise require gestures incompatible with their tools.</li>
+                              <li>Reduces the risk of user frustration by offering familiar controls such as buttons, links, or input fields.</li>
+                              <li>Improves mobile and touch usability in unstable environments or on smaller screens.</li>
+                            </ul>
+                      
+                            <h3>Key Requirements</h3>
+                            <ul class="fancy-checklist">
+                              <li><strong>Single-Point Equivalents:</strong> All functionality that requires complex gestures must also be operable with a single-pointer (e.g., tap, click).</li>
+                              <li><strong>No Gesture Dependence:</strong> Features like pinch-to-zoom, swiping, or drag-and-drop must offer alternative input methods such as buttons or toggles.</li>
+                              <li><strong>Custom Widgets:</strong> Interactive widgets (e.g., sliders, carousels, sortable lists) must support simple interaction patterns without requiring gestures like drawing or flicking.</li>
+                              <li><strong>Assistive Technology Support:</strong> Ensure that these alternatives can be used by keyboard users, switch users, and screen readers where appropriate.</li>
+                            </ul>
+                      
+                            <h3>Examples</h3>
+                            <ul>
+                              <li><strong>Good:</strong> A carousel allows users to swipe left or right on mobile, but also provides previous/next buttons that are focusable and clickable.</li>
+                              <li><strong>Good:</strong> A drag-and-drop interface includes an “Add” button and keyboard controls to move items between lists.</li>
+                              <li><strong>Bad:</strong> A product zoom feature only supports pinch-to-zoom without providing a zoom in/out control.</li>
+                              <li><strong>Good:</strong> A map application allows users to pan by dragging or by clicking arrow buttons on the interface.</li>
+                            </ul>
+                      
+                            <h3>Note</h3>
+                            <p>
+                              To meet this criterion, always provide a simple, single-point interaction for any complex gesture. For example, if a feature requires swiping, pinching, or dragging, users should also be able to activate the same functionality using buttons, toggles, or basic click/tap interactions.
+                            </p>
+                      
+                          </div>
                         </div>
                     </div>
+                      
                     <!-- Accordion Item Four Developer -->
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingFour">

@@ -44,25 +44,48 @@
                     <!-- Accordion Item One -->
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                WCAG Success Criteria Requirements
-                            </button>
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            WCAG Success Criteria Requirements and Examples
+                          </button>
                         </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
-                            <div class="accordion-body"> 
-                                <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation.html" target="_blank" rel="noopener noreferrer">2.5.2 Pointer Cancellation</a> ensures that functions operated by a single pointer (e.g., mouse, touch) are designed to prevent accidental activation. 
-                                It requires that at least one of the following is true for such functions:</p> 
-                                <ul role="list" class="fancy-checklist"> 
-                                    <li><strong>No Down-Event Activation:</strong> The function is not executed when the pointer is pressed down.</li> 
-                                    <li><strong>Abort or Undo Mechanism:</strong> The function completes upon releasing the pointer, and a mechanism is available to abort the 
-                                    function before completion or to undo the function after completion.</li> 
-                                    <li><strong>Up-Event Reversal:</strong> Releasing the pointer reverses any outcome of the preceding down-event.</li> 
-                                    <li><strong>Essential Activation:</strong> Completing the function on the down-event is essential, such as emulating a keyboard key press.</li> 
-                                </ul> 
-                                <p>Implementing these practices helps prevent unintended actions, enhancing accessibility for users with motor impairments or those using assistive technologies.</p> 
-                            </div>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" role="region">
+                          <div class="accordion-body">
+                      
+                            <p>
+                              <a href="https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation.html" target="_blank" rel="noopener noreferrer">2.5.2 Pointer Cancellation</a> ensures that functions triggered by a single pointer (e.g., mouse click, touch tap) do not result in accidental or irreversible actions. This success criterion requires that at least one of the following is true for all single-pointer interactions:
+                            </p>
+                      
+                            <h3>Briefing and Intent</h3>
+                            <p>
+                              The intent of this criterion is to prevent users from unintentionally triggering actions by simply touching or clicking an element. Users with motor impairments, hand tremors, or those using touch screens can easily activate something by mistake. This guideline encourages interaction patterns that give users the chance to cancel, undo, or confirm actions before they are finalized.
+                            </p>
+                      
+                            <h3>Benefits</h3>
+                            <ul>
+                              <li>Reduces unintended form submissions, navigation, or destructive actions like deletion.</li>
+                              <li>Supports users with limited dexterity or fine motor control who may struggle to interact precisely.</li>
+                              <li>Improves usability on touch screens and mobile devices where accidental taps are more common.</li>
+                            </ul>
+                      
+                            <h3>Key Requirements</h3>
+                            <ul class="fancy-checklist">
+                              <li><strong>No Down-Event Activation:</strong> The action is not triggered on the pointer down event (e.g., <code>mousedown</code> or <code>touchstart</code>).</li>
+                              <li><strong>Abort or Undo:</strong> The action occurs on release (e.g., <code>mouseup</code>) and there is a mechanism to cancel or undo it.</li>
+                              <li><strong>Up-Event Reversal:</strong> Any change made during the down event is reversible when the pointer is released.</li>
+                              <li><strong>Essential Exception:</strong> If the interaction is inherently tied to the down-event (e.g., simulating a key press), the above conditions do not apply.</li>
+                            </ul>
+                      
+                            <h3>Examples</h3>
+                            <ul>
+                              <li><strong>Good:</strong> A "Delete" button triggers a confirmation dialog on click rather than deleting the item immediately on <code>mousedown</code>.</li>
+                              <li><strong>Good:</strong> A user drags a slider, but the value is only applied when the pointer is released, allowing them to cancel mid-drag.</li>
+                              <li><strong>Bad:</strong> A submit button sends a form as soon as the user touches it, with no ability to cancel or undo the action.</li>
+                              <li><strong>Good (Essential):</strong> A virtual piano key plays a note on <code>mousedown</code> to simulate a real instrument, which is allowed because it's an essential interaction pattern.</li>
+                            </ul>
+                      
+                          </div>
                         </div>
-                    </div>                   
+                    </div>                                        
                     <!-- Accordion Item Four Developer -->
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingFour">

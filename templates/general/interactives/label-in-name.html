@@ -44,22 +44,49 @@
                     <!-- Accordion Item One -->
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                WCAG Success Criteria Requirements
-                            </button>
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            WCAG Success Criteria Requirements and Examples
+                          </button>
                         </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
-                            <div class="accordion-body">
-                                <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html" target="_blank">2.5.3 Label in Name</a> The text shown on a visible label for a user interface component should match or be part of the component's accessible name (e.g., used by screen readers).</p>
-                                <ul role="list" class="fancy-checklist">
-                                    <li><strong>Consistent labels:</strong> The accessible name and visible label of a control should match. It is required that the accessible name contain the exact text string as the text visibly labeling this content.</li> 
-                                    <li><strong>Screen reader compatibility:</strong> Make sure the label spoken by screen readers matches what sighted users see on screen.</li>
-                                    <li><strong>Reducing confusion:</strong> This alignment reduces confusion for users relying on voice commands or screen readers.</li>
-                                    <li><strong>Easy interaction:</strong> Voice command users benefit when the visual label matches the name used by assistive technologies, making commands easier to understand and follow.</li>
-                                </ul>
-                            </div>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" role="region">
+                          <div class="accordion-body">
+                      
+                            <p>
+                              <a href="https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html" target="_blank" rel="noopener noreferrer">2.5.3 Label in Name</a> requires that the visible label of a user interface component is included within the programmatically determined accessible name. This ensures consistency between what is displayed on the screen and what is announced by assistive technologies like screen readers or used by voice recognition tools.
+                            </p>
+                      
+                            <h3>Briefing and Intent</h3>
+                            <p>
+                              The intent of this criterion is to improve consistency and predictability for users who rely on voice commands or screen readers. When the visible text of a button or form field does not match the accessible name, users may hear something different from what they see or may be unable to activate components using voice input. Aligning the visible label and accessible name avoids this confusion.
+                            </p>
+                      
+                            <h3>Benefits</h3>
+                            <ul>
+                              <li>Screen reader users hear labels that match the visual content on screen.</li>
+                              <li>Voice control users can activate buttons and inputs more easily by speaking what they see.</li>
+                              <li>Reduces cognitive load by eliminating mismatches between visual and auditory experiences.</li>
+                              <li>Improves consistency across devices, browsers, and assistive technologies.</li>
+                            </ul>
+                      
+                            <h3>Key Requirements</h3>
+                            <ul class="fancy-checklist">
+                              <li>The visible label of a control must be included in the accessible name exposed to assistive technology.</li>
+                              <li>Ensure screen readers announce the same text users see visually on the component.</li>
+                              <li>Do not override the visible label with an unrelated <code>aria-label</code> or <code>aria-labelledby</code> value.</li>
+                              <li>Use native HTML elements whenever possible to avoid labeling inconsistencies.</li>
+                            </ul>
+                      
+                            <h3>Examples</h3>
+                            <ul>
+                              <li><strong>Good:</strong> A button that says “Start Quiz” on screen also has an accessible name of “Start Quiz.”</li>
+                              <li><strong>Bad:</strong> A button that says “Submit” on screen has an <code>aria-label="Send Form"</code>, which confuses screen reader and voice control users.</li>
+                              <li><strong>Good:</strong> A link labeled “Download Report” uses <code>aria-labelledby</code> to reference visible text that says “Download Report.”</li>
+                              <li><strong>Bad:</strong> A button visually labeled “Continue” has no accessible name or an unrelated one like <code>aria-label="Next Step"</code>.</li>
+                            </ul>
+                      
+                          </div>
                         </div>
-                    </div>
+                    </div>                      
                     <!-- Accordion Item Two Designer -->
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwo">

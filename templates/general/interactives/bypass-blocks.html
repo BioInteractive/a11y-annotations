@@ -45,18 +45,42 @@
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          WCAG Success Criteria Requirements
+                          WCAG Success Criteria Requirements and Examples
                         </button>
                       </h2>
-                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" role="region">
                         <div class="accordion-body">
-                          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html" target="_blank" rel="noopener noreferrer">2.4.1 Bypass Blocks</a>: A mechanism is available to bypass blocks of content that are repeated on multiple web pages. This requirement is essential for improving navigation for users who depend on screen readers or keyboard navigation by allowing them to directly access the primary content without navigating through repetitive sections.</p>                          
-                          <p>The Bypass Blocks guideline addresses the need for efficient navigation options to help users avoid repetitive elements. These can include main navigation menus, footer links, carousels, or sidebars that may otherwise be cumbersome to navigate through on every page. By enabling a skip link or similar mechanism, users can bypass these repetitive blocks and immediately focus on the content they need.</p>                       
-                          <p>Common implementations include a "skip to main content" link positioned as the first focusable element on the page, often visually hidden until it receives keyboard focus. Additionally, HTML5 landmarks (like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code>) and <code>role</code> attributes (such as <code>role="main"</code> or <code>role="navigation"</code>) help assistive technologies identify key sections of a page, further supporting navigation and enhancing understanding of page structure. For more information visit <a href="/templates/general/structure/landmarks.html">Landmarks.</a></p>                        
-                          <p> For users who rely on keyboard navigation or screen readers, the ability to bypass repetitive blocks of content is crucial for reducing the time and effort required to locate main content. Without these mechanisms, users may need to tab through multiple elements just to reach the core information, leading to a frustrating experience. Implementing bypass blocks is a key step in creating a more accessible web experience that meets the needs of all users, especially those with disabilities.</p>                       
-                        </div>                        
+                          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html" target="_blank" rel="noopener noreferrer">2.4.1 Bypass Blocks</a> requires that a mechanism be available to allow users to bypass repeated blocks of content. This improves navigation for users who rely on keyboards or screen readers by helping them get directly to the main content without having to tab through the same headers, menus, or sidebars on every page.</p>
+                    
+                          <h3>Briefing and Intent</h3>
+                          <p>The purpose of this requirement is to make repeated elements—such as navigation menus, carousels, and banners—less of a barrier to users trying to reach the primary content on a page. This benefits keyboard and assistive tech users by reducing keystrokes and offering a more efficient, less frustrating navigation experience.</p>
+                    
+                          <h3>Benefits</h3>
+                          <p>This is especially helpful for:</p>
+                          <ul>
+                            <li>Screen reader users navigating linearly through content.</li>
+                            <li>Keyboard-only users who would otherwise need to tab through large blocks of links repeatedly.</li>
+                            <li>Users with cognitive disabilities who benefit from faster, more predictable page access.</li>
+                          </ul>
+                    
+                          <h3>Key Requirements</h3>
+                          <ul class="fancy-checklist">
+                            <li>Provide a skip link (e.g., “Skip to main content”) as the first focusable element on the page.</li>
+                            <li>Ensure the skip link moves focus directly to the primary content container.</li>
+                            <li>Use semantic HTML landmarks such as <code>&lt;main&gt;</code>, <code>&lt;nav&gt;</code>, and <code>&lt;footer&gt;</code> to support assistive tech navigation.</li>
+                            <li>When the skip link is focused, it should be clearly visible with a high-contrast style that meets WCAG 2.1 AA color contrast requirements.</li>
+                            <li>Ensure the target container is programmatically focusable (typically using <code>tabindex="-1"</code>).</li>
+                          </ul>
+                    
+                          <h3>Examples</h3>
+                          <ul>
+                            <li><strong>Standard Skip Link:</strong> A link labeled “Skip to main content” appears at the top of the page and becomes visible when focused. Pressing “Enter” sends focus to the <code>&lt;main&gt;</code> element.</li>
+                            <li><strong>Semantic Navigation Structure:</strong> The page uses <code>&lt;nav&gt;</code> for the main navigation and <code>&lt;main&gt;</code> for the core content, allowing screen reader users to quickly jump between regions.</li>
+                            <li><strong>Carousel Placement:</strong> A skip link is provided before a homepage carousel that appears on every page, allowing users to bypass it and reach the page content more quickly.</li>
+                          </ul>
+                        </div>
                       </div>
-                    </div>
+                    </div>                    
                     <!-- Accordion Item Two Designer -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingTwo">
@@ -190,31 +214,31 @@
                         </div>                        
                         </div>
                       </div>
+                </div>
+                <!-- Accordion Item Five -->
+                <div class="accordion-item">
+                  <h2 class="accordion-item" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                    Resources
+                    </button>
+                  </h2>
+                  <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" style="">
+                    <div class="accordion-body">
+                      <ul role="list">
+                        <li><a href="https://webaim.org/techniques/skipnav/" target="_blank" rel="noopener noreferrer">WebAIM - Skip Navigation Links</a></li>
+                        <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html" target="_blank" rel="noopener noreferrer">W3C - WCAG 2.1 Understanding Bypass Blocks</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Keyboard" target="_blank" rel="noopener noreferrer">MDN Web Docs - Understanding Bypass Mechanisms for Accessibility</a></li>
+                        <li><a href="https://a11yproject.com/posts/skip-link/" target="_blank" rel="noopener noreferrer">A11y Project - Skip Link Guide</a></li>
+                        <li><a href="https://css-tricks.com/how-to-create-a-skip-to-content-link/" target="_blank" rel="noopener noreferrer">CSS-Tricks - How To Create a Skip To Content Link</a></li>
+                      </ul>                                                                                                      
                     </div>
-                    <!-- Accordion Item Five -->
-                    <div class="accordion-item">
-                      <h2 class="accordion-item" id="headingFive">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-                        Resources
-                        </button>
-                      </h2>
-                      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" style="">
-                        <div class="accordion-body">
-                          <ul role="list">
-                            <li><a href="https://webaim.org/techniques/skipnav/" target="_blank" rel="noopener noreferrer">WebAIM - Skip Navigation Links</a></li>
-                            <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html" target="_blank" rel="noopener noreferrer">W3C - WCAG 2.1 Understanding Bypass Blocks</a></li>
-                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Keyboard" target="_blank" rel="noopener noreferrer">MDN Web Docs - Understanding Bypass Mechanisms for Accessibility</a></li>
-                            <li><a href="https://a11yproject.com/posts/skip-link/" target="_blank" rel="noopener noreferrer">A11y Project - Skip Link Guide</a></li>
-                            <li><a href="https://css-tricks.com/how-to-create-a-skip-to-content-link/" target="_blank" rel="noopener noreferrer">CSS-Tricks - How To Create a Skip To Content Link</a></li>
-                          </ul>                                                                                                      
-                        </div>
-                      </div>
-                    </div>                    
                   </div>
-                  <!-- End Accordion -->
-                </main>
+                </div>                    
               </div>
-            </div>
+              <!-- End Accordion -->
+            </main>
+          </div>
+        </div>
 
     <!-- Script links and jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>

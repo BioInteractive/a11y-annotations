@@ -52,40 +52,35 @@
                 <!-- Project Title -->
                 <div class="mb-3">
                     <label for="project-title" class="form-label">Project Title *</label>
-                    <input type="text" class="form-control" id="project-title" name="project-title" aria-describedby="project-title-help" required>
-                    <div id="project-title-help" class="form-text">Enter the title of the project.</div>
+                    <input type="text" class="form-control" id="project-title" name="project-title" required>
                     <span class="invalid-feedback" style="display:none; color: #BA0B1A;" id="project-title-error" role="alert">Project title is required</span>
                 </div>
             
                 <!-- Role -->
                 <div class="mb-3">
-                    <label for="role" class="form-label">Role *</label>
-                    <input type="text" class="form-control" id="role" name="role" aria-describedby="role-help" required>
-                    <div id="role-help" class="form-text">Specify your role in the project.</div>
+                    <label for="role" class="form-label">Your Role *</label>
+                    <input type="text" class="form-control" id="role" name="role" required>
                     <span class="invalid-feedback" style="display:none; color: #BA0B1A;" id="role-error" role="alert">Role is required</span>
                 </div>
             
                 <!-- Person's Name with Autocomplete -->
                 <div class="mb-3">
                     <label for="name" class="form-label">Your Name *</label>
-                    <input type="text" class="form-control" id="name" name="name" aria-describedby="name-help" autocomplete="name" required>
-                    <div id="name-help" class="form-text">Enter your full name.</div>
+                    <input type="text" class="form-control" id="name" name="name" autocomplete="name" required>
                     <span class="invalid-feedback" style="display:none; color: #BA0B1A;" id="name-error" role="alert">Name is required</span>
                 </div>
             
                 <!-- Date -->
                 <div class="mb-3">
-                    <label for="date" class="form-label">Date *</label>
-                    <input type="date" class="form-control" id="date" name="date" aria-describedby="date-help" required>
-                    <div id="date-help" class="form-text">Select the current date or project start date.</div>
+                    <label for="date" class="form-label">Project Start Date *</label>
+                    <input type="date" class="form-control" id="date" name="date" required>
                     <span class="invalid-feedback" style="display:none; color: #BA0B1A;" id="date-error" role="alert">Date is required</span>
                 </div>
                 
                 <!-- Comments (Optional) -->
                 <div class="mb-3">
                     <label for="comments" class="form-label">Comments (Optional)</label>
-                    <textarea class="form-control" id="comments" name="comments" aria-describedby="comments-help" rows="4"></textarea>
-                    <div id="comments-help" class="form-text">Add any additional comments about the project (optional).</div>
+                    <textarea class="form-control" id="comments" name="comments" rows="4"></textarea>
                 </div>
             
                 <!-- Save Button -->
@@ -101,7 +96,7 @@
                     <li class="list-group-item"><strong>Project Title:</strong> <span id="display-project-title"></span></li>
                     <li class="list-group-item"><strong>Role:</strong> <span id="display-role"></span></li>
                     <li class="list-group-item"><strong>Your Name:</strong> <span id="display-name"></span></li>
-                    <li class="list-group-item"><strong>Date:</strong> <span id="display-date"></span></li>
+                    <li class="list-group-item"><strong>Project Start Date:</strong> <span id="display-date"></span></li>
                     <li class="list-group-item"><strong>Comments:</strong> <span id="display-comments"></span></li>
                 </ul>
                 </div>
