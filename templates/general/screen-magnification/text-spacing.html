@@ -44,22 +44,54 @@
                       <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
                           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            WCAG Success Criteria 
+                            WCAG Success Criteria Requirements and Examples
                           </button>
                         </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" role="region">
                           <div class="accordion-body">
-                            <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html" target="_blank" rel="noopener noreferrer">1.4.12 Text Spacing</a>
-                              no loss of content or functionality occurs by setting all of the following and by changing no other style property:</p>
-                            <ul role="list" class="fancy-checklist">
-                              <li>Line height (line spacing) to at least 1.5 times the font size;</li>
-                              <li>Spacing following paragraphs to at least 2 times the font size;</li>
-                              <li>Letter spacing (tracking) to at least 0.12 times the font size;</li>
-                              <li>Word spacing to at least 0.16 times the font size.</li>
+
+                            <p>
+                              <a href="https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html" target="_blank" rel="noopener noreferrer">1.4.12 Text Spacing</a> requires that users can override spacing styles—such as line height, paragraph spacing, letter spacing, and word spacing—without loss of content or functionality. This helps ensure content remains readable and accessible when users adjust their typography settings.
+                            </p>
+
+                            <h3>Briefing and Intent</h3>
+                            <p>
+                              The intent of this criterion is to ensure users can apply custom text spacing without breaking the layout or usability of content. Many users with dyslexia, low vision, or cognitive disabilities rely on custom styles to improve readability. Web content must remain fully usable when the following spacing changes are applied through user stylesheets or browser extensions.
+                            </p>
+
+                            <h3>Benefits</h3>
+                            <ul>
+                              <li>Improves legibility for users with dyslexia and other cognitive disabilities who benefit from increased spacing.</li>
+                              <li>Supports low-vision users who need to customize text appearance without losing access to functionality.</li>
+                              <li>Prevents content clipping, overlap, and layout breakage when spacing is adjusted.</li>
                             </ul>
+
+                            <h3>Key Requirements</h3>
+                            <ul class="fancy-checklist">
+                              <li>Content must remain readable and functional when users apply the following custom styles:</li>
+                              <ul>
+                                <li>Line height set to at least <strong>1.5x</strong> the font size</li>
+                                <li>Paragraph spacing set to at least <strong>2x</strong> the font size</li>
+                                <li>Letter spacing set to at least <strong>0.12x</strong> the font size</li>
+                                <li>Word spacing set to at least <strong>0.16x</strong> the font size</li>
+                              </ul>
+                              <li>These changes must be supported without requiring any other style changes.</li>
+                              <li>No content should be lost, cut off, or hidden when these spacing overrides are applied.</li>
+                              <li>Interactive elements must remain operable and not shift unexpectedly when spacing is adjusted.</li>
+                            </ul>
+
+                            <h3>Examples</h3>
+                            <ul>
+                              <li><strong>Good:</strong> A blog post reflows cleanly when a user applies a browser extension that increases line height and word spacing.</li>
+                              <li><strong>Bad:</strong> A navigation menu breaks and overlaps other text when letter spacing is increased via user stylesheet.</li>
+                              <li><strong>Good:</strong> Paragraph spacing is defined using <code>em</code> units, allowing it to scale predictably when users zoom or change font size.</li>
+                              <li><strong>Bad:</strong> Text content is clipped or hidden by container overflow when line height is set to 1.5x.</li>
+                            </ul>
+
                           </div>
                         </div>
                       </div>
+
                       <!-- Accordion Item Two Designer -->
                       <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwo">
