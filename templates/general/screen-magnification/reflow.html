@@ -44,18 +44,46 @@
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          WCAG Success Criteria
+                          WCAG Success Criteria Requirements and Examples
                         </button>
                       </h2>
-                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" role="region">
                         <div class="accordion-body">
-                          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/reflow.html" target="_blank" rel="noopener noreferrer">1.4.10 Reflow</a>
-                            Content can be presented without loss of information or functionality, and without requiring scrolling in two dimensions for:</p>
-                          <ul role="list" class="fancy-checklist">
-                            <li>Vertical scrolling content at a width equivalent to 320 CSS pixels;</li>
-                            <li>Horizontal scrolling content at a height equivalent to 256 CSS pixels;</li>
-                            <li>Except for parts of the content which require two-dimensional layout for usage or meaning</li>
-                        </ul>
+
+                          <p>
+                            <a href="https://www.w3.org/WAI/WCAG21/Understanding/reflow.html" target="_blank" rel="noopener noreferrer">1.4.10 Reflow</a> requires that content can be presented without loss of information or functionality, and without requiring users to scroll in two dimensions (both horizontally and vertically), except for elements that inherently require two-dimensional layout.
+                          </p>
+
+                          <h3>Briefing and Intent</h3>
+                          <p>
+                            This success criterion ensures that users can zoom in, resize text, or use magnification tools without breaking layout or functionality. Reflow supports people with low vision, cognitive challenges, or those using mobile devices by allowing content to adapt responsively to smaller screens or high zoom settings. Content must remain readable, operable, and not force users to scroll side-to-side to access linear content.
+                          </p>
+
+                          <h3>Benefits</h3>
+                          <ul>
+                            <li>Supports low-vision users who rely on browser zoom or screen magnification software.</li>
+                            <li>Improves mobile usability by ensuring content adapts to narrow viewports.</li>
+                            <li>Reduces cognitive load by preserving a linear content flow during zoom.</li>
+                            <li>Enhances compatibility with assistive technologies that rely on responsive resizing.</li>
+                          </ul>
+
+                          <h3>Key Requirements</h3>
+                          <ul class="fancy-checklist">
+                            <li>Content must support vertical scrolling at a viewport width of <strong>320 CSS pixels</strong> without requiring horizontal scrolling.</li>
+                            <li>Content must support horizontal scrolling at a height of <strong>256 CSS pixels</strong> when necessary (e.g., mobile landscape orientation).</li>
+                            <li>Ensure layout reflows meaningfully at zoom levels up to 400% without clipping, overlapping, or losing functionality.</li>
+                            <li>Scrolling in both directions is permitted only for elements where two-dimensional layout is essential (e.g., maps, charts, tables).</li>
+                            <li>Use relative units (e.g., <code>em</code>, <code>rem</code>, percentages) for layout and typography instead of fixed pixel values where possible.</li>
+                          </ul>
+
+                          <h3>Examples</h3>
+                          <ul>
+                            <li><strong>Good:</strong> A news article layout adjusts to a single column when zoomed to 400%, allowing vertical scroll only and no content is cut off.</li>
+                            <li><strong>Good:</strong> A data table uses a horizontal scrollbar but allows the rest of the page to reflow and remain vertically scrollable.</li>
+                            <li><strong>Bad:</strong> A fixed-width layout causes text and buttons to overflow the screen at 200% zoom, requiring horizontal scrolling to read sentences.</li>
+                            <li><strong>Good:</strong> A dashboard with a chart allows both scroll directions, as the chart's layout is inherently two-dimensional and zoom-insensitive.</li>
+                          </ul>
+
                         </div>
                       </div>
                     </div>

@@ -43,24 +43,51 @@
                 <div class="accordion" id="accordionOpen">
                     <!-- Accordion Item One -->
                     <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          WCAG Success Criteria
-                        </button>
-                      </h2>
-                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
-                        <div class="accordion-body">
-                          <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html" target="_blank" rel="noopener noreferrer">1.4.4 Resize Text</a>
-                            Except for captions and images of text, text can be resized without assistive technology up to 200 percent without loss of content or functionality.</p>
-                          <ul role="list" class="fancy-checklist">
-                            <li><strong>Text Resize:</strong> Users must be able to resize text up to 200 percent.</li>
-                            <li><strong>Content Availability:</strong> All meaningful content must remain available and not be obscured or cut off due to resizing.</li>
-                            <li><strong>Functionality:</strong> The functionality of the website should not be compromised by the resizing of text.</li>
-                            <li><strong>Responsive Design:</strong> Web design should be responsive to accommodate text scaling while preserving content and functionality.</li>
-                        </ul>
+                        <h2 class="accordion-header" id="headingOne">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            WCAG Success Criteria Requirements and Examples
+                          </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" role="region">
+                          <div class="accordion-body">
+
+                            <p>
+                              <a href="https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html" target="_blank" rel="noopener noreferrer">1.4.4 Resize Text</a> requires that users be able to resize text up to 200% of its original size without requiring assistive technology, and without loss of content or functionality. This applies to all user interface text except for captions and images of text.
+                            </p>
+
+                            <h3>Briefing and Intent</h3>
+                            <p>
+                              The intent of this criterion is to ensure that users with low vision can comfortably read content without needing to rely on screen magnification tools. Users should be able to scale text using native browser settings (e.g., Ctrl + or Cmd +) or system font preferences, and still access all content and interactions without text clipping, overlap, or broken layout.
+                            </p>
+
+                            <h3>Benefits</h3>
+                            <ul>
+                              <li>Supports users with low vision or visual fatigue by allowing them to increase text size without breaking the layout.</li>
+                              <li>Improves reading comfort and accessibility across a wider range of screen sizes and resolutions.</li>
+                              <li>Promotes responsive and scalable content design that adapts to user needs.</li>
+                            </ul>
+
+                            <h3>Key Requirements</h3>
+                            <ul class="fancy-checklist">
+                              <li><strong>Text Resize:</strong> Users must be able to resize all readable text up to 200% using browser or system-level settings without assistive technology.</li>
+                              <li><strong>No Content Loss:</strong> Content must remain available—text should not be cut off, hidden, or overlapped by other elements.</li>
+                              <li><strong>No Functionality Loss:</strong> All interactive features must remain usable when text is resized.</li>
+                              <li><strong>Layout Support:</strong> Responsive layouts and scalable units (e.g., <code>em</code>, <code>rem</code>, percentages) should be used instead of fixed pixel values for text sizing.</li>
+                              <li><strong>Captions & Images of Text:</strong> This criterion does not apply to captions or text that is part of an image, though alternatives should still be considered where possible.</li>
+                            </ul>
+
+                            <h3>Examples</h3>
+                            <ul>
+                              <li><strong>Good:</strong> A user increases text size to 200% in their browser settings, and all content reflows naturally without overlap or horizontal scrolling.</li>
+                              <li><strong>Bad:</strong> Enlarging text causes button labels to overflow outside their containers, obscuring the meaning and breaking functionality.</li>
+                              <li><strong>Good:</strong> A paragraph scales smoothly using <code>em</code> units, maintaining line height and spacing across different zoom levels.</li>
+                              <li><strong>Bad:</strong> A form field label disappears or becomes unreadable when text is enlarged, requiring a mouse hover to be revealed.</li>
+                            </ul>
+
+                          </div>
                         </div>
                       </div>
-                    </div>
+
                      <!-- Accordion Item Two Designer -->
                      <div class="accordion-item">
                       <h2 class="accordion-header" id="headingTwo">
