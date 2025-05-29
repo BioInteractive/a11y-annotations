@@ -44,11 +44,14 @@
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingZero">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseZero" aria-expanded="true" aria-controls="collapseZero">
-                          WCAG Success Criteria                       
+                          WCAG Success Criteria Requirements and Examples                      
                         </button>
                       </h2>
                       <div id="collapseZero" class="accordion-collapse collapse show" aria-labelledby="headingZero" style=""> 
                         <div class="accordion-body">
+                          <p>Forms are interactive components that collect user input through fields such as text boxes, checkboxes, radio buttons, and dropdowns. They are used for everything from search and login to data collection and checkout. Accessible forms ensure that all users can understand, complete, and submit them successfully—regardless of device or ability.</p>
+                          <p>Below is a list of WCAG success criteria requirements and accessibility considerations:</p>
+
                           <ul class="fancy-checklist">
                             <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships" target="_blank" rel="noopener noreferrer">1.3.1 Info and Relationships</a> Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text, ensuring that form fields and their labels are properly associated.</li>
                             <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html" target="_blank" rel="noopener noreferrer">1.3.5 Identify Input Purpose</a> The purpose of each input field collecting information about the user can be programmatically determined when the field serves a common purpose.</li>
@@ -62,20 +65,6 @@
                             <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/status-messages" target="_blank" rel="noopener noreferrer">4.1.3 Status Messages</a> Status messages can be programmatically determined through role or properties such that they can be presented to the user by assistive technologies without receiving focus, especially important for conveying success or error messages after form submission.</li>
                           </ul>  
                           <p>For Form Group elements such as radio button groups or checkboxes please visit the <a href="/a11y-annotations/templates/components/form-group.html">Form Group</a> page.</p>                        
-                        </div>                        
-                      </div>
-                    </div>
-                    <!-- Accordion with Example of Accessible Form  -->
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                          Example of Accessible Form
-                        </button>
-                      </h2>
-                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" style="">
-
-
-                        <div class="accordion-body">
                           <h3>User Login Form Example</h3>
                           <p>Fields with an asterisk (*) are required.</p>
                           <form class="example-form-one" method="post" id="form" novalidate>
@@ -108,12 +97,11 @@
                           <div class="alert alert-success success-msg" style="display: none;" tabindex="-1">                            
                             <p><i class="bi bi-check-circle-fill" aria-hidden="true" style="color: rgb(6, 104, 6);"></i> 
                               Success you entered valid data and the form was 'submitted'.</p>
-                          </div>              
-                        </div>
-
-
+                          </div>    
+                        </div>                        
                       </div>
                     </div>
+
                     <!-- Accordion Item Two Designer-->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingTwo">

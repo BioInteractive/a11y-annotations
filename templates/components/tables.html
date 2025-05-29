@@ -50,17 +50,18 @@
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                         <div class="accordion-body">
-                          <p>
-                            <a href="https://www.w3.org/TR/WCAG21/#info-and-relationships" target="_blank" rel="noopener noreferrer">1.3.1 Info and Relationships</a>: Tables must present information in a way that preserves relationships between data cells and their headers. 
-                            This ensures that the structure and relationships are programmatically determined or available in text.
-                          </p>
-                          <p>
-                            Proper use of table elements like <code>&lt;th&gt;</code> for headers and <code>&lt;td&gt;</code> for data cells. For more complex tables, explicit associations 
-                            may be needed using scope, id, and headers attributes.
-                          </p>
-                          <p>
-                            Tables must have accessible names with <code>&lt;caption&gt;</code> tags, an <code>aria-label</code> or an <code>aria-labelledby</code> equal to the ID of the labelling text.
-                          </p>
+                          <p>A table is used to present data in a structured grid of rows and columns, often with headers that describe the content of each column or row. Commonly used for schedules, financial data, and comparison charts, tables must include semantic markup and clear associations between headers and cells to ensure accessibility for screen reader users.</p>
+                          <p>Below is a list of WCAG success criteria requirements and accessibility considerations:</p>
+
+                          <ul class="fancy-checklist">
+                            <li><strong>Info and Relationships:</strong> Tables must present information in a way that preserves relationships between data cells and their headers.
+                              <a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html" target="_blank">1.3.1 Info and Relationships</a>
+                            </li>
+                            <li><strong>Semantic Markup:</strong> Use proper table structure including <code>&lt;table&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;th&gt;</code>, and <code>&lt;td&gt;</code> to establish clear relationships between rows and columns.</li>
+                            <li><strong>Header Associations:</strong> In complex tables, use <code>scope</code>, <code>id</code>, and <code>headers</code> attributes to explicitly associate data cells with the correct headers.</li>
+                            <li><strong>Accessible Name:</strong> Tables should have an accessible name provided using a <code>&lt;caption&gt;</code>, <code>aria-label</code>, or <code>aria-labelledby</code> referencing an associated heading.</li>
+                            <li><strong>Consistent Layout:</strong> Avoid using tables purely for layout. If a table is used for layout purposes, ensure it does not disrupt reading or navigation order for assistive technologies.</li>
+                          </ul>
                           <h3>Example One: Basic Table with Row Headers</h3>
                           <table class="styled-table">
                             <caption>Example of a simple table with row headers</caption>
