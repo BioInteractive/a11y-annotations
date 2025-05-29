@@ -60,22 +60,34 @@
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" style="">
                         <div class="accordion-body">
-                        <p>
-                          <a href="https://www.w3.org/TR/WCAG21/#info-and-relationships" target="_blank" rel="noopener noreferrer">1.3.1 Info and Relationships</a>: Information, structure, and relationships conveyed through presentation can be programmatically determined 
-                          or are available in text.
-                        </p>
-                        <p>
-                          A link is an interactive user interface element, typically created using the HTML <code>&lt;a&gt;</code>. An (anchor) link is a clickable element that allows
-                           users to navigate to another webpage, resource, or location by specifying a URL, enhancing the interconnectedness of web content.
-                        </p>
-                        <p>
-                          <a href="https://www.w3.org/TR/WCAG22/#link-purpose-in-context" target="_blank" rel="noopener noreferrer">2.4.4 Link Purpose</a>: The purpose of each link can be determined from the link text alone or from the link text together with its programmatically 
-                          determined link context, except where the purpose of the link would be ambiguous to users in general.
-                        </p>
-                        <p>
-                          Links must be preceivable as links, must have an accessible name for link purpose understand where links lead without relying solely on additional context or non-descriptive text.
-                         Links must also be in focus order and must function equally for all users.
-                        </p>
+                          <p>A link is an interactive element that allows users to navigate to another page, a different section of the same page, or an external resource. Commonly created using the <code>&lt;a&gt;</code> tag, links are essential to how users explore and interact with web content. To be accessible, links must be clearly identifiable, convey purpose, and be operable through a variety of input methods.</p>
+                          <p>Below is a list of WCAG success criteria requirements and accessibility considerations:</p>
+
+                          <ul class="fancy-checklist">
+                            <li><strong>Info and Relationships:</strong> Ensure the link's structure and surrounding relationships are programmatically determinable.
+                              <a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html" target="_blank">1.3.1 Info and Relationships</a>
+                            </li>
+                            <li><strong>Link Purpose (In Context):</strong> The link’s purpose should be clear from the link text alone or with its programmatic context.
+                              <a href="https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html" target="_blank">2.4.4 Link Purpose</a>
+                            </li>
+                            <li><strong>Use of Color:</strong> When links are in blocks of text, use more than just color—like underlining or bold styling—to show they are interactive.
+                              <a href="https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html" target="_blank">1.4.1 Use of Color</a>
+                            </li>
+                            <li><strong>Identifiable as Interactive:</strong> Ensure links are visually styled to indicate interactivity (e.g., underlines, hover changes, or iconography).
+                            </li>
+                            <li><strong>Name, Role, Value:</strong> Every link should have a meaningful accessible name for screen reader users.
+                              <a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" target="_blank">4.1.2 Name, Role, Value</a>
+                            </li>
+                            <li><strong>Keyboard Navigation:</strong> Include all links in the tab order and ensure they are operable using keyboard controls.
+                              <a href="https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html" target="_blank">2.1.1 Keyboard</a>
+                            </li>
+                            <li><strong>Focus Visibility:</strong> Provide a clearly visible focus indicator for all links.
+                              <a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html" target="_blank">2.4.7 Focus Visible</a>
+                            </li>
+                            <li><strong>Consistent Functionality:</strong> Links should behave consistently across contexts and input methods.
+                            </li>
+                                <li><strong>External Targets:</strong> If a link opens in a new tab or window, clearly indicate this in the visible link text or with an accessible label (e.g., visually hidden / sr-only text) so users are not surprised by the change in context.</li>
+                          </ul>
                         </div>
                       </div>
                     </div>

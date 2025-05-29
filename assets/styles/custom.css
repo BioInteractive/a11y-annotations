@@ -950,39 +950,101 @@ p.dev-tag {
   scroll-behavior: smooth; /* Enable smooth scrolling */
 }
 
-/* Styles for Preformatted Code Snippets */
-pre {
-  background-color: #2d2d2d; /* Dark background for focus on code */
-  border: 1px solid #444; /* Subtle border */
-  border-radius: 8px; /* Modern rounded corners */
-  padding: 1rem; /* Comfortable padding */
-  overflow-x: auto; /* Horizontal scrolling */
-  font-family: 'Fira Code', 'Courier New', Courier, monospace; /* Monospace font */
-  font-size: 1rem; /* Accessible size */
-  line-height: 1.6; /* Relaxed spacing */
-  color: #f8f8f2; /* Light text for contrast */
-  margin-bottom: 1.5rem; /* Spacing below snippets */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+/* Container Styling for Preformatted Code */
+pre[class*="language-"] {
+  background: #1e1f26; /* Soft dark navy */
+  color: #f8f8f2;
+  font-family: 'Fira Code', 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  overflow-x: auto;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  border: 1px solid #333;
 }
 
-/* Code Styling (Only Inside Pre) */
-pre code {
-  color: var(--accent-green); /* Bright green for text */
-  padding: 0.2rem 0.4rem; /* Inline padding */
-  border-radius: 4px; /* Rounded corners */
-  font-family: inherit; /* Inherit font from pre */
-  font-size: 0.95rem; /* Slightly smaller size */
+/* Prism-style syntax coloring */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #6a737d;
+  font-style: italic;
 }
 
-/* Pre Hover Effect */
-pre:hover {
-  background-color: #383838; /* Slightly lighter on hover */
-  border-color: var(--secondary-green); /* Enhanced contrast on hover */
+.token.punctuation {
+  color: #f8f8f2;
 }
 
-/* Accessibility Enhancements */
+.token.namespace {
+  opacity: 0.7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #ff79c6; /* Pinkish-purple */
+}
+
+.token.boolean,
+.token.number {
+  color: #bd93f9; /* Purple */
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #a6e22e; /* Light green */
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: #f1fa8c; /* Yellow */
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #50fa7b; /* Mint green */
+}
+
+.token.function {
+  color: #66d9ef; /* Aqua */
+}
+
+.token.regex,
+.token.important {
+  color: #fd971f; /* Orange */
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+
+/* Line Numbers (Optional if using plugin) */
+pre[class*="language-"].line-numbers {
+  padding-left: 3.8em;
+  position: relative;
+}
+
+/* Accessibility Focus */
 pre:focus-within {
-  outline: 2px solid #8be9fd; /* Visible focus outline */
+  outline: 2px solid #8be9fd;
   outline-offset: 4px;
 }
 
