@@ -246,8 +246,8 @@
                             <li><strong>Consistency of Design:</strong> Assess the consistency in the design of all accordion components throughout the project to ensure a uniform user experience.</li>
                             <li><strong>Heading Structure:</strong> Review if the accordion's design suggests a proper heading structure for the content within each collapsible panel.</li>
                             <li><strong>Legibility:</strong> Confirm that text within buttons and panels is legible, with adequate font size and color contrast.</li>
-                            <li><strong>Text Contrast</strong>Button text must maintain a 4.5:1 minimum contrast with the page background in all states.</li>
-                            <li><strong>Icon Contrast</strong>The icon is meaningful visually and must maintain a minimum 3:1 contrast ratio in all states</li>
+                            <li><strong>Text Contrast:</strong> Button text must maintain a 4.5:1 minimum contrast with the page background in all states.</li>
+                            <li><strong>Icon Contrast:</strong> The icon is meaningful visually and must maintain a minimum 3:1 contrast ratio in all states</li>
                           </ul>                     
                           <div class="d-inline-block border border-dark p-2 rounded">
                             <div class="d-flex flex-row">
@@ -294,35 +294,8 @@
                       <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
                         <div class="accordion-body">
                           <p class="mb-3">
-                            As a developer, your goal is to apply ARIA roles, properties, and states accurately—especially those that must update dynamically during interaction. This section includes implementation notes, attribute guidance, and a Bootstrap-ready code example.
-                            <br>
-                            Jump to: 
-                            <a href="#accordion-dev-attributes">Attributes</a> |
-                            <a href="#accordion-code-example">Code Example</a> |
-                            <a href="#accordion-dev-notes">Key Considerations</a>
+                            As a developer, your goal is to apply ARIA roles, properties, and states accurately—especially those that must update dynamically during interaction. This section includes a Bootstrap-ready code example and key considerations.
                           </p>
-
-                          <hr class="my-4">
-
-                          <h3 id="accordion-dev-attributes" class="h4">ARIA Attributes: Manual vs. Programmatic</h3>
-                          <div class="p-3 border rounded bg-light mb-4">
-                            <ul class="mb-0">
-                              <li><strong>Manual Attributes (Static in HTML):</strong>
-                                <ul>
-                                  <li><code>role="button"</code> on the header <code>&lt;button&gt;</code></li>
-                                  <li><code>aria-controls</code> linking header to panel ID</li>
-                                  <li><code>role="region"</code> on panel content (if landmark)</li>
-                                  <li><code>aria-labelledby</code> on panel referencing header ID</li>
-                                </ul>
-                              </li>
-                              <li class="mt-2"><strong>Programmatic Attributes (Updated with JS):</strong>
-                                <ul>
-                                  <li><code>aria-expanded="true/false"</code> on header button, toggled based on panel state</li>
-                                  <li><code>hidden</code> or class-based visibility toggles for the panel</li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </div>
 
                           <hr class="my-4">
 

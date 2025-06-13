@@ -1165,3 +1165,58 @@ pre {
   padding: 5px 10px;
   border-radius: 4px;
 }
+
+/* Slider with Input */
+.form-label {
+    font-weight: bold;
+  }
+  .range-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -12px;
+    font-size: 0.875rem;
+    color: #333;
+  }
+  .slider-custom::-webkit-slider-thumb {
+    background-color: #000000;
+  }
+  .slider-custom::-moz-range-thumb {
+    background-color: #000000;
+  }
+  .slider-custom::-ms-thumb {
+    background-color: #000000;
+  }
+  .slider-custom {
+    background-color: #777777;
+    opacity: 1;
+    height: 6px;
+  }
+  .slider-custom::-webkit-slider-runnable-track {
+    background-color: #777777;
+    opacity: 1; /* Ensure full visibility */
+    border-radius: 4px;
+    height: 6px;
+  }
+  .slider-custom::-moz-range-track {
+    background-color: #777777;
+    opacity: 1;
+    border-radius: 4px;
+    height: 6px;
+  }
+  input[type="range"].slider-custom:focus {
+    outline: 2px solid #000000;
+    outline-offset: 2px;
+    border-radius: 6px; /* optional for rounder ends */
+  }
+  .visually-hidden {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  .error-message {
+    color: #b42318;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
