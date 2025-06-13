@@ -75,8 +75,8 @@
                             </li>
                           </ul>                                                    
                                                               
-                          <h3>Drag and Drop Example</h3>
-                          <div id="drag-drop-container">
+                          <h3 id="drag-and-drop-heading">Drag and Drop Example</h3>
+                          <div id="drag-drop-container" role="application" aria-labelledby="drag-and-drop-heading">
                             <ul id="draggable-list" role="list">
                               <li id="item1" role="listitem" tabindex="0" draggable="true" aria-grabbed="false">
                                 <span class="drag-icon" aria-hidden="true">
@@ -147,6 +147,16 @@
                             </p>
                             <p>
                               <strong>Keyboard:</strong> When a list item is focused, pressing Enter or Space toggles the "keyboard drag" mode. While in drag mode, the Up and Down arrow keys reposition the item within the list. An ARIA live region announces each action, ensuring that users with assistive technologies are informed of every change.
+                            </p>
+                            <h4>Screen Reader Compatibility Note</h4>
+                            <p>
+                              During testing, we discovered that keyboard functionality for screen reader users (particularly with NVDA and JAWS) was blocked due to the screen reader intercepting keypresses like Space and Arrow keys. This prevented users from interacting with the component using the keyboard while the screen reader was active.
+                            </p>
+                            <p>
+                              To resolve this, we applied <code>role="application"</code> to the drag-and-drop region. This instructs screen readers to suspend their virtual cursor mode and hand control of the keyboard back to the web application. As a result, the intended keyboard interactions—Space to enter drag mode, Arrow keys to reorder items, and Escape to cancel—now function correctly for screen reader users.
+                            </p>
+                            <p>
+                              <strong>Important:</strong> Use <code>role="application"</code> carefully and only on the drag-and-drop container. Be sure to provide clear screen reader instructions (e.g., using an <code>aria-describedby</code> hint or persistent live region) and test thoroughly across NVDA, JAWS, and VoiceOver to avoid breaking screen reader navigation elsewhere on the page.
                             </p>
                           </section>                         
 
