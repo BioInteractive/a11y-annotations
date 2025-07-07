@@ -1220,3 +1220,10 @@ pre {
     font-size: 0.875rem;
     margin-top: 0.25rem;
   }
+
+  /* Footer Component */
+  .footer-example { 
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px;
+    box-shadow: inset 0 .5em 1.5em #0000001a, inset 0 .125em .5em #00000026;
+  }

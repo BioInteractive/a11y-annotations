@@ -212,34 +212,62 @@
                     </div>
                     <!-- Accordion Item Four - Accessibility Considerations Developer -->
                     <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                          Accessibility Considerations 
-                          <!-- Developer Tag -->
+                    <h2 class="accordion-header" id="headingFour">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Accessibility Considerations 
+                        <!-- Developer Tag -->
                           <span class="dev-tag ms-3">
                             Developer 
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                            <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
                           </span> 
-                        </button>
-                      </h2>
-                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
-                        <div class="accordion-body">
-                          <h3>Accessibility Considerations for Implementing Buttons in HTML</h3>
-                          <p>For developers translating Figma designs into accessible HTML, adhering to WCAG criteria 1.3.1 (Info and Relationships) and 4.1.2 (Name, Role, Value) is crucial, especially for buttons, including those with icons:</p>
+                      </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
+                      <div class="accordion-body">
+                        <p class="mb-3">
+                          As a developer, your role is to ensure buttons are implemented using semantic HTML and remain fully operable across mouse, keyboard, and assistive technologies. The example below demonstrates a standard button and an icon-only button with an accessible name.
+                        </p>
+
+                        <hr class="my-4">
+
+                        <h3 id="button-code-example" class="h4">Accessible Button Code Example</h3>
+                        <p>This example shows a default button and an icon-only button using ARIA to ensure proper labeling.</p>
+
+                        <div class="p-3 border rounded bg-light">
+<pre class="language-html">
+  <code class="language-html">
+  &lt;!-- Default button --&gt;
+  &lt;button type="button"&gt;Submit&lt;/button&gt;
+
+  &lt;!-- Icon-only button with accessible name --&gt;
+  &lt;button type="button" aria-label="Close"&gt;
+    &lt;svg aria-hidden="true"&gt;
+      &lt;use xlink:href="#icon-close"&gt;&lt;/use&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  </code>
+</pre>
+                          </div>
+
+                          <p class="mt-2"><strong>Tip:</strong> Always use the native <code>&lt;button&gt;</code> element for interactive controls unless there's a specific reason not to.</p>
+
+                          <hr class="my-4">
+
+                          <h3 id="button-dev-notes" class="h4">Key Developer Considerations</h3>
                           <ul>
-                            <li><strong>Semantic HTML:</strong> Utilize the <code>&lt;button&gt;</code> element for buttons to ensure they are accessible and their role is understood by assistive technologies. Avoid using <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code> for interactive elements unless necessary.</li>
-                            <li><strong>Accessible Name for Icon Buttons:</strong> When a button is represented by an icon without visible text, use <code>aria-label</code> or <code>aria-labelledby</code> to provide an accessible name that describes the button's action, ensuring it is comprehensible to screen reader users.</li>
-                            <li><strong>Interactive States:</strong> Define clear visual and programmable states (hover, active, focus, disabled) for buttons using CSS and ARIA attributes to communicate the state changes to all users, including those using assistive technologies.</li>
-                            <li><strong>Contrast and Visibility:</strong> Ensure that buttons meet the minimum contrast ratio requirements against their background. Use CSS to achieve a contrast ratio of at least 4.5:1 for text and icons to background. Larger elements require a ratio of at least 3:1.</li>
-                            <li><strong>Focus Management:</strong> Implement proper focus management to ensure keyboard users can navigate through interactive elements seamlessly. Use <code>tabindex</code> where necessary and ensure custom buttons made from non-semantic elements are fully keyboard accessible.</li>
-                            <li><strong>Use of ARIA:</strong> Apply ARIA roles and properties judiciously to enhance accessibility when native HTML does not suffice. For instance, <code>aria-pressed</code> for toggle buttons to indicate their state.</li>
+                            <li><strong>Semantic Markup:</strong> Use the native <code>&lt;button&gt;</code> element to ensure proper keyboard support and role recognition.</li>
+                            <li><strong>Accessible Name:</strong> For icon-only buttons, use <code>aria-label</code> or <code>aria-labelledby</code> to describe the button's purpose to screen readers.</li>
+                            <li><strong>Interactive States:</strong> Define and visually style <code>:hover</code>, <code>:focus</code>, <code>:active</code>, and <code>:disabled</code> states. Avoid relying on color alone to convey state changes.</li>
+                            <li><strong>Focus Management:</strong> Ensure buttons are included in the natural tab order. If custom components are used, apply <code>tabindex="0"</code> and keyboard event handling.</li>
+                            <li><strong>Color Contrast:</strong> Ensure text or icons on buttons meet the minimum contrast ratio of 4.5:1. For larger elements, a 3:1 contrast is acceptable.</li>
+                            <li><strong>Toggle Buttons:</strong> Use <code>aria-pressed</code> to indicate toggle states when applicable, such as for play/pause or expand/collapse controls.</li>
                           </ul>
-                          <p>By focusing on these development practices, developers can ensure that the buttons in the web interface are accessible, providing a better user experience for everyone, including those relying on assistive technologies.</p>
                         </div>
                       </div>
                     </div>
+
                     <!-- Accordion Item Five - Resources -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingFive">
@@ -292,6 +320,7 @@
            $("#header--container").load(headerPath);
       });
     </script>
-  
+    <!-- PrismJS Core Script -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
 </body>
 </html>

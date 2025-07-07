@@ -241,25 +241,56 @@
                           <span class="dev-tag ms-3">
                             Developer 
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                            <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
                           </span> 
                         </button>
                       </h2>
                       <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
-                        <div class="accordion-body">                            
+                        <div class="accordion-body">
+                          <p class="mb-3">
+                            When implementing data charts, it’s essential to provide an accessible name, ensure sufficient contrast, and offer alternatives for screen reader users. Charts must not rely on color alone to convey meaning and should follow best practices for structure, labeling, and responsiveness.
+                          </p>
+
+                          <hr class="my-4">
+
+                          <h3 id="data-chart-code-example" class="h4">Accessible Data Chart Code Example</h3>
+                          <p>This example uses semantic markup to provide a data chart with a caption and a programmatically associated description.</p>
+
+                          <div class="p-3 border rounded bg-light">
+<pre class="language-html">
+  <code class="language-html">
+  &lt;figure role="img" aria-labelledby="chartTitle" aria-describedby="chartDesc"&gt;
+    &lt;figcaption id="chartTitle"&gt;Monthly Sales Data&lt;/figcaption&gt;
+    &lt;img src="bar-chart.svg" alt="" /&gt;
+    &lt;div id="chartDesc" class="visually-hidden"&gt;
+      This bar chart compares sales data for January through March. January had the highest sales.
+    &lt;/div&gt;
+  &lt;/figure&gt;
+  </code>
+</pre>
+                          </div>
+
+                          <p class="mt-2"><strong>Tip:</strong> Consider also providing a data table version of the chart for maximum accessibility.</p>
+
+                          <hr class="my-4">
+
+                          <h3 id="data-chart-dev-notes" class="h4">Key Developer Considerations</h3>
                           <ul>
-                            <li><strong>Accessible Name:</strong> Ensure the data chart has an accessible name that clearly describes its function. Use <code>aria-labelledby</code> or <code>aria-label</code> to provide this information.</li>
-                            <li><strong>Color Contrast:</strong> Verify that all text and graphical elements in the data chart have sufficient color contrast (at least 4.5:1) against the background to ensure visibility and readability for users with visual impairments.</li>
-                            <li><strong>Non-reliance on Color Alone:</strong> Do not rely solely on color to differentiate elements in the data chart. Use patterns, shapes, or text labels to convey information to users who cannot perceive color differences.</li>
-                            <li><strong>Text Descriptions:</strong> Provide alternative text descriptions for charts to convey the data to users who rely on screen readers. Use the <code>aria-describedby</code> attribute to associate the chart with its description.</li>
-                            <li><strong>Responsive Design:</strong> Ensure the data chart is designed to be responsive and adapts to various screen sizes. Use CSS media queries and scalable vector graphics (SVG) to achieve this.</li>
-                            <li><strong>ARIA Roles and Properties:</strong> Properly implement ARIA roles and properties to ensure that the data chart is recognized and operable by assistive technologies. Use roles like <code>img</code> and properties like <code>aria-describedby</code>.</li>
+                            <li><strong>Accessible Name:</strong> Use <code>aria-labelledby</code> or <code>aria-label</code> to describe the chart and give it a programmatic name.</li>
+                            <li><strong>Color Contrast:</strong> Ensure all text, bars, lines, and labels meet at least 4.5:1 contrast ratio against the background.</li>
+                            <li><strong>Non-reliance on Color:</strong> Differentiate data using patterns, shapes, textures, or labels—not color alone.</li>
+                            <li><strong>Text Descriptions:</strong> Use <code>aria-describedby</code> to associate the chart with a description that explains the data in plain language.</li>
+                            <li><strong>ARIA Roles:</strong> Use <code>role="img"</code> for non-interactive charts, and ensure appropriate ARIA attributes are applied.</li>
+                            <li><strong>Responsive Design:</strong> Use SVGs or CSS media queries to ensure the chart scales properly on all screen sizes.</li>
+                            <li><strong>Alternative Formats:</strong> When possible, provide supplemental formats such as HTML tables to convey the same data.</li>
                           </ul>
-                          <p>For detailed implementation guidelines, refer to the <a href="https://www.w3.org/WAI/tutorials/images/complex/" target="_blank">WAI Tutorial: Complex Images</a>.</p>                                                                                                                                   
-                        </div>                                                                                            
+
+                          <p class="mt-3">For implementation guidance, see the <a href="https://www.w3.org/WAI/tutorials/images/complex/" target="_blank">WAI Tutorial: Complex Images</a>.</p>
+                        </div>
                       </div>
                     </div>
+
                     <!-- Accordion Item Five - Resources -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingFive">
@@ -312,6 +343,7 @@
            $("#header--container").load(headerPath);
       });
     </script>
-  
+    <!-- PrismJS Core Script -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
 </body>
 </html>
