@@ -226,28 +226,62 @@
                           <span class="dev-tag ms-3">
                             Developer 
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                            <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
                           </span> 
                         </button>
                       </h2>
-                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
+                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
                         <div class="accordion-body">
-                          <p>Developing accessible forms is essential for compliance with WCAG standards and ensuring usability for all users. Utilize the design and audit annotations to guide your development:</p>
-                          <ol>
-                            <li><strong>Associate Labels with Form Controls:</strong> Use the <code>&lt;label&gt;</code> element for each form control. For better accessibility, ensure labels are programmatically associated with their corresponding input fields using the <code>for</code> attribute on the label that matches the <code>id</code> attribute on the input.</li>
-                            <li><strong>Ensure Interactive Elements are Keyboard Accessible:</strong> Make sure all form elements can be accessed and used with a keyboard alone. This includes being able to navigate to and from each field, as well as submitting the form.</li>
-                            <li><strong>Use Semantic HTML Where Possible:</strong> Use appropriate HTML5 input types (e.g., email, tel, date) to provide built-in validation and improve the user experience on various devices.</li>
-                            <li><strong>Provide Clear Error Identification:</strong> Implement client-side validation that provides specific, actionable error messages. Errors should be programmatically associated with their fields using the <code>aria-describedby</code> attribute on the field that matches the <code>id</code> attribute on the error message.</li>
-                            <li><strong>While in Error State:</strong> Fileds in error must have the <code>aria-invalid="true"</code> attribute and users focus should be directed to the first error if the form fails to submit.</li>
-                            <li><strong>Ensure Forms Have Accessible Names:</strong> Use the <code>&lt;legend&gt;</code> element within <code>&lt;fieldset&gt;</code> or <code>aria-labelledby</code> to provide an accessible name for forms, especially if the form serves a specific purpose or is one of multiple forms on a page.</li>
-                            <li><strong>Handle State Changes Accessibly:</strong> For dynamic forms that change state based on user input, ensure that these changes are announced to screen reader users via ARIA roles and properties, such as <code>aria-live</code> for status messages.</li>
-                            <li><strong>Include ARIA Descriptions for Complex Inputs:</strong> For inputs that require specific formats or have complex validation rules, use ARIA attributes such as <code>aria-describedby</code> to reference additional descriptive text or error messages.</li>
-                            <li><strong>Provide Clear Success Messages:</strong> Ensure success messages are immediately visible and clearly state the action was successful, using ARIA roles to make them accessible to screen reader users.</li>
-                          </ol>
-                        </div>                        
+                          <p class="mb-3">
+                            Accessible forms must be semantically structured, programmatically associated, and operable by all users. Use semantic HTML wherever possible and supplement with ARIA only when necessary.
+                          </p>
+
+                          <hr class="my-4">
+
+                          <h3 class="h4">Accessible Form Code Example</h3>
+                          <p>This example demonstrates a form with properly associated labels, error messaging, and semantic structure.</p>
+
+                          <div class="p-3 border rounded bg-light">
+<pre class="language-html"><code class="language-html">
+&lt;form aria-labelledby="signup-form-heading"&gt;
+  &lt;h2 id="signup-form-heading"&gt;Sign Up&lt;/h2&gt;
+
+  &lt;div class="mb-3"&gt;
+    &lt;label for="email" class="form-label"&gt;Email Address&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" autocomplete="email" class="form-control"
+           aria-describedby="email-help email-error" aria-invalid="false"&gt;
+    &lt;div id="email-help" class="form-text"&gt;We'll never share your email.&lt;/div&gt;
+    &lt;div id="email-error" class="invalid-feedback visually-hidden"&gt;
+      Email address is required (name@address.com).
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+                          </div>
+
+                          <p class="mt-2"><strong>Tip:</strong> Add <code>aria-invalid="true"</code> and remove <code>visually-hidden</code> from error messages on failed validation.</p>
+
+                          <hr class="my-4">
+
+                          <h3 class="h4">Key Developer Considerations</h3>
+                          <ul>
+                            <li><strong>Programmatic Label Association:</strong> Use <code>&lt;label for="..."&gt;</code> and ensure the corresponding input has a matching <code>id</code>. Never rely on visual placement alone.</li>
+                            <li><strong>Semantic Input Types:</strong> Use HTML5 input types like <code>email</code>, <code>tel</code>, or <code>number</code> to enable built-in validation and mobile keyboard optimization.</li>
+                            <li><strong>Keyboard Operability:</strong> All form controls must be accessible by keyboard alone using <kbd>Tab</kbd> and <kbd>Shift</kbd> + <kbd>Tab</kbd>.</li>
+                            <li><strong>Error Handling:</strong> Add <code>aria-describedby</code> to link error messages, and apply <code>aria-invalid="true"</code> when inputs fail validation. Focus should move to the first invalid field on submission failure.</li>
+                            <li><strong>Group Related Controls:</strong> Use <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> or <code>role="group"</code> with <code>aria-labelledby</code> to semantically group controls.</li>
+                            <li><strong>Live Region Updates:</strong> Use <code>aria-live="polite"</code> or <code>alert</code> roles for dynamically injected status or confirmation messages.</li>
+                            <li><strong>Complex Inputs:</strong> Reference hints or formatting instructions with <code>aria-describedby</code> for clarity, especially for fields with specific input expectations.</li>
+                            <li><strong>Success Feedback:</strong> Ensure success messages are persistent, visually clear, and announced using ARIA techniques. Avoid dismissing them too quickly.</li>
+                            <li><strong>Focus Management:</strong> After submission errors or dynamic changes, manage focus deliberately to maintain user orientation.</li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
+
                     <!-- Accordion Item Five Additional Info -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingFive">
@@ -396,6 +430,7 @@
            $("#header--container").load(headerPath);
       });
     </script>
-  
+    <!-- PrismJS Core Script -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
 </body>
 </html>

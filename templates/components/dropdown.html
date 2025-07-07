@@ -247,34 +247,65 @@
                           <span class="dev-tag ms-3">
                             Developer 
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                            <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
                           </span> 
                         </button>
                       </h2>
                       <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
-                        <div class="accordion-body"> 
+                        <div class="accordion-body">
+                          <p class="mb-3">
+                            A dropdown menu must support keyboard navigation, be properly labeled for assistive technologies, and behave predictably across all input methods. Developers should manage ARIA states, focus, and dismiss actions to ensure the dropdown operates accessibly.
+                          </p>
+
+                          <hr class="my-4">
+
+                          <h3 class="h4">Accessible Dropdown Code Example</h3>
+                          <p>This example demonstrates a basic dropdown button with an associated menu that toggles open and closed on click or keyboard activation.</p>
+
+                          <div class="p-3 border rounded bg-light">
+<pre class="language-html"><code class="language-html">
+&lt;button
+  id="dropdownToggle"
+  aria-haspopup="true"
+  aria-expanded="false"
+  aria-controls="dropdownMenu"
+&gt;
+  Options
+&lt;/button&gt;
+
+&lt;ul
+  id="dropdownMenu"
+  role="menu"
+  hidden
+&gt;
+  &lt;li role="menuitem"&gt;&lt;a href="#"&gt;Item 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li role="menuitem"&gt;&lt;a href="#"&gt;Item 2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+                          </div>
+
+                          <p class="mt-2"><strong>Tip:</strong> Dynamically toggle <code>aria-expanded</code> and <code>hidden</code> to show/hide the menu.</p>
+
+                          <hr class="my-4">
+
+                          <h3 class="h4">Key Developer Considerations</h3>
                           <ul>
-                            <li>Button must be in a <code>&lt;button&gt;</code> element or the element used such as a <code>&lt;div&gt;</code> must have <code>role="button"</code> and <code>tabindex="0"</code> as an equivalent with keyboard event handlers ensuring equal functionality for mouse, keyboard and touch users.</li>
-                            <li>Buttons must have an accessible name. Use text content, img alt, aria-label, aria-labelledby or add sr-only text.</li>
-                            <li>Must have toggling <code>aria-expanded="true/false"</code> depending on expanded/collapsed states.</li>
-                            <li>Must have <code>aria-controls</code> attribute equal to the ID of the panel of the element it controls.</li>
-                            <li>Must be dismissible with ESC key is covering other meaningful content in expanded state and must collapse when focus leave component.</li>
-                            <li>Icon should be hidden for screen reader users with <code>aria-hidden="true"</code></li>
-                            <li><strong>Focus Management:</strong> Ensure that moving through the accordion with a keyboard is intuitive, with focus shifting logically through button and panel to the content within expanded panels.</li>                            
-                          </ul>                           
-                          <ul>
-                            <li><strong>Use ARIA Roles:</strong> Apply <code>role="button"</code> to accordion headers to make them recognizable as interactive elements to assistive technologies. For accordion panels, use <code>role="region"</code> and associate each panel with its header via <code>aria-labelledby</code>.</li>
-                            <li><strong>Manage ARIA States:</strong> Implement <code>aria-expanded="true/false"</code> on accordion headers to indicate the visibility of their associated panel, ensuring this attribute toggles accurately with interaction.</li>
-                            <li><strong>Set ARIA Properties:</strong> Use <code>aria-controls</code> on each accordion header to point to the ID of the panel it controls, facilitating programmatic determination of the relationship between elements.</li>
-                            <li><strong>Ensure Keyboard Accessibility:</strong> Accordions must be fully operable with the keyboard, allowing users to navigate between headers and toggle their state with keys like Enter and Space.</li>
-                            <li><strong>Focus Management:</strong> Ensure that moving through the accordion with a keyboard is intuitive, with focus shifting logically through headers and to the content within expanded panels.</li>
-                            <li><strong>Hide Icons from Screen Readers:</strong> If using icons to indicate the expanded or collapsed state, ensure they are hidden from screen readers with <code>aria-hidden="true"</code> or provide alternative text if they convey necessary information.</li>
-                            <li><strong>Follow the APG Pattern:</strong> For comprehensive guidance and best practices on developing accessible accordions, refer to the <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#accordion" target="_blank">WAI-ARIA Authoring Practices for Accordions</a>.</li>
-                          </ul>                                                                 
+                            <li><strong>Trigger Semantics:</strong> Use a semantic <code>&lt;button&gt;</code> element. If a <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code> is used, apply <code>role="button"</code>, <code>tabindex="0"</code>, and appropriate keyboard event listeners.</li>
+                            <li><strong>ARIA State Management:</strong> Toggle <code>aria-expanded="true/false"</code> on the trigger to reflect the dropdown state. Pair it with <code>aria-controls</code> referencing the dropdown menu ID.</li>
+                            <li><strong>Dropdown Role and Items:</strong> Set <code>role="menu"</code> on the list and <code>role="menuitem"</code> on each item to support screen reader interaction.</li>
+                            <li><strong>Keyboard Support:</strong> Allow opening the dropdown with <kbd>Enter</kbd> or <kbd>Space</kbd>, navigating with <kbd>Arrow Down</kbd>/<kbd>Arrow Up</kbd>, and closing with <kbd>Escape</kbd> or focus out.</li>
+                            <li><strong>Dismiss Behavior:</strong> The dropdown must close when focus moves outside the menu or when the Escape key is pressed.</li>
+                            <li><strong>Focus Management:</strong> Ensure focus is managed appropriately—sent to the first menu item on open, and returned to the trigger on close.</li>
+                            <li><strong>Accessible Naming:</strong> Provide an accessible name via text, <code>aria-label</code>, or <code>aria-labelledby</code>. Visually hidden instructions may be used for context.</li>
+                            <li><strong>Decorative Icons:</strong> Use <code>aria-hidden="true"</code> for any icons used in the trigger or menu items that do not convey meaningful information.</li>
+                            <li><strong>Contrast Compliance:</strong> All interactive elements must meet WCAG 2.1 contrast guidelines (minimum 4.5:1 for normal text or 3:1 for large text/icons).</li>
+                            <li><strong>Refer to APG:</strong> For full authoring guidance, see the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/" target="_blank">ARIA Authoring Practices for Menu Buttons</a>.</li>
+                          </ul>
                         </div>
                       </div>
                     </div>
+
                     <!-- Accordion Item Five - Resources -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingFive">
@@ -323,6 +354,7 @@
            $("#header--container").load(headerPath);
       });
     </script>
-  
+    <!-- PrismJS Core Script -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
 </body>
 </html>

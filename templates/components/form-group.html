@@ -241,26 +241,56 @@
                           <span class="dev-tag ms-3">
                             Developer 
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                            <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
                           </span> 
                         </button>
                       </h2>
-                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
+                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
                         <div class="accordion-body">
-                          <p>Developing accessible forms is essential for compliance with WCAG standards and ensuring usability for all users. Utilize the design and audit annotations to guide your development:</p>
-                          <ol>
-                            <li><strong>Group Related Form Controls with Fieldset:</strong> Use the <code>&lt;fieldset&gt;</code> element to group related form controls. This creates a visual and structural grouping, making it easier for users to understand the relationship between the controls.</li>
-                            <li><strong>Provide a Legend for Fieldset:</strong> Use the <code>&lt;legend&gt;</code> element within the <code>&lt;fieldset&gt;</code> to provide a caption or label for the group. This label helps users understand the purpose of the grouped controls.</li>
-                            <li><strong>Use ARIA Grouping Role:</strong> In cases where <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> are not suitable (e.g., non-form elements), use <code>role="group"</code> with the <code>aria-labelledby</code> attribute. Ensure the <code>aria-labelledby</code> attribute references an element that provides a descriptive label for the group.</li>
-                            <li><strong>Ensure Accessibility of Group Labels:</strong> Make sure that the text within <code>&lt;legend&gt;</code> or the element referenced by <code>aria-labelledby</code> is descriptive and provides clear context about the grouped controls.</li>
-                            <li><strong>Maintain Keyboard Navigation:</strong> Ensure that all grouped controls can be accessed and navigated using a keyboard. Grouping should not interfere with the logical tab order or keyboard operability of individual controls.</li>
-                            <li><strong>Consistent Design and Markup:</strong> Apply consistent design and markup for grouping controls across your forms. This includes using similar styles and structures for all fieldsets or ARIA groups to maintain a cohesive user experience.</li>
-                          </ol>                          
-                        </div>                        
+                          <p class="mb-3">
+                            Grouping related form controls improves both usability and accessibility by providing semantic and programmatic context to users, especially those relying on assistive technologies. Use native HTML structures or ARIA roles as needed.
+                          </p>
+
+                          <hr class="my-4">
+
+                          <h3 class="h4">Accessible Fieldset Code Example</h3>
+                          <p>This example shows how to group related inputs using <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code>:</p>
+
+                          <div class="p-3 border rounded bg-light">
+<pre class="language-html"><code class="language-html">
+&lt;fieldset&gt;
+  &lt;legend&gt;Preferred Contact Method&lt;/legend&gt;
+
+  &lt;div class="form-check"&gt;
+    &lt;input type="radio" id="contact-email" name="contact" class="form-check-input"&gt;
+    &lt;label for="contact-email" class="form-check-label"&gt;Email&lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form-check"&gt;
+    &lt;input type="radio" id="contact-phone" name="contact" class="form-check-input"&gt;
+    &lt;label for="contact-phone" class="form-check-label"&gt;Phone&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/fieldset&gt;
+</code></pre>
+                          </div>
+
+                          <p class="mt-2"><strong>Tip:</strong> Use <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> for native HTML forms. Use <code>role="group"</code> and <code>aria-labelledby</code> only when grouping non-form elements or building custom UI.</p>
+
+                          <hr class="my-4">
+
+                          <h3 class="h4">Key Developer Considerations</h3>
+                          <ul>
+                            <li><strong>Semantic Grouping:</strong> Use <code>&lt;fieldset&gt;</code> to group related form controls and <code>&lt;legend&gt;</code> to label the group for screen reader users.</li>
+                            <li><strong>ARIA Alternatives:</strong> When <code>&lt;fieldset&gt;</code> isn't appropriate (e.g., custom UI), use <code>role="group"</code> and link to a heading using <code>aria-labelledby</code>.</li>
+                            <li><strong>Descriptive Labels:</strong> Ensure legends or ARIA labels clearly describe the group’s purpose.</li>
+                            <li><strong>Keyboard Access:</strong> Grouped controls must be reachable and operable via keyboard without breaking focus order.</li>
+                            <li><strong>Consistent Markup:</strong> Maintain consistent styling and structure across all form groups to reinforce patterns for all users.</li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
-                               
+                        
                       
                     <!-- Accordion Item Eight -->
                     <div class="accordion-item">
@@ -308,6 +338,7 @@
            $("#header--container").load(headerPath);
       });
     </script>
-  
+    <!-- PrismJS Core Script -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
 </body>
 </html>

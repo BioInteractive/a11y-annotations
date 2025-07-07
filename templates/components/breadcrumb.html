@@ -168,33 +168,66 @@
                     </div>
                     <!-- Accordion Item Four - Accessibility Considerations Developer -->
                     <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                          Accessibility Considerations 
-                          <!-- Developer Tag -->
+                    <h2 class="accordion-header" id="headingFour">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Accessibility Considerations 
+                        <!-- Developer Tag -->
                           <span class="dev-tag ms-3">
                             Developer 
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                            <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
                           </span> 
-                        </button>
-                      </h2>
-                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
-                        <div class="accordion-body">                            
+                      </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
+                      <div class="accordion-body">
+                        <p class="mb-3">
+                          As a developer, your goal is to implement breadcrumb navigation that is semantically structured, programmatically clear, and accessible to all users—including those using screen readers. The example below includes required markup for structural clarity, navigation landmarks, and current page indication.
+                        </p>
+
+                        <hr class="my-4">
+
+                        <h3 id="breadcrumb-code-example" class="h4">Accessible Breadcrumb Code Example</h3>
+                        <p>This example shows how to use semantic HTML and ARIA attributes to build an accessible breadcrumb trail.</p>
+
+                        <div class="p-3 border rounded bg-light">
+<pre class="language-html">
+  <code class="language-html">
+  &lt;nav aria-label="Breadcrumb"&gt;
+    &lt;ol class="breadcrumb"&gt;
+      &lt;li class="breadcrumb-item"&gt;
+        &lt;a href="/home"&gt;Home&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class="breadcrumb-item"&gt;
+        &lt;a href="/products"&gt;Products&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class="breadcrumb-item active" aria-current="page"&gt;
+        Pricing
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/nav&gt;
+  </code>
+</pre>
+                          </div>
+
+                          <p class="mt-2"><strong>Tip:</strong> It is acceptable to use plain text (not a link) for the current breadcrumb item.</p>
+
+                          <hr class="my-4">
+
+                          <h3 id="breadcrumb-dev-notes" class="h4">Key Developer Considerations</h3>
                           <ul>
-                            <li><strong>Use Semantic Navigation Landmarks:</strong> Wrap the breadcrumb component in a <code>&lt;nav&gt;</code> element or use a sectioning element with <code>role="navigation"</code> to ensure it's recognized as a navigation landmark, aiding assistive technologies in understanding its purpose.</li>
-                            <li><strong>Ensure Unique Names for Multiple Navigation Landmarks:</strong> If your page includes multiple navigation landmarks, assign unique names to each (using <code>aria-label</code> or <code>aria-labelledby</code>) to distinguish them for users of assistive technologies.</li>
-                            <li><strong>Maintain Consistency Across Pages:</strong> Ensure the breadcrumb's structure and presentation remain consistent across different sections of the site, facilitating user navigation and orientation.</li>
-                            <li><strong>Structure Breadcrumb Items Properly:</strong> Organize breadcrumb links within an ordered list (<code>&lt;ol&gt;</code>) to reflect the sequential nature of navigation paths, using <code>&lt;li&gt;</code> for each breadcrumb item to ensure semantic structure.</li>
-                            <li><strong>Indicate the Current Page with ARIA:</strong> Apply <code>aria-current="page"</code> to the last breadcrumb link, which represents the current page. This attribute offers a clear, programmatic indication of the breadcrumb's active state to assistive technologies.</li>
-                            <li><strong>Color Contrast Compliance:</strong> Verify that the text of breadcrumb links, including the current page indicator, meets the minimum color contrast ratio of 4.5:1 against their background for regular text, in accordance with <a href="https://www.w3.org/TR/WCAG21/#contrast-minimum" target="_blank">WCAG 2.1 guideline 1.4.3 Contrast (Minimum)</a>. Additionally, ensure a minimum contrast ratio of 3:1 between the current page link and other links if a visual state indication is utilized.</li>
-                            <li><strong>Hide Decorative Separators from Assistive Technologies:</strong> If using decorative separators (e.g., slashes or arrows) between breadcrumb items, use <code>aria-hidden="true"</code> to hide these elements from screen readers, as they do not convey meaningful content.</li>
-                            <li><strong>Option Text for Current:</strong> It is absolutely acceptable to use text instead of a link for the current breadcrumb item.</li> 
-                          </ul>                                                
+                            <li><strong>Semantic Structure:</strong> Wrap the breadcrumb in a <code>&lt;nav&gt;</code> with <code>aria-label="Breadcrumb"</code> and use an <code>&lt;ol&gt;</code> to reflect the sequential nature of navigation.</li>
+                            <li><strong>Current Page Indicator:</strong> Use <code>aria-current="page"</code> on the final breadcrumb item to indicate the current page programmatically.</li>
+                            <li><strong>Multiple Navigation Landmarks:</strong> If there are other <code>&lt;nav&gt;</code> regions on the page, provide a unique label using <code>aria-label</code> or <code>aria-labelledby</code>.</li>
+                            <li><strong>Decorative Separators:</strong> If using visual separators (e.g., slashes or arrows), hide them from assistive tech with <code>aria-hidden="true"</code>.</li>
+                            <li><strong>Color Contrast:</strong> Ensure all breadcrumb links meet a contrast ratio of 4.5:1 against the background. If the current page has a unique visual style, ensure it has at least 3:1 contrast from inactive links.</li>
+                            <li><strong>Consistent Layout:</strong> Maintain consistent styling and structure for breadcrumbs across the site to aid user orientation and navigation.</li>
+                          </ul>
                         </div>
                       </div>
                     </div>
+
                     <!-- Accordion Item Five - Resources -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingFive">
@@ -244,6 +277,7 @@
           $("#header--container").load(headerPath);
       });
     </script>
-
+    <!-- PrismJS Core Script -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
 </body>
 </html>

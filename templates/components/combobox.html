@@ -80,16 +80,6 @@
                         <li><a href="examples/combobox-datepicker/" target="_blank">Date Picker Combobox</a>: An editable date input combobox that opens a dialog containing a calendar grid and buttons for navigating by month and year.</li>
                       </ul>
                       <p><strong>Note:</strong> If you plan to implement a simple combobox, it is often better to use the native HTML <code>&lt;select&gt;</code> element for accessibility and ease of use. Here’s an example:</p>
-<pre>
-<code>&lt;label for="example-select"&gt;Choose an option:&lt;/label&gt;
-      &lt;select id="example-select"&gt;
-        &lt;option&gt;Option 1&lt;/option&gt;
-        &lt;option&gt;Option 2&lt;/option&gt;
-        &lt;option&gt;Option 3&lt;/option&gt;
-      &lt;/select&gt;
-</code>
-</pre>
-
                     </div>
                   </div>
                 </div>
@@ -177,36 +167,74 @@
                   </div>
                 </div>
                 <!-- Accordion Item Four - Accessibility Considerations Developer -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingFour">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                      Accessibility Considerations 
-                      <!-- Developer Tag -->
-                      <span class="dev-tag ms-3">
-                        Developer 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+               <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Accessibility Considerations 
+                    <!-- Developer Tag -->
+                    <span class="dev-tag ms-3">
+                      Developer 
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                         <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-                      </span> 
-                    </button>
-                  </h2>
-                  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
-                    <div class="accordion-body">                            
+                      </svg>
+                    </span> 
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
+                  <div class="accordion-body">
+                    <p class="mb-3">
+                      As a developer, your responsibility is to ensure the combobox is properly structured for screen readers and fully operable by keyboard. This includes managing ARIA roles, states, focus behavior, and clear programmatic associations between the input and the listbox.
+                    </p>
+
+                    <hr class="my-4">
+
+                    <h3 id="combobox-code-example" class="h4">Accessible Combobox Code Example</h3>
+                    <p>This simplified example shows an ARIA-compliant combobox with listbox behavior and keyboard support.</p>
+
+                    <div class="p-3 border rounded bg-light">
+<pre class="language-html">
+  <code class="language-html">
+  &lt;label for="combo1"&gt;Choose a fruit:&lt;/label&gt;
+  &lt;input
+    id="combo1"
+    type="text"
+    role="combobox"
+    aria-autocomplete="list"
+    aria-expanded="false"
+    aria-controls="combo1-list"
+    aria-haspopup="listbox"
+  /&gt;
+
+  &lt;ul id="combo1-list" role="listbox"&gt;
+    &lt;li role="option" id="option1"&gt;Apple&lt;/li&gt;
+    &lt;li role="option" id="option2"&gt;Banana&lt;/li&gt;
+    &lt;li role="option" id="option3"&gt;Cherry&lt;/li&gt;
+  &lt;/ul&gt;
+  </code>
+</pre>
+                      </div>
+
+                      <p class="mt-2"><strong>Tip:</strong> Ensure <code>aria-expanded</code> is toggled dynamically as the dropdown opens and closes.</p>
+
+                      <hr class="my-4">
+
+                      <h3 id="combobox-dev-notes" class="h4">Key Developer Considerations</h3>
                       <ul>
-                        <li><strong>Use ARIA Roles:</strong> The combobox input should have <code>role="combobox"</code>, and the associated list of options should have <code>role="listbox"</code>. Each option inside the list should use <code>role="option"</code>.</li>                       
-                        <li><strong>ARIA Attributes for Autocomplete:</strong> If the combobox supports autocomplete, use <code>aria-autocomplete</code> to specify the type. Common values include <code>list</code> (for showing suggestions) and <code>none</code> (for no autocomplete).</li>                        
-                        <li><strong>Manage ARIA States:</strong> Use <code>aria-expanded="true/false"</code> on the input to indicate whether the options list is visible or hidden. This should toggle correctly when the combobox is opened or closed.</li>  
-                        <li><strong>Link Input and Listbox:</strong> Ensure that the <code>aria-controls</code> attribute is applied to the combobox input, pointing to the ID of the associated listbox element. This lets assistive technologies know which list of options is controlled by the input.</li>                        
-                        <li><strong>Ensure Keyboard Navigation:</strong> Comboboxes should be fully operable via keyboard. Use the arrow keys to navigate through the list of options, Enter to select an option, and Escape to close the dropdown. The combobox should follow standard keyboard navigation patterns.</li>                        
-                        <li><strong>Focus Management:</strong> Properly manage focus by ensuring the input retains focus while navigating options with the keyboard. Once an option is selected, the focus should return to the input field or move as required by the interaction pattern.</li>                       
-                        <li><strong>Implement Optional Autocomplete:</strong> If the combobox offers inline autocomplete, dynamically update the input value with suggestions as the user types. This should be done in a way that still allows users to type in their own input.</li>                        
-                        <li><strong>Screen Reader Behavior:</strong> Ensure screen readers announce both the current option being navigated and the overall status of the combobox (e.g., when the dropdown opens or closes).</li>                       
-                        <li><strong>Test Across Devices:</strong> Ensure that the combobox is tested across a variety of devices, including mobile, as touchscreens might require different interactions for dropdown lists.</li>                        
-                        <li><strong>Follow ARIA Best Practices:</strong> For more information on accessible comboboxes, consult the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/combobox/" target="_blank">WAI-ARIA Authoring Practices for Comboboxes</a>.</li>
-                      </ul>                                                                 
+                        <li><strong>ARIA Roles:</strong> Use <code>role="combobox"</code> on the input and <code>role="listbox"</code> on the options container. Each item inside the list should have <code>role="option"</code>.</li>
+                        <li><strong>Autocomplete Behavior:</strong> Specify <code>aria-autocomplete="list"</code> or <code>"none"</code> depending on whether suggestions appear as the user types.</li>
+                        <li><strong>State Management:</strong> Toggle <code>aria-expanded</code> on the input and manage visibility of the list dynamically based on user interaction.</li>
+                        <li><strong>Programmatic Association:</strong> Use <code>aria-controls</code> to link the input with the listbox by ID.</li>
+                        <li><strong>Keyboard Navigation:</strong> Support navigation using <kbd>Arrow Up</kbd>, <kbd>Arrow Down</kbd>, <kbd>Enter</kbd> to select, and <kbd>Escape</kbd> to close.</li>
+                        <li><strong>Focus Management:</strong> Retain input focus while navigating with arrow keys; return focus to input if moved or dismissed.</li>
+                        <li><strong>Screen Reader Support:</strong> Ensure screen readers announce which option is selected and when the list is opened or closed.</li>
+                        <li><strong>Contrast & Sizing:</strong> Ensure all interactive elements meet minimum contrast and target size requirements.</li>
+                        <li><strong>Touch Support:</strong> Test interactions across screen sizes and input types, especially on mobile.</li>
+                        <li><strong>Best Practices:</strong> Refer to the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/combobox/" target="_blank">ARIA Authoring Practices Guide</a> for full pattern support.</li>
+                      </ul>
                     </div>
                   </div>
                 </div>
+
 
                 <!-- Accordion Item Five - Resources -->
                 <div class="accordion-item">
@@ -253,6 +281,7 @@
          $("#header--container").load(headerPath);
     });
     </script>
-
+    <!-- PrismJS Core Script -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
 </body>
 </html>

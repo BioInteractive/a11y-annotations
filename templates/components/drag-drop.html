@@ -306,38 +306,78 @@
                       </div>
                     </div>
                     <!-- Accordion Item Four - Accessibility Considerations Developer -->
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                          Accessibility Considerations 
-                          <!-- Developer Tag -->
-                          <span class="dev-tag ms-3">
-                            Developer 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                   <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Accessibility Considerations 
+                        <!-- Developer Tag -->
+                        <span class="dev-tag ms-3">
+                          Developer 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                             <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                          </span> 
-                        </button>
-                      </h2>
-                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
-                        <div class="accordion-body">
+                          </svg>
+                        </span> 
+                      </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
+                      <div class="accordion-body">
+                        <p class="mb-3">
+                          Accessible drag-and-drop implementations must support both keyboard and assistive technology users. Developers should ensure draggable elements are keyboard-focusable, programmatically labeled, and provide live updates on state changes as users interact with the interface.
+                        </p>
+
+                        <hr class="my-4">
+
+                        <h3 id="dnd-code-example" class="h4">Accessible Drag and Drop Code Example</h3>
+                        <p>This simplified example demonstrates keyboard-operable list item reordering with ARIA attributes and live announcements.</p>
+
+                        <div class="p-3 border rounded bg-light">
+<pre class="language-html">
+  <code class="language-html">
+  &lt;ul role="list"&gt;
+    &lt;li
+      role="listitem"
+      tabindex="0"
+      aria-grabbed="false"
+      draggable="true"
+    &gt;
+      Item 1
+    &lt;/li&gt;
+    &lt;li
+      role="listitem"
+      tabindex="0"
+      aria-grabbed="false"
+      draggable="true"
+    &gt;
+      Item 2
+    &lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;div aria-live="assertive" class="visually-hidden"&gt;
+    Item moved to position 2
+  &lt;/div&gt;
+  </code>
+</pre>
+                          </div>
+
+                          <p class="mt-2"><strong>Tip:</strong> Be sure to dynamically update <code>aria-grabbed</code> and live regions as the user interacts with the list.</p>
+
+                          <hr class="my-4">
+
+                          <h3 id="dnd-dev-notes" class="h4">Key Developer Considerations</h3>
                           <ul>
-                            <li><strong>Draggable Elements:</strong> Ensure all draggable items have <code>draggable="true"</code>, an appropriate role (e.g., <code>listitem</code>), and <code>tabindex="0"</code> to allow keyboard focus.</li>
-                            <li><strong>ARIA Grabbing State:</strong> Use <code>aria-grabbed</code> to dynamically indicate whether an element is currently being dragged (<code>true</code>) or not (<code>false</code>).</li>
-                            <li><strong>Drop Target Indicators:</strong> Clearly define drop zones with visual cues, and update ARIA attributes (or use programmatic announcements) when an item hovers over a valid drop target.</li>
-                            <li><strong>Live Region Announcements:</strong> Implement ARIA live regions (e.g., <code>aria-live="assertive"</code>) to announce when an item is picked up, moved, or dropped.</li>
-                            <li><strong>Keyboard Interaction:</strong> Add keyboard event handlers so that users can press Enter/Space to pick up or drop items and use the arrow keys to reposition them. Ensure focus management is robust throughout the interaction.</li>
-                            <li><strong>Test Across Input Modalities:</strong> Verify that the drag and drop functionality works seamlessly with screen readers, keyboard-only navigation, mouse, and touch interactions.</li>
+                            <li><strong>Draggable Markup:</strong> Apply <code>draggable="true"</code> and <code>tabindex="0"</code> to each draggable item. Use <code>role="listitem"</code> or a custom role if appropriate.</li>
+                            <li><strong>State Indicators:</strong> Dynamically update <code>aria-grabbed="true"</code> when an item is picked up, and <code>aria-grabbed="false"</code> when dropped or canceled.</li>
+                            <li><strong>Drop Targets:</strong> Use ARIA or visually hidden text to indicate valid drop targets and update their state on hover or keyboard movement.</li>
+                            <li><strong>Live Regions:</strong> Use <code>aria-live="assertive"</code> to announce state changes such as "Item moved to position 2."</li>
+                            <li><strong>Keyboard Support:</strong> Enable <kbd>Space</kbd> or <kbd>Enter</kbd> to toggle drag mode and <kbd>Arrow Up</kbd>/<kbd>Arrow Down</kbd> to move items. Ensure focus remains on the active item.</li>
+                            <li><strong>Focus Management:</strong> Ensure users always know which item is selected and where it will be dropped. Focus indicators must remain visible throughout the interaction.</li>
+                            <li><strong>ARIA Roles:</strong> Use <code>aria-grabbed</code> and <code>aria-dropeffect</code> (optional) for assistive technology support. Ensure semantic clarity of source and target elements.</li>
+                            <li><strong>Testing:</strong> Test with screen readers, keyboard-only navigation, mouse, and touch. Validate dynamic changes are announced and interactions are consistent across input methods.</li>
                           </ul>
-                          <ul>
-                            <li><strong>Use ARIA Roles and Properties:</strong> Apply appropriate ARIA roles and properties to both draggable items and drop zones to ensure their states are programmatically determinable. For example, reference <code>aria-grabbed</code> for draggable items.</li>
-                            <li><strong>Manage Focus:</strong> Ensure focus indicators remain visible during drag and drop operations and that focus moves logically—from the draggable item when picked up to its new position when dropped.</li>
-                            <li><strong>Screen Reader Testing:</strong> Conduct thorough testing with screen readers to confirm that dynamic changes are announced correctly and that all instructions are clear.</li>
-                            <li><strong>Follow Best Practices:</strong> Align your implementation with current ARIA authoring practices and W3C recommendations for drag and drop interactions. Document your approach and test with all input methods to ensure robust accessibility.</li>
-                          </ul>
-                        </div>                        
+                        </div>
                       </div>
                     </div>
+
                     <!-- Accordion Item Five - Resources -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingFive">
@@ -386,6 +426,7 @@
            $("#header--container").load(headerPath);
       });
     </script>
-  
+    <!-- PrismJS Core Script -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
 </body>
 </html>

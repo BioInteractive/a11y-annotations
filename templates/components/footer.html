@@ -67,21 +67,8 @@
                           <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" target="_blank">1.4.3 Contrast (Minimum)</a>
                         </li>
                       </ul>
-
-                      <h3>Code Example</h3>
-<pre><code>
-&lt;footer role="contentinfo"&gt;
-  &lt;nav aria-label="Secondary"&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href="/about"&gt;About Us&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="/privacy"&gt;Privacy Policy&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="/contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/nav&gt;
-  &lt;p&gt;&copy; 2025 HHMI Biointeractive. All rights reserved.&lt;/p&gt;
-&lt;/footer&gt;
-</code></pre>
-
+                      <h3>Footer Example (Bootstrap)</h3>
+                      <footer class="py-3 my-4 footer-example"> <nav aria-label="footer example"><ul class="nav justify-content-center border-bottom pb-3 mb-3"> <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li> <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li> <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li> <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li> <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li> </ul></nav> <p class="text-center text-body-secondary">© 2025 Company, Inc</p> </footer>
                       <p><strong>Note:</strong> Avoid hiding footer links behind expandable disclosures unless required for space. They should be visible and easily navigable, especially for screen reader and keyboard users.</p>
                     </div>
                   </div>
@@ -175,25 +162,62 @@
                       <span class="dev-tag ms-3">
                         Developer 
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                        <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
                       </span> 
                     </button>
                   </h2>
                   <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
                     <div class="accordion-body">
+                      <p class="mb-3">
+                        Footers support orientation and navigation across all pages. Use proper semantic markup to ensure the region is identifiable and accessible to assistive technologies.
+                      </p>
+
+                      <hr class="my-4">
+
+                      <h3 class="h4">Accessible Footer Code Example</h3>
+                      <p>This example shows a semantic <code>&lt;footer&gt;</code> with labeled navigation and social links.</p>
+
+                      <div class="p-3 border rounded bg-light">
+<pre class="language-html"><code class="language-html">
+&lt;footer class="bg-dark text-white p-4 mt-auto"&gt;
+  &lt;nav&gt;
+    &lt;ul class="list-unstyled d-flex flex-wrap gap-3 mb-3"&gt;
+      &lt;li&gt;&lt;a href="/about" class="text-white"&gt;About Us&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/privacy" class="text-white"&gt;Privacy Policy&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/terms" class="text-white"&gt;Terms of Use&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+
+  &lt;div class="d-flex gap-3"&gt;
+    &lt;a href="https://twitter.com/example" class="text-white" aria-label="Follow us on Twitter"&gt;
+      &lt;i class="fab fa-twitter" aria-hidden="true"&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;a href="https://linkedin.com/company/example" class="text-white" aria-label="Follow us on LinkedIn"&gt;
+      &lt;i class="fab fa-linkedin" aria-hidden="true"&gt;&lt;/i&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;
+</code></pre>
+                      </div>
+                      <p class="mt-2"><strong>Tip:</strong> If you include multiple <code>&lt;footer&gt;</code> regions (e.g., one inside a modal), distinguish them with <code>aria-label</code> for clarity.</p>
+
+                      <hr class="my-4">
+
+                      <h3 class="h4">Key Developer Considerations</h3>
                       <ul>
-                        <li><strong>Use Semantic Tags:</strong> Use the <code>&lt;footer&gt;</code> element to convey meaning. For non-semantic containers, use <code>role="contentinfo"</code>.</li>
-                        <li><strong>Keyboard Navigation:</strong> Ensure all footer links and interactive controls (e.g., social media, back-to-top) are focusable and usable with a keyboard.</li>
-                        <li><strong>ARIA Labels:</strong> If multiple <code>&lt;footer&gt;</code> regions exist, use <code>aria-label</code> to distinguish them (e.g., “Site Footer”, “Modal Footer”).</li>
-                        <li><strong>Responsive Layout:</strong> Ensure that the footer reflows well at smaller screen sizes and remains operable at 400% zoom.</li>
-                        <li><strong>Link Groups:</strong> Use semantic headings or ARIA landmarks within the footer to organize grouped links or content sections.</li>
-                        <li><strong>Visual Indicators:</strong> Implement consistent focus states using <code>:focus</code> and <code>:hover</code> styles that are clearly visible and meet WCAG color contrast requirements.</li>
-                        <li><strong>Link Roles and Targets:</strong> Avoid non-semantic elements like <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code> for interactive links. Use proper anchor tags and clearly indicate external targets when needed (e.g., <code>aria-label="Opens in new tab"</code>).</li>
+                        <li><strong>Semantic Structure:</strong> Use <code>&lt;footer&gt;</code> and <code>role="contentinfo"</code> for screen reader recognition.</li>
+                        <li><strong>Landmark Naming:</strong> Apply <code>aria-label</code> if more than one footer exists.</li>
+                        <li><strong>Keyboard Navigation:</strong> All links and buttons must be focusable and operable via keyboard.</li>
+                        <li><strong>Focus States:</strong> Ensure visible and high-contrast focus indicators on all interactive elements.</li>
+                        <li><strong>Group Links Semantically:</strong> Use <code>&lt;nav&gt;</code> with <code>aria-label</code> for grouped links.</li>
+                        <li><strong>External Links:</strong> Use <code>aria-label</code> to announce links that open in new tabs or leave the domain.</li>
+                        <li><strong>Responsive Layout:</strong> Ensure clean reflow at small screen sizes and 400% zoom.</li>
                       </ul>
                     </div>
                   </div>
                 </div>
+
 
                 <!-- Accordion Item Three - Resources -->
                 <div class="accordion-item">
@@ -243,6 +267,7 @@
          $("#header--container").load(headerPath);
     });
     </script>
-
+    <!-- PrismJS Core Script -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
 </body>
 </html>

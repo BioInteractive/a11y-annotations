@@ -342,48 +342,88 @@
                       </div>
                     </div>
                     <!-- Accordion Item Four - Accessibility Considerations Developer -->
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                          Accessibility Considerations 
-                          <!-- Developer Tag -->
+                   <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Accessibility Considerations 
+                        <!-- Developer Tag -->
                           <span class="dev-tag ms-3">
                             Developer 
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                            <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
                           </span> 
-                        </button>
-                      </h2>
-                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
-                        <div class="accordion-body">                            
-                          <h3>General Accessibility Requirements for All Carousels</h3>
+                      </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
+                      <div class="accordion-body">
+                        <p class="mb-3">
+                          As a developer, your goal is to ensure the carousel is fully operable and understandable by all users, including those navigating with assistive technologies. The markup must clearly identify the carousel's role, expose current slide state, and support navigation via keyboard.
+                        </p>
+
+                        <hr class="my-4">
+
+                        <h3 id="carousel-code-example" class="h4">Accessible Carousel Code Example</h3>
+                        <p>This example shows a simple two-slide carousel pattern with semantic structure and ARIA attributes to support screen reader users and keyboard interaction.</p>
+
+                        <div class="p-3 border rounded bg-light">
+<pre class="language-html">
+  <code class="language-html">
+  &lt;section id="carousel1" role="region" aria-roledescription="carousel" aria-labelledby="carouselHeading"&gt;
+    &lt;h2 id="carouselHeading"&gt;Featured Content&lt;/h2&gt;
+
+    &lt;div class="carousel-slide" role="group" aria-roledescription="slide" aria-labelledby="slide1-label"&gt;
+      &lt;div id="slide1-label" class="visually-hidden"&gt;Slide 1 of 2&lt;/div&gt;
+      &lt;p&gt;Content of slide 1&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="carousel-slide" role="group" aria-roledescription="slide" aria-labelledby="slide2-label" aria-hidden="true"&gt;
+      &lt;div id="slide2-label" class="visually-hidden"&gt;Slide 2 of 2&lt;/div&gt;
+      &lt;p&gt;Content of slide 2&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="carousel-controls"&gt;
+      &lt;button aria-label="Previous slide"&gt;&lt;/button&gt;
+      &lt;button aria-label="Next slide"&gt;&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;ul class="carousel-dots"&gt;
+      &lt;li&gt;&lt;button aria-label="Go to slide 1" aria-current="true"&gt;&lt;/button&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;button aria-label="Go to slide 2"&gt;&lt;/button&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/section&gt;
+  </code>
+</pre>
+                          </div>
+
+                          <p class="mt-2"><strong>Tip:</strong> Always ensure dynamic changes are announced. See <a href="https://biointeractive.github.io/a11y-annotations/templates/general/interactives/dynamic-changes.html">Dynamic Changes</a> for details on live regions.</p>
+
+                          <hr class="my-4">
+
+                          <h3 id="carousel-dev-notes" class="h4">Key Developer Considerations</h3>
+                          <h4 class="h6 mt-3 mb-2">General Requirements</h4>
                           <ul>
-                            <li>Wrap the carousel in a container with <code>role="region"</code> and <code>aria-roledescription="carousel"</code> to define its purpose.</li>
-                            <li>Include an <code>aria-labelledby</code> attribute referencing the ID of a heading that labels the carousel.</li>
-                            <li>Use list markup (<code>&lt;ul&gt;</code>) for navigation dots and ensure each dot is a <code>&lt;button&gt;</code>.</li>
-                            <li>Set <code>aria-current="true"</code> on the dot representing the current slide.</li>
-                            <li>Add unique <code>id</code> attributes to each slide.</li>
-                            <li>Use visually hidden text to provide slide numbering in the format "# of #", referencing it with <code>aria-labelledby</code>.</li>
-                            <li>Ensure all interactive elements meet contrast requirements and provide clear hover, focus, and active states.</li>
+                            <li>Wrap the entire carousel in a container with <code>role="region"</code> and <code>aria-roledescription="carousel"</code>.</li>
+                            <li>Reference a unique heading using <code>aria-labelledby</code> to label the carousel.</li>
+                            <li>Use <code>&lt;ul&gt;</code> and <code>&lt;button&gt;</code> elements for navigation dots, and apply <code>aria-current="true"</code> on the active dot.</li>
+                            <li>Ensure all interactive controls (prev/next, pause/play) meet color contrast, size, and focus requirements.</li>
                           </ul>
 
-                          <h3>Specific Requirements for Single Visible Slide Carousels</h3>
+                          <h4 class="h6 mt-3 mb-2">Single Visible Slide Carousels</h4>
                           <ul>
-                            <li>Wrap each slide in a <code>role="group"</code> container with <code>aria-roledescription="slide"</code> to describe the role of each slide.</li>
-                            <li>Hide non-visible slides using <code>aria-hidden="true"</code> or <code>visibility: hidden</code>, ensuring they are inaccessible to assistive technology.</li>
+                            <li>Wrap each slide in a container with <code>role="group"</code> and <code>aria-roledescription="slide"</code>.</li>
+                            <li>Include hidden labels such as "Slide 1 of 2" using <code>aria-labelledby</code> or <code>aria-label</code>.</li>
+                            <li>Hide non-visible slides using <code>aria-hidden="true"</code> or equivalent CSS techniques like <code>visibility: hidden</code>.</li>
                           </ul>
 
-                          <h3>Specific Requirements for Multiple Visible Slide Carousels</h3>
+                          <h4 class="h6 mt-3 mb-2">Multiple Visible Slide Carousels</h4>
                           <ul>
-                            <li>Include a parent element with <code>role="list"</code> to define the collection of visible slides.</li>
-                            <li>Wrap each slide in a <code>&lt;li&gt;</code> with <code>aria-roledescription="slide"</code>.</li>
-                            <li>Ensure the visible slides are programmatically identifiable and accessible without disrupting focus order.</li>
-                            <li>Clearly indicate the current slide using <code>aria-current</code> or another programmatic label.</li>
+                            <li>Wrap the visible slide group in a container with <code>role="list"</code>.</li>
+                            <li>Use <code>&lt;li&gt;</code> for each visible slide, and apply <code>aria-roledescription="slide"</code>.</li>
+                            <li>Ensure visible slides are accessible in the tab order and clearly indicate the active one using <code>aria-current</code> or a visually hidden label.</li>
                           </ul>
 
-                          <p>For more information and best practices, please refer to the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/carousel/examples/carousel-1-prev-next/" target="_blank" rel="noopener noreferrer">WAI-ARIA Carousel Example</a>.</p>
-                                                
+                          <p class="mt-3">For more details, refer to the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/carousel/examples/carousel-1-prev-next/" target="_blank" rel="noopener noreferrer">WAI-ARIA Carousel Example</a>.</p>
                         </div>
                       </div>
                     </div>
@@ -398,6 +438,8 @@
                         <div class="accordion-body">
                           <h3>Authoritative Guides and Tutorials</h3>
                           <ul>
+                            <li><a href="https://swiperjs.com/" target="_blank" rel="noopener noreferrer">Swiper JS a wonderful library to customize</a></li>
+                            <li><a href="https://www.gracefulwebstudio.com/blog-articles/the-easiest-accessible-swiper-js-carousel-solution-to-date" target="_blank" rel="noopener noreferrer">The Easiest Accessible Swiper.JS Carousel Solution to Date</a></li>
                             <li><a href="https://www.w3.org/WAI/tutorials/carousels/" target="_blank" rel="noopener noreferrer">W3C Web Accessibility Initiative (WAI): Carousels Tutorial</a></li>
                             <li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/carousel/" target="_blank" rel="noopener noreferrer">W3C ARIA Authoring Practices Guide: Carousel Pattern</a></li>
                             <li><a href="https://www.smashingmagazine.com/2023/02/guide-building-accessible-carousels/" target="_blank" rel="noopener noreferrer">Smashing Magazine: A Step-By-Step Guide To Building Accessible Carousels</a></li>
@@ -460,6 +502,7 @@
           $("#header--container").load(headerPath);
       });
     </script>
-
+    <!-- PrismJS Core Script -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
 </body>
 </html>

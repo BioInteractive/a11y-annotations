@@ -223,26 +223,58 @@
                           <span class="dev-tag ms-3">
                             Developer 
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                            <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
                           </span> 
                         </button>
                       </h2>
                       <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
-                        <div class="accordion-body">                            
+                        <div class="accordion-body">
+                          <p class="mb-3">
+                            Data visualizations must be perceivable and operable by all users, including those using screen readers or navigating with a keyboard. Developers must provide programmatic structure, sufficient contrast, and descriptive alternatives to support accessible interpretation of visual data.
+                          </p>
+
+                          <hr class="my-4">
+
+                          <h3 id="data-viz-code-example" class="h4">Accessible Data Visualization Code Example</h3>
+                          <p>This example uses ARIA and semantic HTML to provide a programmatic structure for a visualization, with an associated description and keyboard support for interactive elements.</p>
+
+                          <div class="p-3 border rounded bg-light">
+<pre class="language-html">
+  <code class="language-html">
+  &lt;figure role="img" aria-labelledby="vizTitle" aria-describedby="vizDesc"&gt;
+    &lt;figcaption id="vizTitle"&gt;User Engagement by Device Type&lt;/figcaption&gt;
+    &lt;svg role="group" tabindex="0"&gt;
+      &lt;!-- SVG chart contents here --&gt;
+    &lt;/svg&gt;
+    &lt;div id="vizDesc" class="visually-hidden"&gt;
+      This pie chart shows mobile users accounted for 60% of engagement, desktop 30%, and tablet 10%.
+    &lt;/div&gt;
+  &lt;/figure&gt;
+  </code>
+</pre>
+                          </div>
+
+                          <p class="mt-2"><strong>Tip:</strong> Make interactive visual elements keyboard focusable with <code>tabindex="0"</code> and support meaningful keyboard navigation where applicable.</p>
+
+                          <hr class="my-4">
+
+                          <h3 id="data-viz-dev-notes" class="h4">Key Developer Considerations</h3>
                           <ul>
-                            <li><strong>Accessible Name:</strong> Ensure the data visualization has an accessible name that clearly describes its function. Use <code>aria-labelledby</code> or <code>aria-label</code> to provide this information.</li>
-                            <li><strong>Color Contrast:</strong> Verify that all text and graphical elements in the data visualization have sufficient color contrast (at least 4.5:1) against the background to ensure visibility and readability for users with visual impairments.</li>
-                            <li><strong>Non-reliance on Color Alone:</strong> Do not rely solely on color to differentiate elements in the data visualization. Use patterns, shapes, or text labels to convey information to users who cannot perceive color differences.</li>
-                            <li><strong>Text Descriptions:</strong> Provide alternative text descriptions for visualizations to convey the data to users who rely on screen readers. Use the <code>aria-describedby</code> attribute to associate the visualization with its description.</li>
-                            <li><strong>Responsive Design:</strong> Ensure the data visualization is designed to be responsive and adapts to various screen sizes. Use CSS media queries and scalable vector graphics (SVG) to achieve this.</li>
-                            <li><strong>ARIA Roles and Properties:</strong> Properly implement ARIA roles and properties to ensure that the data visualization is recognized and operable by assistive technologies. Use roles like <code>img</code> and properties like <code>aria-describedby</code>.</li>
-                            <li><strong>Keyboard Navigation:</strong> Ensure that all interactive elements within the data visualization are keyboard accessible. Implement focus indicators to help users navigate.</li>
+                            <li><strong>Accessible Name:</strong> Label the visualization using <code>aria-labelledby</code> or <code>aria-label</code> to ensure screen readers can identify it.</li>
+                            <li><strong>Color Contrast:</strong> Ensure all chart elements—including text, markers, and interactive segments—meet WCAG contrast standards (4.5:1 minimum for regular text).</li>
+                            <li><strong>Non-reliance on Color:</strong> Supplement color differences with labels, patterns, shapes, or textures to distinguish categories or values.</li>
+                            <li><strong>Alternative Descriptions:</strong> Use <code>aria-describedby</code> to associate a plain-text summary with the chart for non-visual interpretation.</li>
+                            <li><strong>ARIA Roles and Structure:</strong> Use <code>role="img"</code> for static charts or <code>role="group"</code> for interactive SVGs. Apply <code>tabindex="0"</code> to focusable elements.</li>
+                            <li><strong>Interactive Support:</strong> For charts that support interaction (e.g., tooltips, drill-down), ensure elements are keyboard operable and provide visible focus indicators.</li>
+                            <li><strong>Responsive Layout:</strong> Use scalable vector graphics (SVG) or CSS to ensure the visualization adapts to different screen sizes without loss of information.</li>
                           </ul>
-                          <p>For detailed implementation guidelines, refer to the <a href="https://www.w3.org/WAI/tutorials/images/complex/" target="_blank">WAI Tutorial: Complex Images</a>.</p>
-                        </div>                                                                                                                
+
+                          <p class="mt-3">For implementation guidance, see the <a href="https://www.w3.org/WAI/tutorials/images/complex/" target="_blank" rel="noopener noreferrer">WAI Tutorial: Complex Images</a>.</p>
+                        </div>
                       </div>
                     </div>
+
                     <!-- Accordion Item Five - Resources -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingFive">
@@ -294,6 +326,7 @@
            $("#header--container").load(headerPath);
       });
     </script>
-  
+    <!-- PrismJS Core Script -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
 </body>
 </html>
