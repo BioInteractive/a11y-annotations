@@ -296,28 +296,50 @@
                           <span class="dev-tag ms-3">
                             Developer 
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                            <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
                           </span> 
                         </button>
                       </h2>
                       <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
-                        <div class="accordion-body">                            
+                        <div class="accordion-body">
+
+                          <h3 id="toggle-switch-code-example" class="h4">Accessible Toggle Switch Code Example</h3>
+                          <p>This implementation uses <code>role="switch"</code> and toggles <code>aria-checked</code> to reflect the state. Use a <code>&lt;button&gt;</code> element to ensure native keyboard support.</p>
+
+                          <div class="p-3 border rounded bg-light">
+<pre class="language-html"><code class="language-html">
+&lt;button type="button"
+        role="switch"
+        aria-checked="false"
+        aria-labelledby="switchLabel"
+        class="toggle-switch"&gt;
+  &lt;span id="switchLabel"&gt;Enable notifications&lt;/span&gt;
+&lt;/button&gt;
+</code></pre>
+                          </div>
+
+                          <p class="mt-2"><strong>Tip:</strong> Use JavaScript to toggle <code>aria-checked</code> when the button is activated. Maintain clear on/off state through visible indicators and accessible text.</p>
+
+                          <hr class="my-4">
+
+                          <h3 id="toggle-switch-dev-notes" class="h4">Key Developer Considerations</h3>
                           <ul>
-                            <li><strong>Keyboard Operability:</strong> Ensure the toggle switch can be operated using the Enter and Space keys. This allows users who rely on keyboard navigation to interact with the switch effectively.</li>
-                            <li><strong>Accessible Name:</strong> The toggle switch must have an accessible name that clearly describes its function. Use <code>aria-labelledby</code> or <code>aria-label</code> to provide this information.</li>
-                            <li><strong>State Information:</strong> Use the <code>aria-checked</code> attribute to indicate the current state of the toggle switch. Set <code>aria-checked="true"</code> when the switch is on, and <code>aria-checked="false"</code> when it is off. Ensure this state information is perceivable by assistive technologies.</li>
-                            <li><strong>Focus Indicator:</strong> Ensure the toggle switch provides a visible focus indicator when it receives focus. This helps keyboard users to see which element is currently focused.</li>
-                            <li><strong>Color Contrast:</strong> Verify that the toggle switch and its state indicators have sufficient color contrast (at least 4.5:1) against the background to ensure visibility and readability for users with visual impairments.</li>
-                            <li><strong>Target Size:</strong> Design the toggle switch with a minimum target size of 44x44 pixels to accommodate users with motor impairments or those using touch devices.</li>
-                            <li><strong>Non-reliance on Color Alone:</strong> Do not rely solely on color to indicate the state of the toggle switch. Use text or other visual indicators to convey the state for users who cannot perceive color differences.</li>
-                            <li><strong>Hover and Pressed States:</strong> Implement different visual states for the toggle switch when it is hovered over or pressed. This provides feedback to users about their interaction with the element.</li>
-                            <li><strong>ARIA Roles and Properties:</strong> Properly implement ARIA roles and properties to ensure that the toggle switch is recognized and operable by assistive technologies. The switch should have the role of <code>switch</code> and use <code>aria-checked</code> to reflect its state.</li>
+                            <li><strong>Keyboard Support:</strong> Use a native <code>&lt;button&gt;</code> element or manage <code>Enter</code> and <code>Space</code> keys manually. Do not use non-semantic elements unless absolutely necessary.</li>
+                            <li><strong>ARIA Role:</strong> Use <code>role="switch"</code> and update <code>aria-checked</code> between <code>true</code> and <code>false</code> to reflect the toggle state.</li>
+                            <li><strong>Accessible Label:</strong> Ensure the switch has an accessible name via <code>aria-labelledby</code> or <code>aria-label</code> that clearly communicates its function and current state.</li>
+                            <li><strong>Focus Visibility:</strong> Provide a visible focus outline that meets WCAG 2.1 contrast standards (at least 3:1 against adjacent colors).</li>
+                            <li><strong>Non-Color Indicators:</strong> Avoid relying solely on color to represent on/off states. Use icons, text, or motion for additional feedback.</li>
+                            <li><strong>Target Size:</strong> The switch must meet the minimum target size of <code>44x44px</code>.</li>
+                            <li><strong>Interaction Feedback:</strong> Provide hover, pressed, and focus-visible states using distinct visual cues.</li>
+                            <li><strong>Screen Reader Testing:</strong> Confirm that screen readers correctly announce the accessible name and current state when the switch is focused.</li>
                           </ul>
-                          <p>For detailed implementation guidelines, refer to the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/switch/examples/switch-button/" target="_blank">ARIA: Switch Button Pattern</a>.</p>                                                                                                                                   
-                        </div>                        
+
+                          <p>Reference: <a href="https://www.w3.org/WAI/ARIA/apg/patterns/switch/examples/switch-button/" target="_blank" rel="noopener noreferrer">ARIA Switch Button Pattern</a></p>
+                        </div>
                       </div>
                     </div>
+
                     <!-- Accordion Item Five - Resources -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingFive">
@@ -369,6 +391,7 @@
            $("#header--container").load(headerPath);
       });
     </script>
-  
+    <!-- PrismJS Core Script -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>  
 </body>
 </html>

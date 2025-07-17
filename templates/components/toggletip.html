@@ -251,26 +251,56 @@
                           <span class="dev-tag ms-3">
                             Developer 
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                            <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
                           </span> 
                         </button>
                       </h2>
                       <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
-                        <div class="accordion-body">                            
+                        <div class="accordion-body">
+
+                          <h3 id="toggletip-code-example" class="h4">Accessible Toggletip Code Example</h3>
+                          <p>This pattern uses <code>aria-describedby</code> to associate a toggletip with its triggering element. The toggletip toggles on click and includes appropriate keyboard support and dismiss behavior.</p>
+
+                          <div class="p-3 border rounded bg-light">
+<pre class="language-html"><code class="language-html">
+&lt;button type="button"
+        aria-describedby="toggletip1"
+        aria-expanded="false"
+        aria-controls="toggletip1"
+        class="toggletip-trigger"&gt;
+  What is this?
+&lt;/button&gt;
+
+&lt;div id="toggletip1"
+     role="tooltip"
+     class="toggletip"
+     hidden&gt;
+  This value helps determine your monthly estimate.
+&lt;/div&gt;
+</code></pre>
+                          </div>
+
+                          <p class="mt-2"><strong>Tip:</strong> Use JavaScript to toggle visibility, update <code>aria-expanded</code>, and set <code>hidden</code> on the toggletip container. Escape key should dismiss it.</p>
+
+                          <hr class="my-4">
+
+                          <h3 id="toggletip-dev-notes" class="h4">Key Developer Considerations</h3>
                           <ul>
-                            <li><strong>Focusable Triggering Element:</strong> Ensure the element that triggers the toggletip is focusable and appears in the document's focus order. The toggletip must activate on click or keypress events, ensuring it can be operated via keyboard and mouse.</li>
-                            <li><strong>Mouse Interaction:</strong> The toggletip should appear when the user clicks on the triggering element. Ensure the toggletip remains visible as long as the focus is on the element or the toggletip itself, and disappears when the user clicks outside or changes the focus.</li>
-                            <li><strong>Dismissible:</strong> Toggletips covering other content must be dismissible using the ESC key. Implement this functionality to enhance usability and ensure compliance with accessibility standards.</li>
-                            <li><strong>ARIA Association:</strong> Use <code>aria-describedby</code> to link the toggletip with its triggering control, providing assistive technologies with contextual information about the toggletip's purpose.
-                              <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby" target="_blank">ARIA: aria-describedby</a>
-                            </li>
-                            <li><strong>Managing Visibility with ARIA:</strong> Use <code>aria-hidden</code> to control the visibility of the toggletip to assistive technologies. Set <code>aria-hidden="true"</code> when the toggletip is not visible and toggle it as the toggletip shows or hides.</li>
-                            <li><strong>Text Legibility and Contrast:</strong> Ensure the text within the toggletip has sufficient contrast against its background to comply with <a href="https://www.w3.org/TR/WCAG21/#contrast-minimum" target="_blank">WCAG 2.1 1.4.3 Contrast (Minimum)</a>. This guarantees readability for users with visual impairments.</li>
-                          </ul>                                                                                                                                   
+                            <li><strong>Trigger Behavior:</strong> The toggletip trigger must be a focusable element such as a <code>&lt;button&gt;</code> and respond to both click and <kbd>Enter</kbd>/<kbd>Space</kbd> keypress events.</li>
+                            <li><strong>Programmatic Labeling:</strong> Use <code>aria-describedby</code> on the trigger to reference the toggletip content, allowing screen readers to announce it contextually.</li>
+                            <li><strong>Role and Visibility:</strong> The toggletip container must have <code>role="tooltip"</code>. Use <code>hidden</code> or <code>aria-hidden</code> to manage its visibility appropriately for screen readers.</li>
+                            <li><strong>Dismissal Requirements:</strong> Toggletips covering other content must support ESC key to dismiss. Focus should return to the trigger after dismissal.</li>
+                            <li><strong>Focus Containment:</strong> Toggletips must not trap focus. If focusable content exists within the toggletip, it must be reachable and dismissable without breaking tab order.</li>
+                            <li><strong>Text Contrast:</strong> Ensure the toggletip text meets WCAG 2.1 minimum contrast requirements (4.5:1 for normal text, 3:1 for large text).</li>
+                            <li><strong>Multiple Toggletips:</strong> If more than one toggletip exists on a page, ensure each has a unique <code>id</code> and properly scoped <code>aria-describedby</code>.</li>
+                          </ul>
+
+                          <p>For additional guidance, refer to <a href="https://inclusive-components.design/tooltips-toggletips/" target="_blank" rel="noopener noreferrer">Inclusive Components: Toggletips</a></p>
                         </div>
                       </div>
                     </div>
+
                     <!-- Accordion Item Five - Resources -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingFive">
@@ -322,6 +352,8 @@
            $("#header--container").load(headerPath);
       });
     </script>
+    <!-- PrismJS Core Script -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
   
 </body>
 </html>

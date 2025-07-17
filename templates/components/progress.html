@@ -244,25 +244,53 @@
                           <span class="dev-tag ms-3">
                             Developer 
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                            <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
                           </span> 
                         </button>
                       </h2>
                       <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
-                        <div class="accordion-body">                            
+                        <div class="accordion-body">
+                          <p class="mb-3">
+                            Use semantic roles and appropriate ARIA attributes to ensure progress bars are accessible to all users, including those relying on screen readers or keyboard navigation.
+                          </p>
+
+                          <hr class="my-4">
+
+                          <h3 id="progress-code-example" class="h4">Accessible Progress Bar Code Example</h3>
+                          <p>This example demonstrates an accessible progress bar with dynamic updates using ARIA attributes.</p>
+
+                          <div class="p-3 border rounded bg-light">
+<pre class="language-html"><code class="language-html">
+&lt;div role="progressbar"
+     aria-valuemin="0"
+     aria-valuemax="100"
+     aria-valuenow="65"
+     aria-label="Uploading file"
+     aria-live="polite"
+     class="progress-bar"&gt;
+  Uploading... 65%
+&lt;/div&gt;
+</code></pre>
+                          </div>
+                          <p class="mt-2"><strong>Note:</strong> The <code>aria-live="polite"</code> attribute is only necessary if the progress bar updates dynamically and needs to be announced.</p>
+
+                          <hr class="my-4">
+
+                          <h3 id="progress-dev-notes" class="h4">Key Developer Considerations</h3>
                           <ul>
-                            <li><strong>Use ARIA Roles:</strong> Apply <code>role="progressbar"</code> to the progress bar element to make it recognizable as a progress indicator to assistive technologies. This role ensures that screen readers can identify and announce the progress bar.</li>
-                            <li><strong>Set ARIA Properties:</strong> Implement <code>aria-valuemin</code>, <code>aria-valuemax</code>, and <code>aria-valuenow</code> to indicate the minimum value, maximum value, and current value of the progress bar, respectively. This provides context and updates to screen reader users about the progress.</li>
-                            <li><strong>Announce Changes:</strong> Use <code>aria-live="polite"</code> to ensure that updates to the progress bar are announced to screen readers without interrupting the user. This attribute is essential for providing real-time feedback about ongoing processes.</li>
-                            <li><strong>Ensure Visual Indicators:</strong> Provide a visual representation of the progress bar with sufficient contrast and a clear indication of progress. This is critical for users with visual impairments.</li>
-                            <li><strong>Provide Text Alternatives:</strong> Offer text alternatives for the progress bar value, ensuring that the progress status is accessible to screen reader users. This can be done by providing additional text descriptions or tooltips.</li>
-                            <li><strong>Focus Management:</strong> Manage focus appropriately when updates to the progress bar occur. Ensure that focus is not unintentionally moved, maintaining a logical and intuitive focus order.</li>
-                            <li><strong>Testing and Validation:</strong> Regularly test the progress bar with assistive technologies and keyboard navigation to ensure it behaves as expected and is fully accessible. This includes verifying the correct announcement of progress changes by screen readers.</li>
-                          </ul>                                                                                       
+                            <li><strong>Role and Properties:</strong> Use <code>role="progressbar"</code> with <code>aria-valuemin</code>, <code>aria-valuemax</code>, and <code>aria-valuenow</code> to communicate progress accurately to assistive technologies.</li>
+                            <li><strong>Accessible Label:</strong> Include an accessible label with <code>aria-label</code> or <code>aria-labelledby</code> to describe the purpose of the progress bar (e.g., “Uploading file”).</li>
+                            <li><strong>Visual Design:</strong> Ensure visible progress indication meets minimum color contrast (4.5:1 for text, 3:1 for non-text indicators) and clearly communicates status.</li>
+                            <li><strong>Text Support:</strong> Supplement visual indicators with visible text (e.g., “65% complete”) when possible to support cognitive accessibility.</li>
+                            <li><strong>Keyboard Focus:</strong> Progress bars should not take focus. Avoid shifting focus when the value updates.</li>
+                            <li><strong>Screen Reader Behavior:</strong> Use <code>aria-live</code> to politely announce updates, but only if status changes are relevant to the user experience and not overly frequent or disruptive.</li>
+                            <li><strong>Testing:</strong> Confirm screen readers announce current value appropriately during updates and test across different devices and input methods.</li>
+                          </ul>
                         </div>
                       </div>
                     </div>
+
                     <!-- Accordion Item Five - Resources -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingFive">
@@ -311,6 +339,7 @@
            $("#header--container").load(headerPath);
       });
       </script>
-  
+      <!-- PrismJS Core Script -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
 </body>
 </html>

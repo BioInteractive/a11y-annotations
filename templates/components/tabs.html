@@ -359,27 +359,73 @@
                           <span class="dev-tag ms-3">
                             Developer 
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                            <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
                           </span> 
                         </button>
                       </h2>
                       <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
-                        <div class="accordion-body">                            
+                        <div class="accordion-body">
+                          <p class="mb-3">Accessible tabs must support keyboard navigation, follow a clear roving <code>tabindex</code> pattern, and use semantic roles and properties to associate tabs with their panels. Manual activation is the recommended model per the APG.</p>
+
+                          <hr class="my-4">
+
+                          <h3 id="tabs-code-example" class="h4">Accessible Tabs Code Example (Manual Activation)</h3>
+                          <p>This example demonstrates a tablist using manual activation, where tabs do not change panels until activated via <kbd>Enter</kbd> or <kbd>Space</kbd>.</p>
+
+                          <div class="p-3 border rounded bg-light">
+<pre class="language-html"><code class="language-html">
+&lt;div role="tablist" aria-labelledby="tablist-label"&gt;
+  &lt;h2 id="tablist-label" class="sr-only"&gt;Program Navigation Tabs&lt;/h2&gt;
+
+  &lt;button id="tab-1"
+          role="tab"
+          aria-selected="true"
+          aria-controls="panel-1"&gt;
+    Overview
+  &lt;/button&gt;
+
+  &lt;button id="tab-2"
+          role="tab"
+          aria-selected="false"
+          aria-controls="panel-2"
+          tabindex="-1"&gt;
+    Details
+  &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1"&gt;
+  Content for Overview tab
+&lt;/div&gt;
+
+&lt;div id="panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" hidden&gt;
+  Content for Details tab
+&lt;/div&gt;
+</code></pre>
+                          </div>
+
+                          <p class="mt-2"><strong>Tip:</strong> Use JavaScript to manage <code>aria-selected</code>, <code>tabindex</code>, <code>hidden</code>, and focus states when users navigate between tabs using <kbd>ArrowLeft</kbd>/<kbd>ArrowRight</kbd> and activate with <kbd>Enter</kbd> or <kbd>Space</kbd>.</p>
+
+                          <hr class="my-4">
+
+                          <h3 id="tabs-dev-notes" class="h4">Key Developer Considerations</h3>
                           <ul>
-                            <li>Must have <code>role="tablist"</code> on containing element</li>
-                            <li>Must have <code>aria-labelledby</code> equal to the unique ID of the heading element giving the tablist an accessible name of "..."</li>
-                            <li>Must have <code>role="tab"</code> on each tab <code>button</code></li>
-                            <li>Place focus on the first active tab when navigating with the keyboard Tab key.</li>
-                            <li>Must have <code>tabindex="-1"</code> on all non-active tabs to allow for arrow roving tabindex navigation within the tablist.</li>
-                            <li>Must have toggling <code>aria-selected="true/false"</code> to active/non-active tab buttons</li>
-                            <li>Add <code>aria-controls</code> to each button equal to the unique ID of the tabpanel the button controls</li>
-                            <li>Must have <code>role="tabpanel"</code> to each panel and an <code>aria-labelledby</code> equal to the unique ID of the button that controls the panel.</li>
+                            <li><strong><code>role="tablist"</code>:</strong> Set this on the container holding all tabs.</li>
+                            <li><strong><code>aria-labelledby</code> on tablist:</strong> Reference an accessible heading or label for the group of tabs.</li>
+                            <li><strong><code>role="tab"</code> on buttons:</strong> Each tab must be a semantic <code>&lt;button&gt;</code> with <code>role="tab"</code>.</li>
+                            <li><strong><code>aria-selected</code>:</strong> Set to <code>true</code> on the active tab, and <code>false</code> on all others. Update dynamically.</li>
+                            <li><strong><code>tabindex</code>:</strong> Set <code>tabindex="0"</code> only on the active tab; others must have <code>tabindex="-1"</code> for roving focus.</li>
+                            <li><strong><code>aria-controls</code>:</strong> Point each tab button to its panel using this attribute.</li>
+                            <li><strong><code>role="tabpanel"</code>:</strong> Each panel must include this role and an <code>aria-labelledby</code> that points to the controlling tab.</li>
+                            <li><strong>Manual Activation:</strong> Focus should move across tabs using <kbd>ArrowLeft</kbd>/<kbd>ArrowRight</kbd>, but the content should only change on <kbd>Enter</kbd> or <kbd>Space</kbd>.</li>
+                            <li><strong>Focus Management:</strong> Move focus to the active tab on initial load or when tabbing into the widget. Do not trap focus in panels unless it's part of modal behavior.</li>
                           </ul>
-                          <p>Follow this Example: <a href="https://www.w3.org/WAI/ARIA/apg/example-index/tabs/tabs-manual.html" target="_blank">WAI ARIA Authoring Practices for Tabs with Manual Activation</a></p>                                                                                   
+
+                          <p>Refer to the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/tabs/" target="_blank">ARIA Authoring Practices Guide: Tabs Pattern</a> for full specifications and live examples.</p>
                         </div>
                       </div>
                     </div>
+
                     <!-- Accordion Item Five - Resources -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingFive">
@@ -431,6 +477,7 @@
            $("#header--container").load(headerPath);
       });
       </script>
-  
+    <!-- PrismJS Core Script -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
 </body>
 </html>

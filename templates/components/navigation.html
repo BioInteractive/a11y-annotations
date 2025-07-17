@@ -315,26 +315,64 @@
                           <span class="dev-tag ms-3">
                             Developer 
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                            <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
                           </span> 
                         </button>
                       </h2>
                       <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
-                        <div class="accordion-body">                            
-                          <ul role="list">
-                            <li><strong>Semantic HTML:</strong> Use semantic HTML elements to structure the navigation bar. This includes using the <code>&lt;nav&gt;</code> element to wrap the entire navigation bar and <code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code>, and <code>&lt;a&gt;</code> for navigation items to ensure proper screen reader interpretation.</li>
-                            <li><strong>Roles and Properties:</strong> Apply appropriate ARIA roles and properties where native HTML does not suffice. This is particularly important for complex widgets like disclosure buttons, which should have <code>aria-expanded</code>, <code>aria-controls</code>, and <code>role="button"</code> attributes to communicate state and functionality.</li>
-                            <li><strong>Keyboard Navigation:</strong> Ensure all interactive elements within the navigation bar are operable with keyboard alone. This includes ensuring tab order is logical and that submenu items are accessible via keyboard commands.</li>
-                            <li><strong>Focus Management:</strong> Manage focus for interactive components, particularly for navigation bars with submenus. When a submenu is opened via a disclosure button, focus should move to the first item in the submenu. On close, focus should return to the disclosure button.</li>
-                            <li><strong>Color Contrast:</strong> Implement sufficient color contrast ratios for text, icons, and interactive elements against their background colors. Please see General Color section for more details.</li>
-                            <li><strong>Visible Focus Indicators:</strong> Provide clear visual focus indicators for interactive elements to help users understand which element has focus during keyboard navigation.</li>
-                            <li><strong>Testing with Screen Readers:</strong> Test the navigation bar with screen readers to ensure that all text is read correctly, and that interactive elements are announced with their state (e.g., expanded or collapsed for submenus).</li>
-                            <li><strong>Consistent Navigation:</strong> Keep the navigation structure consistent across the entire website to help users predict where navigation elements will be located and how they will function, enhancing usability and accessibility.</li>
+                        <div class="accordion-body">
+
+                          <p class="mb-3">
+                            When building a navigation bar, developers must ensure the structure, semantics, and interactivity support accessible navigation across mouse, keyboard, and assistive technology users. This section outlines semantic requirements, keyboard behaviors, and ARIA guidance.
+                          </p>
+
+                          <hr class="my-4">
+
+                          <h3 id="nav-code-example" class="h4">Accessible Navigation Code Example</h3>
+                          <p>This simplified example shows a semantic navigation region with keyboard-operable disclosure for a dropdown menu.</p>
+
+                          <div class="p-3 border rounded bg-light">
+<pre class="language-html"><code class="language-html">
+&lt;nav aria-label="Primary"&gt;
+  &lt;ul class="main-nav"&gt;
+    &lt;li&gt;&lt;a href="/" aria-current="page"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;
+      &lt;button aria-expanded="false" aria-controls="submenu1"&gt;
+        Services
+      &lt;/button&gt;
+      &lt;ul id="submenu1" hidden&gt;
+        &lt;li&gt;&lt;a href="/consulting"&gt;Consulting&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/training"&gt;Training&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+                          </div>
+                          <p class="mt-2"><strong>Tip:</strong> Submenus should be toggled with JavaScript and include focus management and <code>aria-expanded</code> state updates.</p>
+
+                          <hr class="my-4">
+
+                          <h3 id="nav-dev-notes" class="h4">Key Developer Considerations</h3>
+                          <ul>
+                            <li><strong>Semantic HTML:</strong> Wrap the navigation in a <code>&lt;nav&gt;</code> element and use <code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code>, and <code>&lt;a&gt;</code> for link lists. Avoid adding redundant labels like “Site Navigation.”</li>
+                            <li><strong>Disclosure Button Behavior:</strong> If implementing a dropdown or submenu, use a <code>&lt;button&gt;</code> with <code>aria-controls</code>, and toggle <code>aria-expanded</code>.</li>
+                            <li><strong>Keyboard Navigation:</strong> Ensure all navigation items are reachable and operable via <kbd>Tab</kbd>, <kbd>Enter</kbd>, and <kbd>Escape</kbd>. Focus should move to the first submenu item when opened.</li>
+                            <li><strong>Focus Management:</strong> Use JavaScript to trap focus inside open submenus and restore focus to the disclosure button when closed.</li>
+                            <li><strong>ARIA Labeling:</strong> If there are multiple navigation regions on a page, apply <code>aria-label</code> or <code>aria-labelledby</code> for context (e.g., “Primary” or “Quick Links”).</li>
+                            <li><strong>Visual Focus Indicators:</strong> Ensure all focusable elements have clear, high-contrast focus styles that meet WCAG 2.1 contrast ratio of at least 3:1.</li>
+                            <li><strong>Avoid Redundant Roles:</strong> Do not apply <code>role="navigation"</code> to <code>&lt;nav&gt;</code> elements—they already have that implicit role.</li>
+                            <li><strong>Consistent Structure:</strong> Keep navigation link order and structure consistent across pages to support predictability and reduce cognitive load.</li>
+                            <li><strong>Current Page Indicator:</strong> Apply <code>aria-current="page"</code> to the navigation link representing the current page to programmatically indicate its active state to assistive technologies.</li>
+                            <li><strong>Screen Reader Testing:</strong> Confirm that links, toggles, and states are announced properly by screen readers. Verify that dropdowns open/close are tracked by the announced expanded/collapsed state.</li>
                           </ul>
+
                         </div>
                       </div>
                     </div>
+
                     <!-- Accordion Item Five - Resources -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingFive">
@@ -384,6 +422,7 @@
            $("#header--container").load(headerPath);
       });
     </script>
-  
+    <!-- PrismJS Core Script -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
 </body>
 </html>

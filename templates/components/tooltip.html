@@ -248,26 +248,56 @@
                           <span class="dev-tag ms-3">
                             Developer 
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                            <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
                           </span> 
                         </button>
                       </h2>
                       <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
-                        <div class="accordion-body">                            
+                        <div class="accordion-body">
+
+                          <h3 id="tooltip-code-example" class="h4">Accessible Tooltip Code Example</h3>
+                          <p>This pattern uses <code>aria-describedby</code> to associate the tooltip with its trigger. The tooltip is activated on both hover and keyboard focus, and hidden with <code>aria-hidden</code> when not in use.</p>
+
+                          <div class="p-3 border rounded bg-light">
+<pre class="language-html"><code class="language-html">
+&lt;button type="button"
+        aria-describedby="tooltip1"
+        class="tooltip-trigger"&gt;
+  Hover or focus me
+&lt;/button&gt;
+
+&lt;div id="tooltip1"
+     role="tooltip"
+     class="tooltip"
+     aria-hidden="true"&gt;
+  This is a helpful tooltip.
+&lt;/div&gt;
+</code></pre>
+                          </div>
+
+                          <p class="mt-2"><strong>Tip:</strong> Use JavaScript to toggle <code>aria-hidden</code> and <code>visibility</code> based on mouse and keyboard interactions. Tooltip must auto-show on focus and hover, and dismiss on ESC or blur.</p>
+
+                          <hr class="my-4">
+
+                          <h3 id="tooltip-dev-notes" class="h4">Key Developer Considerations</h3>
                           <ul>
-                            <li><strong>Focusable Triggering Element:</strong> Ensure the element that triggers the tooltip is focusable and appears in the document's focus order. The tooltip must activate automatically when the element receives focus.</li>
-                            <li><strong>Mouse Interaction:</strong> The tooltip should also appear when the user hovers over the triggering element with a mouse. Ensure the tooltip remains visible as long as the mouse hovers over the element or the tooltip itself, and disappears when the mouse leaves both.</li>
-                            <li><strong>Dismissible:</strong> Tooltips covering other content must be dismissible using the ESC key. Implement this functionality to enhance usability and ensure compliance with accessibility standards.</li>
-                            <li><strong>ARIA Association:</strong> Use <code>aria-describedby</code> to link the tooltip with its triggering control, providing assistive technologies with contextual information about the tooltip's purpose.
-                              <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby" target="_blank">ARIA: aria-describedby</a>
-                            </li>
-                            <li><strong>Managing Visibility with ARIA:</strong> Use <code>aria-hidden</code> to control the visibility of the tooltip to assistive technologies. Set <code>aria-hidden="true"</code> when the tooltip is not visible and toggle it as the tooltip shows or hides.</li>
-                            <li><strong>Text Legibility and Contrast:</strong> Ensure the text within the tooltip has sufficient contrast against its background to comply with <a href="https://www.w3.org/TR/WCAG21/#contrast-minimum" target="_blank">WCAG 2.1 1.4.3 Contrast (Minimum)</a>. This guarantees readability for users with visual impairments.</li>
-                          </ul>                                                                                                            
+                            <li><strong>Trigger Behavior:</strong> The tooltip must appear when the triggering element receives focus (keyboard) or hover (mouse). It should disappear on blur or mouse leave.</li>
+                            <li><strong>ARIA Association:</strong> Use <code>aria-describedby</code> on the triggering element to reference the tooltip’s <code>id</code>, allowing screen readers to announce it as contextual help.</li>
+                            <li><strong>Role:</strong> Assign <code>role="tooltip"</code> to the tooltip container to programmatically define its function.</li>
+                            <li><strong>Visibility Control:</strong> Toggle <code>aria-hidden="true/false"</code> to manage screen reader visibility when showing or hiding the tooltip. Optionally use the <code>hidden</code> attribute in tandem.</li>
+                            <li><strong>Dismissal:</strong> If the tooltip overlays other content, allow users to dismiss it with the <kbd>Escape</kbd> key. Manage focus appropriately when doing so.</li>
+                            <li><strong>Text Contrast:</strong> Ensure tooltip text meets a minimum contrast ratio of 4.5:1 against its background. This is essential for users with low vision.</li>
+                            <li><strong>Keyboard Navigation:</strong> The tooltip must not trap focus. Users should be able to tab past it without interruption to the natural focus order.</li>
+                            <li><strong>Persistent vs. Ephemeral:</strong> Tooltips are ephemeral and should not require click or long interaction to show or hide. If more persistent content is required, consider using a toggletip instead.</li>
+                          </ul>
+
+                          <p>For additional guidance, refer to <a href="https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/" target="_blank" rel="noopener noreferrer">ARIA Authoring Practices – Tooltip Pattern</a>.</p>
+
                         </div>
                       </div>
                     </div>
+
                     <!-- Accordion Item Five - Resources -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingFive">
@@ -319,6 +349,7 @@
          $("#header--container").load(headerPath);
     });
     </script>
-
+    <!-- PrismJS Core Script -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
 </body>
 </html>
