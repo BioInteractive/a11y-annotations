@@ -220,24 +220,61 @@
                           <span class="dev-tag ms-3">
                             Developer 
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                            <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
                           </span> 
                         </button>
                       </h2>
                       <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
-                        <div class="accordion-body">                            
+                        <div class="accordion-body">
+
+                          <p class="mb-3">Ensure your pagination controls are operable, semantically structured, and clearly indicate the user's current location.</p>
+
+                          <hr class="my-4">
+
+                          <h3 id="pagination-code-example" class="h4">Accessible Pagination Code Example</h3>
+                          <p>This example shows a simplified, semantic pagination structure with ARIA attributes for current and disabled links.</p>
+
+                          <div class="p-3 border rounded bg-light">
+<pre class="language-html"><code class="language-html">
+&lt;nav aria-label="Pagination"&gt;
+  &lt;ol class="pagination"&gt;
+    &lt;li&gt;
+      &lt;a class="page-link" href="?page=1"&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a class="page-link" href="?page=2" aria-current="page"&gt;2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a class="page-link" href="?page=3"&gt;3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;button class="page-link"&gt;Next&lt;/button&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+                          </div>
+
+                          <p class="mt-2"><strong>Tip:</strong> Always use semantic <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code> for pagination list links, and visually distinguish the current page using <code>aria-current="page"</code>.</p>
+
+                          <hr class="my-4">
+
+                          <h3 id="pagination-dev-notes" class="h4">Key Developer Considerations</h3>
                           <ul>
-                            <li><strong>Use Semantic Navigation Landmarks:</strong> Wrap the pagination component in a <code>&lt;nav&gt;</code> element or use a sectioning element with <code>role="navigation"</code> to ensure it's recognized as a navigation landmark.</li>
-                            <li><strong>Ensure Unique Names for Multiple Navigation Landmarks:</strong> If your page contains multiple navigation landmarks, make sure each has a unique name to distinguish them for assistive technologies.</li>
-                            <li><strong>Maintain Consistency Across Pages:</strong> The order and presentation of pagination links should be consistent across all pages of the website, aiding in user orientation and predictability.</li>
-                            <li><strong>Structure Pagination Links Properly:</strong> Organize pagination links within a list (<code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>) to ensure a clear structure, using <code>&lt;li&gt;</code> for each pagination link for semantic accuracy.</li>
-                            <li><strong>Mark Disabled Links Appropriately:</strong> For any non-clickable or disabled pagination links (e.g., the current page or out-of-bound links), use <code>aria-disabled="true"</code> and ensure they're not focusable with <code>tabindex="-1"</code>.</li>
-                            <li><strong>Indicate the Current Page with ARIA:</strong> Use <code>aria-current="page"</code> on the pagination link that represents the current page, providing a programmatic indication of the active state.</li>
-                          </ul>                          
+                            <li><strong>Semantic Structure:</strong> Wrap the pagination in a <code>&lt;nav&gt;</code> and label it with <code>aria-label</code> such as <code>aria-label="Pagination"</code>.</li>
+                            <li><strong>Use List Structure:</strong> Organize pagination links within a semantic list (<code>&lt;ul&gt;</code>) to convey order and structure.</li>
+                            <li><strong>Indicate Current Page:</strong> Apply <code>aria-current="page"</code> to the link representing the active page.</li>
+                            <li><strong>Handle Disabled States:</strong> Use <code>aria-disabled="true"</code> and <code>tabindex="-1"</code> for elements that cannot be interacted with (e.g., "Next" on the last page).</li>
+                            <li><strong>Ensure Keyboard Operability:</strong> Links and buttons must be focusable and operable via keyboard alone. Avoid using non-semantic elements without ARIA role support.</li>
+                            <li><strong>Maintain Contrast:</strong> Ensure the contrast between the text and background is at least 4.5:1 and at least 3:1 with the background and meaningful icons. Distinct styling should identify current/focus states.</li>
+                            <li><strong>Consistent Pattern:</strong> Use consistent pagination placement and behavior throughout your application for usability and predictability.</li>
+                          </ul>
+
                         </div>
                       </div>
                     </div>
+
                     <!-- Accordion Item Five - Resources -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingFive">
@@ -287,6 +324,7 @@
          $("#header--container").load(headerPath);
     });
     </script>
-
+    <!-- PrismJS Core Script -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
 </body>
 </html>

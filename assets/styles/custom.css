@@ -106,6 +106,7 @@ a {
   box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.205);
   padding-top: 1.25rem;
   min-width: 265px;
+  margin-left: -.75rem;
 }
 .border-top-sidebar {
   border-top: 1px solid #dee2e6!important
@@ -261,10 +262,14 @@ h1, h2, h3, h4, h5 {
   border: none !important;
 }
 .accordion-button {
-  border: #3779b5 solid !important;
+  border: #178387 solid !important;
 }
 .accordion-button:not(.collapsed) {
-  color: #3779b5 !important;
+  color: #178387 !important;
+  background-color: #fff !important;;
+}
+.accordion-button:focus {
+  box-shadow: none !important;
 }
 
 /* Code */

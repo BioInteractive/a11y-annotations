@@ -203,27 +203,63 @@
                           <span class="dev-tag ms-3">
                             Developer 
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                            <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
                           </span> 
                         </button>
                       </h2>
-                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
+                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
                         <div class="accordion-body">
-                          <p>Ensuring the accessibility of tables is critical for developers, as it allows all users, including those using assistive technologies, to understand and navigate the content efficiently. Consider these guidelines when coding tables:</p>
-                          <ol>
-                            <li><strong>Clear Table Headers:</strong> Use semantic markup to define <code>&lt;th&gt;</code> elements for table headers, ensuring they are descriptive of the content they relate to.</li>
-                            <li><strong>Accessible Names:</strong> Provide tables with accessible names using the <code>&lt;caption&gt;</code> tag or <code>aria-labelledby</code>, offering a clear description of the table's content and purpose.</li>
-                            <li><strong>CSS for Visual Distinction:</strong> Apply CSS styles to differentiate table headers from data cells visually. This can include font weight, background color, or text alignment.</li>
-                            <li><strong>Consistent Grid Lines and Spacing:</strong> Use CSS to maintain consistent grid lines and spacing within the table to enhance readability.</li>
-                            <li><strong>Logical Structure:</strong> Ensure the table's structure is logical and straightforward, with related data grouped together and a logical flow from left to right and top to bottom.</li>
-                            <li><strong>Sorting and Filtering:</strong> Include options for sorting and filtering table data to assist users in finding the information they need more efficiently.</li>
-                            <li><strong>Complex Tables:</strong> For more complex tables, utilize <code>scope</code> attributes to specify whether a header applies to a row, column, or group of rows or columns. Use <code>id</code>s and <code>headers</code> attributes to associate data cells with header cells explicitly.</li>
-                          </ol>
-                          <p>By following these guidelines, developers can create tables that are not only visually appealing but also accessible, ensuring that all users can access and understand the table content.</p>
-                        </div>                        
+                          <p class="mb-3">
+                            Accessible tables provide critical information to screen reader users and must be marked up correctly for accurate navigation and comprehension. The examples below focus on data tables, not layout tables.
+                          </p>
+
+                          <hr class="my-4">
+
+                          <h3 id="table-code-example" class="h4">Accessible Table Code Example</h3>
+                          <p>This example includes a <code>&lt;caption&gt;</code> for description, properly scoped headers, and simple row/column relationships.</p>
+
+                          <div class="p-3 border rounded bg-light">
+<pre class="language-html"><code class="language-html">
+&lt;table&gt;
+  &lt;caption&gt;Monthly Expenses by Category&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Category&lt;/th&gt;
+      &lt;th scope="col"&gt;Amount&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;Groceries&lt;/th&gt;
+      &lt;td&gt;$300&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;Utilities&lt;/th&gt;
+      &lt;td&gt;$150&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+                          </div>
+                          <p class="mt-2"><strong>Tip:</strong> Always use <code>&lt;th&gt;</code> for headers and apply <code>scope</code> attributes to indicate if the header applies to a row or column.</p>
+
+                          <hr class="my-4">
+
+                          <h3 id="table-dev-notes" class="h4">Key Developer Considerations</h3>
+                          <ul>
+                            <li><strong>Use <code>&lt;caption&gt;</code> or <code>aria-labelledby</code>:</strong> Every data table should have a clear, programmatically associated name or description.</li>
+                            <li><strong>Scope Attributes:</strong> Apply <code>scope="col"</code> for column headers and <code>scope="row"</code> for row headers. This helps screen readers convey the correct context.</li>
+                            <li><strong>Associating Headers and Cells:</strong> For complex tables, use <code>headers</code> and <code>id</code> attributes to explicitly associate data cells with header cells.</li>
+                            <li><strong>Logical Reading Order:</strong> Structure table content to follow a natural left-to-right, top-to-bottom order. Avoid using CSS to visually reorder content.</li>
+                            <li><strong>Interactive Tables:</strong> If the table includes sortable columns, use appropriate ARIA attributes like <code>aria-sort</code>. Indicate sorting direction via accessible names or hidden text.</li>
+                            <li><strong>Responsive Behavior:</strong> Ensure tables are responsive and test with zoom up to 400%. If using horizontal scrolling, ensure keyboard users can still access all content.</li>
+                            <li><strong>Color and Style:</strong> Use visual cues like bold text, shading, or zebra striping to distinguish header cells, but do not rely on color alone to communicate structure.</li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
+
                     <!-- Accordion Item Five Resources -->
                     <div class="accordion-item">
                       <h2 class="accordion-item" id="headingFive">
@@ -272,6 +308,7 @@
          $("#header--container").load(headerPath);
     });
     </script>
-
+    <!-- PrismJS Core Script -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
 </body>
 </html>

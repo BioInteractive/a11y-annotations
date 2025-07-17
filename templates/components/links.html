@@ -185,27 +185,52 @@
                           <span class="dev-tag ms-3">
                             Developer 
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                            <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
                           </span> 
                         </button>
                       </h2>
-                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" style="">
+                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
                         <div class="accordion-body">
-                          <h3>Implementing Links for Accessibility</h3>
-                          <p>For developers, ensuring that links are accessible is crucial for navigating both in-page and external resources effectively:</p>
+                          <p class="mb-3">
+                            Accessible links are essential for navigation and orientation. Follow the guidelines below to ensure your link implementations are programmatically determinable and perceivable by all users.
+                          </p>
+
+                          <hr class="my-4">
+
+                          <h3 id="links-code-example" class="h4">Accessible Link Code Example</h3>
+                          <p>This basic example shows a correctly structured link with descriptive text and an optional screen-reader-only span for additional context:</p>
+
+                          <div class="p-3 border rounded bg-light">
+<pre class="language-html">
+<code class="language-html">
+&lt;a href="/resources/climate-data"&gt;
+  View Climate Data 
+&lt;/a&gt;
+</code>
+</pre>
+                          </div>
+
+                          <p class="mt-2"><strong>Tip:</strong> Avoid vague link text like “Click here” or “Learn more.” Use visible, descriptive text that conveys destination or action.</p>
+                          <p class="mt-2">For design purposes, if your link must visibly say “Learn more” or “Read more” due to space constraints, use an <code>aria-label</code> that begins with the visible text and includes additional context—for example, <code>aria-label="Learn more about this dataset"</code>. This ensures screen reader users receive the full purpose of the link without changing its visual appearance.</p>
+                          
+                          <hr class="my-4">
+
+                          <h3 id="links-dev-notes" class="h4">Key Developer Considerations</h3>
                           <ul>
-                            <li><strong>Correct Element Usage:</strong> Use the <code>&lt;a&gt;</code> element for links with a valid <code>href</code> attribute to ensure they navigate as expected.</li>
-                            <li><strong>Descriptive Link Text:</strong> Provide descriptive text for each link that clearly indicates its purpose and destination, aiding in user understanding and accessibility tool compatibility.</li>
-                            <li><strong>Focusable Elements:</strong> Ensure links are focusable to facilitate keyboard navigation for users with mobility impairments or those who prefer keyboard controls.</li>
-                            <li><strong>Visual Distinction:</strong> Style links to be visually distinguishable from non-link text through color, underlining, or other stylistic differences without relying solely on color.</li>
-                            <li><strong>Accessible Name:</strong> Ensure links have an accessible name, which can be achieved through the link text itself or additional ARIA attributes or sr-only text when necessary.</li>
-                            <li><strong>Testing with Screen Readers:</strong> Test link accessibility using screen readers to ensure the link purpose is clear and navigation is intuitive for users relying on assistive technologies.</li>
+                            <li><strong>Use Semantic Elements:</strong> Use <code>&lt;a&gt;</code> elements with a valid <code>href</code> for all navigable links. Do not use <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code> with click handlers unless absolutely necessary.</li>
+                            <li><strong>Descriptive Link Text:</strong> Link text should clearly describe the link's purpose. Avoid generic phrases like “learn more.”</li>
+                            <li><strong>Visible Focus Styles:</strong> Ensure keyboard users can see which link has focus. Apply custom <code>:focus</code> styles that meet contrast requirements (at least 3:1).</li>
+                            <li><strong>Color Contrast:</strong> Links must have a 4.5:1 contrast ratio against the background and should be visually distinguishable from surrounding text using more than just color.</li>
+                            <li><strong>External Link Disclosure:</strong> If a link opens in a new tab or window, communicate this with screen-reader-only text.</li>
+                            <li><strong>Accessible Name Testing:</strong> Use Accessibility panel in Chrome Dev Tools to confirm the full accessible name of each link is accurate and informative.</li>
+                            <li><strong>Text Link Indicators:</strong> If a link is embedded within a block of text, it must include a non-color visual indicator such as an underline, bold styling, or icon to distinguish it from surrounding text. This ensures the link is perceivable for users with color vision deficiencies.</li>
+                            <li><strong>Avoid Redundant Links:</strong> Do not use multiple links in a row that point to the same destination with different text. Consolidate them for clarity as a best practice.</li>
                           </ul>
-                          <p>By adhering to these considerations, developers can create more accessible web content that supports a wider range of users, including those with disabilities, and complies with <strong>WCAG guidelines</strong>.</p>
                         </div>
                       </div>
                     </div>
+
                     <!-- Accordion Item Five Resources -->
                     <div class="accordion-item">
                       <h2 class="accordion-item" id="headingFive">
@@ -268,6 +293,7 @@
          $("#header--container").load(headerPath);
     });
     </script>
-
+    <!-- PrismJS Core Script -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
 </body>
 </html>

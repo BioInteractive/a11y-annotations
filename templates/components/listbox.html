@@ -77,16 +77,7 @@
                         <li><a href="examples/listbox-rearrangeable/" target="_blank">Example Listboxes with Rearrangeable Options</a>: Examples of both single-select and multi-select listboxes with accompanying toolbars where options can be added, moved, and removed.</li>
                         <li><a href="examples/listbox-grouped/" target="_blank">Listbox Example with Grouped Options</a>: Single-select listbox with grouped options, similar to an HTML <code>select</code> with <code>optgroup</code> children.</li>
                       </ul>
-                    
-                      <p><strong>Note:</strong> If a simple selection of options is required, using a native HTML <code>&lt;select&gt;</code> element is often the best choice for accessibility and ease of use. Here’s an example:</p>
-<pre>
-<code>&lt;label for="example-listbox"&gt;Choose an option:&lt;/label&gt;
-      &lt;select id="example-listbox" multiple&gt;
-        &lt;option&gt;Option 1&lt;/option&gt;
-        &lt;option&gt;Option 2&lt;/option&gt;
-        &lt;option&gt;Option 3&lt;/option&gt;
-      &lt;/select&gt;</code>
-</pre>
+          
                     </div>                  
                   </div>
                 </div>
@@ -169,26 +160,66 @@
                       <span class="dev-tag ms-3">
                         Developer 
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                        <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                       </span> 
                     </button>
                   </h2>
                   <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
-                    <div class="accordion-body">                            
+                    <div class="accordion-body">
+                      <p class="mb-3">
+                        Developers implementing listboxes must follow ARIA Authoring Practices to ensure keyboard, screen reader, and visual accessibility. The pattern below shows how to create a single-select listbox using ARIA roles and properties. This pattern should be used only when a native <code>&lt;select&gt;</code> element is insufficient.
+                      </p>
+
+                      <hr class="my-4" />
+
+                      <h3 id="listbox-code-example" class="h4">Accessible Listbox Code Example</h3>
+                      <p>This example demonstrates a single-select listbox pattern with keyboard support and programmatic focus management using <code>aria-activedescendant</code>.</p>
+
+                      <div class="p-3 border rounded bg-light">
+<pre class="language-html"><code class="language-html">
+&lt;label id="listboxLabel"&gt;Choose a fruit&lt;/label&gt;
+&lt;div
+  role="listbox"
+  aria-labelledby="listboxLabel"
+  aria-activedescendant="option-2"
+  tabindex="0"
+  class="custom-listbox"
+&gt;
+  &lt;div id="option-1" role="option" aria-selected="false"&gt;Apple&lt;/div&gt;
+  &lt;div id="option-2" role="option" aria-selected="true"&gt;Banana&lt;/div&gt;
+  &lt;div id="option-3" role="option" aria-selected="false"&gt;Cherry&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                      </div>
+                      <p class="mt-2"><strong>Note:</strong> This listbox must be fully operable via keyboard and include JavaScript for managing focus, selection, and interaction states.</p>
+
+                      <hr class="my-4" />
+
+                      <h3 id="listbox-dev-notes" class="h4">Key Developer Considerations</h3>
                       <ul>
-                        <li><strong>Use ARIA Roles:</strong> The container element of the listbox should have <code>role="listbox"</code>, and each item within the listbox should use <code>role="option"</code> to define individual selectable options.</li>
-                        <li><strong>Manage ARIA States:</strong> Use <code>aria-selected="true"</code> for the currently selected option within the listbox. This should update dynamically as the user selects different options.</li>
-                        <li><strong>Ensure Keyboard Navigation:</strong> Listboxes should be fully operable via keyboard. Use arrow keys to navigate between options, Enter to select an option, and Esc to exit the listbox without making a selection if applicable. Follow standard keyboard navigation patterns for listboxes.</li>
-                        <li><strong>Focus Management:</strong> Properly manage focus by ensuring that focus is visibly indicated as it moves through the listbox options. Use <code>aria-activedescendant</code> to identify which option is currently focused. Once an option is selected, ensure the correct focus behavior based on interaction pattern.</li>
-                        <li><strong>Link Label and Listbox:</strong> Ensure the listbox has an accessible label by using <code>aria-labelledby</code> to associate it with a visible label element. This ensures that assistive technologies can correctly announce the purpose of the listbox.</li>
-                        <li><strong>Maintain Color Contrast:</strong> Ensure that all text and background colors meet WCAG 2.1 AA contrast requirements (4.5:1 for normal text, 3:1 for large text) to ensure readability for users with visual impairments.</li>
-                        <li><strong>Define Hover and Focus States:</strong> Clearly indicate focus and hover states on listbox options using visible changes, such as background color or border, to show which option is currently focused or hovered over.</li>
-                        <li><strong>Group Options if Applicable:</strong> If the listbox includes groups of options, use <code>role="group"</code> to define each group and ensure there is a clear visual distinction between grouped options.</li>
-                        <li><strong>Screen Reader Behavior:</strong> Ensure screen readers correctly announce each listbox option as users navigate through them, and announce the currently selected option. Additionally, screen readers should notify users when the selection state changes.</li>
-                        <li><strong>Test Across Devices:</strong> Ensure that the listbox is tested across various devices, including mobile devices, to confirm the experience is consistent and accessible on touchscreens.</li>
-                        <li><strong>Follow ARIA Best Practices:</strong> For more information on accessible listboxes, consult the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/" target="_blank">WAI-ARIA Authoring Practices for Listboxes</a>.</li>
-                      </ul>                                                                                      
+                        <li><strong>Role Usage:</strong> Use <code>role="listbox"</code> on the container and <code>role="option"</code> on each item. This is required for screen reader support.</li>
+                        <li><strong>Keyboard Navigation:</strong> Support Arrow Up/Down to move through options, Enter or Space to select, and Esc to close if used in a popup.</li>
+                        <li><strong>Focus Tracking:</strong> Use <code>aria-activedescendant</code> to indicate which option currently has focus, while keeping focus on the container.</li>
+                        <li><strong>Selection State:</strong> Dynamically update <code>aria-selected</code> on options as users interact.</li>
+                        <li><strong>Label Association:</strong> Link the listbox to a visible label using <code>aria-labelledby</code> to announce purpose.</li>
+                        <li><strong>Contrast Compliance:</strong> Text and backgrounds must meet 4.5:1 contrast ratio for normal text.</li>
+                        <li><strong>Focus and Hover Visibility:</strong> Ensure all focus and hover states are visually distinct and keyboard-visible.</li>
+                        <li><strong>Screen Reader Feedback:</strong> Verify that selected items are announced correctly and that screen readers identify the listbox and current selection.</li>
+                        <li><strong>Option Grouping (if needed):</strong> For grouped options, use <code>role="group"</code> with a <code>label</code> for screen reader context.</li>
+                        <li><strong>Use Native Select When Possible:</strong> Only use ARIA listbox when native elements are insufficient for UI or functional requirements.</li>
+                        <li><strong>Reference:</strong> Follow the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/" target="_blank">ARIA Authoring Practices for Listbox</a> for complete pattern guidance.</li>
+                      </ul>
+
+                      <p><strong>Pro tip:</strong> If a simple selection of options is required, using a native HTML <code>&lt;select&gt;</code> element is often the best choice for accessibility and ease of use. Here’s an example:</p>
+<pre class="language-html"><code class="language-html">
+  &lt;label for="example-listbox"&gt;Choose an option:&lt;/label&gt;
+  &lt;select id="example-listbox" multiple&gt;
+    &lt;option&gt;Option 1&lt;/option&gt;
+    &lt;option&gt;Option 2&lt;/option&gt;
+    &lt;option&gt;Option 3&lt;/option&gt;
+  &lt;/select&gt;</code>
+</pre>
                     </div>
                   </div>
                 </div>
@@ -239,6 +270,7 @@
          $("#header--container").load(headerPath);
     });
     </script>
-
+    <!-- PrismJS Core Script -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
 </body>
 </html>
