@@ -810,6 +810,12 @@ $(document).ready(function() {
           "content": "Accessible alert components use ARIA roles to ensure proper announcement by assistive technologies, notifying users of important messages. Alerts should use role='alert', be visible until dismissed, and maintain strong visual contrast to ensure readability. Developers must ensure alerts are dynamically injected and maintain keyboard accessibility for all interactive elements."
         },  
         {
+          "title": "Alert Dialog",
+          "url": "/a11y-annotations/templates/components/alert-dialog.html",
+          "description": "Use alert dialogs to interrupt workflows with urgent messages that require acknowledgment.",
+          "content": "Alert dialogs convey critical messages or confirm destructive actions. They must grab user focus, block background interaction, and support dismissal via keyboard. Focus must return to the triggering element after the dialog closes. Content should be clearly labeled and visually emphasized for urgency."
+        },
+        {
           "title": "Breadcrumb",
           "url": "/a11y-annotations/templates/components/breadcrumb.html",
           "description": "Guide users with accessible breadcrumb navigation by using proper semantic structure, ensuring visual clarity, and providing programmatic indicators of the current page.",
@@ -858,6 +864,12 @@ $(document).ready(function() {
           "content": "Accessible dropdowns and disclosure components require correct ARIA roles and properties, such as aria-expanded and aria-controls, to help users understand the current state of the dropdown and control its visibility. These components must be fully navigable via keyboard, with Enter/Space keys to open and Esc to close. Focus should remain within the dropdown while open, and icons indicating dropdown state must be hidden from assistive technologies if purely decorative."
         },
         {
+          "title": "Footer",
+          "url": "/a11y-annotations/templates/components/footer.html",
+          "description": "Design consistent, accessible footers that support navigation, legal content, and responsive layouts.",
+          "content": "Footers provide site-wide navigation and secondary information. For accessibility, ensure real content is used in design mockups, maintain clear visual hierarchy, and meet WCAG contrast and focus visibility standards. Links must be distinguishable within blocks of text and the layout must remain legible at all screen sizes."
+        },
+        {
           "title": "Form",
           "url": "/a11y-annotations/templates/components/forms.html",
           "description": "Build accessible forms with proper field labels, clear instructions, and programmatically associated error messages.",
@@ -898,7 +910,19 @@ $(document).ready(function() {
           url: '/a11y-annotations/templates/components/progress.html',
           description: 'Accessible progress indicators for dynamic content.',
           content: 'Progress bars provide visual indicators of ongoing processes, such as loading or data uploads. To ensure accessibility, they must be designed with proper ARIA attributes to convey real-time status to assistive technologies, offer sufficient color contrast, and include accessible alternatives for all users.'
-        },      
+        },  
+        {
+          "title": "Search",
+          "url": "/a11y-annotations/templates/components/search.html",
+          "description": "Ensure search components are clearly labeled, keyboard accessible, and operable for all users.",
+          "content": "Search fields must include an accessible name and support keyboard input, focus visibility, and screen reader interaction. Avoid relying on placeholder text alone. Proper labeling and predictable keyboard interaction are key to WCAG-conformant search experiences."
+        },
+        {
+          "title": "Slider with Input",
+          "url": "/a11y-annotations/templates/components/slider-input.html",
+          "description": "Support flexible input with synchronized sliders and number fields, accessible by keyboard and screen reader.",
+          "content": "Sliders paired with numeric inputs allow users to set values visually or manually. They must remain synchronized, support full keyboard operability, and provide accessible labeling. Focus indicators and error states should be clearly represented in both design and development."
+        },  
         {
           title: 'Table',
           url: '/a11y-annotations/templates/components/tables.html',
