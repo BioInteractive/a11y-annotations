@@ -112,6 +112,32 @@
                               </tr>
                             </tbody>
                           </table>
+                          <h3>Example Three: Complex Table with Explicit Header Associations</h3>
+                          <table class="styled-table">
+                            <caption>Example of table with explicit header association</caption>
+                            <thead>
+                              <tr>
+                                <th id="test" scope="col">Test</th>
+                                <th id="unit" scope="col">Unit</th>
+                                <th id="ref-range" scope="col">Reference Range</th>
+                                <th id="value" scope="col">Value</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td headers="test">Hemoglobin</td>
+                                <td headers="unit">g/dL</td>
+                                <td headers="ref-range">12–16</td>
+                                <td headers="value">14.2</td>
+                              </tr>
+                              <tr>
+                                <td headers="test">White Blood Cells</td>
+                                <td headers="unit">10⁹/L</td>
+                                <td headers="ref-range">4.5–11.0</td>
+                                <td headers="value">7.3</td>
+                              </tr>
+                            </tbody>
+                          </table>
                           <p>Note: These are simplified examples. Real-world tables might require additional accessibility features based on their complexity and content.</p>
                         </div>
                       </div>
@@ -173,6 +199,7 @@
                             <li>Decide if the table headers clearly labels the associated data cells.</li>
                             <li>If the table is complex add a sticky note annotation to give additional information about table scopes, ids and headers.</li>
                             <li>Note that tables must have a caption or aria-labelledby pointing to labelling text to ensure the table has an accessible name.</li>
+                            <li>For complex tables, verify that each <code>&lt;td&gt;</code> has matching <code>headers</code> referencing <code>&lt;th id="..."&gt;</code>. Ensure the header relationships are logically correct.</li>
                           </ol>
                           <div class="d-inline-block border border-dark p-2 rounded">
                             <div class="d-flex flex-row">
@@ -243,6 +270,14 @@
 </code></pre>
                           </div>
                           <p class="mt-2"><strong>Tip:</strong> Always use <code>&lt;th&gt;</code> for headers and apply <code>scope</code> attributes to indicate if the header applies to a row or column.</p>
+
+                          <h4>When to Use ARIA Roles for Custom Tables</h4>
+                          <p>If your table is not built using native <code>&lt;table&gt;</code> markup (e.g., it's rendered in <code>&lt;div&gt;</code> elements), use ARIA roles to recreate the semantic structure:</p>
+                          <ul>
+                            <li><code>role="table"</code> on the container</li>
+                            <li><code>role="rowgroup"</code>, <code>role="row"</code>, <code>role="columnheader"</code>, and <code>role="cell"</code> where appropriate</li>
+                            <li><code>aria-colindex</code> and <code>aria-rowindex</code> for screen reader navigation in dynamic tables</li>
+                          </ul>
 
                           <hr class="my-4">
 
