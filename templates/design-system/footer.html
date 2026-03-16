@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System Footer</title>
+
+    <!-- Link to Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <!-- Link to Custom Stylesheet -->
+    <link rel="stylesheet" href="../../../assets/styles/custom.css">
+    <!-- Link to Custom Stylesheet Production -->
+    <link rel="stylesheet" href="../../../../assets/styles/custom.css">
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/a11y-annotations/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/a11y-annotations/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/a11y-annotations/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/a11y-annotations/assets/images/site.webmanifest">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+</head>
+<body>
+  <!-- Insert Header -->
+  <div id="header--container"></div>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Includes the Sidebar Navigation using jQuery -->
+      <div id="sidebar-container" class="col-md-2 border-end"></div>
+
+      <!-- Main Content --> 
+      <main class="col-md-9" id="main-content" tabindex="-1">
+        <!-- A11y Live Region -->
+        <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
+        <div class="container-xxl bd-gutter mt-3">
+          <div class="instructions mb-5">
+            <h1>Design System Footer</h1>
+          </div>
+          <section class="mb-5">
+            <h2>Footer Overview</h2>
+            <p>The footer provides secondary navigation and organizational information that appears at the bottom of BioInteractive pages. It helps users locate supporting content, contact information, and important policy links.</p>
+            <p>The footer design remains consistent across the site to maintain familiarity and predictable navigation.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Footer Structure</h2>
+            <p>The BioInteractive footer uses a dark background to visually separate it from the main page content. Links and icons are styled to maintain strong contrast and clear readability.</p>
+
+            <ul>
+              <li>The BioInteractive logo reinforces brand identity.</li>
+              <li>Social media icons provide quick access to external channels.</li>
+              <li>Navigation links are grouped into logical categories.</li>
+              <li>Organization information and policy links appear at the bottom of the footer.</li>
+            </ul>
+
+            <p>This structure allows users to quickly locate additional information without distracting from the primary page content.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Grouped Navigation Links</h2>
+            <p>Footer links are organized into labeled groups to make secondary navigation easier to scan. Common groups include organization information and ways to connect with BioInteractive.</p>
+
+            <ul>
+              <li>Organization links may include pages such as About Us, Our Research, Our Team, and Our Advisors.</li>
+              <li>Connect links may include resources such as FAQ, Contact Us, and Newsletter.</li>
+            </ul>
+
+            <p>Grouping links helps users locate information quickly while maintaining a clean layout.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Responsive Behavior</h2>
+            <p>The footer layout adapts for smaller screens by stacking content vertically. Navigation groups, icons, and organizational information are arranged in a single column to support readability and touch interaction.</p>
+
+            <p>This responsive structure ensures that footer content remains accessible and easy to navigate on mobile devices.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Accessibility Considerations</h2>
+            <p>The footer should maintain strong color contrast between text and background to support readability. Links and icons must remain clearly identifiable and easy to interact with.</p>
+
+            <p>Consistent spacing and clear link labeling help ensure that users can navigate footer content efficiently across all devices.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Supporting Information</h2>
+            <p>Some BioInteractive experiences include a supporting information panel that provides additional context about the interactive content. This panel typically includes information such as summaries, usage instructions, accessibility notes, credits, and terms of use.</p>
+
+            <p>Supporting information helps learners and educators understand how an interactive works and where the content originates. Links to this information are often provided through the footer or other persistent interface controls.</p>
+
+            <p>The panel should remain easy to access without interrupting the primary learning experience, allowing users to review supporting documentation when needed.</p>
+          </section>
+        </div>  
+      </main>
+    </div>
+  </div>
+
+   <!-- Script links and jQuery CDN -->
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+   <script src="../../assets/js/global.js"></script>
+   <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+   <!-- Add sidebar navigation and header to the page -->
+   <script>
+    $(document).ready(function () {
+         // Determine the paths relative to the root directory
+         var sidebarPath = "../sidebar-navigation.html";
+         var headerPath = "../header.html";
+    
+         // Use jQuery to load the sidebar-navigation.html file
+         $("#sidebar-container").load(sidebarPath);
+    
+         // Use jQuery to load the header.html file
+         $("#header--container").load(headerPath);
+    });
+  </script>
+
+</body>
+</html>

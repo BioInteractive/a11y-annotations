@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System Components</title>
+
+    <!-- Link to Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <!-- Link to Custom Stylesheet -->
+    <link rel="stylesheet" href="../../../assets/styles/custom.css">
+    <!-- Link to Custom Stylesheet Production -->
+    <link rel="stylesheet" href="../../../../assets/styles/custom.css">
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/a11y-annotations/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/a11y-annotations/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/a11y-annotations/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/a11y-annotations/assets/images/site.webmanifest">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+</head>
+<body>
+  <!-- Insert Header -->
+  <div id="header--container"></div>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Includes the Sidebar Navigation using jQuery -->
+      <div id="sidebar-container" class="col-md-2 border-end"></div>
+
+      <!-- Main Content -->
+      <main class="col-md-9" id="main-content" tabindex="-1">
+        <!-- A11y Live Region -->
+        <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
+        <div class="container-xxl bd-gutter mt-3">
+          <div class="instructions mb-5">
+            <h1>Design System Components</h1>
+          </div>
+          <section class="mb-5">
+            <h2>Component Library</h2>
+            <p>The BioInteractive design system includes a library of reusable interface components that support interactive learning experiences. These components provide consistent patterns for interaction, feedback, and navigation across the platform.</p>
+
+            <p>Using standardized components helps designers and developers maintain predictable behavior, visual consistency, and accessibility across projects. Each component links to a detailed documentation page within the Accessibility Annotation Repository.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Interface Components</h2>
+            <p>Basic interface components provide the foundation for many interactions throughout the system.</p>
+
+            <ul>
+              <li><a href="/templates/components/link.html"><strong>Links</strong></a> allow users to navigate between pages or resources.</li>
+              <li><a href="/templates/components/button.html"><strong>Buttons</strong></a> trigger actions such as submitting forms or opening dialogs.</li>
+              <li><a href="/templates/components/accordion.html"><strong>Accordions</strong></a> allow sections of content to expand and collapse.</li>
+              <li><a href="/templates/components/navigation.html"><strong>Navigation</strong></a>, <a href="/templates/components/breadcrumb.html"><strong>Breadcrumbs</strong></a>, and <a href="/templates/components/pagination.html"><strong>Pagination</strong></a> support structured movement through content.</li>
+            </ul>
+          </section>
+
+          <section class="mb-5">
+            <h2>Interactive Components</h2>
+            <p>Interactive components provide contextual information or allow users to control interface behavior.</p>
+
+            <ul>
+              <li><a href="/templates/components/tooltip.html"><strong>Tooltips</strong></a> provide short contextual explanations.</li>
+              <li><a href="/templates/components/toggletip.html"><strong>Toggletips</strong></a> display additional supporting information.</li>
+              <li><a href="/templates/components/toggle-switch.html"><strong>Toggle switches</strong></a> allow users to enable or disable settings.</li>
+              <li><a href="/templates/components/carousel.html"><strong>Carousels</strong></a> present rotating content.</li>
+              <li><a href="/templates/components/video.html"><strong>Video components</strong></a> support multimedia learning content.</li>
+            </ul>
+          </section>
+
+          <section class="mb-5">
+            <h2>Data and Interface Controls</h2>
+            <p>These components help users explore information, interact with data, or navigate complex interfaces.</p>
+
+            <ul>
+              <li><a href="/templates/components/slider-with-input.html"><strong>Sliders with input</strong></a> allow users to adjust numeric values.</li>
+              <li><a href="/templates/components/table.html"><strong>Tables</strong></a> organize structured information.</li>
+              <li><a href="/templates/components/tabs.html"><strong>Tabs</strong></a> divide content into manageable sections.</li>
+              <li><a href="/templates/components/progress.html"><strong>Progress indicators</strong></a> communicate task completion or progress.</li>
+            </ul>
+          </section>
+
+          <section class="mb-5">
+            <h2>Form and Selection Components</h2>
+            <p>Selection controls allow users to choose options, filter information, or provide input within interactive experiences.</p>
+
+            <ul>
+              <li><a href="/templates/components/form.html"><strong>Forms</strong></a> collect user information.</li>
+              <li><a href="/templates/components/form-group.html"><strong>Form groups</strong></a> organize related inputs.</li>
+              <li><a href="/templates/components/dropdown.html"><strong>Dropdown (Disclosure)</strong></a> components present selectable options.</li>
+              <li><a href="/templates/components/listbox.html"><strong>Listboxes</strong></a> allow browsing and selection from lists.</li>
+              <li><a href="/templates/components/combobox.html"><strong>Comboboxes</strong></a> combine text input with selectable options.</li>
+              <li><a href="/templates/components/search.html"><strong>Search fields</strong></a> help users quickly locate content.</li>
+            </ul>
+          </section>
+
+          <section class="mb-5">
+            <h2>System Feedback Components</h2>
+            <p>Feedback components communicate important information to users and confirm the results of interactions.</p>
+
+            <ul>
+              <li><a href="/templates/components/alert.html"><strong>Alerts</strong></a> display important messages or warnings.</li>
+              <li><a href="/templates/components/alert-dialog.html"><strong>Alert dialogs</strong></a> present critical information that requires acknowledgment.</li>
+            </ul>
+          </section>
+
+          <section class="mb-5">
+            <h2>Dialog Interfaces</h2>
+            <p><a href="/templates/components/dialog.html"><strong>Dialogs</strong></a> present focused content or actions within a temporary interface layer. They may appear as modal or non-modal interactions depending on the context.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Advanced Interaction Patterns</h2>
+            <p>Some interactive learning experiences require more complex interaction patterns.</p>
+
+            <ul>
+              <li><a href="/templates/components/drag-and-drop.html"><strong>Drag and Drop</strong></a> components allow users to move items within an interface.</li>
+              <li><a href="/templates/components/data-chart.html"><strong>Data charts</strong></a> and <a href="/templates/components/data-visualization.html"><strong>data visualizations</strong></a> communicate complex information visually.</li>
+            </ul>
+          </section>
+        </div>  
+      </main>
+    </div>
+  </div>
+
+   <!-- Script links and jQuery CDN -->
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+   <script src="../../assets/js/global.js"></script>
+   <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+   <!-- Add sidebar navigation and header to the page -->
+   <script>
+    $(document).ready(function () {
+         // Determine the paths relative to the root directory
+         var sidebarPath = "../sidebar-navigation.html";
+         var headerPath = "../header.html";
+    
+         // Use jQuery to load the sidebar-navigation.html file
+         $("#sidebar-container").load(sidebarPath);
+    
+         // Use jQuery to load the header.html file
+         $("#header--container").load(headerPath);
+    });
+  </script>
+
+</body>
+</html>

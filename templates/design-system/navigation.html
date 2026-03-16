@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System Navigation</title>
+
+    <!-- Link to Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <!-- Link to Custom Stylesheet -->
+    <link rel="stylesheet" href="../../../assets/styles/custom.css">
+    <!-- Link to Custom Stylesheet Production -->
+    <link rel="stylesheet" href="../../../../assets/styles/custom.css">
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/a11y-annotations/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/a11y-annotations/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/a11y-annotations/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/a11y-annotations/assets/images/site.webmanifest">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+</head>
+<body>
+  <!-- Insert Header -->
+  <div id="header--container"></div>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Includes the Sidebar Navigation using jQuery -->
+      <div id="sidebar-container" class="col-md-2 border-end"></div>
+
+      <!-- Main Content -->
+      <main class="col-md-9" id="main-content" tabindex="-1">
+        <!-- A11y Live Region -->
+        <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
+        <div class="container-xxl bd-gutter mt-3">
+          <div class="instructions mb-5">
+            <h1>Design System Navigation</h1>
+          </div>
+          <section class="mb-5">
+            <h2>Navigation Patterns</h2>
+            <p>The BioInteractive design system includes standardized navigation patterns that help users move through educational content and resources efficiently. These patterns support predictable interaction, clear hierarchy, and accessible navigation across devices.</p>
+            <p>Navigation components should remain consistent across projects so users can easily understand where they are and how to move through the interface.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Primary Navigation (Navbar)</h2>
+            <p>The primary navigation bar appears at the top of the interface and provides access to major sections of the BioInteractive website. It includes the organization logo, primary navigation links, and a call-to-action button.</p>
+
+            <ul>
+              <li>The BioInteractive logo provides a consistent link back to the homepage.</li>
+              <li>Primary navigation links connect users to key content areas such as Community, Classroom Resources, and Teaching Tools.</li>
+              <li>A call-to-action button highlights important actions such as “Get Started.”</li>
+            </ul>
+
+            <p>The navigation bar should remain visually clear and easy to scan. Designers should maintain sufficient spacing between navigation items to prevent accidental clicks and ensure readability.</p>
+
+            <p>For smaller screens, the navigation collapses into a mobile menu. The mobile menu presents navigation items in a vertical layout to support touch interaction and smaller display sizes.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Dropdown Navigation</h2>
+            <p>Dropdown menus allow additional navigation items to be grouped under a primary navigation category. These menus help organize complex content while keeping the main navigation streamlined.</p>
+
+            <ul>
+              <li>Dropdown menus should appear directly below their parent navigation item.</li>
+              <li>Menu items should be clearly labeled and easy to distinguish.</li>
+              <li>Dropdown content should remain concise to avoid overwhelming users.</li>
+            </ul>
+
+            <p>Dropdown menus should open and close predictably so users can easily explore related navigation options.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Mobile Navigation</h2>
+            <p>On smaller screens, navigation transforms into a mobile menu that can be opened using a menu button. This pattern ensures that all navigation options remain accessible while preserving space for content.</p>
+
+            <ul>
+              <li>The menu icon should be clearly recognizable.</li>
+              <li>The mobile menu should display navigation links in a vertical list.</li>
+              <li>Interactive elements should have sufficient spacing for touch interaction.</li>
+            </ul>
+          </section>
+
+          <section class="mb-5">
+            <h2>Pagination</h2>
+            <p>Pagination allows users to move through multi-page content such as search results, resource lists, or educational materials. The pagination component clearly communicates the current page and allows users to navigate forward or backward through content.</p>
+
+            <ul>
+              <li>The current page should be visually highlighted.</li>
+              <li>Previous and Next buttons allow sequential navigation.</li>
+              <li>Page numbers allow direct access to specific sections of content.</li>
+            </ul>
+
+            <p>Pagination controls should remain visually consistent and easy to identify across the interface.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Breadcrumb Navigation</h2>
+            <p>Breadcrumb navigation provides contextual awareness by showing a user’s location within the site hierarchy. Breadcrumbs help users understand how the current page relates to higher-level sections.</p>
+
+            <ul>
+              <li>Breadcrumbs display the path from the homepage to the current page.</li>
+              <li>Each step in the breadcrumb should be clickable except the current page.</li>
+              <li>Breadcrumbs should appear near the top of the page to reinforce page hierarchy.</li>
+            </ul>
+
+            <p>Breadcrumb navigation improves orientation and allows users to quickly move back to previous sections of the site.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Navigation and Accessibility</h2>
+            <p>Accessible navigation ensures that all users can move through the interface regardless of device or assistive technology. Navigation elements should remain clearly structured, predictable, and easy to interact with.</p>
+
+            <p>Designers should follow the navigation patterns defined in the design system to ensure consistent behavior across BioInteractive projects.</p>
+          </section>
+        </div>  
+      </main>
+    </div>
+  </div>
+
+   <!-- Script links and jQuery CDN -->
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+   <script src="../../assets/js/global.js"></script>
+   <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+   <!-- Add sidebar navigation and header to the page -->
+   <script>
+    $(document).ready(function () {
+         // Determine the paths relative to the root directory
+         var sidebarPath = "../sidebar-navigation.html";
+         var headerPath = "../header.html";
+    
+         // Use jQuery to load the sidebar-navigation.html file
+         $("#sidebar-container").load(sidebarPath);
+    
+         // Use jQuery to load the header.html file
+         $("#header--container").load(headerPath);
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System Forms</title>
+
+    <!-- Link to Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <!-- Link to Custom Stylesheet -->
+    <link rel="stylesheet" href="../../../assets/styles/custom.css">
+    <!-- Link to Custom Stylesheet Production -->
+    <link rel="stylesheet" href="../../../../assets/styles/custom.css">
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/a11y-annotations/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/a11y-annotations/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/a11y-annotations/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/a11y-annotations/assets/images/site.webmanifest">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+</head>
+<body>
+  <!-- Insert Header -->
+  <div id="header--container"></div>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Includes the Sidebar Navigation using jQuery -->
+      <div id="sidebar-container" class="col-md-2 border-end"></div>
+
+      <!-- Main Content -->
+      <main class="col-md-9" id="main-content" tabindex="-1">
+        <!-- A11y Live Region -->
+        <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
+        <div class="container-xxl bd-gutter mt-3">
+          <div class="instructions mb-5">
+            <h1>Design System Forms</h1>
+          </div>
+          <section class="mb-5">
+            <h2>Forms Overview</h2>
+            <p>Forms allow users to submit information, provide feedback, and interact with BioInteractive tools. The design system defines consistent patterns for form layout, labeling, validation, and user feedback to ensure forms remain clear, predictable, and accessible.</p>
+
+            <p>Following these patterns helps users understand what information is required, how to complete each step, and how to correct errors when they occur.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Form Structure</h2>
+            <p>Forms should present fields in a logical order that matches the user’s mental model and reading flow. Related fields should be grouped together so users can easily understand how information is organized.</p>
+
+            <ul>
+              <li>Use clear visual grouping to organize related form controls.</li>
+              <li>Arrange inputs in a logical top-to-bottom order.</li>
+              <li>Ensure form fields have consistent spacing and alignment.</li>
+            </ul>
+
+            <p>Clear structure helps users scan the form quickly and complete tasks efficiently.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Form Groups</h2>
+            <p>Form groups connect related inputs such as radio buttons, checkboxes, or related fields. These groups help users understand the relationship between multiple options.</p>
+
+            <ul>
+              <li>Use labels and group headings to describe the purpose of each group.</li>
+              <li>Place group labels close to the related inputs.</li>
+              <li>Ensure grouped inputs remain easy to scan and understand.</li>
+            </ul>
+
+            <p>Grouping controls reduces confusion and helps users make informed selections.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Labels and Instructions</h2>
+            <p>Every form field must include a clear and visible label that describes the expected input. Labels help users understand what information is required and provide essential context for assistive technologies.</p>
+
+            <ul>
+              <li>Place labels directly next to their associated input fields.</li>
+              <li>Provide additional instructions when formatting requirements exist.</li>
+              <li>Avoid relying solely on placeholder text for field labels.</li>
+            </ul>
+
+            <p>Clear labels improve usability and reduce errors during form completion.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Status Messages</h2>
+            <p>Status messages communicate important information about a form submission or system response. These messages should appear close to the relevant content and clearly indicate the outcome of an action.</p>
+
+            <ul>
+              <li>Use consistent styling for success, warning, and error messages.</li>
+              <li>Place messages near the relevant form area.</li>
+              <li>Ensure messages remain visible and easy to understand.</li>
+            </ul>
+
+            <p>Well-designed status messages help users understand what happened and what to do next.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Error Identification</h2>
+            <p>When a form contains errors, the system should clearly identify which fields require correction. Error messages should appear near the associated input and provide clear instructions for resolving the issue.</p>
+
+            <ul>
+              <li>Highlight fields that contain errors.</li>
+              <li>Provide concise error messages describing the issue.</li>
+              <li>Ensure error indicators remain easy to identify.</li>
+            </ul>
+
+            <p>Clear error identification helps users correct mistakes quickly and complete the form successfully.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Error Suggestions</h2>
+            <p>Error suggestions provide users with helpful guidance when correcting invalid inputs. Instead of simply indicating that something is wrong, the interface should explain how to resolve the issue.</p>
+
+            <ul>
+              <li>Explain why the input is invalid.</li>
+              <li>Provide examples of valid input formats.</li>
+              <li>Offer guidance that helps users complete the form successfully.</li>
+            </ul>
+          </section>
+
+          <section class="mb-5">
+            <h2>Error Prevention</h2>
+            <p>Where possible, forms should be designed to prevent errors before submission. Preventing mistakes reduces frustration and helps users complete tasks more efficiently.</p>
+
+            <ul>
+              <li>Provide clear instructions before users enter information.</li>
+              <li>Use input formats that guide correct entry.</li>
+              <li>Offer confirmation steps for important actions.</li>
+            </ul>
+
+            <p>Designing with error prevention in mind creates more reliable and user-friendly forms.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Identify Input Purpose</h2>
+            <p>Forms that collect user information should clearly identify the purpose of each input field. Fields such as name, email, phone number, and address should be labeled consistently to support autofill and assistive technologies.</p>
+
+            <p>Grouping related fields and maintaining clear labels ensures that users understand what information is required and how it will be used.</p>
+          </section>
+        </div>  
+      </main>
+    </div>
+  </div>
+
+   <!-- Script links and jQuery CDN -->
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+   <script src="../../assets/js/global.js"></script>
+   <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+   <!-- Add sidebar navigation and header to the page -->
+   <script>
+    $(document).ready(function () {
+         // Determine the paths relative to the root directory
+         var sidebarPath = "../sidebar-navigation.html";
+         var headerPath = "../header.html";
+    
+         // Use jQuery to load the sidebar-navigation.html file
+         $("#sidebar-container").load(sidebarPath);
+    
+         // Use jQuery to load the header.html file
+         $("#header--container").load(headerPath);
+    });
+  </script>
+
+</body>
+</html>

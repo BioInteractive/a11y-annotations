@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System Icons</title>
+
+    <!-- Link to Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <!-- Link to Custom Stylesheet -->
+    <link rel="stylesheet" href="../../../assets/styles/custom.css">
+    <!-- Link to Custom Stylesheet Production -->
+    <link rel="stylesheet" href="../../../../assets/styles/custom.css">
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/a11y-annotations/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/a11y-annotations/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/a11y-annotations/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/a11y-annotations/assets/images/site.webmanifest">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+</head>
+<body>
+  <!-- Insert Header -->
+  <div id="header--container"></div>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Includes the Sidebar Navigation using jQuery -->
+      <div id="sidebar-container" class="col-md-2 border-end"></div>
+
+      <!-- Main Content -->
+      <main class="col-md-9" id="main-content" tabindex="-1">
+        <!-- A11y Live Region -->
+        <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
+        <div class="container-xxl bd-gutter mt-3">
+          <div class="instructions mb-5">
+            <h1>Design System Icons</h1>
+          </div>
+          <section class="mb-5">
+            <h2>Icon Library</h2>
+            <p>The BioInteractive design system uses icons from the Untitled UI icon library. This icon set provides a consistent and modern visual language that supports clarity across the interface.</p>
+            <p>Untitled UI icons are designed on a consistent grid and follow standardized stroke styles, which ensures visual consistency across different interface components.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Icon Structure and Grid</h2>
+            <p>All icons are designed on a 24×24 pixel grid with a consistent stroke width. This grid ensures that icons align cleanly with text and interface elements while maintaining visual balance.</p>
+            <ul>
+              <li>Icons use a consistent 24×24 design grid.</li>
+              <li>Stroke-based icons maintain consistent visual weight.</li>
+              <li>Icons are optimized for use in both light and dark interface contexts.</li>
+            </ul>
+          </section>
+
+          <section class="mb-5">
+            <h2>Icon Categories</h2>
+            <p>The icon library includes a wide range of categories that support common interface needs. These categories help designers quickly locate icons that match the meaning of a feature or interaction.</p>
+
+            <ul>
+              <li>General interface icons</li>
+              <li>Navigation and arrow icons</li>
+              <li>User and communication icons</li>
+              <li>Files and development icons</li>
+              <li>Charts and data visualization icons</li>
+              <li>Education and science icons</li>
+              <li>Maps and travel icons</li>
+              <li>Weather and environment icons</li>
+              <li>Alerts and feedback icons</li>
+              <li>Media and device icons</li>
+            </ul>
+
+            <p>Designers should select icons that clearly represent the intended action or concept.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Accessibility Considerations for Icons</h2>
+            <p>Icons should enhance understanding and should not introduce confusion. Designers should ensure that icons are meaningful and easy to interpret within their context.</p>
+
+            <ul>
+              <li>Meaningful icons should clearly represent the action or concept they support.</li>
+              <li>Icons must maintain sufficient contrast against their background.</li>
+              <li>Icons should remain visually clear at smaller sizes.</li>
+            </ul>
+          </section>
+
+          <section class="mb-5">
+            <h2>Decorative vs Informative Icons</h2>
+            <p>Icons may be used either as decorative elements or as informative indicators. Designers should consider whether an icon conveys essential meaning.</p>
+
+            <ul>
+              <li><strong>Decorative icons</strong> are purely visual and do not convey essential information.</li>
+              <li><strong>Informative icons</strong> communicate meaning and must be supported by accessible labels or text.</li>
+            </ul>
+
+            <p>When icons communicate meaning, they should be paired with text labels or alternative descriptions so that users relying on assistive technologies can understand their purpose.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Consistent Icon Usage</h2>
+            <p>To maintain a consistent interface, designers should use icons from the approved icon library rather than introducing custom icons. This ensures visual alignment across different components and projects.</p>
+
+            <p>Icons should be used sparingly and only when they enhance clarity or support a user action.</p>
+          </section>
+        </div>  
+      </main>
+    </div>
+  </div>
+
+   <!-- Script links and jQuery CDN -->
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+   <script src="../../assets/js/global.js"></script>
+   <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+   <!-- Add sidebar navigation and header to the page -->
+   <script>
+    $(document).ready(function () {
+         // Determine the paths relative to the root directory
+         var sidebarPath = "../sidebar-navigation.html";
+         var headerPath = "../header.html";
+    
+         // Use jQuery to load the sidebar-navigation.html file
+         $("#sidebar-container").load(sidebarPath);
+    
+         // Use jQuery to load the header.html file
+         $("#header--container").load(headerPath);
+    });
+  </script>
+
+</body>
+</html>

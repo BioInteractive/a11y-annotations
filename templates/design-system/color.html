@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System Color</title>
+
+    <!-- Link to Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <!-- Link to Custom Stylesheet -->
+    <link rel="stylesheet" href="../../../assets/styles/custom.css">
+    <!-- Link to Custom Stylesheet Production -->
+    <link rel="stylesheet" href="../../../../assets/styles/custom.css">
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/a11y-annotations/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/a11y-annotations/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/a11y-annotations/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/a11y-annotations/assets/images/site.webmanifest">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+</head>
+<body>
+  <!-- Insert Header -->
+  <div id="header--container"></div>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Includes the Sidebar Navigation using jQuery -->
+      <div id="sidebar-container" class="col-md-2 border-end"></div>
+
+      <!-- Main Content -->
+      <main class="col-md-9" id="main-content" tabindex="-1">
+        <!-- A11y Live Region -->
+        <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
+        <div class="container-xxl bd-gutter mt-3">
+          <div class="instructions mb-5">
+            <h1>Design System Color</h1>
+          </div>
+           <section class="mb-5">
+            <h2>Color System Overview</h2>
+            <p>The BioInteractive color system defines the brand palette and interface colors used across digital products and interactive learning experiences. These colors provide visual consistency while supporting accessibility requirements for contrast, readability, and usability.</p>
+            <p>Color choices in the system are intentionally limited and structured so designers can create clear visual hierarchy without introducing contrast failures or confusing visual signals.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Primary Brand Colors</h2>
+            <p>The BioInteractive design system uses a defined set of primary brand colors that represent the organization’s visual identity. These colors should be used consistently across interfaces to reinforce brand recognition.</p>
+            <p>The primary palette includes the core HHMI teal and green tones along with neutral colors used for text and backgrounds.</p>
+            <ul>
+              <li>Teal and green tones represent the BioInteractive brand identity.</li>
+              <li>Neutral colors such as black, gray, and white provide contrast and structure.</li>
+              <li>Red is reserved for warning or error states.</li>
+            </ul>
+          </section>
+
+          <section class="mb-5">
+            <h2>Secondary Brand Colors</h2>
+            <p>Secondary colors provide additional flexibility when designing interactive content. These colors should be used sparingly and should never replace the primary brand palette.</p>
+            <p>Secondary colors can help distinguish sections of content, highlight educational elements, or support visual differentiation within interactive experiences.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Website and Interface Colors</h2>
+            <p>The design system defines a set of colors specifically intended for use in the user interface. These colors are used for text, backgrounds, buttons, icons, borders, and interactive elements.</p>
+            <ul>
+              <li>Dark text colors are used for body copy and headings.</li>
+              <li>Light background colors support readability and contrast.</li>
+              <li>Accent colors may be used for buttons, icons, and emphasis.</li>
+            </ul>
+            <p>Using a limited set of interface colors helps maintain visual clarity and ensures that accessibility standards are easier to maintain across the system.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Use of Color</h2>
+            <p>Color should support meaning and visual hierarchy, but it should never be the only method used to communicate information. Users with color vision deficiencies may not be able to distinguish certain color differences.</p>
+            <ul>
+              <li>Do not rely on color alone to convey information.</li>
+              <li>Use icons, labels, patterns, or text to reinforce meaning.</li>
+              <li>Ensure interactive states remain distinguishable beyond color.</li>
+            </ul>
+            <p>Providing multiple visual cues ensures that all users can understand and interact with the interface.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Text Color Contrast</h2>
+            <p>Text contrast between foreground and background colors is essential for readability. The design system follows WCAG contrast requirements to ensure text remains readable for users with low vision and other visual impairments.</p>
+            <ul>
+              <li>Body text should maintain a contrast ratio of at least 4.5:1.</li>
+              <li>Large text may use a minimum contrast ratio of 3:1.</li>
+              <li>Text must remain readable across all interface backgrounds.</li>
+            </ul>
+            <p>Designers should test color combinations to ensure that text remains legible under different lighting conditions and device displays.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Non-Text Contrast</h2>
+            <p>Non-text elements such as icons, buttons, form controls, and graphical indicators must also meet accessibility contrast requirements.</p>
+            <ul>
+              <li>Interactive components should maintain at least a 3:1 contrast ratio against adjacent colors.</li>
+              <li>Icons must remain distinguishable against their background.</li>
+              <li>Buttons and interactive states must remain visually clear.</li>
+            </ul>
+            <p>Maintaining sufficient non-text contrast ensures that users can perceive interface elements and interact with them confidently.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Color Contrast Examples</h2>
+            <p>The design system includes visual examples showing acceptable and unacceptable color combinations for icons, buttons, and text. These examples demonstrate how color contrast should be applied in real interface scenarios.</p>
+            <p>Designers should use these examples as reference when creating new components or selecting colors within the interface.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Designing with Accessibility in Mind</h2>
+            <p>Accessible color usage improves usability for everyone. When selecting colors, designers should prioritize readability, clarity, and consistent meaning across the interface.</p>
+            <p>Following the color guidelines in this design system helps ensure that BioInteractive experiences remain accessible, visually cohesive, and easy to understand for all users.</p>
+          </section>
+        </div>  
+      </main>
+    </div>
+  </div>
+
+   <!-- Script links and jQuery CDN -->
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+   <script src="../../assets/js/global.js"></script>
+   <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+   <!-- Add sidebar navigation and header to the page -->
+   <script>
+    $(document).ready(function () {
+         // Determine the paths relative to the root directory
+         var sidebarPath = "../sidebar-navigation.html";
+         var headerPath = "../header.html";
+    
+         // Use jQuery to load the sidebar-navigation.html file
+         $("#sidebar-container").load(sidebarPath);
+    
+         // Use jQuery to load the header.html file
+         $("#header--container").load(headerPath);
+    });
+  </script>
+
+</body>
+</html>

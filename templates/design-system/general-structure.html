@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System General Structure</title>
+
+    <!-- Link to Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <!-- Link to Custom Stylesheet -->
+    <link rel="stylesheet" href="../../../assets/styles/custom.css">
+    <!-- Link to Custom Stylesheet Production -->
+    <link rel="stylesheet" href="../../../../assets/styles/custom.css">
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/a11y-annotations/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/a11y-annotations/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/a11y-annotations/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/a11y-annotations/assets/images/site.webmanifest">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+</head>
+<body>
+  <!-- Insert Header -->
+  <div id="header--container"></div>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Includes the Sidebar Navigation using jQuery -->
+      <div id="sidebar-container" class="col-md-2 border-end"></div>
+
+      <!-- Main Content -->
+      <main class="col-md-9" id="main-content" tabindex="-1">
+        <!-- A11y Live Region -->
+        <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
+        <div class="container-xxl bd-gutter mt-3">
+          <div class="instructions mb-5">
+            <h1>Design System General Structure</h1>
+          </div>
+          <section class="mb-5">
+            <h2>Structural Foundations of the BioInteractive Design System</h2>
+            <p>The BioInteractive Design System establishes clear structural rules for organizing content across interactive experiences. These rules define how page titles, headings, text, spacing, and lists should be used to create readable, predictable, and accessible layouts.</p>
+            <p>By standardizing these foundational elements, designers and developers can ensure consistent user experiences across projects while supporting accessibility requirements from the start.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Page Titles</h2>
+            <p>Page titles provide users with a clear and descriptive summary of a page’s purpose. Every page should begin with a single primary heading that communicates what the page contains and how it relates to the overall experience.</p>
+            <p>Titles should be concise, descriptive, and aligned with the content that follows. Avoid vague titles such as “Home” or “Untitled.” Instead, titles should clearly describe the content or activity presented on the page.</p>
+            <p>A consistent page title structure helps users orient themselves within complex educational content and supports screen reader navigation.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Heading Hierarchy</h2>
+            <p>Headings provide the structural framework for page content. They allow users to quickly scan content and help assistive technologies communicate the relationships between sections.</p>
+            <p>The BioInteractive design system uses a clear heading hierarchy from <code>H1</code> through <code>H6</code>. Headings should always be used in a logical order to maintain a meaningful document structure.</p>
+            <ul>
+              <li>Each page should contain a single <code>H1</code> representing the page title.</li>
+              <li>Major sections should use <code>H2</code>.</li>
+              <li>Subsections should use <code>H3</code> and lower levels when needed.</li>
+              <li>Heading levels should never be skipped.</li>
+            </ul>
+          </section>
+
+          <section class="mb-5">
+            <h2>Heading Scale and Responsive Typography</h2>
+            <p>The design system defines a consistent heading scale to maintain visual hierarchy across both desktop and mobile layouts. Each heading level has defined font sizes and line heights that adapt to different screen sizes.</p>
+            <p>Maintaining clear visual differences between heading levels ensures that users can quickly understand the structure of the content.</p>
+            <p>Responsive typography ensures that headings remain readable and visually balanced regardless of screen size.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Text Readability</h2>
+            <p>Readable text is essential for accessibility and comprehension. The BioInteractive design system encourages typography choices that support a wide range of users, including people with cognitive disabilities and non-native readers.</p>
+            <ul>
+              <li>Use easily readable typefaces.</li>
+              <li>Maintain sufficient color contrast between text and background.</li>
+              <li>Use appropriate font sizes for body content.</li>
+              <li>Provide adequate line spacing to improve readability.</li>
+              <li>Avoid fully justified text alignment.</li>
+            </ul>
+          </section>
+
+          <section class="mb-5">
+            <h2>Body Text Standards</h2>
+            <p>Body text should prioritize readability across devices and screen sizes. The design system defines recommended font sizes and line heights to ensure content remains easy to read.</p>
+            <p>Paragraph text should maintain comfortable spacing between lines and paragraphs to support sustained reading. Designers should avoid overly dense text blocks that may create visual fatigue.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Lists</h2>
+            <p>Lists help organize related information and improve scannability. When information functions as a list, it should be structured using proper list formatting rather than relying on manual styling.</p>
+            <ul>
+              <li>Use unordered lists for grouped information without a required order.</li>
+              <li>Use ordered lists when sequence or steps are important.</li>
+              <li>Use consistent bullet styles to maintain visual clarity.</li>
+            </ul>
+            <p>Proper list structure also ensures that screen readers communicate grouped content correctly.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2>Spacing and Layout Rhythm</h2>
+            <p>Spacing plays a critical role in readability and visual hierarchy. The design system establishes consistent spacing between headings, paragraphs, buttons, and lists to maintain visual rhythm.</p>
+            <p>Standard spacing helps users visually distinguish between content groups and improves the overall clarity of the interface.</p>
+            <ul>
+              <li>Maintain consistent spacing between headings and paragraphs.</li>
+              <li>Provide adequate spacing between paragraphs and interactive elements.</li>
+              <li>Use whitespace to separate content groups without introducing unnecessary clutter.</li>
+            </ul>
+          </section>
+
+          <section class="mb-5">
+            <h2>Connecting Structure to Accessibility</h2>
+            <p>The structural rules defined in the BioInteractive design system support accessible navigation and predictable interaction. Proper use of headings, lists, spacing, and readable typography ensures that content can be understood by both visual users and assistive technologies.</p>
+            <p>Designers should apply these structural guidelines consistently to support accessible learning experiences across all BioInteractive projects.</p>
+          </section> 
+        </div>  
+      </main>
+    </div>
+  </div>
+
+   <!-- Script links and jQuery CDN -->
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+   <script src="../../assets/js/global.js"></script>
+   <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+   <!-- Add sidebar navigation and header to the page -->
+   <script>
+    $(document).ready(function () {
+         // Determine the paths relative to the root directory
+         var sidebarPath = "../sidebar-navigation.html";
+         var headerPath = "../header.html";
+    
+         // Use jQuery to load the sidebar-navigation.html file
+         $("#sidebar-container").load(sidebarPath);
+    
+         // Use jQuery to load the header.html file
+         $("#header--container").load(headerPath);
+    });
+  </script>
+
+</body>
+</html>
