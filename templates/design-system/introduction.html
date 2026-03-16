@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System Introduction</title>
+
+    <!-- Link to Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <!-- Link to Custom Stylesheet -->
+    <link rel="stylesheet" href="../../../assets/styles/custom.css">
+    <!-- Link to Custom Stylesheet Production -->
+    <link rel="stylesheet" href="../../../../assets/styles/custom.css">
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/a11y-annotations/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/a11y-annotations/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/a11y-annotations/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/a11y-annotations/assets/images/site.webmanifest">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+</head>
+<body>
+  <!-- Insert Header -->
+  <div id="header--container"></div>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Includes the Sidebar Navigation using jQuery -->
+      <div id="sidebar-container" class="col-md-2 border-end"></div>
+
+      <!-- Main Content -->
+      <main class="col-md-9" id="main-content" tabindex="-1">
+        <!-- A11y Live Region -->
+        <div aria-live="polite" id="page-live-region" class="visually-hidden"></div>
+        <div class="container-xxl bd-gutter mt-3">
+          <div class="instructions mb-5">
+            <h1>Design System Introduction</h1>
+          </div>
+           <section class="mb-5">
+              <h2>Accessibility-First Design, Built In from the Beginning</h2>
+              <p>The BioInteractive Design System supports accessibility-first design across all interactive and digital projects. It bridges designers and developers through shared structure, documented patterns, and accessibility embedded into every component from the start.</p>
+              <p>This system aligns with the BioInteractive standard of WCAG 2.1 Level AA conformance. Accessibility is intentionally integrated during the design phase so that accessible outcomes are predictable, scalable, and audit-ready.</p>
+            </section>
+
+            <section class="mb-5">
+              <h2>Accessing the Design System</h2>
+              <p>Access the live Design System in Figma using the link below. If you do not have edit access, please request access. For new projects, make a copy of the Design System file before beginning work.</p>
+              <p><a href="https://www.figma.com/design/mz57kqvicSulBFBQzNJ7YO/HHMI-A11y-Design-System-for-Designers?node-id=37-0&t=PaOmmCq4a7493da5-1" target="_blank" rel="noopener">Open the BioInteractive Design System in Figma</a></p>
+              <p>The Design System was built specifically with designers in mind. It provides structured guidance so accessibility considerations are naturally integrated into layout, typography, color, interaction, and component decisions.</p>
+            </section>
+
+            <div class="ratio ratio-16x9 mb-4">
+              <iframe 
+                src="https://embed.figma.com/design/mz57kqvicSulBFBQzNJ7YO/HHMI-A11y-Design-System-for-Designers?node-id=37-0&embed-host=share"
+                title="BioInteractive Accessibility-First Design System in Figma"
+                style="border: 1px solid rgba(0, 0, 0, 0.1);"
+                allowfullscreen>
+              </iframe>
+            </div>
+
+            <section class="mb-5">
+              <h2>What the Design System Includes</h2>
+
+              <h3>General Structure</h3>
+              <p>Foundational layout rules including grid structure, spacing tokens, typography hierarchy, border radius standards, and component anatomy. These rules ensure consistency and predictability across projects.</p>
+
+              <h3>Color</h3>
+              <p>Brand and UI color tokens with built-in contrast expectations. This section ensures color is used responsibly and never relied upon as the sole means of conveying information.</p>
+
+              <h3>Navigation</h3>
+              <p>Approved navigation patterns including header behavior, mobile structure, dropdown patterns, and focus visibility expectations.</p>
+
+              <h3>Footer</h3>
+              <p>Standardized footer layout and required elements to ensure consistent structure and semantic clarity.</p>
+
+              <h3>Icons</h3>
+              <p>Approved icon usage, sizing standards, and rules for decorative versus informative icons. Accessibility guidance for labeling and assistive technology behavior is included.</p>
+
+              <h3>Forms</h3>
+              <p>Form input patterns, label placement, validation expectations, and accessible error handling behavior.</p>
+
+              <h3>Components</h3>
+              <p>Reusable UI components including buttons, modals, accordions, tabs, tables, alerts, and more. Each component supports clear annotation and accessible developer handoff.</p>
+            </section>
+
+            <section class="mb-5">
+              <h2>How This Connects to the A11y Annotation Repository</h2>
+              <p>The Design System documents visual structure and interaction intent. The A11y Annotation Repository documents accessibility guidance and implementation standards. Together, they create a unified workflow:</p>
+              <ol>
+                <li>Design using approved tokens and patterns.</li>
+                <li>Annotate accessibility expectations clearly.</li>
+                <li>Develop with documented intent and shared standards.</li>
+                <li>Streamline audit readiness through proactive accessibility design.</li>
+              </ol>
+            </section>
+
+            <section class="mb-5">
+              <h2>WCAG 2.1 Level AA Alignment</h2>
+              <p>All components and patterns within this Design System are built to support WCAG 2.1 Level AA conformance, which is the BioInteractive accessibility standard. Designers are expected to use this system as the default starting point for all new work.</p>
+            </section>
+        </div>  
+      </main>
+    </div>
+  </div>
+
+   <!-- Script links and jQuery CDN -->
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+   <script src="../../assets/js/global.js"></script>
+   <!-- Link to Bootstrap JavaScript from CDN (including Popper.js) -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+   <!-- Add sidebar navigation and header to the page -->
+   <script>
+    $(document).ready(function () {
+         // Determine the paths relative to the root directory
+         var sidebarPath = "../sidebar-navigation.html";
+         var headerPath = "../header.html";
+    
+         // Use jQuery to load the sidebar-navigation.html file
+         $("#sidebar-container").load(sidebarPath);
+    
+         // Use jQuery to load the header.html file
+         $("#header--container").load(headerPath);
+    });
+  </script>
+
+</body>
+</html>
